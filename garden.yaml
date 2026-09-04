@@ -23,7 +23,7 @@ discovered:
 stall:
   enabled: true             # stop revise loops that don't change the diff / repeat a review finding
 budgets:                    # usd cap per phase; see also products.*.budget_usd
-  context-garden/phase-02-friction: 100.0
+  context-garden/phase-02-friction: 2000.0
 
 review:
   enabled: true             # automated first review of every PR round (acceptance criteria,
