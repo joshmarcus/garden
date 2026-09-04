@@ -65,7 +65,7 @@ harnesses:
     # max_turns: 60                # optional hard cap on agent turns; off by default
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
-    models: {easy: sonnet, medium: claude-opus-4-8, hard: fable}
+    models: {easy: claude-sonnet-5, medium: claude-opus-4-8, hard: fable}
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex
