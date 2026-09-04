@@ -1,7 +1,7 @@
 ---
 id: CG-112
 title: A worker's discovery can be a decision for the person, not only a new task
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 branch: garden/cg-112-a-worker-s-discovery-can-be-a-decision-for-the-p
 pr: https://github.com/joshmarcus/context-garden/pull/55
 attempts: 1
-last_dispatched_at: '2026-09-04T22:03:05+00:00'
+last_dispatched_at: '2026-09-04T22:10:44+00:00'
 created: '2026-09-04T21:29:53+00:00'
-updated: '2026-09-04T22:03:05+00:00'
+updated: '2026-09-04T22:17:21+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,7 @@ Asked during the first live run. CG-092's worker noticed that CG-107 described t
 - 2026-09-04T21:57:17+00:00 automated review: approve — Adds a `kind` to discovered items so duplicate/cancel become Accept/Reject decision cards and note goes to the friction record, with task remaining the default. All four acceptance criteria are implemented and tested; full suite and ruff pass. cost=$1.01
 - 2026-09-04T21:57:29+00:00 3 new review item(s)
 - 2026-09-04T22:03:05+00:00 dispatched revise run 20260904T220305Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~11542 tokens)
+- 2026-09-04T22:10:42+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/55: Addressed both P1 review items: accepting a duplicate decision now repoints the cancelled task's dependents onto the retained `of` task so they aren't left permanently blocked, and the TUI inbox now routes a/x on a decision row through resolve_decision() (accept/reject) instead of cancelling or retrying the target task. Added tests for each and updated the worker-protocol doc. cost=$2.91
+- 2026-09-04T22:10:43+00:00 PR conflicts with main (docs/worker-protocol.md, src/garden/brief.py, src/garden/scheduler.py); revise run will rebase and resolve
+- 2026-09-04T22:10:44+00:00 dispatched revise run 20260904T221043Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~11346 tokens)
+- 2026-09-04T22:17:21+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/55: Rebased the branch onto origin/main and resolved all conflicts (docs/worker-protocol.md, src/garden/brief.py, src/garden/scheduler.py, src/garden/cli.py, tests/fake_claude.py, and an add/add collision on tests/test_decisions.py) keeping both sides' intent. Full suite (295 passed, 3 skipped) and ruff are green. cost=$2.96

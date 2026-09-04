@@ -1,7 +1,7 @@
 ---
 id: CG-078
 title: Closed phases leave the rail and live in a browsable herbarium
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,8 +15,12 @@ reading:
 - src/garden/model.py
 - src/garden/cli.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
+branch: garden/cg-078-closed-phases-leave-the-rail-and-live-in-a-brows
+pr: https://github.com/joshmarcus/context-garden/pull/73
+attempts: 1
+last_dispatched_at: '2026-09-04T22:43:49+00:00'
 created: '2026-09-04T19:05:18+00:00'
-updated: '2026-09-04T19:05:18+00:00'
+updated: '2026-09-04T23:04:04+00:00'
 ---
 
 ## Goal
@@ -57,3 +61,8 @@ Design to follow, adjusting where the code argues:
 ## Log
 
 - 2026-09-04T19:05:18+00:00 approved
+- 2026-09-04T22:43:49+00:00 dispatched work run 20260904T224340Z-work via local [claude model=fable] (fresh session, base main, ~15822 tokens)
+- 2026-09-04T22:59:04+00:00 discovered work filed: CG-120, CG-121
+- 2026-09-04T22:59:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/73 (base main): Phases can now be closed: closed: in goals.md frontmatter, close-phase/reopen-phase CLI, dispatch and new-task guards, a /herbarium page of pressed specimens, a closing header on closed phase pages, and open-by-default Board/Trellis. 9 new tests; full suite green. cost=$15.94
+- 2026-09-04T23:03:17+00:00 automated review: approve — Closed-phase feature is fully implemented for everything reachable from a worker worktree, thoroughly tested (295 pass, ruff clean), with a clean, well-contextualized PR description. Two acceptance criteria (CG-029 brief edit, closing the live phase 1) are structurally out of a worker's reach and are clearly flagged as human/scheduler follow-ups. cost=$1.03
+- 2026-09-04T23:04:04+00:00 CI failure judged flaky by checks; reran instead of dispatching a revise run

@@ -1,7 +1,7 @@
 ---
 id: CG-116
 title: The orphan sweep never closes a run whose task is still running
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,10 +11,11 @@ reading:
 - src/garden/scheduler.py
 - tests/test_scheduler.py
 branch: garden/cg-116-the-orphan-sweep-never-closes-a-run-whose-task-i
+pr: https://github.com/joshmarcus/context-garden/pull/59
 attempts: 1
 last_dispatched_at: '2026-09-04T22:06:11+00:00'
 created: '2026-09-04T21:56:41+00:00'
-updated: '2026-09-04T22:06:11+00:00'
+updated: '2026-09-04T22:18:35+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,5 @@ Found on the first live run, twenty minutes after #47 went live. CG-098 (stacked
 ## Log
 
 - 2026-09-04T22:06:11+00:00 dispatched work run 20260904T220610Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6589 tokens)
+- 2026-09-04T22:15:38+00:00 opened https://github.com/joshmarcus/context-garden/pull/59 (base main): Scoped the orphan sweep to review/persona/compare runs whose task can no longer receive a verdict (terminal/failed/PR closed or merged), so a work/revise/resume run finishing in the same tick as the sweep is reaped normally instead of swept; also made the 'no active run found' reset log the run id and its closer. cost=$3.25
+- 2026-09-04T22:18:35+00:00 automated review: approve — The sweep is correctly scoped to review/persona/compare runs of tasks whose verdict is moot, so a same-tick revise finish is reaped normally; all three acceptance criteria are met with per-mode tests, full suite (291 passed) and ruff are green. cost=$0.61

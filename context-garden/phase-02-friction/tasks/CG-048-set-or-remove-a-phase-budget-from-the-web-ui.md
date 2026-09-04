@@ -1,7 +1,7 @@
 ---
 id: CG-048
 title: Set or remove a phase budget from the web UI
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,8 +12,12 @@ reading:
 - src/garden/web/templates/phase.html
 - src/garden/config.py
 - src/garden/scheduler.py
+branch: garden/cg-048-set-or-remove-a-phase-budget-from-the-web-ui
+pr: https://github.com/joshmarcus/context-garden/pull/61
+attempts: 1
+last_dispatched_at: '2026-09-04T22:18:46+00:00'
 created: '2026-09-04T17:30:24+00:00'
-updated: '2026-09-04T18:41:38+00:00'
+updated: '2026-09-04T22:28:33+00:00'
 ---
 
 ## Goal
@@ -44,3 +48,6 @@ A `garden budget <product/phase> <usd|none>` CLI command should share the same c
 ## Log
 
 - 2026-09-04T18:41:38+00:00 approved
+- 2026-09-04T22:18:46+00:00 dispatched work run 20260904T221838Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6389 tokens)
+- 2026-09-04T22:25:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/61 (base main): Added set/remove of a per-phase budget from the web UI phase page, a `garden budget` CLI command, and a shared `Scheduler.set_budget` code path. Budgets are stored as overrides in .garden/state.json (chosen over editing garden.yaml, which PyYAML cannot round-trip without stripping comments), so the running scheduler picks up changes on the next tick and a paused phase resumes when the cap is raised or removed. cost=$3.26
+- 2026-09-04T22:28:33+00:00 automated review: approve — All four acceptance criteria are met with tests; the shared set_budget code path, state.json storage, and per-tick reload are correct, and the PR description is clean and complete. cost=$0.77

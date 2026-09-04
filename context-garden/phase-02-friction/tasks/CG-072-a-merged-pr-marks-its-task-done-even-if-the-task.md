@@ -1,7 +1,7 @@
 ---
 id: CG-072
 title: A merged PR marks its task done even if the task had failed
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -9,8 +9,12 @@ priority: 2
 difficulty: easy
 reading:
 - src/garden/scheduler.py
+branch: garden/cg-072-a-merged-pr-marks-its-task-done-even-if-the-task
+pr: https://github.com/joshmarcus/context-garden/pull/67
+attempts: 1
+last_dispatched_at: '2026-09-04T22:33:28+00:00'
 created: '2026-09-04T18:47:54+00:00'
-updated: '2026-09-04T18:47:54+00:00'
+updated: '2026-09-04T22:41:32+00:00'
 ---
 
 ## Goal
@@ -30,3 +34,6 @@ During the first live run CG-046 and CG-039 failed (a revise round and a second 
 ## Log
 
 - 2026-09-04T18:47:54+00:00 approved
+- 2026-09-04T22:33:28+00:00 dispatched work run 20260904T223319Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~2302 tokens)
+- 2026-09-04T22:39:08+00:00 opened https://github.com/joshmarcus/context-garden/pull/67 (base main): Added Status.pr_pending (pr_open plus failed/waiting_human/ready) so the tick loop polls any task with a PR set in an unfinished status, not just the active review states; poll() now checks merged/closed for those extra statuses but skips the review-flow-only logic (triage, CI, feedback) unless the task is actually in an active review state. Added two tests with the fake GitHub covering merge-while-failed (-> done, worktree cleaned, children restacked) and close-while-failed (stays failed, close noted). cost=$2.76
+- 2026-09-04T22:41:32+00:00 automated review: approve — Poll now covers any task with a PR in a non-terminal status via Status.pr_pending, resolving merges/closes for failed/waiting_human/ready tasks while skipping review-flow side effects; both acceptance cases are tested and pass. cost=$0.43

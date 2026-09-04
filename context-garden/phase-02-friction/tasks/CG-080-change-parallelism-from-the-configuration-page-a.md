@@ -1,7 +1,7 @@
 ---
 id: CG-080
 title: Change parallelism from the configuration page and the CLI, effective next tick
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -12,8 +12,12 @@ reading:
 - src/garden/scheduler.py
 - src/garden/web/app.py
 - src/garden/config.py
+branch: garden/cg-080-change-parallelism-from-the-configuration-page-a
+pr: https://github.com/joshmarcus/context-garden/pull/72
+attempts: 1
+last_dispatched_at: '2026-09-04T22:45:20+00:00'
 created: '2026-09-04T19:16:39+00:00'
-updated: '2026-09-04T19:16:39+00:00'
+updated: '2026-09-04T22:56:33+00:00'
 ---
 
 ## Goal
@@ -37,3 +41,6 @@ Asked during the first live run, after three restarts in an hour to move `max_pa
 ## Log
 
 - 2026-09-04T19:16:39+00:00 approved
+- 2026-09-04T22:45:20+00:00 dispatched work run 20260904T224511Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4592 tokens)
+- 2026-09-04T22:53:49+00:00 opened https://github.com/joshmarcus/context-garden/pull/72 (base main): Added a live max_parallel override: Scheduler.overrides()/set_override()/clear_override()/effective() persist to _control.overrides and slots_free() reads it every tick; garden set/clear CLI commands and a Configuration-page form/clear control let you change it without a restart; garden status, garden doctor and the Inbox header show the live value. cost=$5.76
+- 2026-09-04T22:56:33+00:00 automated review: approve — Live max_parallel override via garden set/clear and the Configuration page, effective next tick; all three acceptance criteria met with tests, persistence and dirty-tracking verified, checks green. cost=$0.70

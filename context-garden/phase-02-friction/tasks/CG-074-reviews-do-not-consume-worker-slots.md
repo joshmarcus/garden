@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,8 +10,12 @@ difficulty: easy
 reading:
 - src/garden/scheduler.py
 - src/garden/config.py
+branch: garden/cg-074-reviews-do-not-consume-worker-slots
+pr: https://github.com/joshmarcus/context-garden/pull/71
+attempts: 1
+last_dispatched_at: '2026-09-04T22:41:55+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-04T18:51:13+00:00'
+updated: '2026-09-04T22:55:12+00:00'
 ---
 
 ## Goal
@@ -31,3 +35,6 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 ## Log
 
 - 2026-09-04T18:51:13+00:00 approved
+- 2026-09-04T22:41:55+00:00 dispatched work run 20260904T224146Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4523 tokens)
+- 2026-09-04T22:53:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/71 (base main): Split max_parallel into worker vs. review accounting: reviews/personas/comparisons no longer consume worker slots, get their own review_parallel cap with a queue-and-drain when full, and both counts now show in garden status/doctor and the web Inbox. cost=$7.43
+- 2026-09-04T22:55:12+00:00 automated review: approve — Splits max_parallel into worker vs. review accounting with a queue-and-drain for a full review_parallel; all three acceptance criteria are met and the two new tests pass. Slot partitioning covers every run mode and deferred reviews persist correctly across ticks. cost=$0.98

@@ -1,7 +1,7 @@
 ---
 id: CG-029
 title: 'Close the phase: friction document, what changed, and the next goals'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -15,8 +15,12 @@ reading:
 - context-garden/phase-02-friction/docs/friction.md
 - docs/roadmap.md
 - principles/agent-loop.md
+branch: garden/cg-029-close-the-phase-friction-document-what-changed-a
+runner: manual
+attempts: 1
+last_dispatched_at: '2026-09-04T23:10:09+00:00'
 created: '2026-09-04T14:02:28+00:00'
-updated: '2026-09-04T22:08:17+00:00'
+updated: '2026-09-04T23:13:34+00:00'
 ---
 
 ## Goal
@@ -42,3 +46,7 @@ By the time this runs, `garden friction context-garden/phase-02-friction` (CG-00
 
 - 2026-09-04T17:23:50+00:00 approved (web)
 - 2026-09-04T22:08:17+00:00 not yet: the phase is still open (30 tasks); approve when the structural work has landed so the friction document and next goals rest on the finished phase
+- 2026-09-04T22:09:35+00:00 approved (web)
+- 2026-09-04T23:10:09+00:00 dispatched work run 20260904T231000Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5758 tokens)
+- 2026-09-04T23:13:00+00:00 worker asks: This task edits garden-repo content (context-garden/phase-02-friction/docs/friction.md and a new context-garden/phase-03/ via `garden new-phase`, plus a `garden metrics` table), but I'm running in the context-garden tool repo worktree where none of that exists and where garden commands are disabled. Should CG-029 be re-dispatched against the garden repo (joshmarcus/garden) instead, or do you want me to author the finished friction document and phase-03 goals as new files inside this tool repo (and if so, under what paths, given there is no context-garden/ directory here)? cost=$0.64
+- 2026-09-04T23:13:34+00:00 manual: closing the phase edits the garden repo (friction.md, the next phase's goals), which no worker checks out; a person or a garden-side agent does it when the phase's work has landed

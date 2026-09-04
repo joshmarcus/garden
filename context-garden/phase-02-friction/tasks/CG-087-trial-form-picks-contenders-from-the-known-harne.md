@@ -1,7 +1,7 @@
 ---
 id: CG-087
 title: Trial form picks contenders from the known harnesses and models
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -13,8 +13,11 @@ reading:
 - src/garden/web/app.py
 - src/garden/config.py
 - src/garden/harness.py
+branch: garden/cg-087-trial-form-picks-contenders-from-the-known-harne
+attempts: 1
+last_dispatched_at: '2026-09-04T23:04:19+00:00'
 created: '2026-09-04T19:40:52+00:00'
-updated: '2026-09-04T19:40:52+00:00'
+updated: '2026-09-04T23:04:19+00:00'
 ---
 
 ## Goal
@@ -34,3 +37,4 @@ Asked during the first live run after a trial attempt failed on the free-text fi
 ## Log
 
 - 2026-09-04T19:40:52+00:00 approved
+- 2026-09-04T23:04:19+00:00 dispatched work run 20260904T230410Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-086-web-actions-report-failures-as-messages-never-as stacked on CG-086, ~11399 tokens)

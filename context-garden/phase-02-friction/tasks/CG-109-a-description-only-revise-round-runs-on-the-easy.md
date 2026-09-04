@@ -1,7 +1,7 @@
 ---
 id: CG-109
 title: A description-only revise round runs on the easy tier
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,8 +11,11 @@ reading:
 - src/garden/scheduler.py
 - src/garden/review.py
 - src/garden/harness.py
+branch: garden/cg-109-a-description-only-revise-round-runs-on-the-easy
+attempts: 1
+last_dispatched_at: '2026-09-04T23:10:00+00:00'
 created: '2026-09-04T21:23:07+00:00'
-updated: '2026-09-04T21:23:07+00:00'
+updated: '2026-09-04T23:10:00+00:00'
 ---
 
 ## Goal
@@ -28,3 +31,7 @@ Found on the first live run. CG-081's review (PR #48) said the code was correct 
 - [ ] a description-only round dispatches on the easy tier's model and the note says why.
 - [ ] a round with a code finding keeps the task's tier.
 - [ ] a test with the fake harness for both.
+
+## Log
+
+- 2026-09-04T23:10:00+00:00 dispatched work run 20260904T230951Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~6850 tokens)

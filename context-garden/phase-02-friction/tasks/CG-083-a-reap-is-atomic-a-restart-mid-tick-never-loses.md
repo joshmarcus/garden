@@ -1,7 +1,7 @@
 ---
 id: CG-083
 title: 'A reap is atomic: a restart mid-tick never loses a finished run'
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,8 +10,11 @@ difficulty: easy
 reading:
 - src/garden/scheduler.py
 - src/garden/runs.py
+branch: garden/cg-083-a-reap-is-atomic-a-restart-mid-tick-never-loses
+attempts: 2
+last_dispatched_at: '2026-09-04T23:09:51+00:00'
 created: '2026-09-04T19:25:01+00:00'
-updated: '2026-09-04T19:25:01+00:00'
+updated: '2026-09-04T23:09:51+00:00'
 ---
 
 ## Goal
@@ -31,3 +34,8 @@ At 19:23 UTC during the first live run, `garden serve` was restarted while a tic
 ## Log
 
 - 2026-09-04T19:25:01+00:00 approved
+- 2026-09-04T22:54:11+00:00 dispatched work run 20260904T225403Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4498 tokens)
+- 2026-09-04T23:06:05+00:00 no active run found; back to ready
+- 2026-09-04T23:07:01+00:00 dispatched work run 20260904T230700Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4552 tokens)
+- 2026-09-04T23:09:36+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$0.97
+- 2026-09-04T23:09:51+00:00 dispatched revise run 20260904T230950Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5629 tokens)

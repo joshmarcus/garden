@@ -1,7 +1,7 @@
 ---
 id: CG-064
 title: Make test_feedback_triggers_revise_round deterministic
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - tests/conftest.py
 - tests/fake_claude.py
 branch: garden/cg-064-make-test-feedback-triggers-revise-round-determi
+pr: https://github.com/joshmarcus/context-garden/pull/64
 attempts: 1
 last_dispatched_at: '2026-09-04T22:03:05+00:00'
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-04T22:03:05+00:00'
+updated: '2026-09-04T22:34:29+00:00'
 ---
 
 ## Goal
@@ -36,3 +37,5 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T21:44:53+00:00 priority 2 -> 0
 - 2026-09-04T22:03:05+00:00 dispatched work run 20260904T220305Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~10054 tokens)
+- 2026-09-04T22:31:46+00:00 opened https://github.com/joshmarcus/context-garden/pull/64 (base main): Found the real cause of the flake (a byte-identical commit collision between a stacked child's work run and its parent's revise commit, not a finalize()/find_pr race as hypothesized), fixed it in the fake harness, rescoped the test's assertion to what it actually intends to check, and added a deterministic regression test. cost=$11.12
+- 2026-09-04T22:34:29+00:00 automated review: approve — Correctly identifies and fixes a byte-identical-commit collision in the fake harness (independently reproduced) as the real cause of the flake, with a deterministic regression test and a legitimate assertion rescoping. Both acceptance criteria met; 50/50 local runs clean. cost=$0.74
