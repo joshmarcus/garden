@@ -22,6 +22,8 @@ Every action a person can take in the web UI (trial, dispatch, triage, approve, 
 
 Reported during the first live run: starting a model trial from the task page with one contender returned a 500. The scheduler raised `RuntimeError("a trial needs at least two contenders")`, which is the right refusal, and `task_action` in `web/app.py` let it escape. The same path handles a dozen actions and any `RuntimeError`, `GitHubError` or `GitError` from the scheduler becomes a blank error page. Catch those in the action handlers, put the message in a flash region at the top of the page the person came from (the redirect already exists), and log it. Also validate the trial form before calling the scheduler: the contenders field is a comma-separated list of `harness:model` entries and needs at least two; say so in the placeholder and in the message.
 
+Also: the Answer form on a task that is no longer `waiting_human` does nothing and redirects (CG-092: the task had been moved to ready a minute before the person answered, and the answer vanished without a word). Any action whose precondition no longer holds must say so on the page and keep the typed text.
+
 ## Acceptance criteria
 
 - [ ] a trial with one contender shows "a trial needs at least two contenders, e.g. claude:sonnet, claude:opus" on the task page; no 500.
