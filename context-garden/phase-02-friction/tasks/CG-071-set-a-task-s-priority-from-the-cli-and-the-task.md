@@ -1,7 +1,7 @@
 ---
 id: CG-071
 title: Set a task's priority and difficulty from the CLI and the task page
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/43
 attempts: 1
 last_dispatched_at: '2026-09-04T19:46:57+00:00'
 created: '2026-09-04T18:45:31+00:00'
-updated: '2026-09-04T19:56:13+00:00'
+updated: '2026-09-04T20:15:54+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ Asked during the first live run. Priority is a frontmatter integer (lower dispat
 - 2026-09-04T19:52:09+00:00 opened https://github.com/joshmarcus/context-garden/pull/43 (base main): garden priority and garden difficulty commands, and a tier selector plus a priority field on the task page; the doctor login test compares without line breaks.
 - 2026-09-04T19:55:45+00:00 automated review requested changes: CLI commands and the task-page controls are correct, tested, and ruff-clean, but acceptance criterion #3 — a priority control on the Board's ready column — is not implemented (Board is display-only). cost=$1.12
 - 2026-09-04T19:56:13+00:00 review asked for the Board controls, which were split into their own task by design; criteria narrowed, back to review
+- 2026-09-04T20:15:54+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/43

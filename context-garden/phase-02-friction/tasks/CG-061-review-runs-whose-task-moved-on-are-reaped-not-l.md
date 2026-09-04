@@ -5,7 +5,7 @@ status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
-priority: 2
+priority: 0
 difficulty: easy
 reading:
 - context-garden/phase-01-bootstrap/specs/scheduler.md

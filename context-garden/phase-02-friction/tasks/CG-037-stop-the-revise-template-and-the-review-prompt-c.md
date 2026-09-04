@@ -1,7 +1,7 @@
 ---
 id: CG-037
 title: Stop the revise template and the review prompt contradicting each other
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,10 +11,12 @@ reading:
 - src/garden/brief.py
 - src/garden/review.py
 branch: garden/cg-037-stop-the-revise-template-and-the-review-prompt-c
+pr: https://github.com/joshmarcus/context-garden/pull/44
 discovered_from: CG-027
-last_dispatched_at: '2026-09-04T17:36:39+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-04T20:01:59+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T18:47:54+00:00'
+updated: '2026-09-04T20:12:47+00:00'
 ---
 
 ## Goal
@@ -45,3 +47,7 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:36:39+00:00 dispatched work run 20260904T173639Z-work via local [claude model=sonnet] (fresh session, base main, ~6511 tokens)
 - 2026-09-04T17:40:26+00:00 attempt 3 failed: no GARDEN_RESULT in worker output (see final.md); giving up
 - 2026-09-04T18:47:54+00:00 reset to ready by hand
+- 2026-09-04T20:01:59+00:00 dispatched work run 20260904T200159Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~7485 tokens)
+- 2026-09-04T20:09:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/44 (base main): The fix was already committed by a prior attempt that failed only because it omitted the GARDEN_RESULT marker; verified both acceptance criteria are met and the full test suite (114 passed) and lint pass cleanly. cost=$2.78
+- 2026-09-04T20:10:39+00:00 automated review: approve — The revise brief and review prompt now agree: review responses go in a pr_comment (posted by the scheduler on revision pushes) instead of the PR body, with a test that asserts the comment is posted. Both acceptance criteria are met; tests and lint pass; scope and description are clean. cost=$0.47
+- 2026-09-04T20:12:47+00:00 2 new review item(s)

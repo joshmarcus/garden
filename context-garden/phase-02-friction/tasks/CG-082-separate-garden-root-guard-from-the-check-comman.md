@@ -1,7 +1,7 @@
 ---
 id: CG-082
 title: Separate GARDEN_ROOT (guard) from the check-command venv path variable
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -18,7 +18,7 @@ discovered_from: CG-054
 attempts: 2
 last_dispatched_at: '2026-09-04T19:59:27+00:00'
 created: '2026-09-04T19:18:10+00:00'
-updated: '2026-09-04T19:59:27+00:00'
+updated: '2026-09-04T20:14:52+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,5 @@ Discovered by CG-054 (A worker's worktree must never act on the live garden) dur
 - 2026-09-04T19:56:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/42: Addressed the in-scope review comment by guarding custom `python:` checks against the live garden the same way built-in checks are, with a test; the other two review comments target unrelated code from an already-merged task and are explained as out of scope in the PR body. cost=$2.35
 - 2026-09-04T19:59:25+00:00 automated review requested changes: Code cleanly separates GARDEN_EXEC_ROOT (venv locator) from the GARDEN_ROOT guard; all acceptance criteria met, tests and lint pass. But the PR description carries review-round scar tissue and the find_root docstring is now stale. cost=$0.74
 - 2026-09-04T19:59:27+00:00 dispatched revise run 20260904T195926Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9583 tokens)
+- 2026-09-04T20:01:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/42: Rewrote the PR description to remove review-round scar tissue (P1/P2 references, PR #42 self-reference, stale-main-ref narration), replacing it with a clean Summary/Follow-ups/Friction/Testing description, and fixed the stale find_root() docstring that still described GARDEN_ROOT as overriding the search entirely. cost=$0.77
+- 2026-09-04T20:14:52+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/42
