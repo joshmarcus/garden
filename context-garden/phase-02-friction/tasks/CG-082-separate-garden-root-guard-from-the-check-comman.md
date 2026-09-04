@@ -14,10 +14,10 @@ reading:
 - src/garden/brief.py
 branch: garden/cg-082-separate-garden-root-guard-from-the-check-comman
 discovered_from: CG-054
-attempts: 1
-last_dispatched_at: '2026-09-04T19:36:27+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-04T19:44:48+00:00'
 created: '2026-09-04T19:18:10+00:00'
-updated: '2026-09-04T19:38:28+00:00'
+updated: '2026-09-04T19:44:48+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,5 @@ Discovered by CG-054 (A worker's worktree must never act on the live garden) dur
 - 2026-09-04T19:35:06+00:00 reset to ready by hand
 - 2026-09-04T19:36:27+00:00 dispatched work run 20260904T193626Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-054-a-worker-s-worktree-must-never-act-on-the-live-g stacked on CG-054, ~8590 tokens)
 - 2026-09-04T19:38:28+00:00 parent CG-054 merged; will rebase onto main when the current run finishes
+- 2026-09-04T19:44:47+00:00 no active run found; back to ready
+- 2026-09-04T19:44:48+00:00 dispatched work run 20260904T194448Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~8763 tokens)

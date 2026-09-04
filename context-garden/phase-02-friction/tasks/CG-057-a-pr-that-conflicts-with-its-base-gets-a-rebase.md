@@ -1,7 +1,7 @@
 ---
 id: CG-057
 title: A PR that conflicts with its base gets a rebase round
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,10 +11,11 @@ reading:
 - src/garden/scheduler.py
 - src/garden/github.py
 branch: garden/cg-057-a-pr-that-conflicts-with-its-base-gets-a-rebase
+pr: https://github.com/joshmarcus/context-garden/pull/41
 attempts: 2
 last_dispatched_at: '2026-09-04T19:34:56+00:00'
 created: '2026-09-04T17:47:51+00:00'
-updated: '2026-09-04T19:34:56+00:00'
+updated: '2026-09-04T19:44:48+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,5 @@ In `poll`, when `pr.mergeable == "CONFLICTING"` and the task is not already in `
 - 2026-09-04T19:12:19+00:00 dispatched work run 20260904T191218Z-work via local [claude model=sonnet] (fresh session, base main, ~6443 tokens)
 - 2026-09-04T19:33:47+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
 - 2026-09-04T19:34:56+00:00 dispatched work run 20260904T193455Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6601 tokens)
+- 2026-09-04T19:43:09+00:00 opened https://github.com/joshmarcus/context-garden/pull/41 (base main): poll() now detects a PR that GitHub reports as CONFLICTING and either auto-rebases + force-pushes cleanly, or queues a revise round with the conflicting files named (mirroring _restack), respecting the revision cap and emitting a conflict event shown on the task page and (when stuck) the Inbox. This work was completed and committed as 5baf3e5 by the prior attempt, which crashed before printing GARDEN_RESULT; I verified it against the acceptance criteria and ran the full suite (186 passed) and lint (clean). cost=$2.56
+- 2026-09-04T19:44:48+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/41

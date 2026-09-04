@@ -1,7 +1,7 @@
 ---
 id: CG-071
-title: Set a task's priority from the CLI and the task page
-status: ready
+title: Set a task's priority and difficulty from the CLI and the task page
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,13 +10,16 @@ difficulty: easy
 reading:
 - src/garden/cli.py
 - src/garden/web/app.py
+branch: garden/cg-071-set-a-task-s-priority-and-difficulty-from-the-cl
+attempts: 1
+last_dispatched_at: '2026-09-04T19:46:57+00:00'
 created: '2026-09-04T18:45:31+00:00'
-updated: '2026-09-04T18:45:31+00:00'
+updated: '2026-09-04T19:46:57+00:00'
 ---
 
 ## Goal
 
-`garden priority <id> <n>` and a priority control on the task page and the Board, so reordering the queue does not mean editing frontmatter by hand.
+`garden priority <id> <n>` and `garden difficulty <id> <tier>`, with a priority control and a difficulty selector on the task page (and priority on the Board), so reordering the queue or moving a task to another model tier does not mean editing frontmatter by hand. Difficulty picks the model tier at dispatch, so changing it on a ready task changes which model runs it.
 
 ## Context
 
@@ -24,10 +27,12 @@ Asked during the first live run. Priority is a frontmatter integer (lower dispat
 
 ## Acceptance criteria
 
-- [ ] `garden priority CG-054 0` changes the field, logs it, and `garden ready` shows the new order.
+- [ ] `garden priority CG-054 0` and `garden difficulty CG-054 hard` change the fields, log them, and `garden ready` / `garden show` reflect them.
+- [ ] the task page has a difficulty selector (easy, medium, hard) and a priority control; changing either is logged.
 - [ ] the task page and Board offer the same change.
 - [ ] tests for the command and the route.
 
 ## Log
 
 - 2026-09-04T18:45:31+00:00 approved
+- 2026-09-04T19:46:57+00:00 dispatched work run 20260904T194657Z-work via manual [human] (fresh session, base main, ~2295 tokens)
