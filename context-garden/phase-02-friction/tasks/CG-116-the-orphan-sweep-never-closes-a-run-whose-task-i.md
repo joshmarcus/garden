@@ -1,7 +1,7 @@
 ---
 id: CG-116
 title: The orphan sweep never closes a run whose task is still running
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,8 +10,11 @@ difficulty: medium
 reading:
 - src/garden/scheduler.py
 - tests/test_scheduler.py
+branch: garden/cg-116-the-orphan-sweep-never-closes-a-run-whose-task-i
+attempts: 1
+last_dispatched_at: '2026-09-04T22:06:11+00:00'
 created: '2026-09-04T21:56:41+00:00'
-updated: '2026-09-04T21:56:41+00:00'
+updated: '2026-09-04T22:06:11+00:00'
 ---
 
 ## Goal
@@ -27,3 +30,7 @@ Found on the first live run, twenty minutes after #47 went live. CG-098 (stacked
 - [ ] a finished revise run of a `running` task is reaped normally; a test reproduces the CG-098 timing (run finishes in the same tick as the sweep).
 - [ ] the sweep touches only review/persona/compare runs of tasks that have moved on; a test for each mode.
 - [ ] "no active run found" logs the run id and its closer.
+
+## Log
+
+- 2026-09-04T22:06:11+00:00 dispatched work run 20260904T220610Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6589 tokens)

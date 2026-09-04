@@ -1,7 +1,7 @@
 ---
 id: CG-098
 title: Tests do not read the developer's GARDEN_ROOT; the check command need not unset it
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -19,7 +19,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/54
 attempts: 1
 last_dispatched_at: '2026-09-04T22:00:15+00:00'
 created: '2026-09-04T21:09:46+00:00'
-updated: '2026-09-04T22:02:58+00:00'
+updated: '2026-09-04T22:07:59+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,6 @@ Found on the first live run, right after CG-082 landed. The check runner sets `G
 - 2026-09-04T21:57:25+00:00 2 new review item(s) + CI failure
 - 2026-09-04T22:00:15+00:00 dispatched revise run 20260904T220015Z-revise via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-090-state-save-never-clears-dirty-keys-after-a-succe, ~13831 tokens)
 - 2026-09-04T22:02:58+00:00 parent CG-090 merged; will rebase onto main when the current run finishes
+- 2026-09-04T22:07:19+00:00 discovered work filed: CG-119
+- 2026-09-04T22:07:55+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/54: Fixed the Codex bot's PYTEST_ADDOPTS leak in the ambient-env probe subprocess (tests/test_isolation.py); the CI failure in test_scheduler.py is a pre-existing flake unrelated to this branch's diff (already flagged as such earlier in this PR's history), confirmed by 3x full-suite and 5x targeted-test local runs with no failures. cost=$1.22
+- 2026-09-04T22:07:59+00:00 parent CG-090 merged; rebased onto main and retargeted the PR

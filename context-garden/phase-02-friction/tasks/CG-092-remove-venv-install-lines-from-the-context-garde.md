@@ -1,7 +1,7 @@
 ---
 id: CG-092
 title: Remove venv install lines from the context-garden garden config and product overview
-status: ready
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -20,7 +20,7 @@ discovered_from: CG-081
 attempts: 1
 last_dispatched_at: '2026-09-04T21:21:03+00:00'
 created: '2026-09-04T20:26:01+00:00'
-updated: '2026-09-04T21:30:14+00:00'
+updated: '2026-09-04T22:08:17+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ Discovered by CG-081 (Environment setup is per-product configuration, not a venv
 - 2026-09-04T21:26:44+00:00 attempt 1 failed: worker finished with no commits; will retry
 - 2026-09-04T21:27:08+00:00 manual again: the resumed worker confirmed the change is in the garden repo, which no worker checks out; a person does it after CG-081 merges
 - 2026-09-04T21:30:14+00:00 difficulty easy -> hard (web)
+- 2026-09-04T22:08:17+00:00 done by hand after #48 merged: garden.yaml now has a setup block for context-garden (venv + pip on this machine), the explicit checks.pre_pr is gone, and product.md no longer names an install command

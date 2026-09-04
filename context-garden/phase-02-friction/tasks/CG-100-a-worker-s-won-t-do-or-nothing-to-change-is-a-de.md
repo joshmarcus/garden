@@ -1,7 +1,7 @@
 ---
 id: CG-100
 title: A worker's won't-do or nothing-to-change is a decision for the person, not a failure
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/58
 attempts: 1
 last_dispatched_at: '2026-09-04T21:35:19+00:00'
 created: '2026-09-04T21:09:47+00:00'
-updated: '2026-09-04T22:02:19+00:00'
+updated: '2026-09-04T22:06:10+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,5 @@ Asked during the first live run. CG-091's revise round found that the failing ch
 
 - 2026-09-04T21:35:19+00:00 dispatched work run 20260904T213519Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~13923 tokens)
 - 2026-09-04T22:02:19+00:00 opened https://github.com/joshmarcus/context-garden/pull/58 (base main): A worker's wont_do (task shouldn't be done) or no_change (revise round has nothing to change) now moves the task to waiting_human as a decision showing the reason and full final message; the person accepts (wont_do ends the task and closes the PR; no_change resumes to the PR/review with no new run) or rejects (reasoning goes back into a revise round with the note). Added the terminal wont_do status with its own glyph/word, wired through CLI, web, TUI and Inbox, and documented it. cost=$18.03
+- 2026-09-04T22:06:09+00:00 automated review: approve — All five acceptance criteria are met and covered by 9 new fake-harness tests; full suite green and ruff clean. The two risky paths (duplicate inbox card, PR-body blanking on no_change) are both safe on inspection. cost=$1.63
+- 2026-09-04T22:06:10+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/58

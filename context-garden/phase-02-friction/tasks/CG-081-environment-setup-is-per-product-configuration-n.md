@@ -1,7 +1,7 @@
 ---
 id: CG-081
 title: Environment setup is per-product configuration, not a venv assumption
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/48
 attempts: 1
 last_dispatched_at: '2026-09-04T22:00:15+00:00'
 created: '2026-09-04T19:17:54+00:00'
-updated: '2026-09-04T22:01:46+00:00'
+updated: '2026-09-04T22:04:07+00:00'
 ---
 
 ## Goal
@@ -73,3 +73,4 @@ The runner runs `setup.command` in the worktree after creating it (and again whe
 - 2026-09-04T21:58:30+00:00 automated review requested changes: Feature is complete, correct and well-tested (236 pass, ruff clean); all five acceptance criteria met. The PR description carries scar tissue (a 'Review responses' P1/P2 section and a CI-failure narration) that fails the 'written right the first time' standard. cost=$1.01
 - 2026-09-04T22:00:15+00:00 dispatched revise run 20260904T220015Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14135 tokens)
 - 2026-09-04T22:01:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/48: Addressed the sole review item on PR #48: rewrote the PR description to drop the process-narration ('## Review responses' P1/P2 section and the CI-failure paragraph), keeping only the durable design caveat under a plain Notes heading. No code change — the feature is complete and the tree is clean. cost=$0.42
+- 2026-09-04T22:04:07+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/48

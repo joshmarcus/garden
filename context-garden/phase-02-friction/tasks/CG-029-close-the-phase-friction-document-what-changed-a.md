@@ -1,7 +1,7 @@
 ---
 id: CG-029
 title: 'Close the phase: friction document, what changed, and the next goals'
-status: ready
+status: draft
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -16,7 +16,7 @@ reading:
 - docs/roadmap.md
 - principles/agent-loop.md
 created: '2026-09-04T14:02:28+00:00'
-updated: '2026-09-04T17:23:50+00:00'
+updated: '2026-09-04T22:08:17+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ By the time this runs, `garden friction context-garden/phase-02-friction` (CG-00
 ## Log
 
 - 2026-09-04T17:23:50+00:00 approved (web)
+- 2026-09-04T22:08:17+00:00 not yet: the phase is still open (30 tasks); approve when the structural work has landed so the friction document and next goals rest on the finished phase
