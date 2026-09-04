@@ -17,7 +17,7 @@ discovered_from: CG-054
 attempts: 1
 last_dispatched_at: '2026-09-04T19:36:27+00:00'
 created: '2026-09-04T19:18:10+00:00'
-updated: '2026-09-04T19:36:27+00:00'
+updated: '2026-09-04T19:38:28+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Discovered by CG-054 (A worker's worktree must never act on the live garden) dur
 - 2026-09-04T19:34:51+00:00 worker blocked: CG-082 depends on the GARDEN_ROOT guard from CG-054, which only exists on the still-open, unmerged PR #35 (branch garden/cg-054-...); main and this branch have no GARDEN_ROOT handling in find_root() at all, so there is nothing to separate yet. cost=$1.04
 - 2026-09-04T19:35:06+00:00 reset to ready by hand
 - 2026-09-04T19:36:27+00:00 dispatched work run 20260904T193626Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-054-a-worker-s-worktree-must-never-act-on-the-live-g stacked on CG-054, ~8590 tokens)
+- 2026-09-04T19:38:28+00:00 parent CG-054 merged; will rebase onto main when the current run finishes

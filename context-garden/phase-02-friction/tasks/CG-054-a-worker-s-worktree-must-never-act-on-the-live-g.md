@@ -1,7 +1,7 @@
 ---
 id: CG-054
 title: A worker's worktree must never act on the live garden
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/40
 attempts: 1
 last_dispatched_at: '2026-09-04T19:33:50+00:00'
 created: '2026-09-04T17:42:42+00:00'
-updated: '2026-09-04T19:36:22+00:00'
+updated: '2026-09-04T19:38:28+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,4 @@ Isolation must not hard-code Python. Other products managed by this garden will 
 - 2026-09-04T19:32:44+00:00 2 new review item(s)
 - 2026-09-04T19:33:50+00:00 dispatched revise run 20260904T193350Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~10252 tokens)
 - 2026-09-04T19:36:22+00:00 opened https://github.com/joshmarcus/context-garden/pull/40 (base main): Extended the GARDEN_ROOT isolation sentinel to ssh workers: REMOTE_SCRIPT now exports GARDEN_ROOT at a non-garden path so a worker on a remote clone that is itself a garden cannot run side-effecting garden commands. Added a test; full suite and lint pass. cost=$0.77
+- 2026-09-04T19:38:28+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/40
