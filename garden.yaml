@@ -4,6 +4,7 @@
 # merged on top of this file. Dict keys merge; lists and scalars replace.
 name: context-garden
 runner: local               # default runner: local | ssh | manual
+work_dir: /home/joshua/work   # product clones and task worktrees, outside the garden (CG-085)
 harness: claude             # default harness: claude | codex | any name under harnesses:
 max_parallel: 5             # concurrent detached workers (reviews count too until CG-074)
 max_attempts: 2             # work runs before a task is marked failed
