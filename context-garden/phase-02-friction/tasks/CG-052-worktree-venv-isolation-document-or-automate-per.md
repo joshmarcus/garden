@@ -1,7 +1,7 @@
 ---
 id: CG-052
 title: 'Worktree venv isolation: document or automate per-worktree install'
-status: ready
+status: draft
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/review.py
 discovered_from: CG-038
 created: '2026-09-04T17:38:41+00:00'
-updated: '2026-09-04T18:41:38+00:00'
+updated: '2026-09-04T19:14:08+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,4 @@ Discovered by CG-038 (Stall detection judges a description-only round by the des
 
 - 2026-09-04T17:38:41+00:00 discovered by CG-038
 - 2026-09-04T18:41:38+00:00 approved
+- 2026-09-04T19:14:08+00:00 back to draft (web)

@@ -1,0 +1,48 @@
+---
+id: CG-079
+title: Suggest a change to a task from its page, and have an agent fold it in
+status: ready
+product: context-garden
+phase: phase-02-friction
+depends_on: []
+priority: 2
+difficulty: medium
+reading:
+- src/garden/web/app.py
+- src/garden/web/templates/task.html
+- src/garden/planner.py
+- src/garden/model.py
+- src/garden/scheduler.py
+created: '2026-09-04T19:15:32+00:00'
+updated: '2026-09-04T19:15:32+00:00'
+---
+
+## Goal
+
+On a task's page a person can write a suggestion about the task itself (its goal, context, acceptance criteria, reading list, priority, difficulty), and the garden later has an agent integrate the suggestion into the task file, showing what changed, without the person editing markdown by hand.
+
+## Context
+
+Asked during the first live run, on `/tasks/CG-052`. Today the task page has forms for answering a worker, triage and friction reports (CG-044), but nothing for "this task should say X": the only way is to edit the file. Task files are the spec a worker gets, so a good suggestion is worth folding in before dispatch, and a person's wording is usually not the final wording.
+
+Design:
+
+1. **Capture.** A "Suggest a change" form on the task page (textarea, optional "applies to" select: goal / context / acceptance / reading / priority / difficulty / anything). It appends to a `## Suggestions` section in the task file (`- <date> <author>: <text>`, `author` being the web session or `garden suggest --by`) and emits a `suggestion` event. `garden suggest <id> "<text>"` does the same from the CLI and from chat sessions. Suggestions never touch scheduler-owned fields.
+2. **Integrate.** A new run mode, `edit`, dispatched by the tick when a task has unintegrated suggestions and is not `running` (or by "Integrate now" on the page, or `garden integrate <id>`). The brief is the planner-style prompt with the task body and the suggestions, asking for a revised body (goal, context, acceptance, reading, and proposed priority/difficulty) that folds the suggestions in and keeps everything else; the result is JSON like the planner's. The scheduler writes the new body, marks the suggestions integrated (`- [x]`), logs "integrated N suggestion(s) (run …)", and keeps the old body in the run directory. If the task is `running`, suggestions wait and also ride the next revise brief as feedback so the worker knows the spec moved.
+3. **Show.** The task page shows the suggestions with their state and, after integration, a diff of the body (old and new from the run directory). The Inbox counts tasks with pending suggestions in the digest line, not as a card.
+4. **Model.** `review.difficulty`'s tier for the edit run; cheap, one turn, no tools.
+
+## Acceptance criteria
+
+- [ ] a suggestion made on the page or with `garden suggest` lands in the task file and the event log.
+- [ ] an `edit` run rewrites the body to include it, marks it integrated, and the page shows the diff; scheduler-owned fields are untouched.
+- [ ] a suggestion on a `running` task waits and reaches the next revise brief.
+- [ ] tests with the fake harness returning a revised body.
+
+## Out of scope
+
+- Suggestions on phase goals or specs; those are files a person edits or the planner re-reads.
+
+## Log
+
+- 2026-09-04T19:15:32+00:00 approved

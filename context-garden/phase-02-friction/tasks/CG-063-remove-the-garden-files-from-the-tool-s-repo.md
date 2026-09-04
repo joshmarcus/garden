@@ -1,15 +1,18 @@
 ---
 id: CG-063
 title: Remove the garden files from the tool's repo
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
 priority: 1
 difficulty: easy
 reading: []
+branch: garden/cg-063-remove-the-garden-files-from-the-tool-s-repo
+attempts: 1
+last_dispatched_at: '2026-09-04T19:12:19+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T18:41:38+00:00'
+updated: '2026-09-04T19:12:19+00:00'
 ---
 
 ## Goal
@@ -29,3 +32,4 @@ The garden was moved out on 2026-09-04 after workers reached the live garden thr
 ## Log
 
 - 2026-09-04T18:41:38+00:00 approved
+- 2026-09-04T19:12:19+00:00 dispatched work run 20260904T191219Z-work via local [claude model=sonnet] (fresh session, base main, ~2133 tokens)
