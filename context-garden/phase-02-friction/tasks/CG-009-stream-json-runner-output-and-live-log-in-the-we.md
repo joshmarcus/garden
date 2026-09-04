@@ -1,7 +1,7 @@
 ---
 id: CG-009
 title: Stream-json runner output and live log in the web UI
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/10
 attempts: 2
 last_dispatched_at: '2026-09-04T18:43:38+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T18:43:38+00:00'
+updated: '2026-09-04T18:52:55+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,11 @@ The command line and output parsing for a harness live in `src/garden/harness.py
 - 2026-09-04T17:32:05+00:00 stalled: revise run 20260904T173040Z-revise produced no change to the diff; needs a human (garden retry to resume)
 - 2026-09-04T18:35:26+00:00 triage: changes requested by hand: Codex review on PR #10, dropped at the time. (P1) src/garden/harness.py:76: stream-json requires --verbose with -p; add
 - 2026-09-04T18:43:38+00:00 dispatched revise run 20260904T184338Z-revise via local [claude model=sonnet] (fresh session, base main, ~3974 tokens)
+- 2026-09-04T18:51:51+00:00 push failed: git push -u origin HEAD:refs/heads/garden/cg-009-stream-json-runner-output-and-live-log-in-the-we (in /home/joshua/garden/.garden/worktrees/CG-009): To https://github.com/joshmarcus/context-garden.git
+ ! [rejected]        HEAD -> garden/cg-009-stream-json-runner-output-and-live-log-in-the-we (non-fast-forward)
+error: failed to push some refs to 'https://github.com/joshmarcus/context-garden.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.77
+- 2026-09-04T18:52:55+00:00 rebased branch force-pushed by hand after the scheduler's plain push was rejected; PR #10 updated
