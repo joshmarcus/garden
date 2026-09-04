@@ -31,6 +31,11 @@ Fixes, all of them: (1) `find_root()` stops at a `.garden/worktrees` boundary an
 
 A second route, seen an hour later: a worker ran `pip install -e .` inside its worktree (the product overview tells workers how to install), which re-pointed the garden's shared `.venv` editable install at `.garden/worktrees/CG-041/src`. When that worktree was removed after its merge, `garden` itself failed to import and `garden serve` answered 500 until the install was repaired by hand. Another worker installed playwright into the same venv. Workers must get their own environment (a venv inside the worktree, or `uv run` with an isolated project), and the pre-PR checks must not depend on the shared `.venv` being untouched.
 
+
+## Constraint (added 2026-09-04, from the person)
+
+Isolation must not hard-code Python. Other products managed by this garden will use different dependency tooling (a work setting with its own package manager, Node projects, monorepo tools). Whatever runs to prepare a worktree must come from per-product configuration (see the environment-setup task filed alongside this one: a `setup` block with `command`, `env`, `test`, `lint`), with this product's `uv`/venv as one configuration, not as code in the runner. `GARDEN_ROOT`, `find_root()` boundaries and the brief's rules are generic; anything that names pip, uv or `.venv` outside `garden.yaml` fails review.
+
 ## Acceptance criteria
 
 - [ ] `find_root()` from inside `.garden/worktrees/<id>` does not return the enclosing garden.
@@ -38,6 +43,7 @@ A second route, seen an hour later: a worker ran `pip install -e .` inside its w
 - [ ] the brief tells workers not to run the garden against itself.
 - [ ] a test for the boundary.
 - [ ] a worker cannot change the garden's own `.venv`: workers run with their own environment and the brief says so.
+- [ ] no Python-, pip-, uv- or venv-specific logic in the runner or scheduler; environment preparation comes from per-product config.
 
 ## Out of scope
 
