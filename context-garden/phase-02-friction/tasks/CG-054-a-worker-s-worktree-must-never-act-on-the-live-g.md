@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-054-a-worker-s-worktree-must-never-act-on-the-live-g
 pr: https://github.com/joshmarcus/context-garden/pull/35
 attempts: 1
-last_dispatched_at: '2026-09-04T19:22:45+00:00'
+last_dispatched_at: '2026-09-04T19:33:50+00:00'
 created: '2026-09-04T17:42:42+00:00'
-updated: '2026-09-04T19:22:45+00:00'
+updated: '2026-09-04T19:33:50+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,6 @@ Isolation must not hard-code Python. Other products managed by this garden will 
 - 2026-09-04T19:22:34+00:00 triage: changes requested by hand: Two things. (1) The boundary and the GARDEN_ROOT redirect are right and generic; keep them. The new operating rule in br
 - 2026-09-04T19:22:44+00:00 automated review: request_changes — Two blocking issues: brief.py names uv/pip/.venv in OPERATING_RULES, violating the explicit constraint that brief rules must be generic; PR description contains a 'Root cause of the revision' section that is scar tissue from the revision round. cost=$0.47
 - 2026-09-04T19:22:45+00:00 dispatched revise run 20260904T192245Z-revise via local [claude model=sonnet] (fresh session, base main, ~9801 tokens)
+- 2026-09-04T19:32:11+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/35: Rebased onto origin/main resolving the brief.py conflict, and made the operating-rules install guidance generic. The OPERATING_RULES no longer name uv, pip, or .venv — the rule now says 'do not install packages into a shared environment or outside this worktree; the environment is prepared; run the product's own check commands from the product overview'. All 191 tests pass, lint clean. cost=$0.73
+- 2026-09-04T19:32:44+00:00 2 new review item(s)
+- 2026-09-04T19:33:50+00:00 dispatched revise run 20260904T193350Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~10252 tokens)

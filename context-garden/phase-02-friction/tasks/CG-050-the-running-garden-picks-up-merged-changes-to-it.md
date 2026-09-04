@@ -1,7 +1,7 @@
 ---
 id: CG-050
 title: The running garden picks up merged changes to itself
-status: running
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/cli.py
 - docs/architecture.md
 branch: garden/cg-050-the-running-garden-picks-up-merged-changes-to-it
+pr: https://github.com/joshmarcus/context-garden/pull/36
 attempts: 2
 last_dispatched_at: '2026-09-04T19:24:03+00:00'
 created: '2026-09-04T17:35:07+00:00'
-updated: '2026-09-04T19:24:03+00:00'
+updated: '2026-09-04T19:32:48+00:00'
 ---
 
 ## Goal
@@ -45,3 +46,8 @@ On `_on_merged` for a product with `repo: .`: fast-forward the checkout's base b
 - 2026-09-04T19:12:18+00:00 dispatched work run 20260904T191217Z-work via local [claude model=sonnet] (fresh session, base main, ~7553 tokens)
 - 2026-09-04T19:24:03+00:00 no active run found; back to ready
 - 2026-09-04T19:24:03+00:00 dispatched work run 20260904T192403Z-work via local [claude model=sonnet] (fresh session, base main, ~7604 tokens)
+- 2026-09-04T19:26:30+00:00 opened https://github.com/joshmarcus/context-garden/pull/36 (base main): The previous dispatch committed the full implementation in commit 68a44d6. After a PR into a product with `repo: .` merges, the scheduler fast-forwards the garden checkout's base branch to `origin/<base>`, sets a `needs_restart` flag, and clears it automatically on the next process startup. Dirty trees (changes outside `tasks/` and `.garden/`) are skipped with a warning. Both `garden status` and the Inbox show the restart notice or dirty warning. All 193 tests pass. cost=$0.75
+- 2026-09-04T19:31:16+00:00 automated review: approve — All four acceptance criteria are met and all 193 tests pass. One nit: `is_clean_except` uses `startswith(f'/{seg}')` without a trailing slash, so a root file named `.gardenrc` or `tasksstuff.md` would be treated as safe — the docstring says 'complete path component' but the code doesn't enforce it; harmless in practice since `.garden/` is gitignored. cost=$0.32
+- 2026-09-04T19:32:40+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/36
+- 2026-09-04T19:32:47+00:00 cancelled (web)
+- 2026-09-04T19:32:48+00:00 cancelled (web)

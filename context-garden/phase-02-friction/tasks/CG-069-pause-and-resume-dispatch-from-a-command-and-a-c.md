@@ -1,7 +1,7 @@
 ---
 id: CG-069
 title: Pause and resume dispatch from a command and a configuration page
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,10 +13,11 @@ reading:
 - src/garden/web/app.py
 - src/garden/config.py
 branch: garden/cg-069-pause-and-resume-dispatch-from-a-command-and-a-c
+pr: https://github.com/joshmarcus/context-garden/pull/38
 attempts: 1
 last_dispatched_at: '2026-09-04T19:22:45+00:00'
 created: '2026-09-04T18:40:41+00:00'
-updated: '2026-09-04T19:22:45+00:00'
+updated: '2026-09-04T19:32:39+00:00'
 ---
 
 ## Goal
@@ -46,3 +47,4 @@ CLI: `garden pause [--reason ...]`, `garden resume`, and `garden status` / `gard
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T19:22:45+00:00 dispatched work run 20260904T192245Z-work via local [claude model=sonnet] (fresh session, base main, ~9813 tokens)
+- 2026-09-04T19:32:39+00:00 opened https://github.com/joshmarcus/context-garden/pull/38 (base main): Implemented pause/resume dispatch via garden pause/resume CLI commands and a /config web page. Paused state is stored in .garden/state.json under _control, reloaded every tick, so changes take effect instantly without restart. The inbox footer shows 'dispatch paused' with a Resume button when active. All 191 tests pass. cost=$2.87

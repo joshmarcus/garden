@@ -1,7 +1,7 @@
 ---
 id: CG-053
 title: state.json is saved whole by every writer, so concurrent writers lose updates
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/scheduler.py
 - docs/architecture.md
 branch: garden/cg-053-state-json-is-saved-whole-by-every-writer-so-con
+pr: https://github.com/joshmarcus/context-garden/pull/37
 attempts: 1
 last_dispatched_at: '2026-09-04T19:12:18+00:00'
 created: '2026-09-04T17:41:02+00:00'
-updated: '2026-09-04T19:12:18+00:00'
+updated: '2026-09-04T19:31:43+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,4 @@ Options, smallest first: save per task (`state/<task>.json`) so writers only tou
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T19:12:18+00:00 dispatched work run 20260904T191218Z-work via local [claude model=sonnet] (fresh session, base main, ~7520 tokens)
+- 2026-09-04T19:31:43+00:00 opened https://github.com/joshmarcus/context-garden/pull/37 (base main): Replaced State.save() with a lock-based merge-on-save: _TaskState tracks dirty keys at the top level (including reads of nested dicts/lists), and save() acquires an exclusive flock, re-reads disk, merges only changed keys, then writes back. All 195 tests pass. cost=$2.91

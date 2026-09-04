@@ -4,8 +4,7 @@ title: The garden upgrades its own pinned install after the tool's PRs merge
 status: ready
 product: context-garden
 phase: phase-02-friction
-depends_on:
-- CG-050
+depends_on: []
 priority: 1
 difficulty: medium
 reading:

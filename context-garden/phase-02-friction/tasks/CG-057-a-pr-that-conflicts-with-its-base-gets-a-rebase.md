@@ -1,7 +1,7 @@
 ---
 id: CG-057
 title: A PR that conflicts with its base gets a rebase round
-status: running
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ branch: garden/cg-057-a-pr-that-conflicts-with-its-base-gets-a-rebase
 attempts: 1
 last_dispatched_at: '2026-09-04T19:12:19+00:00'
 created: '2026-09-04T17:47:51+00:00'
-updated: '2026-09-04T19:12:19+00:00'
+updated: '2026-09-04T19:33:47+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ In `poll`, when `pr.mergeable == "CONFLICTING"` and the task is not already in `
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T19:12:19+00:00 dispatched work run 20260904T191218Z-work via local [claude model=sonnet] (fresh session, base main, ~6443 tokens)
+- 2026-09-04T19:33:47+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
