@@ -37,9 +37,10 @@ review:
 # become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
 # brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
 checks:
-  pre_pr:                   # $GARDEN_EXEC_ROOT is the live garden (its venv); $GARDEN_ROOT is a sentinel so a check cannot act on the garden
+  pre_pr:                   # $GARDEN_EXEC_ROOT is the live garden (its venv); $GARDEN_ROOT is a sentinel so a check cannot act on the garden.
+                            # The tests unset it: test_cli runs `garden status` without --root and would otherwise read the sentinel (CG-098).
     - name: tests
-      command: 'PYTHONPATH=src "$GARDEN_EXEC_ROOT/.venv/bin/python" -m pytest -q -x'
+      command: 'env -u GARDEN_ROOT PYTHONPATH=src "$GARDEN_EXEC_ROOT/.venv/bin/python" -m pytest -q -x'
     - name: lint
       command: '"$GARDEN_EXEC_ROOT/.venv/bin/ruff" check src tests'
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
