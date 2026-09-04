@@ -31,6 +31,8 @@ Turn the phase's friction record into a finished document and a draft of the nex
 
 By the time this runs, `garden friction context-garden/phase-02-friction` (CG-008) harvests the `## Friction` sections of every PR in the phase into `docs/friction.md`, and that file also holds the "First live run" and "Tiers" sections written by hand (CG-027, CG-028). `garden metrics context-garden/phase-02-friction` gives lead time, revise rounds, first-pass approval and cost per tier; `garden digest` gives the history. Write for the person who plans the next phase: short, specific, with task ids.
 
+Closing the phase itself is `garden close-phase context-garden/phase-02-friction` (from CG-078, PR #73), run against the live garden; do that last, after the friction document and the next phase's goals are committed.
+
 ## Acceptance criteria
 
 - [ ] `docs/friction.md` is organised as: what workers reported (harvested), what the first live run showed, the tier numbers, what changed in response (with task ids), and what remains.

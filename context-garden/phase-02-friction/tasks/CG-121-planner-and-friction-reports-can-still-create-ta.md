@@ -1,11 +1,11 @@
 ---
 id: CG-121
 title: Planner and friction reports can still create tasks in a closed phase
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
-priority: 2
+priority: 3
 difficulty: easy
 reading:
 - src/garden/web/app.py
@@ -17,7 +17,7 @@ reading:
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 discovered_from: CG-078
 created: '2026-09-04T22:59:04+00:00'
-updated: '2026-09-04T22:59:04+00:00'
+updated: '2026-09-04T23:14:00+00:00'
 ---
 
 CG-078 guards `new-task` and the scheduler, per the spec. `garden plan`/`import_plan`, the web plan form and friction draft-task creation can still write tasks into a closed phase (the phase page for a closed phase no longer offers the forms, but the CLI paths remain). Decide whether those paths should refuse or implicitly reopen.
@@ -29,3 +29,5 @@ Discovered by CG-078 (Closed phases leave the rail and live in a browsable herba
 ## Log
 
 - 2026-09-04T22:59:04+00:00 discovered by CG-078
+- 2026-09-04T23:14:00+00:00 approved
+- 2026-09-04T23:14:00+00:00 priority 2 -> 3
