@@ -84,7 +84,7 @@ ssh:
 
 github:
   use_gh: true              # prefer the gh CLI; falls back to REST with GITHUB_TOKEN
-  draft_pr: true            # PRs open as drafts; a human's triage (garden triage ID --ready) marks them ready
+  draft_pr: false           # PRs open ready for review; set true to open drafts that wait for triage on the Inbox
   reviewers: []
 
 products:
