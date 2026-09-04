@@ -14,7 +14,6 @@ have the rest of the loop automated without an LLM sitting in the scheduler seat
 This repository is both the tool and its own first product. Python 3.11+, packaged with
 `pyproject.toml` (hatchling), managed with `uv`.
 
-- Install: `uv venv && uv pip install -e ".[dev]"`
 - Tests: `.venv/bin/pytest -q`
 - Lint: `.venv/bin/ruff check src tests`
 - CLI: `.venv/bin/garden --help`
