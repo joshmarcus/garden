@@ -1,7 +1,7 @@
 ---
 id: CG-032
 title: Doctor checks that gh and the harness are logged in and git has an identity
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T18:51:53+00:00'
 created: '2026-09-04T17:03:09+00:00'
-updated: '2026-09-04T19:05:02+00:00'
+updated: '2026-09-04T19:05:28+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T19:02:59+00:00 discovered work filed: CG-077
 - 2026-09-04T19:03:23+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/15: Fixed the CI test failure caused by Rich line-wrapping the harness binary path and splitting 'LOGGED IN' across lines. Rewrote the PR description per the automated review's feedback about scar tissue. cost=$1.68
 - 2026-09-04T19:05:02+00:00 triage: marked ready for review
+- 2026-09-04T19:05:28+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/15

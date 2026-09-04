@@ -1,7 +1,7 @@
 ---
 id: CG-077
 title: Document pip install -e requirement for worktree development
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - src/garden/runner/local.py
 discovered_from: CG-032
 created: '2026-09-04T19:02:59+00:00'
-updated: '2026-09-04T19:02:59+00:00'
+updated: '2026-09-04T19:07:27+00:00'
 ---
 
 ## Goal
@@ -27,3 +27,4 @@ Discovered by CG-032 (Doctor checks that gh and the harness are logged in and gi
 ## Log
 
 - 2026-09-04T19:02:59+00:00 discovered by CG-032
+- 2026-09-04T19:07:27+00:00 cancelled (web)

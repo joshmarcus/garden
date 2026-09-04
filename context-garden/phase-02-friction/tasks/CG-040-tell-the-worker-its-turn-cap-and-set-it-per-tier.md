@@ -1,7 +1,7 @@
 ---
 id: CG-040
 title: Tell the worker its turn cap, and set it per tier
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T18:58:56+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T18:58:56+00:00'
+updated: '2026-09-04T19:09:39+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,6 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:40:27+00:00 automated review requested changes: All acceptance criteria met, 122 tests pass, lint clean. PR description is missing the motivation — the CG-012 haiku exhaustion incident that makes this change necessary — which a reader without the task file needs. cost=$0.34
 - 2026-09-04T18:35:27+00:00 triage: changes requested by hand: Codex review on PR #20, dropped at the time. (P2) src/garden/brief.py:131: the brief reads the product harness but dispa
 - 2026-09-04T18:58:56+00:00 dispatched revise run 20260904T185855Z-revise via local [claude model=sonnet] (fresh session, base main, ~2492 tokens)
+- 2026-09-04T19:08:03+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/20: Rebased onto main (absorbing the PR #27 'cap off by default' change), then addressed all three review items: the brief now uses task.harness when set so task-level and trial harness overrides get the correct turn cap; dispatch_review stores the resolved difficulty on run.difficulty; run_planner passes difficulty through to harness.command(). The turn cap rule in the brief is now conditional on max_turns > 0. All 172 tests pass, lint clean. cost=$1.95
+- 2026-09-04T19:09:37+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/20
+- 2026-09-04T19:09:39+00:00 marked done (web)

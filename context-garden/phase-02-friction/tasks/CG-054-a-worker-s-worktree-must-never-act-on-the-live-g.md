@@ -13,9 +13,9 @@ reading:
 - src/garden/brief.py
 branch: garden/cg-054-a-worker-s-worktree-must-never-act-on-the-live-g
 attempts: 1
-last_dispatched_at: '2026-09-04T18:59:59+00:00'
+last_dispatched_at: '2026-09-04T19:08:09+00:00'
 created: '2026-09-04T17:42:42+00:00'
-updated: '2026-09-04T18:59:59+00:00'
+updated: '2026-09-04T19:08:09+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ A second route, seen an hour later: a worker ran `pip install -e .` inside its w
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T18:59:59+00:00 dispatched work run 20260904T185958Z-work via local [claude model=sonnet] (fresh session, base main, ~2483 tokens)
+- 2026-09-04T19:08:06+00:00 pre-PR checks failed (tests); no PR opened yet; revise run will fix cost=$1.80
+- 2026-09-04T19:08:09+00:00 dispatched revise run 20260904T190809Z-revise via local [claude model=sonnet] (fresh session, base main, ~9515 tokens)
