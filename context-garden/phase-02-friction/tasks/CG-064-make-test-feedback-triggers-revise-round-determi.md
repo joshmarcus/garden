@@ -5,14 +5,14 @@ status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
-priority: 2
+priority: 0
 difficulty: easy
 reading:
 - tests/test_scheduler.py
 - tests/conftest.py
 - tests/fake_claude.py
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-04T18:41:38+00:00'
+updated: '2026-09-04T21:44:53+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 ## Log
 
 - 2026-09-04T18:41:38+00:00 approved
+- 2026-09-04T21:44:53+00:00 priority 2 -> 0

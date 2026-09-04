@@ -46,7 +46,7 @@ checks:
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
     - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
       python: "garden.checks:github_actions_failures"
-      flaky_patterns: ["ETIMEDOUT", "ECONNRESET", "rate limit"]
+      flaky_patterns: ["ETIMEDOUT", "ECONNRESET", "rate limit", "test_feedback_triggers_revise_round"]   # last one: known flake, CG-064
       rerun: true
     # work (garden.work.yaml): point this at your CI instead, e.g.
     # - name: ci-log
