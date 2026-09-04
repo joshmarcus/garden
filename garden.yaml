@@ -34,11 +34,15 @@ review:
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
 # Token-free checks. pre_pr runs in the worktree before a PR is opened or updated (failures
-# become a revise round, no PR yet); none are configured here so it defaults to the product's
-# own setup.test / setup.lint commands below, run with setup.env. ci runs when a PR's CI goes
-# red; results feed the revise brief, and a `flaky` verdict with `rerun: true` reruns the jobs
-# instead of spending tokens.
+# become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
+# brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
 checks:
+  pre_pr:                   # $GARDEN_EXEC_ROOT is the live garden (its venv); $GARDEN_ROOT is a sentinel so a check cannot act on the garden.
+                            # The tests unset it: test_cli runs `garden status` without --root and would otherwise read the sentinel (CG-098).
+    - name: tests
+      command: 'env -u GARDEN_ROOT PYTHONPATH=src "$GARDEN_EXEC_ROOT/.venv/bin/python" -m pytest -q -x'
+    - name: lint
+      command: '"$GARDEN_EXEC_ROOT/.venv/bin/ruff" check src tests'
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
     - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
       python: "garden.checks:github_actions_failures"
@@ -91,11 +95,6 @@ products:
     repo: https://github.com/joshmarcus/context-garden.git   # cloned under .garden/repos/; worktrees come from that clone
     base_branch: main
     id_prefix: CG
-    setup:                  # how this product's working environment is prepared (all keys optional)
-      command: "uv sync --extra dev"
-      env: {UV_PROJECT_ENVIRONMENT: .venv}
-      test: 'env -u GARDEN_ROOT uv run pytest -q -x'   # unset: test_cli runs `garden status` without --root and would otherwise read the sentinel
-      lint: "uv run ruff check src tests"
     # runner: ssh           # per-product overrides
     # harness: codex
     # budget_usd: 100       # per-product default budget for every phase
