@@ -1,7 +1,7 @@
 ---
 id: CG-034
 title: 'Windows: run the harness by its resolved path and give pre-PR checks a shell'
-status: awaiting_triage
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T17:24:46+00:00'
 created: '2026-09-04T17:03:09+00:00'
-updated: '2026-09-04T17:37:41+00:00'
+updated: '2026-09-04T18:07:23+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:34:19+00:00 discovered work filed: CG-049
 - 2026-09-04T17:34:41+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/16 (base main): Harness.command() now resolves the binary via shutil.which so the absolute path appears in the sh -c script. LocalRunner.doctor() refuses on Windows (os.name == 'nt') with a WSL pointer. README documents the requirement. 119 tests pass, lint clean. cost=$1.64
 - 2026-09-04T17:37:41+00:00 automated review: approve — All three acceptance criteria met with tests; implementation is correct and well-scoped. No blocking findings. cost=$0.25
+- 2026-09-04T18:07:21+00:00 marked ready for review on GitHub; triage done
+- 2026-09-04T18:07:23+00:00 1 new review item(s)

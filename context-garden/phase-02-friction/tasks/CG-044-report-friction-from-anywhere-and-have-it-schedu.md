@@ -1,7 +1,7 @@
 ---
 id: CG-044
 title: Report friction from anywhere, and have it scheduled
-status: awaiting_triage
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/25
 attempts: 1
 last_dispatched_at: '2026-09-04T17:38:14+00:00'
 created: '2026-09-04T17:21:39+00:00'
-updated: '2026-09-04T17:49:14+00:00'
+updated: '2026-09-04T18:09:37+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Provide: a "Report friction" form on the Inbox and on every task page (text plus
 - 2026-09-04T17:38:14+00:00 dispatched work run 20260904T173814Z-work via local [claude model=sonnet] (fresh session, base main, ~9649 tokens)
 - 2026-09-04T17:45:47+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/25 (base main): Added friction reporting from three surfaces: the CLI (`garden friction-report <product/phase> "text"`), the web Inbox, and every task page. Each report appends to `docs/friction.md` under a `## Reported` section with date and provenance, creates a draft task from the report, and the `garden friction` harvester now preserves the Reported section when regenerating the file. All 126 tests pass, lint clean. cost=$2.07
 - 2026-09-04T17:49:14+00:00 automated review: approve — All four acceptance criteria met, 41 tests pass, lint clean. One dead-code guard in _extract_reported_section and a minor multi-product usability quirk in the inbox form are both harmless in the common single-product case. cost=$0.53
+- 2026-09-04T18:09:37+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/25

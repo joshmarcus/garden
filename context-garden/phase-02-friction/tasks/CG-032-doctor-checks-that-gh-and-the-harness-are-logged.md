@@ -1,7 +1,7 @@
 ---
 id: CG-032
 title: Doctor checks that gh and the harness are logged in and git has an identity
-status: running
+status: failed
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T17:49:21+00:00'
 created: '2026-09-04T17:03:09+00:00'
-updated: '2026-09-04T17:49:21+00:00'
+updated: '2026-09-04T18:13:55+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:46:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/15: garden doctor now fails with exit code 1 and a red [NOT LOGGED IN] line when gh or the harness is unauthenticated, shows the gh login when present, and fails when git has no user.name/user.email. Four tests cover each check. All 117 tests pass and lint is clean. cost=$0.50
 - 2026-09-04T17:47:00+00:00 CI failure
 - 2026-09-04T17:49:21+00:00 dispatched revise run 20260904T174920Z-revise via local [claude model=sonnet] (fresh session, base main, ~8189 tokens)
+- 2026-09-04T18:13:55+00:00 revision failed: worker exited 143: worker produced no output

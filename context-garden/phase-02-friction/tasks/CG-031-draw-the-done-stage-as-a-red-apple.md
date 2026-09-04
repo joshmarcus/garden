@@ -1,7 +1,7 @@
 ---
 id: CG-031
 title: Draw the done stage as a red apple
-status: awaiting_triage
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/26
 attempts: 1
 last_dispatched_at: '2026-09-04T17:39:16+00:00'
 created: '2026-09-04T16:44:17+00:00'
-updated: '2026-09-04T17:52:15+00:00'
+updated: '2026-09-04T18:06:14+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ The stage glyphs are inline SVG `<g id="st-...">` symbols in `src/garden/plants.
 - 2026-09-04T17:46:05+00:00 discovered work filed: CG-056
 - 2026-09-04T17:46:27+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/26 (base main): Replaced the st-fruit glyph (four berries) with a red apple: one round body drawn as a closed Bezier path using a new --apple CSS variable, a short stem, a leaf in var(--leaf), and a crease suggesting the apple's top groove. Added --apple (#c0383a light, #d95252 dark) to the pressed-specimen palette in base.html. All 119 tests pass, lint clean. cost=$0.96
 - 2026-09-04T17:52:15+00:00 automated review: approve — All three acceptance criteria met; plants and graph tests pass cleanly. Two coordination test failures are stale-branch artifacts (CG-038 changed the scheduler API after this branch was cut) and are not caused by this PR's changes. cost=$0.40
+- 2026-09-04T18:06:14+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/26

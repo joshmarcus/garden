@@ -1,7 +1,7 @@
 ---
 id: CG-059
 title: Bot comments count as feedback unless excluded
-status: awaiting_triage
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/30
 attempts: 1
 last_dispatched_at: '2026-09-04T17:57:36+00:00'
 created: '2026-09-04T17:53:43+00:00'
-updated: '2026-09-04T17:59:52+00:00'
+updated: '2026-09-04T18:05:12+00:00'
 ---
 
 ## Goal
@@ -36,3 +36,5 @@ Asked during the first live run: PR #20 received three line comments from `chatg
 
 - 2026-09-04T17:57:36+00:00 dispatched work run 20260904T175736Z-work via manual [human] (fresh session, base main, ~7387 tokens)
 - 2026-09-04T17:59:52+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/30 (base main): Bot comments now count as feedback; github.bot_logins is the exclusion list and is wired from config; bot items are labelled in the revise brief.
+- 2026-09-04T18:01:39+00:00 automated review: approve — All three acceptance criteria are met with clear test evidence; the blanket bot filter is removed, bot_logins exclusion is wired from config, and bot items are labelled in the revise brief. cost=$0.19
+- 2026-09-04T18:05:12+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/30

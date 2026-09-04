@@ -1,7 +1,7 @@
 ---
 id: CG-010
 title: Notification hook for human-needed transitions
-status: awaiting_triage
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/17
 attempts: 2
 last_dispatched_at: '2026-09-04T17:40:46+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T17:45:02+00:00'
+updated: '2026-09-04T18:08:27+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Transitions go through `Scheduler._transition` and every other human-needed mome
 - 2026-09-04T17:39:15+00:00 automated review requested changes: should_notify fires on all changes_requested transitions including those the scheduler handles automatically (auto-revise, pre-PR check revise, rebase revise), causing false-positive notifications on every normal review cycle; only human-needed changes_requested transitions (stall, revision cap, auto_revise off) should trigger the hook. cost=$0.42
 - 2026-09-04T17:40:46+00:00 dispatched revise run 20260904T174046Z-revise via local [claude model=sonnet] (fresh session, base main, ~2688 tokens)
 - 2026-09-04T17:45:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/17: Fixed spurious notifications on auto-handled changes_requested transitions. `should_notify` now takes `needs_human: bool` instead of `previous_status`; only the two human-required sites (auto_revise=False and revision cap) and stall transitions pass `needs_human=True`. A new test confirms no notification fires during a normal auto-revise cycle. cost=$0.66
+- 2026-09-04T18:08:27+00:00 marked ready for review on GitHub; triage done
