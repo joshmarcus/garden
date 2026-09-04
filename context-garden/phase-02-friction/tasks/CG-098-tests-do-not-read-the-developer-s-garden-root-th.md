@@ -4,7 +4,7 @@ title: Tests do not read the developer's GARDEN_ROOT; the check command need not
 status: ready
 product: context-garden
 phase: phase-02-friction
-depends_on: []
+depends_on: [CG-090, CG-101]
 priority: 1
 difficulty: easy
 reading:

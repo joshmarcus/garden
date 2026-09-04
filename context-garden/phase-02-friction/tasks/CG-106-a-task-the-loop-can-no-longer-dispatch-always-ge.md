@@ -1,0 +1,31 @@
+---
+id: CG-106
+title: A task the loop can no longer dispatch always gets a card
+status: ready
+product: context-garden
+phase: phase-02-friction
+depends_on: []
+priority: 0
+difficulty: medium
+reading:
+- src/garden/scheduler.py
+- src/garden/inbox.py
+- tests/test_scheduler.py
+created: '2026-09-04T21:17:43+00:00'
+updated: '2026-09-04T21:17:43+00:00'
+---
+
+## Goal
+
+No task sits in `changes_requested` (or any non-terminal status) with nothing scheduled and nothing on the Inbox. If the loop cannot dispatch the next round, the task gets a card that says why and what to do.
+
+## Context
+
+Found on the first live run, twice in one hour. `dispatch_ready` queues a revise round only when `pending_feedback` is non-empty, `needs_human` is unset and `revisions < max_revisions`. CG-037 reached three revision rounds (a rebase, a description round and a check poisoned by the garden's own environment); the pre-PR-checks-failed path for a task with an open PR does not look at the cap, so it left the task in `changes_requested` with feedback and no `needs_human`, and the queue skipped it forever. CG-090's tests check was killed with the server (`exit -15`) and recorded with empty output, so `pending_feedback` was `""` and the queue skipped it too. Neither task appeared on the Inbox; `garden status` showed two `chg` and nothing else. Make one rule: whenever a task enters `changes_requested`, either a revise round is dispatchable (feedback present, cap not reached) or `needs_human` is set with the reason. Add a tick-time audit that finds any non-terminal task with no active run and no dispatchable round and flags it (`needs_human` "stuck: <reason>"), so state edits, killed checks and future bugs surface as cards instead of silence. The card's actions: resume with one more round (resets the cap by one, with a note), or send back with a note (CG-045's shape). A killed or empty check result is recorded as "check did not finish", not as a failure with no text.
+
+## Acceptance criteria
+
+- [ ] pre-PR failure at the cap sets `needs_human` like the review path does.
+- [ ] an empty or signalled check result is never stored as empty feedback; the task gets a card.
+- [ ] the tick audit flags a non-terminal task with no active run and no dispatchable round; a test seeds that state by hand and sees the card.
+- [ ] `garden status` counts stuck tasks in the attention column.
