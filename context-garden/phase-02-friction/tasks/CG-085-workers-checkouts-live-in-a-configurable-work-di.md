@@ -1,7 +1,7 @@
 ---
 id: CG-085
 title: Workers' checkouts live in a configurable work_dir outside the garden
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/39
 attempts: 1
 last_dispatched_at: '2026-09-04T19:31:59+00:00'
 created: '2026-09-04T19:31:59+00:00'
-updated: '2026-09-04T19:34:18+00:00'
+updated: '2026-09-04T19:36:26+00:00'
 ---
 
 ## Goal
@@ -37,3 +37,5 @@ Asked during the first live run after three workers re-pointed the garden's own 
 
 - 2026-09-04T19:31:59+00:00 dispatched work run 20260904T193159Z-work via manual [human] (fresh session, base main, ~4398 tokens)
 - 2026-09-04T19:34:18+00:00 opened https://github.com/joshmarcus/context-garden/pull/39 (base main): work_dir in garden.yaml puts product clones and per-task worktrees outside the garden; worktrees already under .garden keep working; doctor shows the work dir.
+- 2026-09-04T19:36:24+00:00 automated review: approve — work_dir cleanly relocates clones and worktrees outside the garden with a correct old-location fallback for running workers; doctor and README updated; tests and lint pass. cost=$0.53
+- 2026-09-04T19:36:26+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/39
