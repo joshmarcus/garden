@@ -86,6 +86,7 @@ ssh:
   # options: ["-o", "BatchMode=yes"]
 
 github:
+  bot_logins: ["chatgpt-codex-connector[bot]"]   # temporary: Codex is at its review usage limit and posts only notices (CG-118 filters those properly); remove when the limit resets
   use_gh: true              # prefer the gh CLI; falls back to REST with GITHUB_TOKEN
   draft_pr: false           # PRs open ready for review; set true to open drafts that wait for triage on the Inbox
   reviewers: []
