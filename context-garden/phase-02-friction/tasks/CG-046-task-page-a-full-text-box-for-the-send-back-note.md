@@ -1,7 +1,7 @@
 ---
 id: CG-046
 title: 'Task page: a full text box for the send-back note'
-status: failed
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/11
 attempts: 1
 last_dispatched_at: '2026-09-04T17:40:47+00:00'
 created: '2026-09-04T17:22:57+00:00'
-updated: '2026-09-04T17:49:14+00:00'
+updated: '2026-09-04T18:47:54+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Asked by the person driving the first live run: a triage note is often several s
 - 2026-09-04T17:39:52+00:00 2 new review item(s)
 - 2026-09-04T17:40:47+00:00 dispatched revise run 20260904T174046Z-revise via local [claude model=sonnet] (fresh session, base main, ~11126 tokens)
 - 2026-09-04T17:49:14+00:00 revision failed: worker exited 1: worker error: error_max_turns
+- 2026-09-04T18:47:54+00:00 PR #11 merged while the task was failed; the poll skips failed tasks, so set by hand

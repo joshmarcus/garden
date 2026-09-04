@@ -1,7 +1,7 @@
 ---
 id: CG-037
 title: Stop the revise template and the review prompt contradicting each other
-status: failed
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,9 @@ reading:
 - src/garden/review.py
 branch: garden/cg-037-stop-the-revise-template-and-the-review-prompt-c
 discovered_from: CG-027
-attempts: 3
 last_dispatched_at: '2026-09-04T17:36:39+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T17:40:26+00:00'
+updated: '2026-09-04T18:47:54+00:00'
 ---
 
 ## Goal
@@ -45,3 +44,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:36:03+00:00 no active run found; back to ready
 - 2026-09-04T17:36:39+00:00 dispatched work run 20260904T173639Z-work via local [claude model=sonnet] (fresh session, base main, ~6511 tokens)
 - 2026-09-04T17:40:26+00:00 attempt 3 failed: no GARDEN_RESULT in worker output (see final.md); giving up
+- 2026-09-04T18:47:54+00:00 reset to ready by hand

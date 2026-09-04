@@ -1,7 +1,7 @@
 ---
 id: CG-039
 title: Show cache reads, not just fresh input tokens, in runs and usage
-status: failed
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: CG-027
 attempts: 2
 last_dispatched_at: '2026-09-04T17:30:41+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T17:37:41+00:00'
+updated: '2026-09-04T18:47:54+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:30:33+00:00 no active run found; back to ready
 - 2026-09-04T17:30:41+00:00 dispatched work run 20260904T173041Z-work via local [claude model=haiku] (fresh session, base main, ~5647 tokens)
 - 2026-09-04T17:37:41+00:00 attempt 2 failed: worker exited 1: worker error: error_max_turns; giving up
+- 2026-09-04T18:47:54+00:00 PR #14 merged while the task was failed; set by hand
