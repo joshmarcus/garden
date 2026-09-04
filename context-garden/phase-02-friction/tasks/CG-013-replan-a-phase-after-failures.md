@@ -1,7 +1,7 @@
 ---
 id: CG-013
 title: Replan a phase after failures
-status: awaiting_triage
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/24
 attempts: 1
 last_dispatched_at: '2026-09-04T17:39:16+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T17:52:14+00:00'
+updated: '2026-09-04T18:28:18+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ updated: '2026-09-04T17:52:14+00:00'
 - 2026-09-04T17:39:16+00:00 dispatched work run 20260904T173915Z-work via local [claude model=sonnet] (fresh session, base main, ~2273 tokens)
 - 2026-09-04T17:45:24+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/24 (base main): Added `--replan` to `garden plan`: the planner prompt now includes a 'Failed and blocked tasks' section (id, title, last 3 log lines, blocked question) for failed/waiting_human tasks. `import_plan` handles `"supersedes": [ids]` to cancel replaced tasks. 8 new tests; all 126 pass, lint clean. cost=$1.04
 - 2026-09-04T17:52:14+00:00 automated review: approve — All three acceptance criteria met, 126 tests pass, lint clean. One tautological test assertion (`or True`) is a dead nit but does not hide any real failure. cost=$0.63
+- 2026-09-04T18:28:18+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/24
