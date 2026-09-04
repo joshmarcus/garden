@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-091-state-save-s-file-replacement-is-not-atomic-for
 discovered_from: CG-082
 attempts: 1
-last_dispatched_at: '2026-09-04T20:55:51+00:00'
+last_dispatched_at: '2026-09-04T20:59:58+00:00'
 created: '2026-09-04T19:55:45+00:00'
-updated: '2026-09-04T20:55:51+00:00'
+updated: '2026-09-04T20:59:58+00:00'
 ---
 
 `State.save()` in `src/garden/scheduler.py` does `self.path.write_text(...)`, which truncates the file before writing the new content. A concurrent `State.__init__` (e.g. from the web UI or an overlapping scheduler tick) reading the file mid-write can see a truncated/partial JSON payload, hit `JSONDecodeError`, and silently fall back to `{}` — losing all in-memory state for that reader, which is especially bad for in-flight trial metadata. Fix by writing to a temp file in the same directory and `os.replace()`'ing it into place (or by having readers take the same flock).
@@ -30,3 +30,6 @@ Discovered by CG-082 (Separate GARDEN_ROOT (guard) from the check-command venv p
 - 2026-09-04T19:55:45+00:00 discovered by CG-082
 - 2026-09-04T20:16:16+00:00 approved (web)
 - 2026-09-04T20:55:51+00:00 dispatched work run 20260904T205551Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~8506 tokens)
+- 2026-09-04T20:59:56+00:00 discovered work filed: CG-093
+- 2026-09-04T20:59:57+00:00 pre-PR checks failed (tests, lint); no PR opened yet; revise run will fix cost=$1.89
+- 2026-09-04T20:59:58+00:00 dispatched revise run 20260904T205958Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8750 tokens)
