@@ -1,7 +1,7 @@
 ---
 id: CG-111
 title: A worker cannot write outside its worktree, whatever it is told
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,8 +12,12 @@ reading:
 - src/garden/runner/local.py
 - src/garden/scheduler.py
 - docs/worker-protocol.md
+branch: garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
+pr: https://github.com/joshmarcus/context-garden/pull/57
+attempts: 1
+last_dispatched_at: '2026-09-04T22:03:05+00:00'
 created: '2026-09-04T21:28:15+00:00'
-updated: '2026-09-04T21:28:15+00:00'
+updated: '2026-09-04T22:03:05+00:00'
 ---
 
 ## Goal
@@ -29,3 +33,13 @@ On the first live run, CG-092's worker was asked a question, the person answered
 - [ ] a fake-harness run that writes outside its worktree fails, the write is undone, and the Inbox says what it touched.
 - [ ] edits and shell commands outside the worktree are denied (permission rules scoped to the worktree, or a sandbox); edits inside it still need no prompt.
 - [ ] `docs/worker-protocol.md` states the fence.
+
+## Log
+
+- 2026-09-04T21:34:07+00:00 dispatched work run 20260904T213406Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~10351 tokens)
+- 2026-09-04T21:57:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/57 (base main): Confined a worker's writes to its own worktree at the runner, not the brief: the claude harness now passes permissions.deny rules (and an opt-in worktree sandbox) for the live garden and product clone, and finalize snapshots those repos at dispatch and reverts any commit or non-owned write on reap, failing the run with an Inbox card that quotes what was touched. Scheduler-owned task-file/.garden changes (e.g. garden sync) are ignored so they don't false-trip. Documented the fence in worker-protocol.md. cost=$8.50
+- 2026-09-04T21:57:27+00:00 1 new review item(s)
+- 2026-09-04T21:59:04+00:00 triage: marked ready for review (the only new item was Codex's usage-limit notice, not a finding; back to in_review while the automat)
+- 2026-09-04T22:02:21+00:00 automated review: approve — Fence is correctly implemented in two layers, meets the acceptance criteria for the garden/clone incident vector, and is well-tested (246 pass, ruff clean). Default config denies only the two known repos rather than fully scoping to the worktree, but this is disclosed and the belt-and-braces revert is a solid net. cost=$1.33
+- 2026-09-04T22:03:03+00:00 1 new review item(s)
+- 2026-09-04T22:03:05+00:00 dispatched revise run 20260904T220304Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12655 tokens)

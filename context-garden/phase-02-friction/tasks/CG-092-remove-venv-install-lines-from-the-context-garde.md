@@ -7,7 +7,7 @@ phase: phase-02-friction
 depends_on:
 - CG-081
 priority: 1
-difficulty: easy
+difficulty: hard
 reading:
 - src/garden/runner/local.py
 - src/garden/runner/ssh.py
@@ -20,7 +20,7 @@ discovered_from: CG-081
 attempts: 1
 last_dispatched_at: '2026-09-04T21:21:03+00:00'
 created: '2026-09-04T20:26:01+00:00'
-updated: '2026-09-04T21:27:08+00:00'
+updated: '2026-09-04T21:30:14+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ Discovered by CG-081 (Environment setup is per-product configuration, not a venv
 - 2026-09-04T21:26:44+00:00 discovered work filed: CG-110
 - 2026-09-04T21:26:44+00:00 attempt 1 failed: worker finished with no commits; will retry
 - 2026-09-04T21:27:08+00:00 manual again: the resumed worker confirmed the change is in the garden repo, which no worker checks out; a person does it after CG-081 merges
+- 2026-09-04T21:30:14+00:00 difficulty easy -> hard (web)

@@ -1,7 +1,7 @@
 ---
 id: CG-112
 title: A worker's discovery can be a decision for the person, not only a new task
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,8 +12,12 @@ reading:
 - src/garden/inbox.py
 - src/garden/web/templates/inbox.html
 - docs/worker-protocol.md
+branch: garden/cg-112-a-worker-s-discovery-can-be-a-decision-for-the-p
+pr: https://github.com/joshmarcus/context-garden/pull/55
+attempts: 1
+last_dispatched_at: '2026-09-04T22:03:05+00:00'
 created: '2026-09-04T21:29:53+00:00'
-updated: '2026-09-04T21:29:53+00:00'
+updated: '2026-09-04T22:03:05+00:00'
 ---
 
 ## Goal
@@ -30,3 +34,12 @@ Asked during the first live run. CG-092's worker noticed that CG-107 described t
 - [ ] a `note` discovery reaches the friction record and makes no card.
 - [ ] a discovery with no `kind` is still a task, so existing workers keep working.
 - [ ] tests for each kind with the fake harness.
+
+## Log
+
+- 2026-09-04T21:40:27+00:00 dispatched work run 20260904T214026Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~9711 tokens)
+- 2026-09-04T21:53:33+00:00 discovered work filed: CG-114
+- 2026-09-04T21:54:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/55 (base main): Discovered items now carry a `kind`: `task` files work as before, while `duplicate`/`cancel` become Accept/Reject decision cards (Accept cancels the named task with provenance, Reject logs the disagreement) and `note` goes to the phase friction record with no card. Surfaced in the web Inbox, `garden inbox`/`garden decide`, and the digest; covered by fake-harness tests for each kind. cost=$6.75
+- 2026-09-04T21:57:17+00:00 automated review: approve — Adds a `kind` to discovered items so duplicate/cancel become Accept/Reject decision cards and note goes to the friction record, with task remaining the default. All four acceptance criteria are implemented and tested; full suite and ruff pass. cost=$1.01
+- 2026-09-04T21:57:29+00:00 3 new review item(s)
+- 2026-09-04T22:03:05+00:00 dispatched revise run 20260904T220305Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~11542 tokens)

@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-081-environment-setup-is-per-product-configuration-n
 pr: https://github.com/joshmarcus/context-garden/pull/48
 attempts: 1
-last_dispatched_at: '2026-09-04T21:22:44+00:00'
+last_dispatched_at: '2026-09-04T22:00:15+00:00'
 created: '2026-09-04T19:17:54+00:00'
-updated: '2026-09-04T21:25:47+00:00'
+updated: '2026-09-04T22:01:46+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,10 @@ The runner runs `setup.command` in the worktree after creating it (and again whe
 - 2026-09-04T21:22:42+00:00 automated review requested changes: Feature is correct, well-tested (231 pass, ruff clean) and meets the acceptance criteria; only the PR description needs cleanup. It contains a process-narration 'Revision round' section (scar tissue about basing on pre-CG-082 main and resolving merge conflicts) that must be removed. cost=$1.16
 - 2026-09-04T21:22:44+00:00 dispatched revise run 20260904T212243Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13411 tokens)
 - 2026-09-04T21:25:47+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/48: Addressed the sole review item: removed the process-narration '## Revision round' section from the PR description. No code change was needed — the feature is complete, 231 tests pass and ruff is clean (the 23 local failures are only because GARDEN_ROOT is set to the worker sentinel, which test_isolation intentionally refuses). cost=$0.46
+- 2026-09-04T21:26:49+00:00 5 new review item(s) + CI failure
+- 2026-09-04T21:27:54+00:00 automated review: request_changes — Feature is complete, correct and well-tested (231 pass, ruff clean); all acceptance criteria met. Only the PR description needs cleanup. cost=$0.78
+- 2026-09-04T21:27:57+00:00 dispatched revise run 20260904T212757Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14949 tokens)
+- 2026-09-04T21:40:23+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/48: Addressed all five review items on PR #48: mark a run failed when start/setup raises (P1 slot leak), prepare the local worktree before pre-PR checks for SSH products (P1), honor setup.timeout_seconds on SSH hosts (P2), and route `garden check` pre_pr through _pre_pr_specs (P2). Added 5 tests; 236 pass, ruff clean. cost=$4.18
+- 2026-09-04T21:58:30+00:00 automated review requested changes: Feature is complete, correct and well-tested (236 pass, ruff clean); all five acceptance criteria met. The PR description carries scar tissue (a 'Review responses' P1/P2 section and a CI-failure narration) that fails the 'written right the first time' standard. cost=$1.01
+- 2026-09-04T22:00:15+00:00 dispatched revise run 20260904T220015Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14135 tokens)
+- 2026-09-04T22:01:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/48: Addressed the sole review item on PR #48: rewrote the PR description to drop the process-narration ('## Review responses' P1/P2 section and the CI-failure paragraph), keeping only the durable design caveat under a plain Notes heading. No code change — the feature is complete and the tree is clean. cost=$0.42

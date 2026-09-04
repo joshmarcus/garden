@@ -1,21 +1,22 @@
 ---
 id: CG-045
 title: Attention cards say what the decision is and what each button will do
-status: ready
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
 priority: 2
-difficulty: easy
+difficulty: hard
 reading:
 - src/garden/inbox.py
 - src/garden/web/templates/task.html
 - src/garden/scheduler.py
 branch: garden/cg-045-attention-cards-say-what-the-decision-is-and-wha
-attempts: 1
-last_dispatched_at: '2026-09-04T17:38:14+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/56
+attempts: 2
+last_dispatched_at: '2026-09-04T21:59:08+00:00'
 created: '2026-09-04T17:21:39+00:00'
-updated: '2026-09-04T17:52:15+00:00'
+updated: '2026-09-04T22:02:54+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,12 @@ Make `needs_human` structured: a kind (stall, revision cap, parent closed, worke
 - 2026-09-04T17:24:00+00:00 approved (web)
 - 2026-09-04T17:38:14+00:00 dispatched work run 20260904T173814Z-work via local [claude model=sonnet] (fresh session, base main, ~7108 tokens)
 - 2026-09-04T17:52:15+00:00 attempt 1 failed: worker exited 1: worker error: error_max_turns; will retry
+- 2026-09-04T21:29:54+00:00 difficulty easy -> hard (web)
+- 2026-09-04T21:43:07+00:00 dispatched work run 20260904T214307Z-work via local [claude model=fable] (fresh session, base main, ~8140 tokens)
+- 2026-09-04T21:56:12+00:00 discovered work filed: CG-115
+- 2026-09-04T21:56:43+00:00 opened https://github.com/joshmarcus/context-garden/pull/56 (base main): needs_human is now a structured stop (kind, reason, prior status); attention cards name the decision, show evidence, describe every button's effect, and offer 'Nothing to fix, resume' (restores the pre-stop state without a run) and a Discuss prompt with task, reason, PR and run ids. Rendered in web Inbox, task page, CLI and TUI; 249 tests pass. cost=$14.83
+- 2026-09-04T21:57:19+00:00 1 new review item(s)
+- 2026-09-04T21:59:08+00:00 dispatched revise run 20260904T215908Z-revise via local [claude model=fable] (fresh session, base main, ~11073 tokens)
+- 2026-09-04T21:59:53+00:00 triage: marked ready for review (the only new item was Codex's usage-limit notice, not a finding)
+- 2026-09-04T22:00:09+00:00 automated review: approve — Structured needs_human stops with a shared attention_view render kind/evidence/per-button effects across web, CLI and TUI, plus resume_task and a discuss prompt; all acceptance criteria met, 249 tests pass, ruff clean, scope is clean once the stale local main is accounted for. cost=$1.24
+- 2026-09-04T22:02:54+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/56

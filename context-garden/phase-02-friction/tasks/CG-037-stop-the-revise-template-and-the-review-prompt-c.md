@@ -1,7 +1,7 @@
 ---
 id: CG-037
 title: Stop the revise template and the review prompt contradicting each other
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T21:21:41+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T21:24:14+00:00'
+updated: '2026-09-04T21:26:45+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T21:19:42+00:00 triage: changes requested by hand: The tests check failed because of the garden's environment (a sentinel GARDEN_ROOT reached the pytest subprocess); that
 - 2026-09-04T21:21:41+00:00 dispatched revise run 20260904T212141Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8600 tokens)
 - 2026-09-04T21:24:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/44: No code changes needed this round: the pre-PR test failures were caused by the runner's GARDEN_ROOT sentinel leaking into the pytest subprocess (confirmed by re-running with it unset: 219 passed, 3 skipped), and lint is clean. Fixed the PR description to drop the '## Review responses' heading that the automated review flagged as scar tissue, moving that reply into a pr_comment instead, consistent with the pr_comment mechanism this branch already ships. cost=$0.64
+- 2026-09-04T21:26:45+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/44

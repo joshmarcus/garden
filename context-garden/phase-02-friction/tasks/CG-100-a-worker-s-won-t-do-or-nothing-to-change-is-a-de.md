@@ -1,7 +1,7 @@
 ---
 id: CG-100
 title: A worker's won't-do or nothing-to-change is a decision for the person, not a failure
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,8 +13,12 @@ reading:
 - src/garden/inbox.py
 - src/garden/model.py
 - docs/worker-protocol.md
+branch: garden/cg-100-a-worker-s-won-t-do-or-nothing-to-change-is-a-de
+pr: https://github.com/joshmarcus/context-garden/pull/58
+attempts: 1
+last_dispatched_at: '2026-09-04T21:35:19+00:00'
 created: '2026-09-04T21:09:47+00:00'
-updated: '2026-09-04T21:09:47+00:00'
+updated: '2026-09-04T22:02:19+00:00'
 ---
 
 ## Goal
@@ -32,3 +36,8 @@ Asked during the first live run. CG-091's revise round found that the failing ch
 - [ ] reject carries the note into the next brief.
 - [ ] `wont_do` counts in neither done, failed nor the Inbox count; CLI and web agree.
 - [ ] tests for each path with the fake harness.
+
+## Log
+
+- 2026-09-04T21:35:19+00:00 dispatched work run 20260904T213519Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~13923 tokens)
+- 2026-09-04T22:02:19+00:00 opened https://github.com/joshmarcus/context-garden/pull/58 (base main): A worker's wont_do (task shouldn't be done) or no_change (revise round has nothing to change) now moves the task to waiting_human as a decision showing the reason and full final message; the person accepts (wont_do ends the task and closes the PR; no_change resumes to the PR/review with no new run) or rejects (reasoning goes back into a revise round with the note). Added the terminal wont_do status with its own glyph/word, wired through CLI, web, TUI and Inbox, and documented it. cost=$18.03
