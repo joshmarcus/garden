@@ -1,7 +1,7 @@
 ---
 id: CG-057
 title: A PR that conflicts with its base gets a rebase round
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - src/garden/scheduler.py
 - src/garden/github.py
 created: '2026-09-04T17:47:51+00:00'
-updated: '2026-09-04T17:47:51+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,7 @@ In `poll`, when `pr.mergeable == "CONFLICTING"` and the task is not already in `
 ## Out of scope
 
 - Choosing merge order to avoid conflicts; the trellis and stacking are for that.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

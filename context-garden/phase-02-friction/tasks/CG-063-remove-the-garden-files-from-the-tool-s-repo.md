@@ -1,7 +1,7 @@
 ---
 id: CG-063
 title: Remove the garden files from the tool's repo
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -9,7 +9,7 @@ priority: 1
 difficulty: easy
 reading: []
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T18:16:39+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -25,3 +25,7 @@ The garden was moved out on 2026-09-04 after workers reached the live garden thr
 - [ ] none of `garden.yaml`, `principles/`, `personas/`, `context-garden/`, `.claude/skills/` remain in the tool's repo.
 - [ ] tests and lint pass; CI is green.
 - [ ] README and CLAUDE.md name the garden repo.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

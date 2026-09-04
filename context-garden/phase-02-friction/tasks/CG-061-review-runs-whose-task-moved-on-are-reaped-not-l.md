@@ -1,7 +1,7 @@
 ---
 id: CG-061
 title: Review runs whose task moved on are reaped, not left running forever
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,7 +10,7 @@ difficulty: easy
 reading:
 - context-garden/phase-01-bootstrap/specs/scheduler.md
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T18:16:39+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -26,3 +26,7 @@ At the cut-over of the first live run, four review runs (CG-010, CG-032, CG-038,
 - [ ] a finished run that no task state points at is closed on the next tick with its usage recorded.
 - [ ] "Running now" and `garden runs` never show a run whose process is gone and exit code is written.
 - [ ] a test: start a review run, transition the task away, finish the run, tick, assert the record is closed.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

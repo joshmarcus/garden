@@ -2,7 +2,7 @@
 id: CG-065
 title: 'Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source
   rows'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ reading:
 - src/garden/platefetch.py
 - src/garden/cli.py
 created: '2026-09-04T18:35:08+00:00'
-updated: '2026-09-04T18:35:08+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,7 @@ Five small defects in the plates and plants code, all raised by Codex reviews on
 
 - [ ] each of the five has a test that fails before and passes after.
 - [ ] the checked-in `SOURCES.md` renders as one table.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

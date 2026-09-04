@@ -1,7 +1,7 @@
 ---
 id: CG-067
 title: garden commit commits only task files and sees untracked ones
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - src/garden/gitops.py
 - src/garden/cli.py
 created: '2026-09-04T18:35:09+00:00'
-updated: '2026-09-04T18:35:09+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -27,3 +27,7 @@ Codex review on PR #23 (CG-042), merged before the comments were read. (P1) `com
 - [ ] with an unrelated file staged, `garden commit` commits only task files and leaves the other change staged.
 - [ ] a task file under an untracked phase directory is reported and committed.
 - [ ] tests for both in `tests/test_commit.py`.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

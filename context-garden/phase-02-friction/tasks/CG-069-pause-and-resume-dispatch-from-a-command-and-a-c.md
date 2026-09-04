@@ -1,7 +1,7 @@
 ---
 id: CG-069
 title: Pause and resume dispatch from a command and a configuration page
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - src/garden/web/app.py
 - src/garden/config.py
 created: '2026-09-04T18:40:41+00:00'
-updated: '2026-09-04T18:40:41+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,7 @@ CLI: `garden pause [--reason ...]`, `garden resume`, and `garden status` / `gard
 ## Out of scope
 
 - Editing config values from the page beyond the pause switch (CG-048 for budgets; a later task for the rest).
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

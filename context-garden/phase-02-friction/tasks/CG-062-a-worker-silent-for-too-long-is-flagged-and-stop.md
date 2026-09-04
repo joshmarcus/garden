@@ -1,7 +1,7 @@
 ---
 id: CG-062
 title: A worker silent for too long is flagged and stopped before the timeout
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,7 +10,7 @@ difficulty: medium
 reading:
 - docs/worker-protocol.md
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T18:16:39+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -26,3 +26,7 @@ During the first live run a sonnet revise worker for CG-032 sat for 13 minutes w
 - [ ] a running card shows idle time once nothing has changed for `idle_minutes`.
 - [ ] past `idle_kill_minutes` the run is stopped and handled like a timeout (retry or fail).
 - [ ] tests with a fake worker that stalls.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

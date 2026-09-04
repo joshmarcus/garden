@@ -1,7 +1,7 @@
 ---
 id: CG-053
 title: state.json is saved whole by every writer, so concurrent writers lose updates
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/scheduler.py
 - docs/architecture.md
 created: '2026-09-04T17:41:02+00:00'
-updated: '2026-09-04T17:41:02+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -34,3 +34,7 @@ Options, smallest first: save per task (`state/<task>.json`) so writers only tou
 ## Out of scope
 
 - Task files; only the scheduler writes their status and it already reloads them each tick.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

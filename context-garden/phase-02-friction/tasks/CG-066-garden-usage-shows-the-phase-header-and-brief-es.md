@@ -1,7 +1,7 @@
 ---
 id: CG-066
 title: garden usage shows the phase header and brief estimates before any run
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - src/garden/cli.py
 - src/garden/brief.py
 created: '2026-09-04T18:35:09+00:00'
-updated: '2026-09-04T18:35:09+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -27,3 +27,7 @@ Codex review on PR #7 (CG-012), dropped at the time: the header and the estimate
 - [ ] on a phase with no runs, the header and every task's brief estimate are printed.
 - [ ] tasks with runs keep their actual tokens and cost beside the estimate.
 - [ ] a test with an empty run store.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

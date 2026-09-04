@@ -1,7 +1,7 @@
 ---
 id: CG-068
 title: 'Automerge: merge a PR when the loop''s own gates pass'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/github.py
 - src/garden/config.py
 created: '2026-09-04T18:39:35+00:00'
-updated: '2026-09-04T18:39:35+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,7 @@ Config, under `github:`: `automerge: false` (the switch), `automerge_method: squ
 ## Out of scope
 
 - Merging PRs the garden did not open; PRs opened by hand stay with the person.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

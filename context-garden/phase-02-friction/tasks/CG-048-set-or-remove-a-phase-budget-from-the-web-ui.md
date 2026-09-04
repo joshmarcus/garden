@@ -1,7 +1,7 @@
 ---
 id: CG-048
 title: Set or remove a phase budget from the web UI
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - src/garden/config.py
 - src/garden/scheduler.py
 created: '2026-09-04T17:30:24+00:00'
-updated: '2026-09-04T17:30:24+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,7 @@ A `garden budget <product/phase> <usd|none>` CLI command should share the same c
 ## Out of scope
 
 - Per-product budgets and the `budget_usd` default; only the per-phase cap.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

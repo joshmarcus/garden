@@ -1,7 +1,7 @@
 ---
 id: CG-054
 title: A worker's worktree must never act on the live garden
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/runner/local.py
 - src/garden/brief.py
 created: '2026-09-04T17:42:42+00:00'
-updated: '2026-09-04T17:42:42+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -39,3 +39,7 @@ A second route, seen an hour later: a worker ran `pip install -e .` inside its w
 ## Out of scope
 
 - Remote (ssh) worktrees, which live outside the garden already.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

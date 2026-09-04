@@ -1,7 +1,7 @@
 ---
 id: CG-064
 title: Make test_feedback_triggers_revise_round deterministic
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - tests/conftest.py
 - tests/fake_claude.py
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-04T18:24:37+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -27,3 +27,7 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 
 - [ ] the cause is named in the PR and covered by a test that fails before the fix under injected delay.
 - [ ] 50 consecutive local runs pass under load; CI is green.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved

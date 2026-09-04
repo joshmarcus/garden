@@ -1,7 +1,7 @@
 ---
 id: CG-050
 title: The running garden picks up merged changes to itself
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/cli.py
 - docs/architecture.md
 created: '2026-09-04T17:35:07+00:00'
-updated: '2026-09-04T17:35:07+00:00'
+updated: '2026-09-04T18:41:38+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,7 @@ On `_on_merged` for a product with `repo: .`: fast-forward the checkout's base b
 ## Out of scope
 
 - Products in other repos; their code is not the running garden.
+
+## Log
+
+- 2026-09-04T18:41:38+00:00 approved
