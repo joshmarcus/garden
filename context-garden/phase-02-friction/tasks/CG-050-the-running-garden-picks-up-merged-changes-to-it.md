@@ -12,10 +12,10 @@ reading:
 - src/garden/cli.py
 - docs/architecture.md
 branch: garden/cg-050-the-running-garden-picks-up-merged-changes-to-it
-attempts: 1
-last_dispatched_at: '2026-09-04T19:12:18+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-04T19:24:03+00:00'
 created: '2026-09-04T17:35:07+00:00'
-updated: '2026-09-04T19:12:18+00:00'
+updated: '2026-09-04T19:24:03+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,5 @@ On `_on_merged` for a product with `repo: .`: fast-forward the checkout's base b
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T19:12:18+00:00 dispatched work run 20260904T191217Z-work via local [claude model=sonnet] (fresh session, base main, ~7553 tokens)
+- 2026-09-04T19:24:03+00:00 no active run found; back to ready
+- 2026-09-04T19:24:03+00:00 dispatched work run 20260904T192403Z-work via local [claude model=sonnet] (fresh session, base main, ~7604 tokens)

@@ -12,10 +12,11 @@ reading:
 - src/garden/runner/local.py
 - src/garden/brief.py
 branch: garden/cg-054-a-worker-s-worktree-must-never-act-on-the-live-g
+pr: https://github.com/joshmarcus/context-garden/pull/35
 attempts: 1
-last_dispatched_at: '2026-09-04T19:08:09+00:00'
+last_dispatched_at: '2026-09-04T19:22:45+00:00'
 created: '2026-09-04T17:42:42+00:00'
-updated: '2026-09-04T19:08:09+00:00'
+updated: '2026-09-04T19:22:45+00:00'
 ---
 
 ## Goal
@@ -55,3 +56,9 @@ Isolation must not hard-code Python. Other products managed by this garden will 
 - 2026-09-04T18:59:59+00:00 dispatched work run 20260904T185958Z-work via local [claude model=sonnet] (fresh session, base main, ~2483 tokens)
 - 2026-09-04T19:08:06+00:00 pre-PR checks failed (tests); no PR opened yet; revise run will fix cost=$1.80
 - 2026-09-04T19:08:09+00:00 dispatched revise run 20260904T190809Z-revise via local [claude model=sonnet] (fresh session, base main, ~9515 tokens)
+- 2026-09-04T19:18:10+00:00 discovered work filed: CG-082
+- 2026-09-04T19:18:36+00:00 opened https://github.com/joshmarcus/context-garden/pull/35 (base main): Fixed the pre-PR test failure: `find_root()` was treating `GARDEN_ROOT` pointing to the live garden (set by `check_ctx` for check commands) as an authoritative redirect, so tests running inside a pre-PR check subprocess all returned live CG-* tasks instead of their temp garden. The fix makes `find_root()` ignore `GARDEN_ROOT` when it points to an existing garden and fall through to the normal cwd walk; it still raises immediately when `GARDEN_ROOT` points to a non-existent path (the worker guard). Two `test_isolation.py` tests that asserted the obsolete redirect behaviour were updated to reflect the correct semantics. cost=$1.24
+- 2026-09-04T19:19:42+00:00 1 new review item(s)
+- 2026-09-04T19:22:34+00:00 triage: changes requested by hand: Two things. (1) The boundary and the GARDEN_ROOT redirect are right and generic; keep them. The new operating rule in br
+- 2026-09-04T19:22:44+00:00 automated review: request_changes — Two blocking issues: brief.py names uv/pip/.venv in OPERATING_RULES, violating the explicit constraint that brief rules must be generic; PR description contains a 'Root cause of the revision' section that is scar tissue from the revision round. cost=$0.47
+- 2026-09-04T19:22:45+00:00 dispatched revise run 20260904T192245Z-revise via local [claude model=sonnet] (fresh session, base main, ~9801 tokens)
