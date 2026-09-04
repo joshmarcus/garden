@@ -32,13 +32,20 @@ Design to follow, adjusting where the code argues:
 1. **Model.** `closed: <date>` in `goals.md` frontmatter marks a closed phase; `Phase.closed` exposes it. `garden close-phase <product/phase>` sets it when every task is `done` or `cancelled` (otherwise refuses and lists what is open; `--force` overrides), records an event, and is what the phase-closing task (CG-029) runs at its end. `garden reopen-phase` clears it. The scheduler never dispatches into a closed phase and `new-task` refuses it without `--reopen`.
 2. **Rail.** Only open phases are listed as drawers. Below them one entry, "Herbarium", with the count of closed phases, links to `/herbarium`. If a product has no open phase the rail says so and points at planning.
 3. **Herbarium page.** Every closed phase as a pressed specimen: the plate, the phase name and dates (first dispatch to close), tasks done, cost, lead time and first-pass rate from `metrics`, and links to the phase page, its `docs/friction.md` and the closing document if CG-029 wrote one. Sorted by close date, newest first, grouped by product when there is more than one.
-4. **Phase page of a closed phase.** A banner "closed on <date>" at the top, the plate rendered as pressed, no dispatch or approve actions, everything else readable. The Board and Trellis default to open phases with a control to include closed ones.
+4. **Phase page of a closed phase: a closing header instead of the working one.** The open-phase header (spend against budget, PRs tracked, brief cost, approve-all and dispatch controls) is replaced by a header that reads as the record of what the phase did:
+   - **Outcomes**: the goals from `goals.md` with, for each, the tasks that delivered it and their state; then the figures from `metrics` (tasks done, PRs merged, lead time, revise rounds, first-pass rate, cost by tier, dates from first dispatch to close).
+   - **Persona reviews, prominent**: every report under `docs/reviews/` with its persona, date and headline findings, above the fold, with a link to each report and to the tasks it produced.
+   - **Artifacts**: the closing document (CG-029's output), `docs/friction.md`, the specs the phase added or changed, the plates it added, and the trial records for the phase, each linked.
+   - **PRs**: every merged PR of the phase in a table (number, title, task, size, merged date), and any closed unmerged with why.
+   - The plate rendered as a pressed specimen; no dispatch, approve or triage controls; the task table stays below as a reference.
+   The Board and Trellis default to open phases with a control to include closed ones.
 5. **Status.** `garden status` shows closed phases in one summary line, not one row each, unless `--all`.
 
 ## Acceptance criteria
 
 - [ ] `garden close-phase` and `reopen-phase` work as described, with tests, and CG-029's brief names the command.
-- [ ] a closed phase is absent from the rail, present on `/herbarium` with the figures above, and its phase page shows the closed banner without actions.
+- [ ] a closed phase is absent from the rail and present on `/herbarium` with the figures above.
+- [ ] its phase page shows the closing header: outcomes against the goals, persona reviews above the fold, artifacts and merged PRs linked, no working controls.
 - [ ] the scheduler and `new-task` refuse a closed phase; a test covers each.
 - [ ] phase 1 of this garden closes cleanly with the command and appears in the herbarium.
 - [ ] the plates and the pressed look follow the botanical theme spec; copy is plain.
