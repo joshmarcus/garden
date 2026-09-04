@@ -1,7 +1,7 @@
 ---
 id: CG-037
 title: Stop the revise template and the review prompt contradicting each other
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,9 +14,9 @@ branch: garden/cg-037-stop-the-revise-template-and-the-review-prompt-c
 pr: https://github.com/joshmarcus/context-garden/pull/44
 discovered_from: CG-027
 attempts: 1
-last_dispatched_at: '2026-09-04T20:01:59+00:00'
+last_dispatched_at: '2026-09-04T20:57:54+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T20:12:47+00:00'
+updated: '2026-09-04T20:57:54+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T20:09:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/44 (base main): The fix was already committed by a prior attempt that failed only because it omitted the GARDEN_RESULT marker; verified both acceptance criteria are met and the full test suite (114 passed) and lint pass cleanly. cost=$2.78
 - 2026-09-04T20:10:39+00:00 automated review: approve — The revise brief and review prompt now agree: review responses go in a pr_comment (posted by the scheduler on revision pushes) instead of the PR body, with a test that asserts the comment is posted. Both acceptance criteria are met; tests and lint pass; scope and description are clean. cost=$0.47
 - 2026-09-04T20:12:47+00:00 2 new review item(s)
+- 2026-09-04T20:55:50+00:00 dispatched revise run 20260904T205549Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7561 tokens)
+- 2026-09-04T20:57:53+00:00 pre-PR checks failed (tests, lint); revise run will fix before the PR is updated cost=$1.41
+- 2026-09-04T20:57:54+00:00 dispatched revise run 20260904T205753Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7373 tokens)

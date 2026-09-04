@@ -1,7 +1,7 @@
 ---
 id: CG-081
 title: Environment setup is per-product configuration, not a venv assumption
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 - examples/garden.work.yaml
 branch: garden/cg-081-environment-setup-is-per-product-configuration-n
 attempts: 1
-last_dispatched_at: '2026-09-04T20:10:42+00:00'
+last_dispatched_at: '2026-09-04T20:55:50+00:00'
 created: '2026-09-04T19:17:54+00:00'
-updated: '2026-09-04T20:26:04+00:00'
+updated: '2026-09-04T20:55:50+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ The runner runs `setup.command` in the worktree after creating it (and again whe
 - 2026-09-04T20:10:42+00:00 dispatched work run 20260904T201042Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~11193 tokens)
 - 2026-09-04T20:26:01+00:00 discovered work filed: CG-092
 - 2026-09-04T20:26:04+00:00 pre-PR checks failed (tests); no PR opened yet; revise run will fix cost=$6.25
+- 2026-09-04T20:55:50+00:00 dispatched revise run 20260904T205550Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13483 tokens)

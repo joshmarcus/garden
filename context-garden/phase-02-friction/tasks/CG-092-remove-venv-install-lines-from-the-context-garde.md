@@ -1,7 +1,7 @@
 ---
 id: CG-092
 title: Remove venv install lines from the context-garden garden config and product overview
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ reading:
 - examples/garden.work.yaml
 discovered_from: CG-081
 created: '2026-09-04T20:26:01+00:00'
-updated: '2026-09-04T20:26:01+00:00'
+updated: '2026-09-04T20:57:20+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,4 @@ Discovered by CG-081 (Environment setup is per-product configuration, not a venv
 ## Log
 
 - 2026-09-04T20:26:01+00:00 discovered by CG-081
+- 2026-09-04T20:57:20+00:00 approved (web)

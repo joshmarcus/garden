@@ -1,7 +1,7 @@
 ---
 id: CG-061
 title: Review runs whose task moved on are reaped, not left running forever
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -9,8 +9,11 @@ priority: 0
 difficulty: easy
 reading:
 - context-garden/phase-01-bootstrap/specs/scheduler.md
+branch: garden/cg-061-review-runs-whose-task-moved-on-are-reaped-not-l
+attempts: 1
+last_dispatched_at: '2026-09-04T20:55:50+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T18:41:38+00:00'
+updated: '2026-09-04T20:55:50+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,4 @@ At the cut-over of the first live run, four review runs (CG-010, CG-032, CG-038,
 ## Log
 
 - 2026-09-04T18:41:38+00:00 approved
+- 2026-09-04T20:55:50+00:00 dispatched work run 20260904T205550Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~3003 tokens)
