@@ -1,7 +1,7 @@
 ---
 id: CG-037
 title: Stop the revise template and the review prompt contradicting each other
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,9 +14,9 @@ branch: garden/cg-037-stop-the-revise-template-and-the-review-prompt-c
 pr: https://github.com/joshmarcus/context-garden/pull/44
 discovered_from: CG-027
 attempts: 1
-last_dispatched_at: '2026-09-04T20:57:54+00:00'
+last_dispatched_at: '2026-09-04T21:21:41+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T20:57:54+00:00'
+updated: '2026-09-04T21:24:14+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,13 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T20:55:50+00:00 dispatched revise run 20260904T205549Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7561 tokens)
 - 2026-09-04T20:57:53+00:00 pre-PR checks failed (tests, lint); revise run will fix before the PR is updated cost=$1.41
 - 2026-09-04T20:57:54+00:00 dispatched revise run 20260904T205753Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7373 tokens)
+- 2026-09-04T21:02:12+00:00 discovered work filed: CG-095
+- 2026-09-04T21:02:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/44: Verified the existing branch already satisfies both acceptance criteria: the revise brief points reviewers' responses to pr_comment instead of pr_body, and a test confirms both that the comment posts and that the next automated review brief includes it. Full suite (114 passed, 3 skipped) and lint pass cleanly in this worktree; no new code changes were needed this round. cost=$1.70
+- 2026-09-04T21:02:37+00:00 PR conflicts with main (src/garden/scheduler.py); revise run will rebase and resolve
+- 2026-09-04T21:03:40+00:00 dispatched revise run 20260904T210339Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7564 tokens)
+- 2026-09-04T21:06:46+00:00 pre-PR checks failed (tests); revise run will fix before the PR is updated cost=$1.10
+- 2026-09-04T21:07:49+00:00 automated review: request_changes — Code and tests correctly resolve the contradiction (pr_comment replaces the forbidden body heading, is posted as a comment, and is threaded into the next review brief; both acceptance criteria met, full suite and lint green). The only blocker is the PR description itself, which carries a '## Review responses' section — the exact scar tissue this change removes. cost=$0.53
+- 2026-09-04T21:19:41+00:00 revision counter reset (web)
+- 2026-09-04T21:19:42+00:00 triage: changes requested by hand: The tests check failed because of the garden's environment (a sentinel GARDEN_ROOT reached the pytest subprocess); that
+- 2026-09-04T21:21:41+00:00 dispatched revise run 20260904T212141Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8600 tokens)
+- 2026-09-04T21:24:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/44: No code changes needed this round: the pre-PR test failures were caused by the runner's GARDEN_ROOT sentinel leaking into the pytest subprocess (confirmed by re-running with it unset: 219 passed, 3 skipped), and lint is clean. Fixed the PR description to drop the '## Review responses' heading that the automated review flagged as scar tissue, moving that reply into a pr_comment instead, consistent with the pr_comment mechanism this branch already ships. cost=$0.64

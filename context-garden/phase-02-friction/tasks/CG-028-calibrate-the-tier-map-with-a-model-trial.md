@@ -1,7 +1,7 @@
 ---
 id: CG-028
 title: Calibrate the tier map with a model trial
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -14,7 +14,7 @@ reading:
 - context-garden/phase-01-bootstrap/specs/harness.md
 runner: manual
 created: '2026-09-04T14:02:28+00:00'
-updated: '2026-09-04T17:23:49+00:00'
+updated: '2026-09-04T21:26:36+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,4 @@ Steps:
 ## Lifecycle (added from a Codex review of PR #4)
 
 This is a manual task: claim it with `garden take CG-028 --worktree`, make the documentation edits in the printed worktree, and hand back with `garden finish CG-028 --result '{...}'`. Manual tasks are skipped by the dispatcher, so without take and finish CG-028 stays `draft` and CG-029 never unblocks.
+- 2026-09-04T21:26:36+00:00 obsolete: CG-010 has long had its PR, so it cannot be trialled, and the tier map was set today from live metrics (135 runs); trials on any easy task become practical once CG-087 lands

@@ -1,7 +1,7 @@
 ---
 id: CG-089
 title: 'Board: reorder ready tasks with up/down priority controls'
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/web/app.py
 discovered_from: CG-071
 created: '2026-09-04T19:51:41+00:00'
-updated: '2026-09-04T20:16:10+00:00'
+updated: '2026-09-04T21:26:18+00:00'
 ---
 
 ## Goal
@@ -36,3 +36,4 @@ Discovered by CG-071 (Set a task's priority and difficulty from the CLI and the 
 
 - 2026-09-04T19:51:41+00:00 discovered by CG-071
 - 2026-09-04T20:16:10+00:00 approved (web)
+- 2026-09-04T21:26:18+00:00 superseded by CG-099: priority becomes a five-word pulldown, so up/down against neighbours on the Board no longer fits

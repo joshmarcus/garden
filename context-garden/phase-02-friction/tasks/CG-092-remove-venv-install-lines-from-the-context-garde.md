@@ -1,7 +1,7 @@
 ---
 id: CG-092
 title: Remove venv install lines from the context-garden garden config and product overview
-status: waiting_human
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -17,9 +17,9 @@ reading:
 branch: garden/cg-092-remove-venv-install-lines-from-the-context-garde
 discovered_from: CG-081
 attempts: 1
-last_dispatched_at: '2026-09-04T21:11:10+00:00'
+last_dispatched_at: '2026-09-04T21:21:03+00:00'
 created: '2026-09-04T20:26:01+00:00'
-updated: '2026-09-04T21:19:42+00:00'
+updated: '2026-09-04T21:21:03+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,4 @@ Discovered by CG-081 (Environment setup is per-product configuration, not a venv
 - 2026-09-04T21:13:39+00:00 worker asks: This task's edits belong in the joshmarcus/garden repo (garden.yaml checks.pre_pr, context-garden/product.md), not in this context-garden tool checkout, and it also depends on CG-081's setup-block feature which is still an unmerged branch. Should this task be re-dispatched against a proper checkout/worktree of the garden repo (after CG-081 merges), rather than as a context-garden task? cost=$0.96
 - 2026-09-04T21:14:56+00:00 manual task: the edits are in the garden repo (garden.yaml, product.md), which no worker checks out; a person does it after CG-081 merges
 - 2026-09-04T21:19:42+00:00 back to waiting_human: the person's answer was dropped while the task was parked; answer again and the worker resumes
+- 2026-09-04T21:21:03+00:00 dispatched resume run 20260904T212102Z-resume via local [claude model=claude-sonnet-5] (resumed session, base main, ~183 tokens)

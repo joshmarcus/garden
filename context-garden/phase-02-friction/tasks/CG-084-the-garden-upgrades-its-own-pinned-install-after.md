@@ -1,7 +1,7 @@
 ---
 id: CG-084
 title: The garden upgrades its own pinned install after the tool's PRs merge
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,8 +11,12 @@ reading:
 - src/garden/scheduler.py
 - src/garden/cli.py
 - CLAUDE.md
+branch: garden/cg-084-the-garden-upgrades-its-own-pinned-install-after
+pr: https://github.com/joshmarcus/context-garden/pull/51
+attempts: 2
+last_dispatched_at: '2026-09-04T21:11:10+00:00'
 created: '2026-09-04T19:25:35+00:00'
-updated: '2026-09-04T19:25:35+00:00'
+updated: '2026-09-04T21:26:16+00:00'
 ---
 
 ## Goal
@@ -35,3 +39,7 @@ Config under the product: `provides_tool: true`. On a merge into that product's 
 ## Log
 
 - 2026-09-04T19:25:35+00:00 approved
+- 2026-09-04T21:07:50+00:00 dispatched work run 20260904T210750Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~2736 tokens)
+- 2026-09-04T21:11:07+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+- 2026-09-04T21:11:10+00:00 dispatched work run 20260904T211109Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~2801 tokens)
+- 2026-09-04T21:26:16+00:00 opened https://github.com/joshmarcus/context-garden/pull/51 (base main): A merge into a product with provides_tool records the new pinned sha; the Inbox, `garden status` and `garden upgrade` (plus the web button and `upgrade: auto`) reinstall at that sha, verify the installed commit and `garden doctor`, then re-exec the loop, with a failed install/verify leaving the old install running. Covered by tests using a fake installer. cost=$7.65

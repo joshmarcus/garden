@@ -1,7 +1,7 @@
 ---
 id: CG-070
 title: Auto-approve every discovered task, not only blocking ones
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - src/garden/scheduler.py
 - src/garden/config.py
 created: '2026-09-04T18:41:57+00:00'
-updated: '2026-09-04T18:41:57+00:00'
+updated: '2026-09-04T21:26:18+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Asked during the first live run: "please autoapprove all proposed work". Today `
 ## Log
 
 - 2026-09-04T18:41:57+00:00 approved
+- 2026-09-04T21:26:18+00:00 not a good default: on 2026-09-04 seven discovered tasks were duplicates or already fixed and were cancelled by hand (CG-095, 097, 102, 103, 105, 107, 108); auto-approving them would have dispatched that work
