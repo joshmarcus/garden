@@ -37,12 +37,6 @@ review:
 # become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
 # brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
 checks:
-  pre_pr:                   # $GARDEN_EXEC_ROOT is the live garden (its venv); $GARDEN_ROOT is a sentinel so a check cannot act on the garden.
-                            # The tests unset it: test_cli runs `garden status` without --root and would otherwise read the sentinel (CG-098).
-    - name: tests
-      command: 'env -u GARDEN_ROOT PYTHONPATH=src "$GARDEN_EXEC_ROOT/.venv/bin/python" -m pytest -q -x'
-    - name: lint
-      command: '"$GARDEN_EXEC_ROOT/.venv/bin/ruff" check src tests'
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
     - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
       python: "garden.checks:github_actions_failures"
@@ -96,6 +90,11 @@ products:
     repo: https://github.com/joshmarcus/context-garden.git   # cloned under .garden/repos/; worktrees come from that clone
     base_branch: main
     id_prefix: CG
+    setup:                  # how this product's working environment is prepared, on this machine (no uv here)
+      command: "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"   # once per fresh worktree
+      test: "env -u GARDEN_ROOT .venv/bin/python -m pytest -q -x"   # env -u until CG-098 (#54) merges; CG-113 drops it
+      lint: ".venv/bin/ruff check src tests"
+      timeout_seconds: 600
     # runner: ssh           # per-product overrides
     # harness: codex
     # budget_usd: 100       # per-product default budget for every phase
