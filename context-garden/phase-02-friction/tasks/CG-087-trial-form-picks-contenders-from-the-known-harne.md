@@ -1,7 +1,7 @@
 ---
 id: CG-087
 title: Trial form picks contenders from the known harnesses and models
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -14,10 +14,11 @@ reading:
 - src/garden/config.py
 - src/garden/harness.py
 branch: garden/cg-087-trial-form-picks-contenders-from-the-known-harne
+pr: https://github.com/joshmarcus/context-garden/pull/78
 attempts: 1
 last_dispatched_at: '2026-09-04T23:04:19+00:00'
 created: '2026-09-04T19:40:52+00:00'
-updated: '2026-09-04T23:04:19+00:00'
+updated: '2026-09-04T23:17:02+00:00'
 ---
 
 ## Goal
@@ -38,3 +39,5 @@ Asked during the first live run after a trial attempt failed on the free-text fi
 
 - 2026-09-04T19:40:52+00:00 approved
 - 2026-09-04T23:04:19+00:00 dispatched work run 20260904T230410Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-086-web-actions-report-failures-as-messages-never-as stacked on CG-086, ~11399 tokens)
+- 2026-09-04T23:15:09+00:00 opened https://github.com/joshmarcus/context-garden/pull/78 (base garden/cg-086-web-actions-report-failures-as-messages-never-as): Replaced the free-text trial contender field with harness/model select rows (seeded from garden.yaml, with an 'other…' escape and 'current tier' default) on the task page, added a matching filter to the trials leaderboard, and made the web handler reject duplicate contenders with a message. CLI `garden trial -c` is unchanged. cost=$5.85
+- 2026-09-04T23:17:02+00:00 automated review: approve — Replaces the free-text trial field with config-seeded harness/model contender rows (add/remove, other-escape, current-tier default), adds a matching leaderboard filter, and rejects duplicate contenders with a page message. All acceptance criteria met with a test; web tests and ruff pass. cost=$0.66

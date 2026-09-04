@@ -2,7 +2,7 @@
 id: CG-065
 title: 'Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source
   rows'
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,10 +14,11 @@ reading:
 - src/garden/platefetch.py
 - src/garden/cli.py
 branch: garden/cg-065-plates-and-plants-positional-assignment-invalid
-attempts: 1
-last_dispatched_at: '2026-09-04T23:13:25+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/82
+attempts: 2
+last_dispatched_at: '2026-09-04T23:23:04+00:00'
 created: '2026-09-04T18:35:08+00:00'
-updated: '2026-09-04T23:13:25+00:00'
+updated: '2026-09-04T23:25:55+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,7 @@ Five small defects in the plates and plants code, all raised by Codex reviews on
 
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T23:13:25+00:00 dispatched work run 20260904T231316Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~7555 tokens)
+- 2026-09-04T23:21:30+00:00 no active run found; back to ready
+- 2026-09-04T23:23:04+00:00 dispatched work run 20260904T232304Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~7848 tokens)
+- 2026-09-04T23:25:21+00:00 discovered work filed: CG-125
+- 2026-09-04T23:25:55+00:00 opened https://github.com/joshmarcus/context-garden/pull/82 (base main): All five plates/plants defects from PRs #2, #3, #5 are fixed and tested on this branch (positional plant assignment, unknown --plant rejection, --out removed in favor of always writing to the directory serve reads, atomic staged plate publish, and multiline-safe SOURCES.md cells); verified full test suite (288 passed, 3 skipped) and ruff both pass, and the checked-in SOURCES.md renders as one table. cost=$1.06

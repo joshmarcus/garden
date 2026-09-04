@@ -1,7 +1,7 @@
 ---
 id: CG-088
 title: Trellis and phase page can hide completed tasks
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,8 +11,12 @@ reading:
 - src/garden/web/app.py
 - src/garden/web/templates/trellis.html
 - src/garden/graph.py
+branch: garden/cg-088-trellis-and-phase-page-can-hide-completed-tasks
+pr: https://github.com/joshmarcus/context-garden/pull/86
+attempts: 1
+last_dispatched_at: '2026-09-04T23:20:12+00:00'
 created: '2026-09-04T19:48:28+00:00'
-updated: '2026-09-04T19:48:28+00:00'
+updated: '2026-09-04T23:35:29+00:00'
 ---
 
 ## Goal
@@ -33,3 +37,5 @@ Asked during the first live run, when phase 2 had 30 done tasks and 25 open ones
 ## Log
 
 - 2026-09-04T19:48:28+00:00 approved
+- 2026-09-04T23:20:12+00:00 dispatched work run 20260904T232004Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5553 tokens)
+- 2026-09-04T23:35:29+00:00 opened https://github.com/joshmarcus/context-garden/pull/86 (base main): Added a hide-completed toggle to the Trellis (SVG re-layout, hidden deps named on hover) and the phase page's task table (with a done count), plus `garden trellis --open` on the CLI for text/mermaid/json; state persists via query string + localStorage across rail/phase-page navigation. cost=$7.48

@@ -1,7 +1,7 @@
 ---
 id: CG-109
 title: A description-only revise round runs on the easy tier
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/review.py
 - src/garden/harness.py
 branch: garden/cg-109-a-description-only-revise-round-runs-on-the-easy
+pr: https://github.com/joshmarcus/context-garden/pull/80
 attempts: 1
 last_dispatched_at: '2026-09-04T23:10:00+00:00'
 created: '2026-09-04T21:23:07+00:00'
-updated: '2026-09-04T23:10:00+00:00'
+updated: '2026-09-04T23:19:43+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,5 @@ Found on the first live run. CG-081's review (PR #48) said the code was correct 
 ## Log
 
 - 2026-09-04T23:10:00+00:00 dispatched work run 20260904T230951Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~6850 tokens)
+- 2026-09-04T23:17:38+00:00 opened https://github.com/joshmarcus/context-garden/pull/80 (base main): Revise rounds triggered by a description-only automated review (no blocking findings) now dispatch on the harness's easy tier with a note explaining why; any blocking finding still keeps the task's own tier. Added fake-harness tests for both paths. cost=$4.33
+- 2026-09-04T23:19:43+00:00 automated review: approve — Meets all three acceptance criteria with tests for both paths; the description-only easy-tier routing is correct and the pending_feedback_easy flag is cleared at every site that sets or empties pending_feedback, so it can't leak. Description and diff are clean. cost=$0.65
