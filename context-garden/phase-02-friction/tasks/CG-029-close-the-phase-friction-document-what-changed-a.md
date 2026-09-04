@@ -8,7 +8,6 @@ depends_on:
 - CG-009
 - CG-008
 - CG-013
-- CG-028
 priority: 3
 estimate: M
 difficulty: medium
