@@ -1,7 +1,7 @@
 ---
 id: CG-092
 title: Remove venv install lines from the context-garden garden config and product overview
-status: running
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -15,11 +15,12 @@ reading:
 - src/garden/config.py
 - examples/garden.work.yaml
 branch: garden/cg-092-remove-venv-install-lines-from-the-context-garde
+runner: manual
 discovered_from: CG-081
 attempts: 1
 last_dispatched_at: '2026-09-04T21:21:03+00:00'
 created: '2026-09-04T20:26:01+00:00'
-updated: '2026-09-04T21:21:03+00:00'
+updated: '2026-09-04T21:27:08+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,6 @@ Discovered by CG-081 (Environment setup is per-product configuration, not a venv
 - 2026-09-04T21:14:56+00:00 manual task: the edits are in the garden repo (garden.yaml, product.md), which no worker checks out; a person does it after CG-081 merges
 - 2026-09-04T21:19:42+00:00 back to waiting_human: the person's answer was dropped while the task was parked; answer again and the worker resumes
 - 2026-09-04T21:21:03+00:00 dispatched resume run 20260904T212102Z-resume via local [claude model=claude-sonnet-5] (resumed session, base main, ~183 tokens)
+- 2026-09-04T21:26:44+00:00 discovered work filed: CG-110
+- 2026-09-04T21:26:44+00:00 attempt 1 failed: worker finished with no commits; will retry
+- 2026-09-04T21:27:08+00:00 manual again: the resumed worker confirmed the change is in the garden repo, which no worker checks out; a person does it after CG-081 merges
