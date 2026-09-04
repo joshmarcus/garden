@@ -5,7 +5,7 @@ status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
-priority: 1
+priority: 0
 difficulty: medium
 reading:
 - src/garden/store.py

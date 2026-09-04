@@ -5,7 +5,7 @@ status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
-priority: 2
+priority: 1
 difficulty: medium
 reading:
 - src/garden/scheduler.py

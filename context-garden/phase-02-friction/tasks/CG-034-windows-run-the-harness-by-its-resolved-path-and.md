@@ -1,7 +1,7 @@
 ---
 id: CG-034
 title: 'Windows: run the harness by its resolved path and give pre-PR checks a shell'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,9 +15,9 @@ branch: garden/cg-034-windows-run-the-harness-by-its-resolved-path-and
 pr: https://github.com/joshmarcus/context-garden/pull/16
 discovered_from: CG-027
 attempts: 1
-last_dispatched_at: '2026-09-04T17:24:46+00:00'
+last_dispatched_at: '2026-09-04T18:43:39+00:00'
 created: '2026-09-04T17:03:09+00:00'
-updated: '2026-09-04T18:35:27+00:00'
+updated: '2026-09-04T18:43:39+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T18:07:21+00:00 marked ready for review on GitHub; triage done
 - 2026-09-04T18:07:23+00:00 1 new review item(s)
 - 2026-09-04T18:35:27+00:00 triage: changes requested by hand: Codex review on PR #16, dropped at the time. (P1) src/garden/harness.py:74: resolving the harness to the scheduler's abs
+- 2026-09-04T18:43:39+00:00 dispatched revise run 20260904T184339Z-revise via local [claude model=sonnet] (fresh session, base main, ~6749 tokens)
