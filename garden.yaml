@@ -37,11 +37,11 @@ review:
 # become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
 # brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
 checks:
-  pre_pr:                   # $GARDEN_ROOT is the garden; the worktree's own src/ is what gets tested
+  pre_pr:                   # $GARDEN_EXEC_ROOT is the live garden (its venv); $GARDEN_ROOT is a sentinel so checks cannot act on the garden
     - name: tests
-      command: 'PYTHONPATH=src "$GARDEN_ROOT/.venv/bin/python" -m pytest -q -x'
+      command: 'PYTHONPATH=src "$GARDEN_EXEC_ROOT/.venv/bin/python" -m pytest -q -x'
     - name: lint
-      command: '"$GARDEN_ROOT/.venv/bin/ruff" check src tests'
+      command: '"$GARDEN_EXEC_ROOT/.venv/bin/ruff" check src tests'
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
     - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
       python: "garden.checks:github_actions_failures"
