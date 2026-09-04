@@ -1,0 +1,29 @@
+---
+id: CG-116
+title: The orphan sweep never closes a run whose task is still running
+status: ready
+product: context-garden
+phase: phase-02-friction
+depends_on: []
+priority: 0
+difficulty: medium
+reading:
+- src/garden/scheduler.py
+- tests/test_scheduler.py
+created: '2026-09-04T21:56:41+00:00'
+updated: '2026-09-04T21:56:41+00:00'
+---
+
+## Goal
+
+The orphan sweep (CG-061) closes only review, persona and comparison runs whose task has genuinely moved on. A work, revise or resume run of a task that is still `running` is reaped by the normal path, with its result read, never swept.
+
+## Context
+
+Found on the first live run, twenty minutes after #47 went live. CG-098 (stacked on CG-090) was on a revise round; its worker finished at 21:54 with "no code changes required; the branch already satisfies the criteria" and a $3.35 cost. In the same tick the sweep closed that run with `error: "closed by orphan sweep: task moved on before this run's verdict was read"` and `orphaned: true`, before the reap read the result. The next tick found the task `running` with no active run and sent it back to `ready` ("no active run found"), which would have re-dispatched fresh work on a branch that already has PR #54. The person put it back to `in_review` by hand. Find why the sweep matched: it should consider only runs with `mode` in (review, persona, compare), and only when the task's status is one where no verdict can be applied (done, cancelled, failed, or a PR that is closed or merged); a task in `running`, `changes_requested` or `in_review` with a finished run of its own is never an orphan. Write the rule next to the sweep and make the "no active run found" path record what happened to the run it expected, so the next time a run disappears the log says who closed it.
+
+## Acceptance criteria
+
+- [ ] a finished revise run of a `running` task is reaped normally; a test reproduces the CG-098 timing (run finishes in the same tick as the sweep).
+- [ ] the sweep touches only review/persona/compare runs of tasks that have moved on; a test for each mode.
+- [ ] "no active run found" logs the run id and its closer.
