@@ -1,7 +1,7 @@
 ---
 id: CG-010
 title: Notification hook for human-needed transitions
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/17
 attempts: 2
 last_dispatched_at: '2026-09-04T18:43:39+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T18:43:39+00:00'
+updated: '2026-09-04T18:59:58+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,6 @@ Transitions go through `Scheduler._transition` and every other human-needed mome
 - 2026-09-04T18:08:27+00:00 marked ready for review on GitHub; triage done
 - 2026-09-04T18:35:27+00:00 triage: changes requested by hand: Codex review on PR #17, dropped at the time. (P2) src/garden/scheduler.py:179: _on_parent_closed sets needs_human and em
 - 2026-09-04T18:43:39+00:00 dispatched revise run 20260904T184338Z-revise via local [claude model=sonnet] (fresh session, base main, ~2900 tokens)
+- 2026-09-04T18:57:53+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/17: Added notify() call in _on_parent_closed() for stacked children whose parent PR is closed without merging, plus a test covering this path. Rebased onto main to resolve the PR conflict. cost=$3.34
+- 2026-09-04T18:59:57+00:00 automated review requested changes: All acceptance criteria met and code is correct; the PR description must be cleaned of review-round narration before merging. cost=$0.24
+- 2026-09-04T18:59:58+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/17

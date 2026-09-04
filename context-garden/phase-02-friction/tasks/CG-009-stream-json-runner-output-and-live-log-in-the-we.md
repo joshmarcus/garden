@@ -1,7 +1,7 @@
 ---
 id: CG-009
 title: Stream-json runner output and live log in the web UI
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/10
 attempts: 2
 last_dispatched_at: '2026-09-04T18:43:38+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T18:52:55+00:00'
+updated: '2026-09-04T18:54:19+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,4 @@ hint: its remote counterpart. If you want to integrate the remote changes,
 hint: use 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.77
 - 2026-09-04T18:52:55+00:00 rebased branch force-pushed by hand after the scheduler's plain push was rejected; PR #10 updated
+- 2026-09-04T18:54:19+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/10

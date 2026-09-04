@@ -1,7 +1,7 @@
 ---
 id: CG-076
 title: Push with lease when the worker rebased its branch
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -10,8 +10,11 @@ difficulty: easy
 reading:
 - src/garden/scheduler.py
 - src/garden/gitops.py
+branch: garden/cg-076-push-with-lease-when-the-worker-rebased-its-bran
+attempts: 1
+last_dispatched_at: '2026-09-04T19:03:27+00:00'
 created: '2026-09-04T18:52:58+00:00'
-updated: '2026-09-04T18:52:58+00:00'
+updated: '2026-09-04T19:03:27+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ Before pushing, compare: if `origin/<branch>` exists and is not an ancestor of H
 ## Log
 
 - 2026-09-04T18:52:58+00:00 approved
+- 2026-09-04T19:03:27+00:00 dispatched work run 20260904T190326Z-work via local [claude model=sonnet] (fresh session, base main, ~2170 tokens)

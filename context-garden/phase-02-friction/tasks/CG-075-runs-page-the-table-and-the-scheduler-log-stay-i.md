@@ -1,7 +1,7 @@
 ---
 id: CG-075
 title: 'Runs page: the table and the scheduler log stay inside their panels'
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/web/templates/_runs.html
 - src/garden/web/templates/base.html
 branch: garden/cg-075-runs-page-the-table-and-the-scheduler-log-stay-i
+pr: https://github.com/joshmarcus/context-garden/pull/32
 attempts: 1
 last_dispatched_at: '2026-09-04T18:52:02+00:00'
 created: '2026-09-04T18:52:02+00:00'
-updated: '2026-09-04T18:52:02+00:00'
+updated: '2026-09-04T18:59:58+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,5 @@ Reported during the first live run: the runs table's text runs to the right of t
 ## Log
 
 - 2026-09-04T18:52:02+00:00 dispatched work run 20260904T185202Z-work via manual [human] (fresh session, base main, ~8631 tokens)
+- 2026-09-04T18:55:49+00:00 opened https://github.com/joshmarcus/context-garden/pull/32 (base main): Wide content now scrolls inside its panel: the page shell no longer widens for the board, the runs table is wrapped, bare tables in panels scroll, and the log wraps long tokens.
+- 2026-09-04T18:59:58+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/32
