@@ -63,7 +63,7 @@ brief:
 harnesses:
   claude:
     bin: claude
-    output: stream-json            # one event per line while the worker runs, so the task page tails it live (CG-009)
+    output_format: stream-json     # one event per line while the worker runs, so the task page tails it live (CG-009)
     # max_turns: 60                # optional hard cap on agent turns; off by default
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
