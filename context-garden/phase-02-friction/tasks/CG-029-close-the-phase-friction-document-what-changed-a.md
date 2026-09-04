@@ -5,6 +5,7 @@ status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on:
+- CG-009
 - CG-008
 - CG-013
 - CG-028

@@ -1,7 +1,7 @@
 ---
 id: CG-058
 title: The brief never points a worker at the garden root
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/29
 attempts: 1
 last_dispatched_at: '2026-09-04T17:53:36+00:00'
 created: '2026-09-04T17:53:36+00:00'
-updated: '2026-09-04T18:00:29+00:00'
+updated: '2026-09-04T18:29:26+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ During the first live run, workers for CG-043 and CG-045 edited `src/garden/inbo
 - 2026-09-04T17:57:33+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/29 (base main): The brief no longer names the garden root: reading-list paths are relative to the worker's current directory, the rules say to stay in it, and a test asserts no brief carries the root path.
 - 2026-09-04T17:58:22+00:00 CI failure
 - 2026-09-04T18:00:29+00:00 automated review: approve — All three acceptance criteria met: root path removed from reading_refs, stay-in-directory rule added to OPERATING_RULES, worker-protocol.md updated, and the new test asserts all of it — passes with PYTHONPATH pointing at this worktree's src. cost=$0.39
+- 2026-09-04T18:29:26+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/29

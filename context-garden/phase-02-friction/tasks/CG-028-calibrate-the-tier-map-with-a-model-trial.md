@@ -46,3 +46,7 @@ Steps:
 ## Log
 
 - 2026-09-04T17:23:49+00:00 approved (web)
+
+## Lifecycle (added from a Codex review of PR #4)
+
+This is a manual task: claim it with `garden take CG-028 --worktree`, make the documentation edits in the printed worktree, and hand back with `garden finish CG-028 --result '{...}'`. Manual tasks are skipped by the dispatcher, so without take and finish CG-028 stays `draft` and CG-029 never unblocks.

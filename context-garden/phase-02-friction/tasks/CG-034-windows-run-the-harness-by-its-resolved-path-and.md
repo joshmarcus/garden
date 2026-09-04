@@ -17,7 +17,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T17:24:46+00:00'
 created: '2026-09-04T17:03:09+00:00'
-updated: '2026-09-04T18:07:23+00:00'
+updated: '2026-09-04T18:35:27+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:37:41+00:00 automated review: approve — All three acceptance criteria met with tests; implementation is correct and well-scoped. No blocking findings. cost=$0.25
 - 2026-09-04T18:07:21+00:00 marked ready for review on GitHub; triage done
 - 2026-09-04T18:07:23+00:00 1 new review item(s)
+- 2026-09-04T18:35:27+00:00 triage: changes requested by hand: Codex review on PR #16, dropped at the time. (P1) src/garden/harness.py:74: resolving the harness to the scheduler's abs

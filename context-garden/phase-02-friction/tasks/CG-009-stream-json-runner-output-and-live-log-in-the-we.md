@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/10
 attempts: 2
 last_dispatched_at: '2026-09-04T17:30:40+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T17:32:05+00:00'
+updated: '2026-09-04T18:35:26+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,4 @@ The command line and output parsing for a harness live in `src/garden/harness.py
 - 2026-09-04T17:30:40+00:00 dispatched revise run 20260904T173040Z-revise via local [claude model=sonnet] (fresh session, base main, ~3748 tokens)
 - 2026-09-04T17:32:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/10: No code changes needed. Tests pass (95). The review asked only to remove the 'Review responses' section from the PR description — addressed below in pr_body. cost=$0.11
 - 2026-09-04T17:32:05+00:00 stalled: revise run 20260904T173040Z-revise produced no change to the diff; needs a human (garden retry to resume)
+- 2026-09-04T18:35:26+00:00 triage: changes requested by hand: Codex review on PR #10, dropped at the time. (P1) src/garden/harness.py:76: stream-json requires --verbose with -p; add

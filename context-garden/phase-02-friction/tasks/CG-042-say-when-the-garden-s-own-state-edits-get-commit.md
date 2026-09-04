@@ -1,7 +1,7 @@
 ---
 id: CG-042
 title: Say when the garden's own state edits get committed
-status: awaiting_triage
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: CG-027
 attempts: 1
 last_dispatched_at: '2026-09-04T17:36:40+00:00'
 created: '2026-09-04T17:03:10+00:00'
-updated: '2026-09-04T17:46:49+00:00'
+updated: '2026-09-04T18:33:41+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,6 @@ Discovered by CG-027 (First live run of the loop on itself) during run `20260904
 - 2026-09-04T17:36:40+00:00 dispatched work run 20260904T173639Z-work via local [claude model=sonnet] (fresh session, base main, ~9018 tokens)
 - 2026-09-04T17:43:56+00:00 opened draft https://github.com/joshmarcus/context-garden/pull/23 (base main): Added `garden commit` command that stages modified task files (under **/tasks/*.md) and commits them with message 'garden: update task state'. `garden status` now warns when task files have uncommitted changes. Documented the pattern in docs/architecture.md under a new '### Committing task state' subsection. cost=$1.41
 - 2026-09-04T17:46:49+00:00 automated review: approve — All acceptance criteria met: `garden commit` command with 10 passing tests, `garden status` warning, and `docs/architecture.md` documentation. Full suite (129 tests) passes with no regressions. cost=$0.26
+- 2026-09-04T18:29:24+00:00 marked ready for review on GitHub; triage done
+- 2026-09-04T18:32:38+00:00 3 new review item(s)
+- 2026-09-04T18:33:41+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/23

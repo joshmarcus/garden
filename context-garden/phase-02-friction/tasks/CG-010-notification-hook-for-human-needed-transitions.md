@@ -1,7 +1,7 @@
 ---
 id: CG-010
 title: Notification hook for human-needed transitions
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/17
 attempts: 2
 last_dispatched_at: '2026-09-04T17:40:46+00:00'
 created: '2026-09-04T00:00:00+00:00'
-updated: '2026-09-04T18:08:27+00:00'
+updated: '2026-09-04T18:35:27+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Transitions go through `Scheduler._transition` and every other human-needed mome
 - 2026-09-04T17:40:46+00:00 dispatched revise run 20260904T174046Z-revise via local [claude model=sonnet] (fresh session, base main, ~2688 tokens)
 - 2026-09-04T17:45:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/17: Fixed spurious notifications on auto-handled changes_requested transitions. `should_notify` now takes `needs_human: bool` instead of `previous_status`; only the two human-required sites (auto_revise=False and revision cap) and stall transitions pass `needs_human=True`. A new test confirms no notification fires during a normal auto-revise cycle. cost=$0.66
 - 2026-09-04T18:08:27+00:00 marked ready for review on GitHub; triage done
+- 2026-09-04T18:35:27+00:00 triage: changes requested by hand: Codex review on PR #17, dropped at the time. (P2) src/garden/scheduler.py:179: _on_parent_closed sets needs_human and em
