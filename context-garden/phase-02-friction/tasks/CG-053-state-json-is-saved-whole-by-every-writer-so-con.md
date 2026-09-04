@@ -1,7 +1,7 @@
 ---
 id: CG-053
 title: state.json is saved whole by every writer, so concurrent writers lose updates
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/37
 attempts: 1
 last_dispatched_at: '2026-09-04T19:12:18+00:00'
 created: '2026-09-04T17:41:02+00:00'
-updated: '2026-09-04T19:31:43+00:00'
+updated: '2026-09-04T19:34:52+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Options, smallest first: save per task (`state/<task>.json`) so writers only tou
 - 2026-09-04T18:41:38+00:00 approved
 - 2026-09-04T19:12:18+00:00 dispatched work run 20260904T191218Z-work via local [claude model=sonnet] (fresh session, base main, ~7520 tokens)
 - 2026-09-04T19:31:43+00:00 opened https://github.com/joshmarcus/context-garden/pull/37 (base main): Replaced State.save() with a lock-based merge-on-save: _TaskState tracks dirty keys at the top level (including reads of nested dicts/lists), and save() acquires an exclusive flock, re-reads disk, merges only changed keys, then writes back. All 195 tests pass. cost=$2.91
+- 2026-09-04T19:34:51+00:00 automated review: approve — Merge-on-save with flock and per-key dirty-tracking correctly makes concurrent different-key writes safe; all three acceptance criteria met, 195 tests pass and lint is clean. Nested in-place mutations are all covered because they read the parent key via bracket/setdefault first. cost=$0.73
+- 2026-09-04T19:34:52+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/37

@@ -1,10 +1,11 @@
 ---
 id: CG-082
 title: Separate GARDEN_ROOT (guard) from the check-command venv path variable
-status: running
+status: ready
 product: context-garden
 phase: phase-02-friction
-depends_on: []
+depends_on:
+- CG-054
 priority: 0
 difficulty: easy
 reading:
@@ -13,10 +14,9 @@ reading:
 - src/garden/brief.py
 branch: garden/cg-082-separate-garden-root-guard-from-the-check-comman
 discovered_from: CG-054
-attempts: 1
 last_dispatched_at: '2026-09-04T19:32:47+00:00'
 created: '2026-09-04T19:18:10+00:00'
-updated: '2026-09-04T19:32:47+00:00'
+updated: '2026-09-04T19:35:06+00:00'
 ---
 
 ## Goal
@@ -36,3 +36,5 @@ Discovered by CG-054 (A worker's worktree must never act on the live garden) dur
 - 2026-09-04T19:18:10+00:00 discovered by CG-054
 - 2026-09-04T19:24:42+00:00 approved (web)
 - 2026-09-04T19:32:47+00:00 dispatched work run 20260904T193247Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~8324 tokens)
+- 2026-09-04T19:34:51+00:00 worker blocked: CG-082 depends on the GARDEN_ROOT guard from CG-054, which only exists on the still-open, unmerged PR #35 (branch garden/cg-054-...); main and this branch have no GARDEN_ROOT handling in find_root() at all, so there is nothing to separate yet. cost=$1.04
+- 2026-09-04T19:35:06+00:00 reset to ready by hand
