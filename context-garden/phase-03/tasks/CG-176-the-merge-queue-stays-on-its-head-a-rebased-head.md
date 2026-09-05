@@ -2,7 +2,7 @@
 id: CG-176
 title: 'The merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped,
   and merges when CI goes green'
-status: running
+status: done
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -14,10 +14,11 @@ reading:
 - tests/test_rebase.py
 - tests/test_automerge.py
 branch: garden/cg-176-the-merge-queue-stays-on-its-head-a-rebased-head
+pr: https://github.com/joshmarcus/context-garden/pull/127
 attempts: 1
 last_dispatched_at: '2026-09-05T09:35:19+00:00'
 created: '2026-09-05T05:50:08+00:00'
-updated: '2026-09-05T09:35:19+00:00'
+updated: '2026-09-05T10:10:48+00:00'
 ---
 
 ## Goal
@@ -47,3 +48,6 @@ Please commit your changes or stash them before you merge.
 Aborting
 - 2026-09-05T09:35:00+00:00 reset to ready by hand
 - 2026-09-05T09:35:19+00:00 dispatched work run 20260905T093519Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~16172 tokens)
+- 2026-09-05T09:57:33+00:00 opened https://github.com/joshmarcus/context-garden/pull/127 (base main): The merge queue now keeps its head: after the pre-merge rebase a head with a still-running rollup goes in flight (a merge_head marker holding its ready_at), the queue never rotates to another PR while one is in flight, a branch already on the base tip is merged without a rebase or push, and each PR is rebased at most once right before it merges. Added tests for eight PRs merging in order (one rebase each) and for a pending rollup holding the head; full suite (587) and lint pass. cost=$8.40
+- 2026-09-05T10:01:10+00:00 description rewritten by the reviewer cost=$0.96
+- 2026-09-05T10:10:48+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/127

@@ -2,7 +2,7 @@
 id: CG-181
 title: The retro has a Features for the next phase section, fed by the product-manager persona, and each
   feature becomes a draft in the next phase
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,10 +14,11 @@ reading:
 - src/garden/personas.py
 - personas/product-manager.md
 branch: garden/cg-181-the-retro-has-a-features-for-the-next-phase-sect
+pr: https://github.com/joshmarcus/context-garden/pull/128
 attempts: 1
 last_dispatched_at: '2026-09-05T09:54:46+00:00'
 created: '2026-09-05T09:52:59+00:00'
-updated: '2026-09-05T09:54:46+00:00'
+updated: '2026-09-05T10:10:49+00:00'
 ---
 
 ## Goal
@@ -40,3 +41,8 @@ Asked by the user on 2026-09-05 at the phase-03 wrap-up: "before ending this pha
 
 - 2026-09-05T09:53:46+00:00 approved (web)
 - 2026-09-05T09:54:46+00:00 dispatched work run 20260905T095437Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~6749 tokens)
+- 2026-09-05T10:06:02+00:00 opened https://github.com/joshmarcus/context-garden/pull/128 (base main): Added the product-manager persona as a built-in default, extended the retro reconciliation brief/verdict with a ranked `features` list, rendered a "Features for the next phase" section in the retro doc and next-goals draft, and filed each feature as a draft task in the next phase's worktree (discovered_from: retro:<phase>), skipping title/flagged duplicates with a log line. cost=$2.41
+- 2026-09-05T10:09:34+00:00 automated review: approve — Adds the product-manager persona, extends the retro to rank features and file them as provenance-tagged draft tasks in the next phase (dupes skipped with a log line), and renders them in the retro doc and next-goals draft. All acceptance criteria met; full suite (592 passed) and ruff pass locally. cost=$0.85
+- 2026-09-05T10:09:38+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T10:09:38+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T10:10:49+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/128
