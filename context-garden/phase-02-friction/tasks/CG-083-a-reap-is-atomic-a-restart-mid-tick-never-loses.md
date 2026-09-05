@@ -1,7 +1,7 @@
 ---
 id: CG-083
 title: 'A reap is atomic: a restart mid-tick never loses a finished run'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/81
 attempts: 2
 last_dispatched_at: '2026-09-05T00:36:03+00:00'
 created: '2026-09-04T19:25:01+00:00'
-updated: '2026-09-05T00:42:24+00:00'
+updated: '2026-09-05T01:42:48+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,4 @@ At 19:23 UTC during the first live run, `garden serve` was restarted while a tic
 - 2026-09-05T00:41:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/81: Rebased onto origin/main and resolved the tests/test_scheduler.py conflict; the commit-collision flake fix (b041761) was fully superseded by CG-064 which merged into main in the meantime, so it dropped out as an empty patch during rebase, leaving the three substantive atomic-reap commits cleanly on top of main. Full test suite and ruff pass. cost=$1.35
 - 2026-09-05T00:41:14+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-083` for one more round, or review on GitHub
 - 2026-09-05T00:42:24+00:00 automated review requested changes: Code is correct and complete: all three acceptance criteria are met with direct tests, full suite (362 passed) and ruff pass at the branch tip. The PR description fails the standard — it is process/rebase narration rather than a self-contained account of the change. cost=$1.27
+- 2026-09-05T01:42:48+00:00 triage: marked ready for review

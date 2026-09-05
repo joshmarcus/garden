@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/86
 attempts: 1
 last_dispatched_at: '2026-09-05T00:45:18+00:00'
 created: '2026-09-04T19:48:28+00:00'
-updated: '2026-09-05T00:48:44+00:00'
+updated: '2026-09-05T01:42:46+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Asked during the first live run, when phase 2 had 30 done tasks and 25 open ones
 - 2026-09-05T00:45:18+00:00 dispatched revise run 20260905T004518Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7489 tokens)
 - 2026-09-05T00:48:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/86: Fixed the phase page's dead localStorage code by wiring base.html to rewrite /phases/ links (rail, herbarium, doc pages) with the remembered hide=done choice, matching the existing trellis rail behavior. Rewrote the PR description to drop rebase narration and accurately state persistence per page. cost=$1.05
 - 2026-09-05T00:48:44+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-088` for one more round, or review on GitHub
+- 2026-09-05T01:42:46+00:00 triage: marked ready for review
