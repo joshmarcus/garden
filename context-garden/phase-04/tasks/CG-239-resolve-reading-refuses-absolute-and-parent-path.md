@@ -2,7 +2,7 @@
 id: CG-239
 title: resolve_reading refuses absolute and parent paths, and the fence hashes the clone's git config
   and hooks
-status: ready
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,6 +16,8 @@ reading:
 - src/garden/gitops.py
 - tests/test_brief.py
 - tests/scheduler/test_dispatch.py
+branch: garden/cg-239-resolve-reading-refuses-absolute-and-parent-path
+pr: https://github.com/joshmarcus/context-garden/pull/193
 discovered_from: retro:context-garden/phase-04
 freeze_exception: true
 freeze_exception_reason: Goal 3 claims trust matches the mechanism and the phase runs overnight with automerge
@@ -23,8 +25,10 @@ freeze_exception_reason: Goal 3 claims trust matches the mechanism and the phase
   with the operator's credentials, and that a worker-filed task can inline the gh token into the next
   brief.
 retro_blocking: true
+attempts: 1
+last_dispatched_at: '2026-09-05T23:12:33+00:00'
 created: '2026-09-05T23:05:56+00:00'
-updated: '2026-09-05T23:10:30+00:00'
+updated: '2026-09-05T23:40:40+00:00'
 ---
 
 ## Goal
@@ -46,3 +50,5 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 
 - 2026-09-05T23:05:56+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
 - 2026-09-05T23:10:30+00:00 approved (cli)
+- 2026-09-05T23:12:33+00:00 dispatched work run 20260905T231218Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5584 tokens)
+- 2026-09-05T23:40:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/193 (base main): resolve_reading now refuses absolute/parent-escaping reading paths (reported as brief gaps), and the fence hash-checks a clone's .git/config, hooks dir, and worktree git-admin files at dispatch, blocking every scheduler-side git command in that clone at reap if they change; gitops.git now forces core.hooksPath/core.fsmonitor off via GIT_CONFIG_COUNT. cost=$4.15
