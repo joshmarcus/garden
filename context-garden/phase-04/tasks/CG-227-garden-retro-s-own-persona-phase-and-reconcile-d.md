@@ -1,10 +1,11 @@
 ---
 id: CG-227
 title: garden retro's own persona-phase and reconcile dispatch aren't gated on a paused harness
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-212
 priority: 1
 difficulty: easy
 reading:
@@ -16,7 +17,7 @@ reading:
 - context-garden/phase-02-friction/tasks/CG-033-an-environment-error-in-a-worker-pauses-dispatch.md
 discovered_from: CG-212
 created: '2026-09-05T17:49:54+00:00'
-updated: '2026-09-05T17:49:54+00:00'
+updated: '2026-09-05T19:16:28+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,4 @@ Discovered by CG-212 (A usage or spend-limit error from a harness pauses dispatc
 ## Log
 
 - 2026-09-05T17:49:54+00:00 discovered by CG-212
+- 2026-09-05T19:16:28+00:00 approved (web)

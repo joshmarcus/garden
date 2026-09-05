@@ -2,7 +2,7 @@
 id: CG-225
 title: The retro's questions become decision cards through the kickoff's mechanism (re-doing CG-189, whose
   implementation was dropped from CG-178 before merge)
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,11 +16,13 @@ reading:
 - src/garden/scheduler/discovered.py
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
-branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
+branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards-trial-codex
+pr: https://github.com/joshmarcus/context-garden/pull/179
+harness: codex
 discovered_from: CG-224
 last_dispatched_at: '2026-09-05T18:50:17+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T19:07:48+00:00'
+updated: '2026-09-05T19:15:21+00:00'
 ---
 
 ## Goal
@@ -61,3 +63,4 @@ CG-189 was implemented on a branch stacked on CG-178 and its PR #150 was merged 
 - 2026-09-05T18:50:17+00:00 dispatched trial run 20260905T185017Z-trial-2 via local [codex] (fresh session, base main, ~26592 tokens)
 - 2026-09-05T18:50:17+00:00 trial started with claude:claude-sonnet-5, codex
 - 2026-09-05T19:07:48+00:00 all contenders finished; comparison run started
+- 2026-09-05T19:15:21+00:00 trial won by codex (scores: claude:claude-sonnet-5=6, codex=8): https://github.com/joshmarcus/context-garden/pull/179

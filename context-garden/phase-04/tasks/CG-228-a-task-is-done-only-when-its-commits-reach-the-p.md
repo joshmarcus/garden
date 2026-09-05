@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/178
 attempts: 1
 last_dispatched_at: '2026-09-05T18:47:53+00:00'
 created: '2026-09-05T18:14:53+00:00'
-updated: '2026-09-05T19:10:57+00:00'
+updated: '2026-09-05T19:13:52+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ updated: '2026-09-05T19:10:57+00:00'
 - 2026-09-05T19:01:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/178: Fixed the reviewer-flagged bug: merged_into_parent promotion now checks ancestry against the parent PR's own pre-merge head sha instead of the base's post-squash tip, so it survives the garden's default squash automerge_method; added a regression test simulating a real squash merge. cost=$1.60
 - 2026-09-05T19:09:17+00:00 description rewritten by the reviewer cost=$1.29
 - 2026-09-05T19:10:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T19:13:52+00:00 rebased; patch id unchanged; verdict kept

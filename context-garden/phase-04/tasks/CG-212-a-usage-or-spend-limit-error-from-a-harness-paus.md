@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T18:49:17+00:00'
+last_dispatched_at: '2026-09-05T19:12:43+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T19:11:16+00:00'
+updated: '2026-09-05T19:12:43+00:00'
 ---
 
 ## Goal
@@ -67,3 +67,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T18:55:52+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T18:58:48+00:00 automated review requested changes: Acceptance criteria are met and tested, but a quota hit during a resume round (post-answer continuation of a revise/rebase) still loses the PR/feedback the same way round 2 fixed for revise/rebase directly, and the new harness probe runs with full edit/Bash permissions and no fence unlike the existing login_probe it should have reused. cost=$1.69
 - 2026-09-05T19:11:16+00:00 triage: changes requested by hand: Address the reviewer's two blocking findings: (1) a quota hit during a resume round (the continuation after an answer, o
+- 2026-09-05T19:12:43+00:00 dispatched revise run 20260905T191243Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~20639 tokens)
