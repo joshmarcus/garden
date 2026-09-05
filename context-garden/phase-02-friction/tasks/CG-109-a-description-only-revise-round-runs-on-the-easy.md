@@ -1,7 +1,7 @@
 ---
 id: CG-109
 title: A description-only revise round runs on the easy tier
-status: in_review
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-109-a-description-only-revise-round-runs-on-the-easy
 pr: https://github.com/joshmarcus/context-garden/pull/80
 attempts: 1
-last_dispatched_at: '2026-09-05T01:12:08+00:00'
+last_dispatched_at: '2026-09-05T01:16:55+00:00'
 created: '2026-09-04T21:23:07+00:00'
-updated: '2026-09-05T01:16:29+00:00'
+updated: '2026-09-05T01:16:55+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Found on the first live run. CG-081's review (PR #48) said the code was correct 
 - 2026-09-05T01:11:57+00:00 PR conflicts with main (src/garden/scheduler.py); revise run will rebase and resolve
 - 2026-09-05T01:12:08+00:00 dispatched revise run 20260905T011207Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8067 tokens)
 - 2026-09-05T01:16:29+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/80: Rebased the branch onto origin/main, resolving the conflict in src/garden/scheduler.py by keeping main's refactored _handle_failed_checks/_start_check_revise split and adding the pending_feedback_easy reset to the new single call site. Tests (380 passed, 3 skipped) and ruff both pass. cost=$1.16
+- 2026-09-05T01:16:49+00:00 PR conflicts with main (tests/fake_claude.py, tests/test_review.py); revise run will rebase and resolve
+- 2026-09-05T01:16:55+00:00 dispatched revise run 20260905T011654Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8514 tokens)
