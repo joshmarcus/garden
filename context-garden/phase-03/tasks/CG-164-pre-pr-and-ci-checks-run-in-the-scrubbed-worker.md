@@ -1,7 +1,7 @@
 ---
 id: CG-164
 title: Pre-PR and CI checks run in the scrubbed worker environment
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -13,9 +13,9 @@ branch: garden/cg-164-pre-pr-and-ci-checks-run-in-the-scrubbed-worker
 pr: https://github.com/joshmarcus/context-garden/pull/109
 discovered_from: CG-154
 attempts: 1
-last_dispatched_at: '2026-09-05T04:16:06+00:00'
+last_dispatched_at: '2026-09-05T04:50:39+00:00'
 created: '2026-09-05T04:01:03+00:00'
-updated: '2026-09-05T04:49:24+00:00'
+updated: '2026-09-05T05:01:38+00:00'
 ---
 
 ## Goal
@@ -39,3 +39,12 @@ Discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors,
 - 2026-09-05T04:24:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/109 (base garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted): checks.run_check now builds a command check's subprocess environment from runner.base.scrubbed_env (with an optional config argument for worker_env.pass) instead of raw os.environ, closing the credential leak in pre-PR/CI checks that run a branch's own code; python: checks remain in-process and documented as unscrubbed. cost=$1.53
 - 2026-09-05T04:38:09+00:00 automated review: approve — checks.run_check now builds a command check's subprocess env from the scrubbed worker allowlist instead of os.environ, closing the credential leak CG-154 left open for pre-PR/CI checks; python checks stay in-process and are documented as trusted. All criteria met, tests and lint pass. cost=$0.45
 - 2026-09-05T04:49:24+00:00 PR conflicts with garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted (tests/scheduler/test_poll.py); revise run will rebase and resolve
+- 2026-09-05T04:50:39+00:00 dispatched revise run 20260905T045038Z-revise via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted, ~4466 tokens)
+- 2026-09-05T04:52:51+00:00 worker says nothing to change: The conflict the reviewer saw was against a stale fetch of the base branch, not this branch's diff (which doesn't touch tests/scheduler/test_poll.py at all). Fetching origin now shows the base branch's tip is already an ancestor of this branch, so there is nothing to rebase or resolve. cost=$0.27
+- 2026-09-05T04:52:54+00:00 parent CG-154 merged; will rebase onto main when the current run finishes
+- 2026-09-05T04:57:42+00:00 no-change accepted by the person (accepted by the operator: the branch was already rebased by hand; parent CG-154 merged, PR retargeted to main and rebased onto it); resuming the round without a new work run
+- 2026-09-05T04:58:37+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/109: The branch already sits cleanly on the current tip of garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted (6821fd3); git merge-tree shows no conflicts and GitHub reports the PR as MERGEABLE/CLEAN. Tests and lint pass unchanged.
+- 2026-09-05T04:58:41+00:00 parent CG-154 merged; rebased onto main and retargeted the PR
+- 2026-09-05T05:00:29+00:00 automated review: approve — checks.run_check now builds a command check's subprocess env from runner.base.scrubbed_env (threaded through an optional config arg for worker_env.pass) instead of raw os.environ, closing the credential leak CG-154 left open for pre-PR/CI checks; python: checks stay in-process and are documented as trusted. All criteria met, tests and lint pass. cost=$0.64
+- 2026-09-05T05:00:47+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:01:38+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-164` for one more round, or review on GitHub

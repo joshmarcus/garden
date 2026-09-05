@@ -1,7 +1,7 @@
 ---
 id: CG-142
 title: Task actions refuse a task that is done or cancelled
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -15,9 +15,9 @@ reading:
 branch: garden/cg-142-task-actions-refuse-a-task-that-is-done-or-cance
 pr: https://github.com/joshmarcus/context-garden/pull/112
 attempts: 1
-last_dispatched_at: '2026-09-05T04:40:56+00:00'
+last_dispatched_at: '2026-09-05T04:53:06+00:00'
 created: '2026-09-05T02:18:30+00:00'
-updated: '2026-09-05T04:49:15+00:00'
+updated: '2026-09-05T05:00:38+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,8 @@ Found on the first live run. Automerge merged #71 at 02:17:55; three seconds lat
 - 2026-09-05T04:40:56+00:00 dispatched revise run 20260905T044056Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5260 tokens)
 - 2026-09-05T04:45:57+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/112: Rebased CG-142 onto main, resolving conflicts in scheduler/dispatch.py, scheduler/human.py, and web/actions/tasks.py by keeping both this branch's ensure_open guard and main's phase_refusal guard; all tests (515 passed, 3 skipped) and ruff pass. cost=$0.89
 - 2026-09-05T04:49:15+00:00 automated review: approve — Clean, well-tested implementation: a shared ensure_open() guard refuses done/cancelled tasks across every scheduler entry point, the web dispatcher, and the CLI, with set-status --force as the sanctioned escape hatch. Both acceptance criteria are met and covered by tests; full suite and ruff pass. cost=$0.92
+- 2026-09-05T04:51:43+00:00 PR conflicts with main (src/garden/scheduler/review.py); revise run will rebase and resolve
+- 2026-09-05T04:53:06+00:00 dispatched revise run 20260905T045305Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5568 tokens)
+- 2026-09-05T04:56:13+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/112: Rebased CG-142 onto main, resolving the single conflict in scheduler/review.py by keeping both this branch's ensure_open() terminal-state guard and main's CG-144 running-review-supersede logic (guard runs first, then supersede); ensure_open is called consistently across dispatch, edits, human actions, persona dispatch, review dispatch, and the web action dispatcher, matching main's existing phase_refusal pattern. Full suite (538 passed, 3 skipped) and ruff pass. cost=$0.44
+- 2026-09-05T04:56:13+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-142` for one more round, or review on GitHub
+- 2026-09-05T05:00:38+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/112

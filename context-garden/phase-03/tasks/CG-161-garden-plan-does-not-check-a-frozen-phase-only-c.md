@@ -1,7 +1,7 @@
 ---
 id: CG-161
 title: garden plan does not check a frozen phase (only closed)
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -19,7 +19,7 @@ discovered_from: CG-148
 attempts: 1
 last_dispatched_at: '2026-09-05T04:15:57+00:00'
 created: '2026-09-05T03:55:13+00:00'
-updated: '2026-09-05T04:38:10+00:00'
+updated: '2026-09-05T04:54:10+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,5 @@ Discovered by CG-148 (A frozen or closed phase refuses approvals and dispatch; a
 - 2026-09-05T04:34:34+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110
 - 2026-09-05T04:35:50+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110
 - 2026-09-05T04:38:10+00:00 PR attached: https://github.com/joshmarcus/context-garden/pull/110
+- 2026-09-05T04:52:51+00:00 description rewritten by the reviewer cost=$0.62
+- 2026-09-05T04:54:10+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/110

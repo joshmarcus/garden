@@ -1,7 +1,7 @@
 ---
 id: CG-157
 title: The Inbox friction form's product and phase selects cannot produce a 404
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -9,9 +9,12 @@ depends_on:
 priority: 3
 difficulty: easy
 reading: []
+branch: garden/cg-157-the-inbox-friction-form-s-product-and-phase-sele
 discovered_from: retro:context-garden/phase-02-friction
+attempts: 1
+last_dispatched_at: '2026-09-05T05:02:02+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T03:20:00+00:00'
+updated: '2026-09-05T05:02:02+00:00'
 ---
 
 ## Goal
@@ -29,3 +32,4 @@ From the phase-02 retro's open list (item 11), reconciled against what merged on
 ## Log
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 11)
 - 2026-09-05T03:20:00+00:00 approved (web)
+- 2026-09-05T05:02:02+00:00 dispatched work run 20260905T050153Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~3684 tokens)

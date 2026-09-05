@@ -2,7 +2,7 @@
 id: CG-149
 title: Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief
   cost is measured per phase
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -11,11 +11,12 @@ priority: 2
 difficulty: medium
 reading: []
 branch: garden/cg-149-briefs-inline-reading-list-snippets-from-the-tar
+pr: https://github.com/joshmarcus/context-garden/pull/117
 discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T04:48:04+00:00'
 created: '2026-09-05T03:14:36+00:00'
-updated: '2026-09-05T04:48:04+00:00'
+updated: '2026-09-05T05:00:25+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,4 @@ From the phase-02 retro's open list (item 1), reconciled against what merged on 
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 1)
 - 2026-09-05T03:19:59+00:00 approved (web)
 - 2026-09-05T04:48:04+00:00 dispatched work run 20260905T044755Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~3720 tokens)
+- 2026-09-05T05:00:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/117 (base main): Dispatch now prepares the task worktree before building the brief, so reading-list snippets are inlined from the target checkout (a stacked parent's or dependency's files included) instead of a stale base repo, and genuinely-absent paths are correctly flagged. Added brief.phase_fixed_tokens() and used it from the phase page and usage CLI so the fixed brief cost is measured once per phase. cost=$3.06

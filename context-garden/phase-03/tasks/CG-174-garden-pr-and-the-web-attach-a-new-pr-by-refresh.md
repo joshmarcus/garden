@@ -2,7 +2,7 @@
 id: CG-174
 title: garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll
   follows the new PR
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -13,8 +13,11 @@ reading:
 - src/garden/scheduler/__init__.py
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/state.py
+branch: garden/cg-174-garden-pr-and-the-web-attach-a-new-pr-by-refresh
+attempts: 1
+last_dispatched_at: '2026-09-05T04:57:34+00:00'
 created: '2026-09-05T04:39:47+00:00'
-updated: '2026-09-05T04:40:59+00:00'
+updated: '2026-09-05T04:57:34+00:00'
 ---
 
 ## Goal
@@ -34,3 +37,4 @@ On 2026-09-05 at 04:31 the operator opened PR #110 for CG-161 after GitHub close
 ## Log
 
 - 2026-09-05T04:40:59+00:00 approved (web)
+- 2026-09-05T04:57:34+00:00 dispatched work run 20260905T045725Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~3964 tokens)

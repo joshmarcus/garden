@@ -1,7 +1,7 @@
 ---
 id: CG-144
 title: A superseded review run is closed when a newer review starts; no run record outlives its process
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/114
 attempts: 1
 last_dispatched_at: '2026-09-05T04:27:14+00:00'
 created: '2026-09-05T02:28:49+00:00'
-updated: '2026-09-05T04:45:58+00:00'
+updated: '2026-09-05T04:50:32+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ Found on the last PR of the first live run. CG-079 had a review dispatched at 02
 - 2026-09-05T04:27:14+00:00 dispatched work run 20260905T042706Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~10297 tokens)
 - 2026-09-05T04:42:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/114 (base main): Dispatching a second review now supersedes and stops the first's process, a new general dead-run sweep closes any running record whose process has exited and that no live pointer follows, and the automerge gate no longer blocks on a stale/superseded review_run pointer. cost=$3.57
 - 2026-09-05T04:45:58+00:00 automated review: approve — Cleanly implements the review supersede and the general dead-run sweep with a matching automerge-gate fix; all three acceptance criteria are covered by targeted tests, full suite and lint pass. Scope is tight and the description is clean. cost=$0.93
+- 2026-09-05T04:50:32+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/114
