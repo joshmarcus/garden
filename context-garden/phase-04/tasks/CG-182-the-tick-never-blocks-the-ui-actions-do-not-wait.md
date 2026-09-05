@@ -1,0 +1,44 @@
+---
+id: CG-182
+title: 'The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records
+  outside the tick'
+status: draft
+product: context-garden
+phase: phase-04
+depends_on: []
+priority: 0
+difficulty: medium
+reading:
+- src/garden/web/common.py
+- src/garden/web/actions/tasks.py
+- src/garden/scheduler/__init__.py
+- src/garden/scheduler/rebase.py
+- src/garden/scheduler/reap.py
+- src/garden/checks.py
+- src/garden/scheduler/state.py
+created: '2026-09-05T10:00:03+00:00'
+updated: '2026-09-05T10:00:03+00:00'
+---
+
+## Goal
+
+A person using the web UI never waits for the scheduler. A button press returns within a second regardless of what the tick is doing, a page renders in under half a second while a tick runs, and the tick itself stays under ten seconds because nothing that takes a minute (a test suite, a rebase with checks) runs inside it.
+
+## Context
+
+Seen by the user on 2026-09-05 at 09:43 and again at 09:55 ("the web page isn't opening", "web is slow again"). Measured: `GET /` took 1 to 18 seconds while a tick ran and 0.4 seconds between ticks; an independent process reading the same files took 0.4 seconds throughout and iowait was zero, so the contention is inside the server process. `Hub.tick()` holds `hub.lock` for the whole tick, and every POST action in `web/actions/*` takes that lock, so a button press waits for the tick to end. Since the merge queue (CG-141) the tick runs the product's full test suite in-process via `subprocess.run` for every pre-merge mechanical rebase (about 55 seconds each), so ticks grew from a few seconds to one or two minutes. The operator's mitigation that day was to turn off the `test` pre-PR check in garden.yaml and rely on GitHub CI, which is the gate the merge queue waits for anyway.
+
+## Design
+
+- Actions do not take a lock shared with the tick. `State.save()` already merges per key under its own file lock (CG-153), and task files are written whole; an action that needs the scheduler builds one, applies the change and saves. If serialising two actions matters, use a short lock around the action only.
+- Checks become run records. A pre-PR check, a base probe or a pre-merge rebase-and-check is dispatched as a `check` (or `rebase`) run with its own directory, started by the tick and reaped on a later tick, exactly like a review; the task shows it on its page and the slot accounting counts it. The tick only starts and reaps.
+- The tick has a budget: it logs its own duration in the tick report and warns when a pass exceeds ten seconds, naming the slowest step.
+- GET pages never build a scheduler for reading if a lighter reader exists; `Site` reads tasks and state directly.
+
+## Acceptance criteria
+
+- [ ] With a tick running a pre-merge rebase and its checks, `POST /tasks/<id>/approve` returns within one second and `GET /` within half a second (a test drives a slow fake check and measures both).
+- [ ] Pre-PR checks, base probes and pre-merge checks are run records reaped by a later tick; no `subprocess.run` of a product check remains inside `tick()`.
+- [ ] The tick report carries the pass duration and the slowest step; a pass over ten seconds logs a warning.
+- [ ] The `test` pre-PR check can be turned back on in garden.yaml without the UI slowing down.
+
