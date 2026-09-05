@@ -1,0 +1,26 @@
+---
+id: CG-244
+title: Operating-profile stops name a tier per harness, and user-facing copy drops task ids
+status: draft
+product: context-garden
+phase: phase-05
+depends_on: []
+priority: 3
+difficulty: easy
+reading: []
+discovered_from: retro:context-garden/phase-04
+created: '2026-09-05T23:05:56+00:00'
+updated: '2026-09-05T23:05:56+00:00'
+---
+
+## Goal
+
+**User value:** a codex-only garden switching stops no longer gets Claude model names, and the Config page reads as a product, not a task list.
+
+**Why now:** economy routes hard-tier work to haiku, which the phase's own cost finding says costs more per task; the Config panel eyebrow reads CG-221 and its retro column is empty.
+
+**Size:** easy. **Depends on:** CG-221 (merged).
+
+## Context
+
+Proposed at the context-garden/phase-04 retro. Three personas raised it and the fix is small.
