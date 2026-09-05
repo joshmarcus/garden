@@ -30,6 +30,7 @@ Asked by the user on 2026-09-05 ("can we make it configurable?") after the opera
 ## Design
 
 - `observe:` in garden.yaml: `interval: 30m`, `digest_window: 30m`, `events: [question, needs_human, failed]` (the kinds `--follow` streams), `stuck_after: 15m`, `line_width: 160`, `phases: open` (or a list). Defaults are those values.
+- **Profiles.** `observe.profiles` names presets and `observe.profile` picks one; built-ins: `quiet` (interval 30m, events question, needs_human, failed; digest 30m), `watch` (interval 10m, plus decision, stall, budget, phase and retro events, review verdicts with changes requested; digest 10m) and `debug` (interval 5m, every transition, dispatch, review and merge; stuck_after 5m). The user's words: "sometimes you want to run efficiently, sometimes you want more observability." `--profile` overrides per invocation, the Config page switches the profile live (the config reload picks it up within a tick), and a running `--follow` switches without a restart.
 - `garden observe` prints one pass and exits (for a scheduler, a cron, or an agent's heartbeat); `garden observe --follow` prints a pass every `interval` and, between passes, one line per configured event as it lands; `--json` emits the same as one object per pass for an agent that parses.
 - The status line is one line; each card is one line with the task id, its kind and the action that clears it (from `inbox.py`'s decision table); a stuck run is one line; the digest is `garden digest`'s summary trimmed to a few lines. Nothing prints when a section is empty.
 - The `garden-operate` skill's first-look block becomes "run `garden observe`", and its stall table stays as the interpretation.
@@ -38,6 +39,7 @@ Asked by the user on 2026-09-05 ("can we make it configurable?") after the opera
 
 - [ ] `garden observe` prints the status line, cards, stuck runs, tracebacks and digest, omitting empty sections; `--json` carries the same fields; a test renders both on a fixture garden with one card and one stuck run.
 - [ ] `garden observe --follow` respects `observe.interval` and streams only `observe.events`; a test feeds three events and sees one line.
+- [ ] The three built-in profiles exist, `observe.profile` and `--profile` select one, a custom profile in `observe.profiles` overrides any field, and switching the profile in the Config page changes a running `--follow` within a tick; a test covers quiet and debug on the same event log.
 - [ ] Every knob has a default and is documented in `docs/architecture.md`; `garden config` (or the Config page) shows the observe block.
 - [ ] `.claude/skills/garden-operate/SKILL.md` points its first look at `garden observe`.
 
