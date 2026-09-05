@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
 last_dispatched_at: '2026-09-04T22:55:32+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-04T23:06:06+00:00'
+updated: '2026-09-05T00:02:19+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-04T23:03:17+00:00 discovered work filed: CG-122
 - 2026-09-04T23:03:53+00:00 opened https://github.com/joshmarcus/context-garden/pull/74 (base main): task_action now catches RuntimeError/GitError/GitHubError and flashes the message on the page instead of 500ing, converts silent precondition no-ops (approve/unapprove/review/answer/accept/reject) into explicit errors that preserve typed text, pre-validates the trial form, and logs unexpected exceptions with a generic on-page message. cost=$4.75
 - 2026-09-04T23:06:06+00:00 automated review: approve — All three acceptance criteria are met with tests; the task_action refactor cleanly converts scheduler errors and stale preconditions into 303 flash messages, preserves typed answers, and logs unexpected errors. Web tests pass and ruff is clean. cost=$0.58
+- 2026-09-05T00:02:19+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve

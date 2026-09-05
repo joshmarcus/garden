@@ -1,7 +1,7 @@
 ---
 id: CG-083
 title: 'A reap is atomic: a restart mid-tick never loses a finished run'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/81
 attempts: 2
 last_dispatched_at: '2026-09-04T23:09:51+00:00'
 created: '2026-09-04T19:25:01+00:00'
-updated: '2026-09-04T23:22:47+00:00'
+updated: '2026-09-05T00:02:18+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ At 19:23 UTC during the first live run, `garden serve` was restarted while a tic
 - 2026-09-04T23:19:07+00:00 discovered work filed: CG-124
 - 2026-09-04T23:19:42+00:00 opened https://github.com/joshmarcus/context-garden/pull/81 (base main): Fixed the pre-PR check failure, which was an unrelated pre-existing test-harness flake (commit-collision between a stacked task's work run and its parent's revise round), not a bug in the atomic-reap changes. Applied the same fix already diagnosed on sibling task CG-064 (unmerged): mix task/run identity into the fake worker's commit message, scope the duplicate-PR assertion to the task's own branch, and add a deterministic regression test. cost=$3.34
 - 2026-09-04T23:22:47+00:00 automated review: approve — Atomic-reap resume is correctly designed (terminal-run + RUNNING-task uniquely flags an interrupted reap; resume is idempotent for PR/discovery/push) and all three acceptance criteria are met with direct tests; full suite and ruff pass. cost=$0.72
+- 2026-09-05T00:02:18+00:00 PR conflicts with main (tests/test_scheduler.py); revise run will rebase and resolve

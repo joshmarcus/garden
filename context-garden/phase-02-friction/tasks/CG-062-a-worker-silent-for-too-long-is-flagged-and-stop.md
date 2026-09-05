@@ -1,7 +1,7 @@
 ---
 id: CG-062
 title: A worker silent for too long is flagged and stopped before the timeout
-status: in_review
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,9 +12,9 @@ reading:
 branch: garden/cg-062-a-worker-silent-for-too-long-is-flagged-and-stop
 pr: https://github.com/joshmarcus/context-garden/pull/66
 attempts: 1
-last_dispatched_at: '2026-09-04T22:41:46+00:00'
+last_dispatched_at: '2026-09-05T00:02:26+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-04T22:51:29+00:00'
+updated: '2026-09-05T00:02:26+00:00'
 ---
 
 ## Goal
@@ -39,3 +39,5 @@ During the first live run a sonnet revise worker for CG-032 sat for 13 minutes w
 - 2026-09-04T22:39:45+00:00 CI failure
 - 2026-09-04T22:41:46+00:00 dispatched revise run 20260904T224146Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~7617 tokens)
 - 2026-09-04T22:51:29+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/66: Fixed the failing CI check. The failure was a pre-existing flake in the shared review-cycle tests: DM-002 stacks on DM-001's open PR and cycles concurrently, shifting DM-001's review cycle by a tick under load and breaking fixed per-tick assertions. Disabled stacking in the two affected tests so they focus on DM-001 deterministically. The branch's idle logic is inert to these tests (its threshold is 20 wall-clock minutes). cost=$2.08
+- 2026-09-05T00:02:11+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+- 2026-09-05T00:02:26+00:00 dispatched revise run 20260905T000226Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~7261 tokens)

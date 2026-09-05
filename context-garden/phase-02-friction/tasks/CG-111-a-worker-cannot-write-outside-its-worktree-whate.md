@@ -1,7 +1,7 @@
 ---
 id: CG-111
 title: A worker cannot write outside its worktree, whatever it is told
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/57
 attempts: 1
 last_dispatched_at: '2026-09-04T22:28:44+00:00'
 created: '2026-09-04T21:28:15+00:00'
-updated: '2026-09-04T22:33:00+00:00'
+updated: '2026-09-05T00:03:38+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ On the first live run, CG-092's worker was asked a question, the person answered
 - 2026-09-04T22:27:58+00:00 triage: changes requested by hand: Two comments narrate the review process instead of the behaviour: src/garden/scheduler.py line 765 and the test docstrin
 - 2026-09-04T22:28:44+00:00 dispatched revise run 20260904T222844Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13433 tokens)
 - 2026-09-04T22:33:00+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Addressed the triage feedback on PR #57: rewrote the two comments that narrated the review process (scheduler _fence_check docstring and a test_fence docstring) to describe the behaviour instead, and took the cheap improvement so transcript attribution also matches paths named relative to the worktree or its parent, with a new test. All 298 tests pass and ruff is clean. cost=$1.27
+- 2026-09-05T00:02:24+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
+- 2026-09-05T00:03:38+00:00 revision counter reset (web)
+- 2026-09-05T00:03:38+00:00 re-enabled by hand; revise run will follow

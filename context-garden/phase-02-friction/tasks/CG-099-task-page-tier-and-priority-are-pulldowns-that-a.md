@@ -1,7 +1,7 @@
 ---
 id: CG-099
 title: 'Task page: tier and priority are pulldowns that apply on change, with priority in words'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/77
 attempts: 1
 last_dispatched_at: '2026-09-04T23:04:28+00:00'
 created: '2026-09-04T21:09:47+00:00'
-updated: '2026-09-04T23:13:01+00:00'
+updated: '2026-09-05T00:02:23+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,4 @@ Asked during the first live run, after CG-071 delivered the two controls. The ti
 - 2026-09-04T23:04:28+00:00 dispatched work run 20260904T230419Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~8387 tokens)
 - 2026-09-04T23:11:44+00:00 opened https://github.com/joshmarcus/context-garden/pull/77 (base main): Task page tier and priority selects now apply on change with no Set button, and priority is a words-first scale (first·0 .. someday·4) defined once in model.py and reused by the CLI, phase table and board tooltip. cost=$3.46
 - 2026-09-04T23:13:01+00:00 automated review: approve — Both task-page controls are now on-change selects with no Set button, priority is a words-first scale defined once in model.py and reused by CLI/phase table, and a test covers rendering order and per-value storage including out-of-scale. All acceptance criteria met; tests and ruff pass. cost=$0.67
+- 2026-09-05T00:02:23+00:00 PR conflicts with main (src/garden/web/templates/task.html); revise run will rebase and resolve

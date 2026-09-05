@@ -1,7 +1,7 @@
 ---
 id: CG-115
 title: Store a short diff summary on run records for attention/triage evidence
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ discovered_from: CG-045
 attempts: 1
 last_dispatched_at: '2026-09-04T23:20:30+00:00'
 created: '2026-09-04T21:56:12+00:00'
-updated: '2026-09-04T23:30:35+00:00'
+updated: '2026-09-05T00:01:06+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Discovered by CG-045 (Attention cards say what the decision is and what each but
 - 2026-09-04T23:20:30+00:00 dispatched work run 20260904T232021Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~7681 tokens)
 - 2026-09-04T23:28:24+00:00 opened https://github.com/joshmarcus/context-garden/pull/84 (base main): Run records now store a `diff_stat` (git diff --stat base...branch) computed once at finalize time in _after_push, and attention-card evidence lines plus triage-row 'why' text surface a compact diff summary reusing the existing (previously unused) gitops.diff_stat helper. cost=$4.37
 - 2026-09-04T23:30:35+00:00 automated review: approve — Adds Run.diff_stat computed once at finalize in _after_push and surfaces it in attention-card evidence and triage rows, reusing the existing gitops.diff_stat helper; keeps build_inbox git-free. All acceptance criteria met and tested (3 new tests pass, ruff clean). cost=$0.48
+- 2026-09-05T00:01:06+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/84

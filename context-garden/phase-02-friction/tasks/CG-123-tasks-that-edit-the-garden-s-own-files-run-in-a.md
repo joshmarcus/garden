@@ -1,7 +1,7 @@
 ---
 id: CG-123
 title: Tasks that edit the garden's own files run in a worktree of the garden repo
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/85
 attempts: 1
 last_dispatched_at: '2026-09-04T23:18:06+00:00'
 created: '2026-09-04T23:13:34+00:00'
-updated: '2026-09-04T23:32:11+00:00'
+updated: '2026-09-05T00:01:09+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Asked during the first live run, after the third such task in one evening. CG-09
 - 2026-09-04T23:18:06+00:00 dispatched work run 20260904T231757Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~11006 tokens)
 - 2026-09-04T23:29:02+00:00 opened https://github.com/joshmarcus/context-garden/pull/85 (base main): A product can point at the garden's own repo with `self: true`; its tasks run in a worktree of the garden repo and open PRs there via the existing URL-product machinery. `garden doctor` shows the self product and refuses a work_dir (or repo) that would put the clone inside the live checkout; the fence resolves a worker's garden worktree to its own garden.yaml while denying the live garden; docs/architecture.md states the rule. Added tests and updated docs. cost=$4.07
 - 2026-09-04T23:32:11+00:00 automated review: approve — Self-product support lands cleanly: a `self: true` product runs its tasks in a worktree of the garden repo via the existing URL/path machinery, with `garden doctor` refusing a work_dir inside the live garden or a repo pointing at it; all four acceptance criteria are met and tested. cost=$0.74
+- 2026-09-05T00:01:09+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/85

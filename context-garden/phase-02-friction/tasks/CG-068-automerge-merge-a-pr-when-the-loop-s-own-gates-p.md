@@ -1,7 +1,7 @@
 ---
 id: CG-068
 title: 'Automerge: merge a PR when the loop''s own gates pass'
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/69
 attempts: 1
 last_dispatched_at: '2026-09-04T22:29:02+00:00'
 created: '2026-09-04T18:39:35+00:00'
-updated: '2026-09-04T22:44:50+00:00'
+updated: '2026-09-04T23:59:42+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Config, under `github:`: `automerge: false` (the switch), `automerge_method: squ
 - 2026-09-04T22:29:02+00:00 dispatched work run 20260904T222853Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8976 tokens)
 - 2026-09-04T22:41:31+00:00 opened https://github.com/joshmarcus/context-garden/pull/69 (base main): Added opt-in github.automerge: the scheduler merges a task's PR once every existing loop gate (approve review, enough rounds, no pending feedback/in-flight run, green checks, MERGEABLE, no human changes-requested, allowed tier, under budget) is green, then lets the poll finish it to done; a failing gate records the reason on the task. Off by default, per-product override, task-level opt-out, README docs, and tests for the merge and each gate. cost=$6.03
 - 2026-09-04T22:44:50+00:00 automated review: approve — Opt-in automerge is correctly gated, off by default, well-tested (15 passing tests covering the merge path and every gate), and cleanly scoped to garden-opened PRs. README and surfacing (task page, inbox, digest) are in place. cost=$0.82
+- 2026-09-04T23:59:42+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/69

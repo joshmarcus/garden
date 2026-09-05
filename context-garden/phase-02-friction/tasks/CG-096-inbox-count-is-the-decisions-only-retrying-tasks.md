@@ -1,7 +1,7 @@
 ---
 id: CG-096
 title: Inbox count is the decisions only; retrying tasks show but do not count
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/76
 attempts: 1
 last_dispatched_at: '2026-09-04T22:56:54+00:00'
 created: '2026-09-04T21:02:13+00:00'
-updated: '2026-09-04T23:09:37+00:00'
+updated: '2026-09-05T00:02:22+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Asked during the first live run. CG-035 added the "Retrying" group so a first fa
 - 2026-09-04T22:56:54+00:00 dispatched work run 20260904T225645Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~11586 tokens)
 - 2026-09-04T23:06:42+00:00 opened https://github.com/joshmarcus/context-garden/pull/76 (base main): Inbox groups now carry a decision/notice kind; the rail badge, "need you" KPI, garden inbox, garden digest and the TUI status bar all count decisions only, while notice groups (retrying, tool upgrade) still render under their own subdued heading with their own count. Added tests covering the split across web, CLI and TUI; full suite and lint pass. cost=$6.96
 - 2026-09-04T23:09:37+00:00 automated review: approve — Cleanly implements the decision/notice split across web badge/KPI, garden inbox, garden digest and the TUI status bar; all three acceptance criteria are met and tested, lint and targeted tests pass. cost=$1.08
+- 2026-09-05T00:02:22+00:00 PR conflicts with main (src/garden/tui/app.py); revise run will rebase and resolve

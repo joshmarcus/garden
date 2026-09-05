@@ -1,7 +1,7 @@
 ---
 id: CG-117
 title: After the last automated review round, the person is told the PR is theirs
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/60
 attempts: 1
 last_dispatched_at: '2026-09-04T22:10:53+00:00'
 created: '2026-09-04T21:56:41+00:00'
-updated: '2026-09-04T22:26:37+00:00'
+updated: '2026-09-04T23:58:32+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,4 @@ Found on the first live run. CG-081 (PR #48) had two automated review rounds, bo
 - 2026-09-04T22:10:53+00:00 dispatched work run 20260904T221044Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5680 tokens)
 - 2026-09-04T22:23:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/60 (base main): Reaching the automated-review cap now logs a line on the task and raises an Inbox/task-page attention card (kind review_cap) with PR link, 'One more automated review', and 'Send back with a note' actions; 'One more automated review' (garden review <id> / Scheduler.review_again) rolls the round counter back one, raising the cap by one round, and dispatches immediately. Added a fake-harness test exercising the full two-round cap-then-grant flow. cost=$7.76
 - 2026-09-04T22:26:37+00:00 automated review: approve — All three acceptance criteria are met with test evidence; the cap now flags a review_cap needs-human card wired through existing CG-045 machinery, and review_again grants exactly one more round. Correct, in-scope, clean description. cost=$0.70
+- 2026-09-04T23:58:32+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/60
