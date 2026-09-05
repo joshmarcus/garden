@@ -2,7 +2,7 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: failed
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,7 +15,7 @@ branch: garden/cg-158-manual-tasks-get-a-revise-path-a-reviewer-that-c
 discovered_from: retro:context-garden/phase-02-friction
 last_dispatched_at: '2026-09-05T13:14:44+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T14:34:00+00:00'
+updated: '2026-09-05T15:10:26+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ From the phase-02 retro's open list (item 13), reconciled against what merged on
 	src/garden/scheduler/review.py
 Please commit your changes or stash them before you merge.
 Aborting
+- 2026-09-05T15:10:26+00:00 reset to ready by hand

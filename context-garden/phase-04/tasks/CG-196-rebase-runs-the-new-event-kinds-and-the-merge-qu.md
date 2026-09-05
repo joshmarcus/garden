@@ -1,7 +1,7 @@
 ---
 id: CG-196
 title: Rebase runs, the new event kinds and the merge queue have a surface
-status: running
+status: waiting_human
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,7 +15,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T15:05:54+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T15:05:54+00:00'
+updated: '2026-09-05T15:10:09+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ Proposed at the context-garden/phase-03 retro. The queue and rebase mode are the
 - 2026-09-05T14:34:02+00:00 dispatched work run 20260905T143402Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4754 tokens)
 - 2026-09-05T14:34:42+00:00 reset to ready by hand
 - 2026-09-05T15:05:54+00:00 dispatched work run 20260905T150554Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4846 tokens)
+- 2026-09-05T15:10:09+00:00 worker says nothing to change: Reviewed the prior attempt's commit (19d3ae0) against the task's three stated criteria and the actual event/state producers in scheduler/rebase.py, scheduler/queue.py, scheduler/poll.py, scheduler/retro.py and cli/scaffold.py — every event kind and field the templates render is emitted with matching names/fields, and dedicated tests (test_timeline_formats_the_new_event_kinds, test_run_page_mechanical_rebase, test_inbox_shows_the_merge_queue) cover each. Full suite (700 passed, 3 skipped) and ruff both pass with a clean working tree, so there is nothing to change. cost=$0.40

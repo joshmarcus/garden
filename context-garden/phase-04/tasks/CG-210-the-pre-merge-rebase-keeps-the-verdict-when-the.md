@@ -2,7 +2,7 @@
 id: CG-210
 title: 'The pre-merge rebase keeps the verdict when the PR''s own patch is unchanged: compare git patch-ids,
   not diff hashes, so a rebase onto a moved main never forces a re-review'
-status: failed
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,7 +16,7 @@ reading:
 branch: garden/cg-210-the-pre-merge-rebase-keeps-the-verdict-when-the
 last_dispatched_at: '2026-09-05T13:02:47+00:00'
 created: '2026-09-05T13:02:16+00:00'
-updated: '2026-09-05T14:34:00+00:00'
+updated: '2026-09-05T15:10:27+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,4 @@ Aborting
 	tests/test_rebase.py
 Please commit your changes or stash them before you merge.
 Aborting
+- 2026-09-05T15:10:27+00:00 reset to ready by hand

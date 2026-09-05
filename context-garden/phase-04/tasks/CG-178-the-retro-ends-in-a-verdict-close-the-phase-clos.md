@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
 last_dispatched_at: '2026-09-05T13:14:42+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T15:10:00+00:00'
+updated: '2026-09-05T15:10:14+00:00'
 ---
 
 ## Goal
@@ -79,3 +79,4 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T14:33:46+00:00 re-enabled by hand; revise run will follow
 - 2026-09-05T14:34:10+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-178`) or send it back (`garden triage CG-178 --changes "..."`)
 - 2026-09-05T15:10:00+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-05T15:10:14+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/cli/planning.py, src/garden/cli/scaffold.py, src/garden/retro.py, src/garden/scheduler/retro.py, src/garden/web/pages/phase.py); a rebase agent will resolve it

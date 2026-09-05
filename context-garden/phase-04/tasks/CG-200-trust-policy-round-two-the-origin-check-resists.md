@@ -2,7 +2,7 @@
 id: CG-200
 title: 'Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product
   PRs need a person or a second round'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/155
 attempts: 2
 last_dispatched_at: '2026-09-05T14:59:37+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T14:59:37+00:00'
+updated: '2026-09-05T15:10:11+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - 2026-09-05T13:14:23+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
 - 2026-09-05T14:33:48+00:00 re-enabled by hand; revise run will follow
 - 2026-09-05T14:59:37+00:00 dispatched revise run 20260905T145937Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5309 tokens)
+- 2026-09-05T15:10:11+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/155: Rebased the PR onto main (resolving conflicts in web/app.py and cli/diagnostics.py from the interim CG-185/serve-logging changes) and fixed a gap the rebase exposed: github.trusted_bots wasn't in config.RESTART_KEYS even though it's baked into the GitHub client at construction like its siblings, so the Config page would have wrongly called it live-reloadable. cost=$1.02
