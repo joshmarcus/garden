@@ -1,7 +1,7 @@
 ---
 id: CG-195
 title: Inbox cards read only the log, and terminal tasks drop needs-you and automerge notes in every view
-status: ready
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,10 +11,12 @@ priority: 3
 difficulty: easy
 reading: []
 branch: garden/cg-195-inbox-cards-read-only-the-log-and-terminal-tasks
+pr: https://github.com/joshmarcus/context-garden/pull/161
 discovered_from: retro:context-garden/phase-03
-last_dispatched_at: '2026-09-05T14:34:02+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T14:59:48+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T14:37:34+00:00'
+updated: '2026-09-05T15:07:07+00:00'
 ---
 
 ## Goal
@@ -39,3 +41,5 @@ Proposed at the context-garden/phase-03 retro. Cheap, visible on every page and 
 - 2026-09-05T14:33:47+00:00 reset to ready by hand
 - 2026-09-05T14:34:02+00:00 dispatched work run 20260905T143402Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4754 tokens)
 - 2026-09-05T14:37:34+00:00 reset to ready by hand
+- 2026-09-05T14:59:48+00:00 dispatched work run 20260905T145948Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4887 tokens)
+- 2026-09-05T15:07:07+00:00 opened https://github.com/joshmarcus/context-garden/pull/161 (base main): Verified the prior attempt's three commits fully implement CG-195: split_log() is the single reader of a task's Log section (used by Inbox, board, task page, phase page) so checklist bullets from Acceptance criteria/Out of scope never surface as log fragments; _transition now clears needs_human/pending_feedback/automerge_blocked on any terminal status (done, cancelled, wont_do), with a one-tick _sweep_terminal_state backstop for pre-existing stale state; and the task page template gates its Continue-the-loop button, pending-feedback panel and automerge note on `not task.status.terminal`. Full suite (703 passed, 3 skipped) and ruff both pass; no code changes were needed this round. cost=$0.57

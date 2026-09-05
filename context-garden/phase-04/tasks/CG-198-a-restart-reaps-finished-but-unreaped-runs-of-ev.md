@@ -2,7 +2,7 @@
 id: CG-198
 title: A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch
   onto a dirty worktree stashes and continues
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/154
 attempts: 2
 last_dispatched_at: '2026-09-05T13:36:27+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T14:34:10+00:00'
+updated: '2026-09-05T15:10:01+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ From the phase-03 persona reviews of 2026-09-05 (product-manager:medium, user:lo
 - 2026-09-05T13:37:32+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
 - 2026-09-05T14:33:48+00:00 re-enabled by hand; revise run will follow
 - 2026-09-05T14:34:10+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-198`) or send it back (`garden triage CG-198 --changes "..."`)
+- 2026-09-05T15:10:01+00:00 nothing to fix; resumed to in review by hand

@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: ready
+status: waiting_human
 product: context-garden
 phase: phase-04
 depends_on:
@@ -18,9 +18,10 @@ reading:
 - src/garden/graph.py
 - src/garden/scheduler/dispatch.py
 branch: garden/cg-163-a-backlog-view-across-phases-sections-per-phase
-last_dispatched_at: '2026-09-05T14:34:01+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T14:59:48+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T14:34:42+00:00'
+updated: '2026-09-05T15:05:35+00:00'
 ---
 
 ## Goal
@@ -58,3 +59,5 @@ Design:
 - 2026-09-05T14:33:46+00:00 reset to ready by hand
 - 2026-09-05T14:34:01+00:00 dispatched work run 20260905T143401Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~15038 tokens)
 - 2026-09-05T14:34:42+00:00 reset to ready by hand
+- 2026-09-05T14:59:48+00:00 dispatched work run 20260905T145948Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16151 tokens)
+- 2026-09-05T15:05:35+00:00 worker says nothing to change: The prior attempt's commits already satisfy the task in full: verified each acceptance criterion against code and tests and found nothing missing or incorrect. cost=$0.60

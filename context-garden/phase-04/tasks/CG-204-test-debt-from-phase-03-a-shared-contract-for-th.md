@@ -2,7 +2,7 @@
 id: CG-204
 title: 'Test debt from phase 03: a shared contract for the two GitHub fakes, real LocalRunner coverage,
   event-based assertions, and the state store''s dict.get snapshot'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,9 +12,10 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-204-test-debt-from-phase-03-a-shared-contract-for-th
-last_dispatched_at: '2026-09-05T14:34:04+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T15:07:31+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T14:34:42+00:00'
+updated: '2026-09-05T15:07:31+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,4 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - 2026-09-05T14:33:49+00:00 reset to ready by hand
 - 2026-09-05T14:34:04+00:00 dispatched work run 20260905T143404Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4888 tokens)
 - 2026-09-05T14:34:42+00:00 reset to ready by hand
+- 2026-09-05T15:07:31+00:00 dispatched work run 20260905T150731Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5032 tokens)

@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 2
 last_dispatched_at: '2026-09-05T13:14:44+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T14:34:10+00:00'
+updated: '2026-09-05T15:10:01+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T13:16:00+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
 - 2026-09-05T14:33:46+00:00 re-enabled by hand; revise run will follow
 - 2026-09-05T14:34:10+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-193`) or send it back (`garden triage CG-193 --changes "..."`)
+- 2026-09-05T15:10:01+00:00 nothing to fix; resumed to in review by hand

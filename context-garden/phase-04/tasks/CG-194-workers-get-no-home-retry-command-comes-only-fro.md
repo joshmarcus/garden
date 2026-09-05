@@ -2,7 +2,7 @@
 id: CG-194
 title: Workers get no HOME, retry_command comes only from config, and the fence hash-checks garden.yaml
   and state.json
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,9 +15,9 @@ branch: garden/cg-194-workers-get-no-home-retry-command-comes-only-fro
 pr: https://github.com/joshmarcus/context-garden/pull/158
 discovered_from: retro:context-garden/phase-03
 attempts: 2
-last_dispatched_at: '2026-09-05T13:16:17+00:00'
+last_dispatched_at: '2026-09-05T14:59:37+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T14:33:47+00:00'
+updated: '2026-09-05T15:07:04+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,5 @@ Proposed at the context-garden/phase-03 retro. Phase 03 claimed trust at the edg
 - 2026-09-05T13:16:17+00:00 dispatched work run 20260905T131617Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4814 tokens)
 - 2026-09-05T13:17:48+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
 - 2026-09-05T14:33:47+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T14:59:37+00:00 dispatched revise run 20260905T145937Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5281 tokens)
+- 2026-09-05T15:07:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/158: Rebased the CG-194 branch onto current main (resolving conflicts in poll.py's automerge gate and architecture.md docs by keeping both this branch's and main's additions), since GitHub reported no open review comments or CI checks — the PR's only outstanding blocker was the merge conflict already flagged in the task log. Full suite (714 passed, 3 skipped) and lint are clean afterward. cost=$0.65

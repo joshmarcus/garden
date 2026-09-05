@@ -2,7 +2,7 @@
 id: CG-201
 title: 'Notify and walkthrough hygiene: GARDEN_MESSAGE is quoted in the documented Slack example, and
   the walkthrough scrubs stderr and absolute paths before it is committed'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,9 +12,10 @@ priority: 3
 difficulty: easy
 reading: []
 branch: garden/cg-201-notify-and-walkthrough-hygiene-garden-message-is
-last_dispatched_at: '2026-09-05T14:34:03+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T15:05:54+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T14:37:34+00:00'
+updated: '2026-09-05T15:05:54+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,4 @@ From the phase-03 persona reviews of 2026-09-05 (security:low, security:low); fi
 - 2026-09-05T14:33:49+00:00 reset to ready by hand
 - 2026-09-05T14:34:03+00:00 dispatched work run 20260905T143403Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4767 tokens)
 - 2026-09-05T14:37:34+00:00 reset to ready by hand
+- 2026-09-05T15:05:54+00:00 dispatched work run 20260905T150554Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4863 tokens)

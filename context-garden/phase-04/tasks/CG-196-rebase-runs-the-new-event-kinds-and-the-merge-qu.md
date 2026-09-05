@@ -1,7 +1,7 @@
 ---
 id: CG-196
 title: Rebase runs, the new event kinds and the merge queue have a surface
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,9 +12,10 @@ difficulty: medium
 reading: []
 branch: garden/cg-196-rebase-runs-the-new-event-kinds-and-the-merge-qu
 discovered_from: retro:context-garden/phase-03
-last_dispatched_at: '2026-09-05T14:34:02+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T15:05:54+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T14:34:42+00:00'
+updated: '2026-09-05T15:05:54+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,4 @@ Proposed at the context-garden/phase-03 retro. The queue and rebase mode are the
 - 2026-09-05T14:33:48+00:00 reset to ready by hand
 - 2026-09-05T14:34:02+00:00 dispatched work run 20260905T143402Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4754 tokens)
 - 2026-09-05T14:34:42+00:00 reset to ready by hand
+- 2026-09-05T15:05:54+00:00 dispatched work run 20260905T150554Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4846 tokens)
