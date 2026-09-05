@@ -1,3 +1,7 @@
+---
+frozen: '2026-09-05'
+---
+
 # phase-04 goals
 
 _Drafted by `garden retro` from context-garden/phase-03 on 2026-09-05, with the owner's decisions added by the operator._

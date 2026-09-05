@@ -2,7 +2,7 @@
 id: CG-234
 title: 'README: what context-garden is now, getting started end to end, operating a running garden, and
   restarting an operator agent session'
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,12 +18,13 @@ reading:
 - examples/garden.work.yaml
 - src/garden/cli/__init__.py
 branch: garden/cg-234-readme-what-context-garden-is-now-getting-starte
+pr: https://github.com/joshmarcus/context-garden/pull/189
 harness: claude
 model: claude-fable-5-1
 attempts: 2
-last_dispatched_at: '2026-09-05T20:50:58+00:00'
+last_dispatched_at: '2026-09-05T21:11:02+00:00'
 created: '2026-09-05T20:40:39+00:00'
-updated: '2026-09-05T20:50:58+00:00'
+updated: '2026-09-05T21:36:23+00:00'
 ---
 
 ## Goal
@@ -61,3 +62,13 @@ The user on 2026-09-05, high priority. The README predates phases 03 and 04: the
 - 2026-09-05T20:44:13+00:00 dispatched work run 20260905T204413Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~13609 tokens)
 - 2026-09-05T20:50:33+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
 - 2026-09-05T20:50:58+00:00 dispatched work run 20260905T205058Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~16211 tokens)
+- 2026-09-05T20:59:50+00:00 also found by CG-234 (README: what context-garden is now, getting started end to end, operating a running garden, and restarting an operator agent session) during run `20260905T205058Z-work`
+- 2026-09-05T21:03:02+00:00 opened https://github.com/joshmarcus/context-garden/pull/189 (base main): README.md rewritten as the front door to the product as it is today: what it is, the loop, getting started in the order the CLI enforces, operating a garden, running it as a systemd user service, restarting an operator agent session against the garden-operate skill, costs and the four skills. A test asserts every garden command, bold page name and relative link in the README exists. cost=$4.08
+- 2026-09-05T21:10:40+00:00 automated review requested changes: README rewrite is thorough and well-verified (commands, pages, ordering, skill correspondence all check out), but it misdescribes merging as an automatic default when the shown config (automerge: false) actually requires a human to merge on GitHub, with a backwards inline comment and no getting-started guidance for that step. cost=$1.09
+- 2026-09-05T21:11:02+00:00 dispatched revise run 20260905T211102Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~18081 tokens)
+- 2026-09-05T21:16:53+00:00 also found by CG-234 (README: what context-garden is now, getting started end to end, operating a running garden, and restarting an operator agent session) during run `20260905T211102Z-revise`
+- 2026-09-05T21:19:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/189: Fixed the README's description of merging: by default a person merges an approved PR on GitHub and the poll marks the task done; the merge queue merges only with github.automerge: true. Intro, loop step 7, the config comment, the getting-started walkthrough and the Inbox card list now match the scheduler. cost=$3.07
+- 2026-09-05T21:25:38+00:00 automated review: approve — README rewrite is accurate, well-scoped to README.md and tests/test_readme.py, and every checked claim (commands, routes, automerge default, skill correspondence) verifies against the code. cost=$0.78
+- 2026-09-05T21:30:17+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T21:33:16+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T21:36:23+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/189

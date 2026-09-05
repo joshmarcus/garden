@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T20:47:36+00:00'
+last_dispatched_at: '2026-09-05T21:18:46+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T21:17:25+00:00'
+updated: '2026-09-05T21:52:49+00:00'
 ---
 
 ## Goal
@@ -89,3 +89,12 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T20:55:12+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T21:05:55+00:00 automated review requested changes: The quota/spend-limit pause mechanism is well-designed and thoroughly tested across work/revise/rebase/resume/review/persona/trial paths, but acceptance criterion 4 (stash name must contain the run id) is not actually met by the shared CG-198 implementation the author points to, and a small unrelated trial-branch-naming change slipped in untested. cost=$2.02
 - 2026-09-05T21:17:25+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-05T21:18:26+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/harness.py); a rebase agent will resolve it
+- 2026-09-05T21:18:46+00:00 dispatched rebase run 20260905T211846Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~10190 tokens)
+- 2026-09-05T21:25:37+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased onto origin/main; resolved the single textual conflict in src/garden/harness.py by combining both sides: kept CG-233's `prices: CODEX_PRICES` entry in the codex harness config alongside this branch's `quota_patterns` entry, and merged the `parse()` method by keeping CG-233's `model` parameter/`missing_price` docstring plus this branch's new `_quota_kind` helper and its quota-aware docstring/env_kind wording. Full test suite (947 passed, 3 skipped) and ruff both pass. cost=$0.33
+- 2026-09-05T21:25:37+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T21:27:12+00:00 description rewritten by the reviewer cost=$1.19
+- 2026-09-05T21:43:53+00:00 nothing to fix; needs-human stop cleared by hand
+- 2026-09-05T21:46:46+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T21:49:43+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T21:52:49+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/168

@@ -2,7 +2,7 @@
 id: CG-233
 title: Every codex run records its model and a cost computed from its usage and a per-model price table,
   so cost per accepted task compares across harnesses
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,10 +16,11 @@ reading:
 - src/garden/config.py
 - context-garden/phase-05/specs/cost-aware-model-routing.md
 branch: garden/cg-233-every-codex-run-records-its-model-and-a-cost-com
+pr: https://github.com/joshmarcus/context-garden/pull/188
 attempts: 1
 last_dispatched_at: '2026-09-05T20:30:45+00:00'
 created: '2026-09-05T20:29:25+00:00'
-updated: '2026-09-05T20:30:45+00:00'
+updated: '2026-09-05T21:13:56+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,8 @@ The user on 2026-09-05, after the CG-225 trials: "let's be sure to apply the abo
 
 - 2026-09-05T20:29:25+00:00 approved (web)
 - 2026-09-05T20:30:45+00:00 dispatched work run 20260905T203030Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~26792 tokens)
+- 2026-09-05T21:01:30+00:00 opened https://github.com/joshmarcus/context-garden/pull/188 (base main): Codex runs now record a confirmed model and a cost_usd computed from turn.completed usage against a per-model price table (harnesses.codex.prices, plus a generic prices: map), with a --backfill command to recompute cost_usd for existing codex runs from their stored transcripts. cost=$6.04
+- 2026-09-05T21:07:29+00:00 automated review: approve — Codex runs now record a confirmed model and cost_usd from a per-model price table with backfill support; all criteria are met, full test suite and lint pass, and the diff is well-scoped. cost=$0.72
+- 2026-09-05T21:07:38+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T21:10:39+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T21:13:56+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/188

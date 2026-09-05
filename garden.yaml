@@ -64,7 +64,7 @@ harnesses:
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
     review_model: ""                 # reviews follow review.difficulty (easy = sonnet 5); fable reviews were judged too expensive (user, 2026-09-05 20:50)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
-    models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-opus-4-8}   # since 2026-09-05 14:50 to cut spend: mediums on sonnet, hard on opus; fable (claude-fable-5-1, CLI >= 2.1.251) is for the retro tier once CG-207 lands
+    models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-fable-5-1   # retro window only (user 2026-09-05: retros on the best model); back to opus-4-8 after}   # since 2026-09-05 14:50 to cut spend: mediums on sonnet, hard on opus; fable (claude-fable-5-1, CLI >= 2.1.251) is for the retro tier once CG-207 lands
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex

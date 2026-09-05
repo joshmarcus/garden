@@ -2,7 +2,7 @@
 id: CG-225
 title: The retro's questions become decision cards through the kickoff's mechanism (re-doing CG-189, whose
   implementation was dropped from CG-178 before merge)
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,9 +21,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/184
 harness: codex
 model: gpt-5.6-terra
 discovered_from: CG-224
-last_dispatched_at: '2026-09-05T19:46:46+00:00'
+last_dispatched_at: '2026-09-05T21:03:30+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T20:10:29+00:00'
+updated: '2026-09-05T21:28:47+00:00'
 ---
 
 ## Goal
@@ -71,3 +71,11 @@ CG-189 was implemented on a branch stacked on CG-178 and its PR #150 was merged 
 - 2026-09-05T19:46:46+00:00 trial started with claude:claude-sonnet-5, codex:gpt-5.6-terra
 - 2026-09-05T20:04:25+00:00 all contenders finished; comparison run started
 - 2026-09-05T20:10:29+00:00 trial won by codex:gpt-5.6-terra (scores: claude:claude-sonnet-5=7, codex:gpt-5.6-terra=9): https://github.com/joshmarcus/context-garden/pull/184
+- 2026-09-05T21:02:57+00:00 automated review requested changes: The shared question/decision mechanism and its retro-side answer recording are implemented correctly and covered by a new fake-harness test, but the pre-existing phase-page Kickoff panel and Inbox 'why' text were not updated to distinguish retro-sourced questions from kickoff ones, so retro questions leak into the Kickoff panel mislabeled as kickoff's. cost=$0.82
+- 2026-09-05T21:03:30+00:00 dispatched revise run 20260905T210329Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~27625 tokens)
+- 2026-09-05T21:13:51+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/184: Retro decision cards are now excluded from the phase Kickoff panel and labeled as retro-originated in the Inbox. Added regression coverage alongside the existing fake-harness retro flow.
+- 2026-09-05T21:13:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-225` for one more round, or review on GitHub
+- 2026-09-05T21:22:38+00:00 automated review: approve — All four acceptance criteria are met and verified by a solid new fake-harness test; two pre-existing, unrelated-file surfaces (TUI messages, a resolve_decision error string) now say "kickoff" for what can also be a retro question, but these are cosmetic nits. cost=$0.73
+- 2026-09-05T21:22:45+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T21:25:37+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T21:28:47+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/184

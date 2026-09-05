@@ -267,3 +267,25 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T203030Z-revise
 
 - Rebasing onto a task (CG-229) whose own commit message assumed CG-212 had already merged ("the convention CG-212 extends with quota") produced not a textual conflict but a design conflict that only showed up as a failing test after a clean rebase — worth flagging for planning so dependent tasks are sequenced rather than merged out of order.
+
+### 2026-09-05 · reported by CG-233 (Every codex run records its model and a cost computed from its usage and a per-model price table, so cost per accepted task compares across harnesses) in run 20260905T203030Z-work
+
+- The brief's reading list didn't include runs.py's RunStore or the ~9 call sites across scheduler/*.py that copy collected usage/cost onto a run record — finding all of them (aux, edits, review x3, retro, trials, plus reap's two) took more exploration than the brief anticipated for what reads as a single-file harness change.
+
+### 2026-09-05 · reported by CG-234 (README: what context-garden is now, getting started end to end, operating a running garden, and restarting an operator agent session) in run 20260905T205058Z-work
+
+- Two earlier attempts left an uncommitted README draft and test in the worktree; the brief's inlined README.md was that draft rather than main's, so the starting point had to be reconstructed with git show main:README.md.
+- The draft README claimed `garden doctor` runs right after install; it needs a garden.yaml, which is only discoverable by reading cli/common.py and config.find_root.
+- The acceptance criterion names `.claude/skills/garden-operate/SKILL.md`, which lives in the garden repo, not this one; the shipped template in src/garden/scaffold.py differs from the garden's copy (heartbeat script vs `garden observe`, systemd vs pgrep restart).
+
+### 2026-09-05 · discovered by CG-234 (README: what context-garden is now, getting started end to end, operating a running garden, and restarting an operator agent session) in run 20260905T211102Z-revise
+
+docs/design.md still lists automatic merging under Non-goals while the opt-in merge queue (github.automerge) exists; the README describes the queue as opt-in, so the two are not contradictory today, but the design doc's non-goal is stale.
+
+### 2026-09-05 · reported by CG-234 (README: what context-garden is now, getting started end to end, operating a running garden, and restarting an operator agent session) in run 20260905T211102Z-revise
+
+- The reading list inlined the README itself (the file under change) but not config.py DEFAULTS or scheduler/poll.py, which is where the merge default actually lives; a README task should point at the config defaults.
+
+### 2026-09-05 · reported by CG-235 (retro.model (or a best tier) names the model retros, persona reviews and trial comparisons run on, independent of the hard tier's price) in run 20260905T211103Z-revise
+
+- The revision-round pre-PR check failed with exit 143 ('Terminated') at ~94% of the suite, but re-running the identical suite twice in this same worktree passed cleanly in ~102s each time; ps aux showed several unrelated concurrent processes (another pytest run, a live garden serve, multiple claude worker subprocesses) on the shared machine at check time, pointing to resource contention rather than a hang in the new code.
