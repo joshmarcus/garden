@@ -12,7 +12,7 @@ Inlined into every agent brief. Keep it short; long-form reasoning lives in the 
 ## Reporting
 - Be precise about what you did, what you verified, and what you did not do.
 - If blocked on a human decision, stop early and ask one precise question rather than guessing.
-- Note friction (missing context, confusing spec, tooling pain) in the PR body under "Friction"; it feeds the next planning round.
+- Note friction (missing context, confusing spec, tooling pain) in the `friction` field of your result, one short item each; it is filed on the phase and never goes in the PR body.
 
 ## Scope
 - Do not widen the task. Follow-ups go in the PR body, not in the diff.

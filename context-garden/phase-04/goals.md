@@ -14,6 +14,8 @@ The features deferred by the phase-02 freeze and what the personas asked for in 
 1. A form to add a task from the web (CG-132).
 2. A retro page per phase with the tasks it generated (CG-146).
 3. The plates content task (CG-030).
+4. One vocabulary and readable help across CLI, web and TUI (CG-156).
+5. Manual-task ergonomics: a revise path and a cost field on finish (CG-158).
 4. What the phase-03 retro adds.
 
 ## Non-goals

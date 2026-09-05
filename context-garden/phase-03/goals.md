@@ -12,7 +12,6 @@ Phase 02 proved the loop runs on itself: 89 tasks done, 94 PRs merged, $547. It 
 4. **Trust at the edges.** PR feedback becomes a worker prompt only from trusted authors; workers run with a scrubbed environment; the web UI sanitises rendered HTML and checks the origin of POSTs.
 5. **Testability.** An in-process runner for scheduler tests so nothing drives a subprocess worker; the walkthrough and the QA agent so the pages are tested, not pictured (CG-134, CG-135).
 6. **Operability.** A config change takes effect without a restart; `notify.command` is configured, documented and tested; every clone gets a git identity (CG-147); the retro waits for its reports (CG-145); briefs are inlined from the target checkout with the fixed brief cost measured per phase.
-7. **One vocabulary.** Retry, resume, decide and the rest named once across CLI, web and TUI; help that reads at 80 columns; `--version`.
 
 ## Non-goals
 
@@ -36,4 +35,4 @@ Measured with `garden metrics` against phase 02's numbers.
 
 ## Carried over from phase 02
 
-Drafts moved here with their "deferred by the freeze" notes: CG-125, CG-134, CG-135, CG-137, CG-139, CG-141, CG-142, CG-143, CG-144, CG-145, CG-147, CG-148. Drafts filed from the retro's open list carry `discovered_from: retro:context-garden/phase-02-friction`. Features moved to phase 04: CG-030, CG-132, CG-146.
+Drafts moved here with their "deferred by the freeze" notes: CG-125, CG-134, CG-135, CG-137, CG-139, CG-141, CG-142, CG-143, CG-144, CG-145, CG-147, CG-148. Drafts filed from the retro's open list carry `discovered_from: retro:context-garden/phase-02-friction`. Features moved to phase 04: CG-030, CG-132, CG-146, CG-156 (vocabulary and help), CG-158 (manual-task ergonomics).
