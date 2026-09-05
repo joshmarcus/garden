@@ -1,7 +1,7 @@
 ---
 id: CG-096
 title: Inbox count is the decisions only; retrying tasks show but do not count
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/76
 attempts: 1
 last_dispatched_at: '2026-09-05T01:46:00+00:00'
 created: '2026-09-04T21:02:13+00:00'
-updated: '2026-09-05T02:05:02+00:00'
+updated: '2026-09-05T02:07:43+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,5 @@ Asked during the first live run. CG-035 added the "Retrying" group so a first fa
 - 2026-09-05T01:49:03+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/76: Rebased CG-096 onto main, resolving the single conflict in src/garden/web/app.py by keeping both main's PRIORITY_SCALE/priority_label import and this branch's decisions import; full test suite and lint pass. cost=$0.79
 - 2026-09-05T01:49:03+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-096` for one more round, or review on GitHub
 - 2026-09-05T02:05:02+00:00 triage: marked ready for review
+- 2026-09-05T02:06:26+00:00 automated review: approve — Cleanly splits Inbox groups into decision/notice via a single GROUP_KIND map; rail badge, need-you KPI, garden inbox, garden digest and TUI status bar all count decisions only, notices still render with their own count. All three acceptance criteria met and tested; lint and tests pass. cost=$0.64
+- 2026-09-05T02:07:43+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/76

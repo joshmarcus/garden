@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/57
 attempts: 1
 last_dispatched_at: '2026-09-05T01:46:00+00:00'
 created: '2026-09-04T21:28:15+00:00'
-updated: '2026-09-05T02:04:58+00:00'
+updated: '2026-09-05T02:09:54+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,4 @@ On the first live run, CG-092's worker was asked a question, the person answered
 - 2026-09-05T01:50:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (friction, omit-body, discover-kinds) and this branch's escape mode and its escaped_path note. All fence commits replayed cleanly; 420 tests pass and ruff is clean. cost=$1.06
 - 2026-09-05T01:50:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-111` for one more round, or review on GitHub
 - 2026-09-05T02:04:58+00:00 triage: marked ready for review
+- 2026-09-05T02:09:54+00:00 automated review: approve — Two-layer worktree fence (harness deny rules + finalize revert) correctly implemented, meets all three acceptance criteria, and is thoroughly tested (420 pass, ruff clean). Only the PR description's Friction section carries process narration; rewritten below. cost=$1.05
