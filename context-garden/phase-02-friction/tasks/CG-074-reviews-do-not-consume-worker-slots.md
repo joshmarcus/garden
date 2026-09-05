@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,9 +13,9 @@ reading:
 branch: garden/cg-074-reviews-do-not-consume-worker-slots
 pr: https://github.com/joshmarcus/context-garden/pull/71
 attempts: 1
-last_dispatched_at: '2026-09-05T00:19:32+00:00'
+last_dispatched_at: '2026-09-05T01:43:24+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-05T01:42:49+00:00'
+updated: '2026-09-05T01:52:20+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 - 2026-09-05T00:29:08+00:00 PR conflicts with main (src/garden/cli.py, src/garden/scheduler.py, src/garden/web/app.py, src/garden/web/templates/inbox.html, tests/test_scheduler.py); revision cap reached; needs a human
 - 2026-09-05T01:42:49+00:00 revision counter reset (web)
 - 2026-09-05T01:42:49+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T01:43:24+00:00 dispatched revise run 20260905T014323Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7021 tokens)
+- 2026-09-05T01:52:20+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/71: Rebased onto main (which moved twice during the session) resolving conflicts in cli.py, scheduler.py, web/app.py, inbox.html and test_scheduler.py, reconciling this branch's worker/review slot split with main's new live max_parallel override; updated one stale test for the new status output format. cost=$3.62
+- 2026-09-05T01:52:20+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-074` for one more round, or review on GitHub

@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,9 +13,9 @@ reading:
 branch: garden/cg-086-web-actions-report-failures-as-messages-never-as
 pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
-last_dispatched_at: '2026-09-05T00:37:12+00:00'
+last_dispatched_at: '2026-09-05T01:45:59+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T01:42:50+00:00'
+updated: '2026-09-05T01:53:21+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-05T00:45:11+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve
 - 2026-09-05T01:42:50+00:00 revision counter reset (web)
 - 2026-09-05T01:42:50+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T01:45:59+00:00 dispatched revise run 20260905T014559Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8735 tokens)
+- 2026-09-05T01:53:21+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Rebased CG-086 onto the latest origin/main and resolved conflicts in app.py and base.html, preserving both the flash-message error handling and main's new trial-contender-picker/list-order features; confirmed review_again is intact for the /review cap-bypass button. cost=$1.55
+- 2026-09-05T01:53:21+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-086` for one more round, or review on GitHub

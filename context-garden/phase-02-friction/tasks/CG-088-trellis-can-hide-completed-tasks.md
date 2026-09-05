@@ -1,7 +1,7 @@
 ---
 id: CG-088
 title: Trellis and phase page can hide completed tasks
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/86
 attempts: 1
 last_dispatched_at: '2026-09-05T00:45:18+00:00'
 created: '2026-09-04T19:48:28+00:00'
-updated: '2026-09-05T01:42:46+00:00'
+updated: '2026-09-05T01:45:58+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,5 @@ Asked during the first live run, when phase 2 had 30 done tasks and 25 open ones
 - 2026-09-05T00:48:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/86: Fixed the phase page's dead localStorage code by wiring base.html to rewrite /phases/ links (rail, herbarium, doc pages) with the remembered hide=done choice, matching the existing trellis rail behavior. Rewrote the PR description to drop rebase narration and accurately state persistence per page. cost=$1.05
 - 2026-09-05T00:48:44+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-088` for one more round, or review on GitHub
 - 2026-09-05T01:42:46+00:00 triage: marked ready for review
+- 2026-09-05T01:44:25+00:00 automated review: approve — All four acceptance criteria are met and tested; hide-done filters the display layer while dependency resolution stays against the full task set, and the phase-page localStorage is now read via base.html link rewriting. Tests and lint pass. cost=$0.66
+- 2026-09-05T01:45:58+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/86

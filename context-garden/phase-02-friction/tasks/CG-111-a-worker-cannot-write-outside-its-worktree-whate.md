@@ -1,7 +1,7 @@
 ---
 id: CG-111
 title: A worker cannot write outside its worktree, whatever it is told
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 branch: garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
 pr: https://github.com/joshmarcus/context-garden/pull/57
 attempts: 1
-last_dispatched_at: '2026-09-05T00:45:18+00:00'
+last_dispatched_at: '2026-09-05T01:46:00+00:00'
 created: '2026-09-04T21:28:15+00:00'
-updated: '2026-09-05T01:42:50+00:00'
+updated: '2026-09-05T01:50:07+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,6 @@ On the first live run, CG-092's worker was asked a question, the person answered
 - 2026-09-05T01:16:50+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
 - 2026-09-05T01:42:50+00:00 revision counter reset (web)
 - 2026-09-05T01:42:50+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T01:46:00+00:00 dispatched revise run 20260905T014600Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14643 tokens)
+- 2026-09-05T01:50:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (friction, omit-body, discover-kinds) and this branch's escape mode and its escaped_path note. All fence commits replayed cleanly; 420 tests pass and ruff is clean. cost=$1.06
+- 2026-09-05T01:50:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-111` for one more round, or review on GitHub

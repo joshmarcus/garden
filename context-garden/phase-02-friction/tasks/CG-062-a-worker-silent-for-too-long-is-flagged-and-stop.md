@@ -1,7 +1,7 @@
 ---
 id: CG-062
 title: A worker silent for too long is flagged and stopped before the timeout
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/66
 attempts: 1
 last_dispatched_at: '2026-09-05T01:16:54+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-05T01:42:44+00:00'
+updated: '2026-09-05T01:53:22+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,5 @@ During the first live run a sonnet revise worker for CG-032 sat for 13 minutes w
 - 2026-09-05T01:21:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/66: Rebased the CG-062 idle-worker-detection branch onto the latest origin/main and resolved the tests/fake_claude.py conflict by merging main's review-rewrite mode with this branch's stall mode. Full suite (401 passed, 3 skipped) and ruff are green; the previously-failing test_set_budget_none_removes_cap now passes because the CG-127 fix is in the rebase base. cost=$0.97
 - 2026-09-05T01:21:09+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-062` for one more round, or review on GitHub
 - 2026-09-05T01:42:44+00:00 triage: marked ready for review
+- 2026-09-05T01:45:39+00:00 automated review: approve — Idle-worker detection meets all three acceptance criteria with sound logic and tests; the only real issue is a PR description carrying a 'Revision round' process-narration section, which I've rewritten. cost=$0.80
+- 2026-09-05T01:53:22+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/66
