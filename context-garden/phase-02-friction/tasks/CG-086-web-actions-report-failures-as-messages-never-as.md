@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
 last_dispatched_at: '2026-09-05T01:45:59+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T02:09:53+00:00'
+updated: '2026-09-05T02:12:18+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,4 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-05T01:53:21+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-086` for one more round, or review on GitHub
 - 2026-09-05T02:05:01+00:00 triage: marked ready for review
 - 2026-09-05T02:09:53+00:00 automated review: approve — All acceptance criteria met with tests; task_action and the phase/global handlers convert scheduler errors and stale preconditions into 303 flash messages, log unexpected errors, and validate the trial form. Full suite (417 passed) and ruff are clean. cost=$0.92
+- 2026-09-05T02:12:18+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/74

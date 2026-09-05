@@ -2,7 +2,7 @@
 id: CG-138
 title: Automerge orders PRs that touch the same file one per cycle instead of letting them rebase against
   each other
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/scheduler.py
 - src/garden/github.py
 created: '2026-09-05T00:47:36+00:00'
-updated: '2026-09-05T00:47:36+00:00'
+updated: '2026-09-05T02:17:27+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Measured at the end of the first live run. Fourteen of thirty reviewed PRs went 
 
 ## Log
 - 2026-09-05T00:48:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T02:17:27+00:00 absorbed into the rebase-mode task (merge queue replaces the one-per-cycle hold)

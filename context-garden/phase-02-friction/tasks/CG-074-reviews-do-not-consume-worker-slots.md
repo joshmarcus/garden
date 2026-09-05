@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/71
 attempts: 1
 last_dispatched_at: '2026-09-05T02:11:15+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-05T02:11:15+00:00'
+updated: '2026-09-05T02:15:39+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,5 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 - 2026-09-05T02:11:05+00:00 automated review: approve — Splits max_parallel into worker vs. review accounting with a queue-and-drain for a full review_parallel; all three acceptance criteria met, 410 tests pass, ruff clean. The retry() slot-squat fix is sound and topical. cost=$1.05
 - 2026-09-05T02:11:08+00:00 PR conflicts with main (src/garden/web/templates/inbox.html); revise run will rebase and resolve
 - 2026-09-05T02:11:15+00:00 dispatched revise run 20260905T021114Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7546 tokens)
+- 2026-09-05T02:15:38+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/71: Rebased onto latest main, resolving conflicts in web/app.py and inbox.html by keeping main's inbox_count/flash additions alongside this branch's workers_running/reviews_running KPI split; full suite (434 passed) and ruff pass. cost=$1.29
+- 2026-09-05T02:15:39+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-074` for one more round, or review on GitHub
