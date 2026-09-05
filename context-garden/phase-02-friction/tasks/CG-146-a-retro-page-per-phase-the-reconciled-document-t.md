@@ -14,8 +14,11 @@ reading:
 - src/garden/web/templates/herbarium.html
 - src/garden/retro.py
 - src/garden/model.py
+branch: garden/cg-146-a-retro-page-per-phase-the-reconciled-document-t
+attempts: 1
+last_dispatched_at: '2026-09-05T03:02:23+00:00'
 created: '2026-09-05T02:49:08+00:00'
-updated: '2026-09-05T02:49:08+00:00'
+updated: '2026-09-05T03:05:29+00:00'
 ---
 
 ## Goal
@@ -34,3 +37,6 @@ Asked at the phase-02 retro on the first live run. Today the pieces exist as fil
 
 ## Log
 - 2026-09-05T02:50:00+00:00 deferred by the feature freeze (2026-09-05): phase 03; the phase-02 retro files are under docs/retro, docs/reviews and docs/friction.md meanwhile
+- 2026-09-05T03:00:43+00:00 approved (web)
+- 2026-09-05T03:02:23+00:00 dispatched work run 20260905T030213Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5737 tokens)
+- 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)

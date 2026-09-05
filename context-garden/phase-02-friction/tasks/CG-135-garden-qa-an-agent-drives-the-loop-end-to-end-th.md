@@ -1,7 +1,7 @@
 ---
 id: CG-135
 title: 'garden qa: an agent drives the loop end to end through the web app on a throwaway garden'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - tests/fake_claude.py
 - tests/conftest.py
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T00:37:32+00:00'
+updated: '2026-09-05T03:01:13+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 
 ## Log
 - 2026-09-05T00:40:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:01:13+00:00 approved (web)

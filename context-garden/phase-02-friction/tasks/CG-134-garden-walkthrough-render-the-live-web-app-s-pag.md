@@ -1,7 +1,7 @@
 ---
 id: CG-134
 title: 'garden walkthrough: render the live web app''s pages for the retro and the persona reviews'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/web/app.py
 - personas/00-index.md
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T00:37:32+00:00'
+updated: '2026-09-05T03:01:10+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Asked at the freeze of the first live run. Persona reviews read code, PR bodies 
 
 ## Log
 - 2026-09-05T00:40:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03; done by hand for this retro
+- 2026-09-05T03:01:10+00:00 approved (web)

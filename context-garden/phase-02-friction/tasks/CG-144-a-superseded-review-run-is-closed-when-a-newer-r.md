@@ -1,7 +1,7 @@
 ---
 id: CG-144
 title: A superseded review run is closed when a newer review starts; no run record outlives its process
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/runs.py
 - tests/test_scheduler.py
 created: '2026-09-05T02:28:49+00:00'
-updated: '2026-09-05T02:28:49+00:00'
+updated: '2026-09-05T03:01:34+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Found on the last PR of the first live run. CG-079 had a review dispatched at 02
 
 ## Log
 - 2026-09-05T02:30:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:01:34+00:00 approved (web)

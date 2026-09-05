@@ -13,8 +13,11 @@ reading:
 - tests/test_scheduler.py
 - tests/fake_claude.py
 - docs/architecture.md
+branch: garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac
+attempts: 1
+last_dispatched_at: '2026-09-05T03:01:55+00:00'
 created: '2026-09-05T00:47:36+00:00'
-updated: '2026-09-05T00:47:36+00:00'
+updated: '2026-09-05T03:05:28+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,6 @@ Measured at the end of the first live run. Of 22 conflict events after 20:00, fo
 
 ## Log
 - 2026-09-05T00:48:00+00:00 deferred by the feature freeze (2026-09-05): first task of phase 03, run alone
+- 2026-09-05T03:01:17+00:00 approved (web)
+- 2026-09-05T03:01:55+00:00 dispatched work run 20260905T030145Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~14688 tokens)
+- 2026-09-05T03:05:28+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)

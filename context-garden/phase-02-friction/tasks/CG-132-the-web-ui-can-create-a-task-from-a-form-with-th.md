@@ -12,8 +12,11 @@ reading:
 - src/garden/web/templates/phase.html
 - src/garden/scaffold.py
 - src/garden/cli.py
+branch: garden/cg-132-the-web-ui-can-create-a-task-from-a-form-with-th
+attempts: 1
+last_dispatched_at: '2026-09-05T03:02:32+00:00'
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T00:34:28+00:00'
+updated: '2026-09-05T03:05:29+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,6 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 ## Log
 
 - 2026-09-05T00:34:28+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:01:07+00:00 approved (web)
+- 2026-09-05T03:02:32+00:00 dispatched work run 20260905T030223Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5932 tokens)
+- 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)

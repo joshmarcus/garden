@@ -1,7 +1,7 @@
 ---
 id: CG-030
 title: 'Plates: label what each plate shows, keep every file public domain, credit Thomé'
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 runner: manual
 created: '2026-09-04T14:36:12+00:00'
-updated: '2026-09-05T00:34:28+00:00'
+updated: '2026-09-05T03:00:56+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,4 @@ Everything involved lives in `PLANTS` (`src/garden/plants.py`), `CANDIDATES` and
 
 - 2026-09-04T17:23:50+00:00 approved (web)
 - 2026-09-05T00:34:28+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:00:56+00:00 approved (web)

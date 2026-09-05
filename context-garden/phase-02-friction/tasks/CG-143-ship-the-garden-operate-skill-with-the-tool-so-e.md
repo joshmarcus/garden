@@ -1,7 +1,7 @@
 ---
 id: CG-143
 title: Ship the garden-operate skill with the tool so every new garden gets it
-status: draft
+status: ready
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - src/garden/scaffold.py
 - README.md
 created: '2026-09-05T02:21:14+00:00'
-updated: '2026-09-05T02:21:14+00:00'
+updated: '2026-09-05T03:01:28+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,4 @@ Written at the end of the first live run from the operator's notes: where the st
 
 ## Log
 - 2026-09-05T02:22:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:01:28+00:00 approved (web)

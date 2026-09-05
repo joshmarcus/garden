@@ -11,8 +11,11 @@ reading:
 - src/garden/retro.py
 - src/garden/cli.py
 - src/garden/scheduler.py
+branch: garden/cg-145-garden-retro-waits-for-the-persona-reports-befor
+attempts: 1
+last_dispatched_at: '2026-09-05T03:02:13+00:00'
 created: '2026-09-05T02:45:40+00:00'
-updated: '2026-09-05T02:45:40+00:00'
+updated: '2026-09-05T03:05:29+00:00'
 ---
 
 ## Goal
@@ -31,3 +34,6 @@ Found on the first use, the phase-02 retro on 2026-09-05. The command dispatched
 
 ## Log
 - 2026-09-05T02:48:00+00:00 deferred by the feature freeze (2026-09-05): worked around with --skip-personas this time
+- 2026-09-05T03:01:37+00:00 approved (web)
+- 2026-09-05T03:02:13+00:00 dispatched work run 20260905T030204Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~3093 tokens)
+- 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
