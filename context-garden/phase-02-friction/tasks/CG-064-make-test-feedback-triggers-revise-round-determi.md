@@ -1,7 +1,7 @@
 ---
 id: CG-064
 title: Make test_feedback_triggers_revise_round deterministic
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-064-make-test-feedback-triggers-revise-round-determi
 pr: https://github.com/joshmarcus/context-garden/pull/64
 attempts: 1
-last_dispatched_at: '2026-09-05T00:07:56+00:00'
+last_dispatched_at: '2026-09-05T00:19:31+00:00'
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-05T00:19:20+00:00'
+updated: '2026-09-05T00:19:31+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 - 2026-09-05T00:12:16+00:00 worker says nothing to change: The failing pre-PR check is an unrelated, pre-existing bug on main (already tracked as CG-127), not caused by or fixable within this diff. Reproduced the identical failure on the exact base commit via a scratch worktree; this branch's own acceptance criteria (deterministic test_feedback_triggers_revise_round, 50/50 local runs, regression test for the real collision cause) are already met from the prior commit. cost=$1.42
 - 2026-09-05T00:19:07+00:00 no-change accepted by the person (accepted: the failing check was CG-127's bug on main, fixed by #89; main is green); resuming the round without a new work run
 - 2026-09-05T00:19:20+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
+- 2026-09-05T00:19:31+00:00 dispatched revise run 20260905T001931Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9054 tokens)

@@ -2,7 +2,7 @@
 id: CG-065
 title: 'Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source
   rows'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-065-plates-and-plants-positional-assignment-invalid
 pr: https://github.com/joshmarcus/context-garden/pull/82
 attempts: 2
-last_dispatched_at: '2026-09-05T00:04:08+00:00'
+last_dispatched_at: '2026-09-05T00:19:31+00:00'
 created: '2026-09-04T18:35:08+00:00'
-updated: '2026-09-05T00:10:17+00:00'
+updated: '2026-09-05T00:19:31+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Five small defects in the plates and plants code, all raised by Codex reviews on
 - 2026-09-05T00:02:14+00:00 PR conflicts with main (src/garden/store.py); revise run will rebase and resolve
 - 2026-09-05T00:04:08+00:00 dispatched revise run 20260905T000408Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8603 tokens)
 - 2026-09-05T00:10:17+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$2.46
+- 2026-09-05T00:19:31+00:00 dispatched revise run 20260905T001931Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9458 tokens)

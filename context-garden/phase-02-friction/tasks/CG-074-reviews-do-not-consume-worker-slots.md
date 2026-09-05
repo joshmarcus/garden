@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,9 +13,9 @@ reading:
 branch: garden/cg-074-reviews-do-not-consume-worker-slots
 pr: https://github.com/joshmarcus/context-garden/pull/71
 attempts: 1
-last_dispatched_at: '2026-09-05T00:04:53+00:00'
+last_dispatched_at: '2026-09-05T00:19:32+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-05T00:15:28+00:00'
+updated: '2026-09-05T00:19:32+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,4 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 - 2026-09-05T00:04:53+00:00 dispatched revise run 20260905T000452Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6753 tokens)
 - 2026-09-05T00:11:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/71: Fixed the pre-PR test failure flagged by review: retry() now kills and closes a task's still-active run before resetting it to ready, so a run that finished but hadn't yet been reaped can't permanently squat a worker slot. All acceptance criteria for the review_parallel split remain met; full suite (351 passed) and ruff pass. cost=$2.44
 - 2026-09-05T00:15:28+00:00 automated review requested changes: All three acceptance criteria are met with passing tests, lint clean, and correct queue/drain logic; the retry() slot-squat fix is sound and topical. Requesting changes only to remove scar tissue from the PR description. cost=$0.85
+- 2026-09-05T00:19:32+00:00 dispatched revise run 20260905T001932Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6487 tokens)
