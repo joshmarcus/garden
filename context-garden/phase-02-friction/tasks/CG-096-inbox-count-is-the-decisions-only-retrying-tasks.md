@@ -1,7 +1,7 @@
 ---
 id: CG-096
 title: Inbox count is the decisions only; retrying tasks show but do not count
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/76
 attempts: 1
 last_dispatched_at: '2026-09-05T00:46:40+00:00'
 created: '2026-09-04T21:02:13+00:00'
-updated: '2026-09-05T00:51:10+00:00'
+updated: '2026-09-05T00:51:25+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Asked during the first live run. CG-035 added the "Retrying" group so a first fa
 - 2026-09-05T00:50:17+00:00 no-change accepted by the person (accepted: code approved, only the description changed); resuming the round without a new work run
 - 2026-09-05T00:51:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/76: Automated review confirmed the implementation is correct and fully meets all acceptance criteria; the only requested change was cosmetic cleanup of the PR description, which I've updated in pr_body (dropping the process-narrating 'Revision' section per feedback).
 - 2026-09-05T00:51:10+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-096` for one more round, or review on GitHub
+- 2026-09-05T00:51:25+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve

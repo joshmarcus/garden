@@ -1,7 +1,7 @@
 ---
 id: CG-129
 title: Automerge merges only into the product's base branch, never into a parent's branch
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - tests/test_automerge.py
 - docs/architecture.md
 branch: garden/cg-129-automerge-merges-only-into-the-product-s-base-br
+pr: https://github.com/joshmarcus/context-garden/pull/91
 attempts: 1
 last_dispatched_at: '2026-09-05T00:45:27+00:00'
 created: '2026-09-05T00:07:15+00:00'
-updated: '2026-09-05T00:45:27+00:00'
+updated: '2026-09-05T00:57:59+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,6 @@ Found in the first minutes of automerge on the first live run. #78 and #87 were 
 ## Log
 
 - 2026-09-05T00:45:27+00:00 dispatched work run 20260905T004518Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8248 tokens)
+- 2026-09-05T00:54:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/91 (base main): Automerge now holds any PR whose base is not the product base branch (a stacked child), with the reason naming the parent; the child automerges once its parent merges and it is restacked onto the base. The restack path first folds in commits that exist only on the remote branch so a rebase round's force-push never discards them. Documented both rules and added gate, end-to-end, and gitops tests. cost=$2.75
+- 2026-09-05T00:56:39+00:00 automated review: approve — Both fixes are correct, well-scoped, and fully tested: automerge now holds any PR whose base isn't the product base (reason names the parent), and the restack path folds in remote-only commits before force-pushing. All acceptance criteria met; tests and lint green. cost=$0.54
+- 2026-09-05T00:57:59+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/91

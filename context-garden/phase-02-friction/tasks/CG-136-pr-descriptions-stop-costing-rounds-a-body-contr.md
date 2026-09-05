@@ -2,7 +2,7 @@
 id: CG-136
 title: 'PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer
   rewrites'
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,10 +15,11 @@ reading:
 - principles/00-index.md
 - src/garden/cli.py
 branch: garden/cg-136-pr-descriptions-stop-costing-rounds-a-body-contr
+pr: https://github.com/joshmarcus/context-garden/pull/93
 attempts: 1
 last_dispatched_at: '2026-09-05T00:50:17+00:00'
 created: '2026-09-05T00:44:27+00:00'
-updated: '2026-09-05T00:50:17+00:00'
+updated: '2026-09-05T01:14:31+00:00'
 ---
 
 ## Goal
@@ -40,3 +41,6 @@ Do four things. (1) In `brief.py`'s result rules, state the contract: `pr_body` 
 ## Log
 
 - 2026-09-05T00:50:17+00:00 dispatched work run 20260905T005008Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8293 tokens)
+- 2026-09-05T01:08:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/93 (base main): A body contract in the brief states that pr_body is the permanent description (process narration goes to pr_comment, friction to a new friction field); the scheduler routes worker friction to a marked comment plus the phase record, tells rebase rounds to drop what the base already has, and applies reviewer description_rewrite directly without spending a round. cost=$9.02
+- 2026-09-05T01:11:51+00:00 automated review: approve — All three acceptance criteria are met with direct test evidence; full suite (379 passed) and ruff are green, scope is tight, and the PR description cleanly follows the very contract it introduces. cost=$1.06
+- 2026-09-05T01:14:31+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/93

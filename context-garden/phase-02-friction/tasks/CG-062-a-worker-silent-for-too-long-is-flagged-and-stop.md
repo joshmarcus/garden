@@ -1,7 +1,7 @@
 ---
 id: CG-062
 title: A worker silent for too long is flagged and stopped before the timeout
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/66
 attempts: 1
 last_dispatched_at: '2026-09-05T00:07:55+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-05T00:20:31+00:00'
+updated: '2026-09-05T01:16:31+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ During the first live run a sonnet revise worker for CG-032 sat for 13 minutes w
 - 2026-09-05T00:19:07+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
 - 2026-09-05T00:20:31+00:00 revision counter reset (web)
 - 2026-09-05T00:20:31+00:00 triage: marked ready for review
+- 2026-09-05T01:16:31+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve

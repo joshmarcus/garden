@@ -1,7 +1,7 @@
 ---
 id: CG-131
 title: A check that fails at the branch's base commit triggers a rebase, not a revise round
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/checks.py
 - src/garden/gitops.py
 branch: garden/cg-131-a-check-that-fails-at-the-branch-s-base-commit-t
+pr: https://github.com/joshmarcus/context-garden/pull/92
 attempts: 1
 last_dispatched_at: '2026-09-05T00:49:59+00:00'
 created: '2026-09-05T00:21:13+00:00'
-updated: '2026-09-05T00:49:59+00:00'
+updated: '2026-09-05T01:10:46+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,6 @@ Found on the first live run. Main was red for twenty minutes (CG-127) and every 
 ## Log
 
 - 2026-09-05T00:49:59+00:00 dispatched work run 20260905T004950Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~7718 tokens)
+- 2026-09-05T01:04:20+00:00 opened https://github.com/joshmarcus/context-garden/pull/92 (base main): A failing pre-PR check now probes the branch's base commit: if it fails there too the loop rebases a moved/green base and re-runs without a worker, or parks the task on a 'base broken' card that names the check and commit — never a revise round on a stale/red base. Accepting a no_change card follows the same path. cost=$4.85
+- 2026-09-05T01:07:32+00:00 automated review: approve — Base-probe on a failing pre-PR check is correct and well-tested: all three acceptance criteria are met with passing tests, scope is tight, and the description is clean and complete. cost=$0.95
+- 2026-09-05T01:10:46+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/92
