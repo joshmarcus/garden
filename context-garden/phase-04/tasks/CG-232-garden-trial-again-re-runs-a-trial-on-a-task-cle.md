@@ -2,7 +2,7 @@
 id: CG-232
 title: 'garden trial --again re-runs a trial on a task cleanly: closes or archives the previous contender
   PRs, clears the task''s cached PR state, and names branches from the task''s base, not the last winner'
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-232-garden-trial-again-re-runs-a-trial-on-a-task-cle
 pr: https://github.com/joshmarcus/context-garden/pull/187
 attempts: 1
-last_dispatched_at: '2026-09-05T19:48:30+00:00'
+last_dispatched_at: '2026-09-05T20:25:55+00:00'
 created: '2026-09-05T19:47:53+00:00'
-updated: '2026-09-05T20:13:29+00:00'
+updated: '2026-09-05T20:25:55+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,8 @@ A trial can be run again on the same task without hand surgery: `garden trial <t
 - 2026-09-05T19:47:54+00:00 approved (web)
 - 2026-09-05T19:48:30+00:00 dispatched work run 20260905T194814Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~9181 tokens)
 - 2026-09-05T20:13:29+00:00 opened https://github.com/joshmarcus/context-garden/pull/187 (base main): garden trial --again now resets a task cleanly: it closes (or, with --keep-prs, leaves open) the previous contenders' PRs, deletes their remote branches, drops their worktrees, and clears the task's cached PR/review state before starting new contenders named from the task's default branch rather than the last winner's; the trials and task pages show every past trial for a task with closed contenders marked. cost=$4.72
+- 2026-09-05T20:18:01+00:00 automated review requested changes: The --again reset itself is correct (verified live: branches renamed from base, PRs closed, state cleared), but the new trial-history view can display a closed PR as still open because closing a previously-open winner's PR during --again is never reflected back into the append-only trials.jsonl record. cost=$0.55
+- 2026-09-05T20:18:21+00:00 dispatched revise run 20260905T201821Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~10700 tokens)
+- 2026-09-05T20:25:34+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/187: Addressed the review's blocking finding: --again's PR closes now reflect back into the already-written trials.jsonl record via a new TrialLog.mark_closed, so trial-history views never show a PR as open after --again has closed it. cost=$0.59
+- 2026-09-05T20:25:39+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/cli/loop.py); a rebase agent will resolve it
+- 2026-09-05T20:25:55+00:00 dispatched rebase run 20260905T202555Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9795 tokens)

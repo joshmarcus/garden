@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T19:12:43+00:00'
+last_dispatched_at: '2026-09-05T20:16:49+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T20:15:23+00:00'
+updated: '2026-09-05T20:28:48+00:00'
 ---
 
 ## Goal
@@ -74,3 +74,7 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T19:55:08+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-212`) or send it back (`garden triage CG-212 --changes "..."`)
 - 2026-09-05T20:15:23+00:00 revision counter reset (web)
 - 2026-09-05T20:15:23+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T20:16:49+00:00 dispatched revise run 20260905T201649Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~21006 tokens)
+- 2026-09-05T20:27:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Fixed the reviewer's blocking finding: a quota env_error during an after-rebase (count_round=False) review round was unconditionally decrementing review_rounds and requeuing as count_round=True, wrongly charging an exempt round against review.max_rounds on retry. Snapshotted count_round on the run so the env_error handler only gives back a round that was actually counted, and requeues with the same exemption. cost=$1.49
+- 2026-09-05T20:27:06+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T20:28:48+00:00 triage: changes requested by hand: CI fails on the PR's merge with main: tests/test_extras.py::test_trial_login_failure_reuses_the_harness_env_classifier (
