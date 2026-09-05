@@ -131,3 +131,32 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 ### 2026-09-05 · reported by CG-204 (Test debt from phase 03: a shared contract for the two GitHub fakes, real LocalRunner coverage, event-based assertions, and the state store's dict.get snapshot) in run 20260905T150731Z-work
 
 - The task's Provenance points at context-garden/phase-03/docs/reviews/ for the staff-engineer findings, but only a product-manager review file exists there now — the staff-engineer reviews referenced in the task weren't recoverable at that path, so completeness of the 'prose assertions named in the review' criterion was judged from the goal text and commit history rather than the original review documents.
+
+### 2026-09-05 · reported by CG-193 (Approve refuses placeholder acceptance criteria and unresolved reading-list paths) in run 20260905T152647Z-revise
+
+- This revision-round brief did not restate the task's '## Acceptance criteria' list (only Goal/Context/Log/Review feedback), so this report verifies against the review feedback items plus the green test suite rather than quoting the original criteria verbatim.
+
+### 2026-09-05 · reported by CG-210 (The pre-merge rebase keeps the verdict when the PR's own patch is unchanged: compare git patch-ids, not diff hashes, so a rebase onto a moved main never forces a re-review) in run 20260905T151445Z-work
+
+- The brief's reading list for docs/architecture.md and the rebase.py/gitops.py inlined excerpts didn't mention that `last_diff_hash` also backs revise-stall detection and the hard-tier scratch-merge marker (checkruns.py, poll.py) — had to trace those separately to avoid regressing them while swapping the rebase-verdict comparison to patch ids.
+
+### 2026-09-05 · reported by CG-178 (The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first) in run 20260905T153644Z-revise
+
+- The brief's reading list didn't mention that the phase_retro route/template exists separately from the phase page, or that a live garden's docs/retro.md only appears after the retro PR merges (tests need a _merge_retro_into_live helper) — both took extra digging to find the right place to wire retro_verdict into the retro page and test it end to end.
+
+### 2026-09-05 · discovered by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T153346Z-work
+
+CG-198 (the dirty-worktree stash task referenced in this brief) does not exist yet in this checkout; since 'stash before dispatch' was one of this task's own acceptance criteria, it's implemented here (src/garden/gitops.py stash_dirty, wired into scheduler/dispatch.py). Whoever plans CG-198 should check it isn't now fully redundant, or narrow its scope to whatever is left (e.g. surfacing stashed work in the UI).
+
+### 2026-09-05 · reported by CG-158 (Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden finish) in run 20260905T153522Z-work
+
+- This task's acceptance criteria were literally 'to be written at planning' — the brief never got the planner's pass promised by the retro item, so I derived concrete, testable criteria from the task's goal sentence and the phase-02 retro/CG-027 pointer instead of stopping for input.
+- The task log shows five prior dispatch attempts (spend limits, and twice a merge conflict against a dirty worktree with leftover changes from a killed prior attempt) before this run — the worktree needed no cleanup this time, but the log entries suggest the reset-to-ready path after a killed run doesn't always leave the worktree clean.
+
+### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T153346Z-work
+
+- The brief's acceptance criteria bundle a harness-level quota pause with a general dirty-worktree stash (marked 'shared with CG-198'), but CG-198 doesn't exist yet in this checkout; I implemented the stash here since it's in this task's own acceptance criteria, but CG-198's scope should be reconciled against it once planned.
+
+### 2026-09-05 · reported by CG-163 (A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase) in run 20260905T154318Z-revise
+
+- The automated review appears to have raced the push: it flagged an issue that the immediately-preceding commit (2696b93, pushed 88s earlier) had already fixed, describing the pre-rebase client() rather than HEAD.
