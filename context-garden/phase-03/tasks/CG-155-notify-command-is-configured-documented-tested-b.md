@@ -2,7 +2,7 @@
 id: CG-155
 title: notify.command is configured, documented, tested by doctor and loud on failure; triage pings fire
   after the review verdict
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T05:22:18+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T05:46:17+00:00'
+updated: '2026-09-05T05:53:27+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ From the phase-02 retro's open list (item 8), reconciled against what merged on 
 - 2026-09-05T05:30:42+00:00 automated review: approve — All four acceptance criteria met with correct, well-tested logic: notify.command is documented in three places, doctor runs it for real and fails on error, failures are logged via garden.notify, and the triage ping is deferred to the review verdict via a persisted one-shot flag. Tests and lint pass. cost=$0.99
 - 2026-09-05T05:45:22+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T05:46:17+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T05:53:27+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/123

@@ -2,7 +2,7 @@
 id: CG-125
 title: Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from
   a clean restart
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -20,7 +20,7 @@ discovered_from: CG-065
 attempts: 1
 last_dispatched_at: '2026-09-05T05:14:38+00:00'
 created: '2026-09-04T23:25:21+00:00'
-updated: '2026-09-05T05:39:46+00:00'
+updated: '2026-09-05T05:50:59+00:00'
 ---
 
 This task's log showed 'no active run found; back to ready' after a prior dispatch, but that prior run had actually committed 3 of 5 fixes plus tests before being interrupted. A fresh worker had to re-derive that state by reading git log/diff rather than it being visible from the task file or brief. Might be worth surfacing partial-completion state (e.g. commits made during an interrupted run) more explicitly so re-dispatched workers don't have to reverse-engineer prior progress.
@@ -49,3 +49,4 @@ Discovered by CG-065 (Plates and plants: positional assignment, invalid --plant,
 - 2026-09-05T05:34:06+00:00 rebased; diff unchanged; verdict kept
 - 2026-09-05T05:38:53+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T05:39:46+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T05:50:59+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/120
