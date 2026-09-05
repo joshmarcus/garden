@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos
 pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
-last_dispatched_at: '2026-09-05T15:10:35+00:00'
+last_dispatched_at: '2026-09-05T15:36:44+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T15:20:53+00:00'
+updated: '2026-09-05T15:36:44+00:00'
 ---
 
 ## Goal
@@ -83,3 +83,5 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T15:10:35+00:00 dispatched rebase run 20260905T151035Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~29577 tokens)
 - 2026-09-05T15:20:53+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Rebased onto origin/main, resolving conflicts in src/garden/cli/planning.py, src/garden/cli/scaffold.py, src/garden/retro.py, src/garden/scheduler/retro.py, src/garden/web/pages/phase.py, and docs/architecture.md (across all 8 commits in the branch, including two CG-189 commits that were already part of this branch's history). Each conflict was resolved by keeping both sides' additions: retro-decide/retro-answer CLI commands alongside main's PANEL_INSIGHT usage panel; close-phase now defers entirely to scheduler.close_phase (which main already had the retro_blocking + open_tasks checks for) plus the no-verdict warning; render_retro_doc's signature merged to carry followups/blocking/next_phase/questions and difficulty/model together; _file_retro_features merged to take both existing_titles (threaded across all filing helpers) and persona_feats; the phase page passes both new_task and retro_verdict context; architecture.md's retro row combined the corrected `retro.difficulty` model tier with the fuller verdict+questions description. Full test suite (721 passed, 3 skipped) and ruff both pass; working tree is clean. cost=$2.09
 - 2026-09-05T15:20:53+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
+- 2026-09-05T15:36:24+00:00 automated review requested changes: Core verdict/filing/close-phase logic is solid and well tested, but the retro page never shows the verdict and the reopen decision (and close notice) are never surfaced in the Inbox or digest, leaving a blocking decision invisible outside the phase page. cost=$1.07
+- 2026-09-05T15:36:44+00:00 dispatched revise run 20260905T153644Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~20915 tokens)

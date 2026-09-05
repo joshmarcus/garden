@@ -1,7 +1,7 @@
 ---
 id: CG-196
 title: Rebase runs, the new event kinds and the merge queue have a surface
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T15:05:54+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T15:32:09+00:00'
+updated: '2026-09-05T15:39:04+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Proposed at the context-garden/phase-03 retro. The queue and rebase mode are the
 - 2026-09-05T15:20:55+00:00 opened https://github.com/joshmarcus/context-garden/pull/165 (base main): The existing commit on this branch already fully implements CG-196: the Timeline formats rebase/merge_head/feedback_ignored/retro_failed/rebased_stale_base/phase_frozen with phase links for task-less events, mechanical rebase runs get a dedicated no-model/no-cost page with diff stat and check result, and the Inbox shows the merge queue head, CI-wait status, candidates, and last drop reason. All tests and lint pass; no gaps found against the brief.
 - 2026-09-05T15:26:23+00:00 automated review: approve — All three criteria are met and independently verified against the actual event/state producers, not just the diff; tests and lint pass. cost=$0.60
 - 2026-09-05T15:32:09+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T15:36:28+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/165
+- 2026-09-05T15:39:04+00:00 automated review could not start: CG-196 is done: #165 was merged at 15:36:28

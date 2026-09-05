@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/155
 attempts: 2
 last_dispatched_at: '2026-09-05T15:21:22+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:30:41+00:00'
+updated: '2026-09-05T15:40:07+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,6 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - 2026-09-05T15:21:22+00:00 dispatched rebase run 20260905T152122Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~17355 tokens)
 - 2026-09-05T15:30:41+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/155: Resolved rebase conflicts in src/garden/web/trust.py and tests/test_web.py (main had independently landed a weaker DNS-rebinding guard via CG-194's loopback-Host check, fff3c9a; kept this branch's stronger bind-address/server_origins design from 22f018c instead), plus doc conflicts in README.md and docs/architecture.md describing the same setting. Also fixed two tests whose Origin/Referer fixtures silently auto-merged to the wrong (main-side) values, and removed a now-superseded test of the discarded loopback-Host mechanism. All 720 tests pass, ruff clean, rebase complete with no remaining conflicts. cost=$1.36
 - 2026-09-05T15:30:41+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-200` for one more round, or review on GitHub
+- 2026-09-05T15:34:59+00:00 automated review: approve — All three acceptance criteria are correctly implemented and tested; origin check, bot-trust opt-in, and self/tool two-round gate all verified against the diff, and the full suite (720 passed, 3 skipped) and ruff pass locally. cost=$0.35
+- 2026-09-05T15:37:52+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T15:40:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-200` for one more round, or review on GitHub

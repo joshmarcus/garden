@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
 last_dispatched_at: '2026-09-05T15:31:00+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T15:31:00+00:00'
+updated: '2026-09-05T15:41:35+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,6 @@ Design:
 - 2026-09-05T15:30:38+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Fixed Scheduler.reorder to renumber order only within the destination priority band (the moved row plus colliding band-mates), instead of the entire phase section; added a regression test proving unrelated-band tasks are left untouched. cost=$0.87
 - 2026-09-05T15:30:42+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/common.py); a rebase agent will resolve it
 - 2026-09-05T15:31:00+00:00 dispatched rebase run 20260905T153100Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~5021 tokens)
+- 2026-09-05T15:40:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Rebased onto origin/main; resolved the textual conflict in src/garden/web/common.py by merging both branches' new imports (Status, dispatch_sort_key, _last_log_line) and keeping the CG-163 backlog_data method and _split_log helper (main's side of that hunk was empty). Rebase completed cleanly. Running the suite afterward surfaced two test failures unrelated to the conflict: main gained a DNS-rebinding Host guard (CG-194) after this branch's last sync, and tests/test_backlog.py's TestClient used the default non-loopback host, so a couple of POSTs with an explicit referer got refused. Fixed by aligning test_backlog.py's client() and referer headers with the same 127.0.0.1 convention test_web.py already uses (a mechanical fix matching an established pattern, not a design decision). Full suite now passes (737 passed, 3 skipped) and ruff is clean. PR description still accurate — main has none of this branch's features yet, so no pr_body change needed. cost=$0.65
+- 2026-09-05T15:40:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
+- 2026-09-05T15:41:35+00:00 automated review requested changes: Core backlog feature (order field, sort key, band-scoped reorder, move refusal wiring) is solid, but two of the new tests fail against the real base branch because the test client doesn't use a loopback base_url like tests/test_web.py's convention requires post-CG-194, contradicting the author's claimed passing suite. cost=$0.78

@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -15,8 +15,11 @@ reading:
 - src/garden/scheduler/budget.py
 - src/garden/inbox.py
 - context-garden/phase-02-friction/tasks/CG-033-an-environment-error-in-a-worker-pauses-dispatch.md
+branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
+attempts: 1
+last_dispatched_at: '2026-09-05T15:33:56+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T15:32:12+00:00'
+updated: '2026-09-05T15:33:56+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 ## Log
 
 - 2026-09-05T15:32:12+00:00 approved (web)
+- 2026-09-05T15:33:56+00:00 dispatched work run 20260905T153346Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~20700 tokens)

@@ -2,7 +2,7 @@
 id: CG-198
 title: A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch
   onto a dirty worktree stashes and continues
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -14,9 +14,9 @@ reading: []
 branch: garden/cg-198-a-restart-reaps-finished-but-unreaped-runs-of-ev
 pr: https://github.com/joshmarcus/context-garden/pull/154
 attempts: 2
-last_dispatched_at: '2026-09-05T15:13:20+00:00'
+last_dispatched_at: '2026-09-05T15:32:23+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:32:04+00:00'
+updated: '2026-09-05T15:42:52+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,9 @@ From the phase-03 persona reviews of 2026-09-05 (product-manager:medium, user:lo
 - 2026-09-05T15:13:20+00:00 dispatched rebase run 20260905T151320Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~7057 tokens)
 - 2026-09-05T15:20:57+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/154: Rebased onto origin/main; resolved the single conflict in src/garden/scheduler/__init__.py by keeping both main's `_guard` helper (CG-203) and this branch's `_reap_all`/`reap_on_start` methods (CG-198), which the rest of the file already called. Full test suite (709 passed) and ruff both pass post-rebase; verified none of the PR's three claims (start-up reap of every mode, dirty-worktree stash, single run_finished emit) were already present in main, so no pr_body change is needed. cost=$0.49
 - 2026-09-05T15:32:04+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py, src/garden/web/templates/task.html); a rebase agent will resolve it
+- 2026-09-05T15:32:23+00:00 dispatched rebase run 20260905T153223Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~12021 tokens)
+- 2026-09-05T15:37:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/154: Rebased onto origin/main. Resolved conflicts in src/garden/scheduler/dispatch.py (kept main's `_sweep_terminal_state` (CG-195) alongside this branch's `_stash_dirty_worktree`, both called elsewhere in the file) and src/garden/web/templates/task.html (kept the new stashed-changes panel, combined with main's newer `and not task.status.terminal` guard on the pending-feedback panel). Full suite (734 passed, 3 skipped) and ruff both pass post-rebase. Verified main doesn't already contain the reap-on-start, dirty-worktree-stash, or single run_finished changes, so no pr_body update is needed. cost=$0.41
+- 2026-09-05T15:37:46+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-198` for one more round, or review on GitHub
+- 2026-09-05T15:37:48+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/task.html); a rebase agent will resolve it
+- 2026-09-05T15:38:53+00:00 automated review: request_changes — The dirty-worktree stash and single run_finished emit are correct and well-tested, but the restart's review-recovery path can duplicate the posted GitHub review comment in exactly the crash scenario the task describes. cost=$1.30
+- 2026-09-05T15:42:52+00:00 nothing to fix; resumed to in review by hand
