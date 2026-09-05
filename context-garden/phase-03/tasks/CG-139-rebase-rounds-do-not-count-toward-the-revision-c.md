@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -11,8 +11,11 @@ difficulty: easy
 reading:
 - src/garden/scheduler.py
 - tests/test_scheduler.py
+branch: garden/cg-139-rebase-rounds-do-not-count-toward-the-revision-c
+attempts: 1
+last_dispatched_at: '2026-09-05T03:57:42+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T03:19:58+00:00'
+updated: '2026-09-05T03:57:42+00:00'
 ---
 
 ## Goal
@@ -39,3 +42,4 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T03:01:20+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:58+00:00 approved (web)
+- 2026-09-05T03:57:42+00:00 dispatched work run 20260905T035733Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~8154 tokens)

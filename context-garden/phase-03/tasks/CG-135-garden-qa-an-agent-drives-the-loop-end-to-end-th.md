@@ -1,7 +1,7 @@
 ---
 id: CG-135
 title: 'garden qa: an agent drives the loop end to end through the web app on a throwaway garden'
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -12,8 +12,11 @@ reading:
 - src/garden/web/app.py
 - tests/fake_claude.py
 - tests/conftest.py
+branch: garden/cg-135-garden-qa-an-agent-drives-the-loop-end-to-end-th
+attempts: 1
+last_dispatched_at: '2026-09-05T03:57:33+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:19:57+00:00'
+updated: '2026-09-05T03:57:33+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 - 2026-09-05T03:01:13+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:57+00:00 approved (web)
+- 2026-09-05T03:57:33+00:00 dispatched work run 20260905T035723Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~7673 tokens)

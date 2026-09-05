@@ -1,7 +1,7 @@
 ---
 id: CG-145
 title: garden retro waits for the persona reports before it dispatches the reconciliation
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -13,10 +13,11 @@ reading:
 - src/garden/cli.py
 - src/garden/scheduler.py
 branch: garden/cg-145-garden-retro-waits-for-the-persona-reports-befor
+pr: https://github.com/joshmarcus/context-garden/pull/98
 attempts: 2
 last_dispatched_at: '2026-09-05T03:37:32+00:00'
 created: '2026-09-05T02:45:40+00:00'
-updated: '2026-09-05T03:42:07+00:00'
+updated: '2026-09-05T03:55:13+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,6 @@ Found on the first use, the phase-02 retro on 2026-09-05. The command dispatched
 - 2026-09-05T03:19:58+00:00 approved (web)
 - 2026-09-05T03:37:32+00:00 dispatched work run 20260905T033731Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac stacked on CG-137, ~6307 tokens)
 - 2026-09-05T03:42:07+00:00 parent CG-137 merged; will rebase onto main when the current run finishes
+- 2026-09-05T03:54:03+00:00 discovered work filed: CG-160
+- 2026-09-05T03:55:07+00:00 opened https://github.com/joshmarcus/context-garden/pull/98 (base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac): Fixed the race where a concurrent tick could dispatch the retro reconciliation before every persona report existed, by gating on reports-on-disk instead of run activity, and surfaced the wait count in garden status, --dry-run, and the phase page. cost=$3.33
+- 2026-09-05T03:55:13+00:00 parent CG-137 merged; rebased onto main and retargeted the PR

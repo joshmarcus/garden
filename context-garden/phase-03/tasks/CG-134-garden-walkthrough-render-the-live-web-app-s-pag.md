@@ -1,7 +1,7 @@
 ---
 id: CG-134
 title: 'garden walkthrough: render the live web app''s pages for the retro and the persona reviews'
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -12,8 +12,11 @@ reading:
 - src/garden/cli.py
 - src/garden/web/app.py
 - personas/designer.md
+branch: garden/cg-134-garden-walkthrough-render-the-live-web-app-s-pag
+attempts: 1
+last_dispatched_at: '2026-09-05T03:57:23+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:19:57+00:00'
+updated: '2026-09-05T03:57:23+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Asked at the freeze of the first live run. Persona reviews read code, PR bodies 
 - 2026-09-05T03:01:10+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:57+00:00 approved (web)
+- 2026-09-05T03:57:23+00:00 dispatched work run 20260905T035715Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4389 tokens)

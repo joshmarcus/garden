@@ -1,7 +1,7 @@
 ---
 id: CG-148
 title: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -14,10 +14,11 @@ reading:
 - src/garden/model.py
 - src/garden/cli.py
 branch: garden/cg-148-a-frozen-or-closed-phase-refuses-approvals-and-d
+pr: https://github.com/joshmarcus/context-garden/pull/99
 attempts: 1
 last_dispatched_at: '2026-09-05T03:37:41+00:00'
 created: '2026-09-05T03:07:37+00:00'
-updated: '2026-09-05T03:42:07+00:00'
+updated: '2026-09-05T03:56:22+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,6 @@ Found at the phase-02 close on the first live run. The freeze was a paragraph in
 - 2026-09-05T03:19:59+00:00 approved (web)
 - 2026-09-05T03:37:41+00:00 dispatched work run 20260905T033732Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac stacked on CG-137, ~6406 tokens)
 - 2026-09-05T03:42:07+00:00 parent CG-137 merged; will rebase onto main when the current run finishes
+- 2026-09-05T03:55:13+00:00 discovered work filed: CG-161
+- 2026-09-05T03:56:18+00:00 opened https://github.com/joshmarcus/context-garden/pull/99 (base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac): Freeze is now phase state (frozen: in goals.md, garden freeze/unfreeze), enforced by a shared phase_refusal() gate that approve, dispatch (CLI, web, and the scheduler's own dispatch()) and discovered-work filing all check; also fixed a pre-existing gap where a closed phase never actually blocked approve or manual dispatch. cost=$4.48
+- 2026-09-05T03:56:22+00:00 parent CG-137 merged; rebased onto main and retargeted the PR
