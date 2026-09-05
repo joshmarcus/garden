@@ -2,7 +2,7 @@
 id: CG-189
 title: 'The retro''s questions for the human are decision cards: answer each in the UI, the answers land
   in the retro document and the next phase''s goals, and the planner reads them'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/150
 attempts: 1
 last_dispatched_at: '2026-09-05T12:32:36+00:00'
 created: '2026-09-05T10:23:11+00:00'
-updated: '2026-09-05T12:56:37+00:00'
+updated: '2026-09-05T13:38:56+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,4 @@ Asked by the user on 2026-09-05 after reading the product manager's phase-03 rep
 - 2026-09-05T12:49:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/150 (base garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos): The retro's questions to the owner are now decision cards: each is filed in state on reap, shown on the Inbox and retro page, and answered via the web, the retro page or `garden retro-answer`. An answer lands under `## Answers` in the retro document and `## Decisions` in the next phase's goals, emits a `retro_answered` event, and reaches the planner brief; a blocking question holds the verdict card until answered. cost=$7.44
 - 2026-09-05T12:49:38+00:00 PR conflicts with garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos; rebased onto garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos mechanically and force-pushed
 - 2026-09-05T12:56:37+00:00 automated review: approve — Retro questions become Inbox/retro-page/CLI decision cards whose answers land in retro.md and the next phase's goals where the planner reads them; acceptance criteria all met with tests, and the fast checks (targeted pytest + ruff) pass. cost=$0.57
+- 2026-09-05T13:38:56+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/150

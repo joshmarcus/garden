@@ -17,8 +17,10 @@ reading:
 - src/garden/web/actions/tasks.py
 - src/garden/graph.py
 - src/garden/scheduler/dispatch.py
+branch: garden/cg-163-a-backlog-view-across-phases-sections-per-phase
+last_dispatched_at: '2026-09-05T13:16:17+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T10:31:20+00:00'
+updated: '2026-09-05T14:33:46+00:00'
 ---
 
 ## Goal
@@ -49,3 +51,8 @@ Design:
 
 - 2026-09-05T10:31:13+00:00 approved (web)
 - 2026-09-05T10:31:20+00:00 priority 2 -> 3 (web)
+- 2026-09-05T13:10:25+00:00 dispatched work run 20260905T131016Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~14651 tokens)
+- 2026-09-05T13:16:00+00:00 attempt 1 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); will retry
+- 2026-09-05T13:16:17+00:00 dispatched work run 20260905T131617Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~14752 tokens)
+- 2026-09-05T13:17:48+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
+- 2026-09-05T14:33:46+00:00 reset to ready by hand

@@ -2,7 +2,7 @@
 id: CG-186
 title: 'Approve says which phase the task joins and offers another: an Approve button with a phase pulldown
   beside it, on the Inbox card and the task page'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/143
 attempts: 1
 last_dispatched_at: '2026-09-05T12:22:48+00:00'
 created: '2026-09-05T10:18:25+00:00'
-updated: '2026-09-05T12:37:58+00:00'
+updated: '2026-09-05T13:09:53+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ Asked by the user on 2026-09-05: "Approve should indicate what phase to add it t
 - 2026-09-05T12:36:39+00:00 rebased; diff unchanged; verdict kept
 - 2026-09-05T12:36:44+00:00 parent CG-162 merged; rebased onto main and retargeted the PR
 - 2026-09-05T12:37:58+00:00 automated review: approve — Cleanly implements the Approve-into-phase control on the Inbox card and task page, reusing CG-162's move with its refusals; all four acceptance criteria are met and tested, full suite and lint pass. cost=$1.14
+- 2026-09-05T13:09:53+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/143

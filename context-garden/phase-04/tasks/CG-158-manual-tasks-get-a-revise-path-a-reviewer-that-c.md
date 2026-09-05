@@ -11,9 +11,11 @@ depends_on:
 priority: 3
 difficulty: medium
 reading: []
+branch: garden/cg-158-manual-tasks-get-a-revise-path-a-reviewer-that-c
 discovered_from: retro:context-garden/phase-02-friction
+last_dispatched_at: '2026-09-05T13:14:44+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T10:31:13+00:00'
+updated: '2026-09-05T14:33:45+00:00'
 ---
 
 ## Goal
@@ -33,3 +35,8 @@ From the phase-02 retro's open list (item 13), reconciled against what merged on
 - 2026-09-05T03:25:00+00:00 moved to phase-04: user-facing work, not structure
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 13)
 - 2026-09-05T10:31:13+00:00 approved (web)
+- 2026-09-05T13:07:16+00:00 dispatched work run 20260905T130707Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4380 tokens)
+- 2026-09-05T13:12:47+00:00 attempt 1 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); will retry
+- 2026-09-05T13:14:44+00:00 dispatched work run 20260905T131444Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4481 tokens)
+- 2026-09-05T13:16:00+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
+- 2026-09-05T14:33:45+00:00 reset to ready by hand

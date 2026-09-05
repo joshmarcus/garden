@@ -2,7 +2,7 @@
 id: CG-190
 title: 'No Set buttons anywhere: every editable value in the web UI applies when the user changes it,
   with a saved mark and an undo'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/146
 attempts: 1
 last_dispatched_at: '2026-09-05T12:45:04+00:00'
 created: '2026-09-05T10:26:48+00:00'
-updated: '2026-09-05T12:59:11+00:00'
+updated: '2026-09-05T13:14:25+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ The user on 2026-09-05: "task for next time: no 'Set' buttons, automatically upd
 - 2026-09-05T12:49:29+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/146: Rebased onto origin/main; resolved the sole conflict in src/garden/web/templates/task.html by keeping main's new 'move to another phase' form (from CG-162, merged after this branch forked) and applying the incoming commit's data-autosave/requestSubmit/saved-mark markup to the difficulty and priority selects. No other files touched. Full test suite (626 passed, 3 skipped) and a grep for stray Set/Apply/Save buttons both pass. cost=$0.24
 - 2026-09-05T12:51:15+00:00 automated review: approve — Every editable value (task tier/priority, config max_parallel, phase budget) applies on change with a saved mark and undo; no Set/Apply/Save buttons remain, enforced by a grep test. Tests and ruff pass. cost=$1.03
 - 2026-09-05T12:59:11+00:00 automated review: approve — Every editable scalar (tier, priority, max_parallel, budget) applies on change with a saved mark and one-press undo; no Set/Apply/Save button remains, enforced by a grep test. Full suite (626 passed, 3 skipped) and ruff pass; change is localized and well-described. cost=$1.13
+- 2026-09-05T13:14:25+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/146

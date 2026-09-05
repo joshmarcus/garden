@@ -2,7 +2,7 @@
 id: CG-203
 title: Every tick phase is wrapped so one failure cannot skip the rest, state is saved on error, and deferred
   reviews are deduplicated
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/151
 attempts: 1
 last_dispatched_at: '2026-09-05T12:50:14+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T13:00:30+00:00'
+updated: '2026-09-05T13:33:28+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,9 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - 2026-09-05T10:31:19+00:00 approved (web)
 - 2026-09-05T12:50:14+00:00 dispatched work run 20260905T125005Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4411 tokens)
 - 2026-09-05T13:00:30+00:00 opened https://github.com/joshmarcus/context-garden/pull/151 (base main): Wrapped dispatch_edits/dispatch_ready in the same tick-phase guard as the rest of the loop, moved state.save() into a finally so an earlier phase's state isn't lost on a later exception, and deduplicated deferred review batches by (kind, name); updated the CG-177 test and added two new tests. cost=$1.36
+- 2026-09-05T13:03:54+00:00 automated review: approve — All three acceptance criteria are met with evidence and tests; full suite (627 passed) and ruff are green. Guard applied uniformly, state saved in a finally, deferred reviews deduped by (kind, name). cost=$0.37
+- 2026-09-05T13:20:47+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T13:24:53+00:00 automated review produced no verdict (worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_messa) cost=$0.00
+- 2026-09-05T13:29:17+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T13:31:55+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T13:33:28+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/151

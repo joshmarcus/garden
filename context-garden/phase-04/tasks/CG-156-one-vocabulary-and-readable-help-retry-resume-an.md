@@ -2,7 +2,7 @@
 id: CG-156
 title: 'One vocabulary and readable help: retry, resume and decide named once; help panels; --version;
   garden status at 80 columns'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,7 +17,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T12:01:53+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T12:57:53+00:00'
+updated: '2026-09-05T13:06:36+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ From the phase-02 retro's open list (item 10), reconciled against what merged on
 - 2026-09-05T12:52:47+00:00 automated review: approve — Delivers the derived CG-156 criteria — one retry label across CLI/web/TUI, help panels, --version matching the subcommand, 80-column status with a wont_do column, and the unpause/resume split — all tested; full CLI/web/TUI suites and ruff pass. cost=$0.84
 - 2026-09-05T12:55:36+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T12:57:53+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-156` for one more round, or review on GitHub
+- 2026-09-05T13:06:36+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/138

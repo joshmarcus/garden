@@ -13,8 +13,10 @@ reading:
 - src/garden/scheduler/reap.py
 - src/garden/gitops.py
 - tests/test_rebase.py
+branch: garden/cg-210-the-pre-merge-rebase-keeps-the-verdict-when-the
+last_dispatched_at: '2026-09-05T13:02:47+00:00'
 created: '2026-09-05T13:02:16+00:00'
-updated: '2026-09-05T13:02:16+00:00'
+updated: '2026-09-05T14:33:49+00:00'
 ---
 
 ## Goal
@@ -35,3 +37,12 @@ Phase 04, 2026-09-05 12:39 to 12:58: with twelve approved, green PRs queued, eve
 ## Log
 
 - 2026-09-05T13:02:16+00:00 approved (web)
+- 2026-09-05T13:02:47+00:00 dispatched work run 20260905T130238Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~18234 tokens)
+- 2026-09-05T13:12:50+00:00 attempt 1 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); will retry
+- 2026-09-05T13:13:12+00:00 dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-210): error: Your local changes to the following files would be overwritten by merge:
+	docs/architecture.md
+	src/garden/scheduler/checkruns.py
+	tests/test_rebase.py
+Please commit your changes or stash them before you merge.
+Aborting
+- 2026-09-05T14:33:49+00:00 reset to ready by hand

@@ -11,8 +11,10 @@ depends_on:
 priority: 3
 difficulty: easy
 reading: []
+branch: garden/cg-201-notify-and-walkthrough-hygiene-garden-message-is
+last_dispatched_at: '2026-09-05T13:18:09+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:31:19+00:00'
+updated: '2026-09-05T14:33:49+00:00'
 ---
 
 ## Goal
@@ -32,3 +34,8 @@ From the phase-03 persona reviews of 2026-09-05 (security:low, security:low); fi
 ## Log
 
 - 2026-09-05T10:31:19+00:00 approved (web)
+- 2026-09-05T13:16:34+00:00 dispatched work run 20260905T131626Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4380 tokens)
+- 2026-09-05T13:17:48+00:00 attempt 1 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); will retry
+- 2026-09-05T13:18:09+00:00 dispatched work run 20260905T131809Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4482 tokens)
+- 2026-09-05T13:19:15+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
+- 2026-09-05T14:33:49+00:00 reset to ready by hand

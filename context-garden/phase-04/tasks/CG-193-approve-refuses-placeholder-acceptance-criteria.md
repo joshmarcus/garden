@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on:
@@ -13,10 +13,10 @@ reading: []
 branch: garden/cg-193-approve-refuses-placeholder-acceptance-criteria
 pr: https://github.com/joshmarcus/context-garden/pull/149
 discovered_from: retro:context-garden/phase-03
-attempts: 1
-last_dispatched_at: '2026-09-05T12:48:06+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-05T13:14:44+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T13:00:27+00:00'
+updated: '2026-09-05T14:33:46+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,9 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T12:52:49+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/149: Resolved the src/garden/inbox.py rebase conflict by merging main's move-to-phase/drop actions for draft tasks (CG-162) with this branch's brief_gaps() check and 'why' annotation; inbox.html merged cleanly. Full test suite (632 passed, 3 skipped) and ruff both clean after rebase. cost=$0.23
 - 2026-09-05T12:56:38+00:00 automated review: approve — Approve now refuses placeholder acceptance criteria and unresolved reading-list paths via a shared brief_gaps() check, and the Inbox card surfaces the gap; all criteria are tested, full suite and ruff are green. cost=$0.53
 - 2026-09-05T13:00:27+00:00 automated review: approve — Approve now refuses placeholder acceptance criteria and unresolved reading-list paths via a shared brief_gaps() check, and the Inbox card surfaces the gap. All three criteria are tested; full suite (632 passed) and ruff are green; description is clean. cost=$0.47
+- 2026-09-05T13:11:34+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/inbox.py); a rebase agent will resolve it
+- 2026-09-05T13:13:11+00:00 dispatched rebase run 20260905T131311Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6768 tokens)
+- 2026-09-05T13:14:19+00:00 attempt 1 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); will retry
+- 2026-09-05T13:14:44+00:00 dispatched work run 20260905T131444Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5054 tokens)
+- 2026-09-05T13:16:00+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
+- 2026-09-05T14:33:46+00:00 re-enabled by hand; revise run will follow

@@ -2,7 +2,7 @@
 id: CG-188
 title: 'A persona can report in its own shape: the review runner keeps the findings block and adds the
   persona''s sections (vision, features, not now, questions), rendered in the report and fed to the retro'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/144
 attempts: 1
 last_dispatched_at: '2026-09-05T12:25:40+00:00'
 created: '2026-09-05T10:22:27+00:00'
-updated: '2026-09-05T12:43:26+00:00'
+updated: '2026-09-05T13:11:32+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,4 @@ On 2026-09-05 the phase-03 retro ran the new product-manager persona (`personas/
 - 2026-09-05T12:25:40+00:00 dispatched work run 20260905T122531Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~19339 tokens)
 - 2026-09-05T12:39:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/144 (base main): A persona file can declare `sections:` in frontmatter; the review runner lists them in the brief, keeps the findings block, asks for the sections in the marker JSON, and renders them in the report. The product-manager built-in declares its five sections, the phase page shows score and feature count, and the retro lifts a persona's structured features into its own list naming the source. cost=$5.10
 - 2026-09-05T12:43:26+00:00 automated review: approve — Persona sections are declared in frontmatter, requested in the brief, kept beside the findings block, rendered in the report, and lifted into the retro's features with the source named. All four acceptance criteria are covered by fake-harness tests; ruff clean and full suite 613 passed / 3 skipped. cost=$0.88
+- 2026-09-05T13:11:32+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/144

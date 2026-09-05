@@ -1,7 +1,7 @@
 ---
 id: CG-191
 title: The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T12:20:04+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T12:39:17+00:00'
+updated: '2026-09-05T13:05:19+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Proposed at the context-garden/phase-03 retro. The queue exists but half the mer
 - 2026-09-05T12:25:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/135: Renamed the two stale self._hold_automerge calls in the scratch-merge reap to _queue_hold (the method CG-202 introduced), fixing the AttributeError that was silently swallowed on both scratch-merge failure paths, and strengthened the failure test to assert the merge is held directly with no swallowed tick error. cost=$0.88
 - 2026-09-05T12:25:14+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-191` for one more round, or review on GitHub
 - 2026-09-05T12:39:17+00:00 automated review: approve — Hard-tier automerge behind github.automerge_hard_tier (default on) with a two-round gate and the garden's own diff-keyed scratch-merge check; all acceptance criteria met and tested, the prior _queue_hold rename bug is fixed on both failure paths, scope is exactly the 7 intended files, tests and lint green. cost=$0.71
+- 2026-09-05T13:05:19+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/135
