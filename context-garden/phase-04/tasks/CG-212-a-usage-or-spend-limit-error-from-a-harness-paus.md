@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,10 +16,11 @@ reading:
 - src/garden/inbox.py
 - context-garden/phase-02-friction/tasks/CG-033-an-environment-error-in-a-worker-pauses-dispatch.md
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
+pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T15:33:56+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T15:33:56+00:00'
+updated: '2026-09-05T15:59:27+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 
 - 2026-09-05T15:32:12+00:00 approved (web)
 - 2026-09-05T15:33:56+00:00 dispatched work run 20260905T153346Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~20700 tokens)
+- 2026-09-05T15:59:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/168 (base main): A quota/spend-limit error from a harness now closes the run without burning an attempt, returns the task to ready, pauses dispatch for that harness with the reason recorded, and resumes automatically once a periodic cheap probe succeeds; a dirty worktree is stashed before any dispatch reuses it. cost=$7.50

@@ -2,7 +2,7 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,11 +12,12 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-158-manual-tasks-get-a-revise-path-a-reviewer-that-c
+pr: https://github.com/joshmarcus/context-garden/pull/167
 discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T15:35:23+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T15:35:23+00:00'
+updated: '2026-09-05T16:00:57+00:00'
 ---
 
 ## Goal
@@ -55,3 +56,5 @@ Please commit your changes or stash them before you merge.
 Aborting
 - 2026-09-05T15:31:55+00:00 reset to ready by hand
 - 2026-09-05T15:35:23+00:00 dispatched work run 20260905T153522Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5044 tokens)
+- 2026-09-05T15:59:23+00:00 opened https://github.com/joshmarcus/context-garden/pull/167 (base main): Manual tasks now get a revise path (the stuck-task audit flags a manual task waiting for a revise round instead of silently assuming the queue will pick it up, and dispatch clears the flag once taken), the automated reviewer now runs on a manual finish that has no local worktree (the common `garden take` flow), and `garden finish --cost` now records a manual round's cost through the same `run.cost_usd` field an automated worker populates. cost=$4.44
+- 2026-09-05T16:00:57+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
