@@ -2,7 +2,7 @@
 id: CG-219
 title: 'garden observe: a configurable operator feed (interval, event kinds, digest window) that prints
   one status line, the cards, stuck runs and a digest, for a person or an operator agent'
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,10 +16,11 @@ reading:
 - .claude/skills/garden-operate/SKILL.md
 - docs/architecture.md
 branch: garden/cg-219-garden-observe-a-configurable-operator-feed-inte
+pr: https://github.com/joshmarcus/context-garden/pull/171
 attempts: 1
 last_dispatched_at: '2026-09-05T16:51:57+00:00'
 created: '2026-09-05T16:48:29+00:00'
-updated: '2026-09-05T16:51:57+00:00'
+updated: '2026-09-05T17:28:13+00:00'
 ---
 
 ## Goal
@@ -52,3 +53,8 @@ Asked by the user on 2026-09-05 ("can we make it configurable?") after the opera
 - 2026-09-05T16:50:09+00:00 dispatched work run 20260905T164954Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~14853 tokens)
 - 2026-09-05T16:50:12+00:00 reset to ready by hand
 - 2026-09-05T16:51:57+00:00 dispatched work run 20260905T165157Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~14904 tokens)
+- 2026-09-05T17:16:45+00:00 opened https://github.com/joshmarcus/context-garden/pull/171 (base main): garden observe (status line, cards, stuck runs, tracebacks, digest, --follow, --json, profiles) is implemented, documented, and wired into the Config page and the garden-operate skill template; I verified it against every acceptance criterion and fixed one gap where observe.line_width was computed but never applied to line rendering, adding a regression test. cost=$4.37
+- 2026-09-05T17:21:18+00:00 automated review: approve — garden observe is implemented per spec — status line, cards, stuck runs, tracebacks, digest, --follow, --json, and three live-switchable profiles — with passing tests, clean ruff, and correct wiring of the garden-operate skill template. Two trivial nits found, neither blocking. cost=$0.74
+- 2026-09-05T17:22:42+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T17:25:07+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T17:28:13+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/171

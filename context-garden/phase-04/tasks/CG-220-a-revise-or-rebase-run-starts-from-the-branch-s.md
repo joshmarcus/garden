@@ -15,10 +15,11 @@ reading:
 - src/garden/gitops.py
 - tests/scheduler/test_dispatch.py
 branch: garden/cg-220-a-revise-or-rebase-run-starts-from-the-branch-s
+pr: https://github.com/joshmarcus/context-garden/pull/172
 attempts: 1
-last_dispatched_at: '2026-09-05T16:50:26+00:00'
+last_dispatched_at: '2026-09-05T17:45:26+00:00'
 created: '2026-09-05T16:49:39+00:00'
-updated: '2026-09-05T16:50:26+00:00'
+updated: '2026-09-05T17:45:26+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,8 @@ Two writers never race on one branch. Before a revise, rebase or resume run star
 
 - 2026-09-05T16:49:39+00:00 approved (web)
 - 2026-09-05T16:50:26+00:00 dispatched work run 20260905T165010Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~23607 tokens)
+- 2026-09-05T17:26:38+00:00 opened https://github.com/joshmarcus/context-garden/pull/172 (base main): Dispatch of a revise/rebase/resume run now syncs the worktree to origin's head first (backing up any local-only commits), pushes after such a run use a lease naming the head they started from with automatic mechanical-rebase recovery on rejection, and the PR-conflict rebase now refuses a task with a worker run in flight (the merge queue and stale-base probe already did, via existing gates). cost=$7.36
+- 2026-09-05T17:33:38+00:00 automated review: approve — All three acceptance criteria are implemented and tested correctly; full suite (783 passed) and ruff are green, and the diff is scoped exactly to the task. cost=$1.22
+- 2026-09-05T17:43:41+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T17:45:06+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
+- 2026-09-05T17:45:26+00:00 dispatched revise run 20260905T174526Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~27192 tokens)

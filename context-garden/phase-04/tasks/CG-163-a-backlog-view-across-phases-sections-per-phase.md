@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
 last_dispatched_at: '2026-09-05T16:46:51+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T16:46:51+00:00'
+updated: '2026-09-05T17:22:36+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,10 @@ Design:
 - 2026-09-05T16:35:49+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
 - 2026-09-05T16:36:57+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
 - 2026-09-05T16:46:51+00:00 dispatched revise run 20260905T164651Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~18300 tokens)
+- 2026-09-05T17:04:43+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Rebased CG-163's backlog view onto the current main (which had moved 27 commits ahead, including CG-193's placeholder-acceptance-criteria gate) and fixed the two backlog tests that gate broke, using the same complete_brief() helper main's own CG-193 rebase fixup established; no functional code changed beyond the prior rounds' fixes. cost=$1.10
+- 2026-09-05T17:04:44+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
+- 2026-09-05T17:06:48+00:00 automated review: approve — All five acceptance criteria are met and verified independently (full suite 737 passed/3 skipped, ruff clean); the backlog view, order/move actions, and Scheduler.reorder's band-scoped renumbering are correct and well-tested. cost=$0.98
+- 2026-09-05T17:16:40+00:00 description rewritten by the reviewer cost=$1.07
+- 2026-09-05T17:16:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T17:19:33+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T17:22:36+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/163

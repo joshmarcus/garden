@@ -2,7 +2,7 @@
 id: CG-221
 title: 'A slider from efficient to fast: named operating profiles that set workers, the tier map, the
   review tier and the observation feed together, switched live from the rail'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,8 +17,11 @@ reading:
 - src/garden/web/templates/base.html
 - src/garden/web/pages/config.py
 - garden.yaml
+branch: garden/cg-221-a-slider-from-efficient-to-fast-named-operating
+attempts: 1
+last_dispatched_at: '2026-09-05T17:47:02+00:00'
 created: '2026-09-05T16:51:03+00:00'
-updated: '2026-09-05T16:51:03+00:00'
+updated: '2026-09-05T17:47:02+00:00'
 ---
 
 ## Goal
@@ -47,3 +50,8 @@ The user on 2026-09-05, after a day that spent $1,100 and then cut the tier map 
 ## Log
 
 - 2026-09-05T16:51:03+00:00 approved (web)
+- 2026-09-05T17:20:10+00:00 dispatched work run 20260905T171954Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-219-garden-observe-a-configurable-operator-feed-inte stacked on CG-219, ~15274 tokens)
+- 2026-09-05T17:28:13+00:00 parent CG-219 merged; will rebase onto main when the current run finishes
+- 2026-09-05T17:46:37+00:00 parent CG-219 merged; rebase onto main conflicts; the next run must resolve it
+- 2026-09-05T17:46:37+00:00 parent CG-219 merged; rebase conflicts; a rebase agent will resolve it cost=$5.98
+- 2026-09-05T17:47:02+00:00 dispatched rebase run 20260905T174702Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~4629 tokens)

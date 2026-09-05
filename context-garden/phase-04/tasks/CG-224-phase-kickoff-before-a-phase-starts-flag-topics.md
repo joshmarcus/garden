@@ -2,7 +2,7 @@
 id: CG-224
 title: 'Phase kickoff: before a phase starts, flag topics that need design, goals without a definition
   of done, questions for the owner, and docs that need attention'
-status: ready
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -15,8 +15,12 @@ reading:
 - src/garden/scheduler/discovered.py
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
+branch: garden/cg-224-phase-kickoff-before-a-phase-starts-flag-topics
+pr: https://github.com/joshmarcus/context-garden/pull/174
+attempts: 1
+last_dispatched_at: '2026-09-05T17:05:21+00:00'
 created: '2026-09-05T17:04:17+00:00'
-updated: '2026-09-05T17:04:17+00:00'
+updated: '2026-09-05T17:46:38+00:00'
 ---
 
 ## Goal
@@ -44,3 +48,6 @@ The user on 2026-09-05: "add a moment before a phase starts to flag topics that 
 ## Log
 
 - 2026-09-05T17:04:17+00:00 approved (web)
+- 2026-09-05T17:05:21+00:00 dispatched work run 20260905T170505Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~25529 tokens)
+- 2026-09-05T17:42:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/174 (base main): Implemented `garden kickoff`: a planner-tier review dispatched before a phase starts that flags design gaps, unmeasurable goals, owner questions, and stale docs, writing docs/kickoff.md and filing spike/doc drafts, question decision cards, and goals.md gaps; wired into approve's warning, garden plan, garden status, the phase page, and the Inbox. cost=$9.58
+- 2026-09-05T17:46:38+00:00 automated review: approve — Kickoff review is implemented end to end (brief, dispatch, reap, filing, approve warning, phase panel) with solid test coverage; all tests and lint pass and the diff stays in scope. cost=$0.98

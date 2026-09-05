@@ -2,7 +2,7 @@
 id: CG-198
 title: A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch
   onto a dirty worktree stashes and continues
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/154
 attempts: 2
 last_dispatched_at: '2026-09-05T16:33:02+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T16:49:33+00:00'
+updated: '2026-09-05T17:35:11+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,7 @@ From the phase-03 persona reviews of 2026-09-05 (product-manager:medium, user:lo
 - 2026-09-05T16:33:02+00:00 dispatched revise run 20260905T163302Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6625 tokens)
 - 2026-09-05T16:49:32+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/154: Fixed the reviewer-flagged bug where a restart's crash-recovery review path could duplicate a posted GitHub comment (and task log/transition/notify) by saving state.json immediately after applying a review verdict, plus a GitHub-side idempotency backstop for the narrower remaining window; added two tests reproducing both windows. cost=$2.04
 - 2026-09-05T16:49:33+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-198` for one more round, or review on GitHub
+- 2026-09-05T17:16:41+00:00 description rewritten by the reviewer cost=$1.00
+- 2026-09-05T17:29:46+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T17:32:05+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T17:35:11+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/154

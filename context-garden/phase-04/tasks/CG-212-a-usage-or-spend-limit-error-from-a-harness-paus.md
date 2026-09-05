@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T16:36:07+00:00'
+last_dispatched_at: '2026-09-05T17:25:29+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T16:48:07+00:00'
+updated: '2026-09-05T17:25:29+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,7 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T16:48:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Fixed the reviewer-flagged bug: a quota env_error during a revise or rebase run now returns the task to changes_requested with its pending feedback (or pending rebase) restored and the round's counter given back, instead of going to ready and losing the open PR's context. cost=$2.19
 - 2026-09-05T16:48:02+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T16:48:07+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py); a rebase agent will resolve it
+- 2026-09-05T17:11:23+00:00 dispatched rebase run 20260905T171123Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~5776 tokens)
+- 2026-09-05T17:16:42+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus onto origin/main; resolved the single conflict in src/garden/scheduler/dispatch.py by keeping both the needs_human pop from main and this branch's early run=self.runs.new_run(...) construction (needed to name the pre-dispatch stash). Full test suite and ruff both pass. cost=$0.23
+- 2026-09-05T17:25:03+00:00 automated review requested changes: Solid work/revise/rebase quota-pause mechanism with good tests, but the pause doesn't reach trial/review/persona dispatch, leaving the task's own cited Codex-trial incident unfixed. cost=$1.44
+- 2026-09-05T17:25:29+00:00 dispatched revise run 20260905T172529Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~17317 tokens)
