@@ -101,18 +101,25 @@ green-but-stale branch (2026-09-05: two such merges a minute apart left main red
 
 ## Restarting the server safely
 
-Never stop the serve background task with the harness's task-stop: it kills the process
-tree and the detached workers with it. Instead:
+The server is a systemd user service (`~/.config/systemd/user/garden-serve.service`, lingering
+on, `KillMode=process` so detached workers survive). Never stop it with the harness's task-stop
+and never start a second `garden serve` by hand: port 8765 is taken and two loops would race.
 
 ```bash
-SERVE=$(pgrep -f "^$PWD/.venv/bin/python3 .venv/bin/garden serve" | head -1)   # anchored: do not match your own shell
-# wait for state.json's mtime to change (the tick just saved), sleep 1.5s, then:
-kill -TERM "$SERVE"
-env -u CLAUDECODE .venv/bin/garden serve > serve.log 2>&1 &    # or the harness's background run
+# wait for .garden/state.json's mtime to change (the tick just saved), sleep 1.5s, then:
+systemctl --user restart garden-serve.service
+systemctl --user is-active garden-serve.service
+journalctl --user -u garden-serve.service --since "5 min ago"   # tracebacks land here
 ```
 
 Then confirm `curl -s -o /dev/null -w %{http_code} http://127.0.0.1:8765/` is 200, the
-first tick's events look sane, and the worker count did not drop.
+first tick's events look sane, and the worker count did not drop. A restart loses any review
+verdict the old process reaped in its last tick (seen twice on 2026-09-05); if a task then says
+"the automated review verdict is not in yet" with a green PR, press `review` once.
+
+If the whole WSL instance stopped (`uptime` is younger than the last tick), the service comes
+back by itself, but killed workers leave uncommitted edits in their worktrees and the next
+dispatch fails with `git merge --ff-only`: `git stash push -u` in that worktree, then `retry`.
 
 ## Moving the pin (the garden runs a pinned install of the tool)
 
@@ -124,7 +131,7 @@ grep -o '"commit_id": "[0-9a-f]\{7\}' .venv/lib/python3*/site-packages/context_g
 ```
 
 Grep the installed package for a symbol from each merged PR you expect, update the pin
-line in the garden's `CLAUDE.md`, then restart as above. Do it when merges have landed that
+line in the garden's `CLAUDE.md`, then restart the service as above. Do it when merges have landed that
 change what the running loop does (sweep, automerge, fence, checks), not for every merge.
 
 ## Cost hygiene
