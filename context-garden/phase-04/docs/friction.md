@@ -46,3 +46,16 @@ No scheduler currently emits a retro_question event, though the CG-208 design li
 ### 2026-09-05 · reported by CG-187 (Every persona finding is kept: each one becomes a draft with its severity as priority, the retro reconciles all of them, and nothing below high is dropped) in run 20260905T115052Z-work
 
 - dispatch_aux records every phase-persona run under the shared aux task id "_persona" rather than a per-phase id, which the retro's findings lookup has to work around; not something this task changed, but worth knowing if a future task wants per-phase run history.
+
+### 2026-09-05 · reported by CG-208 (Browser notifications: an open garden tab notifies through Chrome when a decision appears, with a one-time permission toggle and one notification per tick) in run 20260905T120439Z-revise
+
+- Acceptance criterion asks for a test that drives the notification script with a fake Notification, but there's no JS runtime in the Python/TestClient test harness (playwright optional-extra not installed; garden qa doesn't execute JS), so client JS can only be covered structurally.
+
+### 2026-09-05 · discovered by CG-178 (The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first) in run 20260905T115043Z-work
+
+CG-146 (a retro page per phase) should render the retro verdict record (scheduler.retro_verdict) as a first-class surface, replacing the phase-page panel added here; the record already carries verdict, status, who accepted it, when, and the filed task ids.
+
+### 2026-09-05 · reported by CG-156 (One vocabulary and readable help: retry, resume and decide named once; help panels; --version; garden status at 80 columns) in run 20260905T120144Z-work
+
+- CG-156's acceptance criteria were never written ("to be written at planning"); had to reconstruct the intended scope from the phase-02 retro item and phase-03 goals.md item 6.
+- The retro item bundled several unrelated fixes (vocabulary, help, --version, 80-col status, card copy, priority_label); only the title's four are this task's scope, but the boundary had to be inferred.
