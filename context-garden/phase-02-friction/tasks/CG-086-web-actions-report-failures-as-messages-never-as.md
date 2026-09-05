@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
 last_dispatched_at: '2026-09-05T00:37:12+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T00:43:19+00:00'
+updated: '2026-09-05T00:45:11+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-05T00:37:12+00:00 dispatched revise run 20260905T003711Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8241 tokens)
 - 2026-09-05T00:43:19+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Fixed the blocking review finding: the web /review action had been accidentally changed from sched.review_again(t) to sched.dispatch_review(t) during a prior rebase, breaking the review-cap bypass button. Restored review_again and added a regression test that reproduces the cap-reached scenario via the web endpoint. cost=$2.44
 - 2026-09-05T00:43:19+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-086` for one more round, or review on GitHub
+- 2026-09-05T00:45:11+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve

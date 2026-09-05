@@ -1,7 +1,7 @@
 ---
 id: CG-099
 title: 'Task page: tier and priority are pulldowns that apply on change, with priority in words'
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/77
 attempts: 1
 last_dispatched_at: '2026-09-05T00:41:23+00:00'
 created: '2026-09-04T21:09:47+00:00'
-updated: '2026-09-05T00:41:23+00:00'
+updated: '2026-09-05T00:46:29+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,5 @@ Asked during the first live run, after CG-071 delivered the two controls. The ti
 - 2026-09-04T23:13:01+00:00 automated review: approve — Both task-page controls are now on-change selects with no Set button, priority is a words-first scale defined once in model.py and reused by CLI/phase table, and a test covers rendering order and per-value storage including out-of-scale. All acceptance criteria met; tests and ruff pass. cost=$0.67
 - 2026-09-05T00:02:23+00:00 PR conflicts with main (src/garden/web/templates/task.html); revise run will rebase and resolve
 - 2026-09-05T00:41:23+00:00 dispatched revise run 20260905T004122Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~10408 tokens)
+- 2026-09-05T00:45:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/77: Rebased CG-099 onto current main, resolving the task.html conflict by keeping main's newer 'Latest run' link while preserving the priority_label() call and on-change select markup from this branch; force-push is expected from the runner. cost=$0.89
+- 2026-09-05T00:46:29+00:00 automated review: approve — Both task-page controls are on-change selects with no Set button, priority is a words-first scale centralized in model.py and reused across CLI/phase table/board, and a test covers rendering order, per-value storage, and the out-of-scale case. Tests and ruff pass. cost=$0.62

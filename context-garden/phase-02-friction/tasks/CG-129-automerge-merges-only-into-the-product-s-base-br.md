@@ -1,7 +1,7 @@
 ---
 id: CG-129
 title: Automerge merges only into the product's base branch, never into a parent's branch
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,8 +11,11 @@ reading:
 - src/garden/scheduler.py
 - tests/test_automerge.py
 - docs/architecture.md
+branch: garden/cg-129-automerge-merges-only-into-the-product-s-base-br
+attempts: 1
+last_dispatched_at: '2026-09-05T00:45:27+00:00'
 created: '2026-09-05T00:07:15+00:00'
-updated: '2026-09-05T00:07:15+00:00'
+updated: '2026-09-05T00:45:27+00:00'
 ---
 
 ## Goal
@@ -28,3 +31,7 @@ Found in the first minutes of automerge on the first live run. #78 and #87 were 
 - [ ] a stacked PR with every other gate green is not automerged; the reason names the parent.
 - [ ] after the parent merges and the child is restacked onto main, the child automerges on the next poll.
 - [ ] a rebase round on a branch whose remote has extra commits keeps them; a test seeds a remote-only commit.
+
+## Log
+
+- 2026-09-05T00:45:27+00:00 dispatched work run 20260905T004518Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8248 tokens)

@@ -1,7 +1,7 @@
 ---
 id: CG-111
 title: A worker cannot write outside its worktree, whatever it is told
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 branch: garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
 pr: https://github.com/joshmarcus/context-garden/pull/57
 attempts: 1
-last_dispatched_at: '2026-09-04T22:28:44+00:00'
+last_dispatched_at: '2026-09-05T00:45:18+00:00'
 created: '2026-09-04T21:28:15+00:00'
-updated: '2026-09-05T00:03:38+00:00'
+updated: '2026-09-05T00:45:18+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,4 @@ On the first live run, CG-092's worker was asked a question, the person answered
 - 2026-09-05T00:02:24+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
 - 2026-09-05T00:03:38+00:00 revision counter reset (web)
 - 2026-09-05T00:03:38+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T00:45:18+00:00 dispatched revise run 20260905T004518Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13982 tokens)
