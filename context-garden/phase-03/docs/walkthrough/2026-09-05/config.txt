@@ -1,0 +1,87 @@
+Configuration · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  Configuration
+Dispatch control and the effective config values most often tuned. Most values are read-only here — edit the underlying YAML files to change them — except the pause switch and max_parallel, which can be overridden live.
+
+  Dispatch
+
+  Pause / Resume
+
+  Dispatch is running. Pause it to prevent new work and revise runs from being dispatched on the next tick without restarting the server.
+
+    ⏸ Pause dispatch
+
+  Dispatch
+
+  Parallelism
+
+    garden.yaml: 5
+     · no live override
+
+    Set
+
+  Takes effect on the next tick; running workers are never stopped by lowering it.
+
+  Config files loaded
+
+  Sources
+
+    garden.yaml
+
+  Effective values
+
+  Scheduler & dispatch
+
+    review_parallel3
+
+    auto_dispatchTrue
+
+    auto_reviseTrue
+
+    tick_interval60
+
+    review.enabledTrue
+
+    review.max_rounds2
+
+    review.difficultymedium
+
+    github.draft_prFalse
+
+    stackTrue
+
+  Budgets
+
+  Per phase / product
+
+    context-garden/phase-02-friction$2000.0
+
+    context-garden/phase-03$1000.0 (set at runtime)
+
+    context-garden/phase-04$1000.0 (set at runtime)

@@ -1,0 +1,1082 @@
+Timeline · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+Timeline
+Every transition, run, review and decision, newest first. The digest on the right is what you'd want to know after being away.
+
+  6h24h3d1w
+  300 events · 449 dispatches · $789.76
+
+    Needed you
+09-04T16:58CG-012revise run 20260904T165554Z-revise produced no change to the diff
+09-04T17:08CG-027revise run 20260904T170828Z-revise produced no change to the diff
+09-04T17:32CG-009revise run 20260904T173040Z-revise produced no change to the diff
+09-04T17:37CG-039attempt 2 failed: worker exited 1: worker error: error_max_turns; giving up
+09-04T17:40CG-037attempt 3 failed: no GARDEN_RESULT in worker output (see final.md); giving up
+09-04T17:49CG-046revision failed: worker exited 1: worker error: error_max_turns
+09-04T18:13CG-032revision failed: worker exited 143: worker produced no output
+09-04T18:51CG-009push failed: git push -u origin HEAD:refs/heads/garden/cg-009-stream-json-runner-output-and-live-log-in-the-we (in /home/joshua/garden/.garden/worktrees/CG-009): To https://github.com/joshmarcus/context-garden.git
+ ! [rejected]        HEAD -> garden/cg-009-stream-json-runner-output-and-live-log-in-the-we (non-fast-forward)
+error: failed to push some refs to 'https://github.com/joshmarcus/context-garden.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.77
+09-04T19:32CG-050
+09-04T19:32CG-050PR closed without merging: https://github.com/joshmarcus/context-garden/pull/36
+09-04T19:34CG-082worker blocked: CG-082 depends on the GARDEN_ROOT guard from CG-054, which only exists on the still-open, unmerged PR #35 (branch garden/cg-054-...); main and this branch have no GARDEN_ROOT handling in find_root() at all, so there is nothing to separate yet. cost=$1.04
+09-04T20:26
+09-04T21:05CG-091worker blocked: State.save() atomicity fix (commit 6937f02) is correct and complete; pytest (220 passed) and ruff are clean when run without the poisoned GARDEN_ROOT. The pre-PR check failure is unrelated to this diff: it's caused by the orchestrating garden's checks.pre_pr command for this product still referencing $GARDEN_ROOT for the venv path, which CG-082 made a guaranteed-nonexistent sentinel for check subprocesses. cost=$1.96
+09-04T21:11CG-061revision failed: no GARDEN_RESULT in worker output (see final.md)
+09-04T21:13CG-092This task's edits belong in the joshmarcus/garden repo (garden.yaml checks.pre_pr, context-garden/product.md), not in this context-garden tool checkout, and it also depends on CG-081's setup-block feature which is still an unmerged branch. Should this task be re-dispatched against a proper checkout/worktree of the garden repo (after CG-081 merges), rather than as a context-garden task?
+09-04T21:13CG-092worker asks: This task's edits belong in the joshmarcus/garden repo (garden.yaml checks.pre_pr, context-garden/product.md), not in this context-garden tool checkout, and it also depends on CG-081's setup-block feature which is still an unmerged branch. Should this task be re-dispatched against a proper checkout/worktree of the garden repo (after CG-081 merges), rather than as a context-garden task? cost=$0.96
+09-04T23:13CG-029This task edits garden-repo content (context-garden/phase-02-friction/docs/friction.md and a new context-garden/phase-03/ via `garden new-phase`, plus a `garden metrics` table), but I'm running in the context-garden tool repo worktree where none of that exists and where garden commands are disabled. Should CG-029 be re-dispatched against the garden repo (joshmarcus/garden) instead, or do you want me to author the finished friction document and phase-03 goals as new files inside this tool repo (and if so, under what paths, given there is no context-garden/ directory here)?
+09-04T23:13CG-029worker asks: This task edits garden-repo content (context-garden/phase-02-friction/docs/friction.md and a new context-garden/phase-03/ via `garden new-phase`, plus a `garden metrics` table), but I'm running in the context-garden tool repo worktree where none of that exists and where garden commands are disabled. Should CG-029 be re-dispatched against the garden repo (joshmarcus/garden) instead, or do you want me to author the finished friction document and phase-03 goals as new files inside this tool repo (and if so, under what paths, given there is no context-garden/ directory here)? cost=$0.64
+09-04T23:35CG-121worker blocked: CG-121 asks to guard garden plan/import_plan and friction draft-task creation the same way CG-078 guards new-task, but CG-078 (Phase.closed, store.set_phase_closed, close-phase/reopen-phase, the new-task guard) is not merged to main yet — its PR #73 is still open — so none of the APIs this task needs to build on exist in the checkout. cost=$2.78
+09-05T00:02CG-111PR conflicts with main and 3 revision rounds already used
+09-05T00:12CG-064The failing pre-PR check is an unrelated, pre-existing bug on main (already tracked as CG-127), not caused by or fixable within this diff. Reproduced the identical failure on the exact base commit via a scratch worktree; this branch's own acceptance criteria (deterministic test_feedback_triggers_revise_round, 50/50 local runs, regression test for the real collision cause) are already met from the prior commit.
+09-05T00:12CG-064worker says nothing to change: The failing pre-PR check is an unrelated, pre-existing bug on main (already tracked as CG-127), not caused by or fixable within this diff. Reproduced the identical failure on the exact base commit via a scratch worktree; this branch's own acceptance criteria (deterministic test_feedback_triggers_revise_round, 50/50 local runs, regression test for the real collision cause) are already met from the prior commit. cost=$1.42
+09-05T00:18CG-062The failing check is not produced by this branch's diff: it fails identically at the base commit with all of this branch's src/ and test changes reverted, and the branch's idle logic is inert to it (20-minute threshold vs sub-second test). retry() resets a running task to ready but leaves its finished run marked 'running', leaking a max_parallel slot so the next tick dispatches 0; this became visible only after CG-116 (ec93789) correctly scoped reap_orphaned to verdict runs. This exact failure is already tracked by CG-127 (worktree 'test-set-budget-none-removes-cap-fails-on-main') and CG-128, so fixing it here would duplicate tracked work and widen scope. The one-line fix: in retry(), before resetting to READY, close any still-'running' run of the task (kill() + status 'superseded' + save), mirroring cancel(); I verified this makes the test and the full suite pass (356 passed).
+09-05T00:18CG-062worker says nothing to change: The failing check is not produced by this branch's diff: it fails identically at the base commit with all of this branch's src/ and test changes reverted, and the branch's idle logic is inert to it (20-minute threshold vs sub-second test). retry() resets a running task to ready but leaves its finished run marked 'running', leaking a max_parallel slot so the next tick dispatches 0; this became visible only after CG-116 (ec93789) correctly scoped reap_orphaned to verdict runs. This exact failure is already tracked by CG-127 (worktree 'test-set-budget-none-removes-cap-fails-on-main') and CG-128, so fixing it here would duplicate tracked work and widen scope. The one-line fix: in retry(), before resetting to READY, close any still-'running' run of the task (kill() + status 'superseded' + save), mirroring cancel(); I verified this makes the test and the full suite pass (356 passed). cost=$3.35
+09-05T00:19CG-062pre-PR checks failed (test) and 3 revision rounds already used
+09-05T00:22CG-0742 automated review round(s) used; this PR is yours
+09-05T00:24CG-064push failed: git push -u origin HEAD:refs/heads/garden/cg-064-make-test-feedback-triggers-revise-round-determi (in /home/joshua/work/worktrees/CG-064): To https://github.com/joshmarcus/context-garden.git
+ ! [rejected]        HEAD -> garden/cg-064-make-test-feedback-triggers-revise-round-determi (non-fast-forward)
+error: failed to push some refs to 'https://github.com/joshmarcus/context-garden.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.12
+09-05T00:29CG-074PR conflicts with main and 3 revision rounds already used
+09-05T00:32CG-0652 automated review round(s) used; this PR is yours
+09-05T00:33CG-0792 automated review round(s) used; this PR is yours
+09-05T00:41CG-0832 automated review round(s) used; this PR is yours
+09-05T00:43CG-0862 automated review round(s) used; this PR is yours
+09-05T00:48CG-0882 automated review round(s) used; this PR is yours
+09-05T00:48CG-096The code was already approved as correct, focused, and fully tested by the automated reviewer; the only outstanding item was rewriting the PR description to remove the rebase/revision narration, which doesn't require a code change. Full test suite (373 passed, 3 skipped) and ruff lint pass.
+09-05T00:48CG-096worker says nothing to change: The code was already approved as correct, focused, and fully tested by the automated reviewer; the only outstanding item was rewriting the PR description to remove the rebase/revision narration, which doesn't require a code change. Full test suite (373 passed, 3 skipped) and ruff lint pass. cost=$0.39
+09-05T00:49CG-1112 automated review round(s) used; this PR is yours
+09-05T00:51CG-0962 automated review round(s) used; this PR is yours
+09-05T01:19CG-079PR conflicts with main and 3 revision rounds already used
+09-05T01:21CG-0622 automated review round(s) used; this PR is yours
+09-05T01:22CG-1092 automated review round(s) used; this PR is yours
+09-05T01:26CG-0792 automated review round(s) used; this PR is yours
+09-05T01:48CG-0792 automated review round(s) used; this PR is yours
+09-05T01:49CG-0962 automated review round(s) used; this PR is yours
+09-05T01:50CG-1112 automated review round(s) used; this PR is yours
+09-05T01:52CG-0742 automated review round(s) used; this PR is yours
+09-05T01:53CG-0862 automated review round(s) used; this PR is yours
+09-05T01:57CG-0832 automated review round(s) used; this PR is yours
+09-05T02:09CG-0792 automated review round(s) used; this PR is yours
+09-05T02:15CG-0742 automated review round(s) used; this PR is yours
+09-05T02:17CG-0792 automated review round(s) used; this PR is yours
+09-05T04:08CG-148base branch `main` is itself broken — pre-PR check(s) test, lint fail at its own commit 55a935290123, not because of this branch
+09-05T04:10CG-154base branch `main` is itself broken — pre-PR check(s) test, lint fail at its own commit 55a935290123, not because of this branch
+09-05T04:29CG-161
+09-05T04:29CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/108
+09-05T04:30CG-161
+09-05T04:30CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/108
+09-05T04:31CG-161
+09-05T04:31CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/108
+09-05T04:33CG-161
+09-05T04:33CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110
+09-05T04:34CG-161
+09-05T04:34CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110
+09-05T04:35CG-161
+09-05T04:35CG-161PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110
+09-05T04:52CG-164The conflict the reviewer saw was against a stale fetch of the base branch, not this branch's diff (which doesn't touch tests/scheduler/test_poll.py at all). Fetching origin now shows the base branch's tip is already an ancestor of this branch, so there is nothing to rebase or resolve.
+09-05T04:52CG-164worker says nothing to change: The conflict the reviewer saw was against a stale fetch of the base branch, not this branch's diff (which doesn't touch tests/scheduler/test_poll.py at all). Fetching origin now shows the base branch's tip is already an ancestor of this branch, so there is nothing to rebase or resolve. cost=$0.27
+09-05T04:56CG-1422 automated review round(s) used; this PR is yours
+09-05T04:59CG-1392 automated review round(s) used; this PR is yours
+09-05T05:01CG-1642 automated review round(s) used; this PR is yours
+09-05T05:16CG-1392 automated review round(s) used; this PR is yours
+09-05T05:31CG-1502 automated review round(s) used; this PR is yours
+09-05T09:34CG-176dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-176): error: Your local changes to the following files would be overwritten by merge:
+	src/garden/scheduler/rebase.py
+Please commit your changes or stash them before you merge.
+Aborting
+
+    Events
+
+      09-05T10:10CG-181 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/128
+
+      09-05T10:10CG-176 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/127
+
+      09-05T10:09CG-181 rebase
+
+      09-05T10:09CG-181 check
+
+      09-05T10:09CG-181 rebase
+
+      09-05T10:09CG-181 run_finished
+        rebase done
+
+      09-05T10:09CG-181 review
+        approve: Adds the product-manager persona, extends the retro to rank features and file them as provenance-tagged draft
+
+      09-05T10:09CG-181 run_finished
+        review approve $0.85
+
+      09-05T10:07CG-176 dispatch
+        review claude-opus-4-8
+
+      09-05T10:06CG-181 dispatch
+        review claude-opus-4-8
+
+      09-05T10:06CG-181 friction
+
+      09-05T10:06CG-181 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/128 (base main): Added the product-manager persona as
+
+      09-05T10:06CG-181 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/128
+
+      09-05T10:06CG-181 check
+
+      09-05T10:05CG-181 run_finished
+        work done $2.41
+
+      09-05T10:01CG-176 description_rewritten
+
+      09-05T10:01CG-176 review
+        approve: The merge queue now keeps its rebased head in flight until its rollup reports, never rotating; all five accept
+
+      09-05T10:01CG-176 run_finished
+        review approve $0.96
+
+      09-05T09:57CG-176 dispatch
+        review claude-opus-4-8
+
+      09-05T09:57CG-176 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/127 (base main): The merge queue now keeps its head:
+
+      09-05T09:57CG-176 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/127
+
+      09-05T09:57CG-176 check
+
+      09-05T09:57CG-176 check
+
+      09-05T09:56CG-176 run_finished
+        work done $8.40
+
+      09-05T09:54CG-181 transition
+        ready → running: dispatched work run 20260905T095437Z-work via local [claude model=claude-sonnet-5] (fresh session, base main,
+
+      09-05T09:54CG-181 dispatch
+        work claude-sonnet-5
+
+      09-05T09:52CG-177 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/126
+
+      09-05T09:51CG-177 automerged
+        https://github.com/joshmarcus/context-garden/pull/126
+
+      09-05T09:51CG-177 rebase
+
+      09-05T09:51CG-177 check
+
+      09-05T09:51CG-177 check
+
+      09-05T09:50CG-177 rebase
+
+      09-05T09:50CG-177 run_finished
+        rebase done
+
+      09-05T09:50CG-177 review
+        approve: Correct, well-scoped two-part fix (worker-mode-only reap selection via latest_worker_run, plus deferral of rev
+
+      09-05T09:50CG-177 run_finished
+        review approve $1.15
+
+      09-05T09:47CG-177 dispatch
+        review claude-opus-4-8
+
+      09-05T09:47CG-177 friction
+
+      09-05T09:47CG-177 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/126 (base main): reap now selects a running task's ac
+
+      09-05T09:47CG-177 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/126
+
+      09-05T09:47CG-177 check
+
+      09-05T09:47CG-177 check
+
+      09-05T09:46CG-177 run_finished
+        work done $5.63
+
+      09-05T09:35CG-176 transition
+        ready → running: dispatched work run 20260905T093519Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T09:35CG-176 dispatch
+        work claude-opus-4-8
+
+      09-05T09:35CG-175 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/125
+
+      09-05T09:35CG-176 transition
+        failed → ready: reset to ready by hand
+
+      09-05T09:34CG-177 transition
+        ready → running: dispatched work run 20260905T093410Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T09:34CG-177 dispatch
+        work claude-opus-4-8
+
+      09-05T09:34CG-176 transition
+        ready → failed: dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-176): error: Your local
+
+      09-05T09:34CG-175 automerged
+        https://github.com/joshmarcus/context-garden/pull/125
+
+      09-05T09:34CG-175 rebase
+
+      09-05T09:34CG-175 check
+
+      09-05T09:34CG-175 check
+
+      09-05T09:32CG-175 rebase
+
+      09-05T09:32CG-175 run_finished
+        rebase done
+
+      09-05T09:32CG-177 transition
+        running → ready: attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+
+      09-05T09:32CG-177 run_finished
+        work no_result
+
+      09-05T09:32CG-176 transition
+        running → ready: attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+
+      09-05T09:32CG-176 run_finished
+        work no_result
+
+      09-05T09:32CG-175 run_finished
+        review failed
+
+      09-05T05:58CG-177 transition
+        ready → running: dispatched work run 20260905T055755Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T05:58CG-177 dispatch
+        work claude-opus-4-8
+
+      09-05T05:57CG-175 dispatch
+        review claude-opus-4-8
+
+      09-05T05:57CG-175 rebase
+
+      09-05T05:57CG-175 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/125: Resolved the rebase conflict in test
+
+      09-05T05:57CG-175 check
+
+      09-05T05:57CG-175 check
+
+      09-05T05:56CG-175 run_finished
+        rebase done $0.23
+
+      09-05T05:54CG-175 transition
+        changes_requested → running: dispatched rebase run 20260905T055438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base ma
+
+      09-05T05:54CG-175 dispatch
+        rebase claude-sonnet-5
+
+      09-05T05:54CG-175 transition
+        in_review → changes_requested: PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_poll.py); a rebase agent will resolve
+
+      09-05T05:54CG-175 rebase
+
+      09-05T05:53CG-165 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/124
+
+      09-05T05:53CG-155 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/123
+
+      09-05T05:52CG-169 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/122
+
+      09-05T05:51CG-176 transition
+        ready → running: dispatched work run 20260905T055105Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T05:51CG-176 dispatch
+        work claude-opus-4-8
+
+      09-05T05:50CG-125 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/120
+
+      09-05T05:49CG-174 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/119
+
+      09-05T05:48CG-150 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/116
+
+      09-05T05:47CG-139 transition
+        in_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/105
+
+      09-05T05:46CG-155 rebase
+
+      09-05T05:46CG-155 check
+
+      09-05T05:46CG-155 check
+
+      09-05T05:45CG-155 rebase
+
+      09-05T05:45CG-155 run_finished
+        rebase done
+
+      09-05T05:44CG-150 rebase
+
+      09-05T05:44CG-150 check
+
+      09-05T05:44CG-150 check
+
+      09-05T05:43CG-150 rebase
+
+      09-05T05:43CG-150 run_finished
+        rebase done
+
+      09-05T05:41CG-139 rebase
+
+      09-05T05:41CG-139 check
+
+      09-05T05:41CG-139 check
+
+      09-05T05:41CG-139 rebase
+
+      09-05T05:41CG-139 run_finished
+        rebase done
+
+      09-05T05:39CG-125 rebase
+
+      09-05T05:39CG-125 check
+
+      09-05T05:39CG-125 check
+
+      09-05T05:38CG-125 rebase
+
+      09-05T05:38CG-125 run_finished
+        rebase done
+
+      09-05T05:37CG-157 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/121
+
+      09-05T05:37CG-150 review
+        approve: garden friction now preserves any hand-written section on rewrite, and the retro reconciliation reads the phas
+
+      09-05T05:37CG-150 run_finished
+        review approve $0.66
+
+      09-05T05:36CG-157 automerged
+        https://github.com/joshmarcus/context-garden/pull/121
+
+      09-05T05:36CG-157 rebase
+
+      09-05T05:36CG-157 check
+
+      09-05T05:36CG-157 check
+
+      09-05T05:35CG-157 rebase
+
+      09-05T05:35CG-157 run_finished
+        rebase done
+
+      09-05T05:35CG-174 review
+        approve: attach_pr resets all cached PR state (pr_number, pr_state, head_sha, review_run, automerge_blocked) and logs o
+
+      09-05T05:35CG-174 run_finished
+        review approve $0.83
+
+      09-05T05:35CG-165 review
+        approve: The ssh remote worker now runs harness and setup under the same allowlist scrub as the local runner, via a sha
+
+      09-05T05:35CG-165 run_finished
+        review approve $0.65
+
+      09-05T05:35CG-150 dispatch
+        review claude-opus-4-8
+
+      09-05T05:34CG-125 rebase
+
+      09-05T05:34CG-125 check
+
+      09-05T05:34CG-125 check
+
+      09-05T05:33CG-125 rebase
+
+      09-05T05:33CG-125 run_finished
+        rebase done
+
+      09-05T05:32CG-175 review
+        approve: Correctly clears needs_human/pending_feedback/automerge_blocked on a terminal transition and fails the automer
+
+      09-05T05:32CG-175 run_finished
+        review approve $1.10
+
+      09-05T05:31CG-174 dispatch
+        review claude-opus-4-8
+
+      09-05T05:31CG-165 dispatch
+        review claude-opus-4-8
+
+      09-05T05:31CG-150 needs_human
+        2 automated review round(s) used; this PR is yours
+
+      09-05T05:31CG-150 rebase
+
+      09-05T05:31CG-150 check
+
+      09-05T05:31CG-150 check
+
+      09-05T05:30CG-150 rebase
+
+      09-05T05:30CG-150 run_finished
+        rebase done
+
+      09-05T05:30CG-155 review
+        approve: All four acceptance criteria met with correct, well-tested logic: notify.command is documented in three places
+
+      09-05T05:30CG-155 run_finished
+        review approve $0.99
+
+      09-05T05:30CG-139 review
+        approve: Stale-base rebase rounds cleanly share the rebases counter and are exempt from both the revision and review ca
+
+      09-05T05:30CG-139 run_finished
+        review approve $1.20
+
+      09-05T05:29CG-174 rebase
+
+      09-05T05:29CG-174 check
+
+      09-05T05:29CG-174 check
+
+      09-05T05:28CG-174 rebase
+
+      09-05T05:28CG-174 run_finished
+        rebase done
+
+      09-05T05:28CG-175 dispatch
+        review claude-opus-4-8
+
+      09-05T05:28CG-175 friction
+
+      09-05T05:28CG-175 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/125 (base main): _transition now clears needs_human/p
+
+      09-05T05:28CG-175 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/125
+
+      09-05T05:28CG-175 check
+
+      09-05T05:28CG-175 check
+
+      09-05T05:27CG-175 run_finished
+        work done $2.34
+
+      09-05T05:27CG-169 review
+        approve: Adds a daily-scheduled + workflow_dispatch CI job running `garden qa --scripted`, matching ci.yml's environmen
+
+      09-05T05:27CG-169 run_finished
+        review approve $0.57
+
+      09-05T05:27CG-165 friction
+
+      09-05T05:27CG-165 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/124 (base main): The ssh runner's remote script now r
+
+      09-05T05:27CG-165 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/124
+
+      09-05T05:27CG-165 check
+
+      09-05T05:27CG-165 check
+
+      09-05T05:26CG-165 run_finished
+        work done $3.36
+
+      09-05T05:26CG-155 dispatch
+        review claude-opus-4-8
+
+      09-05T05:26CG-155 rebase
+
+      09-05T05:26CG-155 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/123: Rebased onto origin/main; resolved t
+
+      09-05T05:26CG-155 check
+
+      09-05T05:26CG-155 check
+
+      09-05T05:25CG-155 run_finished
+        rebase done $0.33
+
+      09-05T05:25CG-125 review
+        approve: Cleanly surfaces interrupted-attempt progress: reap names prior commits in the log line and no_active_run even
+
+      09-05T05:25CG-125 run_finished
+        review approve $0.64
+
+      09-05T05:24CG-157 rebase
+
+      09-05T05:24CG-157 check
+
+      09-05T05:24CG-157 check
+
+      09-05T05:23CG-157 rebase
+
+      09-05T05:23CG-157 run_finished
+        rebase done
+
+      09-05T05:22CG-139 dispatch
+        review claude-opus-4-8
+
+      09-05T05:22CG-169 dispatch
+        review claude-opus-4-8
+
+      09-05T05:22CG-125 dispatch
+        review claude-opus-4-8
+
+      09-05T05:22CG-125 run_finished
+        review superseded $0.73
+
+      09-05T05:22CG-155 transition
+        changes_requested → running: dispatched rebase run 20260905T052218Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base ma
+
+      09-05T05:22CG-155 dispatch
+        rebase claude-sonnet-5
+
+      09-05T05:22CG-139 rebase
+
+      09-05T05:22CG-139 check
+
+      09-05T05:22CG-139 check
+
+      09-05T05:21CG-139 rebase
+
+      09-05T05:21CG-139 run_finished
+        rebase done
+
+      09-05T05:21CG-155 transition
+        in_review → changes_requested: PR conflicts with main; rebase onto main conflicts (tests/test_cli.py); a rebase agent will resolve it
+
+      09-05T05:21CG-155 rebase
+
+      09-05T05:21CG-147 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/118
+
+      09-05T05:21CG-155 review
+        approve: Meets all acceptance criteria with correct, well-tested logic: notify.command is documented in three places, d
+
+      09-05T05:21CG-155 run_finished
+        review approve $0.73
+
+      09-05T05:21CG-150 review
+        approve: garden friction now preserves any hand-written section on rewrite, and the retro reconciliation reads the phas
+
+      09-05T05:21CG-150 run_finished
+        review approve $0.66
+
+      09-05T05:21CG-125 rebase
+
+      09-05T05:21CG-125 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/120: Rebased onto origin/main; resolved t
+
+      09-05T05:20CG-125 check
+
+      09-05T05:20CG-125 check
+
+      09-05T05:20CG-125 run_finished
+        rebase done $0.21
+
+      09-05T05:19CG-155 dispatch
+        review claude-opus-4-8
+
+      09-05T05:18CG-147 automerged
+        https://github.com/joshmarcus/context-garden/pull/118
+
+      09-05T05:18CG-147 rebase
+
+      09-05T05:18CG-147 check
+
+      09-05T05:18CG-147 check
+
+      09-05T05:18CG-147 rebase
+
+      09-05T05:18CG-147 run_finished
+        rebase done
+
+      09-05T05:17CG-157 review
+        approve: The phase select is now built client-side from a per-product data-phases map, making a cross-product (product,
+
+      09-05T05:17CG-157 run_finished
+        review approve $0.58
+
+      09-05T05:17CG-155 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/123 (base main): notify.command failures are now logg
+
+      09-05T05:17CG-155 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/123
+
+      09-05T05:17CG-155 check
+
+      09-05T05:17CG-155 check
+
+      09-05T05:16CG-155 run_finished
+        work done $3.75
+
+      09-05T05:16CG-147 review
+        approve: CG-147 is implemented cleanly and fully tested: fresh clones get a repo-local git identity resolved from confi
+
+      09-05T05:16CG-147 run_finished
+        review approve $1.05
+
+      09-05T05:16CG-139 needs_human
+        2 automated review round(s) used; this PR is yours
+
+      09-05T05:16CG-139 rebase
+
+      09-05T05:16CG-139 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/105: Rebased onto origin/main, resolving
+
+      09-05T05:16CG-139 check
+
+      09-05T05:16CG-139 check
+
+      09-05T05:15CG-139 run_finished
+        rebase done $0.58
+
+      09-05T05:14CG-150 dispatch
+        review claude-opus-4-8
+
+      09-05T05:14CG-165 transition
+        ready → running: dispatched work run 20260905T051447Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T05:14CG-165 dispatch
+        work claude-opus-4-8
+
+      09-05T05:14CG-175 transition
+        ready → running: dispatched work run 20260905T051438Z-work via local [claude model=claude-sonnet-5] (fresh session, base main,
+
+      09-05T05:14CG-175 dispatch
+        work claude-sonnet-5
+
+      09-05T05:14CG-125 transition
+        changes_requested → running: dispatched rebase run 20260905T051438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base ma
+
+      09-05T05:14CG-125 dispatch
+        rebase claude-sonnet-5
+
+      09-05T05:14CG-147 dispatch
+        review claude-opus-4-8
+
+      09-05T05:14CG-147 rebase
+
+      09-05T05:14CG-147 check
+
+      09-05T05:14CG-147 check
+
+      09-05T05:13CG-147 rebase
+
+      09-05T05:13CG-147 run_finished
+        rebase done
+
+      09-05T05:13CG-149 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/117
+
+      09-05T05:13CG-125 transition
+        in_review → changes_requested: PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_dispatch.py); a rebase agent will res
+
+      09-05T05:13CG-125 rebase
+
+      09-05T05:13CG-174 review
+        approve: attach_pr resets all cached PR state and _pr_number self-heals against a stale cache; all three acceptance cri
+
+      09-05T05:13CG-174 run_finished
+        review approve $0.74
+
+      09-05T05:13CG-169 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/122 (base main): Added .github/workflows/qa.yml with
+
+      09-05T05:13CG-169 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/122
+
+      09-05T05:13CG-169 check
+
+      09-05T05:13CG-169 check
+
+      09-05T05:12CG-169 run_finished
+        work done $0.40
+
+      09-05T05:12CG-157 dispatch
+        review claude-opus-4-8
+
+      09-05T05:12CG-157 friction
+
+      09-05T05:12CG-157 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/121 (base main): Fixed the Inbox friction form so its
+
+      09-05T05:12CG-157 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/121
+
+      09-05T05:12CG-157 check
+
+      09-05T05:12CG-157 check
+
+      09-05T05:11CG-157 run_finished
+        work done $1.09
+
+      09-05T05:11CG-147 review
+        approve: CG-147 is implemented cleanly and fully tested: fresh clones get a repo-local git identity resolved from confi
+
+      09-05T05:11CG-147 run_finished
+        review approve $1.02
+
+      09-05T05:11CG-125 dispatch
+        review claude-opus-4-8
+
+      09-05T05:11CG-125 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/120 (base main): The scheduler now distinguishes an i
+
+      09-05T05:11CG-125 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/120
+
+      09-05T05:11CG-125 check
+
+      09-05T05:11CG-125 check
+
+      09-05T05:10CG-125 run_finished
+        work done $3.71
+
+      09-05T05:09CG-169 transition
+        ready → running: dispatched work run 20260905T050924Z-work via local [claude model=claude-sonnet-5] (fresh session, base main,
+
+      09-05T05:09CG-169 dispatch
+        work claude-sonnet-5
+
+      09-05T05:09CG-139 transition
+        changes_requested → running: dispatched rebase run 20260905T050923Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base ma
+
+      09-05T05:09CG-139 dispatch
+        rebase claude-sonnet-5
+
+      09-05T05:09CG-149 automerged
+        https://github.com/joshmarcus/context-garden/pull/117
+
+      09-05T05:09CG-149 rebase
+
+      09-05T05:09CG-149 check
+
+      09-05T05:09CG-149 check
+
+      09-05T05:08CG-149 rebase
+
+      09-05T05:08CG-149 run_finished
+        rebase done
+
+      09-05T05:08CG-139 transition
+        in_review → changes_requested: PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/review.py); a rebase agent will resol
+
+      09-05T05:08CG-139 rebase
+
+      09-05T05:08CG-174 dispatch
+        review claude-opus-4-8
+
+      09-05T05:08CG-174 friction
+
+      09-05T05:08CG-174 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/119 (base main): `garden pr` now goes through a new S
+
+      09-05T05:08CG-174 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/119
+
+      09-05T05:08CG-174 check
+
+      09-05T05:08CG-174 check
+
+      09-05T05:07CG-174 run_finished
+        work done $1.87
+
+      09-05T05:07CG-149 review
+        approve: Preparing the worktree before building the brief makes reading-list snippets resolve against the target checko
+
+      09-05T05:07CG-149 run_finished
+        review approve $0.61
+
+      09-05T05:07CG-147 dispatch
+        review claude-opus-4-8
+
+      09-05T05:07CG-147 friction
+
+      09-05T05:07CG-147 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/118 (base main): Fresh product/self clones now get a
+
+      09-05T05:07CG-147 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/118
+
+      09-05T05:07CG-147 check
+
+      09-05T05:07CG-147 check
+
+      09-05T05:06CG-147 run_finished
+        work done $3.80
+
+      09-05T05:05CG-172 transition
+        draft → cancelled: already fixed by PR #104 (04:12Z)
+
+      09-05T05:05CG-171 transition
+        draft → cancelled: by design: new-task must keep working in a frozen phase so friction can be filed as drafts during a freeze (st
+
+      09-05T05:05CG-139 transition
+        changes_requested → in_review: nothing to fix; resumed to in review by hand
+
+      09-05T05:05CG-139 resumed
+        2 automated review round(s) used; this PR is yours
+
+      09-05T05:05CG-149 dispatch
+        review claude-opus-4-8
+
+      09-05T05:05CG-149 rebase
+
+      09-05T05:05CG-149 check
+
+      09-05T05:05CG-149 check
+
+      09-05T05:04CG-149 rebase
+
+      09-05T05:04CG-149 run_finished
+        rebase done
+
+      09-05T05:03CG-164 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/109
+
+      09-05T05:03CG-149 review
+        approve: Preparing the task worktree before building the brief makes reading-list snippets resolve against the target c
+
+      09-05T05:03CG-149 run_finished
+        review approve $0.43
+
+      09-05T05:02CG-157 transition
+        ready → running: dispatched work run 20260905T050153Z-work via local [claude model=claude-sonnet-5] (fresh session, base main,
+
+      09-05T05:02CG-157 dispatch
+        work claude-sonnet-5
+
+      09-05T05:01CG-125 transition
+        ready → running: dispatched work run 20260905T050145Z-work via local [claude model=claude-opus-4-8] (fresh session, base main,
+
+      09-05T05:01CG-125 dispatch
+        work claude-opus-4-8
+
+      09-05T05:01CG-164 automerged
+        https://github.com/joshmarcus/context-garden/pull/109
+
+      09-05T05:01CG-164 needs_human
+        2 automated review round(s) used; this PR is yours
+
+      09-05T05:01CG-164 rebase
+
+      09-05T05:01CG-164 check
+
+      09-05T05:01CG-164 check
+
+    Since 24h
+
+        PRs openedCG-012 CG-027 CG-008 CG-009 CG-046 CG-047 CG-036 CG-032 CG-034 CG-010 CG-035 CG-041 CG-040 CG-038 CG-041 CG-042 CG-013 CG-044 CG-031 CG-055 CG-043 CG-058 CG-059 CG-060 CG-075 CG-076 CG-063 CG-054 CG-050 CG-053 CG-069 CG-085 CG-054 CG-057 CG-071 CG-037 CG-091 CG-093 CG-061 CG-081 CG-101 CG-104 CG-084 CG-090 CG-106 CG-098 CG-112 CG-045 CG-111 CG-100 CG-116 CG-117 CG-048 CG-049 CG-118 CG-064 CG-067 CG-062 CG-072 CG-119 CG-068 CG-073 CG-074 CG-080 CG-078 CG-086 CG-079 CG-096 CG-099 CG-087 CG-066 CG-109 CG-083 CG-065 CG-094 CG-115 CG-123 CG-088 CG-122 CG-121 CG-127 CG-126 CG-129 CG-131 CG-136 CG-133 CG-140 CG-137 CG-153 CG-145 CG-148 CG-152 CG-154 CG-141 CG-134 CG-139 CG-160 CG-135 CG-161 CG-164 CG-143 CG-142 CG-170 CG-144 CG-173 CG-150 CG-149 CG-147 CG-174 CG-125 CG-157 CG-169 CG-155 CG-165 CG-175 CG-177 CG-176 CG-181
+        mergedCG-012 CG-008 CG-027 CG-047 CG-036 CG-035 CG-038 CG-041 CG-055 CG-059 CG-031 CG-043 CG-044 CG-060 CG-013 CG-058 CG-042 CG-009 CG-034 CG-010 CG-075 CG-032 CG-040 CG-076 CG-063 CG-053 CG-069 CG-085 CG-054 CG-057 CG-082 CG-071 CG-091 CG-093 CG-061 CG-104 CG-037 CG-101 CG-084 CG-045 CG-090 CG-106 CG-081 CG-100 CG-098 CG-116 CG-048 CG-049 CG-078 CG-112 CG-117 CG-118 CG-067 CG-068 CG-072 CG-073 CG-066 CG-115 CG-123 CG-087 CG-119 CG-122 CG-127 CG-121 CG-080 CG-064 CG-094 CG-099 CG-129 CG-131 CG-126 CG-136 CG-133 CG-109 CG-088 CG-062 CG-065 CG-083 CG-096 CG-140 CG-086 CG-111 CG-074 CG-079 CG-137 CG-153 CG-145 CG-152 CG-160 CG-141 CG-148 CG-135 CG-134 CG-143 CG-170 CG-144 CG-154 CG-161 CG-173 CG-142 CG-164 CG-149 CG-147 CG-157 CG-139 CG-150 CG-174 CG-125 CG-169 CG-155 CG-165 CG-175 CG-177 CG-176 CG-181
+        reviewsCG-012: approve
+CG-012: request_changes
+CG-027: request_changes
+CG-027: request_changes
+CG-008: approve
+CG-009: request_changes
+CG-046: approve
+CG-009: request_changes
+CG-047: approve
+CG-036: approve
+CG-032: request_changes
+CG-034: approve
+CG-035: approve
+CG-041: request_changes
+CG-010: request_changes
+CG-040: request_changes
+CG-041: request_changes
+CG-042: approve
+CG-044: approve
+CG-013: approve
+CG-031: approve
+CG-043: approve
+CG-058: approve
+CG-059: approve
+CG-060: approve
+CG-010: request_changes
+CG-054: request_changes
+CG-050: approve
+CG-053: approve
+CG-085: approve
+CG-082: approve
+CG-071: request_changes
+CG-082: request_changes
+CG-037: approve
+CG-037: request_changes
+CG-091: approve
+CG-093: approve
+CG-101: approve
+CG-104: approve
+CG-081: request_changes
+CG-081: request_changes
+CG-090: approve
+CG-090: request_changes
+CG-106: approve
+CG-098: approve
+CG-112: approve
+CG-081: request_changes
+CG-045: approve
+CG-111: approve
+CG-106: request_changes
+CG-100: approve
+CG-116: approve
+CG-117: approve
+CG-048: approve
+CG-049: approve
+CG-118: approve
+CG-064: approve
+CG-072: approve
+CG-119: approve
+CG-068: approve
+CG-073: approve
+CG-074: approve
+CG-080: approve
+CG-078: approve
+CG-086: approve
+CG-096: approve
+CG-099: approve
+CG-087: approve
+CG-066: approve
+CG-109: approve
+CG-083: approve
+CG-094: approve
+CG-115: approve
+CG-123: approve
+CG-088: approve
+CG-122: approve
+CG-121: approve
+CG-074: request_changes
+CG-127: approve
+CG-080: approve
+CG-065: request_changes
+CG-079: request_changes
+CG-086: request_changes
+CG-094: approve
+CG-083: request_changes
+CG-088: request_changes
+CG-096: request_changes
+CG-099: approve
+CG-126: approve
+CG-129: approve
+CG-131: approve
+CG-126: approve
+CG-136: approve
+CG-133: approve
+CG-109: approve
+CG-088: approve
+CG-062: approve
+CG-065: approve
+CG-083: approve
+CG-096: approve
+CG-140: approve
+CG-086: approve
+CG-111: approve
+CG-074: approve
+CG-079: approve
+CG-137: approve
+CG-153: approve
+CG-145: approve
+CG-148: approve
+CG-152: approve
+CG-154: approve
+CG-141: request_changes
+CG-139: approve
+CG-160: approve
+CG-134: approve
+CG-141: approve
+CG-135: approve
+CG-139: approve
+CG-143: approve
+CG-164: approve
+CG-170: approve
+CG-144: approve
+CG-142: approve
+CG-154: approve
+CG-161: approve
+CG-173: approve
+CG-150: approve
+CG-164: approve
+CG-149: approve
+CG-149: approve
+CG-147: approve
+CG-174: approve
+CG-147: approve
+CG-157: approve
+CG-150: approve
+CG-155: approve
+CG-125: approve
+CG-169: approve
+CG-139: approve
+CG-155: approve
+CG-175: approve
+CG-165: approve
+CG-174: approve
+CG-150: approve
+CG-177: approve
+CG-176: approve
+CG-181: approve
+
+        discoveredCG-032 CG-033 CG-034 CG-035 CG-036 CG-037 CG-038 CG-039 CG-040 CG-041 CG-042 CG-049 CG-051 CG-052 CG-056 CG-077 CG-082 CG-089 CG-090 CG-091 CG-092 CG-093 CG-095 CG-097 CG-101 CG-102 CG-103 CG-105 CG-107 CG-108 CG-110 CG-113 CG-114 CG-115 CG-119 CG-120 CG-121 CG-122 CG-124 CG-125 CG-126 CG-127 CG-128 CG-130 CG-159 CG-160 CG-161 CG-164 CG-165 CG-166 CG-167 CG-168 CG-169 CG-171 CG-172
+
+    All time
+Cost by difficulty tier
+
+easy
+easy: $328.70 over 68 task(s)
+$328.70 · 68 tasks
+medium
+medium: $320.54 over 48 task(s)
+$320.54 · 48 tasks
+hard
+hard: $88.57 over 7 task(s)
+$88.57 · 7 tasks
+
+      tiertasksavg revfirst-pass
+
+      easy680.9488%
+medium480.7388%
+hard70.57100%

@@ -1,0 +1,201 @@
+CG-125 · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  context-garden / phase-03 · CG-125Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart
+
+    in fruitdone in fruitpriority later · 3 · medium · PR ↗
+
+  BriefLatest run
+
+  Persona review…
+  tiereasymediumhard
+
+  priorityfirst · 0next · 1normal · 2later · 3someday · 4
+
+  Suggest a change…
+
+  Report friction…
+
+Personas:Run persona reviewavailable: designer, product-manager, project-manager, security, staff-engineer, usability-expert, user
+
+  Start a model trial
+
+    + Add contenderStart trial
+
+  Suggest a change to this task
+
+  A person's wording is rarely the final wording. Write what the task should say; an agent folds it into the task file for you.
+
+    applies togoalcontextacceptancereadingprioritydifficultyanything
+
+    Suggestit lands in the task file and is integrated on the next tick
+
+  Report friction about this process
+
+    File report
+
+  $5.30
+cost across 6 runs
+
+  128
+input tokens
+
+  37,028
+output tokens
+
+  5,318,400
+cache reads · 28.3 min
+
+    This task's log showed 'no active run found; back to ready' after a prior dispatch, but that prior run had actually committed 3 of 5 fixes plus tests before being interrupted. A fresh worker had to re-derive that state by reading git log/diff rather than it being visible from the task file or brief. Might be worth surfacing partial-completion state (e.g. commits made during an interrupted run) more explicitly so re-dispatched workers don't have to reverse-engineer prior progress.
+
+Provenance
+
+Discovered by CG-065 (Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows) during run 20260904T232304Z-work.
+
+    Last automated review
+✅ Automated review: approve — Cleanly surfaces interrupted-attempt progress: reap names prior commits in the log line and no_active_run event, dispatch lists them in the brief for re-dispatched work rounds. Well-tested (both progress and clean-restart cases), lint clean, scope-contained.
+
+    Usage by run mode
+moderunsinputcache-readoutputcost
+rebase322586,7021,771$0.21
+review226746,5837,843$1.37
+work1803,985,11527,414$3.71
+
+    Runs
+
+runmodestatusmodelminbrief tokinputcache-readoutputcost
+
+  20260905T053852Z-rebaserebasedone
+  00
+
+  $0.00
+  open run
+
+  20260905T053310Z-rebaserebasedone
+  00
+
+  $0.00
+  open run
+
+  20260905T052221Z-reviewreviewdone
+  claude:claude-opus-4-8316,677
+  102757744360
+  $0.64
+  open run
+
+  20260905T051438Z-rebaserebasedone
+  claude:claude-sonnet-553,858
+  225867021771
+  $0.21
+  open run
+
+  20260905T051133Z-reviewreviewsuperseded
+  claude:claude-opus-4-81116,459
+  164708093483
+  $0.73
+  open run · error
+
+  20260905T050145Z-workworkdone
+  claude:claude-opus-4-899,012
+  80398511527414
+  $3.71
+  open run
+
+    Timeline
+09-05T05:50transitionin_review → done: PR merged: https://github.com/joshmarcus/context-garden/pull/120
+09-05T05:39rebase
+09-05T05:39checkpre_pr lint: pass
+09-05T05:39checkpre_pr test: pass
+09-05T05:38rebase
+09-05T05:38run_finishedrebase done
+09-05T05:34rebase
+09-05T05:34checkpre_pr lint: pass
+09-05T05:34checkpre_pr test: pass
+09-05T05:33rebase
+09-05T05:33run_finishedrebase done
+09-05T05:25reviewapprove: Cleanly surfaces interrupted-attempt progress: reap names prior commits in the log line and no_active_run event, dispatch lists them in the brief for re-dispatched work rounds. Well-tested (both progress and clean-restart cases), lint clean, scope-contained.
+09-05T05:25run_finishedreview approve $0.64
+09-05T05:22dispatchreview claude-opus-4-8  base
+09-05T05:22run_finishedreview superseded $0.73
+09-05T05:21rebase
+09-05T05:21transitionrunning → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/120: Rebased onto origin/main; resolved the single conflict in tests/scheduler/test_dispatch.py by keeping both tests (test_brief_inlines_reading_from_the_target_checkout from main and test_redispatched_work_brief_lists_prior_commits from this branch), which sat adjacent with no logical overlap. Full test suite (549 passed, 3 skipped) confirms the rebase is clean. cost=$0.21
+09-05T05:20checkpre_pr lint: pass
+09-05T05:20checkpre_pr test: pass
+09-05T05:20run_finishedrebase done $0.21
+09-05T05:14transitionchanges_requested → running: dispatched rebase run 20260905T051438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~3858 tokens)
+09-05T05:14dispatchrebase claude-sonnet-5  base main
+09-05T05:13transitionin_review → changes_requested: PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_dispatch.py); a rebase agent will resolve it
+09-05T05:13rebase
+09-05T05:11dispatchreview claude-opus-4-8  base
+09-05T05:11transitionrunning → in_review: opened https://github.com/joshmarcus/context-garden/pull/120 (base main): The scheduler now distinguishes an interrupted attempt that made real, unreported progress from a clean restart: reap notes when the worktree holds commits ahead of base (with the count on the no_active_run event), and dispatch lists those commits in the brief for every re-dispatched round so the next worker builds on prior progress instead of reverse-engineering git. cost=$3.71
+09-05T05:11pr_openedhttps://github.com/joshmarcus/context-garden/pull/120
+09-05T05:11checkpre_pr lint: pass
+09-05T05:11checkpre_pr test: pass
+09-05T05:10run_finishedwork done $3.71
+09-05T05:01transitionready → running: dispatched work run 20260905T050145Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~9012 tokens)
+09-05T05:01dispatchwork claude-opus-4-8  base main
+
+    Log
+2026-09-05T03:15:00+00:00 moved to phase-03 at the phase-02 close (deferred by the freeze)
+2026-09-04T23:25:21+00:00 discovered by CG-065
+2026-09-05T00:04:53+00:00 approved (web)
+2026-09-05T00:34:27+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+2026-09-05T03:01:04+00:00 approved (web)
+2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+2026-09-05T03:19:57+00:00 approved (web)
+2026-09-05T05:01:53+00:00 dispatched work run 20260905T050145Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~9012 tokens)
+2026-09-05T05:11:33+00:00 opened https://github.com/joshmarcus/context-garden/pull/120 (base main): The scheduler now distinguishes an interrupted attempt that made real, unreported progress from a clean restart: reap notes when the worktree holds commits ahead of base (with the count on the no_active_run event), and dispatch lists those commits in the brief for every re-dispatched round so the next worker builds on prior progress instead of reverse-engineering git. cost=$3.71
+2026-09-05T05:13:27+00:00 PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_dispatch.py); a rebase agent will resolve it
+2026-09-05T05:14:38+00:00 dispatched rebase run 20260905T051438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~3858 tokens)
+2026-09-05T05:21:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/120: Rebased onto origin/main; resolved the single conflict in tests/scheduler/test_dispatch.py by keeping both tests (test_brief_inlines_reading_from_the_target_checkout from main and test_redispatched_work_brief_lists_prior_commits from this branch), which sat adjacent with no logical overlap. Full test suite (549 passed, 3 skipped) confirms the rebase is clean. cost=$0.21
+2026-09-05T05:25:34+00:00 automated review: approve — Cleanly surfaces interrupted-attempt progress: reap names prior commits in the log line and no_active_run event, dispatch lists them in the brief for re-dispatched work rounds. Well-tested (both progress and clean-restart cases), lint clean, scope-contained. cost=$0.64
+2026-09-05T05:33:12+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+2026-09-05T05:34:06+00:00 rebased; diff unchanged; verdict kept
+2026-09-05T05:38:53+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+2026-09-05T05:39:46+00:00 rebased; diff unchanged; verdict kept
+2026-09-05T05:50:59+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/120
+
+        filecontext-garden/phase-03/tasks/CG-125-scheduler-task-log-should-distinguish-prior-atte.md
+        discovered byCG-065
+
+        depends onCG-137
+        unblocks—
+        readingsrc/garden/store.py
+src/garden/scaffold.py
+src/garden/platefetch.py
+src/garden/cli.py
+
+        branchgarden/cg-125-scheduler-task-log-should-distinguish-prior-atte
+        PRhttps://github.com/joshmarcus/context-garden/pull/120
+        review / CI— / SUCCESS
+        auto reviewapprove (2 rounds)
+        automergeheld: GitHub reports the PR unknown
+
+        attempts1
+        runnerdefault / default harness
+        updated2026-09-05T05:50

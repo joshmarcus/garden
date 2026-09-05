@@ -1,0 +1,241 @@
+Board · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  Board
+Every task by state. Blocked and stacked tasks show what they wait on; running ones show elapsed time.
+
+    columns
+    list
+
+  all
+
+    context-garden/phase-03
+
+    context-garden/phase-04
+
+  include closed
+
+    bud, taggedwaiting human0
+
+    in budawaiting triage0
+
+    prunedchanges requested0
+
+    wiltedfailed0
+
+    in leafrunning0
+
+    in flowerin review0
+
+    sproutready0
+
+    seed, waitingblocked1
+
+          CG-163
+          A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase
+          p2 · medium
+
+        waits on CG-162
+
+    seeddraft12
+
+          CG-182
+          The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records outside the tick
+          p0 · medium
+
+          CG-146
+          A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+          p1 · medium
+
+          CG-178
+          The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first
+          p1 · medium
+
+          CG-030
+          Plates: label what each plate shows, keep every file public domain, credit Thomé
+          p2 · easy
+
+          CG-132
+          The web UI can create a task from a form, with the same fields as garden new-task
+          p2 · easy
+
+          CG-156
+          One vocabulary and readable help: retry, resume and decide named once; help panels; --version; garden status at 80 columnsfound
+          p2 · medium
+
+          CG-162
+          Move a task to another phase from the task page and the CLI, keeping its id, history and state
+          p2 · medium
+
+          CG-179
+          Results and reviews speak to each acceptance criterion by name, with evidence
+          p2 · medium
+
+          CG-180
+          The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before it is trusted
+          p2 · medium
+
+          CG-183
+          The seedling mark from the garden's PR comments sits left of the wordmark in the web header, and is the favicon
+          p2 · easy
+
+          CG-184
+          Design polish from using the app: page-head subtitles wrap too early, and other small layout nits
+          p2 · easy
+
+          CG-158
+          Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden finishfound
+          p3 · medium
+
+    in fruitdone31
+
+          CG-137
+          Split the scheduler by tick phase and the web actions into a registry so features stop colliding
+          p0 · hard
+
+          CG-153
+          State dirty-on-read no longer clobbers concurrent writes; a resumed reap does not double-emit run_finishedfound
+          p0 · medium
+
+          CG-176
+          The merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped, and merges when CI goes green
+          p0 · medium
+
+          CG-141
+          Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue
+          p1 · medium
+
+          CG-145
+          garden retro waits for the persona reports before it dispatches the reconciliation
+          p1 · easy
+
+          CG-148
+          A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
+          p1 · easy
+
+          CG-152
+          An in-process runner for scheduler tests so no test drives a subprocess workerfound
+          p1 · hard
+
+          CG-154
+          Trust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised HTML and an origin check on POSTsfound
+          p1 · hard
+
+          CG-160
+          garden retro --skip-personas can dispatch reconciliation with an empty persona-reviews sectionfound
+          p1 · easy
+
+          CG-161
+          garden plan does not check a frozen phase (only closed)found
+          p1 · easy
+
+          CG-164
+          Pre-PR and CI checks run in the scrubbed worker environmentfoundneeds you
+          p1 · easy
+
+          CG-170
+          A task parked because the base branch was broken re-probes the base every tick and continues by itself when it goes green
+          p1 · medium
+
+          CG-173
+          Merging a stack parent retargets its children before the branch is deleted, and a child never opens a PR against a deleted branch
+          p1 · medium
+
+          CG-177
+          No review is dispatched while a worker run is in flight, and the reap finds a task's worker run by mode, so a review record can never send a running task back to ready
+          p1 · medium
+
+          CG-181
+          The retro has a Features for the next phase section, fed by the product-manager persona, and each feature becomes a draft in the next phase
+          p1 · easy
+
+          CG-134
+          garden walkthrough: render the live web app's pages for the retro and the persona reviews
+          p2 · medium
+
+          CG-135
+          garden qa: an agent drives the loop end to end through the web app on a throwaway garden
+          p2 · hard
+
+          CG-139
+          Rebase rounds do not count toward the revision cap
+          p2 · easy
+
+          CG-142
+          Task actions refuse a task that is done or cancelledneeds you
+          p2 · easy
+
+          CG-143
+          Ship the garden-operate skill with the tool so every new garden gets it
+          p2 · easy
+
+          CG-144
+          A superseded review run is closed when a newer review starts; no run record outlives its process
+          p2 · easy
+
+          CG-147
+          A product clone gets a git identity when it is made, and doctor checks every clone
+          p2 · easy
+
+          CG-149
+          Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief cost is measured per phasefound
+          p2 · medium
+
+          CG-150
+          garden friction keeps hand-written sections and the retro reads the Reported section and comment frictionfound
+          p2 · easy
+
+          CG-155
+          notify.command is configured, documented, tested by doctor and loud on failure; triage pings fire after the review verdictfound
+          p2 · easy
+
+          CG-169
+          garden qa: run on a schedule in CI with the scripted agentfound
+          p2 · easy
+
+          CG-174
+          garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll follows the new PR
+          p2 · easy
+
+          CG-175
+          A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished task
+          p2 · easy
+
+          CG-125
+          Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restartfound
+          p3 · medium
+
+          CG-157
+          The Inbox friction form's product and phase selects cannot produce a 404found
+          p3 · easy
+
+          CG-165
+          The ssh runner's remote worker runs in an allowlisted environmentfound
+          p3 · medium
+
+    set asidewont do0

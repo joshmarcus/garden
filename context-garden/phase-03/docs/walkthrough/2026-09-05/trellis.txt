@@ -1,0 +1,237 @@
+Trellis · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+Trellis
+The structure the work climbs: dependencies left to right, dashed edges for discovered work. A task with one open dependency stacks on its PR instead of waiting.
+
+    hide done (38)
+
+  all
+
+    context-garden/phase-03
+
+    context-garden/phase-04
+
+  include closed
+
+  ready now: none
+   · longest open chain: CG-162 → CG-163
+
+CG-137: Split the scheduler by tick phase and the web actions into a registry so features stop colliding — done (in fruit)CG-137Split the scheduler by t…done
+CG-176: The merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped, and merges when CI goes green — done (in fruit)CG-176The merge queue stays on…done
+CG-182: The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records outside the tick — draft (seed)CG-182The tick never blocks th…draft
+CG-146: A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated — draft (seed)CG-146A retro page per phase: …draft
+CG-166: Fix broken wait_for_runs reference in tests/test_retro.py on main — cancelled (pressed)CG-166Fix broken wait_for_runs…cancelled
+CG-167: tests/test_retro.py calls the removed wait_for_runs helper; main's tests and lint are red — cancelled (pressed)CG-167tests/test_retro.py call…cancelled
+CG-168: Fix undefined `wait_for_runs` in test_retro_waits_for_every_persona_report_before_reconciling — cancelled (pressed)CG-168Fix undefined `wait_for_…cancelled
+CG-171: garden new-task does not check a frozen phase either — cancelled (pressed)CG-171garden new-task does not…cancelled
+CG-172: test_retro.py has a bare NameError from the CG-152 in-process-runner rebase — cancelled (pressed)CG-172test_retro.py has a bare…cancelled
+CG-173: Merging a stack parent retargets its children before the branch is deleted, and a child never opens a PR against a deleted branch — done (in fruit)CG-173Merging a stack parent r…done
+CG-177: No review is dispatched while a worker run is in flight, and the reap finds a task's worker run by mode, so a review record can never send a running task back to ready — done (in fruit)CG-177No review is dispatched …done
+CG-178: The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first — draft (seed)CG-178The retro ends in a verd…draft
+CG-181: The retro has a Features for the next phase section, fed by the product-manager persona, and each feature becomes a draft in the next phase — done (in fruit)CG-181The retro has a Features…done
+CG-030: Plates: label what each plate shows, keep every file public domain, credit Thomé — draft (seed)CG-030Plates: label what each …draft
+CG-132: The web UI can create a task from a form, with the same fields as garden new-task — draft (seed)CG-132The web UI can create a …draft
+CG-156: One vocabulary and readable help: retry, resume and decide named once; help panels; --version; garden status at 80 columns — draft (seed)CG-156One vocabulary and reada…draft
+CG-162: Move a task to another phase from the task page and the CLI, keeping its id, history and state — draft (seed)CG-162Move a task to another p…draft
+CG-169: garden qa: run on a schedule in CI with the scripted agent — done (in fruit)CG-169garden qa: run on a sche…done
+CG-174: garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll follows the new PR — done (in fruit)CG-174garden pr and the web at…done
+CG-175: A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished task — done (in fruit)CG-175A task that reaches done…done
+CG-179: Results and reviews speak to each acceptance criterion by name, with evidence — draft (seed)CG-179Results and reviews spea…draft
+CG-180: The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before it is trusted — draft (seed)CG-180The fake GitHub models C…draft
+CG-183: The seedling mark from the garden's PR comments sits left of the wordmark in the web header, and is the favicon — draft (seed)CG-183The seedling mark from t…draft
+CG-184: Design polish from using the app: page-head subtitles wrap too early, and other small layout nits — draft (seed)CG-184Design polish from using…draft
+CG-158: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden finish — draft (seed)CG-158Manual tasks get a revis…draft
+CG-153: State dirty-on-read no longer clobbers concurrent writes; a resumed reap does not double-emit run_finished — done (in fruit)CG-153State dirty-on-read no l…done
+CG-159: Update the module map in context-garden/product.md for the scheduler and web packages — cancelled (pressed)CG-159Update the module map in…cancelled
+CG-141: Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue — done (in fruit)CG-141Rebase is its own mode: …done
+CG-145: garden retro waits for the persona reports before it dispatches the reconciliation — done (in fruit)CG-145garden retro waits for t…done
+CG-148: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note — done (in fruit)CG-148A frozen or closed phase…done
+CG-152: An in-process runner for scheduler tests so no test drives a subprocess worker — done (in fruit)CG-152An in-process runner for…done
+CG-154: Trust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised HTML and an origin check on POSTs — done (in fruit)CG-154Trust at the edges: PR f…done
+CG-134: garden walkthrough: render the live web app's pages for the retro and the persona reviews — done (in fruit)CG-134garden walkthrough: rend…done
+CG-135: garden qa: an agent drives the loop end to end through the web app on a throwaway garden — done (in fruit)CG-135garden qa: an agent driv…done
+CG-139: Rebase rounds do not count toward the revision cap — done (in fruit)CG-139Rebase rounds do not cou…done
+CG-142: Task actions refuse a task that is done or cancelled — done (in fruit)CG-142Task actions refuse a ta…done
+CG-143: Ship the garden-operate skill with the tool so every new garden gets it — done (in fruit)CG-143Ship the garden-operate …done
+CG-144: A superseded review run is closed when a newer review starts; no run record outlives its process — done (in fruit)CG-144A superseded review run …done
+CG-147: A product clone gets a git identity when it is made, and doctor checks every clone — done (in fruit)CG-147A product clone gets a g…done
+CG-149: Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief cost is measured per phase — done (in fruit)CG-149Briefs inline reading-li…done
+CG-150: garden friction keeps hand-written sections and the retro reads the Reported section and comment friction — done (in fruit)CG-150garden friction keeps ha…done
+CG-155: notify.command is configured, documented, tested by doctor and loud on failure; triage pings fire after the review verdict — done (in fruit)CG-155notify.command is config…done
+CG-163: A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase — blocked (seed, waiting)CG-163A backlog view across ph…blocked
+CG-125: Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart — done (in fruit)CG-125Scheduler/task log shoul…done
+CG-151: principles/00-index.md says friction goes in the result's friction field, not the PR body — cancelled (pressed)CG-151principles/00-index.md s…cancelled
+CG-157: The Inbox friction form's product and phase selects cannot produce a 404 — done (in fruit)CG-157The Inbox friction form'…done
+CG-160: garden retro --skip-personas can dispatch reconciliation with an empty persona-reviews section — done (in fruit)CG-160garden retro --skip-pers…done
+CG-161: garden plan does not check a frozen phase (only closed) — done (in fruit)CG-161garden plan does not che…done
+CG-164: Pre-PR and CI checks run in the scrubbed worker environment — done (in fruit)CG-164Pre-PR and CI checks run…done
+CG-170: A task parked because the base branch was broken re-probes the base every tick and continues by itself when it goes green — done (in fruit)CG-170A task parked because th…done
+CG-165: The ssh runner's remote worker runs in an allowlisted environment — done (in fruit)CG-165The ssh runner's remote …done
+
+    seeddraft · seedsproutready · sproutin leafrunning · in leafbud, taggedwaiting human · bud, taggedin budawaiting triage · in budin flowerin review · in flowerprunedchanges requested · prunedin fruitdone · in fruitwiltedfailed · wilted
+
+  mermaid source (paste into docs or PRs)graph LR
+  CG_030["CG-030<br/>Plates: label what each plate shows, ..."]
+  style CG_030 fill:#eee,stroke:#999,color:#333
+  CG_125["CG-125<br/>Scheduler/task log should distinguish..."]
+  style CG_125 fill:#d4edda,stroke:#155724,color:#333
+  CG_132["CG-132<br/>The web UI can create a task from a f..."]
+  style CG_132 fill:#eee,stroke:#999,color:#333
+  CG_134["CG-134<br/>garden walkthrough: render the live w..."]
+  style CG_134 fill:#d4edda,stroke:#155724,color:#333
+  CG_135["CG-135<br/>garden qa: an agent drives the loop e..."]
+  style CG_135 fill:#d4edda,stroke:#155724,color:#333
+  CG_137["CG-137<br/>Split the scheduler by tick phase and..."]
+  style CG_137 fill:#d4edda,stroke:#155724,color:#333
+  CG_139["CG-139<br/>Rebase rounds do not count toward the..."]
+  style CG_139 fill:#d4edda,stroke:#155724,color:#333
+  CG_141["CG-141<br/>Rebase is its own mode: mechanical fi..."]
+  style CG_141 fill:#d4edda,stroke:#155724,color:#333
+  CG_142["CG-142<br/>Task actions refuse a task that is do..."]
+  style CG_142 fill:#d4edda,stroke:#155724,color:#333
+  CG_143["CG-143<br/>Ship the garden-operate skill with th..."]
+  style CG_143 fill:#d4edda,stroke:#155724,color:#333
+  CG_144["CG-144<br/>A superseded review run is closed whe..."]
+  style CG_144 fill:#d4edda,stroke:#155724,color:#333
+  CG_145["CG-145<br/>garden retro waits for the persona re..."]
+  style CG_145 fill:#d4edda,stroke:#155724,color:#333
+  CG_146["CG-146<br/>A retro page per phase: the reconcile..."]
+  style CG_146 fill:#eee,stroke:#999,color:#333
+  CG_147["CG-147<br/>A product clone gets a git identity w..."]
+  style CG_147 fill:#d4edda,stroke:#155724,color:#333
+  CG_148["CG-148<br/>A frozen or closed phase refuses appr..."]
+  style CG_148 fill:#d4edda,stroke:#155724,color:#333
+  CG_149["CG-149<br/>Briefs inline reading-list snippets f..."]
+  style CG_149 fill:#d4edda,stroke:#155724,color:#333
+  CG_150["CG-150<br/>garden friction keeps hand-written se..."]
+  style CG_150 fill:#d4edda,stroke:#155724,color:#333
+  CG_151["CG-151<br/>principles/00-index.md says friction ..."]
+  style CG_151 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_152["CG-152<br/>An in-process runner for scheduler te..."]
+  style CG_152 fill:#d4edda,stroke:#155724,color:#333
+  CG_153["CG-153<br/>State dirty-on-read no longer clobber..."]
+  style CG_153 fill:#d4edda,stroke:#155724,color:#333
+  CG_154["CG-154<br/>Trust at the edges: PR feedback only ..."]
+  style CG_154 fill:#d4edda,stroke:#155724,color:#333
+  CG_155["CG-155<br/>notify.command is configured, documen..."]
+  style CG_155 fill:#d4edda,stroke:#155724,color:#333
+  CG_156["CG-156<br/>One vocabulary and readable help: ret..."]
+  style CG_156 fill:#eee,stroke:#999,color:#333
+  CG_157["CG-157<br/>The Inbox friction form's product and..."]
+  style CG_157 fill:#d4edda,stroke:#155724,color:#333
+  CG_158["CG-158<br/>Manual tasks get a revise path, a rev..."]
+  style CG_158 fill:#eee,stroke:#999,color:#333
+  CG_159["CG-159<br/>Update the module map in context-gard..."]
+  style CG_159 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_160["CG-160<br/>garden retro --skip-personas can disp..."]
+  style CG_160 fill:#d4edda,stroke:#155724,color:#333
+  CG_161["CG-161<br/>garden plan does not check a frozen p..."]
+  style CG_161 fill:#d4edda,stroke:#155724,color:#333
+  CG_162["CG-162<br/>Move a task to another phase from the..."]
+  style CG_162 fill:#eee,stroke:#999,color:#333
+  CG_163["CG-163<br/>A backlog view across phases: section..."]
+  style CG_163 fill:#fff3cd,stroke:#c9a300,color:#333
+  CG_164["CG-164<br/>Pre-PR and CI checks run in the scrub..."]
+  style CG_164 fill:#d4edda,stroke:#155724,color:#333
+  CG_165["CG-165<br/>The ssh runner's remote worker runs i..."]
+  style CG_165 fill:#d4edda,stroke:#155724,color:#333
+  CG_166["CG-166<br/>Fix broken wait_for_runs reference in..."]
+  style CG_166 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_167["CG-167<br/>tests/test_retro.py calls the removed..."]
+  style CG_167 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_168["CG-168<br/>Fix undefined `wait_for_runs` in test..."]
+  style CG_168 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_169["CG-169<br/>garden qa: run on a schedule in CI wi..."]
+  style CG_169 fill:#d4edda,stroke:#155724,color:#333
+  CG_170["CG-170<br/>A task parked because the base branch..."]
+  style CG_170 fill:#d4edda,stroke:#155724,color:#333
+  CG_171["CG-171<br/>garden new-task does not check a froz..."]
+  style CG_171 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_172["CG-172<br/>test_retro.py has a bare NameError fr..."]
+  style CG_172 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_173["CG-173<br/>Merging a stack parent retargets its ..."]
+  style CG_173 fill:#d4edda,stroke:#155724,color:#333
+  CG_174["CG-174<br/>garden pr and the web attach a new PR..."]
+  style CG_174 fill:#d4edda,stroke:#155724,color:#333
+  CG_175["CG-175<br/>A task that reaches done or cancelled..."]
+  style CG_175 fill:#d4edda,stroke:#155724,color:#333
+  CG_176["CG-176<br/>The merge queue stays on its head: a ..."]
+  style CG_176 fill:#d4edda,stroke:#155724,color:#333
+  CG_177["CG-177<br/>No review is dispatched while a worke..."]
+  style CG_177 fill:#d4edda,stroke:#155724,color:#333
+  CG_178["CG-178<br/>The retro ends in a verdict: close th..."]
+  style CG_178 fill:#eee,stroke:#999,color:#333
+  CG_179["CG-179<br/>Results and reviews speak to each acc..."]
+  style CG_179 fill:#eee,stroke:#999,color:#333
+  CG_180["CG-180<br/>The fake GitHub models CI latency and..."]
+  style CG_180 fill:#eee,stroke:#999,color:#333
+  CG_181["CG-181<br/>The retro has a Features for the next..."]
+  style CG_181 fill:#d4edda,stroke:#155724,color:#333
+  CG_182["CG-182<br/>The tick never blocks the UI: actions..."]
+  style CG_182 fill:#eee,stroke:#999,color:#333
+  CG_183["CG-183<br/>The seedling mark from the garden's P..."]
+  style CG_183 fill:#eee,stroke:#999,color:#333
+  CG_184["CG-184<br/>Design polish from using the app: pag..."]
+  style CG_184 fill:#eee,stroke:#999,color:#333
+  CG_137 --> CG_125
+  CG_137 --> CG_134
+  CG_137 --> CG_135
+  CG_137 --> CG_139
+  CG_137 --> CG_141
+  CG_137 --> CG_142
+  CG_137 --> CG_143
+  CG_137 --> CG_144
+  CG_137 --> CG_145
+  CG_137 --> CG_147
+  CG_137 --> CG_148
+  CG_137 --> CG_149
+  CG_137 --> CG_150
+  CG_137 --> CG_151
+  CG_137 --> CG_152
+  CG_137 --> CG_153
+  CG_137 --> CG_154
+  CG_137 --> CG_155
+  CG_137 --> CG_157
+  CG_137 -.->|discovered| CG_159
+  CG_145 --> CG_160
+  CG_145 -.->|discovered| CG_160
+  CG_148 --> CG_161
+  CG_148 -.->|discovered| CG_161
+  CG_154 --> CG_164
+  CG_154 -.->|discovered| CG_164
+  CG_154 --> CG_165
+  CG_154 -.->|discovered| CG_165
+  CG_148 -.->|discovered| CG_166
+  CG_154 -.->|discovered| CG_167
+  CG_160 -.->|discovered| CG_168
+  CG_135 -.->|discovered| CG_169
+  CG_141 --> CG_170
+  CG_161 -.->|discovered| CG_171
+  CG_161 -.->|discovered| CG_172
+  CG_162 --> CG_163

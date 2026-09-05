@@ -1,0 +1,157 @@
+context-garden/phase-01-bootstrap · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  context-gardenphase-01-bootstrap
+
+    closed 2026-09-04 · 19 of 19 tasks done · 0 PR(s) merged · spent $0.00
+
+  HerbariumBoardTrellis
+
+    Persona reviews
+
+      no persona reviews were run in this phase
+
+    Outcomes
+
+      phase-01-bootstrap goals
+
+Why this phase
+
+There was no tool. This phase builds the minimum loop that lets a human specify work as
+context files and have agents execute it without an agent acting as scheduler.
+
+Goals
+
+A file layout for principles, products, phases, specs and tasks that is readable by
+   humans and cheap to brief agents from.
+
+A CLI that plans a phase into task files, computes the ready set from the dependency
+   graph, dispatches headless claude -p workers in git worktrees, opens PRs, and reacts
+   to review feedback, all without an LLM in the scheduler.
+
+A skill so a human-driven Claude Code session can take a task from the same queue.
+
+A local web UI and a TUI for the board, the graph, and run/cost history.
+
+The tool is its own first product, with a follow-on phase seeded with draft tasks.
+
+Non-goals
+
+Multi-user or hosted operation.
+
+Automatic merging.
+
+Any runner other than local claude -p and a human-driven session.
+
+Definition of done
+
+garden doctor, garden status, garden graph, garden brief work on this repo.
+
+The scheduler's transitions are covered by tests using a fake claude binary and a
+  local bare git remote.
+
+README documents the loop end to end.
+
+        tasks donePRs mergedrevise roundsavg leadfirst passcostdates
+
+        19 / 1900
+
+          $0.00
+          2026-09-04
+
+    Pull requests
+
+        prtasktitletiermerged
+
+        no merged PRs recorded
+
+    Tasks
+
+        idstatustiertitleprcost
+
+        CG-001in fruitdonemediumTask file format and on-disk store
+
+        CG-002in fruitdonemediumDependency graph and ready set
+
+        CG-003in fruitdonemediumWorker brief builder and result contract
+
+        CG-004in fruitdonemediumScheduler: reap, poll, dispatch
+
+        CG-005in fruitdonemediumPlanner: goals and specs to draft tasks
+
+        CG-006in fruitdonemediumWeb UI and TUI
+
+        CG-007in fruitdonemediumClaude Code skills and README
+
+        CG-014in fruitdonehardHarness abstraction and difficulty-based model selection
+
+        CG-015in fruitdonehardRemote workers over ssh
+
+        CG-016in fruitdonehardAutomated review pass and PR tracking
+
+        CG-017in fruitdonehardEvent log, digest and metrics
+
+        CG-018in fruitdonehardPause and resume: waiting_human and garden answer
+
+        CG-019in fruitdonehardDiscovered work from worker results
+
+        CG-020in fruitdonehardStall detection and phase budgets
+
+        CG-021in fruitdonehardStacked dependencies with restack on merge
+
+        CG-022in fruitdonehardModel trials with a leaderboard
+
+        CG-023in fruitdonehardPersona reviews of PRs and phases
+
+        CG-024in fruitdonehardToken-free pre-PR and CI checks
+
+        CG-026in fruitdonemediumBotanical theme: plants per phase and growth-stage glyphs
+
+      context-garden · plate I
+phase-01-bootstrap
+Pisum sativum — garden pea
+19 of 19 tasks done · 0 merged
+closed 2026-09-04 · spent $0.00
+plate: Thomé, Flora von Deutschland, 1885
+
+      pressed
+
+    Artifacts
+
+        context-garden/phase-01-bootstrap/specs/botanical-theme.md
+context-garden/phase-01-bootstrap/specs/brief.md
+context-garden/phase-01-bootstrap/specs/checks.md
+context-garden/phase-01-bootstrap/specs/coordination.md
+context-garden/phase-01-bootstrap/specs/harness.md
+context-garden/phase-01-bootstrap/specs/personas.md
+context-garden/phase-01-bootstrap/specs/remote-runner.md
+context-garden/phase-01-bootstrap/specs/review-pass.md
+context-garden/phase-01-bootstrap/specs/scheduler.md
+context-garden/phase-01-bootstrap/specs/task-format.md
+context-garden/phase-01-bootstrap/specs/triage-and-inbox.md
+context-garden/phase-01-bootstrap/specs/trials.md

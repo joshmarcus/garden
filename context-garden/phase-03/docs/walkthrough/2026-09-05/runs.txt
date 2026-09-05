@@ -1,0 +1,1456 @@
+Runs · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+Runs
+Every worker, review, persona and comparison run, with what it cost.
+
+  468
+runs
+
+  $789.76
+total cost
+
+  1,038,617
+input tokens
+
+  916,153,309
+cache reads
+
+    taskrunmodestatusmodelminbrief tokinputcache-readoutputcost
+
+    _retro-context-garden-phase-02-friction20260905T030535Z-retroretrodoneclaude:claude-fable-5-1
+      521,67629069468021905$2.63
+
+    _retro-context-garden-phase-02-friction20260905T025312Z-retroretrodoneclaude:claude-fable-5-1
+      321,6766616107612450$1.45
+
+    _retro-context-garden-phase-02-friction20260905T024133Z-retroretrodoneclaude:claude-fable-5-1
+      414,92119441677119770$2.23
+
+    _persona20260905T025803Z-personapersonadoneclaude:claude-fable-5-1
+      444,200260133400412910$3.86
+
+    _persona20260905T025716Z-personapersonadoneclaude:claude-fable-5-1
+      644,235322179974222298$5.79
+
+    _persona20260905T025629Z-personapersonadoneclaude:claude-fable-5-1
+      544,239322127524218525$4.23
+
+    _persona20260905T024440Z-personapersonadoneclaude:claude-fable-5-1
+      644,090802310148921228$4.43
+
+    _persona20260905T024354Z-personapersonadoneclaude:claude-fable-5-1
+      744,124418182097623790$4.71
+
+    _persona20260905T024302Z-personapersonadoneclaude:claude-fable-5-1
+      644,122390275542421868$6.49
+
+    _persona20260905T024210Z-personapersonadoneclaude:claude-fable-5-1
+      744,14216276566422945$5.80
+
+    _persona20260905T024121Z-personapersonadoneclaude:claude-fable-5-1
+      644,125770281038418610$3.76
+
+    _persona20260905T024018Z-personapersonadoneclaude:claude-fable-5-1
+      644,129354201472024523$6.57
+
+    CG-18120260905T100938Z-rebaserebasedone
+      00$0.00
+
+    CG-18120260905T100603Z-reviewreviewdoneclaude:claude-opus-4-8
+      322,685163993016389$0.85
+
+    CG-18120260905T095437Z-workworkdoneclaude:claude-sonnet-5
+      116,749126716406544169$2.41
+
+    CG-17720260905T095006Z-rebaserebasedone
+      00$0.00
+
+    CG-17720260905T094742Z-reviewreviewdoneclaude:claude-opus-4-8
+      222,398124549959292$1.15
+
+    CG-17720260905T093410Z-workworkdoneclaude:claude-opus-4-8
+      1224,41086583355747059$5.63
+
+    CG-17720260905T055755Z-workworkfailedclaude:claude-opus-4-8
+      2154,135
+
+    CG-17620260905T100755Z-reviewreviewrunningclaude:claude-opus-4-8
+      326,061
+
+    CG-17620260905T095733Z-reviewreviewdoneclaude:claude-opus-4-8
+      426,1081026184510434$0.96
+
+    CG-17620260905T093519Z-workworkdoneclaude:claude-opus-4-8
+      2116,172126930997383709$8.40
+
+    CG-17620260905T093409Z-workworkcancelled
+      10
+
+    CG-17620260905T055105Z-workworkfailedclaude:claude-opus-4-8
+      2224,176
+
+    CG-17520260905T093255Z-rebaserebasedone
+      00$0.00
+
+    CG-17520260905T055748Z-reviewreviewfailedclaude:claude-opus-4-8
+      21526,425
+
+    CG-17520260905T055438Z-rebaserebasedoneclaude:claude-sonnet-5
+      23,256246415802211$0.23
+
+    CG-17520260905T052824Z-reviewreviewdoneclaude:claude-opus-4-8
+      525,186145130586613$1.10
+
+    CG-17520260905T051438Z-workworkdoneclaude:claude-sonnet-5
+      135,771118730876635912$2.34
+
+    CG-17420260905T053159Z-reviewreviewdoneclaude:claude-opus-4-8
+      317,809123924524066$0.83
+
+    CG-17420260905T052839Z-rebaserebasedone
+      00$0.00
+
+    CG-17420260905T050814Z-reviewreviewdoneclaude:claude-opus-4-8
+      517,426123447125689$0.74
+
+    CG-17420260905T045725Z-workworkdoneclaude:claude-sonnet-5
+      103,964126624324225676$1.87
+
+    CG-17320260905T044928Z-reviewreviewdoneclaude:claude-opus-4-8
+      324,453186185386961$1.02
+
+    CG-17320260905T043320Z-workworkdoneclaude:claude-opus-4-8
+      138,33576448036258372$5.04
+
+    CG-17020260905T044043Z-reviewreviewdoneclaude:claude-opus-4-8
+      324,355145399879404$1.17
+
+    CG-17020260905T042440Z-workworkdoneclaude:claude-opus-4-8
+      156,184106717278252156$6.40
+
+    CG-16920260905T052223Z-reviewreviewdoneclaude:claude-opus-4-8
+      57,308122824534725$0.57
+
+    CG-16920260905T050924Z-workworkdoneclaude:claude-sonnet-5
+      37,4043611457854020$0.40
+
+    CG-16520260905T053157Z-reviewreviewdoneclaude:claude-opus-4-8
+      37,076122930757005$0.65
+
+    CG-16520260905T051447Z-workworkdoneclaude:claude-opus-4-8
+      123,71768292252438566$3.36
+
+    CG-16420260905T050046Z-rebaserebasedone
+      00$0.00
+
+    CG-16420260905T045838Z-reviewreviewdoneclaude:claude-opus-4-8
+      24,587204569775366$0.64
+
+    CG-16420260905T045038Z-revisereviseno_changeclaude:claude-sonnet-5
+      24,466246586164235$0.27
+
+    CG-16420260905T043554Z-reviewreviewdoneclaude:claude-opus-4-8
+      26,125122651472785$0.45
+
+    CG-16420260905T041557Z-workworkdoneclaude:claude-sonnet-5
+      73,892124523964518241$1.53
+
+    CG-16120260905T045135Z-reviewreviewdoneclaude:claude-opus-4-8
+      19,369102612313931$0.62
+
+    CG-16120260905T043440Z-reviewreviewdoneclaude:claude-opus-4-8
+      29,281102411114214$0.56
+
+    CG-16120260905T041549Z-workworkdoneclaude:claude-sonnet-5
+      56,37970281664314744$0.98
+
+    CG-16020260905T041541Z-reviewreviewdoneclaude:claude-opus-4-8
+      46,846122678463077$0.47
+
+    CG-16020260905T040848Z-workworkdoneclaude:claude-sonnet-5
+      53,85470265766111601$0.87
+
+    CG-15720260905T053526Z-rebaserebasedone
+      00$0.00
+
+    CG-15720260905T052330Z-rebaserebasedone
+      00$0.00
+
+    CG-15720260905T051231Z-reviewreviewdoneclaude:claude-opus-4-8
+      54,778122925774135$0.58
+
+    CG-15720260905T050153Z-workworkdoneclaude:claude-sonnet-5
+      103,68488335829918162$1.09
+
+    CG-15520260905T054521Z-rebaserebasedone
+      00$0.00
+
+    CG-15520260905T052632Z-reviewreviewdoneclaude:claude-opus-4-8
+      410,425267359778487$0.99
+
+    CG-15520260905T052218Z-rebaserebasedoneclaude:claude-sonnet-5
+      35,986308628632239$0.33
+
+    CG-15520260905T051907Z-reviewreviewdoneclaude:claude-opus-4-8
+      210,131123254436709$0.73
+
+    CG-15520260905T045717Z-workworkdoneclaude:claude-sonnet-5
+      203,7182101320634455806$3.75
+
+    CG-15420260905T044650Z-reviewreviewdoneclaude:claude-opus-4-8
+      418,9161236531710982$0.93
+
+    CG-15420260905T044250Z-reviserevisedoneclaude:claude-fable-5-1
+      34,4892904287742341$0.61
+
+    CG-15420260905T040535Z-reviserevisedoneclaude:claude-fable-5-1
+      44,315738141706313091$1.94
+
+    CG-15420260905T040209Z-reviewreviewdoneclaude:claude-opus-4-8
+      318,0521236853410985$0.96
+
+    CG-15420260905T034729Z-workworkdoneclaude:claude-fable-5-1
+      143,732962528250261669$8.53
+
+    CG-15320260905T034721Z-reviewreviewdoneclaude:claude-opus-4-8
+      27,85081730055354$0.48
+
+    CG-15320260905T033721Z-workworkdoneclaude:claude-opus-4-8
+      93,67468249686324615$2.52
+
+    CG-15220260905T035702Z-reviewreviewdoneclaude:claude-opus-4-8
+      34,306266668666562$1.00
+
+    CG-15220260905T033741Z-workworkdoneclaude:claude-fable-5-1
+      193,655738472885768270$9.50
+
+    CG-15020260905T054310Z-rebaserebasedone
+      00$0.00
+
+    CG-15020260905T053510Z-reviewreviewdoneclaude:claude-opus-4-8
+      29,602143631714737$0.66
+
+    CG-15020260905T053053Z-rebaserebasedone
+      00$0.00
+
+    CG-15020260905T051457Z-reviewreviewdoneclaude:claude-opus-4-8
+      69,453102482965466$0.66
+
+    CG-15020260905T045705Z-reviewreviewdoneclaude:claude-opus-4-8
+      39,371185044316180$0.83
+
+    CG-15020260905T044804Z-workworkdoneclaude:claude-sonnet-5
+      83,719100493087231807$1.67
+
+    CG-14920260905T050823Z-rebaserebasedone
+      00$0.00
+
+    CG-14920260905T050513Z-reviewreviewdoneclaude:claude-opus-4-8
+      26,299184049676437$0.61
+
+    CG-14920260905T050417Z-rebaserebasedone
+      00$0.00
+
+    CG-14920260905T050027Z-reviewreviewdoneclaude:claude-opus-4-8
+      36,164102093694007$0.43
+
+    CG-14920260905T044755Z-workworkdoneclaude:claude-opus-4-8
+      123,72072295748630823$3.06
+
+    CG-14820260905T040214Z-reviserevisedoneclaude:claude-sonnet-5
+      68,79788360718412573$1.11
+
+    CG-14820260905T035619Z-reviewreviewdoneclaude:claude-opus-4-8
+      415,151185930708021$1.03
+
+    CG-14820260905T033732Z-workworkdoneclaude:claude-sonnet-5
+      186,4061981543118668003$4.48
+
+    CG-14720260905T051800Z-rebaserebasedone
+      00$0.00
+
+    CG-14720260905T051435Z-reviewreviewdoneclaude:claude-opus-4-8
+      212,853227006837779$1.05
+
+    CG-14720260905T051338Z-rebaserebasedone
+      00$0.00
+
+    CG-14720260905T050714Z-reviewreviewdoneclaude:claude-opus-4-8
+      412,709267543518848$1.02
+
+    CG-14720260905T044746Z-workworkdoneclaude:claude-sonnet-5
+      196,1022001316127254682$3.80
+
+    CG-14620260905T030213Z-workworkfailedclaude:claude-opus-4-8
+      205,737
+
+    CG-14520260905T035509Z-reviewreviewdoneclaude:claude-opus-4-8
+      49,884164567026749$0.81
+
+    CG-14520260905T033731Z-workworkdoneclaude:claude-sonnet-5
+      176,3071621068620862240$3.33
+
+    CG-14520260905T030204Z-workworkfailedclaude:claude-sonnet-5
+      203,093
+
+    CG-14420260905T044243Z-reviewreviewdoneclaude:claude-opus-4-8
+      315,480164860998084$0.93
+
+    CG-14420260905T042706Z-workworkdoneclaude:claude-sonnet-5
+      1510,2971641193525558230$3.57
+
+    CG-14320260905T043438Z-reviewreviewdoneclaude:claude-opus-4-8
+      215,037185142666984$0.81
+
+    CG-14320260905T042449Z-workworkdoneclaude:claude-sonnet-5
+      810,55084365795126178$1.28
+
+    CG-14220260905T045305Z-reviserevisedoneclaude:claude-sonnet-5
+      25,5683411170113069$0.44
+
+    CG-14220260905T044557Z-reviewreviewdoneclaude:claude-opus-4-8
+      311,157246641528136$0.92
+
+    CG-14220260905T044056Z-reviserevisedoneclaude:claude-sonnet-5
+      45,2606826542208368$0.89
+
+    CG-14220260905T044000Z-reviewreviewfailedclaude:claude-opus-4-8
+      910,964
+
+    CG-14220260905T042005Z-workworkdoneclaude:claude-sonnet-5
+      193,9713002378414776141$6.27
+
+    CG-14120260905T041944Z-reviewreviewdoneclaude:claude-opus-4-8
+      712,07334129485211796$1.70
+
+    CG-14120260905T041549Z-reviserevisedoneclaude:claude-opus-4-8
+      311,8483811287079701$1.24
+
+    CG-14120260905T040526Z-reviewreviewdoneclaude:claude-opus-4-8
+      511,72532112988111914$1.49
+
+    CG-14120260905T033731Z-workworkdoneclaude:claude-opus-4-8
+      2710,7401781519165891110$12.04
+
+    CG-14120260905T030155Z-workworkfailedclaude:claude-opus-4-8
+      2012,969
+
+    CG-14020260905T020415Z-reviewreviewdoneclaude:claude-opus-4-8
+      211,93339331487713885$0.51
+
+    CG-14020260905T015441Z-workworkdoneclaude:claude-sonnet-5
+      95,3474743393018823658$3.46
+
+    CG-13920260905T054101Z-rebaserebasedone
+      00$0.00
+
+    CG-13920260905T052225Z-reviewreviewdoneclaude:claude-opus-4-8
+      815,2402063714413808$1.20
+
+    CG-13920260905T052114Z-rebaserebasedone
+      00$0.00
+
+    CG-13920260905T050923Z-rebaserebasedoneclaude:claude-sonnet-5
+      76,5975017238426789$0.58
+
+    CG-13920260905T044056Z-reviserevisedoneclaude:claude-sonnet-5
+      189,0961461140133664481$3.65
+
+    CG-13920260905T043128Z-reviewreviewdoneclaude:claude-opus-4-8
+      414,049165014098301$0.97
+
+    CG-13920260905T042911Z-reviserevisefailedclaude:claude-sonnet-5
+      208,866
+
+    CG-13920260905T042004Z-reviserevisedoneclaude:claude-sonnet-5
+      88,72992412137618892$1.33
+
+    CG-13920260905T041303Z-reviewreviewdoneclaude:claude-opus-4-8
+      613,784144011408390$0.86
+
+    CG-13920260905T035733Z-workworkdoneclaude:claude-sonnet-5
+      148,1541481085750260093$3.42
+
+    CG-13720260905T033717Z-reviewreviewdoneclaude:claude-opus-4-8
+      414,369248393598608$1.22
+
+    CG-13720260905T032209Z-workworkdoneclaude:claude-fable-5-1
+      148,637968733304262564$10.17
+
+    CG-13720260905T030145Z-workworkfailedclaude:claude-fable-5-1
+      2014,688
+
+    CG-13620260905T010826Z-reviewreviewdoneclaude:claude-opus-4-8
+      318,54640745860298649$1.06
+
+    CG-13620260905T005008Z-workworkdoneclaude:claude-opus-4-8
+      178,29353531097403063611$9.02
+
+    CG-13520260905T042717Z-reviewreviewdoneclaude:claude-opus-4-8
+      413,6592811430108352$1.55
+
+    CG-13520260905T042650Z-reviewreviewfailedclaude:claude-opus-4-8
+      713,859
+
+    CG-13520260905T042003Z-reviserevisedoneclaude:claude-fable-5-1
+      612,79748211121788847$2.05
+
+    CG-13520260905T035723Z-workworkdoneclaude:claude-fable-5-1
+      207,6731026680848475492$10.34
+
+    CG-13420260905T042017Z-reviewreviewdoneclaude:claude-opus-4-8
+      612,307184848275081$0.72
+
+    CG-13420260905T040848Z-reviserevisedoneclaude:claude-opus-4-8
+      85,64862175539120163$1.86
+
+    CG-13420260905T040745Z-reviewreviewfailedclaude:claude-opus-4-8
+      2611,974
+
+    CG-13420260905T035715Z-workworkdoneclaude:claude-opus-4-8
+      94,38996480533725462$3.97
+
+    CG-13320260905T011037Z-reviewreviewdoneclaude:claude-opus-4-8
+      418,06240704689858266$1.05
+
+    CG-13320260905T004959Z-workworkdoneclaude:claude-opus-4-8
+      206,2898919924457378395$8.47
+
+    CG-13220260905T030223Z-workworkfailedclaude:claude-sonnet-5
+      195,932
+
+    CG-13120260905T010420Z-reviewreviewdoneclaude:claude-opus-4-8
+      314,23640704180898353$0.95
+
+    CG-13120260905T004950Z-workworkdoneclaude:claude-opus-4-8
+      147,7184789483146245735$4.85
+
+    CG-12920260905T005415Z-reviewreviewdoneclaude:claude-opus-4-8
+      28,03240662179685084$0.54
+
+    CG-12920260905T004518Z-workworkdoneclaude:claude-opus-4-8
+      88,2484650270347925892$2.75
+
+    CG-12720260905T001416Z-reviewreviewdoneclaude:claude-opus-4-8
+      16,20739371900252050$0.37
+
+    CG-12720260905T000828Z-workworkdoneclaude:claude-opus-4-8
+      54,7144360112396812737$1.34
+
+    CG-12620260905T010731Z-reviewreviewdoneclaude:claude-opus-4-8
+      413,07339393576475876$0.82
+
+    CG-12620260905T005538Z-reviserevisedoneclaude:claude-opus-4-8
+      1111,1138002149273832350$2.46
+
+    CG-12620260905T005320Z-reviewreviewdoneclaude:claude-opus-4-8
+      212,12840662735094623$0.67
+
+    CG-12620260905T004640Z-workworkdoneclaude:claude-opus-4-8
+      615,4124217148614720505$2.22
+
+    CG-12520260905T053852Z-rebaserebasedone
+      00$0.00
+
+    CG-12520260905T053310Z-rebaserebasedone
+      00$0.00
+
+    CG-12520260905T052221Z-reviewreviewdoneclaude:claude-opus-4-8
+      316,677102757744360$0.64
+
+    CG-12520260905T051438Z-rebaserebasedoneclaude:claude-sonnet-5
+      53,858225867021771$0.21
+
+    CG-12520260905T051133Z-reviewreviewsupersededclaude:claude-opus-4-8
+      1116,459164708093483$0.73
+
+    CG-12520260905T050145Z-workworkdoneclaude:claude-opus-4-8
+      99,01280398511527414$3.71
+
+    CG-12320260904T232903Z-reviewreviewdoneclaude:claude-opus-4-8
+      316,44639393268876284$0.74
+
+    CG-12320260904T231757Z-workworkdoneclaude:claude-opus-4-8
+      1011,0068263346340140634$4.07
+
+    CG-12220260904T233605Z-reviewreviewdoneclaude:claude-opus-4-8
+      110,42539331478283054$0.49
+
+    CG-12220260904T233102Z-workworkdoneclaude:claude-sonnet-5
+      45,9004449219985819419$2.25
+
+    CG-12120260904T234608Z-reviewreviewdoneclaude:claude-opus-4-8
+      312,40740703493945113$0.69
+
+    CG-12120260904T233628Z-workworkdoneclaude:claude-sonnet-5
+      99,4935009489380835710$4.36
+
+    CG-12120260904T232924Z-workworkblockedclaude:claude-sonnet-5
+      614,9524582261574323654$2.78
+
+    CG-11920260904T223940Z-reviewreviewdoneclaude:claude-opus-4-8
+      213,65539413542393521$0.63
+
+    CG-11920260904T223310Z-workworkdoneclaude:claude-opus-4-8
+      611,4824352152678414959$1.97
+
+    CG-11820260904T222712Z-reviewreviewdoneclaude:claude-opus-4-8
+      110,8213931953343196$0.42
+
+    CG-11820260904T221725Z-workworkdoneclaude:claude-sonnet-5
+      96,6004864321627122628$2.90
+
+    CG-11720260904T222316Z-reviewreviewdoneclaude:claude-opus-4-8
+      313,50239413694474688$0.70
+
+    CG-11720260904T221044Z-workworkdoneclaude:claude-sonnet-5
+      125,6805331966587858203$7.76
+
+    CG-11620260904T221538Z-reviewreviewdoneclaude:claude-opus-4-8
+      35,80040723148756959$0.61
+
+    CG-11620260904T220610Z-workworkdoneclaude:claude-opus-4-8
+      96,5898342291214429257$3.25
+
+    CG-11520260904T232824Z-reviewreviewdoneclaude:claude-opus-4-8
+      212,87739331537482480$0.48
+
+    CG-11520260904T232021Z-workworkdoneclaude:claude-sonnet-5
+      77,6815025559464821480$4.37
+
+    CG-11220260904T221043Z-reviserevisedoneclaude:claude-opus-4-8
+      611,3468132321799622139$2.96
+
+    CG-11220260904T221042Z-reviewreviewdoneclaude:claude-opus-4-8
+      520,177408488231612296$1.30
+
+    CG-11220260904T220305Z-reviserevisedoneclaude:claude-opus-4-8
+      711,5424540317408724629$2.91
+
+    CG-11220260904T215406Z-reviewreviewdoneclaude:claude-opus-4-8
+      317,60840766099667682$1.01
+
+    CG-11220260904T214026Z-workworkdoneclaude:claude-opus-4-8
+      139,7115220807717250116$6.75
+
+    CG-11120260905T020459Z-reviewreviewdoneclaude:claude-opus-4-8
+      524,73240704793528596$1.05
+
+    CG-11120260905T014600Z-reviserevisedoneclaude:claude-opus-4-8
+      314,64342199119636189$1.06
+
+    CG-11120260905T004518Z-reviserevisedoneclaude:claude-opus-4-8
+      313,98274936924085410$0.95
+
+    CG-11120260904T222844Z-reviserevisedoneclaude:claude-opus-4-8
+      413,433421591014811592$1.27
+
+    CG-11120260904T221542Z-reviserevisedoneclaude:claude-opus-4-8
+      512,7468362176410713410$1.78
+
+    CG-11120260904T221244Z-reviewreviewdoneclaude:claude-opus-4-8
+      322,47239414345538400$0.94
+
+    CG-11120260904T220304Z-reviserevisedoneclaude:claude-opus-4-8
+      812,6554513281950029562$2.97
+
+    CG-11120260904T215716Z-reviewreviewdoneclaude:claude-opus-4-8
+      520,228396069106015318$1.33
+
+    CG-11120260904T213406Z-workworkdoneclaude:claude-opus-4-8
+      2310,3515202919233876336$8.50
+
+    CG-10920260905T011654Z-reviserevisedoneclaude:claude-sonnet-5
+      48,514458828163098402$2.43
+
+    CG-10920260905T011629Z-reviewreviewdoneclaude:claude-opus-4-8
+      711,231434896349210438$1.24
+
+    CG-10920260905T011207Z-reviserevisedoneclaude:claude-sonnet-5
+      38,067443111677285385$1.16
+
+    CG-10920260904T235956Z-reviserevisedoneclaude:claude-sonnet-5
+      47,517822815050125317$1.40
+
+    CG-10920260904T231738Z-reviewreviewdoneclaude:claude-opus-4-8
+      210,93540703308875209$0.65
+
+    CG-10920260904T230951Z-workworkdoneclaude:claude-sonnet-5
+      76,8505168560291825071$4.33
+
+    CG-10620260904T215902Z-reviewreviewdoneclaude:claude-opus-4-8
+      415,264408482228811312$1.19
+
+    CG-10620260904T215410Z-reviserevisedoneclaude:claude-opus-4-8
+      410,1694360144856613618$1.60
+
+    CG-10620260904T213850Z-reviewreviewdoneclaude:claude-opus-4-8
+      413,877421377601611943$1.16
+
+    CG-10620260904T212653Z-workworkdoneclaude:claude-opus-4-8
+      118,4054924501409138609$4.66
+
+    CG-10420260904T212030Z-reviewreviewdoneclaude:claude-opus-4-8
+      17,0523931849611952$0.31
+
+    CG-10420260904T211520Z-workworkdoneclaude:claude-sonnet-5
+      55,2284590210589811355$1.83
+
+    CG-10120260904T211851Z-reviewreviewdoneclaude:claude-opus-4-8
+      39,36340703033963500$0.54
+
+    CG-10120260904T211520Z-workworkdoneclaude:claude-sonnet-5
+      38,497430214088738504$1.44
+
+    CG-10020260904T220220Z-reviewreviewdoneclaude:claude-opus-4-8
+      429,6264084117516111145$1.63
+
+    CG-10020260904T213519Z-workworkdoneclaude:claude-opus-4-8
+      2613,923104292684420782434$18.03
+
+    CG-09920260905T004506Z-reviewreviewdoneclaude:claude-opus-4-8
+      113,89239372641673932$0.62
+
+    CG-09920260905T004122Z-reviserevisedoneclaude:claude-sonnet-5
+      310,40842908182853546$0.89
+
+    CG-09920260904T231144Z-reviewreviewdoneclaude:claude-opus-4-8
+      113,39439393200444439$0.67
+
+    CG-09920260904T230419Z-workworkdoneclaude:claude-sonnet-5
+      78,3874888442609118618$3.46
+
+    CG-09820260904T220756Z-reviewreviewdoneclaude:claude-opus-4-8
+      314,60339311084772015$0.44
+
+    CG-09820260904T220015Z-reviserevisedoneclaude:claude-sonnet-5
+      713,831429411094398687$1.22
+
+    CG-09820260904T214415Z-reviserevisedoneclaude:claude-sonnet-5
+      1013,1284359358811427645$3.35
+
+    CG-09820260904T214300Z-reviewreviewdoneclaude:claude-opus-4-8
+      114,09339331522962192$0.46
+
+    CG-09820260904T213518Z-workworkdoneclaude:claude-sonnet-5
+      711,6204576200767012565$1.89
+
+    CG-09620260905T020503Z-reviewreviewdoneclaude:claude-opus-4-8
+      116,05539022322323575$0.64
+
+    CG-09620260905T014559Z-reviserevisedoneclaude:claude-sonnet-5
+      211,36242908167842689$0.79
+
+    CG-09620260905T004640Z-revisereviseno_changeclaude:claude-sonnet-5
+      210,78540081267331113$0.39
+
+    CG-09620260905T004414Z-reviewreviewdoneclaude:claude-opus-4-8
+      215,41939413765685146$0.72
+
+    CG-09620260905T003920Z-reviserevisedoneclaude:claude-sonnet-5
+      49,557443111943485439$1.16
+
+    CG-09620260904T230642Z-reviewreviewdoneclaude:claude-opus-4-8
+      314,13142158334747440$1.08
+
+    CG-09620260904T225645Z-workworkdoneclaude:claude-sonnet-5
+      911,5865313914276841176$6.96
+
+    CG-09420260905T003546Z-reviewreviewdoneclaude:claude-opus-4-8
+      39,54039372338066953$0.63
+
+    CG-09420260905T002649Z-reviserevisedoneclaude:claude-opus-4-8
+      85,3834495116958013310$1.32
+
+    CG-09420260904T232748Z-reviewreviewdoneclaude:claude-opus-4-8
+      38,69840682733886106$0.63
+
+    CG-09420260904T232013Z-workworkdoneclaude:claude-opus-4-8
+      73,8604640281725625404$2.92
+
+    CG-09320260904T211407Z-reviewreviewdoneclaude:claude-opus-4-8
+      19,8573931898491969$0.33
+
+    CG-09320260904T211109Z-workworkdoneclaude:claude-sonnet-5
+      28,68441473802162769$0.57
+
+    CG-09320260904T210647Z-workworkdoneclaude:claude-sonnet-5
+      48,4944596219069911963$1.84
+
+    CG-09220260904T212102Z-resumeresumefailedclaude:claude-sonnet-5
+      6183984291556423054$2.49
+
+    CG-09220260904T211110Z-workworkwaitingclaude:claude-sonnet-5
+      210,800402048714211713$0.96
+
+    CG-09120260904T211339Z-reviewreviewdoneclaude:claude-opus-4-8
+      210,4223931928521694$0.34
+
+    CG-09120260904T211108Z-workworkdoneclaude:claude-sonnet-5
+      28,75541494402383016$0.58
+
+    CG-09120260904T205958Z-revisereviseblockedclaude:claude-sonnet-5
+      68,7504314167788921219$1.96
+
+    CG-09120260904T205551Z-workworkdoneclaude:claude-sonnet-5
+      48,5064594224670211673$1.89
+
+    CG-09020260904T213233Z-reviserevisedoneclaude:claude-sonnet-5
+      19,72340101729011322$0.42
+
+    CG-09020260904T213129Z-reviewreviewdoneclaude:claude-opus-4-8
+      110,3093931935962387$0.37
+
+    CG-09020260904T212757Z-reviserevisedoneclaude:claude-sonnet-5
+      39,189457817909497740$1.50
+
+    CG-09020260904T212644Z-reviewreviewdoneclaude:claude-opus-4-8
+      110,07339351828902805$0.47
+
+    CG-09020260904T212417Z-workworkdoneclaude:claude-sonnet-5
+      28,72341473908392267$0.58
+
+    CG-09020260904T210543Z-reviserevisedoneclaude:claude-sonnet-5
+      59,2614298119510112027$1.39
+
+    CG-09020260904T205855Z-reviserevisedoneclaude:claude-sonnet-5
+      58,723405913023177567$1.30
+
+    CG-09020260904T205550Z-workworkdoneclaude:claude-sonnet-5
+      38,496443713420906236$1.24
+
+    CG-08820260905T014247Z-reviewreviewdoneclaude:claude-opus-4-8
+      213,05239352195985107$0.66
+
+    CG-08820260905T004518Z-reviserevisedoneclaude:claude-sonnet-5
+      37,48942908383287564$1.05
+
+    CG-08820260905T003906Z-reviewreviewdoneclaude:claude-opus-4-8
+      412,50940703589348076$0.77
+
+    CG-08820260905T003603Z-reviserevisedoneclaude:claude-sonnet-5
+      27,21842948642323201$0.91
+
+    CG-08820260905T000109Z-reviserevisedoneclaude:claude-sonnet-5
+      66,5654735367019720078$3.18
+
+    CG-08820260904T233529Z-reviewreviewdoneclaude:claude-opus-4-8
+      212,30339352027045771$0.61
+
+    CG-08820260904T232004Z-workworkdoneclaude:claude-sonnet-5
+      155,5535571910224561247$7.48
+
+    CG-08720260904T231509Z-reviewreviewdoneclaude:claude-opus-4-8
+      217,82139331760705673$0.66
+
+    CG-08720260904T230410Z-workworkdoneclaude:claude-sonnet-5
+      1011,3995021659394049039$5.85
+
+    CG-08620260905T020502Z-reviewreviewdoneclaude:claude-opus-4-8
+      519,82540683962867111$0.92
+
+    CG-08620260905T014559Z-reviserevisedoneclaude:claude-sonnet-5
+      68,735811116591565835$1.55
+
+    CG-08620260905T003711Z-reviserevisedoneclaude:claude-sonnet-5
+      58,2414600282153515246$2.44
+
+    CG-08620260905T003453Z-reviewreviewdoneclaude:claude-opus-4-8
+      218,74440725216708018$1.01
+
+    CG-08620260905T002648Z-reviserevisedoneclaude:claude-sonnet-5
+      77,7105150430323617207$3.48
+
+    CG-08620260904T230353Z-reviewreviewdoneclaude:claude-opus-4-8
+      211,62339351999185007$0.58
+
+    CG-08620260904T225523Z-workworkdoneclaude:claude-sonnet-5
+      86,0274880536058935338$4.75
+
+    CG-08520260904T193418Z-reviewreviewdoneclaude:claude-opus-4-8
+      27,16139453464564341$0.53
+
+    CG-08520260904T193159Z-workworkdonehuman
+      24,398
+
+    CG-08420260904T212616Z-reviewreviewdoneclaude:claude-opus-4-8
+      911,4164360123959313235$1.42
+
+    CG-08420260904T211109Z-workworkdoneclaude:claude-opus-4-8
+      152,8014957912961153911$7.65
+
+    CG-08420260904T210750Z-workworkfailedclaude:claude-opus-4-8
+      32,736
+
+    CG-08320260905T015441Z-reviserevisedoneclaude:claude-sonnet-5
+      26,59041535508812725$0.68
+
+    CG-08320260905T014249Z-reviewreviewdoneclaude:claude-opus-4-8
+      37,68240682857325033$0.64
+
+    CG-08320260905T003603Z-reviserevisedoneclaude:claude-sonnet-5
+      45,855443914440676016$1.35
+
+    CG-08320260905T003359Z-reviewreviewdoneclaude:claude-opus-4-8
+      88,464405589622012383$1.27
+
+    CG-08320260905T002340Z-reviserevisedoneclaude:claude-sonnet-5
+      95,4904872309966718546$2.71
+
+    CG-08320260904T231942Z-reviewreviewdoneclaude:claude-opus-4-8
+      38,18340703222658693$0.72
+
+    CG-08320260904T230950Z-reviserevisedoneclaude:claude-sonnet-5
+      95,6294878388731626213$3.34
+
+    CG-08320260904T230700Z-workworkdoneclaude:claude-sonnet-5
+      24,55241495594576672$0.97
+
+    CG-08320260904T225403Z-workworkdoneclaude:claude-sonnet-5
+      104,4984890576920639307$4.90
+
+    CG-08220260904T195926Z-reviserevisedoneclaude:claude-sonnet-5
+      29,58341576727973836$0.77
+
+    CG-08220260904T195614Z-reviewreviewdoneclaude:claude-opus-4-8
+      313,39940683106877380$0.74
+
+    CG-08220260904T195040Z-reviserevisedoneclaude:claude-sonnet-5
+      59,9084586252105617150$2.35
+
+    CG-08220260904T194830Z-reviewreviewdoneclaude:claude-opus-4-8
+      212,04440683032485076$0.65
+
+    CG-08220260904T194448Z-workworkdoneclaude:claude-sonnet-5
+      38,763
+
+    CG-08220260904T193626Z-workworkdoneclaude:claude-sonnet-5
+      88,5905174638348232237$4.96
+
+    CG-08220260904T193247Z-workworkblockedclaude:claude-sonnet-5
+      28,32441577145599401$1.04
+
+    CG-08120260904T220015Z-reviserevisedoneclaude:claude-opus-4-8
+      114,13539311080652432$0.42
+
+    CG-08120260904T215522Z-reviewreviewdoneclaude:claude-opus-4-8
+      323,40140745907747100$1.01
+
+    CG-08120260904T212757Z-reviserevisedoneclaude:claude-opus-4-8
+      1214,9495069470303033580$4.18
+
+    CG-08120260904T212547Z-reviewreviewdoneclaude:claude-opus-4-8
+      221,14740683695395957$0.78
+
+    CG-08120260904T212243Z-reviserevisedoneclaude:claude-opus-4-8
+      313,41137711500473276$0.46
+
+    CG-08120260904T211821Z-reviewreviewdoneclaude:claude-opus-4-8
+      420,96540828188489175$1.16
+
+    CG-08120260904T210100Z-reviserevisedoneclaude:claude-opus-4-8
+      1712,8414775341473466746$4.62
+
+    CG-08120260904T205550Z-reviserevisedoneclaude:claude-opus-4-8
+      513,4834368161665516554$1.80
+
+    CG-08120260904T201042Z-workworkdoneclaude:claude-opus-4-8
+      1511,1939313714652852158$6.25
+
+    CG-08020260905T002322Z-reviewreviewdoneclaude:claude-opus-4-8
+      310,20339433692685633$0.67
+
+    CG-08020260905T001932Z-reviserevisedoneclaude:claude-sonnet-5
+      36,01642968828693601$0.86
+
+    CG-08020260904T225350Z-reviewreviewdoneclaude:claude-opus-4-8
+      310,03340703268027350$0.70
+
+    CG-08020260904T224511Z-workworkdoneclaude:claude-sonnet-5
+      84,5925301761714430601$5.76
+
+    CG-07920260905T021845Z-reviewreviewdoneclaude:claude-opus-4-8
+      328,60039353290067820$1.04
+
+    CG-07920260905T021231Z-reviserevisedoneclaude:claude-opus-4-8
+      415,7624366166042710315$1.65
+
+    CG-07920260905T021139Z-reviewreviewfailedclaude:claude-opus-4-8
+      1728,432
+
+    CG-07920260905T020640Z-reviserevisedoneclaude:claude-opus-4-8
+      215,52140744739653033$0.70
+
+    CG-07920260905T014436Z-reviserevisedoneclaude:claude-opus-4-8
+      215,29640765214062944$0.72
+
+    CG-07920260905T012217Z-reviserevisedoneclaude:claude-opus-4-8
+      314,64142158630436180$1.05
+
+    CG-07920260905T003021Z-reviserevisedoneclaude:claude-opus-4-8
+      214,06439311088791915$0.41
+
+    CG-07920260905T002629Z-reviewreviewdoneclaude:claude-opus-4-8
+      426,779407881583411251$1.33
+
+    CG-07920260905T001932Z-reviserevisedoneclaude:claude-opus-4-8
+      614,4104131275615215528$2.63
+
+    CG-07920260905T000756Z-reviserevisedoneclaude:claude-opus-4-8
+      813,3054795315354816214$2.64
+
+    CG-07920260904T230605Z-reviewreviewdoneclaude:claude-opus-4-8
+      426,149407260758110047$1.24
+
+    CG-07920260904T224502Z-workworkdoneclaude:claude-opus-4-8
+      2011,19253451233708871815$10.22
+
+    CG-07820260904T225940Z-reviewreviewdoneclaude:claude-opus-4-8
+      423,64640663529488939$1.03
+
+    CG-07820260904T224340Z-workworkdoneclaude:fable
+      1515,8225206910898564652$15.94
+
+    CG-07620260904T190936Z-reviewreviewfailedclaude:sonnet
+      9026,621
+
+    CG-07620260904T190326Z-workworkdoneclaude:sonnet
+      62,17024165544913605$1.10
+
+    CG-07520260904T185549Z-reviewreviewfailedclaude:sonnet
+      91510,582
+
+    CG-07520260904T185202Z-workworkdonehuman
+      38,631
+
+    CG-07420260905T021759Z-reviewreviewdoneclaude:claude-opus-4-8
+      37,39242178649837311$1.08
+
+    CG-07420260905T021114Z-reviserevisedoneclaude:claude-sonnet-5
+      37,546443913870035284$1.29
+
+    CG-07420260905T020500Z-reviewreviewdoneclaude:claude-opus-4-8
+      610,918408063690910731$1.05
+
+    CG-07420260905T014323Z-reviserevisedoneclaude:claude-sonnet-5
+      87,02112455467137718492$3.62
+
+    CG-07420260905T001932Z-reviserevisedoneclaude:claude-sonnet-5
+      26,48741535422152471$0.66
+
+    CG-07420260905T001106Z-reviewreviewdoneclaude:claude-opus-4-8
+      49,76242034424778789$0.85
+
+    CG-07420260905T000452Z-reviserevisedoneclaude:claude-sonnet-5
+      56,7534600281132914887$2.44
+
+    CG-07420260904T235956Z-reviserevisedoneclaude:claude-sonnet-5
+      45,639444515997799059$1.51
+
+    CG-07420260904T225314Z-reviewreviewdoneclaude:claude-opus-4-8
+      29,13840887790297303$0.98
+
+    CG-07420260904T224146Z-workworkdoneclaude:claude-sonnet-5
+      114,5235184951225947567$7.43
+
+    CG-07320260904T224330Z-reviewreviewdoneclaude:claude-opus-4-8
+      116,64140704060734467$0.81
+
+    CG-07320260904T223435Z-workworkdoneclaude:claude-opus-4-8
+      811,1894775377116227749$3.66
+
+    CG-07220260904T223908Z-reviewreviewdoneclaude:claude-opus-4-8
+      23,90739371863343700$0.43
+
+    CG-07220260904T223319Z-workworkdoneclaude:claude-sonnet-5
+      52,3024733315330117328$2.76
+
+    CG-07120260904T195209Z-reviewreviewdoneclaude:claude-opus-4-8
+      44,424435486771112560$1.12
+
+    CG-07120260904T194657Z-workworkdonehuman
+      52,295
+
+    CG-06920260904T193239Z-reviewreviewfailedclaude:claude-opus-4-8
+      8798,604
+
+    CG-06920260904T192245Z-workworkdoneclaude:sonnet
+      99,81357642182517771$2.87
+
+    CG-06820260904T224131Z-reviewreviewdoneclaude:claude-opus-4-8
+      317,24040662902367718$0.82
+
+    CG-06820260904T222853Z-workworkdoneclaude:claude-opus-4-8
+      128,9764940695699943567$6.03
+
+    CG-06720260904T223222Z-reviewreviewdoneclaude:claude-opus-4-8
+      16,2163931807792193$0.29
+
+    CG-06720260904T222844Z-workworkdoneclaude:claude-sonnet-5
+      34,3364439133745310919$1.37
+
+    CG-06620260904T231700Z-reviewreviewdoneclaude:claude-opus-4-8
+      27,23039331213183236$0.38
+
+    CG-06620260904T231325Z-workworkdoneclaude:claude-sonnet-5
+      35,8304441155418610931$1.55
+
+    CG-06520260905T014246Z-reviewreviewdoneclaude:claude-opus-4-8
+      311,82240724087279638$0.85
+
+    CG-06520260905T002915Z-reviserevisedoneclaude:claude-sonnet-5
+      29,26141494772082902$0.69
+
+    CG-06520260905T002534Z-reviewreviewdoneclaude:claude-opus-4-8
+      311,558406830846511053$0.84
+
+    CG-06520260905T001931Z-reviserevisedoneclaude:claude-sonnet-5
+      59,4584439157240512504$1.67
+
+    CG-06520260905T000408Z-reviserevisedoneclaude:claude-sonnet-5
+      68,6037805285214516202$2.46
+
+    CG-06520260904T232556Z-reviewreviewdoneclaude:claude-opus-4-8
+      310,724407444669411229$0.89
+
+    CG-06520260904T232304Z-workworkdoneclaude:claude-sonnet-5
+      27,84841537286605209$1.06
+
+    CG-06520260904T231316Z-workworkdoneclaude:claude-sonnet-5
+      67,5554713371910828154$3.70
+
+    CG-06420260905T001931Z-reviserevisedoneclaude:claude-sonnet-5
+      59,054442510527166110$1.12
+
+    CG-06420260905T000755Z-revisereviseno_changeclaude:claude-sonnet-5
+      48,8024302129479911109$1.42
+
+    CG-06420260905T000226Z-reviserevisedoneclaude:claude-sonnet-5
+      512,723457618901067666$1.68
+
+    CG-06420260904T223147Z-reviewreviewdoneclaude:claude-opus-4-8
+      314,32440703811645573$0.74
+
+    CG-06420260904T220305Z-workworkdoneclaude:claude-sonnet-5
+      2810,05456111373298993733$11.12
+
+    CG-06320260904T191708Z-reviewreviewfailedclaude:sonnet
+      8942,570
+
+    CG-06320260904T191219Z-workworkdoneclaude:sonnet
+      42,1332510503477335$0.64
+
+    CG-06220260905T014245Z-reviewreviewdoneclaude:claude-opus-4-8
+      313,01440642192519688$0.80
+
+    CG-06220260905T011654Z-reviserevisedoneclaude:claude-opus-4-8
+      39,16742218258226858$0.97
+
+    CG-06220260905T000755Z-revisereviseno_changeclaude:claude-opus-4-8
+      108,4064811358484631541$3.35
+
+    CG-06220260905T000226Z-reviserevisedoneclaude:claude-opus-4-8
+      57,26143589307538993$1.04
+
+    CG-06220260904T225129Z-reviewreviewdoneclaude:claude-opus-4-8
+      211,87040683055707576$0.72
+
+    CG-06220260904T224146Z-reviserevisedoneclaude:claude-opus-4-8
+      97,6174366160912025425$2.08
+
+    CG-06220260904T223832Z-reviewreviewdoneclaude:claude-opus-4-8
+      511,202421789058813395$1.31
+
+    CG-06220260904T222723Z-workworkdoneclaude:claude-opus-4-8
+      116,2014797356159228717$3.51
+
+    CG-06120260904T211752Z-reviewreviewdoneclaude:claude-opus-4-8
+      175,03438273618197376$0.66
+
+    CG-06120260904T211412Z-workworkdoneclaude:claude-sonnet-5
+      33,143416110137396904$1.28
+
+    CG-06120260904T210443Z-reviserevisefailedclaude:claude-sonnet-5
+      63,690
+
+    CG-06120260904T205550Z-workworkdoneclaude:claude-sonnet-5
+      93,0034739486218531229$4.35
+
+    CG-06020260904T182123Z-reviewreviewdoneclaude:sonnet
+      44,45261715388720$0.35
+
+    CG-06020260904T181639Z-workworkdonehuman
+      42,509
+
+    CG-05920260904T175953Z-reviewreviewdoneclaude:sonnet
+      29,0653550362783$0.19
+
+    CG-05920260904T175736Z-workworkdonehuman
+      27,387
+
+    CG-05820260904T175733Z-reviewreviewdoneclaude:sonnet
+      36,485124030087487$0.39
+
+    CG-05820260904T175336Z-workworkdonehuman
+      45,168
+
+    CG-05720260904T194310Z-reviewreviewfailedclaude:claude-opus-4-8
+      86810,310
+
+    CG-05720260904T193455Z-workworkdoneclaude:claude-opus-4-8
+      86,6014761224287024811$2.56
+
+    CG-05720260904T191218Z-workworkfailedclaude:sonnet
+      216,44358628192760277$3.92
+
+    CG-05520260904T174731Z-reviewreviewfailedclaude:sonnet
+      98412,941
+
+    CG-05520260904T174319Z-workworkdonehuman
+      411,155
+
+    CG-05420260904T193623Z-reviewreviewfailedclaude:claude-opus-4-8
+      87510,770
+
+    CG-05420260904T193350Z-reviserevisedoneclaude:claude-opus-4-8
+      210,25240724319065795$0.77
+
+    CG-05420260904T193211Z-reviewreviewfailedclaude:claude-opus-4-8
+      87912,496
+
+    CG-05420260904T192245Z-reviserevisedoneclaude:sonnet
+      99,80125116656010294$0.73
+
+    CG-05420260904T191837Z-reviewreviewdoneclaude:sonnet
+      412,160829859310904$0.47
+
+    CG-05420260904T190809Z-reviserevisedoneclaude:sonnet
+      109,51522130610530402$1.24
+
+    CG-05420260904T185958Z-workworkdoneclaude:sonnet
+      82,48337309452722885$1.80
+
+    CG-05320260904T193143Z-reviewreviewdoneclaude:claude-opus-4-8
+      311,44343242499958507$0.73
+
+    CG-05320260904T191218Z-workworkdoneclaude:sonnet
+      197,52047468898953995$2.91
+
+    CG-05020260904T192631Z-reviewreviewdoneclaude:sonnet
+      513,12651624197409$0.32
+
+    CG-05020260904T192403Z-workworkdoneclaude:sonnet
+      27,604117857983093$0.75
+
+    CG-05020260904T191217Z-workworkdoneclaude:sonnet
+      117,55342470746733270$2.64
+
+    CG-04920260904T222636Z-reviewreviewdoneclaude:claude-opus-4-8
+      28,4983931894813574$0.40
+
+    CG-04920260904T222130Z-workworkdoneclaude:claude-sonnet-5
+      47,295415568254713229$1.13
+
+    CG-04820260904T222559Z-reviewreviewdoneclaude:claude-opus-4-8
+      311,21240764930585884$0.77
+
+    CG-04820260904T221838Z-workworkdoneclaude:claude-opus-4-8
+      76,3894646347967923305$3.26
+
+    CG-04720260904T172849Z-reviewreviewdoneclaude:haiku
+      27,9019187416507$0.07
+
+    CG-04720260904T172702Z-workworkdonehuman
+      16,044
+
+    CG-04620260904T174046Z-reviserevisefailedclaude:sonnet
+      811,12663374382017387$1.75
+
+    CG-04620260904T172403Z-reviewreviewdoneclaude:haiku
+      211,4689187417109$0.09
+
+    CG-04620260904T172257Z-workworkdonehuman
+      110,755
+
+    CG-04520260904T215908Z-reviserevisefailedclaude:fable
+      111,073
+
+    CG-04520260904T215643Z-reviewreviewdoneclaude:claude-opus-4-8
+      321,38142098043889669$1.24
+
+    CG-04520260904T214307Z-workworkdoneclaude:fable
+      138,1405067806875861663$14.83
+
+    CG-04520260904T173814Z-workworkfailedclaude:sonnet
+      147,10861653510138099$3.28
+
+    CG-04420260904T174548Z-reviewreviewdoneclaude:sonnet
+      315,856135578748798$0.53
+
+    CG-04420260904T173814Z-workworkdoneclaude:sonnet
+      79,64957448967117712$2.07
+
+    CG-04320260904T175557Z-reviewreviewdoneclaude:sonnet
+      23,92351198075833$0.24
+
+    CG-04320260904T173813Z-workworkdoneclaude:sonnet
+      172,57757689480352260$3.67
+
+    CG-04220260904T174356Z-reviewreviewdoneclaude:sonnet
+      311,78951429874377$0.26
+
+    CG-04220260904T173639Z-workworkdoneclaude:sonnet
+      79,01831223838517636$1.41
+
+    CG-04120260904T174210Z-reviewreviewdoneclaude:sonnet
+      37,17092844175056$0.30
+
+    CG-04120260904T173915Z-reviserevisedoneclaude:sonnet
+      36,363197576544100$0.43
+
+    CG-04120260904T173626Z-reviewreviewdoneclaude:sonnet
+      37,921145404955112$0.43
+
+    CG-04120260904T173235Z-workworkdoneclaude:haiku
+      35,894401400515614316$0.63
+
+    CG-04020260904T190803Z-reviewreviewfailedclaude:sonnet
+      90314,538
+
+    CG-04020260904T185855Z-reviserevisedoneclaude:sonnet
+      92,49245372964319830$1.95
+
+    CG-04020260904T173805Z-reviewreviewdoneclaude:sonnet
+      211,92372414235839$0.34
+
+    CG-04020260904T173235Z-workworkdoneclaude:haiku
+      58,291473380859120630$0.61
+
+    CG-03920260904T173041Z-workworkfailedclaude:haiku
+      75,647481530202833578$0.89
+
+    CG-03920260904T172617Z-workworkdoneclaude:haiku
+      45,595305268663218636$0.50
+
+    CG-03820260904T173904Z-reviewreviewfailedclaude:sonnet
+      9926,286
+
+    CG-03820260904T172447Z-workworkdoneclaude:sonnet
+      143,76644405676039681$2.39
+
+    CG-03720260904T212141Z-reviserevisedoneclaude:claude-sonnet-5
+      28,60041473761574995$0.64
+
+    CG-03720260904T210339Z-reviserevisedoneclaude:claude-sonnet-5
+      37,564469713173324663$1.10
+
+    CG-03720260904T210236Z-reviewreviewdoneclaude:claude-opus-4-8
+      510,37341931825345605$0.53
+
+    CG-03720260904T205753Z-reviserevisedoneclaude:claude-sonnet-5
+      47,3734564144721115870$1.70
+
+    CG-03720260904T205549Z-reviserevisedoneclaude:claude-sonnet-5
+      27,561469314490888943$1.41
+
+    CG-03720260904T200934Z-reviewreviewdoneclaude:claude-opus-4-8
+      18,95541952122183364$0.47
+
+    CG-03720260904T200159Z-workworkdoneclaude:claude-sonnet-5
+      77,4854717268833124134$2.78
+
+    CG-03720260904T173639Z-workworkfailedclaude:sonnet
+      46,51193282877930$0.41
+
+    CG-03720260904T173040Z-workworkdoneclaude:haiku
+      46,237257154940210187$0.29
+
+    CG-03720260904T172447Z-workworkfailedclaude:haiku
+      56,176481347061316479$0.55
+
+    CG-03620260904T172949Z-reviewreviewdoneclaude:haiku
+      36,7119187418580$0.08
+
+    CG-03620260904T172446Z-workworkdoneclaude:haiku
+      54,749417262250414293$0.43
+
+    CG-03520260904T173603Z-reviewreviewdoneclaude:sonnet
+      37,21761789556229$0.31
+
+    CG-03520260904T172446Z-workworkdoneclaude:sonnet
+      113,76636316211531198$1.99
+
+    CG-03420260904T185418Z-reviewreviewfailedclaude:sonnet
+      9178,574
+
+    CG-03420260904T184339Z-reviserevisedoneclaude:sonnet
+      106,74943303083329085$1.79
+
+    CG-03420260904T173442Z-reviewreviewdoneclaude:sonnet
+      38,1404948004804$0.25
+
+    CG-03420260904T172445Z-workworkdoneclaude:sonnet
+      106,26646269378630099$1.64
+
+    CG-03320260904T174510Z-workworkfailedclaude:sonnet
+      84,62337258776523503$1.60
+
+    CG-03320260904T172444Z-workworkfailedclaude:sonnet
+      114,52134278588429393$1.80
+
+    CG-03220260904T185152Z-reviserevisedoneclaude:sonnet
+      117,49232240765530288$1.68
+
+    CG-03220260904T174920Z-reviserevisefailedclaude:sonnet
+      258,189
+
+    CG-03220260904T174648Z-reviewreviewfailedclaude:sonnet
+      98410,337
+
+    CG-03220260904T174338Z-workworkdoneclaude:sonnet
+      37,088126000423938$0.50
+
+    CG-03220260904T173639Z-reviserevisefailedclaude:sonnet
+      17,09483312331972$0.37
+
+    CG-03220260904T173227Z-reviewreviewdoneclaude:haiku
+      29,794492502988535$0.13
+
+    CG-03220260904T172825Z-reviserevisedoneclaude:haiku
+      47,583313287858216478$0.52
+
+    CG-03220260904T172444Z-workworkdoneclaude:haiku
+      46,509337299910016630$0.53
+
+    CG-03120260904T174628Z-reviewreviewdoneclaude:sonnet
+      65,084123966108879$0.40
+
+    CG-03120260904T173916Z-workworkdoneclaude:sonnet
+      73,00621113002520064$0.96
+
+    CG-02920260904T231000Z-workworkwaitingclaude:claude-opus-4-8
+      35,758377315138411740$0.64
+
+    CG-02720260904T170850Z-reviewreviewdoneclaude:haiku
+      410,1934119975915207$0.17
+
+    CG-02720260904T170828Z-reviserevisedonehuman
+      07,765
+
+    CG-02720260904T170548Z-reviserevisedonehuman
+      16,952
+
+    CG-02720260904T170332Z-reviewreviewdoneclaude:haiku
+      29,6329187417985$0.08
+
+    CG-02720260904T160635Z-workworkdonehuman
+      576,486
+
+    CG-01320260904T174524Z-reviewreviewdoneclaude:sonnet
+      75,0821248601116584$0.63
+
+    CG-01320260904T173915Z-workworkdoneclaude:sonnet
+      62,27335185628313897$1.04
+
+    CG-01220260904T165554Z-reviserevisedoneclaude:haiku
+      23,4321134679355424$0.10
+
+    CG-01220260904T165350Z-reviewreviewdoneclaude:haiku
+      26,7129187417402$0.07
+
+    CG-01220260904T165125Z-reviserevisedoneclaude:haiku
+      23,1971779191835555$0.18
+
+    CG-01220260904T164817Z-reviewreviewdoneclaude:haiku
+      26,2399187417524$0.07
+
+    CG-01220260904T164554Z-reviserevisedoneclaude:haiku
+      23,1061859265965581$0.17
+
+    CG-01220260904T164333Z-workworkdoneclaude:haiku
+      22,69823315206006193$0.28
+
+    CG-01220260904T163832Z-workworkfailedclaude:haiku
+      52,636481341900623745$0.58
+
+    CG-01020260904T185753Z-reviewreviewdoneclaude:sonnet
+      27,1344919214818$0.24
+
+    CG-01020260904T184338Z-reviserevisedoneclaude:sonnet
+      142,90073696887838739$3.34
+
+    CG-01020260904T174503Z-reviewreviewfailedclaude:sonnet
+      9866,369
+
+    CG-01020260904T174046Z-reviserevisedoneclaude:sonnet
+      42,6882911681999794$0.66
+
+    CG-01020260904T173540Z-reviewreviewdoneclaude:sonnet
+      45,182124070528088$0.42
+
+    CG-01020260904T173040Z-workworkdoneclaude:haiku
+      52,242361322718110983$0.51
+
+    CG-01020260904T172443Z-workworkfailedclaude:haiku
+      52,180481325558017714$0.53
+
+    CG-00920260904T184338Z-reviserevisedoneclaude:sonnet
+      83,97454342445222297$1.77
+
+    CG-00920260904T173040Z-reviserevisedoneclaude:sonnet
+      13,74851143081042$0.11
+
+    CG-00920260904T172611Z-reviewreviewdoneclaude:sonnet
+      38,79351431176828$0.32
+
+    CG-00920260904T172340Z-reviserevisedoneclaude:sonnet
+      23,55692787892738$0.23
+
+    CG-00920260904T172032Z-reviewreviewdoneclaude:sonnet
+      38,659134808215135$0.38
+
+    CG-00920260904T171707Z-workworkdoneclaude:sonnet
+      33,0522212873895659$0.80
+
+    CG-00920260904T170423Z-workworkfailedclaude:sonnet
+      132,99061564491334195$2.79
+
+    CG-00820260904T171252Z-reviewreviewdoneclaude:sonnet
+      27,359103306255173$0.31
+
+    CG-00820260904T170423Z-workworkdoneclaude:sonnet
+      82,94537270389121070$1.77
+
+  Scheduler log
+10:10:49 CG-181: in_review -> done (PR merged: https://github.com/joshmarcus/context-garden/pull/128)
+10:10:48 CG-176: in_review -> done (PR merged: https://github.com/joshmarcus/context-garden/pull/127)
+10:09:40 CG-181: automerge call failed: GraphQL: Base branch was modified. Review and try the merge again. (mergePullRequest)
+10:06:05 CG-181: automerge held: the automated review verdict is not in yet, not approve
+10:06:03 CG-181: review run 20260905T100603Z-review started
+10:06:02 CG-181: running -> in_review (opened https://github.com/joshmarcus/context-garden/pull/128 (base main): Added the product-manager persona as a built-in default, extended the retro reconciliation brief/verdict with a ranked `features` list, rendered a "Features for the next phase" section in the retro doc and next-goals draft, and filed each feature as a draft task in the next phase's worktree (discovered_from: retro:<phase>), skipping title/flagged duplicates with a log line. cost=$2.41)

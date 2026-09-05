@@ -1,0 +1,50 @@
+20260905T053852Z-rebase · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+    CG-125 · run
+    20260905T053852Z-rebase
+
+      done
+      rebase · harness · 0 min · $0.00
+
+  Back to taskgarden/cg-125-scheduler-task-log-should-distinguish-prior-atte
+
+    Transcript
+    Brief
+    Final message
+    stderr
+
+    This run recorded a single claude-json result rather than a streamed transcript. Its final message is below.
+
+    (no final message)
+
+  (no brief recorded)
+
+  (no final message)
+
+  (stderr was empty)

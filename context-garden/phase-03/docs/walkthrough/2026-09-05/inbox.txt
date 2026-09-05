@@ -1,0 +1,362 @@
+Inbox · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  What needs you
+Every item here is a decision only a person can make. Beyond that, the garden grows.
+
+  BoardTimeline
+
+  13
+need you
+
+  0/5
+workers running
+
+  1/3
+reviews running
+
+  0
+PRs open
+
+  $789.76
+spent in 24h
+
+  approveApprove planned or discovered work
+Draft tasks waiting for a go.
+
+    seed
+
+    CG-030draftseed · easy · 7h
+
+      Plates: label what each plate shows, keep every file public domain, credit Thomé
+
+      planned, not yet approved · back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-132draftseed · easy · 7h
+
+      The web UI can create a task from a form, with the same fields as garden new-task
+
+      planned, not yet approved · 1 attempt · back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-146draftseed · medium · 7h
+
+      A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+
+      planned, not yet approved · 1 attempt · back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-156draftseed · medium · 6h
+
+      One vocabulary and readable help: retry, resume and decide named once; help panels; --version; garden status at 80 columns
+
+      discovered by retro:context-garden/phase-02-friction · filed from the phase-02 retro (open item 10)
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-158draftseed · medium · 6h
+
+      Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden finish
+
+      discovered by retro:context-garden/phase-02-friction · filed from the phase-02 retro (open item 13)
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-162draftseed · medium · 6h
+
+      Move a task to another phase from the task page and the CLI, keeping its id, history and state
+
+      planned, not yet approved · ] Tests cover the CLI and the web action, including both refusals.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-163draftseed · medium · 6h
+
+      A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase
+
+      planned, not yet approved · blocked until deps merge · ] Tests cover the order action, the multi-phase render and the refusal path.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-178draftseed · medium · 30m
+
+      The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first
+
+      planned, not yet approved · ] Tests for each verdict path with the fake harness, including the refusal and the override.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-179draftseed · medium · 28m
+
+      Results and reviews speak to each acceptance criterion by name, with evidence
+
+      planned, not yet approved · ] Tests with the fake harness for a result that skips a criterion.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-180draftseed · medium · 28m
+
+      The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before it is trusted
+
+      planned, not yet approved · ] `garden canary` (or `garden qa --scripted --pin <sha>`) installs the given build into a throwaway venv, runs the scripted QA flows plus one stacked-PR and one merge-queue scenario against the fake GitHub, and exits non-zero on any failure; the operator skill says to run it before moving the pin.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-182draftseed · medium · 10m
+
+      The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records outside the tick
+
+      planned, not yet approved · ] The `test` pre-PR check can be turned back on in garden.yaml without the UI slowing down.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-183draftseed · easy · 6m
+
+      The seedling mark from the garden's PR comments sits left of the wordmark in the web header, and is the favicon
+
+      planned, not yet approved · ] The PR comment marker is unchanged.
+
+        Approve
+
+        Drop
+
+    seed
+
+    CG-184draftseed · easy · 6m
+
+      Design polish from using the app: page-head subtitles wrap too early, and other small layout nits
+
+      planned, not yet approved · ] A test renders the Inbox and checks the page-head paragraph has no fixed 62ch cap.
+
+        Approve
+
+        Drop
+
+  Progress
+Merged work against scope, all phases
+
+0
+
+76
+
+153
+
+153 in scope
+
+115 merged
+115 merged
+2026-09-04T17:02: 1 merged
+2026-09-04T17:18: 2 merged
+2026-09-04T17:24: 3 merged
+2026-09-04T17:32: 4 merged
+2026-09-04T17:40: 5 merged
+2026-09-04T17:42: 6 merged
+2026-09-04T17:42: 7 merged
+2026-09-04T17:45: 8 merged
+2026-09-04T17:49: 9 merged
+2026-09-04T18:05: 10 merged
+2026-09-04T18:06: 11 merged
+2026-09-04T18:06: 12 merged
+2026-09-04T18:09: 13 merged
+2026-09-04T18:25: 14 merged
+2026-09-04T18:28: 15 merged
+2026-09-04T18:29: 16 merged
+2026-09-04T18:33: 17 merged
+2026-09-04T18:54: 18 merged
+2026-09-04T18:55: 19 merged
+2026-09-04T18:59: 20 merged
+2026-09-04T18:59: 21 merged
+2026-09-04T19:05: 22 merged
+2026-09-04T19:09: 23 merged
+2026-09-04T19:11: 24 merged
+2026-09-04T19:18: 25 merged
+2026-09-04T19:34: 26 merged
+2026-09-04T19:34: 27 merged
+2026-09-04T19:36: 28 merged
+2026-09-04T19:38: 29 merged
+2026-09-04T19:44: 30 merged
+2026-09-04T20:14: 31 merged
+2026-09-04T20:15: 32 merged
+2026-09-04T21:18: 33 merged
+2026-09-04T21:18: 34 merged
+2026-09-04T21:20: 35 merged
+2026-09-04T21:21: 36 merged
+2026-09-04T21:26: 37 merged
+2026-09-04T21:26: 38 merged
+2026-09-04T21:27: 39 merged
+2026-09-04T22:02: 40 merged
+2026-09-04T22:02: 41 merged
+2026-09-04T22:03: 42 merged
+2026-09-04T22:04: 43 merged
+2026-09-04T22:06: 44 merged
+2026-09-04T22:09: 45 merged
+2026-09-04T23:57: 46 merged
+2026-09-04T23:58: 47 merged
+2026-09-04T23:58: 48 merged
+2026-09-04T23:58: 49 merged
+2026-09-04T23:58: 50 merged
+2026-09-04T23:58: 51 merged
+2026-09-04T23:58: 52 merged
+2026-09-04T23:59: 53 merged
+2026-09-04T23:59: 54 merged
+2026-09-04T23:59: 55 merged
+2026-09-04T23:59: 56 merged
+2026-09-05T00:00: 57 merged
+2026-09-05T00:01: 58 merged
+2026-09-05T00:01: 59 merged
+2026-09-05T00:05: 60 merged
+2026-09-05T00:06: 61 merged
+2026-09-05T00:07: 62 merged
+2026-09-05T00:17: 63 merged
+2026-09-05T00:26: 64 merged
+2026-09-05T00:28: 65 merged
+2026-09-05T00:29: 66 merged
+2026-09-05T00:41: 67 merged
+2026-09-05T00:49: 68 merged
+2026-09-05T00:57: 69 merged
+2026-09-05T01:10: 70 merged
+2026-09-05T01:13: 71 merged
+2026-09-05T01:14: 72 merged
+2026-09-05T01:18: 73 merged
+2026-09-05T01:24: 74 merged
+2026-09-05T01:45: 75 merged
+2026-09-05T01:53: 76 merged
+2026-09-05T01:54: 77 merged
+2026-09-05T01:58: 78 merged
+2026-09-05T02:07: 79 merged
+2026-09-05T02:10: 80 merged
+2026-09-05T02:12: 81 merged
+2026-09-05T02:13: 82 merged
+2026-09-05T02:17: 83 merged
+2026-09-05T02:30: 84 merged
+2026-09-05T03:42: 85 merged
+2026-09-05T03:50: 86 merged
+2026-09-05T03:59: 87 merged
+2026-09-05T04:02: 88 merged
+2026-09-05T04:24: 89 merged
+2026-09-05T04:29: 90 merged
+2026-09-05T04:30: 91 merged
+2026-09-05T04:34: 92 merged
+2026-09-05T04:36: 93 merged
+2026-09-05T04:38: 94 merged
+2026-09-05T04:47: 95 merged
+2026-09-05T04:50: 96 merged
+2026-09-05T04:52: 97 merged
+2026-09-05T04:54: 98 merged
+2026-09-05T04:57: 99 merged
+2026-09-05T05:00: 100 merged
+2026-09-05T05:03: 101 merged
+2026-09-05T05:13: 102 merged
+2026-09-05T05:21: 103 merged
+2026-09-05T05:37: 104 merged
+2026-09-05T05:47: 105 merged
+2026-09-05T05:48: 106 merged
+2026-09-05T05:49: 107 merged
+2026-09-05T05:50: 108 merged
+2026-09-05T05:52: 109 merged
+2026-09-05T05:53: 110 merged
+2026-09-05T05:53: 111 merged
+2026-09-05T09:35: 112 merged
+2026-09-05T09:52: 113 merged
+2026-09-05T10:10: 114 merged
+2026-09-05T10:10: 115 merged
+Sep 04
+Sep 05 10:10
+merged (115)PRs opened (118)
+
+  Spend
+Cost by difficulty tier
+
+easy
+easy: $328.70 over 68 task(s)
+$328.70 · 68 tasks
+medium
+medium: $320.54 over 48 task(s)
+$320.54 · 48 tasks
+hard
+hard: $88.57 over 7 task(s)
+$88.57 · 7 tasks
+If a tier's revisions climb, its model is too cheap for the work; see metrics.
+
+  Report friction…
+
+    Report friction about this process
+
+        context-garden
+
+        context-garden/phase-01-bootstrapcontext-garden/phase-02-frictioncontext-garden/phase-03context-garden/phase-04
+
+      File report

@@ -1,0 +1,812 @@
+context-garden/phase-03 · context-garden
+
+?
+
+  context-gardencontext garden
+
+    Inbox 13
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs $790
+    Config
+
+    Phases
+
+    phase-03Plate III · Digitalis purpureacontext-garden · 37 tasksphase-04Plate IV · Dryopteris filix-mascontext-garden · 14 tasks
+
+    Herbariumclosed phases, pressed and filed2 closed phases
+
+    Running now
+
+      CG-176review · claude-opus-4-8 · 3 min
+
+    scheduler loop on · tick 10:09:47Z
+
+    ↻ Tick now
+
+  context-gardenphase-03
+
+    spent $187.47 of $1000.00 · 30 PR(s) tracked · fixed brief cost ~3,513 tokens (head + rules + digest + product + goals)
+
+      Budget $
+
+       no budget
+      Set
+
+  BoardTrellis
+
+    Progress
+Merged against scope
+
+0
+
+15
+
+30
+
+30 in scope
+
+30 merged
+30 merged
+2026-09-05T03:42: 1 merged
+2026-09-05T03:50: 2 merged
+2026-09-05T03:59: 3 merged
+2026-09-05T04:02: 4 merged
+2026-09-05T04:24: 5 merged
+2026-09-05T04:29: 6 merged
+2026-09-05T04:30: 7 merged
+2026-09-05T04:34: 8 merged
+2026-09-05T04:36: 9 merged
+2026-09-05T04:38: 10 merged
+2026-09-05T04:47: 11 merged
+2026-09-05T04:50: 12 merged
+2026-09-05T04:52: 13 merged
+2026-09-05T04:54: 14 merged
+2026-09-05T04:57: 15 merged
+2026-09-05T05:00: 16 merged
+2026-09-05T05:03: 17 merged
+2026-09-05T05:13: 18 merged
+2026-09-05T05:21: 19 merged
+2026-09-05T05:37: 20 merged
+2026-09-05T05:47: 21 merged
+2026-09-05T05:48: 22 merged
+2026-09-05T05:49: 23 merged
+2026-09-05T05:50: 24 merged
+2026-09-05T05:52: 25 merged
+2026-09-05T05:53: 26 merged
+2026-09-05T05:53: 27 merged
+2026-09-05T09:35: 28 merged
+2026-09-05T09:52: 29 merged
+2026-09-05T10:10: 30 merged
+Sep 05
+Sep 05 10:11
+merged (30)PRs opened (30)
+
+        hide 37 done
+
+      idstatusptiertitledepsprreviewcirevbrieftokenscost
+
+      CG-137in fruitdonefirst · 0hardSplit the scheduler by tick phase and the web actions into a registry so features stop colliding
+        #96
+        auto: approve
+        success
+
+        ~15,017
+        992 / 8,172,401 / 71,172
+        $11.39
+
+      CG-153in fruitdonefirst · 0mediumState dirty-on-read no longer clobbers concurrent writes; a resumed reap does not double-emit run_finishedCG-137
+        #97
+        auto: approve
+        success
+
+        ~3,514
+        76 / 2,669,868 / 29,969
+        $3.00
+
+      CG-159pressedcancelledfirst · 0easyUpdate the module map in context-garden/product.md for the scheduler and web packages
+
+        ~15,017
+
+      CG-176in fruitdonefirst · 0mediumThe merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped, and merges when CI goes green
+        #127
+
+        success
+
+        ~3,629
+        136 / 9,571,818 / 94,143
+        $9.36
+
+      CG-141in fruitdonenext · 1mediumRebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queueCG-137
+        #102
+        auto: approve
+        success
+        1
+        ~13,137
+        282 / 18,745,098 / 124,521
+        $16.47
+
+      CG-145in fruitdonenext · 1easygarden retro waits for the persona reports before it dispatches the reconciliationCG-137
+        #98
+        auto: approve
+        success
+
+        ~3,589
+        178 / 11,142,910 / 68,989
+        $4.14
+
+      CG-148in fruitdonenext · 1easyA frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a noteCG-137
+        #99
+        auto: approve
+        success
+        1
+        ~6,027
+        304 / 19,631,440 / 88,597
+        $6.62
+
+      CG-152in fruitdonenext · 1hardAn in-process runner for scheduler tests so no test drives a subprocess workerCG-137
+        #100
+        auto: approve
+        success
+
+        ~3,514
+        764 / 5,395,723 / 74,832
+        $10.49
+
+      CG-154in fruitdonenext · 1hardTrust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised HTML and an origin check on POSTsCG-137
+        #101
+        auto: approve
+        success
+        2
+        ~3,514
+        2,014 / 7,862,190 / 99,068
+        $12.98
+
+      CG-160in fruitdonenext · 1easygarden retro --skip-personas can dispatch reconciliation with an empty persona-reviews sectionCG-145
+        #106
+        auto: approve
+        success
+
+        ~3,589
+        82 / 2,925,507 / 14,678
+        $1.33
+
+      CG-161in fruitdonenext · 1easygarden plan does not check a frozen phase (only closed)CG-148
+        #110
+        auto: approve
+        success
+
+        ~6,027
+        90 / 3,318,985 / 22,889
+        $2.15
+
+      CG-164in fruitdonenext · 1easyPre-PR and CI checks run in the scrubbed worker environmentCG-154
+        #109
+        auto: approve
+        success
+        1
+        ~3,514
+        180 / 6,620,385 / 30,627
+        $2.88
+
+      CG-166pressedcancellednext · 1easyFix broken wait_for_runs reference in tests/test_retro.py on main
+
+        ~6,027
+
+      CG-167pressedcancellednext · 1easytests/test_retro.py calls the removed wait_for_runs helper; main's tests and lint are red
+
+        ~3,514
+
+      CG-168pressedcancellednext · 1easyFix undefined `wait_for_runs` in test_retro_waits_for_every_persona_report_before_reconciling
+
+        ~3,589
+
+      CG-170in fruitdonenext · 1mediumA task parked because the base branch was broken re-probes the base every tick and continues by itself when it goes greenCG-141
+        #113
+        auto: approve
+        success
+
+        ~5,494
+        120 / 7,712,769 / 61,560
+        $7.56
+
+      CG-171pressedcancellednext · 1easygarden new-task does not check a frozen phase either
+
+        ~6,027
+
+      CG-172pressedcancellednext · 1easytest_retro.py has a bare NameError from the CG-152 in-process-runner rebase
+
+        ~6,027
+
+      CG-173in fruitdonenext · 1mediumMerging a stack parent retargets its children before the branch is deleted, and a child never opens a PR against a deleted branch
+        #115
+        auto: approve
+        success
+
+        ~7,808
+        94 / 5,098,900 / 65,333
+        $6.07
+
+      CG-177in fruitdonenext · 1mediumNo review is dispatched while a worker run is in flight, and the reap finds a task's worker run by mode, so a review record can never send a running task back to ready
+        #126
+        auto: approve
+        success
+
+        ~3,651
+        98 / 6,288,552 / 56,351
+        $6.78
+
+      CG-134in fruitdonenormal · 2mediumgarden walkthrough: render the live web app's pages for the retro and the persona reviewsCG-137
+        #103
+        auto: approve
+        success
+        1
+        ~3,883
+        176 / 7,045,555 / 50,706
+        $6.55
+
+      CG-135in fruitdonenormal · 2hardgarden qa: an agent drives the loop end to end through the web app on a throwaway gardenCG-137
+        #107
+        auto: approve
+        success
+        1
+        ~7,247
+        1,536 / 9,063,672 / 92,691
+        $13.94
+
+      CG-139in fruitdonenormal · 2easyRebase rounds do not count toward the revision capCG-137
+        #105
+        auto: approve
+        success
+        3
+        ~7,665
+        486 / 29,643,749 / 180,754
+        $12.03
+
+      CG-142in fruitdonenormal · 2easyTask actions refuse a task that is done or cancelledCG-137
+        #112
+        auto: approve
+        success
+        2
+        ~3,581
+        426 / 28,219,530 / 95,714
+        $8.52
+
+      CG-143in fruitdonenormal · 2easyShip the garden-operate skill with the tool so every new garden gets itCG-137
+        #111
+        auto: approve
+        success
+
+        ~10,190
+        102 / 4,172,217 / 33,162
+        $2.09
+
+      CG-144in fruitdonenormal · 2easyA superseded review run is closed when a newer review starts; no run record outlives its processCG-137
+        #114
+        auto: approve
+        success
+
+        ~9,789
+        180 / 12,421,354 / 66,314
+        $4.50
+
+      CG-147in fruitdonenormal · 2easyA product clone gets a git identity when it is made, and doctor checks every cloneCG-137
+        #118
+        auto: approve
+        success
+
+        ~5,628
+        248 / 14,616,306 / 71,309
+        $5.87
+
+      CG-149in fruitdonenormal · 2mediumBriefs inline reading-list snippets from the target checkout and verify every path; the fixed brief cost is measured per phaseCG-137
+        #117
+        auto: approve
+        success
+
+        ~3,514
+        100 / 3,571,822 / 41,267
+        $4.10
+
+      CG-150in fruitdonenormal · 2easygarden friction keeps hand-written sections and the retro reads the Reported section and comment frictionCG-137
+        #116
+        auto: approve
+        success
+
+        ~3,514
+        142 / 6,046,770 / 48,190
+        $3.81
+
+      CG-155in fruitdonenormal · 2easynotify.command is configured, documented, tested by doctor and loud on failure; triage pings fire after the review verdictCG-137
+        #123
+        auto: approve
+        success
+
+        ~3,514
+        278 / 15,130,627 / 73,241
+        $5.80
+
+      CG-169in fruitdonenormal · 2easygarden qa: run on a schedule in CI with the scripted agent
+        #122
+        auto: approve
+        success
+
+        ~7,247
+        48 / 1,428,238 / 8,745
+        $0.96
+
+      CG-174in fruitdonenormal · 2easygarden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll follows the new PR
+        #119
+        auto: approve
+        success
+
+        ~3,621
+        150 / 6,980,406 / 35,431
+        $3.44
+
+      CG-175in fruitdonenormal · 2easyA task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished task
+        #125
+        auto: approve
+        success
+
+        ~5,478
+        156 / 8,463,404 / 44,736
+        $3.67
+
+      CG-125in fruitdonelater · 3mediumScheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restartCG-137
+        #120
+        auto: approve
+        success
+
+        ~8,709
+        128 / 5,318,400 / 37,028
+        $5.30
+
+      CG-151pressedcancelledlater · 3easyprinciples/00-index.md says friction goes in the result's friction field, not the PR bodyCG-137
+
+        ~3,514
+
+      CG-157in fruitdonelater · 3easyThe Inbox friction form's product and phase selects cannot produce a 404CG-137
+        #121
+        auto: approve
+        success
+
+        ~3,514
+        100 / 3,650,876 / 22,297
+        $1.67
+
+      CG-165in fruitdonelater · 3mediumThe ssh runner's remote worker runs in an allowlisted environmentCG-154
+        #124
+        auto: approve
+        success
+
+        ~3,514
+        80 / 3,215,599 / 45,571
+        $4.00
+
+        Approve all drafts
+
+           tasks">Plan phase
+
+        Close phase
+
+        Persona review of the body of work:
+
+         file high findings as tasks
+        Run personas
+
+    Goals
+phase-03 goals
+
+Why this phase
+
+In one sentence: make the loop something you can leave running. Phase 02 proved the loop can build the tool: 89 tasks done, 94 PRs merged, $547. It also proved that an operator had to press a button about a hundred times in a day, almost always for the same five reasons. This phase removes those reasons rather than adding anything a person would notice.
+
+Nothing collides. The scheduler and the web actions are split so two changes rarely touch the same file (two files took 20 of 22 conflicts), and a PR is rebased once, right before it merges, with no re-review of code the reviewer already approved.
+
+Nothing is lost or counted twice. Runs survive sweeps and restarts (fifteen were lost), superseded and dead records are closed, state does not clobber a concurrent write, cost is counted once, and the caps count only what they were meant to.
+
+Nothing is trusted that should not be. Feedback only from trusted authors, workers with a scrubbed environment and a fence, a frozen or closed phase that refuses work, and a web UI that checks who is posting.
+
+The tests do not lie. Scheduler tests run in-process instead of driving subprocess workers (four flake fixes in one phase), and the QA agent and walkthrough exercise the real pages.
+
+The operator needs the button less. Config changes without restarts, notifications that fire, clones with an identity, briefs that match the checkout, and a retro that waits for its own inputs.
+
+No user-visible feature enters this phase; features wait for phase 04. The retro that produced this list is in ../phase-02-friction/docs/retro.md and ../phase-02-friction/docs/retro/.
+
+Goals
+
+Structure. The scheduler split by tick phase, the web actions as a registry, tests by area, the fake harness as a table (CG-137). This runs first and alone: nothing else is dispatched until it merges.
+
+Rebase as its own mode, and a merge queue. Mechanical rebase first, an agent only on a real conflict, no re-review when the diff is unchanged, one PR rebased at a time right before it merges; caps count only worker rounds (CG-141, CG-139).
+
+State and accounting are correct. The dirty-on-read rule no longer clobbers a concurrent write; a resumed reap does not double-count cost; a superseded or dead run record is closed (CG-144); actions refuse terminal tasks (CG-142); a freeze is phase state (CG-148).
+
+Trust at the edges. PR feedback becomes a worker prompt only from trusted authors; workers run with a scrubbed environment; the web UI sanitises rendered HTML and checks the origin of POSTs.
+
+Testability. An in-process runner for scheduler tests so nothing drives a subprocess worker; the walkthrough and the QA agent so the pages are tested, not pictured (CG-134, CG-135).
+
+Operability. A config change takes effect without a restart; notify.command is configured, documented and tested; every clone gets a git identity (CG-147); the retro waits for its reports (CG-145); briefs are inlined from the target checkout with the fixed brief cost measured per phase.
+
+Non-goals
+
+Any new user-facing feature: the new-task form, the retro page, plates content. Phase 04.
+
+Hosted or multi-user operation.
+
+Changing the herbarium look.
+
+Definition of done
+
+Measured with garden metrics against phase 02's numbers.
+
+conflict rebase rounds per merge under 0.2 (phase 02 after 20:00: 0.59).
+
+description-only revise rounds: none (phase 02: 12).
+
+first-pass review approval at 90% or better on easy and medium (phase 02: 83% and 84%).
+
+cost per easy task at or under $4 (phase 02: about $6).
+
+no module over 800 lines under src/garden/scheduler/ or src/garden/web/; task_action is a registry lookup.
+
+no test drives a subprocess worker; the QA agent passes every flow on the demo garden.
+
+the three trust items in goal 4 merged.
+
+a garden.yaml change takes effect within one tick, no restart.
+
+every task shipped through garden tick; exceptions listed in the closing document.
+
+Carried over from phase 02
+
+Drafts moved here with their "deferred by the freeze" notes: CG-125, CG-134, CG-135, CG-137, CG-139, CG-141, CG-142, CG-143, CG-144, CG-145, CG-147, CG-148. Drafts filed from the retro's open list carry discovered_from: retro:context-garden/phase-02-friction. Features moved to phase 04: CG-030, CG-132, CG-146, CG-156 (vocabulary and help), CG-158 (manual-task ergonomics).
+
+      context-garden · plate III
+phase-03
+Digitalis purpurea — foxglove
+30 tasks · 30 merged · 0 PRs open
+spent $187.47 of $1000.00
+plate: Thomé, Flora von Deutschland, 1885
+
+      complete
+
+    Spend
+Cost by difficulty tier
+
+easy
+easy: $69.49 over 16 task(s)
+$69.49 · 16 tasks
+medium
+medium: $69.18 over 10 task(s)
+$69.18 · 10 tasks
+hard
+hard: $48.79 over 4 task(s)
+$48.79 · 4 tasks
+
+      tiertasksdoneavg revfirst-pass
+
+      easy16160.44100%
+medium10100.290%
+hard440.75100%
+
+    context-garden/phase-03/docs/friction.mdFriction
+
+No friction reported yet.
+
+Reported
+
+2026-09-05 · reported by CG-137 (Split the scheduler by tick phase and the web actions into a registry so features stop colliding) in run 20260905T032209Z-work
+
+The acceptance criterion names product.md, which lives in the driving garden repo, not in this checkout; it cannot be edited from a product worktree.
+
+Baseline flake: tests/test_isolation.py::test_conftest_fixture_clears_ambient_env failed once under the runner's ambient GARDEN_ROOT and passed on later runs.
+
+2026-09-05 · reported by CG-145 (garden retro waits for the persona reports before it dispatches the reconciliation) in run 20260905T033731Z-work
+
+The retro's persona-wait logic (aux-run-list based) already existed from CG-133 and looked correct at a glance in a single-process test; the actual bug only appears from state saved mid-dispatch being read by a concurrent process, which took some digging to reconstruct from the incident timestamps in the task log.
+
+2026-09-05 · reported by CG-148 (A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note) in run 20260905T033732Z-work
+
+The brief's exact meaning of "dispatch" was ambiguous between the scheduler's tick-time auto-dispatch, the garden dispatch CLI command, and the web dispatch button; centralizing the guard in Scheduler.dispatch() covers all three, but a brief that named which one(s) explicitly would have saved some investigation.
+
+2026-09-05 · reported by CG-152 (An in-process runner for scheduler tests so no test drives a subprocess worker) in run 20260905T033741Z-work
+
+The task had no acceptance criteria; I took the phase definition-of-done line (no test drives a subprocess worker) as the requirement and treated the ssh end-to-end test, whose subject is a shell script, as the one deliberate exception.
+
+2026-09-05 · discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised HTML and an origin check on POSTs) in run 20260905T034729Z-work
+
+planner.run_planner still launches the harness with the scheduler's full environment; its input is the garden's own files, so the exposure is low, but the same worker_env could apply.
+
+2026-09-05 · reported by CG-154 (Trust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised HTML and an origin check on POSTs) in run 20260905T034729Z-work
+
+The brief's acceptance criteria were 'to be written at planning' and never were; criteria were derived from the phase-03 goal 4 sentence.
+
+The referenced retro (../phase-02-friction/docs/retro.md) was not in the worktree and not found under the driving garden's checkout, so the evidence behind item 7 was not readable.
+
+2026-09-05 · reported by CG-141 (Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue) in run 20260905T033731Z-work
+
+The brief says the merge queue 'replaces CG-138's one-per-cycle hold', but no such hold existed in the current code — automerge merged per-task in poll(). Implemented the queue as the intended mechanism.
+
+The clean-mechanical-rebase path already existed in _handle_pr_conflict but without a run record, checks re-run, or verdict handling; the task's framing as brand-new behavior made it easy to miss that half was already there.
+
+2026-09-05 · reported by CG-134 (garden walkthrough: render the live web app's pages for the retro and the persona reviews) in run 20260905T035715Z-work
+
+The reading list did not point at src/garden/personas.py or src/garden/runs.py, both of which the task needed to touch or read; only cli.py and web/app.py were listed.
+
+2026-09-05 · reported by CG-139 (Rebase rounds do not count toward the revision cap) in run 20260905T035733Z-work
+
+The reading list pointed at src/garden/scheduler.py, which no longer exists post-CG-137 split; had to explore the scheduler/ package directly to find the revise/review/conflict logic.
+
+2026-09-05 · reported by CG-160 (garden retro --skip-personas can dispatch reconciliation with an empty persona-reviews section) in run 20260905T040848Z-work
+
+The brief's reading list pointed at src/garden/retro.py as "not found", but it exists and was directly relevant (persona_reports, reconcile_brief); the actual dispatch logic lives in src/garden/scheduler/retro.py which wasn't listed at all.
+
+2026-09-05 · reported by CG-134 (garden walkthrough: render the live web app's pages for the retro and the persona reviews) in run 20260905T040848Z-revise
+
+main's test_retro.py:287 references a wait_for_runs helper that main itself no longer defines (removed with the in-process-runner refactor); it is a latent F821 that only manifests when a PR merges with main.
+
+2026-09-05 · discovered by CG-135 (garden qa: an agent drives the loop end to end through the web app on a throwaway garden) in run 20260905T035723Z-work
+
+garden qa's LLM path uses the harness's medium tier; a garden that caps max_turns for medium may cut a ~50-curl QA run short. Consider a qa-specific tier or a --difficulty option once a live run shows how many turns it takes.
+
+2026-09-05 · reported by CG-135 (garden qa: an agent drives the loop end to end through the web app on a throwaway garden) in run 20260905T035723Z-work
+
+The walkthrough (CG-134) the brief says to use as the agent's script is not merged, so the flows list in the QA brief stands in for its index.
+
+There is no HTTP route to add a task or close a phase; 'add a task' goes through Plan phase (the fake planner) and a close-phase route had to be added despite the phase's no-new-features rule.
+
+The inlined tests/conftest.py in the brief was stale: the real one has an autouse fixture that strips GARDEN_ROOT, which matters for any CLI test.
+
+Merging has no web surface at all (a person merges on GitHub), so the throwaway garden needs a pretend GitHub page to merge on.
+
+2026-09-05 · reported by CG-161 (garden plan does not check a frozen phase (only closed)) in run 20260905T041549Z-work
+
+tests/test_retro.py::test_retro_waits_for_every_persona_report_before_reconciling fails on a bare NameError (wait_for_runs undefined) independent of this change -- looks like leftover breakage from the CG-152/CG-148 in-process-runner rebase (introduced in commit d08d17a, merged via PR #100), predating this branch.
+
+2026-09-05 · reported by CG-164 (Pre-PR and CI checks run in the scrubbed worker environment) in run 20260905T041557Z-work
+
+tests/test_retro.py::test_retro_waits_for_every_persona_report_before_reconciling fails on this branch (before my changes) with NameError: name 'wait_for_runs' is not defined — a missing test helper, unrelated to this task's diff.
+
+2026-09-05 · discovered by CG-135 (garden qa: an agent drives the loop end to end through the web app on a throwaway garden) in run 20260905T042003Z-revise
+
+tests/inprocess.py keys its fakes on argv[0]'s file name, so a harness configured as python some_script.py can never be faked in process; garden qa's worker is the first such harness.
+
+2026-09-05 · reported by CG-135 (garden qa: an agent drives the loop end to end through the web app on a throwaway garden) in run 20260905T042003Z-revise
+
+The rebase surfaced a hidden coupling: the suite-wide in-process runner fixture from CG-152 silently breaks any test that runs a real harness command, and the error only shows up as a refused dispatch inside the web app's log.
+
+2026-09-05 · reported by CG-139 (Rebase rounds do not count toward the revision cap) in run 20260905T042004Z-revise
+
+The brief's inlined reading list (tests/test_scheduler.py, src/garden/scheduler.py) was stale from before CG-137 split the scheduler tests and module — neither path exists any more, and the real relevant test lives in tests/scheduler/test_poll.py.
+
+The branch had drifted 15 commits behind main by the time this revision round ran, which is exactly the CI failure's root cause; a merge-queue rebase-before-dispatch (goal 2 of this phase) would have caught this earlier.
+
+2026-09-05 · reported by CG-143 (Ship the garden-operate skill with the tool so every new garden gets it) in run 20260905T042449Z-work
+
+The task brief assumed garden-take/garden-plan/garden-review were already written by garden init and this task only needed to add garden-operate. In fact garden init never scaffolded any skill files -- only docs/architecture.md and docs/worker-protocol.md referenced them conceptually. The actual SKILL.md source for all four only existed in the driving garden's own checkout (~/garden/.claude/skills/), outside this repo and this worktree, so this task ended up sourcing and moving all four rather than just one. A future brief for skill work should note that these files' source of truth is the driving garden's checkout, not this repo, until this fix lands.
+
+The README had no existing 'skills' line or section to extend, despite the task phrasing ('mention it in the README's skills line') implying one existed -- I added a new ## Skills section.
+
+2026-09-05 · reported by CG-142 (Task actions refuse a task that is done or cancelled) in run 20260905T042005Z-work
+
+The brief's reading list pointed at src/garden/scheduler.py and src/garden/web/app.py as single files, but the scheduler is already split into src/garden/scheduler/ (mixins per tick phase) and the task-action registry already lives in src/garden/web/actions/tasks.py, both from CG-137 having already merged.
+
+2026-09-05 · reported by CG-170 (A task parked because the base branch was broken re-probes the base every tick and continues by itself when it goes green) in run 20260905T042440Z-work
+
+The inlined src/garden/inbox.py in the brief's reading list was an older version than the file on disk (no needs_human_info / attention_view / ATTENTION_KINDS); I worked from the actual file.
+
+2026-09-05 · reported by CG-144 (A superseded review run is closed when a newer review starts; no run record outlives its process) in run 20260905T042706Z-work
+
+The brief's inlined reading list (runs.py, tests/test_scheduler.py) reflected a pre-CG-137 monolithic scheduler.py; the actual code is already split into src/garden/scheduler/ mixins with an existing orphan sweep (CG-116) in review.py, so the brief needed re-deriving from the current module layout rather than the inlined excerpts.
+
+2026-09-05 · reported by CG-173 (Merging a stack parent retargets its children before the branch is deleted, and a child never opens a PR against a deleted branch) in run 20260905T043320Z-work
+
+Reading list pointed at src/garden/scheduler/poll.py, reap.py, dispatch.py and tests/scheduler/test_poll.py as "not found when the brief was built" though they exist at those paths in the checkout — the brief's file-discovery seems to have run before the worktree was materialised.
+
+2026-09-05 · reported by CG-150 (garden friction keeps hand-written sections and the retro reads the Reported section and comment friction) in run 20260905T044804Z-work
+
+The task brief pointed at ../phase-02-friction/docs/retro.md and ../phase-02-friction/docs/reviews/ for the original evidence, but those live in the separate garden data repo, not this tool repo — they weren't reachable from this checkout, so the fix was derived from the retro item's one-line description and the current code instead.
+
+2026-09-05 · reported by CG-139 (Rebase rounds do not count toward the revision cap) in run 20260905T044056Z-revise
+
+The brief's Context/acceptance criteria describe rebase-round exemptions as one undifferentiated concern, but by the time this revision ran, a sibling task (CG-141) had already merged a complete, independently-designed implementation for the PR-conflict half. Worth flagging in planning when two tasks in the same phase goal (here, phase-03 goal 2) target overlapping scheduler behavior: the later one should either be scoped narrower up front or explicitly told to check the other's status before drafting its own mechanism.
+
+2026-09-05 · reported by CG-149 (Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief cost is measured per phase) in run 20260905T044755Z-work
+
+The task's reading list was empty and the acceptance criteria were left 'to be written at planning', so the concrete requirement had to be reconstructed from the retro item quoted in the context.
+
+The retro and persona reports referenced (../phase-02-friction/...) live in the garden repo, not the product checkout, so they could not be read from the worktree.
+
+2026-09-05 · reported by CG-147 (A product clone gets a git identity when it is made, and doctor checks every clone) in run 20260905T044746Z-work
+
+gitops.py had grown several functions (sync_remote_branch, rebase_onto_capture, etc.) since the brief's inlined copy was generated — had to re-read the live file rather than trust the brief's snapshot.
+
+2026-09-05 · reported by CG-174 (garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll follows the new PR) in run 20260905T045725Z-work
+
+The brief's reading list pointed at scheduler/init.py, poll.py and state.py, but the actual fix (a hand-actions method) belonged in scheduler/human.py alongside triage/retry/mark_wont_do — worth noting for future PR-attach-related briefs so the reading list points there too.
+
+2026-09-05 · reported by CG-157 (The Inbox friction form's product and phase selects cannot produce a 404) in run 20260905T050153Z-work
+
+The brief's reading list pointed at ../phase-02-friction/docs/retro.md and its docs/reviews/ persona reports for context, but this worktree only contains the context-garden repo itself at phase-03 — that sibling phase directory doesn't exist in the checkout, so the retro evidence was unavailable and the fix was derived directly from the described symptom and the form code instead.
+
+The task's acceptance criteria were left as 'to be written at planning' and were apparently never filled in before dispatch.
+
+2026-09-05 · reported by CG-165 (The ssh runner's remote worker runs in an allowlisted environment) in run 20260905T051447Z-work
+
+The brief's operating rules reference a "Reading list (read these)" section, but no such section was present in the task.
+
+2026-09-05 · reported by CG-175 (A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished task) in run 20260905T051438Z-work
+
+The reading list pointed at src/garden/scheduler/init.py, poll.py and review.py as 'not found when the brief was built', which cost some initial exploration to map the tick ordering (poll -> merge queue -> rebase -> review) before the actual race condition became clear.
+
+2026-09-05 · reported by CG-177 (No review is dispatched while a worker run is in flight, and the reap finds a task's worker run by mode, so a review record can never send a running task back to ready) in run 20260905T093410Z-work
+
+The inlined poll.py in the reading list no longer contains the head-changed review-dispatch path the Context section attributes to the poll; that path predates the CG-137 scheduler split. The current review-dispatch chokepoint is _dispatch_or_defer_reviews.
+
+context-garden/phase-03/docs/retro/operator.mdPhase 03 operator retro
+
+Written by the operator (Claude, acting with the user's authority) on 2026-09-05 at the end of
+the phase. The phase ran from 03:22 to about 06:10 UTC, overnight, with the user asleep after
+04:00. Companion documents: ../retro.md (the reconciled retro from garden retro),
+../reviews/ (persona reports), ../walkthrough/ (the pages as they were), ../friction.md.
+
+In one sentence
+
+The loop can now be left running for an hour at a time; it cannot yet be left running for a
+night, because every new mechanism shipped this phase surfaced one more way the loop needs a hand.
+
+Numbers against the definition of done
+
+measure
+goal
+phase 02
+phase 03
+
+conflict rounds per merge
+< 0.2
+0.59
+0.48 (13 in 27 merges); after the pin moved at 05:00, 15 of 19 rebases were mechanical and cost $0
+
+description-only rounds
+0
+12
+3, all applied as reviewer rewrites, no revise run
+
+first-pass approval
+>= 90%
+83%
+93% (26 of 28 first verdicts)
+
+cost per easy task
+<= $4
+~$6
+$4.39 mean (15 done); medium $6.63; hard $12.20
+
+no module over 800 lines
+0
+4
+1: cli.py at 1995 lines was outside the split's scope
+
+no subprocess-driven tests; QA green
+yes
+no
+in-process runner merged (CG-152); garden qa --scripted merged and scheduled in CI (CG-135, CG-169)
+
+trust items merged
+3
+0
+5 (CG-154, CG-164, CG-165)
+
+config live within a tick
+yes
+partly
+unchanged: budgets and max_parallel are live, everything else needs a restart
+
+Run cost for the phase: about $171 across 98 runs (work $119, review $35, revise $15, rebase $1).
+Total garden spend passed $770 at 05:45.
+
+What the phase set out to do, and did
+
+The split (CG-137, fable, alone, 15 minutes) landed as pure movement with a method-parity check
+by the reviewer. Every later task touched the new small modules, and the reviewer never asked
+for a description again. Rebase became its own mode (CG-141): mechanical first, an agent only
+on a conflict, at the easy tier regardless of the task's own; the merge queue rebases once
+right before a merge and keeps the verdict when the diff is unchanged. State stopped clobbering
+concurrent writes (CG-153). Freeze became phase state (CG-148). Trust closed at the edges
+(CG-154): feedback only from trusted authors, a scrubbed worker environment, sanitised HTML,
+an origin check. Zombie run records get closed (CG-144), parked tasks un-park themselves
+(CG-170), a merged parent retargets its children before its branch goes (CG-173), attaching a
+PR by hand resets the cache (CG-174), a finished task drops its stop (CG-175).
+
+What needed a hand, in order
+
+03:41 hard-tier merges. Four PRs (CG-137, CG-152, CG-135, CG-154) needed a person because
+   automerge_tiers stops at medium. Each was checked by hand: a scratch merge of main plus
+   the branch, lint, the suite.
+
+04:00 main went red. I merged CG-152 by hand 24 seconds after automerge landed CG-145.
+   Each was green alone; together a test called a helper the other had deleted. Every branch
+   parked; three workers filed the same fix as drafts; CG-134 spent a revise round on a CI
+   failure that was main's. Fixed by hand in eleven minutes (PR #104). Rule learned: a PR's
+   green CI is against the main of its last push, not the main it lands on. The merge queue
+   now tests the rebased head before merging, which closes this.
+
+04:12 parked tasks did not un-park. The base_broken stop was correct, but nothing
+   re-probed the base when it went green; retry would have spent a revise run at the task's
+   tier (fable for CG-154). Rebased both by hand, pressed resume, filed CG-170. Merged by 04:47.
+
+04:29 a merged parent's branch deletion closed its stacked child's PR. Automerge deleted
+   CG-148's branch before _restack retargeted CG-161; GitHub closed #108 and the poll failed
+   the task. Restoring the branch did not let GitHub reopen the PR; a fresh PR was needed, and
+   then the poll kept reading the cached old PR number (CG-174) until state was edited under
+   the lock between ticks. Filed CG-173; merged by 04:57.
+
+04:32 a task fell back to ready with its PR open because its work run had finished
+   and its review run was the only active record ("no active run found"). garden pr put it
+   back. The poll had dispatched a review under a running revise; filed as CG-177.
+
+04:48 and 05:04 review-cap cards on rebases. Rebase rounds counted as review rounds
+   until CG-139 merged at 05:47; each card was cleared with resume or one more review.
+
+05:00 the pin moved (aac0c28 to 51ed711) after twelve behaviour-changing merges. The
+   restart lost one review verdict that the old server had reaped in its last tick (CG-150);
+   a fresh review fixed it. Workers survived, as they did in phase 02.
+
+05:37 the merge queue rotated instead of merging. With eight approved PRs, each tick
+   rebased a different head, the force-push restarted that PR's CI, the pending rollup dropped
+   it from the queue, and nothing merged for ten minutes. Merged the eight by hand with scratch
+   merges (558 to 584 tests each). Filed CG-176 at priority 0; it is the last task of the phase.
+
+Roughly twenty-five hand actions in three hours, against about a hundred in phase 02's day.
+Almost all of them were the loop's new mechanisms meeting a case their tests did not cover,
+and each is now a task or a merged fix.
+
+What the loop did well
+
+Every worker finished its task; no run hit the turn cap; no worker wrote outside its worktree.
+
+Stacking on the split branch worked: five dependents started the minute the split's PR
+  opened, and all five restacked onto main cleanly when it merged.
+
+The reviewer's parity check on the split (145 methods before and after, 47 tests) was the
+  kind of review a person would not have done at 03:40.
+
+Discovered work was judged within minutes: eight drafts approved with a dependency on the
+  task that found them, nine cancelled with a reason (six were duplicates of one red-main fix).
+
+After the pin moved, four conflicts were resolved by easy-tier rebase agents for $1.12 in
+  total, and fifteen rebases cost nothing.
+
+What to change
+
+Merge queue stickiness (CG-176) and no review under a running task (CG-177) before phase 04 opens many PRs at once.
+
+Hard tier still needs a person to merge. Either let the queue merge hard-tier PRs after
+  two approving rounds, or make the scratch-merge check the queue's own step so a person's
+  merge adds nothing. The user should decide this one.
+
+Ticks now take a minute because the queue runs the suite inside the tick before each
+  merge and each mechanical rebase. Move checks out of the tick (a check run record, like a
+  review) so the poll stays fast.
+
+cli.py needs the same split as the scheduler and web app: 1995 lines, and every CLI
+  task will collide there.
+
+A restart loses in-flight reaps. The last tick's verdicts should be re-read from the run
+  records on start, not only from state.
+
+Parallelism stayed at 5. Raising it would have raised the cascade, not the throughput;
+  with CG-176 in, 7 is worth trying in phase 04, whose tasks touch separate pages.
+
+For the user in the morning
+
+Nothing is waiting on you. Phase 03 closes once CG-175 and CG-176 merge; phase 04 starts
+  from its stub goals plus the retro's draft.
+
+Decisions I made with your authority that you may want to revisit: hand-merging eight
+  approved PRs when the queue rotated; cancelling CG-171 (new-task must keep working during a
+  freeze so friction can be filed); filing CG-162 and CG-163 (your two morning requests) in
+  phase 04; leaving hard-tier merges manual.
