@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T05:22:18+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T05:30:42+00:00'
+updated: '2026-09-05T05:46:17+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,5 @@ From the phase-02 retro's open list (item 8), reconciled against what merged on 
 - 2026-09-05T05:22:18+00:00 dispatched rebase run 20260905T052218Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~5986 tokens)
 - 2026-09-05T05:26:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/123: Rebased onto origin/main; resolved the tests/test_cli.py conflict by keeping both independently-added test functions (CG-147's test_doctor_reports_a_clone_missing_git_identity from main, and this branch's test_doctor_tests_notify_command/test_doctor_flags_a_failing_notify_command), removing the conflict markers. Full test suite passes (563 passed, 3 skipped). Did not push. cost=$0.33
 - 2026-09-05T05:30:42+00:00 automated review: approve — All four acceptance criteria met with correct, well-tested logic: notify.command is documented in three places, doctor runs it for real and fails on error, failures are logged via garden.notify, and the triage ping is deferred to the review verdict via a persisted one-shot flag. Tests and lint pass. cost=$0.99
+- 2026-09-05T05:45:22+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:46:17+00:00 rebased; diff unchanged; verdict kept

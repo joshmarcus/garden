@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/105
 attempts: 1
 last_dispatched_at: '2026-09-05T05:09:24+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T05:30:41+00:00'
+updated: '2026-09-05T05:47:26+00:00'
 ---
 
 ## Goal
@@ -67,3 +67,6 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T05:21:16+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T05:22:14+00:00 rebased; diff unchanged; verdict kept
 - 2026-09-05T05:30:41+00:00 automated review: approve — Stale-base rebase rounds cleanly share the rebases counter and are exempt from both the revision and review caps; all four acceptance criteria have targeted passing tests, full suite (554 passed) and lint are green, and scope is tight. cost=$1.20
+- 2026-09-05T05:41:02+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:41:56+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T05:47:26+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/105

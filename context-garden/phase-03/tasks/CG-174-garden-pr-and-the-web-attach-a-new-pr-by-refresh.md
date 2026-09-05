@@ -2,7 +2,7 @@
 id: CG-174
 title: garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll
   follows the new PR
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/119
 attempts: 1
 last_dispatched_at: '2026-09-05T04:57:34+00:00'
 created: '2026-09-05T04:39:47+00:00'
-updated: '2026-09-05T05:28:41+00:00'
+updated: '2026-09-05T05:49:52+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,5 @@ On 2026-09-05 at 04:31 the operator opened PR #110 for CG-161 after GitHub close
 - 2026-09-05T05:08:13+00:00 opened https://github.com/joshmarcus/context-garden/pull/119 (base main): `garden pr` now goes through a new Scheduler.attach_pr() that resets the cached pr_number, pr_state, head_sha, review_run and automerge_blocked in state.json and logs the old/new PR numbers, so the next poll follows a newly attached PR instead of a stale one; _pr_number() also now self-heals when the cached number disagrees with the task's pr URL. cost=$1.87
 - 2026-09-05T05:13:26+00:00 automated review: approve — attach_pr resets all cached PR state and _pr_number self-heals against a stale cache; all three acceptance criteria are met and directly tested, and the change is tightly scoped with a clean, self-contained description. cost=$0.74
 - 2026-09-05T05:28:41+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:35:15+00:00 automated review: approve — attach_pr resets all cached PR state (pr_number, pr_state, head_sha, review_run, automerge_blocked) and logs old/new numbers, and _pr_number self-heals against a stale cache; all three acceptance criteria are met and directly tested, tests and lint pass, and the change is tightly scoped with a clean description. cost=$0.83
+- 2026-09-05T05:49:52+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/119

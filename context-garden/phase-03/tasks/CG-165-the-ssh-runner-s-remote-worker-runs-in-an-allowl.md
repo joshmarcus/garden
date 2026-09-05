@@ -15,7 +15,7 @@ discovered_from: CG-154
 attempts: 1
 last_dispatched_at: '2026-09-05T05:14:56+00:00'
 created: '2026-09-05T04:01:03+00:00'
-updated: '2026-09-05T05:27:27+00:00'
+updated: '2026-09-05T05:35:14+00:00'
 ---
 
 ## Goal
@@ -37,3 +37,4 @@ Discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors,
 - 2026-09-05T04:05:55+00:00 priority 1 -> 3 (web)
 - 2026-09-05T05:14:56+00:00 dispatched work run 20260905T051447Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~3717 tokens)
 - 2026-09-05T05:27:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/124 (base main): The ssh runner's remote script now runs the harness and setup command under the same allowlist as the local worker (runner.base.PASS_ENV plus worker_env.pass and setup.env), scrubbing a remote host's ambient tokens while leaving git's own fetch/push in the login environment. Added an end-to-end scrub test and updated the docs that described the old behaviour. cost=$3.36
+- 2026-09-05T05:35:14+00:00 automated review: approve — The ssh remote worker now runs harness and setup under the same allowlist scrub as the local runner, via a shared pass_env_patterns and an in-shell garden_scrub; verified by a real end-to-end fake-ssh test. Tests and lint pass, scope and description are clean. cost=$0.65
