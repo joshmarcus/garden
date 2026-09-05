@@ -24,7 +24,11 @@ Layout:
 - `src/garden/store.py` discovery of products/phases/tasks on disk
 - `src/garden/graph.py` dependency graph, ready set, mermaid export
 - `src/garden/brief.py` builds the worker brief; `GARDEN_RESULT` parsing
-- `src/garden/scheduler.py` the tick state machine (reap / poll / dispatch)
+- `src/garden/scheduler/` the tick state machine as a package: `__init__.py` assembles `Scheduler`
+  from one mixin per tick phase (`reap`, `fence`, `discovered`, `review`, `edits`, `poll`,
+  `dispatch`, `human`, `budget`, `upgrades`, `aux`, `trials`, `persona`, `retro`) plus
+  `state.py` (the `state.json` side-store) and `report.py`; see the module map in
+  `docs/architecture.md` of the product repo
 - `src/garden/harness.py` harness definitions (claude, codex, custom) and output parsing
 - `src/garden/runner/` runner backends (`local`, `ssh`, `manual`)
 - `src/garden/review.py` automated review brief and verdict parsing
@@ -35,8 +39,13 @@ Layout:
 - `src/garden/plants.py` the botanical drawings (plants per phase, growth-stage glyphs) as SVG symbols
 - `src/garden/gitops.py`, `src/garden/github.py` git worktrees and PRs
 - `src/garden/planner.py` planning prompt and JSON import
-- `src/garden/web/` FastAPI + HTMX web UI; `src/garden/tui/` Textual TUI
-- `tests/` pytest; `tests/fake_claude.py`, `fake_codex.py`, `fake_ssh.py` stand in for the real binaries
+- `src/garden/web/` FastAPI + HTMX web UI: `app.py` (`create_app`, templates), `common.py`
+  (`Hub`, `Site`, shared helpers), `pages/` (one module per page family, GET routes) and
+  `actions/` (the task-action registry in `tasks.py`, one function per action, plus
+  `control`, `phases`, `decisions`, `friction`); `src/garden/tui/` Textual TUI
+- `tests/` pytest; `tests/scheduler/` splits the scheduler tests by area with shared helpers
+  in `conftest.py`; `tests/fake_claude.py` (modes as two tables: `SPECIAL` and `WORKERS`),
+  `fake_codex.py`, `fake_ssh.py` stand in for the real binaries
 
 ## Conventions
 
