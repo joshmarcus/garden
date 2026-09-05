@@ -4,7 +4,7 @@ title: 'OpenRouter support: run workers, reviewers and personas through any mode
   harness with per-tier model ids and cost from the response usage'
 status: draft
 product: context-garden
-phase: phase-04
+phase: phase-05
 depends_on: []
 priority: 3
 difficulty: hard
@@ -16,7 +16,7 @@ reading:
 - tests/fake_codex.py
 - docs/architecture.md
 created: '2026-09-05T16:00:57+00:00'
-updated: '2026-09-05T16:00:57+00:00'
+updated: '2026-09-05T16:11:16+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,6 @@ Backlog item from the user on 2026-09-05 ("support for open router"), the day th
 - [ ] `tests/fake_openrouter.py` (an OpenAI-compatible stub) drives the suite's harness tests; no test needs the network.
 - [ ] `docs/architecture.md` and `examples/` show the configuration, including a mixed map (cheap OpenRouter model for easy and reviews, claude for hard).
 
+## Log
+
+- 2026-09-05T16:11:16+00:00 moved from context-garden/phase-04 to context-garden/phase-05

@@ -4,7 +4,7 @@ title: 'Onboarding skill and command: analyse an existing project and its enviro
   product, principles, setup config and a first phase'
 status: draft
 product: context-garden
-phase: phase-04
+phase: phase-05
 depends_on: []
 priority: 2
 difficulty: hard
@@ -17,7 +17,7 @@ reading:
 - examples/garden.work.yaml
 - docs/design.md
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-05T16:09:07+00:00'
+updated: '2026-09-05T16:11:15+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - [ ] The onboarding report names every inference and every open decision.
 - [ ] Tests with the fake harness for the planner step; the discovery step is deterministic and tested without a model.
 
+## Log
+
+- 2026-09-05T16:11:15+00:00 moved from context-garden/phase-04 to context-garden/phase-05
