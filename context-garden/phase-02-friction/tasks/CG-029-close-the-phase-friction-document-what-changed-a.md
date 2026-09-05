@@ -1,7 +1,7 @@
 ---
 id: CG-029
 title: 'Close the phase: friction document, what changed, and the next goals'
-status: ready
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -20,7 +20,7 @@ runner: manual
 attempts: 1
 last_dispatched_at: '2026-09-04T23:10:09+00:00'
 created: '2026-09-04T14:02:28+00:00'
-updated: '2026-09-04T23:13:34+00:00'
+updated: '2026-09-05T03:14:58+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ Run the retro as one process (`garden retro`, CG-133, is on main): (0) the opera
 - 2026-09-04T23:10:09+00:00 dispatched work run 20260904T231000Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5758 tokens)
 - 2026-09-04T23:13:00+00:00 worker asks: This task edits garden-repo content (context-garden/phase-02-friction/docs/friction.md and a new context-garden/phase-03/ via `garden new-phase`, plus a `garden metrics` table), but I'm running in the context-garden tool repo worktree where none of that exists and where garden commands are disabled. Should CG-029 be re-dispatched against the garden repo (joshmarcus/garden) instead, or do you want me to author the finished friction document and phase-03 goals as new files inside this tool repo (and if so, under what paths, given there is no context-garden/ directory here)? cost=$0.64
 - 2026-09-04T23:13:34+00:00 manual: closing the phase edits the garden repo (friction.md, the next phase's goals), which no worker checks out; a person or a garden-side agent does it when the phase's work has landed
+- 2026-09-05T03:14:58+00:00 closed by hand: the retro (garden retro, PR #1 on the garden repo) produced docs/retro.md and phase-03/goals.md; the operator retro, walkthrough and nine persona reports are under docs/; phase 03 and 04 are scaffolded and the drafts moved; closing the phase next

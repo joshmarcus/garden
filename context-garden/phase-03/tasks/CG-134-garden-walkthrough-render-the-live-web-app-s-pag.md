@@ -10,7 +10,7 @@ difficulty: medium
 reading:
 - src/garden/cli.py
 - src/garden/web/app.py
-- personas/00-index.md
+- personas/designer.md
 created: '2026-09-05T00:37:32+00:00'
 updated: '2026-09-05T03:05:55+00:00'
 ---
