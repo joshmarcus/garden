@@ -63,3 +63,32 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 ### 2026-09-05 · reported by CG-191 (The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check) in run 20260905T122004Z-revise
 
 - A rebase that renames a widely-called helper (CG-202: _hold_automerge -> _queue_hold) left two callers stale; the tick's broad try/except masked the AttributeError so tests stayed green by luck.
+
+### 2026-09-05 · reported by CG-188 (A persona can report in its own shape: the review runner keeps the findings block and adds the persona's sections (vision, features, not now, questions), rendered in the report and fed to the retro) in run 20260905T122531Z-work
+
+- The reading list pointed at personas/product-manager.md, which lives in the separate driving-garden repo, not this checkout; the editable equivalent here is DEFAULT_PERSONAS['product-manager'] in personas.py.
+
+### 2026-09-05 · reported by CG-180 (The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before it is trusted) in run 20260905T121232Z-work
+
+- The brief referenced a 'Reading list (read these)' section but listed no files, so I explored from the module map instead.
+- AC4 gave two command forms ('garden canary' or 'garden qa --scripted --pin <sha>') without saying which is canonical; I picked one and noted it.
+
+### 2026-09-05 · reported by CG-190 (No Set buttons anywhere: every editable value in the web UI applies when the user changes it, with a saved mark and an undo) in run 20260905T122540Z-work
+
+- The brief's reading list described CG-099's pulldown pattern as "the same HTMX pattern," but there is no htmx (or any JS library) in this codebase — the existing and new behavior is a small hand-rolled vanilla-JS enhancement, consistent with the project's dependency-light convention. Worth correcting the wording in future briefs so it doesn't send the next agent looking for a library that isn't there.
+
+### 2026-09-05 · reported by CG-185 (A page never 500s on an undefined template variable: tojson gets a value on every path, and a template error renders as a flash, not a traceback) in run 20260905T121711Z-work
+
+- The brief's acceptance criteria implied a broad, general 'no undefined template variable ever 500s' guarantee (StrictUndefined across the whole app), which is a much larger change than the tojson incident alone — it required auditing and fixing every sparse-dict access idiom (_TaskState, event dicts, usage rollups) used across every template, not just the three named tojson sites. It happened to be tractable here (all fixed in ~4 small, well-understood spots), but that was empirical luck from running the suite under strict mode repeatedly, not something obvious from the brief up front.
+
+### 2026-09-05 · reported by CG-192 (garden.yaml is re-read each tick when it changes, and the Config page says which keys are live) in run 20260905T123359Z-work
+
+- The brief's hint ("Scheduler reads store.config per tick") is satisfied, but nothing in the brief flagged that config is consumed once at construction for the GitHub client, the upgrade installer, and the watch/serve loop interval; deciding which keys are 'live' vs 'restart' required reading those call sites. Documented as RESTART_KEYS.
+
+### 2026-09-05 · reported by CG-193 (Approve refuses placeholder acceptance criteria and unresolved reading-list paths) in run 20260905T123408Z-work
+
+- The brief's "Reading list (read these)" section named no files, so I inferred the entry points (approve gate, brief.py, inbox) from the codebase.
+
+### 2026-09-05 · reported by CG-189 (The retro's questions for the human are decision cards: answer each in the UI, the answers land in the retro document and the next phase's goals, and the planner reads them) in run 20260905T123227Z-work
+
+- The brief's Design says the answer appends to `docs/retro.md` and the next phase's `goals.md`, but the retro writes those into a PR worktree, not the live garden; it took a read of scheduler/retro.py to confirm the answer is meant to edit the live (post-merge) copies. One sentence in the brief on that timing would have saved the digging.
