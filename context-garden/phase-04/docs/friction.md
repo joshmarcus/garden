@@ -289,3 +289,11 @@ docs/design.md still lists automatic merging under Non-goals while the opt-in me
 ### 2026-09-05 · reported by CG-235 (retro.model (or a best tier) names the model retros, persona reviews and trial comparisons run on, independent of the hard tier's price) in run 20260905T211103Z-revise
 
 - The revision-round pre-PR check failed with exit 143 ('Terminated') at ~94% of the suite, but re-running the identical suite twice in this same worktree passed cleanly in ~102s each time; ps aux showed several unrelated concurrent processes (another pytest run, a live garden serve, multiple claude worker subprocesses) on the shared machine at check time, pointing to resource contention rather than a hang in the new code.
+
+### 2026-09-05 · reported by CG-238 (Every path to ready or to a run goes through the approve gate: Dispatch now on a draft, the new-task form's approve-now, and garden take) in run 20260905T231202Z-work
+
+- The 'flash the dispatched run id' wording in the acceptance criteria conflicts with an existing, tested app-wide convention that a flash on a redirect means a refusal (enforced by garden.qa.flows.Client and exercised by the canary self-check); adding a success flash to dispatch broke test_self_check_passes_on_the_current_build. Worth calling out explicitly in specs that touch the flash mechanism.
+
+### 2026-09-05 · reported by CG-239 (resolve_reading refuses absolute and parent paths, and the fence hashes the clone's git config and hooks) in run 20260905T231218Z-work
+
+- The brief's own reading list for this task pointed at src/garden/scheduler/reap.py as a separate 'too large to inline' entry; fine once fetched, but worth folding into the main list if the size budget allows next time.
