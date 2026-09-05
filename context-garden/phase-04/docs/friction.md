@@ -59,3 +59,7 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 
 - CG-156's acceptance criteria were never written ("to be written at planning"); had to reconstruct the intended scope from the phase-02 retro item and phase-03 goals.md item 6.
 - The retro item bundled several unrelated fixes (vocabulary, help, --version, 80-col status, card copy, priority_label); only the title's four are this task's scope, but the boundary had to be inferred.
+
+### 2026-09-05 · reported by CG-191 (The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check) in run 20260905T122004Z-revise
+
+- A rebase that renames a widely-called helper (CG-202: _hold_automerge -> _queue_hold) left two callers stale; the tick's broad try/except masked the AttributeError so tests stayed green by luck.
