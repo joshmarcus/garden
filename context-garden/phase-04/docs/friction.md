@@ -246,3 +246,12 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T191243Z-revise
 
 - The revision-round brief's reading list did not include scheduler/human.py, where the actual answer()/resume dispatch lives; had to locate it via grep for mode=="resume" call sites.
+
+### 2026-09-05 · reported by CG-231 (garden trial can optionally wait for a trial to conclude) in run 20260905T194957Z-work
+
+- The brief's reading list pointed at tests/test_trials.py for existing trial test conventions, but that file doesn't exist; trial tests are actually spread across tests/test_extras.py (scheduler-level) and tests/test_cli.py (CLI-level), which took a search to find.
+
+### 2026-09-05 · reported by CG-232 (garden trial --again re-runs a trial on a task cleanly: closes or archives the previous contender PRs, clears the task's cached PR state, and names branches from the task's base, not the last winner) in run 20260905T194814Z-work
+
+- tests/test_trials.py, named in the brief's reading list, doesn't exist; the repo's existing trial tests all live in tests/test_extras.py, so new tests were added there instead to match convention.
+- src/garden/cli/reviews.py, also named in the reading list, doesn't exist either — the CLI trial command lives in src/garden/cli/loop.py.

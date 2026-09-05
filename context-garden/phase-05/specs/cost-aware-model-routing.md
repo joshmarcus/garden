@@ -396,6 +396,19 @@ The objective of the work is to build enough measurement and routing infrastruct
 
 ## Operator's notes: how this maps onto the garden today (2026-09-05)
 
+### First measurements (2026-09-05, medium task CG-225: retro questions as decision cards)
+
+Two trials on the same task, judged by a sonnet 5 comparison run; costs at list prices (both accounts are subscriptions):
+
+| contender | score | wall time | input tokens (cached) | output tokens | list cost |
+|---|---|---|---|---|---|
+| claude sonnet 5 (run 1) | 6 | 17.5 min | 14.7M (14.4M) | 61K | $4.41 |
+| codex gpt-6-astra (run 1, CLI default) | 8 | 7.0 min | 2.0M (1.8M) | 9.5K | about $3.77 |
+| claude sonnet 5 (run 2) | 7 | 17.9 min | 16.8M (16.6M) | 72K | $5.03 |
+| codex gpt-5.6-terra (run 2) | 9 | 12.0 min | 3.1M (3.0M) | 15K | about $1.01 |
+
+Both times the judge preferred codex for the same substantive reason (it preserves an answer given before the retro's PR merges; claude's version silently drops it) and noted claude's better surface polish. The claude runs' cost is almost all cache reads of a large context re-sent every turn; codex's transcripts show a fraction of the tokens for the same work. One task is one sample; the harness gaps that made the first easy trial meaningless (no setup in trial worktrees, codex's sandbox blocking commits and network, codex's cost and model absent from the run record) are CG-229, the bypass-mode change and CG-213. The codex tier map since 19:40: easy luna, medium terra, hard sol; astra is never the default.
+
 - **Tiers and per-task overrides exist.** `harnesses.<h>.models` maps easy/medium/hard to model ids per harness, and a task's `difficulty`, `harness` and (via trials) `model` already override; the codex harness runs `codex exec` with the CLI's default model today (`models: {}`). This spec's `models:` block with a `provider` field and an `escalation` tier is the shape CG-213 should adopt, with `provider: openrouter` selecting the base URL and key.
 - **Escalation has a seam.** `_run_failed` retries while `attempts < max_attempts` and the revise loop counts `revisions` against a cap; the pre-PR checks, CI and the automated review are the objective signals the spec asks for. An escalation policy is a change to what `retry` and `revise` dispatch with: the next tier's model instead of the same one, recorded on the run.
 - **Trials are the evaluation seed.** `garden trial <task> -c harness:model ...` runs contenders on their own branches and a comparison run scores them (two are running today: CG-030 easy and CG-225 medium, claude sonnet 5 against codex). The evaluation harness here is that mechanism over a fixed corpus of 20–50 tasks with the result record above, plus `garden metrics` per model.
