@@ -2,7 +2,7 @@
 id: CG-239
 title: resolve_reading refuses absolute and parent paths, and the fence hashes the clone's git config
   and hooks
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -10,10 +10,10 @@ priority: 1
 difficulty: medium
 reading:
 - src/garden/brief.py
+- src/garden/scheduler/fence.py
 - src/garden/scheduler/dispatch.py
 - src/garden/scheduler/reap.py
 - src/garden/gitops.py
-- src/garden/fence.py
 - tests/test_brief.py
 - tests/scheduler/test_dispatch.py
 discovered_from: retro:context-garden/phase-04
@@ -24,7 +24,7 @@ freeze_exception_reason: Goal 3 claims trust matches the mechanism and the phase
   brief.
 retro_blocking: true
 created: '2026-09-05T23:05:56+00:00'
-updated: '2026-09-05T23:05:56+00:00'
+updated: '2026-09-05T23:10:30+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:05:56+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:10:30+00:00 approved (cli)
