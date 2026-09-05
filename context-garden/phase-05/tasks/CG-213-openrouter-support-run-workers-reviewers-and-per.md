@@ -9,6 +9,7 @@ depends_on: []
 priority: 3
 difficulty: hard
 reading:
+- context-garden/phase-05/specs/cost-aware-model-routing.md
 - src/garden/harness.py
 - src/garden/runner/local.py
 - src/garden/runner/base.py
@@ -22,6 +23,10 @@ updated: '2026-09-05T16:11:16+00:00'
 ## Goal
 
 A garden can point any tier at a model served by OpenRouter (`openrouter/<vendor>/<model>`), for workers, reviewers, personas and the retro, and the loop treats it like the claude and codex harnesses: a detached process per run, a transcript in `stdout.json`, a final message with `GARDEN_RESULT`, usage and cost per run from the API's response, the same worker environment scrub, and the same tests with a fake.
+
+## Spec
+
+The user's spec `context-garden/phase-05/specs/cost-aware-model-routing.md` (2026-09-05) defines the routing policy, the escalation model, the codex compatibility suite, the evaluation corpus and the phase-1 acceptance criteria; this task is its first deliverable (the harness) and should read it before designing.
 
 ## Context
 
