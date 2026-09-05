@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-139-rebase-rounds-do-not-count-toward-the-revision-c
 pr: https://github.com/joshmarcus/context-garden/pull/105
 attempts: 1
-last_dispatched_at: '2026-09-05T04:29:11+00:00'
+last_dispatched_at: '2026-09-05T04:40:56+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T04:32:28+00:00'
+updated: '2026-09-05T04:40:56+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,7 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T04:29:01+00:00 PR conflicts with main (src/garden/scheduler/dispatch.py, src/garden/scheduler/poll.py); revise run will rebase and resolve
 - 2026-09-05T04:29:11+00:00 dispatched revise run 20260905T042911Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8866 tokens)
 - 2026-09-05T04:32:28+00:00 no active run found; back to ready — expected run 20260905T043128Z-review but it is running (mode review): (no closer recorded)
+- 2026-09-05T04:34:45+00:00 PR attached: https://github.com/joshmarcus/context-garden/pull/105
+- 2026-09-05T04:35:41+00:00 automated review: approve — Conflict and stale-base rebase rounds are cleanly split into their own rebase_rounds counter, exempted from both the revision and review caps, and never set needs_human on their own; all four acceptance criteria have targeted passing tests, and the full suite (469 passed) and lint are clean. cost=$0.97
+- 2026-09-05T04:36:57+00:00 PR conflicts with main (src/garden/scheduler/dispatch.py, src/garden/scheduler/poll.py); revise run will rebase and resolve
+- 2026-09-05T04:40:56+00:00 dispatched revise run 20260905T044056Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9096 tokens)

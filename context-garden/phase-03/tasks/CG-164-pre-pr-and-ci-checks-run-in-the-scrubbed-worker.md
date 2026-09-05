@@ -15,7 +15,7 @@ discovered_from: CG-154
 attempts: 1
 last_dispatched_at: '2026-09-05T04:16:06+00:00'
 created: '2026-09-05T04:01:03+00:00'
-updated: '2026-09-05T04:24:26+00:00'
+updated: '2026-09-05T04:38:09+00:00'
 ---
 
 ## Goal
@@ -37,3 +37,4 @@ Discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors,
 - 2026-09-05T04:16:06+00:00 dispatched work run 20260905T041557Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted stacked on CG-154, ~3892 tokens)
 - 2026-09-05T04:24:24+00:00 pre-PR check(s) test, lint failed at the stale base 55a935290123; the base branch `garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted` had moved, so rebased onto it and the checks pass now — no revise round
 - 2026-09-05T04:24:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/109 (base garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted): checks.run_check now builds a command check's subprocess environment from runner.base.scrubbed_env (with an optional config argument for worker_env.pass) instead of raw os.environ, closing the credential leak in pre-PR/CI checks that run a branch's own code; python: checks remain in-process and documented as unscrubbed. cost=$1.53
+- 2026-09-05T04:38:09+00:00 automated review: approve — checks.run_check now builds a command check's subprocess env from the scrubbed worker allowlist instead of os.environ, closing the credential leak CG-154 left open for pre-PR/CI checks; python checks stay in-process and are documented as trusted. All criteria met, tests and lint pass. cost=$0.45

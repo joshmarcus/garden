@@ -13,10 +13,11 @@ reading:
 - src/garden/scheduler.py
 - src/garden/cli.py
 branch: garden/cg-142-task-actions-refuse-a-task-that-is-done-or-cance
+pr: https://github.com/joshmarcus/context-garden/pull/112
 attempts: 1
-last_dispatched_at: '2026-09-05T04:20:14+00:00'
+last_dispatched_at: '2026-09-05T04:40:56+00:00'
 created: '2026-09-05T02:18:30+00:00'
-updated: '2026-09-05T04:20:14+00:00'
+updated: '2026-09-05T04:40:56+00:00'
 ---
 
 ## Goal
@@ -40,3 +41,6 @@ Found on the first live run. Automerge merged #71 at 02:17:55; three seconds lat
 - 2026-09-05T03:05:54+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:58+00:00 approved (web)
 - 2026-09-05T04:20:14+00:00 dispatched work run 20260905T042005Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~3971 tokens)
+- 2026-09-05T04:39:58+00:00 opened https://github.com/joshmarcus/context-garden/pull/112 (base main): Added a shared ensure_open() guard so every task action (web, CLI, and the scheduler's own automated review/persona dispatch) refuses a done or cancelled task with a message naming the state and what happened; set-status now requires --force to leave those states. cost=$6.27
+- 2026-09-05T04:40:48+00:00 PR conflicts with main (src/garden/scheduler/dispatch.py, src/garden/scheduler/human.py); revise run will rebase and resolve
+- 2026-09-05T04:40:56+00:00 dispatched revise run 20260905T044056Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5260 tokens)

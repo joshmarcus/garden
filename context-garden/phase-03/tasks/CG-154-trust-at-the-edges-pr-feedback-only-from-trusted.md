@@ -2,7 +2,7 @@
 id: CG-154
 title: 'Trust at the edges: PR feedback only from trusted authors, a scrubbed worker environment, sanitised
   HTML and an origin check on POSTs'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T04:05:35+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T04:20:19+00:00'
+updated: '2026-09-05T04:34:33+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ From the phase-02 retro's open list (item 7), reconciled against what merged on 
 - 2026-09-05T04:10:01+00:00 discovered work filed: CG-167
 - 2026-09-05T04:10:55+00:00 base branch `main` is itself broken — pre-PR check(s) test, lint fail at its own commit 55a935290123, not because of this branch; waiting for the base to go green, no revise round cost=$1.94
 - 2026-09-05T04:20:19+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-05T04:34:33+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve

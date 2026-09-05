@@ -1,7 +1,7 @@
 ---
 id: CG-135
 title: 'garden qa: an agent drives the loop end to end through the web app on a throwaway garden'
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/107
 attempts: 1
 last_dispatched_at: '2026-09-05T04:20:04+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T04:31:21+00:00'
+updated: '2026-09-05T04:34:31+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 - 2026-09-05T04:20:04+00:00 dispatched revise run 20260905T042003Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~12797 tokens)
 - 2026-09-05T04:26:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/107: Rebased onto origin/main, resolved the tests/fake_claude.py conflict keeping CG-152's in-process shape plus the qa mode, and restored the real local runner for the garden qa tests since the in-process runner has no fake for the QA sandbox's own worker. Full suite and lint pass. cost=$2.05
 - 2026-09-05T04:31:21+00:00 automated review: approve — garden qa builds a throwaway garden, serves the web app against a pretend GitHub, and drives nine end-to-end flows; all three acceptance criteria are met with a scripted and a harness-driven test, the full suite and lint pass, and the description is clean. cost=$1.55
+- 2026-09-05T04:34:31+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/107

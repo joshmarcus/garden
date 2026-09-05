@@ -2,7 +2,7 @@
 id: CG-170
 title: A task parked because the base branch was broken re-probes the base every tick and continues by
   itself when it goes green
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,10 +16,11 @@ reading:
 - src/garden/scheduler/rebase.py
 - src/garden/inbox.py
 branch: garden/cg-170-a-task-parked-because-the-base-branch-was-broken
+pr: https://github.com/joshmarcus/context-garden/pull/113
 attempts: 1
 last_dispatched_at: '2026-09-05T04:24:49+00:00'
 created: '2026-09-05T04:20:21+00:00'
-updated: '2026-09-05T04:29:02+00:00'
+updated: '2026-09-05T04:40:47+00:00'
 ---
 
 ## Goal
@@ -44,3 +45,5 @@ The same applies to the CI path: a PR whose CI failed on the merge commit becaus
 - 2026-09-05T04:20:21+00:00 approved (web)
 - 2026-09-05T04:24:49+00:00 dispatched work run 20260905T042440Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-141-rebase-is-its-own-mode-mechanical-first-an-agent stacked on CG-141, ~6184 tokens)
 - 2026-09-05T04:29:02+00:00 parent CG-141 merged; will rebase onto main when the current run finishes
+- 2026-09-05T04:40:42+00:00 opened https://github.com/joshmarcus/context-garden/pull/113 (base garden/cg-141-rebase-is-its-own-mode-mechanical-first-an-agent): A task parked with the base_broken stop now re-probes its base each tick and, once the base branch goes green, rebases the branch mechanically (no worker), force-pushes so stale CI re-runs, re-runs the pre-PR checks and opens/updates the PR — all on its own. A rebase that doesn't apply or checks that still fail fall through to the normal revise path. cost=$6.40
+- 2026-09-05T04:40:47+00:00 parent CG-141 merged; rebased onto main and retargeted the PR

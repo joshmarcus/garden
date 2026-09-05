@@ -1,7 +1,7 @@
 ---
 id: CG-134
 title: 'garden walkthrough: render the live web app''s pages for the retro and the persona reviews'
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/103
 attempts: 1
 last_dispatched_at: '2026-09-05T04:08:48+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T04:25:58+00:00'
+updated: '2026-09-05T04:36:56+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Asked at the freeze of the first live run. Persona reviews read code, PR bodies 
 - 2026-09-05T04:08:48+00:00 dispatched revise run 20260905T040848Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~5648 tokens)
 - 2026-09-05T04:17:47+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/103: Fixed the CI F821 failure by merging main (which introduced the in-process runner and removed the wait_for_runs helper) and dropping the obsolete wait_for_runs calls from the walkthrough and retro tests, since dispatch now finishes workers synchronously. ruff and the full test suite pass. cost=$1.86
 - 2026-09-05T04:25:58+00:00 automated review: approve — Adds `garden walkthrough` rendering every web page to HTML/text/screenshot with an index.md, and inlines the newest capture into the phase persona brief. All three acceptance criteria met and tested; code, scope, and description are clean. cost=$0.72
+- 2026-09-05T04:36:56+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/103
