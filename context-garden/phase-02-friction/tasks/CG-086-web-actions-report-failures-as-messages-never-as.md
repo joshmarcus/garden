@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
 last_dispatched_at: '2026-09-05T00:37:12+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T00:37:12+00:00'
+updated: '2026-09-05T00:43:19+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-05T00:34:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Rebased the branch onto the latest origin/main (which had advanced twice during the session) and resolved all conflicts in src/garden/web/app.py, preserving both sides' intent (flash-message error handling, trial validation, and the closed-phase guard combined with 404-on-unknown-phase). Tests (373 passed) and ruff both pass, and the branch is a clean linear rebase ready for force-push. cost=$3.48
 - 2026-09-05T00:37:05+00:00 automated review requested changes: All three acceptance criteria are met and tested, but the refactor silently swaps the /review action from review_again to dispatch_review, breaking the 'One more automated review' button that bypasses the review cap and clears the needs_human stop. cost=$1.01
 - 2026-09-05T00:37:12+00:00 dispatched revise run 20260905T003711Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8241 tokens)
+- 2026-09-05T00:43:19+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Fixed the blocking review finding: the web /review action had been accidentally changed from sched.review_again(t) to sched.dispatch_review(t) during a prior rebase, breaking the review-cap bypass button. Restored review_again and added a regression test that reproduces the cap-reached scenario via the web endpoint. cost=$2.44
+- 2026-09-05T00:43:19+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-086` for one more round, or review on GitHub

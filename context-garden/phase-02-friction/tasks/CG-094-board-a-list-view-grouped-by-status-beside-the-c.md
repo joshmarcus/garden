@@ -1,7 +1,7 @@
 ---
 id: CG-094
 title: 'Board: a list view grouped by status beside the columns'
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/83
 attempts: 1
 last_dispatched_at: '2026-09-05T00:26:49+00:00'
 created: '2026-09-04T21:01:27+00:00'
-updated: '2026-09-05T00:35:46+00:00'
+updated: '2026-09-05T00:41:20+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Asked during the first live run. The Board is ten columns of cards; at fifty tas
 - 2026-09-05T00:02:21+00:00 PR conflicts with main (src/garden/web/app.py, src/garden/web/templates/board.html); revise run will rebase and resolve
 - 2026-09-05T00:26:49+00:00 dispatched revise run 20260905T002649Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~5383 tokens)
 - 2026-09-05T00:35:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/83: Rebased the CG-094 board list-view branch onto current origin/main, resolving conflicts in app.py and board.html so the new columns|list view switch composes with main's 'include closed' filter (both preserved in filter links, the view switch, and the live-refresh poll URL). Re-rebased after main advanced again mid-work so CG-064/CG-119 stacking fixes are preserved and the diff is scoped to the board feature only. cost=$1.32
+- 2026-09-05T00:39:07+00:00 automated review: approve — Adds the columns|list Board view exactly as specified — loop-ordered sections with counts/glyphs, per-state facts, collapsing empties, persisted choice, both views through the live-refresh partial; scope clean, tests and ruff pass. cost=$0.63
+- 2026-09-05T00:41:20+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/83

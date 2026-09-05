@@ -1,7 +1,7 @@
 ---
 id: CG-088
 title: Trellis and phase page can hide completed tasks
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/86
 attempts: 1
 last_dispatched_at: '2026-09-05T00:36:04+00:00'
 created: '2026-09-04T19:48:28+00:00'
-updated: '2026-09-05T00:36:04+00:00'
+updated: '2026-09-05T00:43:20+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,5 @@ Asked during the first live run, when phase 2 had 30 done tasks and 25 open ones
 - 2026-09-05T00:20:42+00:00 triage: marked ready for review
 - 2026-09-05T00:29:10+00:00 PR conflicts with main (tests/test_cli.py); revise run will rebase and resolve
 - 2026-09-05T00:36:04+00:00 dispatched revise run 20260905T003603Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7218 tokens)
+- 2026-09-05T00:39:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/86: Rebased the CG-088 branch onto current main, resolving the tests/test_cli.py conflict by keeping both the max_parallel tests and the trellis --open filter test. Full test suite (372 passed) and ruff lint pass cleanly. cost=$0.91
+- 2026-09-05T00:43:20+00:00 automated review requested changes: All four acceptance criteria are met and tested and checks pass, but the PR description's Friction section is process/rebase narration that must be removed, and the phase page's localStorage persistence is dead code (written, never read). cost=$0.77
