@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: in_review
+status: failed
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos
 pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
-last_dispatched_at: '2026-09-05T15:36:44+00:00'
+last_dispatched_at: '2026-09-05T16:34:38+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T15:59:23+00:00'
+updated: '2026-09-05T16:46:33+00:00'
 ---
 
 ## Goal
@@ -88,3 +88,12 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T15:51:40+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Addressed both PR #139 review items: the retro page now shows the verdict panel (shared with the phase page via a new partial), and a pending reopen verdict now surfaces as an Inbox decision card, a browser notification, and a digest needs_human entry. cost=$3.35
 - 2026-09-05T15:51:41+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
 - 2026-09-05T15:59:23+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
+- 2026-09-05T16:34:12+00:00 automated review requested changes: The verdict/close-phase implementation itself is solid and well tested (full suite + ruff pass), but the branch's real diff (against origin/main, not the stale local main) bundles the entirety of CG-189 (retro questions/answers) into CG-178's commits and files, undisclosed in the PR description. cost=$1.30
+- 2026-09-05T16:34:38+00:00 dispatched revise run 20260905T163438Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~15593 tokens)
+- 2026-09-05T16:46:33+00:00 push failed: git push -u origin HEAD:refs/heads/garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos (in /home/joshua/work/worktrees/CG-178): To https://github.com/joshmarcus/context-garden.git
+ ! [rejected]        HEAD -> garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos (non-fast-forward)
+error: failed to push some refs to 'https://github.com/joshmarcus/context-garden.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$2.11

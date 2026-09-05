@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-163-a-backlog-view-across-phases-sections-per-phase
 pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
-last_dispatched_at: '2026-09-05T15:43:18+00:00'
+last_dispatched_at: '2026-09-05T16:46:51+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T16:12:11+00:00'
+updated: '2026-09-05T16:46:51+00:00'
 ---
 
 ## Goal
@@ -79,3 +79,9 @@ Design:
 - 2026-09-05T16:00:59+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
 - 2026-09-05T16:02:21+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
 - 2026-09-05T16:12:11+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
+- 2026-09-05T16:31:18+00:00 automated review requested changes: Feature, tests and description are solid and all five acceptance criteria are met, but the branch carries a dead, unused duplicate of garden.inbox.split_log left over from a rebase, which must be removed. cost=$0.69
+- 2026-09-05T16:31:42+00:00 dispatched revise run 20260905T163142Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~18167 tokens)
+- 2026-09-05T16:35:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Removed the unused duplicate _split_log left in web/common.py from a rebase; full suite (737 passed, 3 skipped) and ruff are clean. cost=$0.27
+- 2026-09-05T16:35:49+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
+- 2026-09-05T16:36:57+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-05T16:46:51+00:00 dispatched revise run 20260905T164651Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~18300 tokens)

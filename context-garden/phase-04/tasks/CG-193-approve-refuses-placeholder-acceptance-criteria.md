@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 2
 last_dispatched_at: '2026-09-05T15:50:32+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T16:02:21+00:00'
+updated: '2026-09-05T16:41:56+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,7 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T15:59:25+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/149: Fixed the blocking review comment: brief_gaps() now reuses criteria.parse_criteria instead of its own bullet parser, so a non-checkbox acceptance-criteria bullet is treated the same as an empty section (a gap) rather than silently passing approve while being invisible to review/verification. Added a regression test and full suite/lint are green. cost=$0.54
 - 2026-09-05T15:59:25+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-193` for one more round, or review on GitHub
 - 2026-09-05T16:02:21+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
+- 2026-09-05T16:34:14+00:00 description rewritten by the reviewer cost=$0.77
+- 2026-09-05T16:37:17+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T16:39:33+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T16:41:56+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/149

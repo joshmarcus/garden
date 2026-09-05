@@ -2,7 +2,7 @@
 id: CG-217
 title: The private worker HOME carries each harness's own config by default (CLAUDE_CONFIG_DIR, CODEX_HOME),
   doctor checks a worker can log in, and a not-logged-in exit is an environment stop
-status: ready
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,8 +14,12 @@ reading:
 - src/garden/cli/diagnostics.py
 - tests/test_runners.py
 - docs/architecture.md
+branch: garden/cg-217-the-private-worker-home-carries-each-harness-s-o
+pr: https://github.com/joshmarcus/context-garden/pull/169
+attempts: 1
+last_dispatched_at: '2026-09-05T16:27:40+00:00'
 created: '2026-09-05T16:26:12+00:00'
-updated: '2026-09-05T16:26:12+00:00'
+updated: '2026-09-05T16:48:04+00:00'
 ---
 
 ## Goal
@@ -36,3 +40,5 @@ Isolating a worker's HOME (CG-194) must not log the harness out. By default the 
 ## Log
 
 - 2026-09-05T16:26:12+00:00 approved (web)
+- 2026-09-05T16:27:40+00:00 dispatched work run 20260905T162724Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~17849 tokens)
+- 2026-09-05T16:48:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/169 (base main): scrubbed_env now defaults CLAUDE_CONFIG_DIR/CODEX_HOME to the operator's home (overridable via worker_env.config_dirs), garden doctor verifies each harness's login through that same environment with a trivial prompt, and Harness.parse tags a login failure as an auth env_error. cost=$3.73

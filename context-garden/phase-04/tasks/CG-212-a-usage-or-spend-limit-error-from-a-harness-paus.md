@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T15:33:56+00:00'
+last_dispatched_at: '2026-09-05T16:36:07+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T16:00:59+00:00'
+updated: '2026-09-05T16:48:07+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,8 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T15:33:56+00:00 dispatched work run 20260905T153346Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~20700 tokens)
 - 2026-09-05T15:59:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/168 (base main): A quota/spend-limit error from a harness now closes the run without burning an attempt, returns the task to ready, pauses dispatch for that harness with the reason recorded, and resumes automatically once a periodic cheap probe succeeds; a dirty worktree is stashed before any dispatch reuses it. cost=$7.50
 - 2026-09-05T16:00:59+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
+- 2026-09-05T16:32:44+00:00 automated review requested changes: Solid implementation of the quota-pause mechanism for fresh work dispatches, but a quota env_error during a revise or rebase run (which always has an open PR and stored pending_feedback) is sent to `ready` losing the feedback and corrupting the task's PR state instead of returning to `changes_requested`; reproduced directly. cost=$0.97
+- 2026-09-05T16:36:07+00:00 dispatched revise run 20260905T163607Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~22051 tokens)
+- 2026-09-05T16:48:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Fixed the reviewer-flagged bug: a quota env_error during a revise or rebase run now returns the task to changes_requested with its pending feedback (or pending rebase) restored and the round's counter given back, instead of going to ready and losing the open PR's context. cost=$2.19
+- 2026-09-05T16:48:02+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T16:48:07+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py); a rebase agent will resolve it

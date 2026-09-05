@@ -2,7 +2,7 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,7 +17,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T15:35:23+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T16:00:57+00:00'
+updated: '2026-09-05T16:35:50+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,7 @@ Aborting
 - 2026-09-05T15:35:23+00:00 dispatched work run 20260905T153522Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5044 tokens)
 - 2026-09-05T15:59:23+00:00 opened https://github.com/joshmarcus/context-garden/pull/167 (base main): Manual tasks now get a revise path (the stuck-task audit flags a manual task waiting for a revise round instead of silently assuming the queue will pick it up, and dispatch clears the flag once taken), the automated reviewer now runs on a manual finish that has no local worktree (the common `garden take` flow), and `garden finish --cost` now records a manual round's cost through the same `run.cost_usd` field an automated worker populates. cost=$4.44
 - 2026-09-05T16:00:57+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00
+- 2026-09-05T16:31:18+00:00 automated review: approve — Diff matches the task exactly (8 files), all three gaps from the retro item are addressed and covered by new tests, full suite and lint pass, and the PR description is clean and reader-ready. cost=$0.53
+- 2026-09-05T16:31:26+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T16:34:10+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T16:35:50+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/167
