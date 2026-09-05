@@ -59,3 +59,7 @@ The phase-04 closing record must include the exact live metric command outputs o
 - CG-293: Test notification and kickoff behavior in a browser
 - CG-294: Align config reload behavior and operating documentation
 - CG-295: Validate persona-run provenance and scrub notifications
+
+## Decisions
+
+- **Does the reopen carry all three blocking items, or only the brief-gate closure, with the two security fixes moved to phase 05 as its first tasks?** — answered: All of them. With the user's standing authority: CG-238 is merged and CG-239 is in review, so the reopen carries both; nothing moves to phase 05. Astra's reconcile has since filed CG-240 to CG-247 as further blocking items; which of those block and which become phase-05 follow-ups is settled by the joined retro. (by cli at 2026-09-05T23:43:16+00:00)
