@@ -34,6 +34,7 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - `/costs`: a stacked area or bar chart (inline SVG, one colour per group from a small fixed palette, legend with totals, hover shows the bucket's numbers as text), the controls above it as pulldowns that apply on change (CG-190 rule), the table below with group, runs, cost, mean per run, and share; a link from the rail and from each phase page (pre-filtered to the phase).
 - `garden costs [--since 24h] [--by activity|difficulty|model|harness|phase|task] [--phase P] [--model M] ...` prints the table; `--json` for scripts.
 - The phase page's cost line links to the page filtered to that phase; the retro's numbers section uses the same aggregation.
+- **Annotations as dotted vertical lines.** Events that change what the numbers mean are drawn on the chart as dotted vertical lines with a short label at the top: `config_reloaded` (with the keys that changed, for example `harnesses` at 14:59 or `review` at 14:36), a pin move (the `tool_upgraded` event or a `pin` note), a phase freeze or close, a pause and resume, a budget change, and a note the operator adds by hand (`garden costs --note "tier map: mediums to sonnet"` writes an `annotation` event). Hovering a line shows the full text; the table lists the annotations in the window.
 
 ## Acceptance criteria
 
@@ -41,6 +42,7 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - [ ] `garden costs` prints the same totals for the same filters; a test compares web and CLI output on a fixture event log.
 - [ ] Slicing by difficulty, model, harness, phase and task each work; a test covers a log with two models and two tiers across two days.
 - [ ] The page answers today's question: it shows spend per hour on 2026-09-05 dropping after 14:50, when the tier map changed.
+- [ ] Annotations: config reloads, pin moves, freezes, closes, pauses, budget changes and hand-written notes appear as labelled dotted vertical lines; `garden costs --note` writes one; a test renders a log with two annotations and finds both lines.
 
 ## Log
 
