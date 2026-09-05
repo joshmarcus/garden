@@ -20,7 +20,7 @@ discovered_from: CG-065
 attempts: 1
 last_dispatched_at: '2026-09-05T05:14:38+00:00'
 created: '2026-09-04T23:25:21+00:00'
-updated: '2026-09-05T05:21:01+00:00'
+updated: '2026-09-05T05:34:06+00:00'
 ---
 
 This task's log showed 'no active run found; back to ready' after a prior dispatch, but that prior run had actually committed 3 of 5 fixes plus tests before being interrupted. A fresh worker had to re-derive that state by reading git log/diff rather than it being visible from the task file or brief. Might be worth surfacing partial-completion state (e.g. commits made during an interrupted run) more explicitly so re-dispatched workers don't have to reverse-engineer prior progress.
@@ -44,3 +44,6 @@ Discovered by CG-065 (Plates and plants: positional assignment, invalid --plant,
 - 2026-09-05T05:13:27+00:00 PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_dispatch.py); a rebase agent will resolve it
 - 2026-09-05T05:14:38+00:00 dispatched rebase run 20260905T051438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~3858 tokens)
 - 2026-09-05T05:21:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/120: Rebased onto origin/main; resolved the single conflict in tests/scheduler/test_dispatch.py by keeping both tests (test_brief_inlines_reading_from_the_target_checkout from main and test_redispatched_work_brief_lists_prior_commits from this branch), which sat adjacent with no logical overlap. Full test suite (549 passed, 3 skipped) confirms the rebase is clean. cost=$0.21
+- 2026-09-05T05:25:34+00:00 automated review: approve — Cleanly surfaces interrupted-attempt progress: reap names prior commits in the log line and no_active_run event, dispatch lists them in the brief for re-dispatched work rounds. Well-tested (both progress and clean-restart cases), lint clean, scope-contained. cost=$0.64
+- 2026-09-05T05:33:12+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:34:06+00:00 rebased; diff unchanged; verdict kept

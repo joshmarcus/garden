@@ -2,7 +2,7 @@
 id: CG-155
 title: notify.command is configured, documented, tested by doctor and loud on failure; triage pings fire
   after the review verdict
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T05:22:18+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T05:22:18+00:00'
+updated: '2026-09-05T05:30:42+00:00'
 ---
 
 ## Goal
@@ -39,3 +39,5 @@ From the phase-02 retro's open list (item 8), reconciled against what merged on 
 - 2026-09-05T05:21:03+00:00 automated review: approve — Meets all acceptance criteria with correct, well-tested logic: notify.command is documented in three places, doctor runs it for real, failures are logged via garden.notify, and the triage ping is deferred until the review verdict via a one-shot pending_triage_notify flag. Lint and the notify/cli tests pass. cost=$0.73
 - 2026-09-05T05:21:10+00:00 PR conflicts with main; rebase onto main conflicts (tests/test_cli.py); a rebase agent will resolve it
 - 2026-09-05T05:22:18+00:00 dispatched rebase run 20260905T052218Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~5986 tokens)
+- 2026-09-05T05:26:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/123: Rebased onto origin/main; resolved the tests/test_cli.py conflict by keeping both independently-added test functions (CG-147's test_doctor_reports_a_clone_missing_git_identity from main, and this branch's test_doctor_tests_notify_command/test_doctor_flags_a_failing_notify_command), removing the conflict markers. Full test suite passes (563 passed, 3 skipped). Did not push. cost=$0.33
+- 2026-09-05T05:30:42+00:00 automated review: approve — All four acceptance criteria met with correct, well-tested logic: notify.command is documented in three places, doctor runs it for real and fails on error, failures are logged via garden.notify, and the triage ping is deferred to the review verdict via a persisted one-shot flag. Tests and lint pass. cost=$0.99

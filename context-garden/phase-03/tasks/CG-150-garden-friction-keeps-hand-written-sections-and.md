@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T04:48:14+00:00'
 created: '2026-09-05T03:14:36+00:00'
-updated: '2026-09-05T05:21:02+00:00'
+updated: '2026-09-05T05:31:50+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,5 @@ From the phase-02 retro's open list (item 2), reconciled against what merged on 
 - 2026-09-05T04:57:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/116 (base main): garden friction now preserves any hand-written section (not just ## Reported) on rewrite, and garden retro's reconciliation now reads the phase's ## Reported friction log and unreconciled PR-comment friction alongside the harvested PR-body friction. cost=$1.67
 - 2026-09-05T05:00:28+00:00 automated review: approve — Focused, well-tested change: garden friction now preserves any hand-written section and the retro reconciliation reads the Reported log and marked PR comments. Tests pass and lint is clean. cost=$0.83
 - 2026-09-05T05:21:02+00:00 automated review: approve — garden friction now preserves any hand-written section on rewrite, and the retro reconciliation reads the phase's ## Reported log and marked-but-unreconciled PR-comment friction alongside PR-body friction. Well-tested (including a read-only assertion), full suite passes, lint clean. cost=$0.66
+- 2026-09-05T05:30:55+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:31:50+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-150` for one more round, or review on GitHub
