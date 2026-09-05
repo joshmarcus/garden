@@ -32,7 +32,7 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - `models.<tier>` accepts a list: `[{harness: claude, model: claude-sonnet-5, weight: 2}, {harness: codex, model: "", weight: 1}]`; a plain string keeps today's meaning. `dispatch.spread: round_robin | weighted | quota_aware` (default `quota_aware`, which is weighted round robin that skips paused members and, when usage-limit events were seen for a member in the last N hours, halves its weight until a probe succeeds).
 - Each dispatch records the member on the run (`harness`, `model`, `pool_member`) so reviews, trials, the costs page (CG-214) and `garden metrics` can compare members; the retro reports cost per accepted task per member.
 - A task's `harness:` or `model:` override pins it to one member; a trial (`garden trial`) can name a whole tier's pool as its contenders (`-c tier:medium`).
-- Reviews and persona runs use the pool of their own tier the same way; the retro tier (CG-207) may be a single member.
+- Reviews and persona runs use pools the same way, and a review pool may name the top model of each harness regardless of the task's tier: the user's example (2026-09-05) is reviews split across `codex:gpt-6-astra` and `claude:claude-fable-5-1`, alternating to share the two quotas. Until this lands, `harnesses.<h>.review_model` pins each harness's review model and `review.harness` picks one harness for all reviews.
 - The slider (CG-221) stops carry pools, so "economy" can be a cheap pair and "fast" a strong single member.
 
 ## Acceptance criteria
@@ -40,5 +40,6 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - [ ] A tier configured with two members dispatches alternately by default, honours weights, and skips a member the harness pause (CG-212) has marked; a test runs ten dispatches and checks the split and the skip.
 - [ ] Runs, PRs and reviews record the member; `garden costs` and `garden metrics` slice by it; the retro's numbers list cost per accepted task per member.
 - [ ] Task-level `harness:` and `model:` overrides still pin a run; `garden trial -c tier:medium` expands to the pool.
+- [ ] `review.pool` (a list of harness:model members with weights) spreads reviews across harnesses; a test with two members sees alternating review harnesses and the skip of a paused one.
 - [ ] Docs: `docs/architecture.md` describes pools and the spread policies; the example configs show a claude-and-codex medium tier.
 
