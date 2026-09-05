@@ -31,7 +31,7 @@ review:
   max_rounds: 2             # correctness, scope, PR description quality / no scar tissue)
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
   harness: ""               # empty = the default harness
-  difficulty: "medium"      # reviews on the medium tier (sonnet); empty = the task's tier
+  difficulty: "hard"      # phase-02 retro: personas and the reconciliation on the best model; back to medium for phase 03
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
 # Token-free checks. pre_pr runs in the worktree before a PR is opened or updated (failures
