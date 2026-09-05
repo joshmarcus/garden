@@ -2,7 +2,7 @@
 id: CG-199
 title: 'Discovered work is deduplicated before it is filed: the same finding from several workers becomes
   one draft'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,10 +12,11 @@ priority: 2
 difficulty: easy
 reading: []
 branch: garden/cg-199-discovered-work-is-deduplicated-before-it-is-fil
+pr: https://github.com/joshmarcus/context-garden/pull/152
 attempts: 1
 last_dispatched_at: '2026-09-05T12:48:25+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T12:48:25+00:00'
+updated: '2026-09-05T13:02:15+00:00'
 ---
 
 ## Goal
@@ -36,3 +37,4 @@ From the phase-03 persona reviews of 2026-09-05 (project-manager:medium); filed 
 
 - 2026-09-05T10:31:18+00:00 approved (web)
 - 2026-09-05T12:48:25+00:00 dispatched work run 20260905T124816Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4419 tokens)
+- 2026-09-05T13:02:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/152 (base main): Discovered `task` items are now deduplicated against open tasks in the reporting task's phase and the next one, by normalised title or shared file+error, attaching a note instead of filing a near-duplicate draft. cost=$2.18
