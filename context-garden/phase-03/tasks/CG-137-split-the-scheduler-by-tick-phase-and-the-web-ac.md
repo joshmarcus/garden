@@ -1,7 +1,7 @@
 ---
 id: CG-137
 title: Split the scheduler by tick phase and the web actions into a registry so features stop colliding
-status: ready
+status: done
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -14,10 +14,11 @@ reading:
 - tests/fake_claude.py
 - docs/architecture.md
 branch: garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac
-attempts: 1
-last_dispatched_at: '2026-09-05T03:01:55+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/96
+attempts: 2
+last_dispatched_at: '2026-09-05T03:22:09+00:00'
 created: '2026-09-05T00:47:36+00:00'
-updated: '2026-09-05T03:19:57+00:00'
+updated: '2026-09-05T03:42:07+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,8 @@ Measured at the end of the first live run. Of 22 conflict events after 20:00, fo
 - 2026-09-05T03:05:28+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
 - 2026-09-05T03:17:38+00:00 priority 1 -> 0
 - 2026-09-05T03:19:57+00:00 approved (web)
+- 2026-09-05T03:22:09+00:00 dispatched work run 20260905T032209Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~8637 tokens)
+- 2026-09-05T03:36:08+00:00 discovered work filed: CG-159
+- 2026-09-05T03:37:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/96 (base main): Split the scheduler into a package of per-phase mixins, the web app into pages plus an action registry, the scheduler tests by area, and the fake harness into a table of modes. Pure movement: 458 tests pass, no module over 514 lines. cost=$10.17
+- 2026-09-05T03:41:01+00:00 automated review: approve — Pure structural split of scheduler.py into per-phase mixins and web app.py into pages + an action registry; 145 methods and 47 scheduler tests preserved exactly, 458 tests pass, ruff clean, no scope creep or scar tissue. cost=$1.22
+- 2026-09-05T03:42:07+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/96

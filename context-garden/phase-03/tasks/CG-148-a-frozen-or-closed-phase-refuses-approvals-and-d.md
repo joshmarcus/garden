@@ -1,7 +1,7 @@
 ---
 id: CG-148
 title: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -13,8 +13,11 @@ reading:
 - src/garden/web/app.py
 - src/garden/model.py
 - src/garden/cli.py
+branch: garden/cg-148-a-frozen-or-closed-phase-refuses-approvals-and-d
+attempts: 1
+last_dispatched_at: '2026-09-05T03:37:41+00:00'
 created: '2026-09-05T03:07:37+00:00'
-updated: '2026-09-05T03:19:59+00:00'
+updated: '2026-09-05T03:42:07+00:00'
 ---
 
 ## Goal
@@ -36,3 +39,5 @@ Found at the phase-02 close on the first live run. The freeze was a paragraph in
 - 2026-09-05T03:15:00+00:00 moved to phase-03 at the phase-02 close (deferred by the freeze)
 - 2026-09-05T03:08:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
 - 2026-09-05T03:19:59+00:00 approved (web)
+- 2026-09-05T03:37:41+00:00 dispatched work run 20260905T033732Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac stacked on CG-137, ~6406 tokens)
+- 2026-09-05T03:42:07+00:00 parent CG-137 merged; will rebase onto main when the current run finishes
