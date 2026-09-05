@@ -2,7 +2,7 @@
 id: CG-133
 title: 'garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next
   phase'
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,8 +13,11 @@ reading:
 - src/garden/review.py
 - personas/00-index.md
 - docs/design.md
+branch: garden/cg-133-garden-retro-harvest-pr-friction-run-the-persona
+attempts: 1
+last_dispatched_at: '2026-09-05T00:50:08+00:00'
 created: '2026-09-05T00:36:04+00:00'
-updated: '2026-09-05T00:36:04+00:00'
+updated: '2026-09-05T00:50:08+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,7 @@ Asked at the end of the first live run, when the phase had 59 PRs with Friction 
 - [ ] `garden retro product/phase` harvests, runs the personas (or reuses reports), reconciles and writes the retro document and next-goals draft; `--dry-run` prints the plan and estimated cost.
 - [ ] the reconciliation table marks each friction item with a verdict and evidence; a test with fake reports and a fake PR list checks the verdicts.
 - [ ] the result arrives as a PR to the garden repo; nothing edits the live garden directly.
+
+## Log
+
+- 2026-09-05T00:50:08+00:00 dispatched work run 20260905T004959Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6289 tokens)

@@ -1,7 +1,7 @@
 ---
 id: CG-131
 title: A check that fails at the branch's base commit triggers a rebase, not a revise round
-status: ready
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,8 +11,11 @@ reading:
 - src/garden/scheduler.py
 - src/garden/checks.py
 - src/garden/gitops.py
+branch: garden/cg-131-a-check-that-fails-at-the-branch-s-base-commit-t
+attempts: 1
+last_dispatched_at: '2026-09-05T00:49:59+00:00'
 created: '2026-09-05T00:21:13+00:00'
-updated: '2026-09-05T00:21:13+00:00'
+updated: '2026-09-05T00:49:59+00:00'
 ---
 
 ## Goal
@@ -28,3 +31,7 @@ Found on the first live run. Main was red for twenty minutes (CG-127) and every 
 - [ ] a check that fails at both the branch and its base does not start a revise round; the log names the base commit.
 - [ ] when the base branch has moved, the branch is rebased and the checks re-run without a worker; a test seeds a red base that turns green.
 - [ ] when main itself is red, the Inbox card says so and names the check; the task waits without spending.
+
+## Log
+
+- 2026-09-05T00:49:59+00:00 dispatched work run 20260905T004950Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~7718 tokens)

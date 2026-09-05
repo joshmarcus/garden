@@ -1,7 +1,7 @@
 ---
 id: CG-096
 title: Inbox count is the decisions only; retrying tasks show but do not count
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/76
 attempts: 1
 last_dispatched_at: '2026-09-05T00:46:40+00:00'
 created: '2026-09-04T21:02:13+00:00'
-updated: '2026-09-05T00:46:40+00:00'
+updated: '2026-09-05T00:51:10+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,7 @@ Asked during the first live run. CG-035 added the "Retrying" group so a first fa
 - 2026-09-05T00:44:13+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/76: Rebased CG-096 onto main, resolving conflicts in src/garden/tui/app.py (merged the notice-dimming/decision-count logic with main's decision-key accept/reject row handling) and src/garden/web/templates/inbox.html (combined the inbox_count KPI with main's running/max_parallel display). Full test suite (373 passed) and ruff lint pass. cost=$1.16
 - 2026-09-05T00:46:28+00:00 automated review requested changes: Code is correct, focused, and fully tests all three acceptance criteria (rail/KPI count decisions only, inbox/digest split, TUI status bar); lint and tests pass. Only the PR description needs cleanup. cost=$0.72
 - 2026-09-05T00:46:40+00:00 dispatched revise run 20260905T004640Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~10785 tokens)
+- 2026-09-05T00:48:44+00:00 worker says nothing to change: The code was already approved as correct, focused, and fully tested by the automated reviewer; the only outstanding item was rewriting the PR description to remove the rebase/revision narration, which doesn't require a code change. Full test suite (373 passed, 3 skipped) and ruff lint pass. cost=$0.39
+- 2026-09-05T00:50:17+00:00 no-change accepted by the person (accepted: code approved, only the description changed); resuming the round without a new work run
+- 2026-09-05T00:51:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/76: Automated review confirmed the implementation is correct and fully meets all acceptance criteria; the only requested change was cosmetic cleanup of the PR description, which I've updated in pr_body (dropping the process-narrating 'Revision' section per feedback).
+- 2026-09-05T00:51:10+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-096` for one more round, or review on GitHub
