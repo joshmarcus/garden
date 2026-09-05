@@ -89,6 +89,11 @@ github:
   reviewers: []
 
 products:
+  garden:                   # the garden's own repo as a product (CG-123): retro, phase docs and config arrive as PRs here
+    repo: https://github.com/joshmarcus/garden.git
+    base_branch: main
+    id_prefix: GD
+    self: true
   context-garden:
     repo: https://github.com/joshmarcus/context-garden.git   # cloned under .garden/repos/; worktrees come from that clone
     base_branch: main
