@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
 last_dispatched_at: '2026-09-05T02:12:32+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T02:12:32+00:00'
+updated: '2026-09-05T02:17:55+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,5 @@ Design:
 - 2026-09-05T02:11:37+00:00 triage: marked ready for review
 - 2026-09-05T02:12:16+00:00 PR conflicts with main (src/garden/web/app.py, src/garden/web/templates/task.html); revise run will rebase and resolve
 - 2026-09-05T02:12:32+00:00 dispatched revise run 20260905T021231Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~15762 tokens)
+- 2026-09-05T02:17:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Rebased the suggestions branch onto current origin/main, resolving conflicts in src/garden/web/app.py, src/garden/web/templates/task.html, and tests/fake_claude.py by keeping both sides' intent (main's message-flashing task_action and multi-row trial form and retro harness mode, plus this branch's suggest/integrate actions, suggest form, and edit harness mode). Full suite (456 passed, 3 skipped) and ruff pass; the branch diff is only the suggestions feature. cost=$1.65
+- 2026-09-05T02:17:55+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub

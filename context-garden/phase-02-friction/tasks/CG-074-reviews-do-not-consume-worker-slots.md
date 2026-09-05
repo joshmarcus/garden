@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/71
 attempts: 1
 last_dispatched_at: '2026-09-05T02:11:15+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-05T02:15:39+00:00'
+updated: '2026-09-05T02:18:30+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,6 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 - 2026-09-05T02:11:15+00:00 dispatched revise run 20260905T021114Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7546 tokens)
 - 2026-09-05T02:15:38+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/71: Rebased onto latest main, resolving conflicts in web/app.py and inbox.html by keeping main's inbox_count/flash additions alongside this branch's workers_running/reviews_running KPI split; full suite (434 passed) and ruff pass. cost=$1.29
 - 2026-09-05T02:15:39+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-074` for one more round, or review on GitHub
+- 2026-09-05T02:17:55+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/71
+- 2026-09-05T02:17:58+00:00 triage: marked ready for review
+- 2026-09-05T02:18:30+00:00 #71 was merged by the garden at 02:17:55; a triage-ready pressed three seconds later moved it back by mistake
