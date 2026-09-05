@@ -1,8 +1,8 @@
 # Phase 03 operator retro
 
 Written by the operator (Claude, acting with the user's authority) on 2026-09-05 at the end of
-the phase. The phase ran from 03:22 to about 06:10 UTC, overnight, with the user asleep after
-04:00. Companion documents: `../retro.md` (the reconciled retro from `garden retro`),
+the phase. The phase ran from 03:22 to 10:10 UTC on 2026-09-05, with the user asleep from 04:00 and
+the machine itself down from 05:59 to 09:31 (WSL stopped; nothing ran, nothing was lost). Companion documents: `../retro.md` (the reconciled retro from `garden retro`),
 `../reviews/` (persona reports), `../walkthrough/` (the pages as they were), `../friction.md`.
 
 ## In one sentence
@@ -14,7 +14,7 @@ night, because every new mechanism shipped this phase surfaced one more way the 
 
 | measure | goal | phase 02 | phase 03 |
 |---|---|---|---|
-| conflict rounds per merge | < 0.2 | 0.59 | 0.48 (13 in 27 merges); after the pin moved at 05:00, 15 of 19 rebases were mechanical and cost $0 |
+| conflict rounds per merge | < 0.2 | 0.59 | 0.47 (14 in 30 merges); after the pin moved at 05:00, 17 of 22 rebases were mechanical and cost $0 |
 | description-only rounds | 0 | 12 | 3, all applied as reviewer rewrites, no revise run |
 | first-pass approval | >= 90% | 83% | 93% (26 of 28 first verdicts) |
 | cost per easy task | <= $4 | ~$6 | $4.39 mean (15 done); medium $6.63; hard $12.20 |
@@ -23,8 +23,8 @@ night, because every new mechanism shipped this phase surfaced one more way the 
 | trust items merged | 3 | 0 | 5 (CG-154, CG-164, CG-165) |
 | config live within a tick | yes | partly | unchanged: budgets and `max_parallel` are live, everything else needs a restart |
 
-Run cost for the phase: about $171 across 98 runs (work $119, review $35, revise $15, rebase $1).
-Total garden spend passed $770 at 05:45.
+Run cost for the phase: about $189 across 109 runs. Total garden spend was $791 when the phase
+froze at 10:11, before its retro. 30 tasks done, 7 cancelled (six of them duplicates of one fix).
 
 ## What the phase set out to do, and did
 
@@ -71,7 +71,16 @@ PR by hand resets the cache (CG-174), a finished task drops its stop (CG-175).
    it from the queue, and nothing merged for ten minutes. Merged the eight by hand with scratch
    merges (558 to 584 tests each). Filed CG-176 at priority 0; it is the last task of the phase.
 
-Roughly twenty-five hand actions in three hours, against about a hundred in phase 02's day.
+9. **05:59 WSL stopped.** The VM went down with the server, three workers and every monitor,
+   and came back at 09:31 when the desktop app reopened. Nothing was lost: the dead runs were
+   retried, one worktree needed its uncommitted edits stashed. The server now runs as a systemd
+   user service with lingering, and `.wslconfig` keeps the VM from idling out; the laptop must
+   stay on AC for an overnight run.
+10. **09:43 the web UI froze during ticks.** Every action waits on the hub lock the tick holds,
+    and the queue ran the full suite in-tick on every pre-merge rebase. Mitigated by turning the
+    in-tick test check off (CI still gates every merge); filed CG-182 at priority 0.
+
+Roughly thirty hand actions across the phase, against about a hundred in phase 02's day.
 Almost all of them were the loop's new mechanisms meeting a case their tests did not cover,
 and each is now a task or a merged fix.
 
@@ -89,7 +98,7 @@ and each is now a task or a merged fix.
 
 ## What to change
 
-- **Merge queue stickiness (CG-176) and no review under a running task (CG-177)** before phase 04 opens many PRs at once.
+- **Merge queue stickiness (CG-176) and no review under a running task (CG-177)** landed as the last two tasks of the phase; **the tick must stop blocking the UI (CG-182)** is phase 04's first.
 - **Hard tier still needs a person to merge.** Either let the queue merge hard-tier PRs after
   two approving rounds, or make the scratch-merge check the queue's own step so a person's
   merge adds nothing. The user should decide this one.
@@ -105,8 +114,9 @@ and each is now a task or a merged fix.
 
 ## For the user in the morning
 
-- Nothing is waiting on you. Phase 03 closes once CG-175 and CG-176 merge; phase 04 starts
-  from its stub goals plus the retro's draft.
+- Phase 03 is complete and frozen; its retro ran with seven personas on the hard tier, including
+  the new product-manager persona, and phase 04 starts from its stub goals plus the retro's draft
+  and features.
 - Decisions I made with your authority that you may want to revisit: hand-merging eight
   approved PRs when the queue rotated; cancelling CG-171 (new-task must keep working during a
   freeze so friction can be filed); filing CG-162 and CG-163 (your two morning requests) in
