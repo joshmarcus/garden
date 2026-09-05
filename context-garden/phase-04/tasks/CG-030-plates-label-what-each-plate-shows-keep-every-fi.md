@@ -1,7 +1,7 @@
 ---
 id: CG-030
 title: 'Plates: label what each plate shows, keep every file public domain, credit Thomé'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,7 +20,7 @@ harness: claude
 model: claude-sonnet-5
 last_dispatched_at: '2026-09-05T18:16:22+00:00'
 created: '2026-09-04T14:36:12+00:00'
-updated: '2026-09-05T18:31:55+00:00'
+updated: '2026-09-05T19:22:39+00:00'
 ---
 
 ## Goal
@@ -67,3 +67,4 @@ Everything involved lives in `PLANTS` (`src/garden/plants.py`), `CANDIDATES` and
 - 2026-09-05T18:16:22+00:00 dispatched trial run 20260905T181622Z-trial-2 via local [codex] (fresh session, base main, ~7444 tokens)
 - 2026-09-05T18:16:22+00:00 trial started with claude:claude-sonnet-5, codex
 - 2026-09-05T18:31:55+00:00 trial won by claude:claude-sonnet-5 (scores: claude:claude-sonnet-5=–, codex=–): https://github.com/joshmarcus/context-garden/pull/177
+- 2026-09-05T19:22:39+00:00 automated review requested changes: Solid, well-verified plate/licensing fix with passing tests and clean scope, but the poppy criterion's spec-file follow-up lives in a separate repo and is unmet, and the PR description narrates a template bug that never existed on main. cost=$1.27

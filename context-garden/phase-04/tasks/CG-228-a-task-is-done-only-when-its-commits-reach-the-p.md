@@ -2,7 +2,7 @@
 id: CG-228
 title: 'A task is done only when its commits reach the product''s base branch: a stacked child merged
   into its parent''s branch stays open until the parent merges'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/178
 attempts: 1
 last_dispatched_at: '2026-09-05T18:47:53+00:00'
 created: '2026-09-05T18:14:53+00:00'
-updated: '2026-09-05T19:13:52+00:00'
+updated: '2026-09-05T19:16:54+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ updated: '2026-09-05T19:13:52+00:00'
 - 2026-09-05T19:09:17+00:00 description rewritten by the reviewer cost=$1.29
 - 2026-09-05T19:10:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T19:13:52+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T19:16:54+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/178

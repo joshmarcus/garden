@@ -2,7 +2,7 @@
 id: CG-225
 title: The retro's questions become decision cards through the kickoff's mechanism (re-doing CG-189, whose
   implementation was dropped from CG-178 before merge)
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,12 +17,11 @@ reading:
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
 branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards-trial-codex
-pr: https://github.com/joshmarcus/context-garden/pull/179
 harness: codex
 discovered_from: CG-224
-last_dispatched_at: '2026-09-05T18:50:17+00:00'
+last_dispatched_at: '2026-09-05T19:46:46+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T19:15:21+00:00'
+updated: '2026-09-05T19:46:46+00:00'
 ---
 
 ## Goal
@@ -64,3 +63,7 @@ CG-189 was implemented on a branch stacked on CG-178 and its PR #150 was merged 
 - 2026-09-05T18:50:17+00:00 trial started with claude:claude-sonnet-5, codex
 - 2026-09-05T19:07:48+00:00 all contenders finished; comparison run started
 - 2026-09-05T19:15:21+00:00 trial won by codex (scores: claude:claude-sonnet-5=6, codex=8): https://github.com/joshmarcus/context-garden/pull/179
+- 2026-09-05T19:45:48+00:00 operator: trial re-run on gpt-5.6-terra vs claude sonnet 5 (apples to apples); the astra and sonnet PRs #179/#181 are closed, branches kept
+- 2026-09-05T19:46:31+00:00 dispatched trial run 20260905T194631Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~26749 tokens)
+- 2026-09-05T19:46:46+00:00 dispatched trial run 20260905T194631Z-trial-2 via local [codex model=gpt-5.6-terra] (fresh session, base main, ~26787 tokens)
+- 2026-09-05T19:46:46+00:00 trial started with claude:claude-sonnet-5, codex:gpt-5.6-terra

@@ -2,7 +2,7 @@
 id: CG-229
 title: Trial contender worktrees get the product setup like any work run, and a contender that reports
   a blocked environment is a harness failure, not a model loss
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -15,10 +15,11 @@ reading:
 - src/garden/trials.py
 - tests/test_trials.py
 branch: garden/cg-229-trial-contender-worktrees-get-the-product-setup
+pr: https://github.com/joshmarcus/context-garden/pull/182
 attempts: 1
-last_dispatched_at: '2026-09-05T18:52:21+00:00'
+last_dispatched_at: '2026-09-05T19:28:52+00:00'
 created: '2026-09-05T18:50:57+00:00'
-updated: '2026-09-05T18:52:21+00:00'
+updated: '2026-09-05T19:40:42+00:00'
 ---
 
 ## Goal
@@ -40,3 +41,10 @@ A model trial compares models, not environments. Every contender's worktree is p
 
 - 2026-09-05T18:50:58+00:00 approved (web)
 - 2026-09-05T18:52:21+00:00 dispatched work run 20260905T185206Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16679 tokens)
+- 2026-09-05T19:28:32+00:00 opened https://github.com/joshmarcus/context-garden/pull/182 (base main): Trial contenders are prepared like work runs and an environment failure (setup, sandbox denial, login/quota) is now recorded env_failed and excluded from the comparison; a trial with fewer than two PRs is inconclusive instead of declaring a default winner, surfaced on the trials page, task page, and garden trial/trials. cost=$7.69
+- 2026-09-05T19:28:37+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/task.html); a rebase agent will resolve it
+- 2026-09-05T19:28:52+00:00 dispatched rebase run 20260905T192852Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~7752 tokens)
+- 2026-09-05T19:34:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/182: Rebased onto origin/main; resolved the single conflict in src/garden/web/templates/task.html by keeping main's new 'merged_into_parent' waiting-on row alongside this branch's enriched trial row (kept/kind/cost/note fields). Full test suite (905 passed, 3 skipped) passes post-rebase. cost=$0.23
+- 2026-09-05T19:39:08+00:00 automated review: approve — All four acceptance criteria are met with passing tests; the diff is in scope, correctness checks out, and the description is clean. cost=$0.43
+- 2026-09-05T19:39:12+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T19:40:42+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/182
