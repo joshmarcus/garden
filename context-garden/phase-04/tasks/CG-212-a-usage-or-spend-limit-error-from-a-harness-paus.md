@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T15:33:56+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T15:59:27+00:00'
+updated: '2026-09-05T16:00:59+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T15:32:12+00:00 approved (web)
 - 2026-09-05T15:33:56+00:00 dispatched work run 20260905T153346Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~20700 tokens)
 - 2026-09-05T15:59:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/168 (base main): A quota/spend-limit error from a harness now closes the run without burning an attempt, returns the task to ready, pauses dispatch for that harness with the reason recorded, and resumes automatically once a periodic cheap probe succeeds; a dirty worktree is stashed before any dispatch reuses it. cost=$7.50
+- 2026-09-05T16:00:59+00:00 automated review produced no verdict (worker error: success Not logged in · Please run /login) cost=$0.00

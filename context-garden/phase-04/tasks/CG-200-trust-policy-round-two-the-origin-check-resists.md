@@ -2,7 +2,7 @@
 id: CG-200
 title: 'Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product
   PRs need a person or a second round'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/155
 attempts: 2
 last_dispatched_at: '2026-09-05T15:21:22+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:59:37+00:00'
+updated: '2026-09-05T16:03:53+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,5 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - 2026-09-05T15:50:13+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-200` for one more round, or review on GitHub
 - 2026-09-05T15:58:30+00:00 nothing to fix; needs-human stop cleared by hand
 - 2026-09-05T15:59:37+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T16:02:21+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T16:03:53+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/155
