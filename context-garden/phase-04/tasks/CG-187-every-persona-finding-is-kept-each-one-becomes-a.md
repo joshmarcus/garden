@@ -2,7 +2,7 @@
 id: CG-187
 title: 'Every persona finding is kept: each one becomes a draft with its severity as priority, the retro
   reconciles all of them, and nothing below high is dropped'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/136
 attempts: 1
 last_dispatched_at: '2026-09-05T11:51:00+00:00'
 created: '2026-09-05T10:21:05+00:00'
-updated: '2026-09-05T12:12:13+00:00'
+updated: '2026-09-05T12:19:53+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,7 @@ The user on 2026-09-05, reading the product manager's phase-03 review: "We shoul
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
 - 2026-09-05T12:10:33+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
 - 2026-09-05T12:12:13+00:00 opened https://github.com/joshmarcus/context-garden/pull/136 (base main): Every persona finding (not just high) now files as a draft task with priority from severity and persona:<name>:<run> provenance; a frozen/closed reviewed phase redirects to the next phase. The retro reconciles all findings across every persona that ran, merging same-titled ones into one task and listing every finding with its task id, grouped by severity, in the retro document. Added --min-severity to persona-review --file-tasks. cost=$4.71
+- 2026-09-05T12:15:09+00:00 automated review: approve — Every persona finding now files as a draft with severity-priority in both the direct-dispatch and retro paths, cross-persona duplicates merge by title, and the retro doc lists findings grouped by severity; all five acceptance criteria are met with fake-harness tests, and the full suite and lint pass. cost=$0.99
+- 2026-09-05T12:15:19+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:16:44+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T12:19:53+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/136

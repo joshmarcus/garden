@@ -1,7 +1,7 @@
 ---
 id: CG-162
 title: Move a task to another phase from the task page and the CLI, keeping its id, history and state
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,10 +16,11 @@ reading:
 - src/garden/web/pages/task.py
 - src/garden/inbox.py
 branch: garden/cg-162-move-a-task-to-another-phase-from-the-task-page
+pr: https://github.com/joshmarcus/context-garden/pull/137
 attempts: 1
 last_dispatched_at: '2026-09-05T12:02:03+00:00'
 created: '2026-09-05T03:56:09+00:00'
-updated: '2026-09-05T12:02:03+00:00'
+updated: '2026-09-05T12:21:20+00:00'
 ---
 
 ## Goal
@@ -48,3 +49,6 @@ Design:
 
 - 2026-09-05T10:31:13+00:00 approved (web)
 - 2026-09-05T12:02:03+00:00 dispatched work run 20260905T120154Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~15732 tokens)
+- 2026-09-05T12:15:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/137 (base main): Added moving a task between phases of a product from the CLI (garden move) and the web (task-page phase pulldown + Inbox frozen-draft card), keeping the task's id, run history, state.json entry and dependencies; only the file location and phase: change. Refuses a run in flight and a closed phase, takes drafts only into a frozen phase, emits a moved event, and warns when a dependency is stranded in a later phase. cost=$5.15
+- 2026-09-05T12:18:25+00:00 automated review: approve — Move-between-phases lands cleanly across CLI, task page and Inbox, keeping id/history/state/deps; all acceptance criteria are met and tested, and the full suite plus ruff are green. cost=$0.77
+- 2026-09-05T12:21:20+00:00 rebasing before merge; rebased onto main mechanically and force-pushed

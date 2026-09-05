@@ -19,7 +19,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/133
 attempts: 2
 last_dispatched_at: '2026-09-05T12:07:09+00:00'
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T12:12:10+00:00'
+updated: '2026-09-05T12:15:03+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,6 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 - 2026-09-05T12:06:55+00:00 automated review: approve — Adds a New task form to the phase page with a rail link, validation like garden validate, and byte-identical output to garden new-task; all three acceptance criteria are met and tested, checks pass. cost=$0.85
 - 2026-09-05T12:07:09+00:00 dispatched rebase run 20260905T120709Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~4544 tokens)
 - 2026-09-05T12:12:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/133: Rebased onto main; resolved the single conflict in src/garden/web/pages/phase.py by keeping both sides' additions — main's has_retro/_retro_doc/_retro_operator/_persona_scores (from CG-146) and this branch's new_task/_new_task_prefill (from CG-132) — in both the phase_page template context and the module-level helper functions. Full test suite (607 passed, 3 skipped) and ruff both pass. cost=$0.25
+- 2026-09-05T12:13:47+00:00 automated review: approve — Adds a New task form to the phase page with a rail link, validation matching garden validate, and byte-identical output to garden new-task; all three acceptance criteria are met and tested, and checks pass. cost=$0.88
+- 2026-09-05T12:13:58+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:15:03+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-132` for one more round, or review on GitHub

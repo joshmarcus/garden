@@ -2,7 +2,7 @@
 id: CG-185
 title: 'A page never 500s on an undefined template variable: tojson gets a value on every path, and a
   template error renders as a flash, not a traceback'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,8 +16,11 @@ reading:
 - src/garden/web/templates/task.html
 - src/garden/web/templates/trials.html
 - src/garden/web/trust.py
+branch: garden/cg-185-a-page-never-500s-on-an-undefined-template-varia
+attempts: 1
+last_dispatched_at: '2026-09-05T12:17:19+00:00'
 created: '2026-09-05T10:17:58+00:00'
-updated: '2026-09-05T10:31:15+00:00'
+updated: '2026-09-05T12:17:19+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ At 10:12:19 on 2026-09-05 the web UI returned "Internal Server Error" to the use
 ## Log
 
 - 2026-09-05T10:31:15+00:00 approved (web)
+- 2026-09-05T12:17:19+00:00 dispatched work run 20260905T121711Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~15626 tokens)

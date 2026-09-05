@@ -2,7 +2,7 @@
 id: CG-202
 title: 'One approve and one rebase: the CLI, web and TUI call the same approve gate, and the sync-rebase-force-push
   sequence lives in one place'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/134
 attempts: 1
 last_dispatched_at: '2026-09-05T11:51:18+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T12:10:41+00:00'
+updated: '2026-09-05T12:12:21+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,4 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:high, staff-engi
 - 2026-09-05T12:06:57+00:00 opened https://github.com/joshmarcus/context-garden/pull/134 (base main): Added Scheduler.approve() as the one draft→ready gate for CLI, web and TUI (the TUI now refuses frozen phases); added gitops.sync_and_rebase() used by the shared _rebase_and_record helper; and centralised all merge-queue state writes into scheduler/queue.py with a test asserting no other writer. Full suite (600 passed) and ruff clean. cost=$6.64
 - 2026-09-05T12:10:37+00:00 automated review: approve — All three acceptance criteria are met with evidence and tests; suite (604 passed) and ruff are clean, and the consolidations faithfully reproduce prior semantics with no behavioural regression. cost=$0.54
 - 2026-09-05T12:10:41+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T12:12:21+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/134

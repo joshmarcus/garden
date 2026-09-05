@@ -2,7 +2,7 @@
 id: CG-180
 title: The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before
   it is trusted
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-180-the-fake-github-models-ci-latency-and-base-branc
+attempts: 1
+last_dispatched_at: '2026-09-05T12:12:41+00:00'
 created: '2026-09-05T09:42:00+00:00'
-updated: '2026-09-05T10:31:14+00:00'
+updated: '2026-09-05T12:12:41+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ Three bugs merged in phase 03 with green tests and failed in the live loop withi
 ## Log
 
 - 2026-09-05T10:31:14+00:00 approved (web)
+- 2026-09-05T12:12:41+00:00 dispatched work run 20260905T121232Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4605 tokens)

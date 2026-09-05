@@ -2,7 +2,7 @@
 id: CG-208
 title: 'Browser notifications: an open garden tab notifies through Chrome when a decision appears, with
   a one-time permission toggle and one notification per tick'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/132
 attempts: 1
 last_dispatched_at: '2026-09-05T12:04:39+00:00'
 created: '2026-09-05T10:36:25+00:00'
-updated: '2026-09-05T12:04:39+00:00'
+updated: '2026-09-05T12:24:05+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,6 @@ The user on 2026-09-05, asked which channel `notify.command` should use to reach
 - 2026-09-05T12:01:30+00:00 opened https://github.com/joshmarcus/context-garden/pull/132 (base main): Added GET /api/decisions (decision-kind events → title+URL, notices dropped) and a rail 'Notify me in this browser' toggle with a 30s poll that fires one coalesced, tagged Chrome notification per interval and opens the task/phase on click. Server side is fully tested; the JS is progressive enhancement verified structurally. cost=$3.29
 - 2026-09-05T12:04:23+00:00 automated review requested changes: Server side (endpoint + mapper) is correct and well-tested, but the untested client re-fires a notification for the most-recent decision on every 30s poll because /api/decisions is inclusive of `since` and the client stores SEEN as the last event's timestamp. cost=$0.76
 - 2026-09-05T12:04:39+00:00 dispatched revise run 20260905T120439Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14711 tokens)
+- 2026-09-05T12:13:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/132: Fixed the blocking review item: the notification poll no longer re-fires the most-recent decision every interval. It now dedupes the inclusive /api/decisions boundary with a high-water `at` plus a tie-breaker set of event identities at that exact second, so a decision notifies once while a genuinely new same-second decision still fires. Added a server-contract test and a structural guard; full suite (605) and lint pass. cost=$2.21
+- 2026-09-05T12:16:47+00:00 automated review: approve — Server side (endpoint + mapper) is correct and fully tested, the round-1 re-fire bug is properly fixed with a boundary tie-breaker, and lint/tests pass. The only gap is criterion 2's behavioral JS test, which is genuinely infeasible in this Python-only harness and is honestly documented. cost=$0.90
+- 2026-09-05T12:24:05+00:00 rebasing before merge; rebased onto main mechanically and force-pushed

@@ -2,7 +2,7 @@
 id: CG-183
 title: The seedling mark from the garden's PR comments sits left of the wordmark in the web header, and
   is the favicon
-status: ready
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,8 +15,12 @@ reading:
 - src/garden/plants.py
 - src/garden/github.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
+branch: garden/cg-183-the-seedling-mark-from-the-garden-s-pr-comments
+pr: https://github.com/joshmarcus/context-garden/pull/141
+attempts: 1
+last_dispatched_at: '2026-09-05T12:15:39+00:00'
 created: '2026-09-05T10:03:57+00:00'
-updated: '2026-09-05T10:31:14+00:00'
+updated: '2026-09-05T12:23:56+00:00'
 ---
 
 ## Goal
@@ -37,3 +41,6 @@ Asked by the user on 2026-09-05: "can we get the little context-garden icon we p
 ## Log
 
 - 2026-09-05T10:31:14+00:00 approved (web)
+- 2026-09-05T12:15:39+00:00 dispatched work run 20260905T121530Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~11358 tokens)
+- 2026-09-05T12:22:23+00:00 opened https://github.com/joshmarcus/context-garden/pull/141 (base main): Added a seedling mark (the sprout growth-stage glyph) to the left of the web header's wordmark and serve the same drawing as the favicon at /favicon.svg, with a test covering both. cost=$1.10
+- 2026-09-05T12:23:56+00:00 automated review: approve — The seedling mark sits left of the wordmark and serves as the /favicon.svg, drawn from one shared _SPROUT_PATHS source; all four acceptance criteria are met with a covering test, and tests and lint pass. cost=$0.58
