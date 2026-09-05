@@ -2,7 +2,7 @@
 id: CG-065
 title: 'Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source
   rows'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/82
 attempts: 2
 last_dispatched_at: '2026-09-05T00:04:08+00:00'
 created: '2026-09-04T18:35:08+00:00'
-updated: '2026-09-05T00:04:08+00:00'
+updated: '2026-09-05T00:10:17+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Five small defects in the plates and plants code, all raised by Codex reviews on
 - 2026-09-04T23:25:55+00:00 opened https://github.com/joshmarcus/context-garden/pull/82 (base main): All five plates/plants defects from PRs #2, #3, #5 are fixed and tested on this branch (positional plant assignment, unknown --plant rejection, --out removed in favor of always writing to the directory serve reads, atomic staged plate publish, and multiline-safe SOURCES.md cells); verified full test suite (288 passed, 3 skipped) and ruff both pass, and the checked-in SOURCES.md renders as one table. cost=$1.06
 - 2026-09-05T00:02:14+00:00 PR conflicts with main (src/garden/store.py); revise run will rebase and resolve
 - 2026-09-05T00:04:08+00:00 dispatched revise run 20260905T000408Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8603 tokens)
+- 2026-09-05T00:10:17+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$2.46

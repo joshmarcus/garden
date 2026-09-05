@@ -1,7 +1,7 @@
 ---
 id: CG-062
 title: A worker silent for too long is flagged and stopped before the timeout
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/66
 attempts: 1
 last_dispatched_at: '2026-09-05T00:07:55+00:00'
 created: '2026-09-04T18:16:39+00:00'
-updated: '2026-09-05T00:07:55+00:00'
+updated: '2026-09-05T00:19:07+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,6 @@ During the first live run a sonnet revise worker for CG-032 sat for 13 minutes w
 - 2026-09-05T00:07:08+00:00 discovered work filed: CG-128
 - 2026-09-05T00:07:21+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$1.04
 - 2026-09-05T00:07:55+00:00 dispatched revise run 20260905T000755Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~8406 tokens)
+- 2026-09-05T00:18:10+00:00 worker says nothing to change: The failing check is not produced by this branch's diff: it fails identically at the base commit with all of this branch's src/ and test changes reverted, and the branch's idle logic is inert to it (20-minute threshold vs sub-second test). retry() resets a running task to ready but leaves its finished run marked 'running', leaking a max_parallel slot so the next tick dispatches 0; this became visible only after CG-116 (ec93789) correctly scoped reap_orphaned to verdict runs. This exact failure is already tracked by CG-127 (worktree 'test-set-budget-none-removes-cap-fails-on-main') and CG-128, so fixing it here would duplicate tracked work and widen scope. The one-line fix: in retry(), before resetting to READY, close any still-'running' run of the task (kill() + status 'superseded' + save), mirroring cancel(); I verified this makes the test and the full suite pass (356 passed). cost=$3.35
+- 2026-09-05T00:18:55+00:00 no-change accepted by the person (accepted: the failing check was CG-127's bug on main, fixed by #89; main is green); resuming the round without a new work run
+- 2026-09-05T00:19:07+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
