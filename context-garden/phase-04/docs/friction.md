@@ -160,3 +160,12 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-163 (A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase) in run 20260905T154318Z-revise
 
 - The automated review appears to have raced the push: it flagged an issue that the immediately-preceding commit (2696b93, pushed 88s earlier) had already fixed, describing the pre-rebase client() rather than HEAD.
+
+### 2026-09-05 · reported by CG-163 (A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another phase) in run 20260905T163142Z-revise
+
+- Two automated review rounds (16:02 and 16:12) failed outright with a harness login error and produced no verdict, burning review slots without giving feedback.
+
+### 2026-09-05 · reported by CG-217 (The private worker HOME carries each harness's own config by default (CLAUDE_CONFIG_DIR, CODEX_HOME), doctor checks a worker can log in, and a not-logged-in exit is an environment stop) in run 20260905T162724Z-work
+
+- CG-212 (the mechanism that pauses a harness on an environment stop) isn't in the codebase yet, so the brief's reference to 'with CG-212 that pauses the harness' describes a future consumer of Harness.parse's new error_kind field, not something this task could verify end-to-end.
+- Changing garden doctor's harness login check broke five existing test_cli.py doctor tests that mocked subprocess.run around the old 'auth status' call shape; all had to be updated to match the new trivial-prompt invocation.
