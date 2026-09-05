@@ -1,3 +1,7 @@
+---
+closed: '2026-09-04'
+---
+
 # phase-02-friction goals
 
 ## Feature freeze (2026-09-05 00:35 UTC)
