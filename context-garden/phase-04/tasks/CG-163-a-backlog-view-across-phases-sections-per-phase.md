@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
 last_dispatched_at: '2026-09-05T15:43:18+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T15:46:25+00:00'
+updated: '2026-09-05T15:58:30+00:00'
 ---
 
 ## Goal
@@ -74,3 +74,4 @@ Design:
 - 2026-09-05T15:41:35+00:00 automated review requested changes: Core backlog feature (order field, sort key, band-scoped reorder, move refusal wiring) is solid, but two of the new tests fail against the real base branch because the test client doesn't use a loopback base_url like tests/test_web.py's convention requires post-CG-194, contradicting the author's claimed passing suite. cost=$0.78
 - 2026-09-05T15:43:18+00:00 dispatched revise run 20260905T154318Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~17635 tokens)
 - 2026-09-05T15:46:25+00:00 worker says nothing to change: The review's finding matches commit db85388's client() (TestClient with no base_url), but HEAD is already 2696b93, which fixed exactly this by adding base_url="http://127.0.0.1" and aligning the referer headers, pushed at 15:40:07 — before the review that flagged it completed at 15:41:35. The review evaluated a stale commit, not the pushed HEAD. Verified fresh: `.venv/bin/python -m pytest -q` gives 737 passed, 3 skipped (matching the log's claim), tests/test_backlog.py's 7 tests all pass including both refusal-path tests, and `ruff check src tests` is clean. No code change is needed. cost=$0.39
+- 2026-09-05T15:58:30+00:00 no-change accepted by the person (accepted by the operator: HEAD already carries the fix the review asked for); resuming the round without a new work run

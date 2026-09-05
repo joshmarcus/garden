@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/155
 attempts: 2
 last_dispatched_at: '2026-09-05T15:21:22+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:50:13+00:00'
+updated: '2026-09-05T15:58:30+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,4 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - 2026-09-05T15:47:44+00:00 automated review: approve — All three trust-hardening changes are correctly implemented and tested; origin check ignores Host entirely, bot trust is opt-in via trusted_bots, and self/tool products correctly require two review rounds with proper override semantics. cost=$0.48
 - 2026-09-05T15:47:50+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T15:50:13+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-200` for one more round, or review on GitHub
+- 2026-09-05T15:58:30+00:00 nothing to fix; needs-human stop cleared by hand
