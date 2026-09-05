@@ -74,6 +74,11 @@ hand edit of `state.json` (never of a task's status field). Actions you will use
 Before pressing anything on a task, confirm its PR is still open: an action landing seconds
 after automerge moves a `done` task back into the loop (seen once; CG-142).
 
+Before merging a PR by hand (hard tier does not automerge), confirm nothing merged since its
+CI last ran: `gh pr view N --json mergeStateStatus` must say `CLEAN`, not `BLOCKED` or
+`BEHIND`. If something did, wait for the scheduler's rebase round rather than merging a
+green-but-stale branch (2026-09-05: two such merges a minute apart left main red).
+
 ## Stall patterns and what they mean
 
 | what you see | what it is | what to do |
@@ -92,6 +97,7 @@ after automerge moves a `done` task back into the loop (seen once; CG-142).
 | check recorded as `exit -15` | the check was killed, usually by a restart mid-tick | wait for the next round; restart only right after a tick |
 | a worker commit appears in the garden repo's history | a worker wrote outside its worktree | revert it, keep the diff as a patch, check the fence config; never push before reading `git log` |
 | `PR merged` from `changes_requested` or `failed` | someone merged on GitHub; the poll caught it | nothing; the task is done |
+| `base branch main is itself broken ... waiting for the base` on several tasks at once | main is red: two PRs that were each green alone merged within a minute of each other (a branch's CI is against the main of its last push, not the main it lands on) | `POST /pause`; run lint and the suite on a scratch checkout of `origin/main`; fix on a branch, PR, merge on green CI; `POST /resume`. Parked tasks re-probe main on the next tick |
 
 ## Restarting the server safely
 
