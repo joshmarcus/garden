@@ -2,7 +2,7 @@
 id: CG-141
 title: 'Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff
   is unchanged, a merge queue'
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,10 +16,11 @@ reading:
 - src/garden/cli.py
 - docs/architecture.md
 branch: garden/cg-141-rebase-is-its-own-mode-mechanical-first-an-agent
+pr: https://github.com/joshmarcus/context-garden/pull/102
 attempts: 2
 last_dispatched_at: '2026-09-05T03:37:31+00:00'
 created: '2026-09-05T02:17:26+00:00'
-updated: '2026-09-05T03:42:07+00:00'
+updated: '2026-09-05T04:05:29+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,5 @@ Three parts. (1) `rebase` becomes a run mode with its own counter on the task, i
 - 2026-09-05T03:19:58+00:00 approved (web)
 - 2026-09-05T03:37:31+00:00 dispatched work run 20260905T033731Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac stacked on CG-137, ~10740 tokens)
 - 2026-09-05T03:42:07+00:00 parent CG-137 merged; will rebase onto main when the current run finishes
+- 2026-09-05T04:05:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/102 (base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac): Rebase is now its own run mode: mechanical rebase with no model first (a rebase run record, lease push, re-run checks), an easy-tier agent with only the hunks on a real textual conflict, no re-review when the rebased diff matches the reviewed hash, and automerge as a queue that rebases and merges one PR per tick. garden metrics reports rebases per merge and rebase cost. cost=$12.04
+- 2026-09-05T04:05:29+00:00 parent CG-137 merged; rebased onto main and retargeted the PR

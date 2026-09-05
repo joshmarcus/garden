@@ -1,7 +1,7 @@
 ---
 id: CG-148
 title: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
-status: in_review
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-148-a-frozen-or-closed-phase-refuses-approvals-and-d
 pr: https://github.com/joshmarcus/context-garden/pull/99
 attempts: 1
-last_dispatched_at: '2026-09-05T03:37:41+00:00'
+last_dispatched_at: '2026-09-05T04:02:14+00:00'
 created: '2026-09-05T03:07:37+00:00'
-updated: '2026-09-05T03:56:22+00:00'
+updated: '2026-09-05T04:02:14+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,6 @@ Found at the phase-02 close on the first live run. The freeze was a paragraph in
 - 2026-09-05T03:55:13+00:00 discovered work filed: CG-161
 - 2026-09-05T03:56:18+00:00 opened https://github.com/joshmarcus/context-garden/pull/99 (base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac): Freeze is now phase state (frozen: in goals.md, garden freeze/unfreeze), enforced by a shared phase_refusal() gate that approve, dispatch (CLI, web, and the scheduler's own dispatch()) and discovered-work filing all check; also fixed a pre-existing gap where a closed phase never actually blocked approve or manual dispatch. cost=$4.48
 - 2026-09-05T03:56:22+00:00 parent CG-137 merged; rebased onto main and retargeted the PR
+- 2026-09-05T03:59:54+00:00 automated review: approve — All three acceptance criteria are met and well-tested (CLI, web, scheduler), the shared phase_refusal() gate is cleanly centralized, and full suite + lint pass. Freeze also blocks in-flight revise/resume, which is deliberate and documented. cost=$1.03
+- 2026-09-05T03:59:58+00:00 PR conflicts with main (src/garden/web/templates/phase.html); revise run will rebase and resolve
+- 2026-09-05T04:02:14+00:00 dispatched revise run 20260905T040214Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8797 tokens)

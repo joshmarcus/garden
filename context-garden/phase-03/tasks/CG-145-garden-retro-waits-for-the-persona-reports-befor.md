@@ -1,7 +1,7 @@
 ---
 id: CG-145
 title: garden retro waits for the persona reports before it dispatches the reconciliation
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/98
 attempts: 2
 last_dispatched_at: '2026-09-05T03:37:32+00:00'
 created: '2026-09-05T02:45:40+00:00'
-updated: '2026-09-05T03:55:13+00:00'
+updated: '2026-09-05T03:59:57+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Found on the first use, the phase-02 retro on 2026-09-05. The command dispatched
 - 2026-09-05T03:54:03+00:00 discovered work filed: CG-160
 - 2026-09-05T03:55:07+00:00 opened https://github.com/joshmarcus/context-garden/pull/98 (base garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac): Fixed the race where a concurrent tick could dispatch the retro reconciliation before every persona report existed, by gating on reports-on-disk instead of run activity, and surfaced the wait count in garden status, --dry-run, and the phase page. cost=$3.33
 - 2026-09-05T03:55:13+00:00 parent CG-137 merged; rebased onto main and retargeted the PR
+- 2026-09-05T03:58:43+00:00 automated review: approve — Gates the retro reconciliation on persona reports present on disk rather than run activity, closing the mid-dispatch race, and surfaces the wait count in status, --dry-run and the phase page. All three acceptance criteria met and tested; checks pass. cost=$0.81
+- 2026-09-05T03:59:57+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/98
