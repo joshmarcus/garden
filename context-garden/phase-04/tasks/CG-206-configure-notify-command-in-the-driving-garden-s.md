@@ -1,7 +1,7 @@
 ---
 id: CG-206
 title: Configure notify.command in the driving garden so a needs-human transition reaches the operator
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,7 +11,7 @@ priority: 2
 difficulty: easy
 reading: []
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:30:01+00:00'
+updated: '2026-09-05T10:36:28+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,7 @@ From the phase-03 persona reviews of 2026-09-05 (project-manager:medium); filed 
 - [ ] `garden doctor` reports the notify command as configured and tested.
 - [ ] The choice and the command are recorded in the garden's CLAUDE.md.
 
+## Log
+
+- 2026-09-05T10:31:52+00:00 approved (web)
+- 2026-09-05T10:36:28+00:00 the user chose browser notifications first (CG-208); notify.command stays available for a channel later

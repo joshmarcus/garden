@@ -2,7 +2,7 @@
 id: CG-182
 title: 'The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records
   outside the tick'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/scheduler/reap.py
 - src/garden/checks.py
 - src/garden/scheduler/state.py
+branch: garden/cg-182-the-tick-never-blocks-the-ui-actions-do-not-wait
+attempts: 1
+last_dispatched_at: '2026-09-05T10:31:45+00:00'
 created: '2026-09-05T10:00:03+00:00'
-updated: '2026-09-05T10:31:14+00:00'
+updated: '2026-09-05T10:31:45+00:00'
 ---
 
 ## Goal
@@ -45,3 +48,4 @@ Seen by the user on 2026-09-05 at 09:43 and again at 09:55 ("the web page isn't 
 ## Log
 
 - 2026-09-05T10:31:14+00:00 approved (web)
+- 2026-09-05T10:31:45+00:00 dispatched work run 20260905T103136Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~23545 tokens)
