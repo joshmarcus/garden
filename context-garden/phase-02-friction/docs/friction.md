@@ -126,3 +126,61 @@ as an earlier attempt from Windows. One bullet per step; cost at the end.
   wanted the approvals "verified in the diff". A reviewer of a manual task cannot see garden
   state, and a manual task gets no revise run, so the request sat until a person took the
   task again. Two more items for the pile.
+
+## Reported
+
+### 2026-09-05 · discovered by CG-065 (Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows) in run 20260905T000408Z-revise
+
+test_coordination.py::test_set_budget_none_removes_cap fails on current main independent of this task's diff (scheduler dispatch-cap logic, unrelated to plates/plants) — may warrant its own bug task.
+
+### 2026-09-05 · discovered by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T000756Z-revise
+
+test_coordination.py::test_set_budget_none_removes_cap fails deterministically on clean origin/main (second tick after retry dispatches 0 instead of 2). Pre-existing on main, unrelated to CG-079; likely a budget/dispatch regression worth a dedicated task.
+
+### 2026-09-05 · discovered by CG-062 (A worker silent for too long is flagged and stopped before the timeout) in run 20260905T000755Z-revise
+
+test_set_budget_none_removes_cap failing on main (tracked by CG-127/CG-128) has a precise root cause: Scheduler.retry() leaves a reset task's finished run marked 'running', leaking a max_parallel slot. Latent since CG-116 (ec93789) scoped reap_orphaned to verdict runs. Fix: in retry(), before transitioning to READY, close any still-'running' run of the task (kill()+status 'superseded'+save), mirroring cancel(). Verified: full suite 356 passed.
+
+### 2026-09-05 · discovered by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T001932Z-revise
+
+test_set_budget_none_removes_cap (from CG-048) was failing at main/base independent of CG-079; it lacked the intermediate reap tick its sibling budget tests have. Worth a glance to confirm no other budget tests share the omission.
+
+### 2026-09-05 · discovered by CG-126 (Verify worktree provisioning for stacked tasks actually checks out the parent branch) in run 20260905T005538Z-revise
+
+test_event_log_digest_and_metrics was flaky on CI: it dispatches a stacked second task (DM-002) and reads the shared event-log digest without waiting for that run to settle. Other coordination tests that dispatch a second run and inspect shared history (log/cost) without synchronizing may have the same latent race.
+
+### 2026-09-05 · discovered by CG-136 (PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites) in run 20260905T005008Z-work
+
+The driving garden's principles/00-index.md still tells workers to note friction in the PR body under a Friction heading. CG-136 moved friction to a `friction` result field; that principle line should be updated in the joshmarcus/garden repo to avoid contradicting review.py.
+
+### 2026-09-05 · discovered by CG-133 (garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase) in run 20260905T004959Z-work
+
+garden retro completes over two ticks when personas must run (personas -> reconcile -> PR). If a single-invocation end-to-end UX is wanted, retro would need to block-and-poll or the scheduler would need a synchronous path.
+
+### 2026-09-05 · discovered by CG-133 (garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase) in run 20260905T004959Z-work
+
+Persona phase reports are still written to the live garden's docs/reviews/ (existing persona-review behavior). Only the retro doc + next-goals draft arrive as a PR. Consider whether retro should reuse-only to keep the live garden fully untouched.
+
+### 2026-09-05 · reported by CG-062 (A worker silent for too long is flagged and stopped before the timeout) in run 20260905T011654Z-revise
+
+- The blocking check for the prior round was a bug on main (CG-127), not in this branch's diff; the round stalled waiting for a human accept plus a rebase before it could go green.
+
+### 2026-09-05 · reported by CG-109 (A description-only revise round runs on the easy tier) in run 20260905T011654Z-revise
+
+- The revision-round instructions said 'the runner will force-push the rebased branch,' which reads as an instruction to resolve conflicts locally but leave pushing to the runner — worth making the operating-rules 'do NOT push' instruction more prominent in the revision-round section itself, since it's easy to read the rebase note as implying the opposite.
+
+### 2026-09-05 · reported by CG-111 (A worker cannot write outside its worktree, whatever it is told) in run 20260905T014600Z-revise
+
+- This PR has now hit the same tests/fake_claude.py rebase conflict on four separate rounds because that fixture is a hot file every task touches; a fence task that only adds a self-contained test module and harness code shouldn't keep colliding there.
+
+### 2026-09-05 · reported by CG-074 (Reviews do not consume worker slots) in run 20260905T014323Z-revise
+
+- main moved twice during this single revision round (two separate merges landed while I was rebasing), so the rebase had to be redone after the first pass completed — worth noting if PR conflict revision rounds keep hitting a fast-moving main.
+
+### 2026-09-05 · reported by CG-074 (Reviews do not consume worker slots) in run 20260905T021114Z-revise
+
+- This PR needed three rebases against main during its review cycle (once per round), each requiring re-resolving overlapping edits to the same few lines in web/app.py's ctx() and inbox.html's KPI row — a sign the review cadence here is slower than the rate main is moving.
+
+### 2026-09-05 · reported by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T021231Z-revise
+
+- Six revise rounds on this PR were spent almost entirely on repeated rebases as main moved under it (scheduler.py, fake_claude.py, app.py, test_coordination.py, task.html each conflicted on different rounds); a long-lived branch touching hot files like the scheduler and the task page pays a large rebase tax.
