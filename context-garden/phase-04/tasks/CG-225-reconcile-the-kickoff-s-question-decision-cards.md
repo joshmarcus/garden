@@ -1,7 +1,7 @@
 ---
 id: CG-225
 title: Reconcile the kickoff's question-decision cards with CG-189 once it merges
-status: running
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,10 +17,9 @@ reading:
 - src/garden/cli/planning.py
 branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
 discovered_from: CG-224
-attempts: 1
 last_dispatched_at: '2026-09-05T18:11:56+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T18:11:56+00:00'
+updated: '2026-09-05T18:14:44+00:00'
 ---
 
 ## Goal
@@ -45,3 +44,5 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 - 2026-09-05T18:11:40+00:00 dispatched trial run 20260905T181127Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~25925 tokens)
 - 2026-09-05T18:11:56+00:00 dispatched trial run 20260905T181141Z-trial via local [codex] (fresh session, base main, ~25960 tokens)
 - 2026-09-05T18:11:56+00:00 trial started with claude:claude-sonnet-5, codex
+- 2026-09-05T18:12:38+00:00 trial: no contender produced a PR
+- 2026-09-05T18:14:44+00:00 reset to ready by hand

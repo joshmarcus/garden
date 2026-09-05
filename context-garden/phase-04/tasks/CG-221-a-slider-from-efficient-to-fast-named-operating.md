@@ -2,7 +2,7 @@
 id: CG-221
 title: 'A slider from efficient to fast: named operating profiles that set workers, the tier map, the
   review tier and the observation feed together, switched live from the rail'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/175
 attempts: 1
 last_dispatched_at: '2026-09-05T18:05:54+00:00'
 created: '2026-09-05T16:51:03+00:00'
-updated: '2026-09-05T18:05:54+00:00'
+updated: '2026-09-05T18:14:07+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,4 @@ The user on 2026-09-05, after a day that spent $1,100 and then cut the tier map 
 - 2026-09-05T18:05:30+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/175: Added profile_changed annotations to the /costs chart (the review's blocking finding) and rewrote the PR description to describe the feature instead of rebase narration; all prior CG-221 functionality (profiles, rail slider, garden profile, precedence, live-tick effects) was already in place and unchanged. cost=$0.95
 - 2026-09-05T18:05:35+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/charts.py, src/garden/web/pages/costs.py, tests/test_costs.py); a rebase agent will resolve it
 - 2026-09-05T18:05:54+00:00 dispatched rebase run 20260905T180554Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9646 tokens)
+- 2026-09-05T18:14:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/175: Rebased onto origin/main; resolved conflicts in src/garden/charts.py, src/garden/web/pages/costs.py, and tests/test_costs.py by merging main's compaction-mark annotations (CG-223) with this branch's profile_changed annotations (CG-221) into one cost_stack_svg(compactions=, annotations=) call and one costs-page handler, keeping the session filter from main and fixing a stale _bucket_key reference to the renamed bucket_key. Full test suite (879 passed, 3 skipped) and ruff pass. cost=$0.62

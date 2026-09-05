@@ -1,7 +1,7 @@
 ---
 id: CG-218
 title: SSH remote workers don't get the CLAUDE_CONFIG_DIR/CODEX_HOME defaults
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -19,7 +19,7 @@ discovered_from: CG-217
 attempts: 1
 last_dispatched_at: '2026-09-05T17:50:42+00:00'
 created: '2026-09-05T16:45:22+00:00'
-updated: '2026-09-05T18:09:43+00:00'
+updated: '2026-09-05T18:14:10+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,5 @@ Discovered by CG-217 (The private worker HOME carries each harness's own config 
 - 2026-09-05T18:05:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/176 (base main): Threaded resolved CLAUDE_CONFIG_DIR/CODEX_HOME (and worker_env.config_dirs overrides) into the ssh runner's remote script as conditional export lines, sharing the resolution logic with the local runner's scrubbed_env via a new config_dir_env helper. cost=$1.81
 - 2026-09-05T18:09:37+00:00 description rewritten by the reviewer cost=$0.50
 - 2026-09-05T18:09:43+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T18:12:38+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T18:14:10+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/176
