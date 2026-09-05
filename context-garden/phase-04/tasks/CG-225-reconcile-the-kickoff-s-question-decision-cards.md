@@ -20,7 +20,7 @@ branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
 discovered_from: CG-224
 last_dispatched_at: '2026-09-05T18:50:17+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T18:50:17+00:00'
+updated: '2026-09-05T19:07:48+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,4 @@ CG-189 was implemented on a branch stacked on CG-178 and its PR #150 was merged 
 - 2026-09-05T18:50:17+00:00 dispatched trial run 20260905T185017Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~26557 tokens)
 - 2026-09-05T18:50:17+00:00 dispatched trial run 20260905T185017Z-trial-2 via local [codex] (fresh session, base main, ~26592 tokens)
 - 2026-09-05T18:50:17+00:00 trial started with claude:claude-sonnet-5, codex
+- 2026-09-05T19:07:48+00:00 all contenders finished; comparison run started

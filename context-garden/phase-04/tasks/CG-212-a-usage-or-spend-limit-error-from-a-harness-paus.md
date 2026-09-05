@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T18:49:17+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T18:58:48+00:00'
+updated: '2026-09-05T19:11:16+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T18:55:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased onto origin/main, resolving two textual conflicts: src/garden/inbox.py (kept both the retro-verdict loop from main and this branch's paused-harness notice loop, additive/independent) and src/garden/scheduler/trials.py (kept this branch's already-computed `harness_name` local var for the compare dispatch's harness_name= arg, and kept main's newer `self.effective("review.difficulty")` for the difficulty= arg instead of this branch's older `self.cfg.get(...)`). Full test suite (915 passed, 3 skipped) and ruff both pass. cost=$0.32
 - 2026-09-05T18:55:52+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T18:58:48+00:00 automated review requested changes: Acceptance criteria are met and tested, but a quota hit during a resume round (post-answer continuation of a revise/rebase) still loses the PR/feedback the same way round 2 fixed for revise/rebase directly, and the new harness probe runs with full edit/Bash permissions and no fence unlike the existing login_probe it should have reused. cost=$1.69
+- 2026-09-05T19:11:16+00:00 triage: changes requested by hand: Address the reviewer's two blocking findings: (1) a quota hit during a resume round (the continuation after an answer, o

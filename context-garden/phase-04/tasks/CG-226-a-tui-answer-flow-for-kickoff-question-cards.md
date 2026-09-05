@@ -1,7 +1,7 @@
 ---
 id: CG-226
 title: A TUI answer flow for kickoff question cards
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,12 +17,13 @@ reading:
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
 branch: garden/cg-226-a-tui-answer-flow-for-kickoff-question-cards
+pr: https://github.com/joshmarcus/context-garden/pull/180
 harness: codex
 discovered_from: CG-224
 attempts: 1
 last_dispatched_at: '2026-09-05T18:57:58+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T18:57:58+00:00'
+updated: '2026-09-05T19:10:53+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,7 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 - 2026-09-05T17:48:28+00:00 approved (web)
 - 2026-09-05T17:48:28+00:00 priority 1 -> 3 (web)
 - 2026-09-05T18:57:58+00:00 dispatched work run 20260905T185744Z-work via local [codex] (fresh session, base main, ~21166 tokens)
+- 2026-09-05T19:06:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/180 (base main): Added TUI answer and dismiss flows for kickoff question cards, with full question details and stable answer targeting across refreshes.
+- 2026-09-05T19:07:49+00:00 automated review: approve — The stated TUI parity goal is implemented with stable answer targeting and scheduler-backed resolution. All 18 focused TUI/kickoff tests and repository lint pass; the task contains no explicit acceptance criteria.
+- 2026-09-05T19:09:22+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T19:10:53+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/180

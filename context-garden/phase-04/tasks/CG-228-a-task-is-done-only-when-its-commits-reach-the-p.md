@@ -2,7 +2,7 @@
 id: CG-228
 title: 'A task is done only when its commits reach the product''s base branch: a stacked child merged
   into its parent''s branch stays open until the parent merges'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/178
 attempts: 1
 last_dispatched_at: '2026-09-05T18:47:53+00:00'
 created: '2026-09-05T18:14:53+00:00'
-updated: '2026-09-05T18:47:53+00:00'
+updated: '2026-09-05T19:10:57+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,6 @@ updated: '2026-09-05T18:47:53+00:00'
 - 2026-09-05T18:41:58+00:00 opened https://github.com/joshmarcus/context-garden/pull/178 (base main): Added a merged_into_parent task status: the poll now checks a merged PR's base against the product's base branch, holds a stacked child there (with the parent named in state/log/task page) instead of marking it done, and promotes it to done via an ancestor check once the parent itself reaches the base. Wired the new status into the Board (in_review column, badge), garden status, graph/TUI/CLI colour maps, and the stuck-task audit, plus a full-loop test. cost=$7.32
 - 2026-09-05T18:47:36+00:00 automated review requested changes: The merged_into_parent status, gating, and surfaces are correctly wired, but the promotion-to-done check uses git ancestry, which cannot succeed once the parent's own merge to the base is a squash merge — the garden's own default automerge method — so affected children get stuck forever with no retry path; the new test only exercises fast-forward merges and misses this. cost=$0.82
 - 2026-09-05T18:47:53+00:00 dispatched revise run 20260905T184753Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~17313 tokens)
+- 2026-09-05T19:01:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/178: Fixed the reviewer-flagged bug: merged_into_parent promotion now checks ancestry against the parent PR's own pre-merge head sha instead of the base's post-squash tip, so it survives the garden's default squash automerge_method; added a regression test simulating a real squash merge. cost=$1.60
+- 2026-09-05T19:09:17+00:00 description rewritten by the reviewer cost=$1.29
+- 2026-09-05T19:10:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
