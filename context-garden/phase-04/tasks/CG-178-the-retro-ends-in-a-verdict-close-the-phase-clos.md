@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
 last_dispatched_at: '2026-09-05T18:01:18+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T18:18:59+00:00'
+updated: '2026-09-05T18:24:56+00:00'
 ---
 
 ## Goal
@@ -111,3 +111,6 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=
 - 2026-09-05T18:09:35+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
 - 2026-09-05T18:11:09+00:00 automated review: approve — CG-178 delivers the three-verdict retro end-to-end (verdict filing, close-phase guard, verdict surfaces on both phase and retro pages, Inbox decision card) with thorough tests; full suite and ruff pass, and the branch is now correctly scoped to just this task. cost=$1.12
 - 2026-09-05T18:18:59+00:00 nothing to fix; needs-human stop cleared by hand
+- 2026-09-05T18:19:05+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T18:21:58+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T18:24:56+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/139

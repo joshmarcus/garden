@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T17:25:29+00:00'
+last_dispatched_at: '2026-09-05T18:19:23+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T18:18:59+00:00'
+updated: '2026-09-05T18:19:23+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T17:51:55+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T17:52:02+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/harness.py); a rebase agent will resolve it
 - 2026-09-05T18:18:59+00:00 triage: changes requested by hand: Address the reviewer's blocking finding: trial contenders, automated reviews and persona/compare aux runs are not gated
+- 2026-09-05T18:19:23+00:00 dispatched rebase run 20260905T181923Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6931 tokens)

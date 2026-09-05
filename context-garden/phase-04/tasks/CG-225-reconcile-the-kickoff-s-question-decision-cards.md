@@ -1,7 +1,7 @@
 ---
 id: CG-225
 title: Reconcile the kickoff's question-decision cards with CG-189 once it merges
-status: failed
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
 discovered_from: CG-224
 attempts: 1
-last_dispatched_at: '2026-09-05T18:15:51+00:00'
+last_dispatched_at: '2026-09-05T18:25:04+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T18:17:35+00:00'
+updated: '2026-09-05T18:25:04+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,6 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 - 2026-09-05T18:14:44+00:00 reset to ready by hand
 - 2026-09-05T18:15:51+00:00 dispatched work run 20260905T181551Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~26037 tokens)
 - 2026-09-05T18:17:35+00:00 worker blocked: CG-189 (the fuller retro question/decision mechanism) still has not merged into main — its branch is not an ancestor of main and no corresponding PR exists in main's history — so there is nothing yet to reconcile the kickoff's question-decision cards (CG-224) against. cost=$0.30
+- 2026-09-05T18:25:03+00:00 dispatched trial run 20260905T182503Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~26164 tokens)
+- 2026-09-05T18:25:04+00:00 dispatched trial run 20260905T182504Z-trial via local [codex] (fresh session, base main, ~26198 tokens)
+- 2026-09-05T18:25:04+00:00 trial started with claude:claude-sonnet-5, codex
