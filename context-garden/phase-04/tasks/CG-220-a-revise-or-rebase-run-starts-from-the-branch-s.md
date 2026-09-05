@@ -2,7 +2,7 @@
 id: CG-220
 title: A revise or rebase run starts from the branch's head on origin and pushes with a lease, and the
   queue never rewrites a branch with a worker run in flight
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -19,7 +19,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/172
 attempts: 1
 last_dispatched_at: '2026-09-05T17:45:26+00:00'
 created: '2026-09-05T16:49:39+00:00'
-updated: '2026-09-05T17:45:26+00:00'
+updated: '2026-09-05T18:06:59+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,8 @@ Two writers never race on one branch. Before a revise, rebase or resume run star
 - 2026-09-05T17:43:41+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T17:45:06+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
 - 2026-09-05T17:45:26+00:00 dispatched revise run 20260905T174526Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~27192 tokens)
+- 2026-09-05T17:51:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/172: Fixed the pre-PR check failure the reviewer flagged: sync_to_origin_head was committing a killed worker's leftover uncommitted edits and sweeping them into the backup ref before _stash_dirty_worktree ran, so the stash never happened. Reordered dispatch() to stash the dirty worktree first, before the origin-head sync, so leftover edits are recovered via a named stash as before. cost=$0.60
+- 2026-09-05T18:00:54+00:00 automated review: approve — All three acceptance criteria are implemented and covered by passing tests (824 passed, ruff clean, verified independently); one new fence is likely unreachable in practice but is a harmless defensive addition, not a blocking issue. cost=$1.13
+- 2026-09-05T18:01:02+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T18:03:56+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T18:06:59+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/172

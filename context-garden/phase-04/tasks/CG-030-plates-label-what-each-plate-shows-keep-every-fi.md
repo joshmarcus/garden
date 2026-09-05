@@ -1,7 +1,7 @@
 ---
 id: CG-030
 title: 'Plates: label what each plate shows, keep every file public domain, credit Thomé'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -13,9 +13,11 @@ difficulty: easy
 reading:
 - src/garden/web/static/plates/SOURCES.md
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
+branch: garden/cg-030-plates-label-what-each-plate-shows-keep-every-fi
 runner: manual
+last_dispatched_at: '2026-09-05T18:11:19+00:00'
 created: '2026-09-04T14:36:12+00:00'
-updated: '2026-09-05T10:31:12+00:00'
+updated: '2026-09-05T18:11:19+00:00'
 ---
 
 ## Goal
@@ -49,3 +51,6 @@ Everything involved lives in `PLANTS` (`src/garden/plants.py`), `CANDIDATES` and
 - 2026-09-05T03:00:56+00:00 approved (web)
 - 2026-09-05T03:05:56+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T10:31:12+00:00 approved (web)
+- 2026-09-05T18:11:02+00:00 dispatched trial run 20260905T181047Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~7188 tokens)
+- 2026-09-05T18:11:19+00:00 dispatched trial run 20260905T181103Z-trial via local [codex] (fresh session, base main, ~7222 tokens)
+- 2026-09-05T18:11:19+00:00 trial started with claude:claude-sonnet-5, codex

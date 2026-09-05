@@ -2,7 +2,7 @@
 id: CG-223
 title: 'Operator spend is an activity: garden operator-spend, the operator series on the costs page, the
   retro''s share, and the design doc''s operator-seat section'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -19,7 +19,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/173
 attempts: 1
 last_dispatched_at: '2026-09-05T17:32:30+00:00'
 created: '2026-09-05T17:04:17+00:00'
-updated: '2026-09-05T17:46:45+00:00'
+updated: '2026-09-05T17:52:06+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ The user on 2026-09-05: make it explicit in the plans that keeping the high-leve
 - 2026-09-05T17:39:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/173: Rebased onto origin/main; resolved the single conflict in docs/architecture.md's module map by keeping main's new `observe.py` row and adding this branch's new `costs.py`/`charts.py`/`operator_spend.py` row after it, plus the review.py row's CG-223 Numbers-section mention. Full test suite (827 passed, 3 skipped) confirms the merge is sound. No other files touched; did not push. cost=$0.38
 - 2026-09-05T17:46:37+00:00 automated review: approve — All four acceptance criteria are met and verified against the diff; tests (827 passed) and lint are clean, and the new operator palette slot passes the dataviz validator in both themes. cost=$0.83
 - 2026-09-05T17:46:45+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T17:49:59+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T17:52:06+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/173

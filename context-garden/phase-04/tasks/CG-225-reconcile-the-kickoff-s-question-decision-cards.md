@@ -1,7 +1,7 @@
 ---
 id: CG-225
 title: Reconcile the kickoff's question-decision cards with CG-189 once it merges
-status: ready
+status: failed
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,9 +15,12 @@ reading:
 - src/garden/scheduler/discovered.py
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
+branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
 discovered_from: CG-224
+attempts: 1
+last_dispatched_at: '2026-09-05T17:48:46+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T17:48:27+00:00'
+updated: '2026-09-05T17:58:01+00:00'
 ---
 
 ## Goal
@@ -36,3 +39,6 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 
 - 2026-09-05T17:39:03+00:00 discovered by CG-224
 - 2026-09-05T17:48:27+00:00 approved (web)
+- 2026-09-05T17:48:46+00:00 dispatched work run 20260905T174831Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-224-phase-kickoff-before-a-phase-starts-flag-topics stacked on CG-224, ~25703 tokens)
+- 2026-09-05T17:53:28+00:00 worker blocked: CG-189 has not merged: its branch is not an ancestor of main, origin/main, or this branch, and it forked before the kickoff mechanism (CG-224) existed, so there is no second question/decision implementation in the tree to reconcile the kickoff's cards against yet. Reimplementing or guessing CG-189's design here would be out of scope and likely to conflict with whatever actually lands. cost=$0.51
+- 2026-09-05T17:58:01+00:00 parent CG-224 merged; rebased onto main and retargeted the PR
