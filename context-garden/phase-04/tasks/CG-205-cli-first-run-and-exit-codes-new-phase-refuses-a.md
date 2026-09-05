@@ -2,7 +2,7 @@
 id: CG-205
 title: 'CLI first-run and exit codes: new-phase refuses an unregistered product, approve exits non-zero
   on a refusal, doctor says how to fix a missing git identity'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 2
 difficulty: easy
 reading: []
+branch: garden/cg-205-cli-first-run-and-exit-codes-new-phase-refuses-a
+attempts: 1
+last_dispatched_at: '2026-09-05T12:51:46+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:31:20+00:00'
+updated: '2026-09-05T12:51:46+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ From the phase-03 persona reviews of 2026-09-05 (usability-expert:medium, usabil
 ## Log
 
 - 2026-09-05T10:31:20+00:00 approved (web)
+- 2026-09-05T12:51:46+00:00 dispatched work run 20260905T125137Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4489 tokens)

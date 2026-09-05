@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T12:48:06+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T12:48:06+00:00'
+updated: '2026-09-05T13:00:27+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,6 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T12:47:44+00:00 opened https://github.com/joshmarcus/context-garden/pull/149 (base main): approve now refuses a draft whose brief has placeholder acceptance criteria or a reading-list path that resolves to no file, via a shared brief_gaps() check; the Inbox approve card lists the gaps so the person fixes the brief before spending a run. cost=$4.76
 - 2026-09-05T12:47:55+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/inbox.py); a rebase agent will resolve it
 - 2026-09-05T12:48:06+00:00 dispatched rebase run 20260905T124806Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6294 tokens)
+- 2026-09-05T12:52:49+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/149: Resolved the src/garden/inbox.py rebase conflict by merging main's move-to-phase/drop actions for draft tasks (CG-162) with this branch's brief_gaps() check and 'why' annotation; inbox.html merged cleanly. Full test suite (632 passed, 3 skipped) and ruff both clean after rebase. cost=$0.23
+- 2026-09-05T12:56:38+00:00 automated review: approve — Approve now refuses placeholder acceptance criteria and unresolved reading-list paths via a shared brief_gaps() check, and the Inbox card surfaces the gap; all criteria are tested, full suite and ruff are green. cost=$0.53
+- 2026-09-05T13:00:27+00:00 automated review: approve — Approve now refuses placeholder acceptance criteria and unresolved reading-list paths via a shared brief_gaps() check, and the Inbox card surfaces the gap. All three criteria are tested; full suite (632 passed) and ruff are green; description is clean. cost=$0.47

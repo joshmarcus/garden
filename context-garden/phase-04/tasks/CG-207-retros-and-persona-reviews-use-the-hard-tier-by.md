@@ -2,7 +2,7 @@
 id: CG-207
 title: Retros and persona reviews use the hard tier by default (retro.difficulty), so nobody edits garden.yaml
   before a retro
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,8 +17,11 @@ reading:
 - src/garden/review.py
 - garden.yaml
 - docs/architecture.md
+branch: garden/cg-207-retros-and-persona-reviews-use-the-hard-tier-by
+attempts: 1
+last_dispatched_at: '2026-09-05T13:01:07+00:00'
 created: '2026-09-05T10:30:59+00:00'
-updated: '2026-09-05T10:31:20+00:00'
+updated: '2026-09-05T13:01:07+00:00'
 ---
 
 ## Goal
@@ -39,3 +42,4 @@ The user on 2026-09-05: "always set retros to hard (by default) so we're not man
 ## Log
 
 - 2026-09-05T10:31:20+00:00 approved (web)
+- 2026-09-05T13:01:07+00:00 dispatched work run 20260905T130057Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~20463 tokens)

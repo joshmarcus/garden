@@ -1,7 +1,7 @@
 ---
 id: CG-184
 title: 'Design polish from using the app: page-head subtitles wrap too early, and other small layout nits'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/140
 attempts: 1
 last_dispatched_at: '2026-09-05T12:17:10+00:00'
 created: '2026-09-05T10:04:27+00:00'
-updated: '2026-09-05T12:46:25+00:00'
+updated: '2026-09-05T12:53:07+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Small layout fixes the user noticed while using the web app on 2026-09-05. Each 
 - 2026-09-05T12:21:13+00:00 opened https://github.com/joshmarcus/context-garden/pull/140 (base main): Fixed .page-head in base.html so the left column flexes to fill available width (flex:1; min-width:0), raised the subtitle's max-width from 62ch to 90ch with text-wrap:pretty, and added a max-width:1000px rule that stacks the tools under the title to avoid horizontal scroll; this applies to every page head site-wide. Added a test asserting the Inbox page no longer emits a fixed 62ch cap. cost=$0.32
 - 2026-09-05T12:22:24+00:00 automated review: approve — The shared .page-head rule lets the left column flex to fill available width (raising the subtitle cap 62ch→90ch with text-wrap:pretty) and stacks tools under the title below 1000px; all three acceptance criteria are met and the new test passes. cost=$0.41
 - 2026-09-05T12:46:25+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:51:20+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/140
+- 2026-09-05T12:53:07+00:00 automated review could not start: CG-184 is done: #140 was merged at 12:51:20
