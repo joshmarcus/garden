@@ -2,7 +2,7 @@
 id: CG-189
 title: 'The retro''s questions for the human are decision cards: answer each in the UI, the answers land
   in the retro document and the next phase''s goals, and the planner reads them'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -18,8 +18,11 @@ reading:
 - src/garden/inbox.py
 - src/garden/web/actions/decisions.py
 - context-garden/phase-03/docs/reviews/product-manager-vision-2026-09-05.md
+branch: garden/cg-189-the-retro-s-questions-for-the-human-are-decision
+attempts: 1
+last_dispatched_at: '2026-09-05T12:32:36+00:00'
 created: '2026-09-05T10:23:11+00:00'
-updated: '2026-09-05T10:31:16+00:00'
+updated: '2026-09-05T12:32:36+00:00'
 ---
 
 ## Goal
@@ -47,3 +50,4 @@ Asked by the user on 2026-09-05 after reading the product manager's phase-03 rep
 ## Log
 
 - 2026-09-05T10:31:16+00:00 approved (web)
+- 2026-09-05T12:32:36+00:00 dispatched work run 20260905T123227Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos stacked on CG-178, ~22281 tokens)

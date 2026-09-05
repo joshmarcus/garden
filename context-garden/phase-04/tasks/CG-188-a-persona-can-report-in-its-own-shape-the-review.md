@@ -2,7 +2,7 @@
 id: CG-188
 title: 'A persona can report in its own shape: the review runner keeps the findings block and adds the
   persona''s sections (vision, features, not now, questions), rendered in the report and fed to the retro'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,8 +16,11 @@ reading:
 - src/garden/retro.py
 - personas/product-manager.md
 - context-garden/phase-03/docs/reviews/product-manager-vision-2026-09-05.md
+branch: garden/cg-188-a-persona-can-report-in-its-own-shape-the-review
+attempts: 1
+last_dispatched_at: '2026-09-05T12:25:40+00:00'
 created: '2026-09-05T10:22:27+00:00'
-updated: '2026-09-05T10:31:16+00:00'
+updated: '2026-09-05T12:25:40+00:00'
 ---
 
 ## Goal
@@ -45,3 +48,4 @@ On 2026-09-05 the phase-03 retro ran the new product-manager persona (`personas/
 ## Log
 
 - 2026-09-05T10:31:16+00:00 approved (web)
+- 2026-09-05T12:25:40+00:00 dispatched work run 20260905T122531Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~19339 tokens)

@@ -2,7 +2,7 @@
 id: CG-186
 title: 'Approve says which phase the task joins and offers another: an Approve button with a phase pulldown
   beside it, on the Inbox card and the task page'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -18,10 +18,11 @@ reading:
 - src/garden/inbox.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 branch: garden/cg-186-approve-says-which-phase-the-task-joins-and-offe
+pr: https://github.com/joshmarcus/context-garden/pull/143
 attempts: 1
 last_dispatched_at: '2026-09-05T12:22:48+00:00'
 created: '2026-09-05T10:18:25+00:00'
-updated: '2026-09-05T12:22:48+00:00'
+updated: '2026-09-05T12:36:44+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,8 @@ Asked by the user on 2026-09-05: "Approve should indicate what phase to add it t
 
 - 2026-09-05T10:31:15+00:00 approved (web)
 - 2026-09-05T12:22:48+00:00 dispatched work run 20260905T122239Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-162-move-a-task-to-another-phase-from-the-task-page stacked on CG-162, ~21006 tokens)
+- 2026-09-05T12:32:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/143 (base garden/cg-162-move-a-task-to-another-phase-from-the-task-page): Draft tasks' Approve control on the Inbox card and task page now reads 'Approve into <phase>' with a pulldown of the product's open phases (frozen ones marked, closed ones hidden); choosing another phase moves then approves in one request, reusing CG-162's move refusals, and a frozen target without a freeze exception is refused with the freeze message. cost=$2.20
+- 2026-09-05T12:35:28+00:00 PR conflicts with garden/cg-162-move-a-task-to-another-phase-from-the-task-page; rebased onto garden/cg-162-move-a-task-to-another-phase-from-the-task-page mechanically and force-pushed
+- 2026-09-05T12:35:30+00:00 stack parent CG-162 merging; retargeted this PR to main before the parent branch is deleted
+- 2026-09-05T12:36:39+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T12:36:44+00:00 parent CG-162 merged; rebased onto main and retargeted the PR

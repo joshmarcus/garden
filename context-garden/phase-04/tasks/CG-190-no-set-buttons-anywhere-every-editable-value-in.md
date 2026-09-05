@@ -2,7 +2,7 @@
 id: CG-190
 title: 'No Set buttons anywhere: every editable value in the web UI applies when the user changes it,
   with a saved mark and an undo'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,8 +16,11 @@ reading:
 - src/garden/web/templates/phase.html
 - src/garden/web/actions/control.py
 - src/garden/web/actions/tasks.py
+branch: garden/cg-190-no-set-buttons-anywhere-every-editable-value-in
+attempts: 1
+last_dispatched_at: '2026-09-05T12:25:49+00:00'
 created: '2026-09-05T10:26:48+00:00'
-updated: '2026-09-05T10:31:16+00:00'
+updated: '2026-09-05T12:25:49+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ The user on 2026-09-05: "task for next time: no 'Set' buttons, automatically upd
 ## Log
 
 - 2026-09-05T10:31:16+00:00 approved (web)
+- 2026-09-05T12:25:49+00:00 dispatched work run 20260905T122540Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~15741 tokens)

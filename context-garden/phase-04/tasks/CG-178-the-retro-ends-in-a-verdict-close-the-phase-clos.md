@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos
 pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 1
-last_dispatched_at: '2026-09-05T12:20:04+00:00'
+last_dispatched_at: '2026-09-05T12:28:29+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T12:20:04+00:00'
+updated: '2026-09-05T12:35:20+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,7 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T12:19:46+00:00 opened https://github.com/joshmarcus/context-garden/pull/139 (base main): Rebased onto origin/main; resolved one conflict in src/garden/web/pages/phase.py by keeping both sides — has_retro/_retro_doc/_retro_operator/_persona_scores from main and retro_verdict/_verdict_view from this branch, passing both has_retro and retro_verdict to the phase.html template. Full test suite (615 passed, 3 skipped) and ruff pass. cost=$0.21
 - 2026-09-05T12:19:52+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/retro.py, src/garden/scheduler/retro.py); a rebase agent will resolve it
 - 2026-09-05T12:20:04+00:00 dispatched rebase run 20260905T122004Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~16425 tokens)
+- 2026-09-05T12:28:11+00:00 pre-PR checks failed (lint); revise run will fix before the PR is updated cost=$1.15
+- 2026-09-05T12:28:29+00:00 dispatched revise run 20260905T122829Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~23345 tokens)
+- 2026-09-05T12:32:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Removed the duplicated "worker_env" dictionary key in the _live_garden config helper in tests/test_retro.py that failed the pre-PR lint check (ruff F601). Lint and the full test suite (619 passed, 3 skipped) now pass. cost=$0.67
+- 2026-09-05T12:35:20+00:00 description rewritten by the reviewer cost=$1.30

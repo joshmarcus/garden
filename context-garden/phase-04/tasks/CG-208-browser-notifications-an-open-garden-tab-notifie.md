@@ -2,7 +2,7 @@
 id: CG-208
 title: 'Browser notifications: an open garden tab notifies through Chrome when a decision appears, with
   a one-time permission toggle and one notification per tick'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/132
 attempts: 1
 last_dispatched_at: '2026-09-05T12:04:39+00:00'
 created: '2026-09-05T10:36:25+00:00'
-updated: '2026-09-05T12:24:05+00:00'
+updated: '2026-09-05T12:28:19+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,5 @@ The user on 2026-09-05, asked which channel `notify.command` should use to reach
 - 2026-09-05T12:13:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/132: Fixed the blocking review item: the notification poll no longer re-fires the most-recent decision every interval. It now dedupes the inclusive /api/decisions boundary with a high-water `at` plus a tie-breaker set of event identities at that exact second, so a decision notifies once while a genuinely new same-second decision still fires. Added a server-contract test and a structural guard; full suite (605) and lint pass. cost=$2.21
 - 2026-09-05T12:16:47+00:00 automated review: approve — Server side (endpoint + mapper) is correct and fully tested, the round-1 re-fire bug is properly fixed with a boundary tie-breaker, and lint/tests pass. The only gap is criterion 2's behavioral JS test, which is genuinely infeasible in this Python-only harness and is honestly documented. cost=$0.90
 - 2026-09-05T12:24:05+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:25:14+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T12:28:19+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/132

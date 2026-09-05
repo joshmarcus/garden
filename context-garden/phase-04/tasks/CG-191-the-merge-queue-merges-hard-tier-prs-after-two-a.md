@@ -1,7 +1,7 @@
 ---
 id: CG-191
 title: The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T12:20:04+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T12:20:04+00:00'
+updated: '2026-09-05T12:25:14+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Proposed at the context-garden/phase-03 retro. The queue exists but half the mer
 - 2026-09-05T12:16:45+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/135: Resolved the poll.py conflict by keeping CG-191's _maybe_dispatch_scratch_merge call and combining it with main's new _queue_hold(task, reason) helper (from CG-202) in place of the old inline candidate/ready_at pop-and-log. Rebase completed cleanly on origin/main; full test suite (614 passed, 3 skipped) and ruff lint are green. cost=$0.27
 - 2026-09-05T12:19:49+00:00 automated review requested changes: Hard-tier automerge is well-structured and criteria are met, but checkruns.py calls a nonexistent method _hold_automerge (renamed to _queue_hold by CG-202 during the rebase), raising AttributeError on both scratch-merge failure paths; the errors are silently swallowed by the tick's try/except and the failure test only passes because _automerge_gate re-derives the block reason next tick. cost=$1.11
 - 2026-09-05T12:20:04+00:00 dispatched revise run 20260905T122004Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~5292 tokens)
+- 2026-09-05T12:25:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/135: Renamed the two stale self._hold_automerge calls in the scratch-merge reap to _queue_hold (the method CG-202 introduced), fixing the AttributeError that was silently swallowed on both scratch-merge failure paths, and strengthened the failure test to assert the merge is held directly with no swallowed tick error. cost=$0.88
+- 2026-09-05T12:25:14+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-191` for one more round, or review on GitHub

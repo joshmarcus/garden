@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -10,9 +10,12 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-193-approve-refuses-placeholder-acceptance-criteria
 discovered_from: retro:context-garden/phase-03
+attempts: 1
+last_dispatched_at: '2026-09-05T12:34:17+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:31:17+00:00'
+updated: '2026-09-05T12:34:17+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,4 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 ## Log
 
 - 2026-09-05T10:31:17+00:00 approved (web)
+- 2026-09-05T12:34:17+00:00 dispatched work run 20260905T123408Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4368 tokens)
