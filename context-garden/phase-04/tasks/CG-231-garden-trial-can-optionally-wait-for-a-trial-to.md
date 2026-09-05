@@ -1,11 +1,11 @@
 ---
 id: CG-231
 title: garden trial can optionally wait for a trial to conclude
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
-priority: 1
+priority: 3
 difficulty: easy
 reading:
 - src/garden/scheduler/trials.py
@@ -15,7 +15,7 @@ reading:
 - tests/test_trials.py
 discovered_from: CG-229
 created: '2026-09-05T19:25:33+00:00'
-updated: '2026-09-05T19:25:33+00:00'
+updated: '2026-09-05T19:49:54+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,5 @@ Discovered by CG-229 (Trial contender worktrees get the product setup like any w
 ## Log
 
 - 2026-09-05T19:25:33+00:00 discovered by CG-229
+- 2026-09-05T19:49:54+00:00 approved (web)
+- 2026-09-05T19:49:54+00:00 priority 1 -> 3 (web)
