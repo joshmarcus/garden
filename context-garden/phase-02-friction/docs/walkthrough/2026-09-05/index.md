@@ -40,7 +40,7 @@ A task page: state, tier and priority pulldowns, runs, the live log, the actions
 
 Files: `task.txt`, `task.html`
 
-## run: `/runs/CG-111/20260905T022217Z-revise` (HTTP 404, 0 KB)
+## run: `/runs/CG-111/20260905T014600Z-revise` (HTTP 200, 130 KB)
 
 A run page: transcript, brief, final message and stderr tabs.
 

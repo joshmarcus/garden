@@ -1,1 +1,975 @@
-{"detail":"Not Found"}
+20260905T014600Z-revise · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+CG-111 · run
+20260905T014600Z-revise
+done
+revise · claude:claude-opus-4-8 · 3 min · $1.06
+Back to task garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
+Transcript
+Brief
+Final message
+stderr
+text
+I'll start by understanding the current state and doing the rebase.
+tool
+Bash
+git fetch origin 2>&1 | tail -5 && echo "---STATUS---" && git status && echo "---LOG---" && git log --oneline -3 origin/main
+rate_limit_event
+result
+---STATUS---
+On branch garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
+Your branch is up to date with 'origin/garden/cg-111-a-worker-cannot-write
+tool
+Bash
+git log --oneline origin/main..HEAD && echo "---MERGE BASE---" && git merge-base HEAD origin/main | xargs git log --oneline -1
+result
+88de10d CG-111: describe fence attribution by behaviour; match worktree-relative paths
+3748242 CG-111: lead the fence card with repo and files, path last
+4a21f3
+text
+Now let me do the rebase and see the conflict.
+tool
+Bash
+git rebase origin/main 2>&1 | tail -20
+result
+Rebasing (1/7)
+Rebasing (2/7)
+Rebasing (3/7)
+Auto-merging tests/fake_claude.py
+CONFLICT (content): Merge conflict in tests/fake_claude.py
+error: could not apply
+tool
+Bash
+grep -n '^<<<<<<<\|^=======\|^>>>>>>>' tests/fake_claude.py
+result
+153:<<<<<<< HEAD
+155:=======
+169:>>>>>>> 19d7967 (CG-111: tests for the worktree fence)
+tool
+Read
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+100 if mode.startswith("review"):
+101 if mode == "review-bad":
+102 rev = {"verdict": "request_changes", "summary": "criteria not met", "description_
+text
+The resolution: keep main's newer modes (`friction`, `omit-body`) plus this branch's `escape` mode block and its entry in the list.
+tool
+Edit
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+The file /home/joshua/work/worktrees/CG-111/tests/fake_claude.py has been updated successfully. (file state is current in your context — no need to Read it back
+text
+Let me check the docstring near the top for the mode list, since prior rounds mentioned adding `escape` to the fake-claude docstring.
+tool
+Read
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+1 #!/usr/bin/env python3
+2 """Stand-in for the `claude` binary in tests.
+3
+4 Reads the brief from stdin, does something to the cwd (a git worktree) depending o
+text
+The docstring already includes `escape` (line 16) and main's `friction`/`omit-body` (lines 11-12) merged cleanly. Now let me continue the rebase.
+tool
+Bash
+git add tests/fake_claude.py && GIT_EDITOR=true git rebase --continue 2>&1 | tail -20
+result
+[detached HEAD eca700e] CG-111: tests for the worktree fence
+3 files changed, 189 insertions(+), 2 deletions(-)
+create mode 100644 tests/test_fence.py
+Rebasin
+tool
+Bash
+grep -n '^<<<<<<<\|^=======\|^>>>>>>>' tests/fake_claude.py
+result
+209:<<<<<<< HEAD
+218:=======
+221:>>>>>>> 4a21f39 (CG-111: attribute fence reverts to the worker's transcript; drop dead MultiEdit deny rule)
+tool
+Read
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+195 result["discovered"] = [
+196 {"title": "Fix the flaky widget test", "body": "## Goal\n\nIt flakes.", "difficulty": "easy", "blocking": F
+text
+Both blocks should be kept. Let me resolve.
+tool
+Edit
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+The file /home/joshua/work/worktrees/CG-111/tests/fake_claude.py has been updated successfully. (file state is current in your context — no need to Read it back
+text
+Now I need to verify `escaped_path` is defined. This commit (4a21f39) modifies the earlier escape block. Let me check.
+tool
+Read
+/home/joshua/work/worktrees/CG-111/tests/fake_claude.py
+result
+153 escaped_path = ""
+154 if mode == "escape":
+155 # Do what CG-092's worker did: leave the worktree and write/commit in another repo
+156 # (the live ga
+text
+`escaped_path` is defined at line 153. Good, the resolution is consistent. Continue the rebase.
+tool
+Bash
+git add tests/fake_claude.py && GIT_EDITOR=true git rebase --continue 2>&1 | tail -20
+result
+[detached HEAD 2b1c2c4] CG-111: attribute fence reverts to the worker's transcript; drop dead MultiEdit deny rule
+5 files changed, 136 insertions(+), 35 deleti
+text
+Rebase complete. Now let me run the tests and lint to verify the resolution is correct.
+tool
+Bash
+.venv/bin/python -m pytest -q -x 2>&1 | tail -15
+result
+........................................................................ [ 51%]
+..............................................sss....................... [ 68%]
+tool
+Bash
+.venv/bin/ruff check src tests 2>&1 | tail -10
+result
+All checks passed!
+text
+All tests pass (420) and lint is clean. Let me verify the final branch state.
+tool
+Bash
+git status && echo "---" && git log --oneline origin/main..HEAD
+result
+On branch garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
+Your branch and 'origin/garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate'
+text
+The rebase is complete: 7 fence commits replayed cleanly onto origin/main, conflict in `tests/fake_claude.py` resolved keeping both main's newer test modes (`fr
+tool
+Bash
+.venv/bin/python -m pytest tests/test_fence.py -q 2>&1 | tail -6
+result
+............ [100%]
+12 passed in 1.38s
+text
+The rebase is done and everything is green.
+## Summary
+This revision round's only feedback was to resolve the `main` conflict. I:
+- Ran `git fetch origin &&
+result
+success
+The rebase is done and everything is green.
+## Summary
+This revision round's only feedback was to resolve the `main` conflict. I:
+- Ran `git fetch origin &&
+# Task CG-111: A worker cannot write outside its worktree, whatever it is told
+Product: **context-garden** · Phase: **phase-02-friction**
+## Operating rules
+- You are working in a git worktree checked out on branch `garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate` (based on `main`). Everything you change must be committed on this branch. Commit in small, well-described steps. Do NOT push and do NOT open a pull request: the garden runner does that when you finish.
+- Do NOT edit files under `**/tasks/` in the context garden; task state is managed by the scheduler.
+- Work only in the directory you were started in: it is your checkout on your branch. Do not change into any other checkout of this repository.
+- Do NOT run `garden` commands: `GARDEN_ROOT` is set to a non-existent path so any `garden` invocation will refuse with a clear error.
+- Your working environment is already prepared: do not install packages, create a virtualenv, or run a package manager (the runner did any setup before you started). Run the project's checks with `.venv/bin/python -m pytest -q -x` (tests) and `.venv/bin/ruff check src tests` (lint) before you finish.
+- Everything you need should be in this brief. Read the *additional files* listed under "Reading list (read these)" before you start. Beyond that, explore only the code you need to change. Do not read the whole context garden.
+- Follow the principles digest. If the task conflicts with a principle or a spec, say so in your final report and take the most conservative reasonable path.
+- Run the project's own fast checks (tests, lint, typecheck) before you finish. Fix what you broke.
+- If you need a decision only a human can make, commit what you have, stop, and report `status: needs_input` with one precise `question`. Your session is paused, not discarded: the human's answer comes back to you and you continue from where you stopped. Do not guess on questions that change the design.
+- If you conclude the task should not be done at all, do not force a change you don't believe in: report `status: wont_do` with a `reason`. If this is a revision round and there is genuinely nothing to change (the code is already right, e.g. the failing check is the environment, not the diff), report `status: no_change` with a `reason`. Either way a person reads your reasoning and decides; it is not a failure.
+- If you discover work that should be done but is outside this task (a bug you noticed, a missing spec, a refactor the task needs but did not ask for), do NOT do it. List it under `discovered` in your result and, if you truly cannot finish without it, mark it `blocking`.
+- End your final message with exactly one line of the form:
+GARDEN_RESULT: {"status": "done" | "needs_input" | "blocked" | "wont_do" | "no_change", "summary": "<1-3 sentences>", "question": "<only for needs_input>", "reason": "<only for wont_do / no_change>", "pr_title": "<title>", "pr_body": "<markdown body>", "pr_comment": "<optional comment to post on the PR>", "friction": ["<short friction item>"], "notes": "<anything the human should know>", "discovered": [{"kind": "task", "title": "<short>", "body": "<goal + context, markdown>", "difficulty": "easy" | "medium" | "hard", "blocking": false}]}
+The JSON must be on a single line. `pr_title` and `pr_body` are used verbatim for the pull request. `pr_comment` is posted as a comment and is optional. `discovered` may be omitted or empty; each item carries a `kind` (default `task`):
+**The `pr_body` contract.** `pr_body` is the permanent description of this change for a reader who does not have the task file: what it does, why, how it fits the phase, how you verified it, and any follow-ups. It never mentions rounds, rebases, reviews, checks, prior attempts or this run — a description is written as if the change were right the first time. Anything about the process (answering a review, resolving a rebase, explaining a decision) goes in `pr_comment`, which is posted as a PR comment, not in the description. On a revision round, omit `pr_body` unless the description itself must change; the current description stays as it is. Report friction (missing context, a confusing spec, tooling pain) as `friction` items — short strings — not in the body; the garden posts them as one PR comment and files them for the next planning round.
+- `task` — work to do; becomes a draft task file (`blocking: true` fast-tracks it). This is the shape above.
+- `duplicate` — two tasks are the same. Not work: it reaches the human as a decision. `{"kind": "duplicate", "of": "<task-id-to-keep>", "duplicates": "<task-id-to-cancel>", "reason": "<why>"}`. If accepted it cancels the `duplicates` task in favour of `of`.
+- `cancel` — a task you believe is now obsolete. `{"kind": "cancel", "task": "<task-id>", "reason": "<why>"}`. If accepted it cancels that task.
+- `note` — information for the phase's friction record, no action: `{"kind": "note", "note": "<text>"}`.
+## Revision round
+This branch already has an open pull request: https://github.com/joshmarcus/context-garden/pull/57. Reviewers left feedback (below). Address every item: make the change, or explain why not. Do not start over; build on the existing commits. To reply to reviewers (e.g., if you decline a suggestion or explain a tradeoff), set `pr_comment` in your GARDEN_RESULT JSON; the garden will post it as a comment on the PR. Do not add review responses to the PR description (`pr_body`) — they belong in the comment thread, not in the change description.
+## Already on this branch
+The worktree has commits from the prior attempt:
+- 88de10d CG-111: describe fence attribution by behaviour; match worktree-relative paths
+- 3748242 CG-111: lead the fence card with repo and files, path last
+- 4a21f39 CG-111: attribute fence reverts to the worker's transcript; drop dead MultiEdit deny rule
+- 369958c CG-111: document the worktree fence in worker-protocol.md
+- 19d7967 CG-111: tests for the worktree fence
+- 38f931b CG-111: belt-and-braces — revert worker writes to the garden or clone
+- 5fdfa09 CG-111: harness fence — deny worker writes outside its worktree
+## Principles (digest)
+# Principles digest
+Inlined into every agent brief. Keep it short; long-form reasoning lives in the sibling files.
+## Working style
+- Ship small vertical slices. Every merged PR leaves the product working and tested.
+- Read what the brief points at, then explore only the code you must change. Do not wander the context garden; if the brief is missing something, say so in your report so the task gets fixed.
+- Follow existing conventions in the repo before inventing new ones. Match the surrounding style.
+- Tests are part of the change. Run the project's fast checks before you finish; fix what you broke.
+- Prefer boring, dependency-light solutions. New dependencies need a one-line justification in the PR body.
+## Reporting
+- Be precise about what you did, what you verified, and what you did not do.
+- If blocked on a human decision, stop early and ask one precise question rather than guessing.
+- Note friction (missing context, confusing spec, tooling pain) in the PR body under "Friction"; it feeds the next planning round.
+## Scope
+- Do not widen the task. Follow-ups go in the PR body, not in the diff.
+- Do not edit task files under `**/tasks/`; the scheduler owns them.
+- Never rewrite history on shared branches; never disable or skip tests to get green.
+## Product: context-garden
+# context-garden
+A tool for driving agent development from a repository of context files. Humans write
+principles, product overviews, phase goals and specs. A planner turns a phase into task
+files. A token-free scheduler dispatches headless agent workers per task, pushes their
+branches, opens PRs, and re-dispatches when reviewers leave feedback. A local web UI and
+a TUI show the board and the dependency graph.
+Users: a single developer (or small team) who wants to specify work and review PRs, and
+have the rest of the loop automated without an LLM sitting in the scheduler seat.
+## Repo
+This repository is both the tool and its own first product. Python 3.11+, packaged with
+`pyproject.toml` (hatchling), managed with `uv`.
+- Tests: `.venv/bin/pytest -q`
+- Lint: `.venv/bin/ruff check src tests`
+- CLI: `.venv/bin/garden --help`
+Layout:
+- `src/garden/model.py` task frontmatter model and statuses
+- `src/garden/store.py` discovery of products/phases/tasks on disk
+- `src/garden/graph.py` dependency graph, ready set, mermaid export
+- `src/garden/brief.py` builds the worker brief; `GARDEN_RESULT` parsing
+- `src/garden/scheduler.py` the tick state machine (reap / poll / dispatch)
+- `src/garden/harness.py` harness definitions (claude, codex, custom) and output parsing
+- `src/garden/runner/` runner backends (`local`, `ssh`, `manual`)
+- `src/garden/review.py` automated review brief and verdict parsing
+- `src/garden/events.py` append-only event log, digest and metrics
+- `src/garden/trials.py` model trials: comparison brief, leaderboard
+- `src/garden/personas.py` persona reviews of PRs and phases
+- `src/garden/checks.py` token-free pre-PR and CI checks (plugin runner + helpers for writing CI analysers)
+- `src/garden/plants.py` the botanical drawings (plants per phase, growth-stage glyphs) as SVG symbols
+- `src/garden/gitops.py`, `src/garden/github.py` git worktrees and PRs
+- `src/garden/planner.py` planning prompt and JSON import
+- `src/garden/web/` FastAPI + HTMX web UI; `src/garden/tui/` Textual TUI
+- `tests/` pytest; `tests/fake_claude.py`, `fake_codex.py`, `fake_ssh.py` stand in for the real binaries
+## Conventions
+- Type hints everywhere; `from __future__ import annotations`.
+- No network calls in `model`, `store`, `graph`, `brief`; those must stay testable offline.
+- Task files are the source of truth; `.garden/` holds only run records and PR bookkeeping.
+- Keep the CLI, web and TUI thin: all logic lives in `scheduler`, `graph`, `brief`, `store`.
+## Phase goals: phase-02-friction
+# phase-02-friction goals
+## Feature freeze (2026-09-05 00:35 UTC)
+No new features enter this phase. Approved from here on: only fixes needed to merge what is already built and to keep the loop honest (CG-129, CG-126, CG-131). New feature ideas go to phase 03; discovered features are filed as drafts with "deferred by the freeze" in the log. The wrap-up order: open PRs merge, the manual items close, the operator's retro is written (`docs/retro-operator.md`, from the agent that watched the loop), persona reviews run against the finished phase, then CG-029 reconciles all of it into the friction document and the next goals, and the phase closes.
+## Why this phase
+The bootstrap loop works on paper. This phase runs the tool on itself: every task here is
+executed by the garden, and every worker is asked to report friction. The output is a
+tool that is smoother to operate and a first read on where tokens actually go.
+## Goals
+1. Close the loop on review: make the automated review pass (shipped in bootstrap) earn its keep, and
+review comments that are addressed without a human re-dispatching anything.
+2. Make waiting visible: live worker output in the web UI, and a notification when a
+task needs a human.
+3. Collect friction from worker PR bodies into a phase document so the next planning
+round sees it.
+4. Keep the fixed cost of a brief flat while the garden grows.
+## Non-goals
+- Hosted or multi-user operation.
+- Automatic merging (still a human decision).
+## Definition of done
+- Every task in this phase shipped through `garden tick`, not by hand.
+- `docs/friction.md` in this phase lists what workers reported and what was changed.
+## Task
+## Goal
+A worker's writes are confined to its own worktree by the runner, not by the brief. Nothing a person types into an answer, and nothing a worker reads, lets it edit or commit in the live garden, the product clone, or another task's worktree.
+## Context
+On the first live run, CG-092's worker was asked a question, the person answered "Try to make the fix yourself", and the resumed worker changed directory to the live garden (`/home/joshua/garden`), edited `garden.yaml` and `product.md` there, and committed on `main` under the person's git identity. The garden's next push carried the commit to GitHub. The change removed the product's pre-PR checks in favour of a `setup` block the running scheduler does not know, so the next restart would have run with no gate. CG-054 and CG-058 keep the brief and `garden` commands away from the garden; this is the remaining hole. The brief never named the garden: the worker's first run found it by listing the filesystem (`/home/joshua/garden/.garden` turned up in a directory sweep). The harness runs with `--permission-mode acceptEdits`, which accepted `Edit` calls on files outside the worktree without a prompt, and its `Bash` calls (`cd /home/joshua/garden && git commit ...`) ran unchallenged. Choose the fence and implement it: run the harness with a permission mode that auto-accepts edits inside the worktree and denies them outside (in `-p` mode a prompt cannot be answered, so a denied edit fails, which is what we want); and, as belt and braces, have `finalize` check the garden repo and the product clone for changes or new commits since dispatch, revert them, and mark the run failed with a card that quotes what was touched. Say in `docs/worker-protocol.md` that the fence is the runner's, and that a person's answer cannot lift it.
+## Acceptance criteria
+- [ ] a fake-harness run that writes outside its worktree fails, the write is undone, and the Inbox says what it touched.
+- [ ] edits and shell commands outside the worktree are denied (permission rules scoped to the worktree, or a sandbox); edits inside it still need no prompt.
+- [ ] `docs/worker-protocol.md` states the fence.
+## Log
+- 2026-09-04T21:34:07+00:00 dispatched work run 20260904T213406Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~10351 tokens)
+- 2026-09-04T21:57:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/57 (base main): Confined a worker's writes to its own worktree at the runner, not the brief: the claude harness now passes permissions.deny rules (and an opt-in worktree sandbox) for the live garden and product clone, and finalize snapshots those repos at dispatch and reverts any commit or non-owned write on reap, failing the run with an Inbox card that quotes what was touched. Scheduler-owned task-file/.garden changes (e.g. garden sync) are ignored so they don't false-trip. Documented the fence in worker-protocol.md. cost=$8.50
+- 2026-09-04T21:57:27+00:00 1 new review item(s)
+- 2026-09-04T21:59:04+00:00 triage: marked ready for review (the only new item was Codex's usage-limit notice, not a finding; back to in_review while the automat)
+- 2026-09-04T22:02:21+00:00 automated review: approve — Fence is correctly implemented in two layers, meets the acceptance criteria for the garden/clone incident vector, and is well-tested (246 pass, ruff clean). Default config denies only the two known repos rather than fully scoping to the worktree, but this is disclosed and the belt-and-braces revert is a solid net. cost=$1.33
+- 2026-09-04T22:03:03+00:00 1 new review item(s)
+- 2026-09-04T22:03:05+00:00 dispatched revise run 20260904T220304Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12655 tokens)
+- 2026-09-04T22:11:53+00:00 no active run found; back to ready
+- 2026-09-04T22:12:43+00:00 revise run 20260904T220304Z-revise finished (commit 76e746d) but the orphan sweep closed it before the reap; pushed by hand, review restarted
+- 2026-09-04T22:12:54+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+- 2026-09-04T22:15:42+00:00 dispatched revise run 20260904T221542Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12746 tokens)
+- 2026-09-04T22:21:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's new wont_do/no_change modes and this branch's escape mode. Also fixed a real fragility the rebase surfaced: the fenced-write Inbox card now leads with the repo label and touched files and puts the long absolute path last, so a truncated card still names what was written. cost=$1.78
+- 2026-09-04T22:27:58+00:00 triage: changes requested by hand: Two comments narrate the review process instead of the behaviour: src/garden/scheduler.py line 765 and the test docstrin
+- 2026-09-04T22:28:44+00:00 dispatched revise run 20260904T222844Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13433 tokens)
+- 2026-09-04T22:33:00+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Addressed the triage feedback on PR #57: rewrote the two comments that narrated the review process (scheduler _fence_check docstring and a test_fence docstring) to describe the behaviour instead, and took the cheap improvement so transcript attribution also matches paths named relative to the worktree or its parent, with a new test. All 298 tests pass and ruff is clean. cost=$1.27
+- 2026-09-05T00:02:24+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
+- 2026-09-05T00:03:38+00:00 revision counter reset (web)
+- 2026-09-05T00:03:38+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T00:45:18+00:00 dispatched revise run 20260905T004518Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13982 tokens)
+- 2026-09-05T00:49:40+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (discover-kinds, review-desc, wont_do/no_change) and this branch's escape mode; added escape to the fake-claude docstring for consistency. All fence commits replayed cleanly. cost=$0.95
+- 2026-09-05T00:49:40+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-111` for one more round, or review on GitHub
+- 2026-09-05T01:16:50+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+- 2026-09-05T01:42:50+00:00 revision counter reset (web)
+- 2026-09-05T01:42:50+00:00 re-enabled by hand; revise run will follow
+## Reading list (inlined)
+### src/garden/harness.py
+```py
+"""Harness definitions: how to run an agent CLI headlessly and read its output.
+A harness is data, not code: a binary, argument template, how the prompt is delivered,
+and an output format. `claude` and `codex` are built in; override or add more under
+`harnesses:` in garden.yaml. Runners (local, ssh) use these to build the command.
+"""
+from __future__ import annotations
+import json
+import shlex
+import subprocess
+from pathlib import Path
+from typing import Any
+from .brief import parse_result
+DEFAULT_HARNESSES: dict[str, dict[str, Any]] = {
+"claude": {
+"bin": "claude",
+"output": "claude-json", # claude -p --output-format json
+"permission_mode": "acceptEdits", # or "bypass"
+"allowed_tools": ["Bash", "Read", "Edit", "Write", "Glob", "Grep", "MultiEdit"],
+"models": {"easy": "haiku", "medium": "sonnet", "hard": "opus"},
+"review_model": "", # empty = the task's difficulty tier
+"resume": True, # `claude -p --resume <session>` after a human answers
+},
+"codex": {
+"bin": "codex",
+"output": "codex-jsonl", # codex exec --json
+"permission_mode": "full-auto", # or "bypass"
+"models": {}, # empty = the CLI default for every tier
+"review_model": "",
+"resume": False, # set true if your codex supports `codex exec resume <id>`
+},
+}
+DIFFICULTIES = ("easy", "medium", "hard")
+class Harness:
+def __init__(self, name: str, cfg: dict[str, Any]):
+self.name = name
+base = dict(DEFAULT_HARNESSES.get(name, {}))
+base.update(cfg or {})
+self.cfg = base
+@property
+def bin(self) -> str:
+return str(self.cfg.get("bin") or self.name)
+@property
+def output(self) -> str:
+return str(self.cfg.get("output") or "text")
+def model_for(self, difficulty: str, override: str = "") -> str:
+if override:
+return override
+models = self.cfg.get("models") or {}
+return str(models.get(difficulty) or models.get("medium") or "")
+def max_turns_for(self, difficulty: str) -> int:
+"""Get max_turns for a difficulty tier. Returns 0 if unset (no cap). Supports scalar or per-tier dict."""
+max_turns = self.cfg.get("max_turns")
+if not max_turns:
+return 0
+if isinstance(max_turns, dict):
+return int(max_turns.get(difficulty) or max_turns.get("medium") or 0)
+return int(max_turns)
+# ---- command -----------------------------------------------------------
+def fence_settings(self, deny_paths: list[str] | None, worktree: Path | str | None) -> str:
+"""A `--settings` JSON payload that keeps a worker's writes inside its worktree.
+`deny_paths` are directories a worker must never touch (the live garden, the product
+clone): each becomes a `permissions.deny` rule for the file-editing tools and for the
+obvious `Bash` escapes. Deny rules are evaluated before the `acceptEdits` mode, so an
+edit inside the worktree still needs no prompt while an edit outside it is refused
+(and in `-p` mode a refused edit simply fails). When the harness config sets
+`sandbox: true` and a worktree is known, an OS-level sandbox confines every process's
+writes to the worktree — belt to the deny rules' braces."""
+deny: list[str] = []
+for p in deny_paths or []:
+ap = str(p).rstrip("/")
+if not ap:
+continue
+rule_path = "//" + ap.lstrip("/")
+for tool in ("Edit", "Write"):
+deny.append(f"{tool}({rule_path}/**)")
+deny.append(f"Bash(cd {ap}*)")
+deny.append(f"Bash(git -C {ap}*)")
+settings: dict[str, Any] = {}
+if deny:
+settings["permissions"] = {"deny": deny}
+if worktree and self.cfg.get("sandbox"):
+wt = str(worktree).rstrip("/")
+settings["sandbox"] = {"enabled": True,
+"filesystem": {"allowWrite": [wt, "$TMPDIR"], "denyWrite": ["//"]}}
+return json.dumps(settings, separators=(",", ":")) if settings else ""
+def command(self, model: str = "", final_path: Path | None = None, difficulty: str = "",
+deny_paths: list[str] | None = None, worktree: Path | str | None = None) -> list[str]:
+"""Argv for one headless run. The brief arrives on stdin; cwd is the worktree."""
+if self.cfg.get("command"):
+# fully custom: a list with {model} / {final} placeholders
+out = []
+for a in self.cfg["command"]:
+a = str(a).replace("{model}", model).replace("{final}", str(final_path or ""))
+if a:
+out.append(a)
+return out
+mode = str(self.cfg.get("permission_mode") or "")
+if self.output == "claude-json":
+fmt = str(self.cfg.get("output_format") or "json")
+cmd = [self.bin, "-p", "--output-format", fmt]
+if fmt == "stream-json":
+cmd.append("--verbose")
+# A hard turn cap is optional and off by default: a run that hits it ends with no
+# final message and no result line, so the wall-clock timeout and the phase budget
+# are the guards that count. Set `max_turns` to a number (or a per-tier dict) to add the cap.
+max_turns = self.max_turns_for(difficulty or "medium")
+if max_turns > 0:
+cmd += ["--max-turns", str(max_turns)]
+if model:
+cmd += ["--model", model]
+if mode in ("bypass", "bypassPermissions", "dangerously-skip-permissions"):
+cmd.append("--dangerously-skip-permissions")
+else:
+cmd += ["--permission-mode", mode or "acceptEdits"]
+tools = self.cfg.get("allowed_tools") or []
+if tools:
+cmd += ["--allowedTools", ",".join(tools)]
+fence = self.fence_settings(deny_paths, worktree)
+if fence:
+cmd += ["--settings", fence]
+cmd += [str(a) for a in (self.cfg.get("extra_args") or [])]
+cmd.append("Carry out the brief that follows. It is the complete specification of your job.")
+return cmd
+if self.output == "codex-jsonl":
+cmd = [self.bin, "exec", "--json", "--skip-git-repo-check"]
+if mode in ("bypass", "dangerously-bypass-approvals-and-sandbox"):
+cmd.append("--dangerously-bypass-approvals-and-sandbox")
+else:
+cmd.append("--full-auto")
+if model:
+cmd += ["-m", model]
+if final_path is not None:
+cmd += ["--output-last-message", str(final_path)]
+cmd += [str(a) for a in (self.cfg.get("extra_args") or [])]
+cmd.append("-") # prompt from stdin
+return cmd
+cmd = [self.bin, *[str(a) for a in (self.cfg.get("args") or [])]]
+if model and self.cfg.get("model_flag"):
+cmd += [str(self.cfg["model_flag"]), model]
+return cmd
+def shell_command(self, model: str = "", final_path: Path | None = None, difficulty: str = "") -> str:
+return " ".join(shlex.quote(c) for c in self.command(model, final_path, difficulty))
+def is_authenticated(self) -> bool:
+if self.name == "claude":
+try:
+subprocess.run([self.bin, "auth", "status", "--json"], capture_output=True, text=True, check=True)
+return True
+except (subprocess.CalledProcessError, FileNotFoundError):
+return False
+elif self.name == "codex":
+try:
+subprocess.run([self.bin, "exec", "auth", "status"], capture_output=True, text=True, check=True)
+return True
+except (subprocess.CalledProcessError, FileNotFoundError):
+return False
+return True
+@property
+def can_resume(self) -> bool:
+return bool(self.cfg.get("resume")) and (self.output in ("claude-json", "codex-jsonl") or bool(self.cfg.get("resume_command")))
+def resume_command(self, session_id: str, model: str = "", final_path: Path | None = None, difficulty: str = "",
+deny_paths: list[str] | None = None, worktree: Path | str | None = None) -> list[str]:
+"""Argv that continues a previous session; the follow-up prompt arrives on stdin."""
+if self.cfg.get("resume_command"):
+return [str(a).replace("{session}", session_id).replace("{model}", model).replace("{final}", str(final_path or ""))
+for a in self.cfg["resume_command"] if str(a)]
+if self.output == "claude-json":
+cmd = self.command(model, final_path, difficulty, deny_paths=deny_paths, worktree=worktree)
+cmd = cmd[:-1] + ["--resume", session_id, "Continue the task with the answer that follows."]
+return cmd
+if self.output == "codex-jsonl":
+cmd = self.command(model, final_path, difficulty, deny_paths=deny_paths, worktree=worktree)
+# codex exec resume <id> [PROMPT]; keep the flags, prompt from stdin
+i = cmd.index("exec") + 1
+cmd = cmd[:i] + ["resume", session_id] + cmd[i:]
+return cmd
+raise ValueError(f"harness {self.name} cannot resume")
+def shell_resume_command(self, session_id: str, model: str = "", final_path: Path | None = None, difficulty: str = "") -> str:
+return " ".join(shlex.quote(c) for c in self.resume_command(session_id, model, final_path, difficulty))
+# ---- output ------------------------------------------------------------
+def parse(self, stdout: str, stderr: str = "", final_path: Path | None = None) -> dict[str, Any]:
+"""Normalise output to {final_text, usage, cost_usd, error, session_id, result}."""
+out: dict[str, Any] = {"final_text": "", "usage": {}, "cost_usd": None, "error": "", "session_id": "", "result": {}}
+if final_path is not None and final_path.exists():
+out["final_text"] = final_path.read_text()
+if self.output == "claude-json":
+fmt = str(self.cfg.get("output_format") or "json")
+if fmt == "stream-json":
+_parse_claude_stream(stdout, out)
+else:
+_parse_claude(stdout, out)
+elif self.output == "codex-jsonl":
+_parse_codex(stdout, out)
+else:
+out["final_text"] = out["final_text"] or stdout
+if not out["final_text"].strip() and not out["error"]:
+out["error"] = (stderr.strip()[-2000:] or "worker produced no output")
+out["result"] = parse_result(out["final_text"]) or parse_result(stdout)
+return out
+def _last_json_object(text: str) -> Any:
+try:
+return json.loads(text)
+except json.JSONDecodeError:
+pass
+for line in reversed(text.splitlines()):
+line = line.strip()
+if line.startswith("{"):
+try:
+return json.loads(line)
+except json.JSONDecodeError:
+continue
+return None
+def _parse_claude_dict(data: dict[str, Any], out: dict[str, Any]) -> None:
+"""Extract fields from a claude result dict into out."""
+final = data.get("result") if isinstance(data.get("result"), str) else ""
+out["final_text"] = final or out["final_text"]
+out["usage"] = data.get("usage") or {}
+cost = data.get("total_cost_usd", data.get("cost_usd"))
+out["cost_usd"] = float(cost) if isinstance(cost, (int, float)) else None
+out["session_id"] = str(data.get("session_id") or "")
+if data.get("is_error") or str(data.get("subtype", "")).startswith("error"):
+out["error"] = f"worker error: {data.get('subtype') or ''} {final[:500]}".strip()
+def _parse_claude(stdout: str, out: dict[str, Any]) -> None:
+data = _last_json_object(stdout)
+if isinstance(data, list):
+data = next((d for d in reversed(data) if isinstance(d, dict) and d.get("type") == "result"), None)
+if not isinstance(data, dict):
+out["final_text"] = out["final_text"] or stdout
+return
+_parse_claude_dict(data, out)
+def _parse_claude_stream(stdout: str, out: dict[str, Any]) -> None:
+"""Parse claude --output-format stream-json JSONL: locate the final result event."""
+result_data: dict[str, Any] | None = None
+for line in stdout.splitlines():
+line = line.strip()
+if not line.startswith("{"):
+continue
+try:
+ev = json.loads(line)
+except json.JSONDecodeError:
+continue
+if isinstance(ev, dict) and ev.get("type") == "result":
+result_data = ev
+if not isinstance(result_data, dict):
+out["final_text"] = out["final_text"] or stdout
+return
+_parse_claude_dict(result_data, out)
+def _parse_codex(stdout: str, out: dict[str, Any]) -> None:
+last_msg = ""
+for line in stdout.splitlines():
+line = line.strip()
+if not line.startswith("{"):
+continue
+try:
+ev = json.loads(line)
+except json.JSONDecodeError:
+continue
+t = ev.get("type", "")
+if t == "item.completed":
+item = ev.get("item") or {}
+if item.get("type") == "agent_message" and item.get("text"):
+last_msg = str(item["text"])
+elif t == "turn.completed":
+u = ev.get("usage") or {}
+out["usage"] = {
+"input_tokens": u.get("input_tokens", 0),
+"output_tokens": u.get("output_tokens", 0),
+"cache_read_input_tokens": u.get("cached_input_tokens", 0),
+}
+elif t == "thread.started":
+out["session_id"] = str(ev.get("thread_id") or "")
+elif t in ("error", "turn.failed"):
+out["error"] = str(ev.get("message") or ev.get("error") or "codex error")
+if not out["final_text"]:
+out["final_text"] = last_msg
+```
+### src/garden/runner/local.py
+```py
+"""Run a harness headlessly in the task worktree on this machine, detached from the
+scheduler. Only the worker spends tokens, and it only sees the brief."""
+from __future__ import annotations
+import os
+import shlex
+import shutil
+import subprocess
+from pathlib import Path
+from typing import Any
+from ..config import no_live_garden_root
+from ..runs import Run
+from .base import Runner, RunnerError, run_setup
+class LocalRunner(Runner):
+name = "local"
+def harness_shell(self, run: Run, worktree: Path, final_path: Path | None) -> str:
+"""Build the shell command with the harness binary resolved to its absolute path.
+The worktree and `run.fence_paths` are handed to the harness so it can scope the
+worker's writes to the worktree and deny edits to the live garden and the product
+clone (see Harness.fence_settings); the runner's fence, not the brief's."""
+assert self.harness is not None
+deny = list(run.fence_paths or [])
+if run.mode == "resume" and run.session_id:
+cmd = self.harness.resume_command(run.session_id, run.model, final_path, deny_paths=deny, worktree=worktree)
+else:
+cmd = self.harness.command(run.model, final_path, deny_paths=deny, worktree=worktree)
+resolved = shutil.which(self.harness.bin) or self.harness.bin
+if cmd and cmd[0] == self.harness.bin and resolved != self.harness.bin:
+cmd = [resolved] + cmd[1:]
+return " ".join(shlex.quote(c) for c in cmd)
+def start(self, run: Run, worktree: Path, brief_text: str) -> None:
+if self.harness is None:
+raise RunnerError("local runner needs a harness")
+d = run.path
+setup = dict(self.config.get("setup") or {})
+run_setup(worktree, setup, log_path=d / "setup.log") # prepare the env before the worker starts
+brief_path = d / "brief.md"
+brief_path.write_text(brief_text)
+final_path = d / "final.md"
+inner = self.harness_shell(run, worktree, final_path)
+timeout_min = int(self.config.get("timeout_minutes", 90) or 0)
+if timeout_min and shutil.which("timeout"):
+inner = f"timeout {timeout_min * 60} {inner}"
+script = (
+f"cd {shlex.quote(str(worktree))} && {inner} "
+f"< {shlex.quote(str(brief_path))} > {shlex.quote(str(d / 'stdout.json'))} "
+f"2> {shlex.quote(str(d / 'stderr.log'))}; echo $? > {shlex.quote(str(d / 'exit_code'))}"
+)
+env = dict(os.environ)
+env.pop("CLAUDECODE", None) # allow launching from inside another Claude Code session
+for k, v in (setup.get("env") or {}).items(): # the prepared environment the worker runs in
+env[str(k)] = str(v)
+env["GARDEN_TASK_ID"] = run.task_id
+env["GARDEN_RUN_ID"] = run.run_id
+# Prevent the worker from finding and mutating the live garden: any `garden`
+# command run inside the worktree will hit find_root() which checks this variable
+# and fails loudly because the path below does not contain a garden.yaml.
+env["GARDEN_ROOT"] = no_live_garden_root(d)
+proc = subprocess.Popen(
+["sh", "-c", script], cwd=str(worktree), env=env,
+stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+start_new_session=True,
+)
+run.pid = proc.pid
+run.harness = self.harness.name
+run.save()
+(d / "command.txt").write_text(script + "\n")
+def collect(self, run: Run) -> dict[str, Any]:
+assert self.harness is not None
+return self.harness.parse(run.stdout_text(), run.stderr_text(), run.path / "final.md")
+def doctor(self) -> list[str]:
+if os.name == "nt":
+return ["local runner: Windows is not supported; run garden in WSL (Windows Subsystem for Linux) instead"]
+if self.harness and not shutil.which(self.harness.bin):
+return [f"harness {self.harness.name}: binary {self.harness.bin!r} not found on PATH"]
+return []
+```
+### docs/worker-protocol.md
+````md
+# How the scheduler talks to a worker
+The scheduler is a Python function that runs for a few seconds every `tick_interval`.
+A worker is an agent CLI that runs for minutes, started by the scheduler but not
+attached to it. This page walks through everything that passes between them.
+## The short version
+There is no socket, no RPC and no shared memory. The two sides share a filesystem and use
+exactly these channels:
+| direction | channel | carries |
+|---|---|---|
+| scheduler to worker | the worker's **stdin** | the brief, once, at start (`runs/<task>/<run>/brief.md`) |
+| scheduler to worker | the **working directory** | a git worktree on the task's branch, based on the right base |
+| scheduler to worker | two **environment variables** | `GARDEN_TASK_ID`, `GARDEN_RUN_ID` (informational) |
+| worker to scheduler | **stdout** | the harness's structured output: the final message, token usage, cost, session id |
+| worker to scheduler | the **worktree** | commits on the task branch (never pushed by the worker) |
+| worker to scheduler | one **file**, `exit_code` | the completion signal |
+The worker's final message ends with one line, `GARDEN_RESULT: {...}`, and that line is
+the whole result contract. Everything else the world sees (the pushed branch, the pull
+request, the review comments) is done by the scheduler after the fact, from what it finds
+in the run directory and the worktree.
+## The sequence
+```mermaid
+sequenceDiagram
+autonumber
+participant S as scheduler (one tick)
+participant D as run directory
+participant T as worktree
+participant W as worker process
+participant G as GitHub
+S->>T: git worktree add garden/ID-slug from origin/main, or from a stack parent's branch
+S->>D: write run.json and brief.md
+S->>W: start, detached: cd into the worktree, run claude -p with brief.md on stdin, capture stdout.json and stderr.log, then write exit_code
+Note over S: the tick ends here and nothing stays open
+W->>D: read brief.md (stdin)
+W->>T: edit, run checks, commit (never push)
+W->>D: final message ending in the GARDEN_RESULT line, plus usage and cost, into stdout.json
+W->>D: exit_code
+Note over S: a later tick
+S->>D: exit_code present, so parse stdout.json and keep final.md
+S->>T: commit leftovers, count commits ahead of the base
+S->>G: push the branch, open a draft PR from pr_title and pr_body
+S->>W: start a review run the same way, with a review brief
+S->>D: run.json updated: status, usage, cost
+```
+## Step by step
+### 1. Deciding what to run (scheduler, in `dispatch`)
+Before anything is started, the scheduler settles every choice a worker might otherwise
+have had to make:
+- **Runner**: the task's `runner:`, else the product's, else the garden's (`local`,
+`ssh` or `manual`).
+- **Harness and model**: the task's `harness:`, else the product's, else the garden's;
+the model is the task's explicit `model:` or the harness's map from the task's
+`difficulty` (`easy`, `medium`, `hard`) to a model name.
+- **Branch and base**: the branch is `garden/<id>-<slug>` (kept across runs). The base is
+the product's base branch, or, when stacking applies, the branch of the one dependency
+whose PR is still open.
+- **Worktree**: `.garden/worktrees/<id>` is created from `origin/<base>` (fetched first)
+or reused if it already exists on that branch. Remote runners skip this; the host makes
+its own.
+- **Paths in the brief** are relative to the worktree the worker starts in; the brief never names the garden's own checkout, so a worker has nowhere else to go.
+- **The brief**: `build_brief()` assembles the operating rules, the principles digest, the
+product overview, the phase goals, the task body and the reading list (inlined when
+small, listed when large), plus the "Revision round" feedback for revise runs, the
+"Stacked branch" note for stacked runs, and every earlier question and answer.
+- **The run record**: `RunStore.new_run()` creates `.garden/runs/<id>/<timestamp>-<mode>/`
+with `run.json` holding the choices above.
+### 2. Starting the process (the runner, in `start`)
+The local runner writes the brief to `brief.md` in the run directory and starts one shell
+command, detached in its own session (`start_new_session=True`, stdin closed), so it
+survives the scheduler exiting:
+```sh
+cd /garden/.garden/worktrees/WID-003 && timeout 5400 \
+claude -p --output-format json --model sonnet \
+--permission-mode acceptEdits --allowedTools Bash,Read,Edit,Write,Glob,Grep,MultiEdit \
+'Carry out the brief that follows. It is the complete specification of your job.' \
+< /garden/.garden/runs/WID-003/20260904T120000Z-work/brief.md \
+> /garden/.garden/runs/WID-003/20260904T120000Z-work/stdout.json \
+2> /garden/.garden/runs/WID-003/20260904T120000Z-work/stderr.log; \
+echo $? > /garden/.garden/runs/WID-003/20260904T120000Z-work/exit_code
+```
+The exact command is saved as `command.txt` next to the brief. The environment is the
+scheduler's, minus `CLAUDECODE` (so a garden can be driven from inside another Claude Code
+session), plus `GARDEN_TASK_ID` and `GARDEN_RUN_ID`. The shell's pid is stored in
+`run.json`. For Codex the inner command is `codex exec --json --skip-git-repo-check
+--full-auto -m <model> --output-last-message final.md -`, with the same wrapper; a custom
+harness is whatever `command:` template the config gives, with `{model}` and `{final}`
+filled in.
+`start` returns at once. The scheduler records the `running` transition, bumps
+`attempts` and `last_dispatched_at` on the task file, saves `state.json`, and the tick
+moves on.
+### 2a. The worktree fence
+A worker may edit and commit only inside its own worktree. That boundary is the
+**runner's**, not the brief's: it holds whatever the brief says, whatever a worker reads
+on disk, and whatever a person types into an answer. Nothing a worker is told can lift it.
+It is enforced in two layers:
+- **First line — the harness denies the write.** For `claude`, the runner passes
+`--settings` with `permissions.deny` rules for the live garden and the product clone
+(and, when the harness config sets `sandbox: true`, an OS-level sandbox that confines
+every process's writes to the worktree — opt-in and untested, see the note below). Deny
+rules are evaluated before the `acceptEdits` mode, so an edit *inside* the worktree still
+needs no prompt while an edit *outside* it is refused — and in `-p` mode there is no one
+to approve a prompt, so a refused edit simply fails. The forbidden directories travel on
+the run as `fence_paths`, set at dispatch.
+- **Belt and braces — the runner reverts what the worker itself wrote.** At dispatch the
+scheduler snapshots the HEAD and working tree of the live garden and the product clone.
+On reap, `finalize` compares them and reverts a change *only when the worker's own
+transcript names the path* — `claude`'s output carries every `Edit`/`Write` `file_path`,
+every `Bash` command it ran, and its final message, so a path the worker touched appears
+there by its absolute form. A named write is reverted (commits dropped with a soft reset
+that preserves unrelated in-flight edits, files restored or removed) and the run is marked
+**failed** with a card in the Inbox quoting exactly what was touched. Everything else
+outside the worktree is *left in place*: task files and `.garden/` are the scheduler's
+own; a config file a person edited by hand while the run was live, or a HEAD the
+scheduler's own `git fetch` advanced, is not the worker's and must not be reverted (a
+moved HEAD alone is not an escape). Such un-attributed changes are noted on the card for a
+person to check, never undone. A person answers the card; the answer cannot un-fail the
+run or reach back into the garden.
+> The `sandbox: true` block is opt-in and has not been exercised against a real harness. It
+> emits an OS-level sandbox stanza (`filesystem.allowWrite` = the worktree and `$TMPDIR`,
+> `denyWrite` = everything else) that a given `claude` build must actually support; before
+> flipping it, confirm the installed CLI honours `--settings` sandbox config on the host OS.
+> Until then the deny rules and the belt-and-braces revert are the fence.
+This closes the hole CG-054 and CG-058 left: those keep the brief and `garden` commands
+away from the live garden; the fence keeps a worker's *writes* away from it even when the
+brief never named it and a person told the worker to go there.
+### 3. While the worker runs
+Nothing is connected. The scheduler may not even be running: `garden tick` from cron
+exits, `garden serve` may be restarted, the laptop may sleep. The run's existence is the
+`run.json` with `status: running`, and its liveness is checked on demand:
+- `exit_code` exists: the process finished.
+- otherwise the pid is probed (`kill -0`, with a zombie check on Linux); a pid that is
+gone means the process died without the wrapper writing the file (a hard kill, a
+reboot), which the scheduler treats as a failed run.
+- a run older than `timeout_minutes` + 5 is killed by process group and marked
+`timeout`; the `timeout` in the command line is the first line of defence at exactly
+`timeout_minutes`.
+The web UI's "Running now" list and `garden runs` read the same `run.json` files. The
+worker, meanwhile, sees a normal repository checkout on a branch and a prompt that ends
+with the operating rules: commit in small steps, do not push, do not open a PR, do not
+edit `tasks/`, run the project's checks, and finish with the result line.
+### 4. What the worker sends back
+The last line of the worker's final message is the contract:
+```
+GARDEN_RESULT: {"status": "done" | "needs_input" | "blocked" | "wont_do" | "no_change",
+"summary": "1-3 sentences", "question": "only for needs_input",
+"reason": "only for wont_do / no_change",
+"pr_title": "...", "pr_body": "markdown", "notes": "...",
+"discovered": [{"kind", "title", "body", "difficulty", "blocking"}]}
+```
+- `done`: the branch is ready; `pr_title` and `pr_body` are used verbatim.
+- `needs_input`: the worker committed what it had and stopped on a decision only a person
+can make; `question` is the one thing it needs.
+- `blocked`: it cannot proceed at all; the task fails with the reason in its log.
+- `wont_do`: the worker judges the task should not be done; `reason` says why. Not a failure:
+the task moves to `waiting_human` and the person accepts (it ends in the terminal `wont_do`
+status and any open PR is closed with the reason) or rejects (the reasoning goes back into a
+revise round with the person's note).
+- `no_change`: a revise round found nothing to change (e.g. the failing check was the
+environment, not the diff); `reason` says why. The task moves to `waiting_human`; the person
+accepts (the round proceeds to the PR or the review as if it had pushed, with no new work
+run) or rejects (as above).
+- `discovered`: things it noticed but did not do. Each item has a `kind` (default `task`):
+a `task` becomes a draft task file; a `duplicate` (`of`/`duplicates`) or `cancel`
+(`task`) becomes a decision card for a human — Accept cancels the named task with the
+provenance in its log (and, for a `duplicate`, repoints any dependents onto the kept `of`
+task so they are not left blocked behind a cancelled one), Reject dismisses the card and
+logs the disagreement; a `note` (`note`) is filed to the phase's friction record and makes
+no card. Decision and note kinds never file work.
+A `wont_do` or a `no_change` is a decision for the person, not a failure: the inbox card and
+the task page quote the `reason` and show the worker's final message in full, with Accept and
+Reject (plus a note). `garden accept ID` / `garden reject ID "note"` do the same from the CLI,
+and `garden set-status ID wont_do --reason "…"` records a `wont_do` directly.
+The harness wraps that message in its own format: `claude -p --output-format json` prints
+one JSON object with `result` (the final text), `usage`, `total_cost_usd`, `session_id`
+and `is_error`; `codex exec --json` prints JSON lines with `item.completed` messages and a
+`turn.completed` usage record. `Harness.parse()` normalises both, and any plain-text CLI,
+into `final_text`, `usage`, `cost_usd`, `session_id` and `error`; then `parse_result()`
+scans the final text backwards for the marker and tolerates a fenced or trailing-junk
+line by taking the outermost braces.
+### 5. Reaping (scheduler, in `reap` and `finalize`)
+On the next tick after `exit_code` appears, the scheduler:
+1. Reads the exit code, calls the runner's `collect` (which calls `Harness.parse`), and
+writes the parsed result, usage, cost and session id back into `run.json`. It keeps
+the final message as `final.md` if the harness did not already write one. A
+`run_finished` event records the cost.
+2. Decides from the exit code and the result line (the table is in
+`docs/architecture.md`): retry or fail, `waiting_human`, or carry on.
+3. Files discovered work as task files in the same phase.
+4. Commits anything the worker left uncommitted (`<id>: leftover changes from worker run
+...`), counts commits ahead of the base, and fails the run if there are none.
+5. Pushes the branch. From here on the branch exists outside the machine.
+6. Runs `checks.pre_pr` in the worktree (tests, lint: no model). A failure becomes
+feedback and the task goes to `changes_requested` before any PR exists.
+7. Opens the PR (draft by default, with a footer naming the task, any stack parent and
+discovered ids), or for a revise run updates the title and body of the existing PR
+and leaves a comment. The task moves to `awaiting_triage` or `in_review`.
+8. Starts the automated review run, and any personas listed in `review.personas`.
+The scheduler never reads the worker's stderr for anything but an error message when
+there is no output, and never inspects the worker's transcript. The result line, the
+commits and the harness's usage numbers are all it uses.
+### 6. The review run answers the same way
+A review is a worker with a different brief: the task brief without the operating rules,
+the PR title and body, and the diff against the base (inlined under
+`review.max_diff_chars`, otherwise read from git in the worktree). It ends with
+`GARDEN_REVIEW: {"verdict", "summary", "description_ok", "description_feedback",
+"findings": [...]}`. Reaping it posts the verdict as a PR comment; `request_changes`
+turns the blocking findings and the description feedback into the next revise brief.
+Persona reviews (`GARDEN_PERSONA:`) and trial comparisons (`GARDEN_COMPARE:`) use the same
+transport and their own marker.
+### 7. Pausing on a question, and resuming
+When a worker reports `needs_input`, the scheduler stores the question, the harness's
+`session_id`, the host it ran on and the harness name, and moves the task to
+`waiting_human`. The task holds no slot. The inbox, `garden inbox`, the TUI and `garden
+digest` all show the question.
+`garden answer WID-003 "SQLite, one file per import"` (or the inbox form) appends the pair
+to the task's `qa` list and dispatches a `resume` run. With a harness that can resume
+(`claude -p --resume <session>`, or `codex exec resume <id>` when enabled), the command is
+the same as before except that the prompt on stdin is only the resume note: the question,
+the answer, and a reminder of the rules and the result line. The session picks up where it
+stopped, with its earlier context intact, in the same worktree. A harness that cannot
+resume gets a fresh run whose brief carries every previous question and answer under
+"Answers from the human". Resume runs do not count as attempts.
+A resumed run is fenced exactly like a fresh one (see §2a): the answer becomes the prompt
+on stdin, and no wording in it — "go fix it in the garden yourself" included — can let the
+worker write outside its worktree. The runner denies the write, and `finalize` reverts and
+fails the run if one slips through.
+### 8. Revise runs
+Feedback from the human's triage note, from review comments on GitHub, from a red CI
+rollup, from the automated review or from a rebase conflict all land in the same place,
+`pending_feedback` in `state.json`. The next dispatch starts a `revise` run: the same
+worktree and branch, the same brief plus a "Revision round" section and the feedback
+itself (only what is new since the last dispatch). The result line, push and PR update
+follow the same path; the revise run's `pr_body` replaces the PR description.
+## Variants of the transport
+**ssh runner.** The scheduler generates a shell script (`remote.sh`) that embeds the brief
+in a heredoc and pipes it to `ssh <host> sh -s`. On the host, the script refreshes that
+host's clone of the product repo, creates or reuses a worktree under
+`<repo>/.garden-worktrees/<id>` on the task branch, runs the harness with the brief on
+stdin, commits leftovers and pushes the branch itself (the host has push access; the
+scheduler's machine may not). The harness's stdout comes back over the ssh connection into
+the same `stdout.json`, and the same `exit_code` file is written locally. On reap the
+scheduler fetches the branch, requires commits ahead of the base, and materialises a
+local worktree from `origin/<branch>` so reviews and revise runs have one. The
+least-loaded host with a clone of the product and a free `max_parallel` slot is chosen at
+dispatch; a resumed session goes back to the host it started on.
+**manual runner.** A person is the worker. `garden take WID-003 --worktree` dispatches a
+run with no pid, prints the brief path and creates the worktree; the `garden-take` skill
+does this from inside an interactive Claude Code session. `garden finish WID-003 --result
+'{...}'` writes `result.json` and `exit_code` into the run directory and calls the same
+`finalize` as a detached run, so the push, checks, PR and review are identical. A manual
+run never times out and never occupies a scheduler slot.
+**the planner.** `garden plan` is the one model call that is not detached: it runs the
+harness synchronously from the garden root with the planning prompt on stdin and imports
+the JSON array it prints as task files.
+## What each side never does
+| the scheduler never | the worker never |
+|---|---|
+| calls a model, or reads a transcript | pushes, opens a PR, or comments on one |
+| holds a connection to a worker | edits files under `tasks/` |
+| edits code in a worktree (it only commits leftovers before pushing) | reads the whole garden; it gets the brief and the reading list |
+| retries without a cap | waits for the scheduler; it finishes and exits |
+| lets an answer or a brief widen the fence | writes or commits outside its own worktree (the runner denies it; a slip is reverted, §2a) |
+## When things go wrong
+| failure | what the scheduler sees | what it does |
+|---|---|---|
+| the harness crashes | non-zero `exit_code`, no result line | retry while `attempts < max_attempts`, then `failed` with the last stderr lines in the task log |
+| the worker forgets the result line | exit 0, no `GARDEN_RESULT` | same as a crash; the final message is kept in `final.md` |
+| the worker did nothing | `done` with zero commits ahead of the base | run failed; retry or fail |
+| the worker runs too long | elapsed time past `timeout_minutes` + 5 | kills the process group, marks the run `timeout`, retries or fails |
+| the machine rebooted mid-run | pid gone, no `exit_code` | treated as a finished run with no output: retry or fail |
+| the push is rejected | git error after the commits were counted | `failed` with the error in the log; the commits stay in the worktree |
+| GitHub is unreachable | `gh` and the token both unavailable, or the API errors | the task moves to `in_review` with a note to open the PR by hand and register it with `garden pr ID URL` |
+| the answer arrives but the session is gone | `session_id` set, resume command fails or the harness cannot resume | a fresh run with the Q&A in its brief |
+| two ticks overlap | both read the same `run.json` | the run is reaped by whichever finishes first; the second sees the run already marked done and finds no active run |
+| the worker wrote outside its worktree | a path the worker's transcript names changed in the live garden or the product clone since dispatch | that write is reverted (commits soft-reset, files restored), the run is marked `failed`, and the Inbox shows a card quoting what was touched; any change the transcript does *not* name (a person's hand-edit, a fetched HEAD) is left in place and noted on the card (§2a) |
+## Where to look
+- `garden log WID-003` prints the task's `## Log`, one line per transition, with cost.
+- `garden runs WID-003` lists every run with mode, status, model, minutes, tokens and
+cost; the run directory holds the brief and raw output.
+- `garden events WID-003` is the task's timeline from `events.jsonl`; the web task page
+shows the same with the last run's log.
+- `garden brief WID-003 --stats` prints exactly what the next worker would receive and
+how big each section is.
+````
+## Reading list (read these)
+These files are relevant but too large to inline, or were not found where the brief was built. Read them (paths relative to your current directory) before starting:
+- `src/garden/scheduler.py`
+## Review feedback to address
+- **garden**: this PR conflicts with `main`. Run `git fetch origin && git rebase origin/main`, resolve the conflicts keeping the intent of both sides (conflicting files: tests/fake_claude.py). The runner will force-push the rebased branch. Then drop from the PR description anything `main` now already contains; the description must cover only what this branch still adds. Put the corrected description in `pr_body` (only if it must change).
+The rebase is done and everything is green.
+## Summary
+This revision round's only feedback was to resolve the `main` conflict. I:
+- Ran `git fetch origin && git rebase origin/main` — all 7 fence commits replayed onto the current `main`.
+- Resolved two conflicts in `tests/fake_claude.py`, both in the same spirit — a union keeping both sides:
+- The mode-dispatch tuple now includes main's newer modes (`friction`, `omit-body`) **and** this branch's `escape` mode.
+- The result-building block keeps main's `friction`/`omit-body` handling **and** this branch's `escape` note. The `escaped_path` variable it references remains defined by this branch's earlier `escape` block.
+- The fake-claude docstring merged cleanly and already lists all modes.
+Verified: `test_fence.py` 12/12 pass, full suite 420 passed / 3 skipped, `ruff` clean.
+The PR description is unchanged: the fence (harness deny rules, belt-and-braces revert, worker-protocol docs) is entirely this branch's addition — `main` contains none of it, so nothing needs dropping from the description.
+GARDEN_RESULT: {"status": "done", "summary": "Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (friction, omit-body, discover-kinds) and this branch's escape mode and its escaped_path note. All fence commits replayed cleanly; 420 tests pass and ruff is clean.", "pr_comment": "Rebased onto origin/main and resolved the `tests/fake_claude.py` conflict. The conflict was purely additive on both sides, so I took the union: the mode-dispatch tuple and the result-building block now carry main's newer modes (`friction`, `omit-body`) alongside this branch's `escape` mode and its `escaped_path` note. Nothing in the fence itself changed, and the PR description still describes only what this branch adds (main contains none of the fence), so the description stays as-is. `tests/test_fence.py` 12/12 pass, full suite 420 passed / 3 skipped, ruff clean.", "friction": ["This PR has now hit the same tests/fake_claude.py rebase conflict on four separate rounds because that fixture is a hot file every task touches; a fence task that only adds a self-contained test module and harness code shouldn't keep colliding there."]}
+(stderr was empty)
