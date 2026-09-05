@@ -21,7 +21,7 @@ discovered_from: CG-212
 attempts: 1
 last_dispatched_at: '2026-09-05T19:30:39+00:00'
 created: '2026-09-05T17:49:54+00:00'
-updated: '2026-09-05T20:37:59+00:00'
+updated: '2026-09-05T20:45:42+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Discovered by CG-212 (A usage or spend-limit error from a harness pauses dispatc
 - 2026-09-05T19:43:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/183 (base garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus): Gated the retro's reconcile dispatch on a paused harness: _dispatch_retro_run now refuses when paused, reap_retro defers the reconcile pre-dispatch instead of raising, and env_error mid-reconcile pauses the harness and retries rather than being read as a failed retro. cost=$1.87
 - 2026-09-05T19:47:55+00:00 automated review: approve — Both acceptance criteria are met: _dispatch_retro_run now refuses a paused harness before dispatching, and reap_retro's reconcile path recognizes env_error and pauses the harness instead of failing the retro; tests and lint pass and the diff is tightly scoped. cost=$0.70
 - 2026-09-05T20:37:59+00:00 PR conflicts with garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus; rebased onto garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus mechanically and force-pushed
+- 2026-09-05T20:45:42+00:00 automated review: approve — Both criteria are met: the reconcile dispatch goes through the shared paused-harness gate, reap_retro defers rather than raising, and a quota env_error mid-reconcile pauses the harness and retries instead of dropping the retro. Full suite and lint pass. cost=$1.79
