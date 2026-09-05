@@ -1,0 +1,1483 @@
+context-garden/phase-02-friction · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+context-garden phase-02-friction
+spent $547.07 of $2000.00 · 86 PR(s) tracked · fixed brief cost ~2,614 tokens (head + rules + digest + product + goals)
+Budget $
+no budget
+Set
+Board Trellis
+Progress Merged against scope
+0
+52
+104
+104 in scope
+84 merged
+84 merged
+2026-09-04T17:02: 1 merged
+2026-09-04T17:18: 2 merged
+2026-09-04T17:24: 3 merged
+2026-09-04T17:32: 4 merged
+2026-09-04T17:40: 5 merged
+2026-09-04T17:42: 6 merged
+2026-09-04T17:42: 7 merged
+2026-09-04T17:45: 8 merged
+2026-09-04T17:49: 9 merged
+2026-09-04T18:05: 10 merged
+2026-09-04T18:06: 11 merged
+2026-09-04T18:06: 12 merged
+2026-09-04T18:09: 13 merged
+2026-09-04T18:25: 14 merged
+2026-09-04T18:28: 15 merged
+2026-09-04T18:29: 16 merged
+2026-09-04T18:33: 17 merged
+2026-09-04T18:54: 18 merged
+2026-09-04T18:55: 19 merged
+2026-09-04T18:59: 20 merged
+2026-09-04T18:59: 21 merged
+2026-09-04T19:05: 22 merged
+2026-09-04T19:09: 23 merged
+2026-09-04T19:11: 24 merged
+2026-09-04T19:18: 25 merged
+2026-09-04T19:34: 26 merged
+2026-09-04T19:34: 27 merged
+2026-09-04T19:36: 28 merged
+2026-09-04T19:38: 29 merged
+2026-09-04T19:44: 30 merged
+2026-09-04T20:14: 31 merged
+2026-09-04T20:15: 32 merged
+2026-09-04T21:18: 33 merged
+2026-09-04T21:18: 34 merged
+2026-09-04T21:20: 35 merged
+2026-09-04T21:21: 36 merged
+2026-09-04T21:26: 37 merged
+2026-09-04T21:26: 38 merged
+2026-09-04T21:27: 39 merged
+2026-09-04T22:02: 40 merged
+2026-09-04T22:02: 41 merged
+2026-09-04T22:03: 42 merged
+2026-09-04T22:04: 43 merged
+2026-09-04T22:06: 44 merged
+2026-09-04T22:09: 45 merged
+2026-09-04T23:57: 46 merged
+2026-09-04T23:58: 47 merged
+2026-09-04T23:58: 48 merged
+2026-09-04T23:58: 49 merged
+2026-09-04T23:58: 50 merged
+2026-09-04T23:58: 51 merged
+2026-09-04T23:58: 52 merged
+2026-09-04T23:59: 53 merged
+2026-09-04T23:59: 54 merged
+2026-09-04T23:59: 55 merged
+2026-09-04T23:59: 56 merged
+2026-09-05T00:00: 57 merged
+2026-09-05T00:01: 58 merged
+2026-09-05T00:01: 59 merged
+2026-09-05T00:05: 60 merged
+2026-09-05T00:06: 61 merged
+2026-09-05T00:07: 62 merged
+2026-09-05T00:17: 63 merged
+2026-09-05T00:26: 64 merged
+2026-09-05T00:28: 65 merged
+2026-09-05T00:29: 66 merged
+2026-09-05T00:41: 67 merged
+2026-09-05T00:49: 68 merged
+2026-09-05T00:57: 69 merged
+2026-09-05T01:10: 70 merged
+2026-09-05T01:13: 71 merged
+2026-09-05T01:14: 72 merged
+2026-09-05T01:18: 73 merged
+2026-09-05T01:24: 74 merged
+2026-09-05T01:45: 75 merged
+2026-09-05T01:53: 76 merged
+2026-09-05T01:54: 77 merged
+2026-09-05T01:58: 78 merged
+2026-09-05T02:07: 79 merged
+2026-09-05T02:10: 80 merged
+2026-09-05T02:12: 81 merged
+2026-09-05T02:13: 82 merged
+2026-09-05T02:17: 83 merged
+2026-09-05T02:30: 84 merged
+Sep 04
+Sep 05 02:55
+merged (84) PRs opened (87)
+hide 112 done
+id status p tier title deps pr review ci rev brief tokens cost
+CG-037 in fruit done first · 0 easy Stop the revise template and the review prompt contradicting each other
+#44
+auto: request changes
+success
+1
+~7,742
+31,953 / 13,021,173 / 102,170
+$9.88
+CG-054 in fruit done first · 0 medium A worker's worktree must never act on the live garden
+#40
+auto: request changes
+success
+~9,007
+4,164 / 6,297,691 / 80,280
+$5.01
+CG-061 in fruit done first · 0 easy Review runs whose task moved on are reaped, not left running forever
+#47
+success
+~3,384
+12,727 / 6,237,743 / 45,509
+$6.29
+CG-064 in fruit done first · 0 easy Make test_feedback_triggers_revise_round deterministic
+#64
+auto: approve
+success
+3
+~10,382
+22,984 / 18,351,774 / 124,191
+$16.08
+CG-076 in fruit done first · 0 easy Push with lease when the worker rebased its branch
+#33
+success
+~4,724
+24 / 1,655,449 / 13,605
+$1.10
+CG-082 in fruit done first · 0 easy Separate GARDEN_ROOT (guard) from the check-command venv path variable CG-054
+#42
+auto: request changes
+success
+2
+~9,007
+26,210 / 10,905,829 / 75,080
+$10.51
+CG-085 in fruit done first · 0 easy Workers' checkouts live in a configurable work_dir outside the garden
+#39
+auto: approve
+success
+~5,767
+3,945 / 346,456 / 4,341
+$0.53
+CG-090 in fruit done first · 0 easy State.save() never clears dirty keys after a successful write
+#52
+auto: request changes
+success
+2
+~9,007
+33,395 / 6,470,683 / 42,351
+$7.26
+CG-091 in fruit done first · 0 easy State.save()'s file replacement is not atomic for concurrent readers
+#45
+auto: approve
+success
+~9,007
+16,988 / 4,457,681 / 37,602
+$4.77
+CG-093 in fruit done first · 0 easy Store.save() for task files has the same non-atomic write_text pattern
+#46
+auto: approve
+success
+~9,007
+12,674 / 2,660,764 / 16,701
+$2.73
+CG-095 pressed cancelled first · 0 easy checks.pre_pr can fail with a confusing exit-127 error if GARDEN_ROOT's venv isn't provisioned
+~7,742
+CG-097 pressed cancelled first · 0 medium Worktree setup sometimes skips creating .venv, breaking pre-PR checks
+~9,007
+CG-101 in fruit done first · 0 easy Pre-PR `tests` check environment doesn't match test suite assumptions
+#49
+auto: approve
+success
+~9,007
+8,372 / 1,712,269 / 12,004
+$1.98
+CG-102 pressed cancelled first · 0 easy State.save() in scheduler.py still not atomic
+~9,007
+CG-103 pressed cancelled first · 0 easy Orchestrating garden's pre-PR check command still resolves venv/tool paths via $GARDEN_ROOT for this product
+~9,007
+CG-104 in fruit done first · 0 easy Live log: a tool result whose content is a string no longer breaks the task page
+#50
+auto: approve
+success
+~5,623
+8,521 / 2,190,859 / 13,307
+$2.14
+CG-105 pressed cancelled first · 0 easy Test suite should isolate/unset GARDEN_ROOT so worker sandboxing doesn't masquerade as test failures
+~3,384
+CG-106 in fruit done first · 0 medium A task the loop can no longer dispatch always gets a card
+#53
+auto: request changes
+success
+1
+~8,621
+17,581 / 8,060,961 / 75,482
+$8.62
+CG-108 pressed cancelled first · 0 easy Document (or design a dedicated mode for) the GARDEN_ROOT-sentinel gotcha for self-hosted check commands
+~9,007
+CG-111 in fruit done first · 0 medium A worker cannot write outside its worktree, whatever it is told
+#57
+auto: approve
+success
+1
+~10,520
+45,975 / 17,895,429 / 174,813
+$19.85
+CG-116 in fruit done first · 0 medium The orphan sweep never closes a run whose task is still running
+#59
+auto: approve
+success
+~6,766
+12,414 / 3,227,019 / 36,216
+$3.86
+CG-127 in fruit done first · 0 medium test_set_budget_none_removes_cap fails on main
+#89
+auto: approve
+success
+~4,914
+8,297 / 1,313,993 / 14,787
+$1.70
+CG-129 in fruit done first · 0 medium Automerge merges only into the product's base branch, never into a parent's branch
+#91
+auto: approve
+success
+~8,077
+8,716 / 2,921,447 / 30,976
+$3.30
+CG-008 in fruit done next · 1 medium Harvest friction sections from PR bodies
+#9
+auto: approve
+success
+~3,543
+47 / 3,034,516 / 26,243
+$2.09
+CG-027 in fruit done next · 1 easy First live run of the loop on itself
+#8 draft
+auto: request changes
+success
+2
+~6,729
+50 / 218,500 / 23,192
+$0.25
+CG-047 in fruit done next · 1 easy Pick up the person's own PR comments as feedback
+#12 draft
+auto: approve
+success
+~6,845
+9 / 18,741 / 6,507
+$0.07
+CG-050 pressed cancelled next · 1 medium The running garden picks up merged changes to itself
+#36
+auto: approve
+failure
+~7,872
+58 / 5,655,684 / 43,772
+$3.71
+CG-053 in fruit done next · 1 medium state.json is saved whole by every writer, so concurrent writers lose updates
+#37
+auto: approve
+success
+~8,061
+4,371 / 4,938,984 / 62,502
+$3.64
+CG-055 in fruit done next · 1 easy Turn limit is optional and off by default
+#27 draft
+success
+~12,704
+0 / 0 / 0
+$0.00
+CG-057 in fruit done next · 1 medium A PR that conflicts with its base gets a rebase round
+#41
+success
+~6,845
+4,819 / 8,524,797 / 85,088
+$6.48
+CG-058 in fruit done next · 1 easy The brief never points a worker at the garden root
+#29 draft
+auto: approve
+success
+~6,227
+12 / 403,008 / 7,487
+$0.39
+CG-060 in fruit done next · 1 easy Reading lists resolve product paths against the product repo
+#31 draft
+auto: approve
+success
+~2,923
+6 / 171,538 / 8,720
+$0.35
+CG-063 in fruit done next · 1 easy Remove the garden files from the tool's repo
+#34
+success
+~2,615
+25 / 1,050,347 / 7,335
+$0.64
+CG-069 in fruit done next · 1 medium Pause and resume dispatch from a command and a configuration page
+#38
+success
+~4,926
+57 / 6,421,825 / 17,771
+$2.87
+CG-081 in fruit done next · 1 medium Environment setup is per-product configuration, not a venv assumption
+#48
+auto: request changes
+success
+3
+~11,316
+43,451 / 18,918,220 / 196,978
+$20.68
+CG-084 in fruit done next · 1 medium The garden upgrades its own pinned install after the tool's PRs merge
+#51
+success
+~2,915
+9,317 / 10,369,204 / 67,146
+$9.07
+CG-092 in fruit done next · 1 hard Remove venv install lines from the context-garden garden config and product overview CG-081
+~11,316
+5,004 / 3,402,706 / 34,767
+$3.45
+CG-098 in fruit done next · 1 easy Tests do not read the developer's GARDEN_ROOT; the check command need not unset it CG-090, CG-101
+#54
+auto: approve
+success
+2
+~11,808
+21,093 / 6,965,996 / 53,104
+$7.35
+CG-100 in fruit done next · 1 medium A worker's won't-do or nothing-to-change is a decision for the person, not a failure
+#58
+auto: approve
+success
+~13,963
+14,513 / 28,019,368 / 93,579
+$19.66
+CG-107 pressed cancelled next · 1 easy Driving garden config should adopt the setup block for context-garden
+~11,316
+CG-110 pressed cancelled next · 1 easy CG-107 duplicates CG-092
+~11,316
+CG-112 in fruit done next · 1 medium A worker's discovery can be a decision for the person, not only a new task
+#55
+auto: approve
+success
+2
+~9,913
+26,052 / 15,961,537 / 116,862
+$14.94
+CG-113 in fruit done next · 1 easy Drop the `env -u GARDEN_ROOT` stopgap from the live garden's tests check CG-098
+~11,808
+CG-114 pressed cancelled next · 1 medium Per-worktree test environment so pytest imports the local src
+~9,913
+CG-117 in fruit done next · 1 easy After the last automated review round, the person is told the PR is theirs
+#60
+auto: approve
+success
+~5,964
+9,272 / 10,035,325 / 62,891
+$8.47
+CG-118 in fruit done next · 1 easy A bot comment that is a notice, not a finding, is not feedback
+#63
+auto: approve
+success
+~6,860
+8,795 / 3,311,605 / 25,824
+$3.32
+CG-119 in fruit done next · 1 medium test_happy_path_dispatch_reap_pr_merge flakes intermittently in CI CG-064
+#68
+auto: approve
+success
+~11,808
+8,293 / 1,881,023 / 18,480
+$2.60
+CG-126 in fruit done next · 1 medium Verify worktree provisioning for stacked tasks actually checks out the parent branch
+#90
+auto: approve
+success
+1
+~15,454
+20,224 / 3,610,041 / 63,354
+$6.17
+CG-131 in fruit done next · 1 medium A check that fails at the branch's base commit triggers a rebase, not a revise round
+#92
+auto: approve
+success
+~7,477
+8,859 / 5,249,551 / 54,088
+$5.80
+CG-133 in fruit done next · 1 medium garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase
+#94
+auto: approve
+success
+~5,915
+12,989 / 9,713,558 / 86,661
+$9.51
+CG-136 in fruit done next · 1 medium PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites
+#93
+auto: approve
+success
+~7,803
+9,427 / 11,560,059 / 72,260
+$10.08
+CG-137 seed draft next · 1 hard Split the scheduler by tick phase and the web actions into a registry so features stop colliding
+~14,118
+CG-140 in fruit done next · 1 easy An empty description rewrite falls back to a round; pending feedback never sits on an in_review task
+#95
+auto: approve
+success
+~4,926
+8,676 / 4,078,959 / 27,543
+$3.98
+CG-141 seed draft next · 1 medium Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue
+~12,238
+CG-145 seed draft next · 1 easy garden retro waits for the persona reports before it dispatches the reconciliation
+~2,690
+CG-146 seed draft next · 1 medium A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+~5,172
+CG-009 in fruit done normal · 2 medium Stream-json runner output and live log in the web UI
+#10
+auto: request changes
+success
+3
+~3,512
+169 / 11,373,789 / 77,894
+$6.39
+CG-010 in fruit done normal · 2 easy Notification hook for human-needed transitions
+#17
+auto: request changes
+success
+2
+~2,755
+960 / 15,118,811 / 90,136
+$5.70
+CG-011 in fruit done normal · 2 medium Automated review pass before human review
+~3,459
+CG-028 pressed cancelled normal · 2 easy Calibrate the tier map with a model trial CG-027
+~3,318
+CG-030 seed draft normal · 2 easy Plates: label what each plate shows, keep every file public domain, credit Thomé
+~4,263
+CG-032 in fruit done normal · 2 easy Doctor checks that gh and the harness are logged in and git has an identity
+#15
+auto: request changes
+success
+3
+~7,696
+751 / 9,466,910 / 77,841
+$3.72
+CG-033 pressed cancelled normal · 2 medium An environment error in a worker pauses dispatch instead of burning attempts
+~5,718
+71 / 5,373,649 / 52,896
+$3.40
+CG-034 in fruit done normal · 2 medium Windows: run the harness by its resolved path and give pre-PR checks a shell
+#16
+auto: approve
+success
+1
+~7,820
+93 / 5,819,419 / 63,988
+$3.68
+CG-035 in fruit done normal · 2 medium Inbox and digest show what actually happened to a task
+#18 draft
+auto: approve
+success
+~4,530
+42 / 3,341,070 / 37,427
+$2.30
+CG-036 in fruit done normal · 2 easy Revise brief: a pre-PR variant, and tell the worker what is already on the branch
+#13 draft
+auto: approve
+success
+~6,283
+426 / 2,641,245 / 22,873
+$0.51
+CG-038 in fruit done normal · 2 medium Stall detection judges a description-only round by the description
+#21 draft
+success
+~4,191
+44 / 4,056,760 / 39,681
+$2.39
+CG-039 in fruit done normal · 2 easy Show cache reads, not just fresh input tokens, in runs and usage
+~6,423
+786 / 7,988,660 / 52,214
+$1.39
+CG-040 in fruit done normal · 2 easy Tell the worker its turn cap, and set it per tier
+#20
+success
+1
+~11,507
+525 / 7,779,657 / 46,299
+$2.90
+CG-041 in fruit done normal · 2 easy Mark the garden's own PR comments as the garden's
+#22 draft
+success
+~6,845
+443 / 5,587,722 / 28,584
+$1.79
+CG-042 in fruit done normal · 2 medium Say when the garden's own state edits get committed
+#23
+auto: approve
+success
+~9,932
+36 / 2,381,372 / 22,013
+$1.67
+CG-043 in fruit done normal · 2 medium garden finish must not race the tick
+#28 draft
+auto: approve
+success
+~3,032
+62 / 7,014,610 / 58,093
+$3.91
+CG-044 in fruit done normal · 2 medium Report friction from anywhere, and have it scheduled
+#25 draft
+auto: approve
+success
+~4,696
+70 / 5,047,545 / 26,510
+$2.61
+CG-045 in fruit done normal · 2 hard Attention cards say what the decision is and what each button will do
+#56
+auto: approve
+success
+1
+~8,091
+9,337 / 15,408,247 / 109,431
+$19.35
+CG-046 in fruit done normal · 2 easy Task page: a full text box for the send-back note
+#11
+auto: approve
+success
+1
+~12,123
+72 / 3,762,561 / 24,496
+$1.84
+CG-048 in fruit done normal · 2 medium Set or remove a phase budget from the web UI
+#61
+auto: approve
+success
+~6,545
+8,722 / 3,972,737 / 29,189
+$4.03
+CG-049 in fruit done normal · 2 easy CLAUDE.md: document PYTHONPATH=src for manual test runs in worktrees CG-081
+#62
+auto: approve
+success
+~7,820
+8,086 / 772,028 / 16,803
+$1.53
+CG-051 pressed cancelled normal · 2 easy Worktree tests need PYTHONPATH or a per-worktree venv
+~4,530
+CG-052 pressed cancelled normal · 2 easy Worktree venv isolation: document or automate per-worktree install
+~4,191
+CG-059 in fruit done normal · 2 easy Bot comments count as feedback unless excluded
+#30 draft
+auto: approve
+success
+~9,027
+3 / 55,036 / 2,783
+$0.19
+CG-062 in fruit done normal · 2 medium A worker silent for too long is flagged and stopped before the timeout
+#66
+auto: approve
+success
+1
+~6,570
+34,902 / 11,927,542 / 132,193
+$13.78
+CG-067 in fruit done normal · 2 easy garden commit commits only task files and sees untracked ones
+#65
+success
+~4,722
+8,370 / 1,418,232 / 13,112
+$1.66
+CG-068 in fruit done normal · 2 medium Automerge: merge a PR when the loop's own gates pass
+#69
+auto: approve
+success
+~9,083
+9,006 / 7,247,235 / 51,285
+$6.84
+CG-072 in fruit done normal · 2 easy A merged PR marks its task done even if the task had failed
+#67
+auto: approve
+success
+~2,670
+8,670 / 3,339,635 / 21,028
+$3.19
+CG-073 in fruit done normal · 2 medium Task page shows every run's transcript and final message
+#70
+auto: approve
+success
+~11,401
+8,845 / 4,177,235 / 32,216
+$4.47
+CG-074 in fruit done normal · 2 easy Reviews do not consume worker slots
+#71
+auto: approve
+success
+2
+~6,001
+51,864 / 23,247,360 / 131,894
+$20.91
+CG-075 in fruit done normal · 2 easy Runs page: the table and the scheduler log stay inside their panels
+#32
+success
+~9,349
+0 / 0 / 0
+$0.00
+CG-077 pressed cancelled normal · 2 easy Document pip install -e requirement for worktree development
+~7,696
+CG-078 in fruit done normal · 2 hard Closed phases leave the rail and live in a browsable herbarium
+#73
+auto: approve
+success
+~15,454
+9,272 / 9,461,933 / 73,591
+$16.97
+CG-079 in fruit done normal · 2 medium Suggest a change to a task from its page, and have an agent fold it in
+#75
+auto: approve
+success
+3
+~11,141
+47,018 / 23,626,929 / 157,062
+$23.63
+CG-080 in fruit done normal · 2 easy Change parallelism from the configuration page and the CLI, effective next tick CG-069
+#72
+auto: approve
+success
+1
+~4,921
+17,610 / 9,196,083 / 47,185
+$7.99
+CG-083 in fruit done normal · 2 easy A reap is atomic: a restart mid-tick never loses a finished run
+#81
+auto: approve
+success
+3
+~4,800
+39,574 / 16,814,811 / 125,588
+$16.59
+CG-086 in fruit done normal · 2 easy Web actions report failures as messages, never as a 500
+#74
+auto: approve
+success
+1
+~6,235
+34,816 / 15,262,390 / 93,762
+$14.73
+CG-087 in fruit done normal · 2 easy Trial form picks contenders from the known harnesses and models CG-086
+#78
+auto: approve
+success
+~11,515
+8,954 / 6,770,010 / 54,712
+$6.51
+CG-096 in fruit done normal · 2 easy Inbox count is the decisions only; retrying tasks show but do not count
+#76
+auto: approve
+success
+1
+~11,906
+30,100 / 12,722,907 / 66,578
+$11.74
+CG-099 in fruit done normal · 2 easy Task page: tier and priority are pulldowns that apply on change, with priority in words
+#77
+auto: approve
+success
+1
+~8,675
+17,054 / 5,828,587 / 30,535
+$5.65
+CG-109 in fruit done normal · 2 easy A description-only revise round runs on the easy tier
+#80
+auto: approve
+success
+2
+~7,233
+30,833 / 12,386,346 / 59,822
+$11.21
+CG-120 pressed cancelled normal · 2 easy CG-029's brief must name `garden close-phase`
+~15,454
+CG-123 in fruit done normal · 2 medium Tasks that edit the garden's own files run in a worktree of the garden repo
+#85
+auto: approve
+success
+~11,152
+12,202 / 3,790,288 / 46,918
+$4.81
+CG-124 pressed cancelled normal · 2 easy test_feedback_triggers_revise_round commit-collision flake (already tracked as CG-064)
+~4,800
+CG-128 pressed cancelled normal · 2 medium test_set_budget_none_removes_cap fails under Python 3.14
+~6,570
+CG-132 seed draft normal · 2 easy The web UI can create a task from a form, with the same fields as garden new-task
+~5,527
+CG-134 seed draft normal · 2 medium garden walkthrough: render the live web app's pages for the retro and the persona reviews
+~2,690
+CG-135 seed draft normal · 2 hard garden qa: an agent drives the loop end to end through the web app on a throwaway garden
+~6,348
+CG-138 pressed cancelled normal · 2 medium Automerge orders PRs that touch the same file one per cycle instead of letting them rebase against each other
+~6,845
+CG-139 seed draft normal · 2 easy Rebase rounds do not count toward the revision cap
+~6,766
+CG-142 seed draft normal · 2 easy Task actions refuse a task that is done or cancelled
+~2,682
+CG-143 seed draft normal · 2 easy Ship the garden-operate skill with the tool so every new garden gets it
+~9,291
+CG-144 seed draft normal · 2 easy A superseded review run is closed when a newer review starts; no run record outlives its process
+~8,890
+CG-147 seed draft normal · 2 easy A product clone gets a git identity when it is made, and doctor checks every clone
+~4,729
+CG-012 in fruit done later · 3 easy Brief cost report per phase
+#7
+auto: request changes
+success
+2
+~3,226
+1,207 / 7,290,802 / 61,424
+$1.46
+CG-013 in fruit done later · 3 medium Replan a phase after failures CG-008
+#24 draft
+auto: approve
+success
+~2,923
+47 / 2,342,294 / 30,481
+$1.68
+CG-029 sprout ready later · 3 medium Close the phase: friction document, what changed, and the next goals CG-009, CG-008, CG-013
+~7,491
+3,773 / 151,384 / 11,740
+$0.64
+CG-031 in fruit done later · 3 easy Draw the done stage as a red apple
+#26 draft
+auto: approve
+success
+~3,515
+33 / 1,526,635 / 28,943
+$1.36
+CG-056 pressed cancelled later · 3 easy CLAUDE.md venv path breaks in worktrees
+~3,515
+CG-065 in fruit done later · 3 easy Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows
+#82
+auto: approve
+success
+3
+~7,810
+37,473 / 10,513,412 / 96,891
+$12.16
+CG-066 in fruit done later · 3 easy garden usage shows the phase header and brief estimates before any run
+#79
+auto: approve
+success
+~6,282
+8,374 / 1,675,504 / 14,167
+$1.93
+CG-070 pressed cancelled later · 3 easy Auto-approve every discovered task, not only blocking ones
+~4,914
+CG-071 in fruit done later · 3 easy Set a task's priority and difficulty from the CLI and the task page
+#43
+auto: request changes
+success
+~2,675
+4,354 / 867,711 / 12,560
+$1.12
+CG-088 in fruit done later · 3 easy Trellis and phase page can hide completed tasks
+#86
+auto: approve
+success
+2
+~5,792
+30,830 / 15,256,238 / 111,044
+$14.67
+CG-089 pressed cancelled later · 3 easy Board: reorder ready tasks with up/down priority controls
+~2,675
+CG-094 in fruit done later · 3 medium Board: a list view grouped by status beside the columns
+#83
+auto: approve
+success
+1
+~4,066
+17,140 / 4,494,030 / 51,773
+$5.50
+CG-115 in fruit done later · 3 easy Store a short diff summary on run records for attention/triage evidence
+#84
+auto: approve
+success
+~8,091
+8,958 / 5,748,396 / 23,960
+$4.85
+CG-121 in fruit done later · 3 easy Planner and friction reports can still create tasks in a closed phase CG-078
+#88
+auto: approve
+success
+~15,454
+13,661 / 7,858,945 / 64,477
+$7.83
+CG-122 in fruit done later · 3 easy Extend the flash-message pattern to friction-report and phase/global actions CG-086
+#87
+auto: approve
+success
+~6,235
+8,382 / 2,347,686 / 22,473
+$2.74
+CG-125 seed draft later · 3 medium Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart
+~7,810
+CG-130 pressed cancelled later · 3 easy test_set_budget_none_removes_cap is missing a reap tick
+~5,792
+Approve all drafts
+tasks">Plan phase
+Persona review of the body of work:
+file high findings as tasks
+Run personas
+Goals phase-02-friction goals
+Feature freeze (2026-09-05 00:35 UTC)
+No new features enter this phase. Approved from here on: only fixes needed to merge what is already built and to keep the loop honest (CG-129, CG-126, CG-131). New feature ideas go to phase 03; discovered features are filed as drafts with "deferred by the freeze" in the log. The wrap-up order: open PRs merge, the manual items close, the operator's retro is written ( docs/retro-operator.md , from the agent that watched the loop), persona reviews run against the finished phase, then CG-029 reconciles all of it into the friction document and the next goals, and the phase closes.
+Why this phase
+The bootstrap loop works on paper. This phase runs the tool on itself: every task here is
+executed by the garden, and every worker is asked to report friction. The output is a
+tool that is smoother to operate and a first read on where tokens actually go.
+Goals
+Close the loop on review: make the automated review pass (shipped in bootstrap) earn its keep, and
+review comments that are addressed without a human re-dispatching anything.
+Make waiting visible: live worker output in the web UI, and a notification when a
+task needs a human.
+Collect friction from worker PR bodies into a phase document so the next planning
+round sees it.
+Keep the fixed cost of a brief flat while the garden grows.
+Non-goals
+Hosted or multi-user operation.
+Automatic merging (still a human decision).
+Definition of done
+Every task in this phase shipped through garden tick , not by hand.
+docs/friction.md in this phase lists what workers reported and what was changed.
+context-garden · plate II phase-02-friction Rubus fruticosus — bramble 104 tasks · 89 merged · 0 PRs open spent $547.07 of $2000.00 plate: Thomé, Flora von Deutschland, 1885
+open
+Spend Cost by difficulty tier
+easy
+easy: $255.94 over 50 task(s)
+$255.94 · 50 tasks
+medium
+medium: $251.36 over 37 task(s)
+$251.36 · 37 tasks
+hard
+hard: $39.77 over 3 task(s)
+$39.77 · 3 tasks
+tier tasks done avg rev first-pass
+easy 50 48 1.14 84% medium 37 34 0.89 87% hard 3 2 0.33 100%
+context-garden/phase-02-friction/specs/friction-log.md Friction log
+Workers are asked (principles digest) to put a ## Friction section in the PR body. The
+garden should harvest those sections so planning sees them.
+garden friction <product>/<phase> fetches PR bodies for every task in the phase with a
+PR, extracts the ## Friction section, and writes/updates
+<product>/<phase>/docs/friction.md grouped by task, with the PR link.
+The planner prompt includes docs/*.md , so friction is visible at the next planning round
+automatically.
+The web UI task detail shows the friction section when present.
+context-garden/phase-02-friction/specs/live-output.md Live worker output
+claude -p --output-format stream-json emits one JSON object per event. The runner should
+support claude.output_format: stream-json ; when set, stdout.json becomes a JSONL log and
+collect() takes the final result event. The web UI task page then tails the log
+(HTMX polling every few seconds, last N events, rendered as a compact timeline: tool
+calls, text, errors), and the TUI shows the same in its detail pane. context-garden/phase-02-friction/specs/notifications.md Notifications
+When a task transitions to in_review , failed , or changes_requested with the revision
+cap hit, the garden should tell the human. Config notify.command runs a shell command with
+GARDEN_TASK_ID , GARDEN_STATUS , GARDEN_MESSAGE , GARDEN_PR in its environment (so
+terminal-notifier , osascript , notify-send , or a curl to Slack all work). The web UI
+shows the same events in an inbox strip. Keep it to one hook; no notification library. context-garden/phase-02-friction/specs/review-pass.md Automated review pass
+Implemented in the bootstrap phase. See context-garden/phase-01-bootstrap/specs/review-pass.md .
+Open follow-ups: line-anchored review comments; a per-phase digest of what automated reviews keep flagging.
+context-garden/phase-02-friction/docs/friction.md Friction log
+Harvested from worker PR bodies ( ## Friction sections). Empty until the first tasks ship.
+First live run
+CG-027, 2026-09-04, a fresh clone in WSL (Ubuntu 26.04, Python 3.14) on the same machine
+as an earlier attempt from Windows. One bullet per step; cost at the end.
+Setup. uv is not on the WSL image; python3 -m venv .venv and pip install -e
+".[dev,plates]" worked on Python 3.14 (95 tests pass, lint clean). gh is not in the
+image either and there is no passwordless sudo, so it went in as a release tarball under
+~/.local/bin . Neither is the garden's fault, but the README only names uv .
+Doctor. garden doctor said "all good" while neither gh nor claude was logged
+in. It checks that the binaries are on PATH, not that they work: the github line shows
+gh CLI (path) with no as <login> when gh.me() is empty, and nothing looks at the
+harness's auth at all. The brief for CG-012 is ~2,600 tokens, under the 3k target.
+Harness when logged out. A probe claude -p --output-format json exits 0 with
+is_error: true and result: "Not logged in · Please run /login" . Harness.parse
+turns that into error , so the scheduler would mark the run failed and retry, burning
+both max_attempts on an environment problem that no retry can fix.
+Windows (the earlier attempt). The local runner starts every worker through sh -c ,
+so a harness installed as claude.cmd is found by shutil.which in doctor but not by
+the runner. The checks.pre_pr commands ( $GARDEN_ROOT , quoting) assume a POSIX shell.
+Neither bites in WSL; both belong here because doctor passed on Windows too.
+Git identity. The WSL profile had no user.name / user.email , so the first commit
+in the CG-027 worktree failed with "Author identity unknown". A headless worker would
+fail the same way at its first commit, and so would the scheduler's leftover commit.
+Doctor does not check it. Set repo-locally from the repo's own history.
+Garden state in the working tree. garden set-status , take and approve each
+edit a task file in the main checkout, which sits uncommitted while the loop runs;
+worker branches are cut from origin/main , so those edits never ride a PR. The person
+has to commit them by hand, and it is not written down anywhere when.
+Dispatch. After both logins, garden serve dispatched CG-012 on its first tick within
+a few seconds: runner local, harness claude, model haiku (the easy tier), brief 2,636
+tokens, worktree cut from origin/main . The Inbox answered at once. Nothing to note,
+except that the doctor line for github now shows as joshmarcus , which is the only visible
+difference between logged in and not.
+Worker run, attempt 1. haiku ran 4.4 minutes, 61 turns, $0.58, and hit
+max_turns: 60 . Exit code 1, subtype: error_max_turns , and the final text is empty,
+so there was no result line at all. It had made three real commits in the worktree
+(usage column, phase header, a refactor). The turn cap is the harness default for every
+tier; an easy task on the cheapest model burned through it on exploration.
+Nothing shows a running worker's progress. stdout.json stayed at zero bytes for the
+whole run. "Running now · 2 min" on the Inbox was the only signal; a hung worker would
+look the same until the 95-minute kill. The only checks on a worker happen inside a
+tick (exit_code file, then a pid probe, then the timeout); nothing else reaches out.
+The first failure is invisible. The tick that reaped attempt 1 dispatched attempt 2
+in the same second, with the task back through ready . The Inbox lists CG-012 nowhere,
+and garden digest printed "nothing notable" next to "$0.58 spent". A person watching
+the Inbox learns about a failed attempt only when the second one fails too.
+Attempt 2 starts on attempt 1's commits and is not told. The worktree is reused, so
+the three commits are on the branch, but the brief differs from the first one only by
+the two new log lines, and the dispatch note says "fresh session, base main". The worker
+has to discover the half-finished work by itself.
+in tokens mislead. garden runs shows 481 input tokens for a run whose cache reads
+were 3.4M; the column should show the total context read, or cache reads next to it.
+Worker run, attempt 2. Started on attempt 1's commits, found the work mostly done,
+added nothing, and reported done after 29 turns, 94 seconds and $0.28. Its final message
+claimed "No lint/syntax errors".
+Result line. Present and well formed on attempt 2 and on the revise run; pr_title
+and pr_body were usable as written. Neither body carried the ## Friction section the
+principles digest asks for, so there was nothing for CG-008 to harvest.
+Pre-PR checks earned their keep. Tests passed; ruff failed on one unsorted import the
+worker had said was clean. No PR was opened; the task went to changes_requested and a
+revise run started in the same tick with ruff's output in its brief. The fix took 23 turns,
+76 seconds and $0.17 for a two-line import swap, which is what a revise round costs on
+haiku even when the feedback is exact.
+The revise brief lied about the PR. Its "Revision round" section opened with "This
+branch already has an open pull request: (unknown). Reviewers left feedback", when no PR
+existed and the feedback was a lint check. The wording needs a pre-PR variant.
+Push and draft PR. After the revise run, both checks passed and the draft PR opened two
+seconds later: title CG-012: Brief cost report per phase , body with Summary, Changes,
+Verification, Review responses and the garden's footer. Readable, if boastful. The log line
+reuses the worker's summary, so the task log now says "Addressed lint error by fixing
+import sorting. All acceptance criteria met" as the description of the PR.
+Automated review. Ran on haiku ( review.difficulty empty means the task's tier),
+one turn, 86 seconds, $0.07, verdict approve with no findings and description_ok .
+It missed a real bug (the phase header passes the whole first-task brief, 2,935 tokens,
+to the template while the new column uses the fixed part, 1,781) and did not notice the
+missing ## Friction section, which the description check exists to catch. A one-turn
+review is a read of the diff and a verdict; it never ran anything. The comment on the PR
+is posted under the person's own login, joshmarcus , with a tick emoji, so on GitHub the
+human appears to have approved their own PR.
+Triage. The Inbox card had the two forms it should: "Ready for review" and a
+"Send back" note. Sending back through the form worked (303 to the task page), the note
+became pending_feedback word for word, and the task went to changes_requested . The
+log line truncates the note; the full text is only in state.json and the next brief.
+Revise round from triage. The tick after the send-back dispatched a revise run
+(haiku, 2 minutes, $0.18). It made the one-line fix, added the ## Friction section and
+answered the note under "Review responses" as the revise template tells it to. Checks
+passed, the push updated the PR body and left a comment. The person marked the PR ready
+on GitHub by hand and the next poll moved the task to in_review within a second, which
+is the right way round: marking ready stays a human step.
+The garden argued with itself. Review round two (haiku, $0.07) requested changes with
+one blocking finding: the "Review responses" section is scar tissue. The revise template
+in brief.py says "Reply to each review point in pr_body under a Review responses
+heading"; the review prompt in review.py says the description must have "no references
+to earlier review rounds". Every revised PR will fail its next review on this until one
+of the two changes. A third revise run started at once to delete the section, so a
+contradiction between two prompts costs a worker run and a review run per PR.
+The stall detector fired on a correct run. The third revise run (haiku, $0.10)
+deleted the "Review responses" section, which is all the review asked for, and touched no
+code. finalize compared the diff hash with the last round's, saw no change, and stalled
+the task: changes_requested with needs_human , "garden retry to resume". So the one
+time the loop did exactly what was asked, it reported itself stuck; and garden retry
+would start a fresh work run, not resume. A revise round whose feedback was only about
+the description should be judged on the description, not the diff. Meanwhile the PR on
+GitHub is mergeable, CI is green, and a merge is still noticed from changes_requested
+because the poll checks for merged before it returns early.
+Merge and done. The person merged on GitHub at 17:02; the next poll saw it, moved the
+task from changes_requested straight to done , removed the worktree and cleared the
+stall flag with it. So the false stall cost nothing but confusion. Approve to merge took
+24 minutes of wall clock and needed two human touches (the send-back and the merge).
+Cost. garden usage CG-012 : 7 runs, 17.1 minutes, $1.46. Work $0.86 (attempt 1
+$0.58 wasted on the turn cap, attempt 2 $0.28), revise $0.46 over three rounds (lint,
+triage note, scar tissue), review $0.14 over two rounds. Fresh input tokens 1,207; cache
+reads 7.3M; output 61k. Everything ran on haiku. The lint round and the scar-tissue round,
+$0.27 plus a review, were the garden's own doing: the worker's false claim slipped past
+it, and the two prompts disagree.
+After the run. garden finish CG-027 opened its draft PR and filed the eleven items
+as CG-032 to CG-042 in one call. CG-008 and CG-009 were then approved ( garden approve ,
+both dispatched on sonnet at the next tick) and CG-010 left draft for the model trial.
+Those three facts live in the task files' logs and in events.jsonl , not in this PR's
+diff, and the automated review of this PR requested changes for exactly that reason: it
+wanted the approvals "verified in the diff". A reviewer of a manual task cannot see garden
+state, and a manual task gets no revise run, so the request sat until a person took the
+task again. Two more items for the pile.
+Reported
+2026-09-05 · discovered by CG-065 (Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows) in run 20260905T000408Z-revise
+test_coordination.py::test_set_budget_none_removes_cap fails on current main independent of this task's diff (scheduler dispatch-cap logic, unrelated to plates/plants) — may warrant its own bug task.
+2026-09-05 · discovered by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T000756Z-revise
+test_coordination.py::test_set_budget_none_removes_cap fails deterministically on clean origin/main (second tick after retry dispatches 0 instead of 2). Pre-existing on main, unrelated to CG-079; likely a budget/dispatch regression worth a dedicated task.
+2026-09-05 · discovered by CG-062 (A worker silent for too long is flagged and stopped before the timeout) in run 20260905T000755Z-revise
+test_set_budget_none_removes_cap failing on main (tracked by CG-127/CG-128) has a precise root cause: Scheduler.retry() leaves a reset task's finished run marked 'running', leaking a max_parallel slot. Latent since CG-116 (ec93789) scoped reap_orphaned to verdict runs. Fix: in retry(), before transitioning to READY, close any still-'running' run of the task (kill()+status 'superseded'+save), mirroring cancel(). Verified: full suite 356 passed.
+2026-09-05 · discovered by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T001932Z-revise
+test_set_budget_none_removes_cap (from CG-048) was failing at main/base independent of CG-079; it lacked the intermediate reap tick its sibling budget tests have. Worth a glance to confirm no other budget tests share the omission.
+2026-09-05 · discovered by CG-126 (Verify worktree provisioning for stacked tasks actually checks out the parent branch) in run 20260905T005538Z-revise
+test_event_log_digest_and_metrics was flaky on CI: it dispatches a stacked second task (DM-002) and reads the shared event-log digest without waiting for that run to settle. Other coordination tests that dispatch a second run and inspect shared history (log/cost) without synchronizing may have the same latent race.
+2026-09-05 · discovered by CG-136 (PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites) in run 20260905T005008Z-work
+The driving garden's principles/00-index.md still tells workers to note friction in the PR body under a Friction heading. CG-136 moved friction to a friction result field; that principle line should be updated in the joshmarcus/garden repo to avoid contradicting review.py.
+2026-09-05 · discovered by CG-133 (garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase) in run 20260905T004959Z-work
+garden retro completes over two ticks when personas must run (personas -> reconcile -> PR). If a single-invocation end-to-end UX is wanted, retro would need to block-and-poll or the scheduler would need a synchronous path.
+2026-09-05 · discovered by CG-133 (garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase) in run 20260905T004959Z-work
+Persona phase reports are still written to the live garden's docs/reviews/ (existing persona-review behavior). Only the retro doc + next-goals draft arrive as a PR. Consider whether retro should reuse-only to keep the live garden fully untouched.
+2026-09-05 · reported by CG-062 (A worker silent for too long is flagged and stopped before the timeout) in run 20260905T011654Z-revise
+The blocking check for the prior round was a bug on main (CG-127), not in this branch's diff; the round stalled waiting for a human accept plus a rebase before it could go green.
+2026-09-05 · reported by CG-109 (A description-only revise round runs on the easy tier) in run 20260905T011654Z-revise
+The revision-round instructions said 'the runner will force-push the rebased branch,' which reads as an instruction to resolve conflicts locally but leave pushing to the runner — worth making the operating-rules 'do NOT push' instruction more prominent in the revision-round section itself, since it's easy to read the rebase note as implying the opposite.
+2026-09-05 · reported by CG-111 (A worker cannot write outside its worktree, whatever it is told) in run 20260905T014600Z-revise
+This PR has now hit the same tests/fake_claude.py rebase conflict on four separate rounds because that fixture is a hot file every task touches; a fence task that only adds a self-contained test module and harness code shouldn't keep colliding there.
+2026-09-05 · reported by CG-074 (Reviews do not consume worker slots) in run 20260905T014323Z-revise
+main moved twice during this single revision round (two separate merges landed while I was rebasing), so the rebase had to be redone after the first pass completed — worth noting if PR conflict revision rounds keep hitting a fast-moving main.
+2026-09-05 · reported by CG-074 (Reviews do not consume worker slots) in run 20260905T021114Z-revise
+This PR needed three rebases against main during its review cycle (once per round), each requiring re-resolving overlapping edits to the same few lines in web/app.py's ctx() and inbox.html's KPI row — a sign the review cadence here is slower than the rate main is moving.
+2026-09-05 · reported by CG-079 (Suggest a change to a task from its page, and have an agent fold it in) in run 20260905T021231Z-revise
+Six revise rounds on this PR were spent almost entirely on repeated rebases as main moved under it (scheduler.py, fake_claude.py, app.py, test_coordination.py, task.html each conflicted on different rounds); a long-lived branch touching hot files like the scheduler and the task page pays a large rebase tax.
+context-garden/phase-02-friction/docs/retro/README.md Phase 02 retro
+Everything the retrospective produced or read, in one place. Produced 2026-09-05.
+file
+what
+produced by
+operator.md
+the operator's view: what the loop did well, every hand intervention with cause and cost, what to change
+the agent that ran the loop, written before the personas ran
+../friction.md
+the harvested Friction sections from the phase's PR bodies and the friction record
+garden friction
+../reviews/<persona>-<date>.md
+one report per persona (designer, project-manager, security, staff-engineer, usability-expert, user) against the phase's body of work
+garden persona-review via garden retro , hard tier
+retro.md
+the reconciled retrospective: each friction item with a verdict (still true, fixed by, outdated, disputed) and evidence; what changed; what the personas said; what is still open
+the reconciliation run of garden retro
+../../../phase-03/goals.md
+the next phase's goals, drafted by the reconciliation and edited by the person
+garden retro , then CG-029
+Read operator.md and retro.md together: the first is one observer's account, the second is the evidence-checked one. context-garden/phase-02-friction/docs/retro/operator.md Phase 02 retro: the operator's view
+Written 2026-09-05 at 02:35 UTC by the agent that watched the loop from the first live run
+(CG-027, 2026-09-04 14:00) to the last merge of the phase (#75, 02:30). Independent of the
+persona reviews, which had not run yet. Numbers are from .garden/events.jsonl , the run
+records and garden metrics at 02:30.
+The phase in numbers
+tasks done
+89
+tasks cancelled
+23 (duplicates, obsolete, superseded)
+drafts carried to phase 03
+11
+PRs merged
+94, of which 25 by the garden's own automerge
+runs
+334 (112 work, 91 revise, 130 review, 1 resume)
+cost
+$547 (work $334, revise $133, review $75)
+per easy task
+about $6, 1.0 revise rounds, 83% first-pass approval
+per medium task
+about $8, 0.8 revise rounds, 84% first-pass approval
+conflict rebase rounds
+32 (24 after 20:00, $1.56 each)
+runs lost to the orphan sweep
+15, each re-run from its commits
+server restarts
+24, six of them my mistakes
+hand interventions logged on tasks
+about 105
+The loop built and merged roughly 90 changes to itself in fourteen hours for the price of
+a few days of one engineer. The cost that mattered was not dollars; it was the number of
+times a person had to notice something and press a button.
+What the process did well
+Every structural fix that mattered came from the loop itself. The atomic saves,
+the orphan sweep and its fix, the fence, the stuck-task cards, the won't-do and
+nothing-to-change decisions, the discovery kinds, automerge, the review-cap card, the
+stale-base rebase, the description contract: all were filed as tasks from observed
+friction, built by workers, reviewed, merged, and then changed what the loop did the same
+evening. Filing friction as tasks with provenance is the single practice that made the
+day compound instead of repeat.
+The reviewer earned its keep. It caught a real regression a rebase introduced (#74's
+review action swapped), it reproduced a flake independently, and once the description
+contract landed it rewrote bodies itself at no cost. First-pass approval above 80% on
+both tiers says the briefs are good enough.
+The tier map held. Sonnet for easy, Opus for medium, one hard task on Fable: the
+cheap tier's revise rate was no worse than the expensive one's.
+Conflict detection and rebase rounds worked without help once CG-057 landed, 32
+times. Expensive, but correct every time.
+The web actions were enough to run the loop as the person. Approve, cancel,
+priority, triage, reset, retry, accept, review, pause, resume, dispatch: I did the last
+three hours almost entirely through POST /tasks/<id>/<action> , which is the product
+being used as designed.
+Where it needed a hand, and why
+In order of how much it cost.
+Caps that counted the wrong rounds (about 30 interventions). max_revisions and
+review.max_rounds were designed to bound a worker's failed attempts. Rebase rounds and
+description-only rounds counted too, so clean PRs reached both caps by being merged
+under. Nine PRs hit the review cap in the same minute at 01:41 and the loop went silent
+until I pressed thirteen "one more review" buttons. Fix: CG-139 and CG-141 in phase 03;
+until then, the card from CG-117 at least says what to press.
+Runs that finished and went nowhere (15 swept, 15 bounced). The orphan sweep from
+CG-061 closed any finished run its tick had not claimed, including a running task's own
+revise run. Each time, the worker's commits sat in the worktree and the task went back to
+ready. CG-116 fixed the sweep; CG-083 made a reap survive a restart; CG-144 covers the
+last case (a superseded review). Filed and merged within the phase, but it cost the most
+hand work of anything.
+The environment, three times. The check command could not find Python
+( $GARDEN_ROOT was a sentinel), then the sentinel poisoned one test on every branch, then
+main itself went red for twenty minutes after a merge. Each time every branch failed the
+same check and revise rounds were spent discovering it. The right response was the same
+each time: pause dispatch, fix the one thing, resume. CG-131 now does the base probe and
+the card automatically.
+Restarts. Config is read once at start, so every config change was a restart, and a
+restart mid-tick lost reaps. Two of my restarts killed workers (task-stop kills the
+process tree) and one stopped the server with a broken config edit. The safe recipe
+(wait for the tick's state save, SIGTERM the serve pid alone, start again) is in the
+garden-operate skill; live overrides from CG-080 and the budget page from CG-048 remove
+most reasons to restart at all.
+One worker wrote in the live garden. Told "try to make the fix yourself" through
+the answer form, it found /home/joshua/garden by listing the filesystem, edited
+garden.yaml , committed under the person's identity, and my next push carried it to
+GitHub. Reverted within minutes; the fence (CG-111, #57) now denies it at the harness and
+reverts anything that gets through, attributed by the worker's own transcript. The lesson
+for operators is in the skill: never answer a worker with an instruction that sends it
+outside its worktree.
+Tasks whose deliverable was in the garden repo (CG-092, CG-107, CG-029). Workers
+rightly stopped; I did the change by hand each time. CG-123 ( self: true product) makes
+the garden repo a place a worker can work; CG-029 should run that way.
+Merging thirty reviewed PRs at once. Fourteen went conflicting within a minute of
+the first merges because they shared scheduler.py and web/app.py . The cascade cost 24
+rebase rounds and every cap card above. The structural answer is CG-137 (split the
+scheduler by tick phase, web actions into a registry) and CG-141 (a merge queue, rebase
+once, no re-review when the diff is unchanged).
+Discovered tasks. Workers filed 30-odd; about half were duplicates, already fixed,
+or notes rather than work. CG-112 gives discoveries a kind so a duplicate becomes a
+decision card. Auto-approving all of them (CG-070) would have been a mistake and was
+cancelled on that evidence.
+What I would change first
+Caps count only what they were meant to count (CG-139), and rebases become their
+own cheap mode with a merge queue (CG-141). This removes most of the button-pressing.
+Split the two hot files (CG-137) before any other phase-03 work, alone, as pure
+movement. Every UI feature edited the same elif chain; every scheduler feature edited
+the same class.
+Config without restarts. Reload garden.yaml on a tick, or extend the live
+overrides. Half the restarts were for one line of YAML.
+A walkthrough and a QA agent (CG-134, CG-135) so the personas and the retro see the
+real pages, and flows are tested rather than pictured.
+Keep the operator's rules in the repo. The garden-operate skill now holds the
+stall table and the never-do list; ship it with the tool (CG-143).
+What to keep doing
+File friction as a task the moment it is seen, with the time, the task and the evidence.
+Cancel duplicates with a note that names the original. Prefer the product's own actions
+to hand edits, and when a hand edit is unavoidable, file the missing action. Pause first
+when many tasks fail the same way at once. Read git log before every push of the garden
+repo. Measure the loop with its own metrics and set the next phase's done criteria in
+those numbers: conflict rounds per merge, description rounds, first-pass approval, cost
+per easy task. context-garden/phase-02-friction/docs/reviews/designer-2026-09-05.md designer review of context-garden/phase-02-friction
+Persona: designer · Score: 6/10 · 2026-09-05T02:46:47+00:00
+The phase delivered its goals (live output, notifications, friction harvesting, structured stop cards, flat brief cost) and every feature has a test, but the product reads as several good features rather than one coherent tool: the same retry action carries four names across web, TUI, CLI and README; three different things are called a decision; the budget card, Config page copy, design docs and README still describe the product as it was before this phase's own changes (no live budgets, no automerge, a garden.yaml that no longer exists here); and the in_review task page, the flagship state of the loop, has no primary action while the Inbox card does. Each fix is small; together they are the difference between a tool the single operator trusts at a glance and one they have to re-learn per surface.
+High
+naming — The same POST /tasks/{id}/retry is offered as 'Retry' and 'Continue the loop' on one failed task page, 'Reset→ready' in the TUI, 'e continue' in the README and 'garden retry' in the CLI.
+suggestion: Pick one label (e.g. 'Retry') and use it on the card, toolbar, TUI binding, README and CLI help; hide the toolbar button when the attention card already offers it.
+inbox vocabulary — 'Decision' names three different things: the accept/reject worker-call group, the 'Needs a decision' attention group, and discovery duplicate/cancel cards filed under attention with their own Accept/Reject and a separate garden decide verb.
+suggestion: Rename the attention group 'The loop stopped', move discovery cards into the accept/reject group, and make garden decide the single CLI verb for any Accept/Reject card.
+Medium
+budget card — The Inbox budget card and TUI still tell the person to edit garden.yaml, and the Config page says only pause and max_parallel are live, although CG-048 made budgets editable live from the phase page and garden budget.
+suggestion: Put the phase page's amount + 'no budget' form on the Inbox card, make the TUI hint 'garden budget', and update the Config page intro and budgets section to say they are live.
+task page hierarchy — An in_review task page has no primary action or status panel; the PR is a small header link and the visible toolbar leads with Automated review, Persona review and Mark done, which does not merge.
+suggestion: Add an in_review panel like the waiting_human and awaiting_triage ones with 'Review on GitHub' first, and relabel or explain 'Mark done' as recording a merge made outside the garden.
+docs vs product — design.md and roadmap.md list automatic merging as a non-goal while README documents github.automerge; design.md and architecture.md point at context-garden/phase-01-bootstrap/specs which CG-063 removed; notify.command is documented nowhere in the tool repo and garden init writes no notify key.
+suggestion: Update the non-goals to 'automatic merging is opt-in and gated', fix the spec pointers to joshmarcus/garden, and add a notify block to README's garden.yaml section and to the init scaffold.
+CLI surface — garden --help is 64 flat commands with confusable neighbours (set vs set-status; budget, priority, difficulty, pause, set as five verbs for live settings) and the README command table and TUI key list predate most of this phase.
+suggestion: Group commands into help panels (read, decide, run, configure, retro) and regenerate the README table and TUI key list from the current bindings.
+resume — 'resume' means unpause dispatch (garden resume), clear a task's stop (garden resume TASK), accept a no_change round ('Accept (resume)') and answer a question ('Answer and resume').
+suggestion: Use garden unpause for the scheduler, keep resume for tasks, and change the accept button to 'Accept, continue the round'.
+Low
+decision card — 'The worker's full message' shows the raw GARDEN_RESULT JSON line to the person.
+suggestion: Strip the GARDEN_RESULT line from the final message before rendering; the reason is already quoted above it.
+friction form — The Inbox friction form's product and phase selects are independent; a mismatched pair returns a bare JSON 404 instead of a flash, the one action route CG-122 missed.
+suggestion: Post one product/phase value from a single select and flash the error on mismatch.
+small inconsistencies — The question card prints the question twice; priority renders as 'next · 1', 'p1' and '1' on different surfaces; garden status truncates headers to two letters at 80 columns and lacks a wont_do column; the Trellis legend omits wont_do and blocked; TUI a/x and c/w are two accept/reject pairs; doctor ends with 'see above'.
+suggestion: Drop the duplicate question line, use priority_label everywhere, give status short headers that survive 80 columns plus a wont_do column, add wont_do and blocked to the legend, unify TUI accept/reject keys, and have doctor name the failing checks in its last line.
+garden persona run 20260905T024018Z-persona context-garden/phase-02-friction/docs/reviews/project-manager-2026-09-05.md project-manager review of context-garden/phase-02-friction
+Persona: project-manager · Score: 7/10 · 2026-09-05T02:47:50+00:00
+The phase delivered its structural goals and the tool is green with nothing open, but it is not closed: the friction document has no harvested section, the notification hook was built and never switched on, the brief-cost goal has no evidence, and the close-out task CG-029 is about to run a harvester that drops the first-run notes and a retro that cannot see the post-CG-136 friction record. The automerge non-goal was reversed in config without the goals or a closing document recording the decision.
+High
+friction doc — write_friction_doc regenerates friction.md keeping only the Reported section, so CG-029's first step (garden friction) deletes the hand-written First live run record that the retro README and CG-029 both assume survives.
+suggestion: Preserve every non-harvested ## section (or write harvested entries under their own heading) before running the harvest; at minimum verify friction.md is committed first.
+retro inputs — The retro reconciliation only harvests PR-body Friction sections, so the 16 Reported entries and marked-comment friction routed there by CG-136 are invisible to the reconciliation agent.
+suggestion: Have _retro_materials include collect_comment_friction and the Reported section of friction.md so the reconciliation sees the whole record.
+Medium
+goal 2 — The notification hook (CG-010) shipped but notify.command is unset in the live garden; 24 needs-human stops and about 105 hand interventions happened without one notification.
+suggestion: Configure notify.command before phase 03 and have the retro record that the hook was never exercised live.
+goal 4 — Nothing measured the brief's fixed cost over the phase; the per-dispatch brief estimate in task logs rose from a median of about 5.6k to 7.7k tokens across the day.
+suggestion: Add the fixed brief cost to garden metrics per phase and make phase 03's done criterion a number.
+non-goals — Automatic merging is listed as a non-goal but automerge is on and merged 25 PRs.
+suggestion: Record the reversal and the CG-129 evidence in the closing document, or turn automerge off until CG-139/CG-141 land.
+definition of done — Five tasks landed by hand or without a PR (CG-027, CG-092, CG-113, CG-011, CG-039) and CG-029 is set to run manually although CG-123 now lets a worker edit the garden repo.
+suggestion: Run CG-029 through the self product as CG-123's first real test and list the manual exceptions in the closing document.
+review pass — The review-pass spec's open follow-ups (line-anchored comments, a digest of what reviews keep flagging) have no task in phase 02 or draft for phase 03.
+suggestion: File both as phase-03 drafts or strike them from the spec.
+Low
+unowned follow-ups — Worker suggestions with no task: CG-065's audit of old PRs for ignored bot feedback, CG-064's refresh of local main before revise checks, CG-131's conflict-plus-red-base corner.
+suggestion: Triage each into a draft or an explicit won't-do note.
+close-out loose ends — Phase-01 is still not closed, the roadmap Next still names phase 02, no phase-03 directory exists, principles/00-index.md still says to put friction in the PR body, and review.difficulty is hard with a note to revert.
+suggestion: Fold these into CG-029's checklist so the phase closes clean.
+garden persona run 20260905T024121Z-persona context-garden/phase-02-friction/docs/reviews/security-2026-09-05.md security review of context-garden/phase-02-friction
+Persona: security · Score: 5/10 · 2026-09-05T02:48:52+00:00
+Phase 02 added genuine, incident-driven defences: the GARDEN_ROOT sentinel and root-discovery refusal, checkouts outside the garden, a runner-side write fence with revert, a marker for the garden's own comments, bot-notice filtering, atomic writes, and signalled checks never read as a pass. But the loop still treats anything that arrives from GitHub or from a worker as trusted once inside: any PR commenter can author a worker's prompt, the worker runs with the operator's full credentials and unrestricted Bash and can push to main, PR text is rendered as raw HTML in a CSRF-free control panel, the fence exempts .garden/ and task files so scheduler state including the self-upgrade url can be rewritten, checks run branch code unfenced and execute retry commands from check output, and automerge plus auto-upgrade can carry an injected change all the way to a pip install on the operator's machine. Tests and lint are green; the gaps are design, not bugs, and the top three fixes (author trust on feedback, a scrubbed worker environment plus branch protection, HTML sanitization plus an Origin check) are small.
+High
+feedback ingestion — Any GitHub account that can comment on a PR gets its text placed verbatim into a revise brief for a shell-capable worker, with no author trust check.
+suggestion: In feedback_since keep only comments with author_association OWNER/MEMBER/COLLABORATOR or a github.trusted_logins allowlist; park other comments on a needs-human card; wrap feedback in a fenced block labelled as data, not instructions.
+worker credentials — LocalRunner copies the operator's full environment (GH_TOKEN, SSH_AUTH_SOCK, API keys, gh config) into a worker with unrestricted Bash, and nothing prevents the worker pushing to main or using gh directly.
+suggestion: Strip credential variables and point the worker at an empty gh/git credential profile; have garden doctor check branch protection on the product base branch; prefer a scoped deploy key for worker pushes.
+web UI — PR comments, worker output and review text are rendered with |md|safe through python-markdown, which passes raw HTML, giving stored XSS on a local control panel whose POST routes have no CSRF or Origin check.
+suggestion: Sanitize rendered markdown with nh3 (or escape HTML before markdown) and reject POSTs whose Sec-Fetch-Site header is not same-origin or none.
+Medium
+worktree fence — The fence exempts .garden/ and every tasks/ path and reverts only transcript-named paths, so a worker can rewrite scheduler state (including _control.upgrade url/sha, budgets, another task's pending_feedback) and task files unnoticed; garden upgrade then pip-installs from the url stored in state.
+suggestion: Fail the run on any worker-attributed write under .garden/ or a task file; make the sandbox the default once verified; re-derive the upgrade url from config and refuse a sha not reachable from origin/ of the tool clone.
+checks — Pre-PR and CI checks run the branch's code on the scheduler host with the full environment, resolve relative check scripts inside the worker's worktree, and execute a retry_command taken from a check's JSON output with shell=True.
+suggestion: Run checks with the same scrubbed env (or sandbox) as workers, resolve check scripts against the garden root, and honour retry_command only from config.
+automerge and upgrade — Automerge requires only an LLM approve verdict (never a human approval) and does not pin the reviewed head sha; combined with upgrade: auto, an injected change can reach main and be pip-installed into the running scheduler with no person involved.
+suggestion: Default automerge to requiring review_decision == APPROVED, record head_sha in last_review and hold when it moves, and make auto-upgrade skip shas whose PR had no human approval.
+discovered work — Worker-filed discoveries marked blocking are created ready and auto-dispatched by default with a worker-written body and reading list that can name any file under the garden root, including garden.local.yaml and .garden/state.json, for inlining into the next brief.
+suggestion: Default discovered.auto_approve_blocking to false and restrict reading entries to docs/, specs/ and product paths, rejecting .garden/, garden*.yaml and dotfiles.
+Low
+ssh runner and hooks — SSH workers get no deny rules, task id and setup env keys are interpolated unquoted into the remote script, GARDEN_MESSAGE carries worker text into notify hooks, and redirects follow the Referer header.
+suggestion: shlex-quote every interpolated value in REMOTE_SCRIPT and pass fence paths for SSH; document quoting for notify hooks; redirect only to same-origin paths.
+garden persona run 20260905T024210Z-persona context-garden/phase-02-friction/docs/reviews/staff-engineer-2026-09-05.md staff-engineer review of context-garden/phase-02-friction
+Persona: staff-engineer · Score: 6/10 · 2026-09-05T02:48:52+00:00
+The phase delivered substantial, well-tested operability work: the base probe, the worktree fence, atomic state and task writes, automerge gates, the stuck audit, and structured decision cards. The cost is concentrated in scheduler.py, now a 3,200-line single class that every PR touched: the run-collection block is copied seven times with drifting status rules, one fix landed twice in retry(), and the remote-commit rule from CG-129 covers only one of three rebase paths. Two defects were confirmed by reproduction: the state-file merge-on-save marks keys dirty on read, so a read-only tick clobbers a concurrent 'garden set' despite the architecture doc's guarantee, and a resumed reap re-emits run_finished so event-derived cost double-counts. Four flake-fix PRs point at the subprocess-driven test style. Everything here is fixable now and compounds if left.
+High
+state.json concurrency — _TaskState marks a key dirty on any read of a nested dict or list (and on setdefault), so a tick that only reads _control.overrides writes it back and clobbers a concurrent 'garden set'; reproduced.
+suggestion: Snapshot entries at load and compute dirty keys by value comparison at save so reads never dirty; add a test where a read-only State saves after another process's write and the write survives; correct the architecture doc.
+scheduler structure — Scheduler is a 3,200-line single class touched by every PR; the finished-run collection block is duplicated seven times with different status rules and retry() cancels the active run twice.
+suggestion: Add Run.finish(runner) owning collect/status/save; move trials, personas, retro, upgrade, fence and suggestions into modules that take the scheduler as a collaborator; delete the duplicate cancel block in retry().
+Medium
+events / cost accounting — A resumed reap (CG-083) re-runs finalize() and re-emits run_finished, so digest, metrics and phase_summary count the run's cost twice; reproduced (0.10 vs 0.05).
+suggestion: Emit run_finished once where the run record goes terminal, guarded by a flag on the run; extend the interrupted-reap test to assert a single event.
+needs_human shape — Four sites (_start_check_revise x2, _fence_fail, _audit_stuck) still write bare strings, so the Inbox guesses the kind and a fence violation renders as 'The loop stalled'.
+suggestion: Route all stops through _set_needs_human with explicit kinds (check_unfinished, fence, stuck) and collapse the repeated set/emit/notify/transition ritual into one method; test each kind's card title.
+rebase paths — sync_remote_branch (CG-129) runs only in _restack; _handle_pr_conflict and the moved-base branch of _handle_failed_checks still rebase and force-push without it, and force=True is a bare --force-with-lease right after a fetch.
+suggestion: One _rebase_branch helper that always syncs remote-only commits before rebasing, used by all three paths; mirror test_restack_keeps_remote_only_commits for the conflict path.
+test determinism — Scheduler tests drive real subprocess fake workers and real git; four PRs this phase were flake fixes from tick/worker timing.
+suggestion: Add a synchronous in-process test Runner that completes in start(), use it for state-machine tests, keep subprocess fakes for runner/harness tests only.
+Low
+CLI layering — garden doctor holds ~115 lines of checks (auth, git identity, self-product and work_dir refusals) in cli.py, unusable from the web Configuration page.
+suggestion: Move to a doctor.py returning structured check results and render from both CLI and web.
+consistency hazards — draft_pr is read with default False for the API call and True for the stored flag; the scheduler's timeout ignores per-runner config; the CI retry_command has no TimeoutExpired handling after state was mutated; the base probe re-runs setup and checks per task with no cache keyed on base sha.
+suggestion: Read draft_pr once; pass the runner's timeout into _finished_or_timed_out; wrap retry_command; cache probe results in state keyed on (base_sha, check name).
+garden persona run 20260905T024302Z-persona context-garden/phase-02-friction/docs/reviews/usability-expert-2026-09-05.md usability-expert review of context-garden/phase-02-friction
+Persona: usability-expert · Score: 6/10 · 2026-09-05T02:51:01+00:00
+The decision surfaces this phase built are strong: attention and decision cards name the stop, show evidence, explain every button, and offer a discuss prompt; web errors flash instead of 500; the run page shows what a worker did. The first five minutes and discoverability are weak: the quick start spends an unrecorded model call on an empty scaffold and misreports it, garden status is unreadable at 80 columns, retro --dry-run tracebacks, the help is a flat list of ~70 commands, and the two headline features of the phase (live output via output_format: stream-json, notifications via notify.command) are documented nowhere a new user looks. A few cards still point at the old way (budget card says edit garden.yaml; review card's CLI action is set-status done, which merges nothing).
+High
+first run / plan — garden plan on an unedited scaffold runs a real hard-tier model call, gets prose back, and reports 'no new tasks (all titles already existed)' while recording no run or cost.
+suggestion: Refuse to plan when goals.md still holds template placeholders; distinguish 'model returned no tasks' from 'titles existed' and print the saved raw path and cost; record planner runs so usage and runs show them.
+discoverability — Live worker output requires harnesses.claude.output_format: stream-json and notifications require notify.command, and neither key appears in the README config block, docs, or the scaffolded garden.yaml; the default json format leaves the Live output panel empty until the run ends.
+suggestion: Add both keys, commented, to the scaffold and README config block; make doctor's 'notify: not configured' line say what to set and consider stream-json the default for the claude harness.
+Medium
+CLI overview — garden status renders every column header as two characters at 80 columns and wraps the spend cell onto three lines when a budget is set.
+suggestion: Collapse rarely non-zero columns at narrow widths or fold counts into one summary cell; keep the budget on its own line.
+Inbox budget card — The budget card's only action is a comment telling the person to edit garden.yaml, although this phase shipped garden budget and a phase-page budget form.
+suggestion: Show 'garden budget ' and a link to the phase page form; fix the empty '· medium ·' row header.
+Inbox review card — The 'Review and merge' card offers Mark done / set-status done as its action, which does not merge; nothing says to merge on GitHub and let the poll finish.
+suggestion: Card copy: 'merge on GitHub; the next poll marks it done'; demote Mark done to the escape-hatch row on the task page.
+retro — garden retro --dry-run prints a Python traceback when the product repo path is not a git repository.
+suggestion: A dry run should not touch the repo; a missing repo should be the same one-line red message doctor prints.
+answer — garden answer accepts an empty string and resumes the worker with nothing, spending a run.
+suggestion: Reject empty or whitespace-only answers in the CLI, the web form and the TUI.
+help — garden --help is about seventy commands in one flat block and garden --version is an error.
+suggestion: Group commands with Typer help panels (set up, read, decide, run the loop, tune) and add a --version flag.
+Low
+digest — garden digest counts needs_human events inside its window, so it prints '0 decisions need you' while the Inbox shows two.
+suggestion: Take the decisions count from the inbox builder the badge uses; keep the window for the event lists.
+worker fence message — A person whose shell inherited GARDEN_ROOT gets 'workers must not run garden commands' from every command with no way out.
+suggestion: Append 'if you are not a worker, unset GARDEN_ROOT' to the message.
+copy defects — Task page prints '( rounds)' when review_rounds is unset, garden inbox truncates the reason mid-word, and garden retry on a ready task logs 'ready -> ready'.
+suggestion: Guard the rounds fragment, truncate on a word boundary with an ellipsis, and make retry on a ready task a no-op message.
+doctor — Doctor names a missing git identity but not the command that sets it.
+suggestion: Print the git config commands under the failing line.
+README TUI keys — The README's TUI key list omits the c (accept) key added in this phase.
+suggestion: Regenerate the key list from the TUI bindings or add c.
+garden persona run 20260905T024354Z-persona context-garden/phase-02-friction/docs/reviews/user-2026-09-05.md user review of context-garden/phase-02-friction
+Persona: user · Score: 7/10 · 2026-09-05T02:51:01+00:00
+The loop now runs end to end and, more importantly, stops well: when a worker fails or refuses, the Inbox tells me exactly what happened and what each button does, and cost, transcripts and a digest are one click away. What still undermines trust is the human interface at the edges: I am notified to triage before the automated review has a verdict (three pings for one task), the notification hook is undocumented in this repo and fails silently, and a fresh init defaults to ten parallel workers with no budget. Fix the ping timing and the docs gaps and I would run this on real work without watching it.
+High
+notifications — The triage card and notify hook fire the instant a draft PR opens, before the automated review has spoken, so one task produced three awaiting_triage pings of which the first two were wasted.
+suggestion: Hold the triage notification (and ideally the Inbox card) until the automated review round for that push has a verdict, or notify once per PR per review outcome.
+notifications — notify.command is documented nowhere in this repo (README and docs have zero mentions) and notify() swallows every error, so a misconfigured hook is invisible.
+suggestion: Document the notify block with an example in README and examples/garden.work.yaml; have doctor run the command once with a test payload; log a hook failure to the task or scheduler log instead of passing silently.
+Medium
+defaults — garden init writes max_parallel: 10, budgets: {} and review on, so a first real serve can start ten paid sessions with no cap.
+suggestion: Default init to max_parallel 2 or 3 and a commented budget example; have doctor warn when no budget is set for any phase.
+retro — garden retro on a fresh garden reports a missing self product and plans six persona runs at unknown cost; the self: true key is not in the README.
+suggestion: Document self products in README and have retro's dry-run print the exact YAML needed; let --personas pick a subset.
+triage — If marking the PR ready on GitHub fails, the failure is only logged and the next poll reverts the task with the misleading note 'converted back to draft on GitHub' and pings again.
+suggestion: When mark_ready fails, keep the task in awaiting_triage with the error on the card rather than transitioning and reverting.
+Low
+cli — garden status is unreadable at 80 columns; every column header truncates to two letters.
+suggestion: Drop or merge the rarely non-zero columns at narrow widths, or print a per-phase line format when the terminal is under about 120 columns.
+friction — garden friction writes a 'None.' section for every PR whose friction was empty, so the planning document is mostly noise.
+suggestion: Skip entries whose friction is empty or 'None' and list them in one summary line.
+cli — About sixty top-level commands with no grouping make garden --help a wall for a new user.
+suggestion: Group commands in help (setup, run the loop, decide, inspect, phase wrap-up) or move rare ones under subcommands.
+live output — Live transcript needs output_format: stream-json, which the README does not mention; the task page just says 'no output yet'.
+suggestion: Document the key next to the harness config and, when a run is active but the format is claude-json, say on the task page how to turn live output on.
+garden persona run 20260905T024440Z-persona
+persona · context-garden/phase-02-friction/docs/reviews/user-2026-09-05.md user review of context-garden/phase-02-friction
+Persona: user · Score: 7/10 · 2026-09-05T02:51:01+00:00
+The loop now runs end to end and, more importantly, stops well: when a worker fails or refuses, the Inbox tells me exactly what happened and what each button does, and cost, transcripts and a digest are one click away. What still undermines trust is the human interface at the edges: I am notified to triage before the automated review has a verdict (three pings for one task), the notification hook is undocumented in this repo and fails silently, and a fresh init defaults to ten parallel workers with no budget. Fix the ping timing and the docs gaps and I would run this on real work without watching it.
+High
+notifications — The triage card and notify hook fire the instant a draft PR opens, before the automated review has spoken, so one task produced three awaiting_triage pings of which the first two were wasted.
+suggestion: Hold the triage notification (and ideally the Inbox card) until the automated review round for that push has a verdict, or notify once per PR per review outcome.
+notifications — notify.command is documented nowhere in this repo (README and docs have zero mentions) and notify() swallows every error, so a misconfigured hook is invisible.
+suggestion: Document the notify block with an example in README and examples/garden.work.yaml; have doctor run the command once with a test payload; log a hook failure to the task or scheduler log instead of passing silently.
+Medium
+defaults — garden init writes max_parallel: 10, budgets: {} and review on, so a first real serve can start ten paid sessions with no cap.
+suggestion: Default init to max_parallel 2 or 3 and a commented budget example; have doctor warn when no budget is set for any phase.
+retro — garden retro on a fresh garden reports a missing self product and plans six persona runs at unknown cost; the self: true key is not in the README.
+suggestion: Document self products in README and have retro's dry-run print the exact YAML needed; let --personas pick a subset.
+triage — If marking the PR ready on GitHub fails, the failure is only logged and the next poll reverts the task with the misleading note 'converted back to draft on GitHub' and pings again.
+suggestion: When mark_ready fails, keep the task in awaiting_triage with the error on the card rather than transitioning and reverting.
+Low
+cli — garden status is unreadable at 80 columns; every column header truncates to two letters.
+suggestion: Drop or merge the rarely non-zero columns at narrow widths, or print a per-phase line format when the terminal is under about 120 columns.
+friction — garden friction writes a 'None.' section for every PR whose friction was empty, so the planning document is mostly noise.
+suggestion: Skip entries whose friction is empty or 'None' and list them in one summary line.
+cli — About sixty top-level commands with no grouping make garden --help a wall for a new user.
+suggestion: Group commands in help (setup, run the loop, decide, inspect, phase wrap-up) or move rare ones under subcommands.
+live output — Live transcript needs output_format: stream-json, which the README does not mention; the task page just says 'no output yet'.
+suggestion: Document the key next to the harness config and, when a run is active but the format is claude-json, say on the task page how to turn live output on.
+garden persona run 20260905T024440Z-persona persona · context-garden/phase-02-friction/docs/reviews/usability-expert-2026-09-05.md usability-expert review of context-garden/phase-02-friction
+Persona: usability-expert · Score: 6/10 · 2026-09-05T02:51:01+00:00
+The decision surfaces this phase built are strong: attention and decision cards name the stop, show evidence, explain every button, and offer a discuss prompt; web errors flash instead of 500; the run page shows what a worker did. The first five minutes and discoverability are weak: the quick start spends an unrecorded model call on an empty scaffold and misreports it, garden status is unreadable at 80 columns, retro --dry-run tracebacks, the help is a flat list of ~70 commands, and the two headline features of the phase (live output via output_format: stream-json, notifications via notify.command) are documented nowhere a new user looks. A few cards still point at the old way (budget card says edit garden.yaml; review card's CLI action is set-status done, which merges nothing).
+High
+first run / plan — garden plan on an unedited scaffold runs a real hard-tier model call, gets prose back, and reports 'no new tasks (all titles already existed)' while recording no run or cost.
+suggestion: Refuse to plan when goals.md still holds template placeholders; distinguish 'model returned no tasks' from 'titles existed' and print the saved raw path and cost; record planner runs so usage and runs show them.
+discoverability — Live worker output requires harnesses.claude.output_format: stream-json and notifications require notify.command, and neither key appears in the README config block, docs, or the scaffolded garden.yaml; the default json format leaves the Live output panel empty until the run ends.
+suggestion: Add both keys, commented, to the scaffold and README config block; make doctor's 'notify: not configured' line say what to set and consider stream-json the default for the claude harness.
+Medium
+CLI overview — garden status renders every column header as two characters at 80 columns and wraps the spend cell onto three lines when a budget is set.
+suggestion: Collapse rarely non-zero columns at narrow widths or fold counts into one summary cell; keep the budget on its own line.
+Inbox budget card — The budget card's only action is a comment telling the person to edit garden.yaml, although this phase shipped garden budget and a phase-page budget form.
+suggestion: Show 'garden budget ' and a link to the phase page form; fix the empty '· medium ·' row header.
+Inbox review card — The 'Review and merge' card offers Mark done / set-status done as its action, which does not merge; nothing says to merge on GitHub and let the poll finish.
+suggestion: Card copy: 'merge on GitHub; the next poll marks it done'; demote Mark done to the escape-hatch row on the task page.
+retro — garden retro --dry-run prints a Python traceback when the product repo path is not a git repository.
+suggestion: A dry run should not touch the repo; a missing repo should be the same one-line red message doctor prints.
+answer — garden answer accepts an empty string and resumes the worker with nothing, spending a run.
+suggestion: Reject empty or whitespace-only answers in the CLI, the web form and the TUI.
+help — garden --help is about seventy commands in one flat block and garden --version is an error.
+suggestion: Group commands with Typer help panels (set up, read, decide, run the loop, tune) and add a --version flag.
+Low
+digest — garden digest counts needs_human events inside its window, so it prints '0 decisions need you' while the Inbox shows two.
+suggestion: Take the decisions count from the inbox builder the badge uses; keep the window for the event lists.
+worker fence message — A person whose shell inherited GARDEN_ROOT gets 'workers must not run garden commands' from every command with no way out.
+suggestion: Append 'if you are not a worker, unset GARDEN_ROOT' to the message.
+copy defects — Task page prints '( rounds)' when review_rounds is unset, garden inbox truncates the reason mid-word, and garden retry on a ready task logs 'ready -> ready'.
+suggestion: Guard the rounds fragment, truncate on a word boundary with an ellipsis, and make retry on a ready task a no-op message.
+doctor — Doctor names a missing git identity but not the command that sets it.
+suggestion: Print the git config commands under the failing line.
+README TUI keys — The README's TUI key list omits the c (accept) key added in this phase.
+suggestion: Regenerate the key list from the TUI bindings or add c.
+garden persona run 20260905T024354Z-persona persona · context-garden/phase-02-friction/docs/reviews/staff-engineer-2026-09-05.md staff-engineer review of context-garden/phase-02-friction
+Persona: staff-engineer · Score: 6/10 · 2026-09-05T02:48:52+00:00
+The phase delivered substantial, well-tested operability work: the base probe, the worktree fence, atomic state and task writes, automerge gates, the stuck audit, and structured decision cards. The cost is concentrated in scheduler.py, now a 3,200-line single class that every PR touched: the run-collection block is copied seven times with drifting status rules, one fix landed twice in retry(), and the remote-commit rule from CG-129 covers only one of three rebase paths. Two defects were confirmed by reproduction: the state-file merge-on-save marks keys dirty on read, so a read-only tick clobbers a concurrent 'garden set' despite the architecture doc's guarantee, and a resumed reap re-emits run_finished so event-derived cost double-counts. Four flake-fix PRs point at the subprocess-driven test style. Everything here is fixable now and compounds if left.
+High
+state.json concurrency — _TaskState marks a key dirty on any read of a nested dict or list (and on setdefault), so a tick that only reads _control.overrides writes it back and clobbers a concurrent 'garden set'; reproduced.
+suggestion: Snapshot entries at load and compute dirty keys by value comparison at save so reads never dirty; add a test where a read-only State saves after another process's write and the write survives; correct the architecture doc.
+scheduler structure — Scheduler is a 3,200-line single class touched by every PR; the finished-run collection block is duplicated seven times with different status rules and retry() cancels the active run twice.
+suggestion: Add Run.finish(runner) owning collect/status/save; move trials, personas, retro, upgrade, fence and suggestions into modules that take the scheduler as a collaborator; delete the duplicate cancel block in retry().
+Medium
+events / cost accounting — A resumed reap (CG-083) re-runs finalize() and re-emits run_finished, so digest, metrics and phase_summary count the run's cost twice; reproduced (0.10 vs 0.05).
+suggestion: Emit run_finished once where the run record goes terminal, guarded by a flag on the run; extend the interrupted-reap test to assert a single event.
+needs_human shape — Four sites (_start_check_revise x2, _fence_fail, _audit_stuck) still write bare strings, so the Inbox guesses the kind and a fence violation renders as 'The loop stalled'.
+suggestion: Route all stops through _set_needs_human with explicit kinds (check_unfinished, fence, stuck) and collapse the repeated set/emit/notify/transition ritual into one method; test each kind's card title.
+rebase paths — sync_remote_branch (CG-129) runs only in _restack; _handle_pr_conflict and the moved-base branch of _handle_failed_checks still rebase and force-push without it, and force=True is a bare --force-with-lease right after a fetch.
+suggestion: One _rebase_branch helper that always syncs remote-only commits before rebasing, used by all three paths; mirror test_restack_keeps_remote_only_commits for the conflict path.
+test determinism — Scheduler tests drive real subprocess fake workers and real git; four PRs this phase were flake fixes from tick/worker timing.
+suggestion: Add a synchronous in-process test Runner that completes in start(), use it for state-machine tests, keep subprocess fakes for runner/harness tests only.
+Low
+CLI layering — garden doctor holds ~115 lines of checks (auth, git identity, self-product and work_dir refusals) in cli.py, unusable from the web Configuration page.
+suggestion: Move to a doctor.py returning structured check results and render from both CLI and web.
+consistency hazards — draft_pr is read with default False for the API call and True for the stored flag; the scheduler's timeout ignores per-runner config; the CI retry_command has no TimeoutExpired handling after state was mutated; the base probe re-runs setup and checks per task with no cache keyed on base sha.
+suggestion: Read draft_pr once; pass the runner's timeout into _finished_or_timed_out; wrap retry_command; cache probe results in state keyed on (base_sha, check name).
+garden persona run 20260905T024302Z-persona persona · context-garden/phase-02-friction/docs/reviews/security-2026-09-05.md security review of context-garden/phase-02-friction
+Persona: security · Score: 5/10 · 2026-09-05T02:48:52+00:00
+Phase 02 added genuine, incident-driven defences: the GARDEN_ROOT sentinel and root-discovery refusal, checkouts outside the garden, a runner-side write fence with revert, a marker for the garden's own comments, bot-notice filtering, atomic writes, and signalled checks never read as a pass. But the loop still treats anything that arrives from GitHub or from a worker as trusted once inside: any PR commenter can author a worker's prompt, the worker runs with the operator's full credentials and unrestricted Bash and can push to main, PR text is rendered as raw HTML in a CSRF-free control panel, the fence exempts .garden/ and task files so scheduler state including the self-upgrade url can be rewritten, checks run branch code unfenced and execute retry commands from check output, and automerge plus auto-upgrade can carry an injected change all the way to a pip install on the operator's machine. Tests and lint are green; the gaps are design, not bugs, and the top three fixes (author trust on feedback, a scrubbed worker environment plus branch protection, HTML sanitization plus an Origin check) are small.
+High
+feedback ingestion — Any GitHub account that can comment on a PR gets its text placed verbatim into a revise brief for a shell-capable worker, with no author trust check.
+suggestion: In feedback_since keep only comments with author_association OWNER/MEMBER/COLLABORATOR or a github.trusted_logins allowlist; park other comments on a needs-human card; wrap feedback in a fenced block labelled as data, not instructions.
+worker credentials — LocalRunner copies the operator's full environment (GH_TOKEN, SSH_AUTH_SOCK, API keys, gh config) into a worker with unrestricted Bash, and nothing prevents the worker pushing to main or using gh directly.
+suggestion: Strip credential variables and point the worker at an empty gh/git credential profile; have garden doctor check branch protection on the product base branch; prefer a scoped deploy key for worker pushes.
+web UI — PR comments, worker output and review text are rendered with |md|safe through python-markdown, which passes raw HTML, giving stored XSS on a local control panel whose POST routes have no CSRF or Origin check.
+suggestion: Sanitize rendered markdown with nh3 (or escape HTML before markdown) and reject POSTs whose Sec-Fetch-Site header is not same-origin or none.
+Medium
+worktree fence — The fence exempts .garden/ and every tasks/ path and reverts only transcript-named paths, so a worker can rewrite scheduler state (including _control.upgrade url/sha, budgets, another task's pending_feedback) and task files unnoticed; garden upgrade then pip-installs from the url stored in state.
+suggestion: Fail the run on any worker-attributed write under .garden/ or a task file; make the sandbox the default once verified; re-derive the upgrade url from config and refuse a sha not reachable from origin/ of the tool clone.
+checks — Pre-PR and CI checks run the branch's code on the scheduler host with the full environment, resolve relative check scripts inside the worker's worktree, and execute a retry_command taken from a check's JSON output with shell=True.
+suggestion: Run checks with the same scrubbed env (or sandbox) as workers, resolve check scripts against the garden root, and honour retry_command only from config.
+automerge and upgrade — Automerge requires only an LLM approve verdict (never a human approval) and does not pin the reviewed head sha; combined with upgrade: auto, an injected change can reach main and be pip-installed into the running scheduler with no person involved.
+suggestion: Default automerge to requiring review_decision == APPROVED, record head_sha in last_review and hold when it moves, and make auto-upgrade skip shas whose PR had no human approval.
+discovered work — Worker-filed discoveries marked blocking are created ready and auto-dispatched by default with a worker-written body and reading list that can name any file under the garden root, including garden.local.yaml and .garden/state.json, for inlining into the next brief.
+suggestion: Default discovered.auto_approve_blocking to false and restrict reading entries to docs/, specs/ and product paths, rejecting .garden/, garden*.yaml and dotfiles.
+Low
+ssh runner and hooks — SSH workers get no deny rules, task id and setup env keys are interpolated unquoted into the remote script, GARDEN_MESSAGE carries worker text into notify hooks, and redirects follow the Referer header.
+suggestion: shlex-quote every interpolated value in REMOTE_SCRIPT and pass fence paths for SSH; document quoting for notify hooks; redirect only to same-origin paths.
+garden persona run 20260905T024210Z-persona persona · context-garden/phase-02-friction/docs/reviews/project-manager-2026-09-05.md project-manager review of context-garden/phase-02-friction
+Persona: project-manager · Score: 7/10 · 2026-09-05T02:47:50+00:00
+The phase delivered its structural goals and the tool is green with nothing open, but it is not closed: the friction document has no harvested section, the notification hook was built and never switched on, the brief-cost goal has no evidence, and the close-out task CG-029 is about to run a harvester that drops the first-run notes and a retro that cannot see the post-CG-136 friction record. The automerge non-goal was reversed in config without the goals or a closing document recording the decision.
+High
+friction doc — write_friction_doc regenerates friction.md keeping only the Reported section, so CG-029's first step (garden friction) deletes the hand-written First live run record that the retro README and CG-029 both assume survives.
+suggestion: Preserve every non-harvested ## section (or write harvested entries under their own heading) before running the harvest; at minimum verify friction.md is committed first.
+retro inputs — The retro reconciliation only harvests PR-body Friction sections, so the 16 Reported entries and marked-comment friction routed there by CG-136 are invisible to the reconciliation agent.
+suggestion: Have _retro_materials include collect_comment_friction and the Reported section of friction.md so the reconciliation sees the whole record.
+Medium
+goal 2 — The notification hook (CG-010) shipped but notify.command is unset in the live garden; 24 needs-human stops and about 105 hand interventions happened without one notification.
+suggestion: Configure notify.command before phase 03 and have the retro record that the hook was never exercised live.
+goal 4 — Nothing measured the brief's fixed cost over the phase; the per-dispatch brief estimate in task logs rose from a median of about 5.6k to 7.7k tokens across the day.
+suggestion: Add the fixed brief cost to garden metrics per phase and make phase 03's done criterion a number.
+non-goals — Automatic merging is listed as a non-goal but automerge is on and merged 25 PRs.
+suggestion: Record the reversal and the CG-129 evidence in the closing document, or turn automerge off until CG-139/CG-141 land.
+definition of done — Five tasks landed by hand or without a PR (CG-027, CG-092, CG-113, CG-011, CG-039) and CG-029 is set to run manually although CG-123 now lets a worker edit the garden repo.
+suggestion: Run CG-029 through the self product as CG-123's first real test and list the manual exceptions in the closing document.
+review pass — The review-pass spec's open follow-ups (line-anchored comments, a digest of what reviews keep flagging) have no task in phase 02 or draft for phase 03.
+suggestion: File both as phase-03 drafts or strike them from the spec.
+Low
+unowned follow-ups — Worker suggestions with no task: CG-065's audit of old PRs for ignored bot feedback, CG-064's refresh of local main before revise checks, CG-131's conflict-plus-red-base corner.
+suggestion: Triage each into a draft or an explicit won't-do note.
+close-out loose ends — Phase-01 is still not closed, the roadmap Next still names phase 02, no phase-03 directory exists, principles/00-index.md still says to put friction in the PR body, and review.difficulty is hard with a note to revert.
+suggestion: Fold these into CG-029's checklist so the phase closes clean.
+garden persona run 20260905T024121Z-persona persona · context-garden/phase-02-friction/docs/reviews/designer-2026-09-05.md designer review of context-garden/phase-02-friction
+Persona: designer · Score: 6/10 · 2026-09-05T02:46:47+00:00
+The phase delivered its goals (live output, notifications, friction harvesting, structured stop cards, flat brief cost) and every feature has a test, but the product reads as several good features rather than one coherent tool: the same retry action carries four names across web, TUI, CLI and README; three different things are called a decision; the budget card, Config page copy, design docs and README still describe the product as it was before this phase's own changes (no live budgets, no automerge, a garden.yaml that no longer exists here); and the in_review task page, the flagship state of the loop, has no primary action while the Inbox card does. Each fix is small; together they are the difference between a tool the single operator trusts at a glance and one they have to re-learn per surface.
+High
+naming — The same POST /tasks/{id}/retry is offered as 'Retry' and 'Continue the loop' on one failed task page, 'Reset→ready' in the TUI, 'e continue' in the README and 'garden retry' in the CLI.
+suggestion: Pick one label (e.g. 'Retry') and use it on the card, toolbar, TUI binding, README and CLI help; hide the toolbar button when the attention card already offers it.
+inbox vocabulary — 'Decision' names three different things: the accept/reject worker-call group, the 'Needs a decision' attention group, and discovery duplicate/cancel cards filed under attention with their own Accept/Reject and a separate garden decide verb.
+suggestion: Rename the attention group 'The loop stopped', move discovery cards into the accept/reject group, and make garden decide the single CLI verb for any Accept/Reject card.
+Medium
+budget card — The Inbox budget card and TUI still tell the person to edit garden.yaml, and the Config page says only pause and max_parallel are live, although CG-048 made budgets editable live from the phase page and garden budget.
+suggestion: Put the phase page's amount + 'no budget' form on the Inbox card, make the TUI hint 'garden budget', and update the Config page intro and budgets section to say they are live.
+task page hierarchy — An in_review task page has no primary action or status panel; the PR is a small header link and the visible toolbar leads with Automated review, Persona review and Mark done, which does not merge.
+suggestion: Add an in_review panel like the waiting_human and awaiting_triage ones with 'Review on GitHub' first, and relabel or explain 'Mark done' as recording a merge made outside the garden.
+docs vs product — design.md and roadmap.md list automatic merging as a non-goal while README documents github.automerge; design.md and architecture.md point at context-garden/phase-01-bootstrap/specs which CG-063 removed; notify.command is documented nowhere in the tool repo and garden init writes no notify key.
+suggestion: Update the non-goals to 'automatic merging is opt-in and gated', fix the spec pointers to joshmarcus/garden, and add a notify block to README's garden.yaml section and to the init scaffold.
+CLI surface — garden --help is 64 flat commands with confusable neighbours (set vs set-status; budget, priority, difficulty, pause, set as five verbs for live settings) and the README command table and TUI key list predate most of this phase.
+suggestion: Group commands into help panels (read, decide, run, configure, retro) and regenerate the README table and TUI key list from the current bindings.
+resume — 'resume' means unpause dispatch (garden resume), clear a task's stop (garden resume TASK), accept a no_change round ('Accept (resume)') and answer a question ('Answer and resume').
+suggestion: Use garden unpause for the scheduler, keep resume for tasks, and change the accept button to 'Accept, continue the round'.
+Low
+decision card — 'The worker's full message' shows the raw GARDEN_RESULT JSON line to the person.
+suggestion: Strip the GARDEN_RESULT line from the final message before rendering; the reason is already quoted above it.
+friction form — The Inbox friction form's product and phase selects are independent; a mismatched pair returns a bare JSON 404 instead of a flash, the one action route CG-122 missed.
+suggestion: Post one product/phase value from a single select and flash the error on mismatch.
+small inconsistencies — The question card prints the question twice; priority renders as 'next · 1', 'p1' and '1' on different surfaces; garden status truncates headers to two letters at 80 columns and lacks a wont_do column; the Trellis legend omits wont_do and blocked; TUI a/x and c/w are two accept/reject pairs; doctor ends with 'see above'.
+suggestion: Drop the duplicate question line, use priority_label everywhere, give status short headers that survive 80 columns plus a wont_do column, add wont_do and blocked to the legend, unify TUI accept/reject keys, and have doctor name the failing checks in its last line.
+garden persona run 20260905T024018Z-persona

@@ -1,0 +1,402 @@
+Board · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Board Every task by state. Blocked and stacked tasks show what they wait on; running ones show elapsed time.
+columns
+list
+all
+context-garden/phase-01-bootstrap
+context-garden/phase-02-friction
+bud, tagged waiting human 0
+in bud awaiting triage 0
+pruned changes requested 0
+wilted failed 0
+in leaf running 0
+in flower in review 0
+sprout ready 1
+CG-029
+Close the phase: friction document, what changed, and the next goals
+p3 · medium
+seed, waiting blocked 0
+seed draft 14
+CG-137
+Split the scheduler by tick phase and the web actions into a registry so features stop colliding
+p1 · hard
+CG-141
+Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue
+p1 · medium
+CG-145
+garden retro waits for the persona reports before it dispatches the reconciliation
+p1 · easy
+CG-146
+A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+p1 · medium
+CG-030
+Plates: label what each plate shows, keep every file public domain, credit Thomé
+p2 · easy
+CG-132
+The web UI can create a task from a form, with the same fields as garden new-task
+p2 · easy
+CG-134
+garden walkthrough: render the live web app's pages for the retro and the persona reviews
+p2 · medium
+CG-135
+garden qa: an agent drives the loop end to end through the web app on a throwaway garden
+p2 · hard
+CG-139
+Rebase rounds do not count toward the revision cap
+p2 · easy
+CG-142
+Task actions refuse a task that is done or cancelled
+p2 · easy
+CG-143
+Ship the garden-operate skill with the tool so every new garden gets it
+p2 · easy
+CG-144
+A superseded review run is closed when a newer review starts; no run record outlives its process
+p2 · easy
+CG-147
+A product clone gets a git identity when it is made, and doctor checks every clone
+p2 · easy
+CG-125
+Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart found
+p3 · medium
+in fruit done 108
+CG-037
+Stop the revise template and the review prompt contradicting each other found
+p0 · easy
+CG-054
+A worker's worktree must never act on the live garden
+p0 · medium
+CG-061
+Review runs whose task moved on are reaped, not left running forever
+p0 · easy
+CG-064
+Make test_feedback_triggers_revise_round deterministic
+p0 · easy
+CG-076
+Push with lease when the worker rebased its branch
+p0 · easy
+CG-082
+Separate GARDEN_ROOT (guard) from the check-command venv path variable found
+p0 · easy
+CG-085
+Workers' checkouts live in a configurable work_dir outside the garden
+p0 · easy
+CG-090
+State.save() never clears dirty keys after a successful write found
+p0 · easy
+CG-091
+State.save()'s file replacement is not atomic for concurrent readers found
+p0 · easy
+CG-093
+Store.save() for task files has the same non-atomic write_text pattern found
+p0 · easy
+CG-101
+Pre-PR `tests` check environment doesn't match test suite assumptions found
+p0 · easy
+CG-104
+Live log: a tool result whose content is a string no longer breaks the task page
+p0 · easy
+CG-106
+A task the loop can no longer dispatch always gets a card
+p0 · medium
+CG-111
+A worker cannot write outside its worktree, whatever it is told
+p0 · medium
+CG-116
+The orphan sweep never closes a run whose task is still running
+p0 · medium
+CG-127
+test_set_budget_none_removes_cap fails on main found
+p0 · medium
+CG-129
+Automerge merges only into the product's base branch, never into a parent's branch
+p0 · medium
+CG-001
+Task file format and on-disk store
+p1 · medium
+CG-002
+Dependency graph and ready set
+p1 · medium
+CG-003
+Worker brief builder and result contract
+p1 · medium
+CG-004
+Scheduler: reap, poll, dispatch
+p1 · medium
+CG-005
+Planner: goals and specs to draft tasks
+p1 · medium
+CG-006
+Web UI and TUI
+p1 · medium
+CG-007
+Claude Code skills and README
+p1 · medium
+CG-008
+Harvest friction sections from PR bodies
+p1 · medium
+CG-014
+Harness abstraction and difficulty-based model selection
+p1 · hard
+CG-015
+Remote workers over ssh
+p1 · hard
+CG-016
+Automated review pass and PR tracking
+p1 · hard
+CG-017
+Event log, digest and metrics
+p1 · hard
+CG-018
+Pause and resume: waiting_human and garden answer
+p1 · hard
+CG-019
+Discovered work from worker results
+p1 · hard
+CG-020
+Stall detection and phase budgets
+p1 · hard
+CG-021
+Stacked dependencies with restack on merge
+p1 · hard
+CG-022
+Model trials with a leaderboard
+p1 · hard
+CG-023
+Persona reviews of PRs and phases
+p1 · hard
+CG-024
+Token-free pre-PR and CI checks
+p1 · hard
+CG-026
+Botanical theme: plants per phase and growth-stage glyphs
+p1 · medium
+CG-027
+First live run of the loop on itself needs you
+p1 · easy
+CG-047
+Pick up the person's own PR comments as feedback
+p1 · easy
+CG-053
+state.json is saved whole by every writer, so concurrent writers lose updates
+p1 · medium
+CG-055
+Turn limit is optional and off by default
+p1 · easy
+CG-057
+A PR that conflicts with its base gets a rebase round
+p1 · medium
+CG-058
+The brief never points a worker at the garden root
+p1 · easy
+CG-060
+Reading lists resolve product paths against the product repo
+p1 · easy
+CG-063
+Remove the garden files from the tool's repo
+p1 · easy
+CG-069
+Pause and resume dispatch from a command and a configuration page
+p1 · medium
+CG-081
+Environment setup is per-product configuration, not a venv assumption
+p1 · medium
+CG-084
+The garden upgrades its own pinned install after the tool's PRs merge
+p1 · medium
+CG-092
+Remove venv install lines from the context-garden garden config and product overview found
+p1 · hard
+CG-098
+Tests do not read the developer's GARDEN_ROOT; the check command need not unset it
+p1 · easy
+CG-100
+A worker's won't-do or nothing-to-change is a decision for the person, not a failure
+p1 · medium
+CG-112
+A worker's discovery can be a decision for the person, not only a new task
+p1 · medium
+CG-113
+Drop the `env -u GARDEN_ROOT` stopgap from the live garden's tests check found
+p1 · easy
+CG-117
+After the last automated review round, the person is told the PR is theirs
+p1 · easy
+CG-118
+A bot comment that is a notice, not a finding, is not feedback
+p1 · easy
+CG-119
+test_happy_path_dispatch_reap_pr_merge flakes intermittently in CI found stack
+p1 · medium
+CG-126
+Verify worktree provisioning for stacked tasks actually checks out the parent branch found
+p1 · medium
+CG-131
+A check that fails at the branch's base commit triggers a rebase, not a revise round
+p1 · medium
+CG-133
+garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase
+p1 · medium
+CG-136
+PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites
+p1 · medium
+CG-140
+An empty description rewrite falls back to a round; pending feedback never sits on an in_review task
+p1 · easy
+CG-009
+Stream-json runner output and live log in the web UI
+p2 · medium
+CG-010
+Notification hook for human-needed transitions
+p2 · easy
+CG-011
+Automated review pass before human review
+p2 · medium
+CG-032
+Doctor checks that gh and the harness are logged in and git has an identity found
+p2 · easy
+CG-034
+Windows: run the harness by its resolved path and give pre-PR checks a shell found
+p2 · medium
+CG-035
+Inbox and digest show what actually happened to a task found
+p2 · medium
+CG-036
+Revise brief: a pre-PR variant, and tell the worker what is already on the branch found
+p2 · easy
+CG-038
+Stall detection judges a description-only round by the description found
+p2 · medium
+CG-039
+Show cache reads, not just fresh input tokens, in runs and usage found
+p2 · easy
+CG-040
+Tell the worker its turn cap, and set it per tier found
+p2 · easy
+CG-041
+Mark the garden's own PR comments as the garden's found
+p2 · easy
+CG-042
+Say when the garden's own state edits get committed found
+p2 · medium
+CG-043
+garden finish must not race the tick
+p2 · medium
+CG-044
+Report friction from anywhere, and have it scheduled
+p2 · medium
+CG-045
+Attention cards say what the decision is and what each button will do
+p2 · hard
+CG-046
+Task page: a full text box for the send-back note
+p2 · easy
+CG-048
+Set or remove a phase budget from the web UI
+p2 · medium
+CG-049
+CLAUDE.md: document PYTHONPATH=src for manual test runs in worktrees found
+p2 · easy
+CG-059
+Bot comments count as feedback unless excluded
+p2 · easy
+CG-062
+A worker silent for too long is flagged and stopped before the timeout
+p2 · medium
+CG-067
+garden commit commits only task files and sees untracked ones
+p2 · easy
+CG-068
+Automerge: merge a PR when the loop's own gates pass
+p2 · medium
+CG-072
+A merged PR marks its task done even if the task had failed
+p2 · easy
+CG-073
+Task page shows every run's transcript and final message
+p2 · medium
+CG-074
+Reviews do not consume worker slots
+p2 · easy
+CG-075
+Runs page: the table and the scheduler log stay inside their panels
+p2 · easy
+CG-078
+Closed phases leave the rail and live in a browsable herbarium
+p2 · hard
+CG-079
+Suggest a change to a task from its page, and have an agent fold it in
+p2 · medium
+CG-080
+Change parallelism from the configuration page and the CLI, effective next tick
+p2 · easy
+CG-083
+A reap is atomic: a restart mid-tick never loses a finished run needs you
+p2 · easy
+CG-086
+Web actions report failures as messages, never as a 500
+p2 · easy
+CG-087
+Trial form picks contenders from the known harnesses and models stack
+p2 · easy
+CG-096
+Inbox count is the decisions only; retrying tasks show but do not count
+p2 · easy
+CG-099
+Task page: tier and priority are pulldowns that apply on change, with priority in words
+p2 · easy
+CG-109
+A description-only revise round runs on the easy tier needs you
+p2 · easy
+CG-123
+Tasks that edit the garden's own files run in a worktree of the garden repo
+p2 · medium
+CG-012
+Brief cost report per phase needs you
+p3 · easy
+CG-013
+Replan a phase after failures
+p3 · medium
+CG-031
+Draw the done stage as a red apple
+p3 · easy
+CG-065
+Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows
+p3 · easy
+CG-066
+garden usage shows the phase header and brief estimates before any run
+p3 · easy
+CG-071
+Set a task's priority and difficulty from the CLI and the task page
+p3 · easy
+CG-088
+Trellis and phase page can hide completed tasks
+p3 · easy
+CG-094
+Board: a list view grouped by status beside the columns
+p3 · medium
+CG-115
+Store a short diff summary on run records for attention/triage evidence found
+p3 · easy
+CG-121
+Planner and friction reports can still create tasks in a closed phase found
+p3 · easy
+CG-122
+Extend the flash-message pattern to friction-report and phase/global actions found stack
+p3 · easy
+set aside wont do 0

@@ -1,0 +1,18 @@
+Herbarium · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Herbarium Closed phases, pressed and filed. Newest first.
+no closed phases yet — garden close-phase product/phase files the first

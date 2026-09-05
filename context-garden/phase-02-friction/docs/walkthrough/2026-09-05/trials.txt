@@ -1,0 +1,21 @@
+Trials · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Model trials The same task, several models, one comparison. Scores accumulate here so the tier-to-model map is a decision, not a guess.
+Filter by contender
+Filter
+Leaderboard
+No trials yet. On a ready task's page choose Model trial… and name two or more contenders, e.g. claude:sonnet, claude:opus .

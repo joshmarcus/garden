@@ -1,0 +1,544 @@
+Trellis · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Trellis The structure the work climbs: dependencies left to right, dashed edges for discovered work. A task with one open dependency stacks on its PR instead of waiting.
+hide done (131)
+all
+context-garden/phase-01-bootstrap
+context-garden/phase-02-friction
+ready now: CG-029
+·  longest open chain: CG-030
+CG-054: A worker's worktree must never act on the live garden — done (in fruit) CG-054 A worker's worktree must… done
+CG-061: Review runs whose task moved on are reaped, not left running forever — done (in fruit) CG-061 Review runs whose task m… done
+CG-064: Make test_feedback_triggers_revise_round deterministic — done (in fruit) CG-064 Make test_feedback_trigg… done
+CG-076: Push with lease when the worker rebased its branch — done (in fruit) CG-076 Push with lease when the… done
+CG-085: Workers' checkouts live in a configurable work_dir outside the garden — done (in fruit) CG-085 Workers' checkouts live … done
+CG-090: State.save() never clears dirty keys after a successful write — done (in fruit) CG-090 State.save() never clear… done
+CG-091: State.save()'s file replacement is not atomic for concurrent readers — done (in fruit) CG-091 State.save()'s file repl… done
+CG-104: Live log: a tool result whose content is a string no longer breaks the task page — done (in fruit) CG-104 Live log: a tool result … done
+CG-106: A task the loop can no longer dispatch always gets a card — done (in fruit) CG-106 A task the loop can no l… done
+CG-111: A worker cannot write outside its worktree, whatever it is told — done (in fruit) CG-111 A worker cannot write ou… done
+CG-116: The orphan sweep never closes a run whose task is still running — done (in fruit) CG-116 The orphan sweep never c… done
+CG-129: Automerge merges only into the product's base branch, never into a parent's branch — done (in fruit) CG-129 Automerge merges only in… done
+CG-001: Task file format and on-disk store — done (in fruit) CG-001 Task file format and on-… done
+CG-008: Harvest friction sections from PR bodies — done (in fruit) CG-008 Harvest friction section… done
+CG-027: First live run of the loop on itself — done (in fruit) CG-027 First live run of the lo… done
+CG-047: Pick up the person's own PR comments as feedback — done (in fruit) CG-047 Pick up the person's own… done
+CG-050: The running garden picks up merged changes to itself — cancelled (pressed) CG-050 The running garden picks… cancelled
+CG-053: state.json is saved whole by every writer, so concurrent writers lose updates — done (in fruit) CG-053 state.json is saved whol… done
+CG-055: Turn limit is optional and off by default — done (in fruit) CG-055 Turn limit is optional a… done
+CG-057: A PR that conflicts with its base gets a rebase round — done (in fruit) CG-057 A PR that conflicts with… done
+CG-058: The brief never points a worker at the garden root — done (in fruit) CG-058 The brief never points a… done
+CG-060: Reading lists resolve product paths against the product repo — done (in fruit) CG-060 Reading lists resolve pr… done
+CG-063: Remove the garden files from the tool's repo — done (in fruit) CG-063 Remove the garden files … done
+CG-069: Pause and resume dispatch from a command and a configuration page — done (in fruit) CG-069 Pause and resume dispatc… done
+CG-081: Environment setup is per-product configuration, not a venv assumption — done (in fruit) CG-081 Environment setup is per… done
+CG-084: The garden upgrades its own pinned install after the tool's PRs merge — done (in fruit) CG-084 The garden upgrades its … done
+CG-100: A worker's won't-do or nothing-to-change is a decision for the person, not a failure — done (in fruit) CG-100 A worker's won't-do or n… done
+CG-110: CG-107 duplicates CG-092 — cancelled (pressed) CG-110 CG-107 duplicates CG-092 cancelled
+CG-112: A worker's discovery can be a decision for the person, not only a new task — done (in fruit) CG-112 A worker's discovery can… done
+CG-117: After the last automated review round, the person is told the PR is theirs — done (in fruit) CG-117 After the last automated… done
+CG-118: A bot comment that is a notice, not a finding, is not feedback — done (in fruit) CG-118 A bot comment that is a … done
+CG-126: Verify worktree provisioning for stacked tasks actually checks out the parent branch — done (in fruit) CG-126 Verify worktree provisio… done
+CG-131: A check that fails at the branch's base commit triggers a rebase, not a revise round — done (in fruit) CG-131 A check that fails at th… done
+CG-133: garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase — done (in fruit) CG-133 garden retro: harvest PR… done
+CG-136: PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites — done (in fruit) CG-136 PR descriptions stop cos… done
+CG-137: Split the scheduler by tick phase and the web actions into a registry so features stop colliding — draft (seed) CG-137 Split the scheduler by t… draft
+CG-140: An empty description rewrite falls back to a round; pending feedback never sits on an in_review task — done (in fruit) CG-140 An empty description rew… done
+CG-141: Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue — draft (seed) CG-141 Rebase is its own mode: … draft
+CG-145: garden retro waits for the persona reports before it dispatches the reconciliation — draft (seed) CG-145 garden retro waits for t… draft
+CG-146: A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated — draft (seed) CG-146 A retro page per phase: … draft
+CG-009: Stream-json runner output and live log in the web UI — done (in fruit) CG-009 Stream-json runner outpu… done
+CG-010: Notification hook for human-needed transitions — done (in fruit) CG-010 Notification hook for hu… done
+CG-011: Automated review pass before human review — done (in fruit) CG-011 Automated review pass be… done
+CG-030: Plates: label what each plate shows, keep every file public domain, credit Thomé — draft (seed) CG-030 Plates: label what each … draft
+CG-043: garden finish must not race the tick — done (in fruit) CG-043 garden finish must not r… done
+CG-044: Report friction from anywhere, and have it scheduled — done (in fruit) CG-044 Report friction from any… done
+CG-045: Attention cards say what the decision is and what each button will do — done (in fruit) CG-045 Attention cards say what… done
+CG-046: Task page: a full text box for the send-back note — done (in fruit) CG-046 Task page: a full text b… done
+CG-048: Set or remove a phase budget from the web UI — done (in fruit) CG-048 Set or remove a phase bu… done
+CG-059: Bot comments count as feedback unless excluded — done (in fruit) CG-059 Bot comments count as fe… done
+CG-062: A worker silent for too long is flagged and stopped before the timeout — done (in fruit) CG-062 A worker silent for too … done
+CG-067: garden commit commits only task files and sees untracked ones — done (in fruit) CG-067 garden commit commits on… done
+CG-068: Automerge: merge a PR when the loop's own gates pass — done (in fruit) CG-068 Automerge: merge a PR wh… done
+CG-072: A merged PR marks its task done even if the task had failed — done (in fruit) CG-072 A merged PR marks its ta… done
+CG-073: Task page shows every run's transcript and final message — done (in fruit) CG-073 Task page shows every ru… done
+CG-074: Reviews do not consume worker slots — done (in fruit) CG-074 Reviews do not consume w… done
+CG-075: Runs page: the table and the scheduler log stay inside their panels — done (in fruit) CG-075 Runs page: the table and… done
+CG-078: Closed phases leave the rail and live in a browsable herbarium — done (in fruit) CG-078 Closed phases leave the … done
+CG-079: Suggest a change to a task from its page, and have an agent fold it in — done (in fruit) CG-079 Suggest a change to a ta… done
+CG-083: A reap is atomic: a restart mid-tick never loses a finished run — done (in fruit) CG-083 A reap is atomic: a rest… done
+CG-086: Web actions report failures as messages, never as a 500 — done (in fruit) CG-086 Web actions report failu… done
+CG-096: Inbox count is the decisions only; retrying tasks show but do not count — done (in fruit) CG-096 Inbox count is the decis… done
+CG-099: Task page: tier and priority are pulldowns that apply on change, with priority in words — done (in fruit) CG-099 Task page: tier and prio… done
+CG-109: A description-only revise round runs on the easy tier — done (in fruit) CG-109 A description-only revis… done
+CG-123: Tasks that edit the garden's own files run in a worktree of the garden repo — done (in fruit) CG-123 Tasks that edit the gard… done
+CG-132: The web UI can create a task from a form, with the same fields as garden new-task — draft (seed) CG-132 The web UI can create a … draft
+CG-134: garden walkthrough: render the live web app's pages for the retro and the persona reviews — draft (seed) CG-134 garden walkthrough: rend… draft
+CG-135: garden qa: an agent drives the loop end to end through the web app on a throwaway garden — draft (seed) CG-135 garden qa: an agent driv… draft
+CG-138: Automerge orders PRs that touch the same file one per cycle instead of letting them rebase against each other — cancelled (pressed) CG-138 Automerge orders PRs tha… cancelled
+CG-139: Rebase rounds do not count toward the revision cap — draft (seed) CG-139 Rebase rounds do not cou… draft
+CG-142: Task actions refuse a task that is done or cancelled — draft (seed) CG-142 Task actions refuse a ta… draft
+CG-143: Ship the garden-operate skill with the tool so every new garden gets it — draft (seed) CG-143 Ship the garden-operate … draft
+CG-144: A superseded review run is closed when a newer review starts; no run record outlives its process — draft (seed) CG-144 A superseded review run … draft
+CG-147: A product clone gets a git identity when it is made, and doctor checks every clone — draft (seed) CG-147 A product clone gets a g… draft
+CG-012: Brief cost report per phase — done (in fruit) CG-012 Brief cost report per ph… done
+CG-031: Draw the done stage as a red apple — done (in fruit) CG-031 Draw the done stage as a… done
+CG-065: Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows — done (in fruit) CG-065 Plates and plants: posit… done
+CG-066: garden usage shows the phase header and brief estimates before any run — done (in fruit) CG-066 garden usage shows the p… done
+CG-070: Auto-approve every discovered task, not only blocking ones — cancelled (pressed) CG-070 Auto-approve every disco… cancelled
+CG-071: Set a task's priority and difficulty from the CLI and the task page — done (in fruit) CG-071 Set a task's priority an… done
+CG-088: Trellis and phase page can hide completed tasks — done (in fruit) CG-088 Trellis and phase page c… done
+CG-094: Board: a list view grouped by status beside the columns — done (in fruit) CG-094 Board: a list view group… done
+CG-037: Stop the revise template and the review prompt contradicting each other — done (in fruit) CG-037 Stop the revise template… done
+CG-082: Separate GARDEN_ROOT (guard) from the check-command venv path variable — done (in fruit) CG-082 Separate GARDEN_ROOT (gu… done
+CG-093: Store.save() for task files has the same non-atomic write_text pattern — done (in fruit) CG-093 Store.save() for task fi… done
+CG-097: Worktree setup sometimes skips creating .venv, breaking pre-PR checks — cancelled (pressed) CG-097 Worktree setup sometimes… cancelled
+CG-101: Pre-PR `tests` check environment doesn't match test suite assumptions — done (in fruit) CG-101 Pre-PR `tests` check env… done
+CG-103: Orchestrating garden's pre-PR check command still resolves venv/tool paths via $GARDEN_ROOT for this product — cancelled (pressed) CG-103 Orchestrating garden's p… cancelled
+CG-105: Test suite should isolate/unset GARDEN_ROOT so worker sandboxing doesn't masquerade as test failures — cancelled (pressed) CG-105 Test suite should isolat… cancelled
+CG-127: test_set_budget_none_removes_cap fails on main — done (in fruit) CG-127 test_set_budget_none_rem… done
+CG-002: Dependency graph and ready set — done (in fruit) CG-002 Dependency graph and rea… done
+CG-003: Worker brief builder and result contract — done (in fruit) CG-003 Worker brief builder and… done
+CG-005: Planner: goals and specs to draft tasks — done (in fruit) CG-005 Planner: goals and specs… done
+CG-092: Remove venv install lines from the context-garden garden config and product overview — done (in fruit) CG-092 Remove venv install line… done
+CG-107: Driving garden config should adopt the setup block for context-garden — cancelled (pressed) CG-107 Driving garden config sh… cancelled
+CG-114: Per-worktree test environment so pytest imports the local src — cancelled (pressed) CG-114 Per-worktree test enviro… cancelled
+CG-119: test_happy_path_dispatch_reap_pr_merge flakes intermittently in CI — done (in fruit) CG-119 test_happy_path_dispatch… done
+CG-028: Calibrate the tier map with a model trial — cancelled (pressed) CG-028 Calibrate the tier map w… cancelled
+CG-032: Doctor checks that gh and the harness are logged in and git has an identity — done (in fruit) CG-032 Doctor checks that gh an… done
+CG-033: An environment error in a worker pauses dispatch instead of burning attempts — cancelled (pressed) CG-033 An environment error in … cancelled
+CG-034: Windows: run the harness by its resolved path and give pre-PR checks a shell — done (in fruit) CG-034 Windows: run the harness… done
+CG-035: Inbox and digest show what actually happened to a task — done (in fruit) CG-035 Inbox and digest show wh… done
+CG-036: Revise brief: a pre-PR variant, and tell the worker what is already on the branch — done (in fruit) CG-036 Revise brief: a pre-PR v… done
+CG-038: Stall detection judges a description-only round by the description — done (in fruit) CG-038 Stall detection judges a… done
+CG-039: Show cache reads, not just fresh input tokens, in runs and usage — done (in fruit) CG-039 Show cache reads, not ju… done
+CG-040: Tell the worker its turn cap, and set it per tier — done (in fruit) CG-040 Tell the worker its turn… done
+CG-041: Mark the garden's own PR comments as the garden's — done (in fruit) CG-041 Mark the garden's own PR… done
+CG-042: Say when the garden's own state edits get committed — done (in fruit) CG-042 Say when the garden's ow… done
+CG-080: Change parallelism from the configuration page and the CLI, effective next tick — done (in fruit) CG-080 Change parallelism from … done
+CG-087: Trial form picks contenders from the known harnesses and models — done (in fruit) CG-087 Trial form picks contend… done
+CG-120: CG-029's brief must name `garden close-phase` — cancelled (pressed) CG-120 CG-029's brief must name… cancelled
+CG-124: test_feedback_triggers_revise_round commit-collision flake (already tracked as CG-064) — cancelled (pressed) CG-124 test_feedback_triggers_r… cancelled
+CG-128: test_set_budget_none_removes_cap fails under Python 3.14 — cancelled (pressed) CG-128 test_set_budget_none_rem… cancelled
+CG-013: Replan a phase after failures — done (in fruit) CG-013 Replan a phase after fai… done
+CG-056: CLAUDE.md venv path breaks in worktrees — cancelled (pressed) CG-056 CLAUDE.md venv path brea… cancelled
+CG-089: Board: reorder ready tasks with up/down priority controls — cancelled (pressed) CG-089 Board: reorder ready tas… cancelled
+CG-115: Store a short diff summary on run records for attention/triage evidence — done (in fruit) CG-115 Store a short diff summa… done
+CG-121: Planner and friction reports can still create tasks in a closed phase — done (in fruit) CG-121 Planner and friction rep… done
+CG-122: Extend the flash-message pattern to friction-report and phase/global actions — done (in fruit) CG-122 Extend the flash-message… done
+CG-125: Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart — draft (seed) CG-125 Scheduler/task log shoul… draft
+CG-130: test_set_budget_none_removes_cap is missing a reap tick — cancelled (pressed) CG-130 test_set_budget_none_rem… cancelled
+CG-095: checks.pre_pr can fail with a confusing exit-127 error if GARDEN_ROOT's venv isn't provisioned — cancelled (pressed) CG-095 checks.pre_pr can fail w… cancelled
+CG-102: State.save() in scheduler.py still not atomic — cancelled (pressed) CG-102 State.save() in schedule… cancelled
+CG-108: Document (or design a dedicated mode for) the GARDEN_ROOT-sentinel gotcha for self-hosted check commands — cancelled (pressed) CG-108 Document (or design a de… cancelled
+CG-004: Scheduler: reap, poll, dispatch — done (in fruit) CG-004 Scheduler: reap, poll, d… done
+CG-098: Tests do not read the developer's GARDEN_ROOT; the check command need not unset it — done (in fruit) CG-098 Tests do not read the de… done
+CG-049: CLAUDE.md: document PYTHONPATH=src for manual test runs in worktrees — done (in fruit) CG-049 CLAUDE.md: document PYTH… done
+CG-051: Worktree tests need PYTHONPATH or a per-worktree venv — cancelled (pressed) CG-051 Worktree tests need PYTH… cancelled
+CG-052: Worktree venv isolation: document or automate per-worktree install — cancelled (pressed) CG-052 Worktree venv isolation:… cancelled
+CG-077: Document pip install -e requirement for worktree development — cancelled (pressed) CG-077 Document pip install -e … cancelled
+CG-029: Close the phase: friction document, what changed, and the next goals — ready (sprout) CG-029 Close the phase: frictio… ready
+CG-006: Web UI and TUI — done (in fruit) CG-006 Web UI and TUI done
+CG-007: Claude Code skills and README — done (in fruit) CG-007 Claude Code skills and R… done
+CG-014: Harness abstraction and difficulty-based model selection — done (in fruit) CG-014 Harness abstraction and … done
+CG-017: Event log, digest and metrics — done (in fruit) CG-017 Event log, digest and me… done
+CG-024: Token-free pre-PR and CI checks — done (in fruit) CG-024 Token-free pre-PR and CI… done
+CG-113: Drop the `env -u GARDEN_ROOT` stopgap from the live garden's tests check — done (in fruit) CG-113 Drop the `env -u GARDEN_… done
+CG-015: Remote workers over ssh — done (in fruit) CG-015 Remote workers over ssh done
+CG-016: Automated review pass and PR tracking — done (in fruit) CG-016 Automated review pass an… done
+CG-018: Pause and resume: waiting_human and garden answer — done (in fruit) CG-018 Pause and resume: waitin… done
+CG-019: Discovered work from worker results — done (in fruit) CG-019 Discovered work from wor… done
+CG-021: Stacked dependencies with restack on merge — done (in fruit) CG-021 Stacked dependencies wit… done
+CG-026: Botanical theme: plants per phase and growth-stage glyphs — done (in fruit) CG-026 Botanical theme: plants … done
+CG-020: Stall detection and phase budgets — done (in fruit) CG-020 Stall detection and phas… done
+CG-022: Model trials with a leaderboard — done (in fruit) CG-022 Model trials with a lead… done
+CG-023: Persona reviews of PRs and phases — done (in fruit) CG-023 Persona reviews of PRs a… done
+seed draft · seed sprout ready · sprout in leaf running · in leaf bud, tagged waiting human · bud, tagged in bud awaiting triage · in bud in flower in review · in flower pruned changes requested · pruned in fruit done · in fruit wilted failed · wilted
+mermaid source (paste into docs or PRs) graph LR
+CG_001["CG-001<br/>Task file format and on-disk store"]
+style CG_001 fill:#d4edda,stroke:#155724,color:#333
+CG_002["CG-002<br/>Dependency graph and ready set"]
+style CG_002 fill:#d4edda,stroke:#155724,color:#333
+CG_003["CG-003<br/>Worker brief builder and result contract"]
+style CG_003 fill:#d4edda,stroke:#155724,color:#333
+CG_004["CG-004<br/>Scheduler: reap, poll, dispatch"]
+style CG_004 fill:#d4edda,stroke:#155724,color:#333
+CG_005["CG-005<br/>Planner: goals and specs to draft tasks"]
+style CG_005 fill:#d4edda,stroke:#155724,color:#333
+CG_006["CG-006<br/>Web UI and TUI"]
+style CG_006 fill:#d4edda,stroke:#155724,color:#333
+CG_007["CG-007<br/>Claude Code skills and README"]
+style CG_007 fill:#d4edda,stroke:#155724,color:#333
+CG_008["CG-008<br/>Harvest friction sections from PR bodies"]
+style CG_008 fill:#d4edda,stroke:#155724,color:#333
+CG_009["CG-009<br/>Stream-json runner output and live lo..."]
+style CG_009 fill:#d4edda,stroke:#155724,color:#333
+CG_010["CG-010<br/>Notification hook for human-needed tr..."]
+style CG_010 fill:#d4edda,stroke:#155724,color:#333
+CG_011["CG-011<br/>Automated review pass before human re..."]
+style CG_011 fill:#d4edda,stroke:#155724,color:#333
+CG_012["CG-012<br/>Brief cost report per phase"]
+style CG_012 fill:#d4edda,stroke:#155724,color:#333
+CG_013["CG-013<br/>Replan a phase after failures"]
+style CG_013 fill:#d4edda,stroke:#155724,color:#333
+CG_014["CG-014<br/>Harness abstraction and difficulty-ba..."]
+style CG_014 fill:#d4edda,stroke:#155724,color:#333
+CG_015["CG-015<br/>Remote workers over ssh"]
+style CG_015 fill:#d4edda,stroke:#155724,color:#333
+CG_016["CG-016<br/>Automated review pass and PR tracking"]
+style CG_016 fill:#d4edda,stroke:#155724,color:#333
+CG_017["CG-017<br/>Event log, digest and metrics"]
+style CG_017 fill:#d4edda,stroke:#155724,color:#333
+CG_018["CG-018<br/>Pause and resume: waiting_human and g..."]
+style CG_018 fill:#d4edda,stroke:#155724,color:#333
+CG_019["CG-019<br/>Discovered work from worker results"]
+style CG_019 fill:#d4edda,stroke:#155724,color:#333
+CG_020["CG-020<br/>Stall detection and phase budgets"]
+style CG_020 fill:#d4edda,stroke:#155724,color:#333
+CG_021["CG-021<br/>Stacked dependencies with restack on ..."]
+style CG_021 fill:#d4edda,stroke:#155724,color:#333
+CG_022["CG-022<br/>Model trials with a leaderboard"]
+style CG_022 fill:#d4edda,stroke:#155724,color:#333
+CG_023["CG-023<br/>Persona reviews of PRs and phases"]
+style CG_023 fill:#d4edda,stroke:#155724,color:#333
+CG_024["CG-024<br/>Token-free pre-PR and CI checks"]
+style CG_024 fill:#d4edda,stroke:#155724,color:#333
+CG_026["CG-026<br/>Botanical theme: plants per phase and..."]
+style CG_026 fill:#d4edda,stroke:#155724,color:#333
+CG_027["CG-027<br/>First live run of the loop on itself"]
+style CG_027 fill:#d4edda,stroke:#155724,color:#333
+CG_028["CG-028<br/>Calibrate the tier map with a model t..."]
+style CG_028 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_029["CG-029<br/>Close the phase: friction document, w..."]
+style CG_029 fill:#d1ecf1,stroke:#0c5460,color:#333
+CG_030["CG-030<br/>Plates: label what each plate shows, ..."]
+style CG_030 fill:#eee,stroke:#999,color:#333
+CG_031["CG-031<br/>Draw the done stage as a red apple"]
+style CG_031 fill:#d4edda,stroke:#155724,color:#333
+CG_032["CG-032<br/>Doctor checks that gh and the harness..."]
+style CG_032 fill:#d4edda,stroke:#155724,color:#333
+CG_033["CG-033<br/>An environment error in a worker paus..."]
+style CG_033 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_034["CG-034<br/>Windows: run the harness by its resol..."]
+style CG_034 fill:#d4edda,stroke:#155724,color:#333
+CG_035["CG-035<br/>Inbox and digest show what actually h..."]
+style CG_035 fill:#d4edda,stroke:#155724,color:#333
+CG_036["CG-036<br/>Revise brief: a pre-PR variant, and t..."]
+style CG_036 fill:#d4edda,stroke:#155724,color:#333
+CG_037["CG-037<br/>Stop the revise template and the revi..."]
+style CG_037 fill:#d4edda,stroke:#155724,color:#333
+CG_038["CG-038<br/>Stall detection judges a description-..."]
+style CG_038 fill:#d4edda,stroke:#155724,color:#333
+CG_039["CG-039<br/>Show cache reads, not just fresh inpu..."]
+style CG_039 fill:#d4edda,stroke:#155724,color:#333
+CG_040["CG-040<br/>Tell the worker its turn cap, and set..."]
+style CG_040 fill:#d4edda,stroke:#155724,color:#333
+CG_041["CG-041<br/>Mark the garden's own PR comments as ..."]
+style CG_041 fill:#d4edda,stroke:#155724,color:#333
+CG_042["CG-042<br/>Say when the garden's own state edits..."]
+style CG_042 fill:#d4edda,stroke:#155724,color:#333
+CG_043["CG-043<br/>garden finish must not race the tick"]
+style CG_043 fill:#d4edda,stroke:#155724,color:#333
+CG_044["CG-044<br/>Report friction from anywhere, and ha..."]
+style CG_044 fill:#d4edda,stroke:#155724,color:#333
+CG_045["CG-045<br/>Attention cards say what the decision..."]
+style CG_045 fill:#d4edda,stroke:#155724,color:#333
+CG_046["CG-046<br/>Task page: a full text box for the se..."]
+style CG_046 fill:#d4edda,stroke:#155724,color:#333
+CG_047["CG-047<br/>Pick up the person's own PR comments ..."]
+style CG_047 fill:#d4edda,stroke:#155724,color:#333
+CG_048["CG-048<br/>Set or remove a phase budget from the..."]
+style CG_048 fill:#d4edda,stroke:#155724,color:#333
+CG_049["CG-049<br/>CLAUDE.md: document PYTHONPATH=src fo..."]
+style CG_049 fill:#d4edda,stroke:#155724,color:#333
+CG_050["CG-050<br/>The running garden picks up merged ch..."]
+style CG_050 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_051["CG-051<br/>Worktree tests need PYTHONPATH or a p..."]
+style CG_051 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_052["CG-052<br/>Worktree venv isolation: document or ..."]
+style CG_052 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_053["CG-053<br/>state.json is saved whole by every wr..."]
+style CG_053 fill:#d4edda,stroke:#155724,color:#333
+CG_054["CG-054<br/>A worker's worktree must never act on..."]
+style CG_054 fill:#d4edda,stroke:#155724,color:#333
+CG_055["CG-055<br/>Turn limit is optional and off by def..."]
+style CG_055 fill:#d4edda,stroke:#155724,color:#333
+CG_056["CG-056<br/>CLAUDE.md venv path breaks in worktrees"]
+style CG_056 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_057["CG-057<br/>A PR that conflicts with its base get..."]
+style CG_057 fill:#d4edda,stroke:#155724,color:#333
+CG_058["CG-058<br/>The brief never points a worker at th..."]
+style CG_058 fill:#d4edda,stroke:#155724,color:#333
+CG_059["CG-059<br/>Bot comments count as feedback unless..."]
+style CG_059 fill:#d4edda,stroke:#155724,color:#333
+CG_060["CG-060<br/>Reading lists resolve product paths a..."]
+style CG_060 fill:#d4edda,stroke:#155724,color:#333
+CG_061["CG-061<br/>Review runs whose task moved on are r..."]
+style CG_061 fill:#d4edda,stroke:#155724,color:#333
+CG_062["CG-062<br/>A worker silent for too long is flagg..."]
+style CG_062 fill:#d4edda,stroke:#155724,color:#333
+CG_063["CG-063<br/>Remove the garden files from the tool..."]
+style CG_063 fill:#d4edda,stroke:#155724,color:#333
+CG_064["CG-064<br/>Make test_feedback_triggers_revise_ro..."]
+style CG_064 fill:#d4edda,stroke:#155724,color:#333
+CG_065["CG-065<br/>Plates and plants: positional assignm..."]
+style CG_065 fill:#d4edda,stroke:#155724,color:#333
+CG_066["CG-066<br/>garden usage shows the phase header a..."]
+style CG_066 fill:#d4edda,stroke:#155724,color:#333
+CG_067["CG-067<br/>garden commit commits only task files..."]
+style CG_067 fill:#d4edda,stroke:#155724,color:#333
+CG_068["CG-068<br/>Automerge: merge a PR when the loop's..."]
+style CG_068 fill:#d4edda,stroke:#155724,color:#333
+CG_069["CG-069<br/>Pause and resume dispatch from a comm..."]
+style CG_069 fill:#d4edda,stroke:#155724,color:#333
+CG_070["CG-070<br/>Auto-approve every discovered task, n..."]
+style CG_070 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_071["CG-071<br/>Set a task's priority and difficulty ..."]
+style CG_071 fill:#d4edda,stroke:#155724,color:#333
+CG_072["CG-072<br/>A merged PR marks its task done even ..."]
+style CG_072 fill:#d4edda,stroke:#155724,color:#333
+CG_073["CG-073<br/>Task page shows every run's transcrip..."]
+style CG_073 fill:#d4edda,stroke:#155724,color:#333
+CG_074["CG-074<br/>Reviews do not consume worker slots"]
+style CG_074 fill:#d4edda,stroke:#155724,color:#333
+CG_075["CG-075<br/>Runs page: the table and the schedule..."]
+style CG_075 fill:#d4edda,stroke:#155724,color:#333
+CG_076["CG-076<br/>Push with lease when the worker rebas..."]
+style CG_076 fill:#d4edda,stroke:#155724,color:#333
+CG_077["CG-077<br/>Document pip install -e requirement f..."]
+style CG_077 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_078["CG-078<br/>Closed phases leave the rail and live..."]
+style CG_078 fill:#d4edda,stroke:#155724,color:#333
+CG_079["CG-079<br/>Suggest a change to a task from its p..."]
+style CG_079 fill:#d4edda,stroke:#155724,color:#333
+CG_080["CG-080<br/>Change parallelism from the configura..."]
+style CG_080 fill:#d4edda,stroke:#155724,color:#333
+CG_081["CG-081<br/>Environment setup is per-product conf..."]
+style CG_081 fill:#d4edda,stroke:#155724,color:#333
+CG_082["CG-082<br/>Separate GARDEN_ROOT (guard) from the..."]
+style CG_082 fill:#d4edda,stroke:#155724,color:#333
+CG_083["CG-083<br/>A reap is atomic: a restart mid-tick ..."]
+style CG_083 fill:#d4edda,stroke:#155724,color:#333
+CG_084["CG-084<br/>The garden upgrades its own pinned in..."]
+style CG_084 fill:#d4edda,stroke:#155724,color:#333
+CG_085["CG-085<br/>Workers' checkouts live in a configur..."]
+style CG_085 fill:#d4edda,stroke:#155724,color:#333
+CG_086["CG-086<br/>Web actions report failures as messag..."]
+style CG_086 fill:#d4edda,stroke:#155724,color:#333
+CG_087["CG-087<br/>Trial form picks contenders from the ..."]
+style CG_087 fill:#d4edda,stroke:#155724,color:#333
+CG_088["CG-088<br/>Trellis and phase page can hide compl..."]
+style CG_088 fill:#d4edda,stroke:#155724,color:#333
+CG_089["CG-089<br/>Board: reorder ready tasks with up/do..."]
+style CG_089 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_090["CG-090<br/>State.save() never clears dirty keys ..."]
+style CG_090 fill:#d4edda,stroke:#155724,color:#333
+CG_091["CG-091<br/>State.save()'s file replacement is no..."]
+style CG_091 fill:#d4edda,stroke:#155724,color:#333
+CG_092["CG-092<br/>Remove venv install lines from the co..."]
+style CG_092 fill:#d4edda,stroke:#155724,color:#333
+CG_093["CG-093<br/>Store.save() for task files has the s..."]
+style CG_093 fill:#d4edda,stroke:#155724,color:#333
+CG_094["CG-094<br/>Board: a list view grouped by status ..."]
+style CG_094 fill:#d4edda,stroke:#155724,color:#333
+CG_095["CG-095<br/>checks.pre_pr can fail with a confusi..."]
+style CG_095 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_096["CG-096<br/>Inbox count is the decisions only; re..."]
+style CG_096 fill:#d4edda,stroke:#155724,color:#333
+CG_097["CG-097<br/>Worktree setup sometimes skips creati..."]
+style CG_097 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_098["CG-098<br/>Tests do not read the developer's GAR..."]
+style CG_098 fill:#d4edda,stroke:#155724,color:#333
+CG_099["CG-099<br/>Task page: tier and priority are pull..."]
+style CG_099 fill:#d4edda,stroke:#155724,color:#333
+CG_100["CG-100<br/>A worker's won't-do or nothing-to-cha..."]
+style CG_100 fill:#d4edda,stroke:#155724,color:#333
+CG_101["CG-101<br/>Pre-PR `tests` check environment does..."]
+style CG_101 fill:#d4edda,stroke:#155724,color:#333
+CG_102["CG-102<br/>State.save() in scheduler.py still no..."]
+style CG_102 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_103["CG-103<br/>Orchestrating garden's pre-PR check c..."]
+style CG_103 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_104["CG-104<br/>Live log: a tool result whose content..."]
+style CG_104 fill:#d4edda,stroke:#155724,color:#333
+CG_105["CG-105<br/>Test suite should isolate/unset GARDE..."]
+style CG_105 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_106["CG-106<br/>A task the loop can no longer dispatc..."]
+style CG_106 fill:#d4edda,stroke:#155724,color:#333
+CG_107["CG-107<br/>Driving garden config should adopt th..."]
+style CG_107 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_108["CG-108<br/>Document (or design a dedicated mode ..."]
+style CG_108 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_109["CG-109<br/>A description-only revise round runs ..."]
+style CG_109 fill:#d4edda,stroke:#155724,color:#333
+CG_110["CG-110<br/>CG-107 duplicates CG-092"]
+style CG_110 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_111["CG-111<br/>A worker cannot write outside its wor..."]
+style CG_111 fill:#d4edda,stroke:#155724,color:#333
+CG_112["CG-112<br/>A worker's discovery can be a decisio..."]
+style CG_112 fill:#d4edda,stroke:#155724,color:#333
+CG_113["CG-113<br/>Drop the `env -u GARDEN_ROOT` stopgap..."]
+style CG_113 fill:#d4edda,stroke:#155724,color:#333
+CG_114["CG-114<br/>Per-worktree test environment so pyte..."]
+style CG_114 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_115["CG-115<br/>Store a short diff summary on run rec..."]
+style CG_115 fill:#d4edda,stroke:#155724,color:#333
+CG_116["CG-116<br/>The orphan sweep never closes a run w..."]
+style CG_116 fill:#d4edda,stroke:#155724,color:#333
+CG_117["CG-117<br/>After the last automated review round..."]
+style CG_117 fill:#d4edda,stroke:#155724,color:#333
+CG_118["CG-118<br/>A bot comment that is a notice, not a..."]
+style CG_118 fill:#d4edda,stroke:#155724,color:#333
+CG_119["CG-119<br/>test_happy_path_dispatch_reap_pr_merg..."]
+style CG_119 fill:#d4edda,stroke:#155724,color:#333
+CG_120["CG-120<br/>CG-029's brief must name `garden clos..."]
+style CG_120 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_121["CG-121<br/>Planner and friction reports can stil..."]
+style CG_121 fill:#d4edda,stroke:#155724,color:#333
+CG_122["CG-122<br/>Extend the flash-message pattern to f..."]
+style CG_122 fill:#d4edda,stroke:#155724,color:#333
+CG_123["CG-123<br/>Tasks that edit the garden's own file..."]
+style CG_123 fill:#d4edda,stroke:#155724,color:#333
+CG_124["CG-124<br/>test_feedback_triggers_revise_round c..."]
+style CG_124 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_125["CG-125<br/>Scheduler/task log should distinguish..."]
+style CG_125 fill:#eee,stroke:#999,color:#333
+CG_126["CG-126<br/>Verify worktree provisioning for stac..."]
+style CG_126 fill:#d4edda,stroke:#155724,color:#333
+CG_127["CG-127<br/>test_set_budget_none_removes_cap fail..."]
+style CG_127 fill:#d4edda,stroke:#155724,color:#333
+CG_128["CG-128<br/>test_set_budget_none_removes_cap fail..."]
+style CG_128 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_129["CG-129<br/>Automerge merges only into the produc..."]
+style CG_129 fill:#d4edda,stroke:#155724,color:#333
+CG_130["CG-130<br/>test_set_budget_none_removes_cap is m..."]
+style CG_130 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_131["CG-131<br/>A check that fails at the branch's ba..."]
+style CG_131 fill:#d4edda,stroke:#155724,color:#333
+CG_132["CG-132<br/>The web UI can create a task from a f..."]
+style CG_132 fill:#eee,stroke:#999,color:#333
+CG_133["CG-133<br/>garden retro: harvest PR friction, ru..."]
+style CG_133 fill:#d4edda,stroke:#155724,color:#333
+CG_134["CG-134<br/>garden walkthrough: render the live w..."]
+style CG_134 fill:#eee,stroke:#999,color:#333
+CG_135["CG-135<br/>garden qa: an agent drives the loop e..."]
+style CG_135 fill:#eee,stroke:#999,color:#333
+CG_136["CG-136<br/>PR descriptions stop costing rounds: ..."]
+style CG_136 fill:#d4edda,stroke:#155724,color:#333
+CG_137["CG-137<br/>Split the scheduler by tick phase and..."]
+style CG_137 fill:#eee,stroke:#999,color:#333
+CG_138["CG-138<br/>Automerge orders PRs that touch the s..."]
+style CG_138 fill:#e9ecef,stroke:#6c757d,color:#999
+CG_139["CG-139<br/>Rebase rounds do not count toward the..."]
+style CG_139 fill:#eee,stroke:#999,color:#333
+CG_140["CG-140<br/>An empty description rewrite falls ba..."]
+style CG_140 fill:#d4edda,stroke:#155724,color:#333
+CG_141["CG-141<br/>Rebase is its own mode: mechanical fi..."]
+style CG_141 fill:#eee,stroke:#999,color:#333
+CG_142["CG-142<br/>Task actions refuse a task that is do..."]
+style CG_142 fill:#eee,stroke:#999,color:#333
+CG_143["CG-143<br/>Ship the garden-operate skill with th..."]
+style CG_143 fill:#eee,stroke:#999,color:#333
+CG_144["CG-144<br/>A superseded review run is closed whe..."]
+style CG_144 fill:#eee,stroke:#999,color:#333
+CG_145["CG-145<br/>garden retro waits for the persona re..."]
+style CG_145 fill:#eee,stroke:#999,color:#333
+CG_146["CG-146<br/>A retro page per phase: the reconcile..."]
+style CG_146 fill:#eee,stroke:#999,color:#333
+CG_147["CG-147<br/>A product clone gets a git identity w..."]
+style CG_147 fill:#eee,stroke:#999,color:#333
+CG_001 --> CG_002
+CG_001 --> CG_003
+CG_002 --> CG_004
+CG_003 --> CG_004
+CG_001 --> CG_005
+CG_004 --> CG_006
+CG_004 --> CG_007
+CG_005 --> CG_007
+CG_004 --> CG_014
+CG_014 --> CG_015
+CG_014 --> CG_016
+CG_004 --> CG_017
+CG_017 --> CG_018
+CG_017 --> CG_019
+CG_017 --> CG_020
+CG_016 --> CG_020
+CG_017 --> CG_021
+CG_016 --> CG_022
+CG_016 --> CG_023
+CG_004 --> CG_024
+CG_006 --> CG_026
+CG_008 --> CG_013
+CG_027 --> CG_028
+CG_009 --> CG_029
+CG_008 --> CG_029
+CG_013 --> CG_029
+CG_027 -.->|discovered| CG_032
+CG_027 -.->|discovered| CG_033
+CG_027 -.->|discovered| CG_034
+CG_027 -.->|discovered| CG_035
+CG_027 -.->|discovered| CG_036
+CG_027 -.->|discovered| CG_037
+CG_027 -.->|discovered| CG_038
+CG_027 -.->|discovered| CG_039
+CG_027 -.->|discovered| CG_040
+CG_027 -.->|discovered| CG_041
+CG_027 -.->|discovered| CG_042
+CG_081 --> CG_049
+CG_034 -.->|discovered| CG_049
+CG_035 -.->|discovered| CG_051
+CG_038 -.->|discovered| CG_052
+CG_031 -.->|discovered| CG_056
+CG_032 -.->|discovered| CG_077
+CG_069 --> CG_080
+CG_054 --> CG_082
+CG_054 -.->|discovered| CG_082
+CG_086 --> CG_087
+CG_071 -.->|discovered| CG_089
+CG_082 -.->|discovered| CG_090
+CG_082 -.->|discovered| CG_091
+CG_081 --> CG_092
+CG_081 -.->|discovered| CG_092
+CG_091 -.->|discovered| CG_093
+CG_037 -.->|discovered| CG_095
+CG_090 -.->|discovered| CG_097
+CG_090 --> CG_098
+CG_101 --> CG_098
+CG_090 -.->|discovered| CG_101
+CG_093 -.->|discovered| CG_102
+CG_091 -.->|discovered| CG_103
+CG_061 -.->|discovered| CG_105
+CG_081 -.->|discovered| CG_107
+CG_101 -.->|discovered| CG_108
+CG_092 -.->|discovered| CG_110
+CG_098 --> CG_113
+CG_098 -.->|discovered| CG_113
+CG_112 -.->|discovered| CG_114
+CG_045 -.->|discovered| CG_115
+CG_064 --> CG_119
+CG_098 -.->|discovered| CG_119
+CG_078 -.->|discovered| CG_120
+CG_078 --> CG_121
+CG_078 -.->|discovered| CG_121
+CG_086 --> CG_122
+CG_086 -.->|discovered| CG_122
+CG_083 -.->|discovered| CG_124
+CG_065 -.->|discovered| CG_125
+CG_121 -.->|discovered| CG_126
+CG_074 -.->|discovered| CG_127
+CG_062 -.->|discovered| CG_128
+CG_088 -.->|discovered| CG_130

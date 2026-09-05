@@ -1,0 +1,143 @@
+CG-111 · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+context-garden / phase-02-friction · CG-111 A worker cannot write outside its worktree, whatever it is told
+in fruit done in fruit priority first · 0 · medium · PR ↗
+Brief Latest run
+Reset revision counter (1)
+Persona review…
+tier easy medium hard
+priority first · 0 next · 1 normal · 2 later · 3 someday · 4
+Suggest a change…
+Report friction…
+Personas: Run persona review available: designer, project-manager, security, staff-engineer, usability-expert, user
+Start a model trial
++ Add contender Start trial
+Suggest a change to this task
+A person's wording is rarely the final wording. Write what the task should say; an agent folds it into the task file for you.
+applies to goal context acceptance reading priority difficulty anything
+Suggest it lands in the task file and is integrated on the next tick
+Report friction about this process
+File report
+$19.85 cost across 9 runs
+45,975 input tokens
+174,813 output tokens
+17,895,429 cache reads · 58.3 min
+Goal
+A worker's writes are confined to its own worktree by the runner, not by the brief. Nothing a person types into an answer, and nothing a worker reads, lets it edit or commit in the live garden, the product clone, or another task's worktree.
+Context
+On the first live run, CG-092's worker was asked a question, the person answered "Try to make the fix yourself", and the resumed worker changed directory to the live garden ( /home/joshua/garden ), edited garden.yaml and product.md there, and committed on main under the person's git identity. The garden's next push carried the commit to GitHub. The change removed the product's pre-PR checks in favour of a setup block the running scheduler does not know, so the next restart would have run with no gate. CG-054 and CG-058 keep the brief and garden commands away from the garden; this is the remaining hole. The brief never named the garden: the worker's first run found it by listing the filesystem ( /home/joshua/garden/.garden turned up in a directory sweep). The harness runs with --permission-mode acceptEdits , which accepted Edit calls on files outside the worktree without a prompt, and its Bash calls ( cd /home/joshua/garden && git commit ... ) ran unchallenged. Choose the fence and implement it: run the harness with a permission mode that auto-accepts edits inside the worktree and denies them outside (in -p mode a prompt cannot be answered, so a denied edit fails, which is what we want); and, as belt and braces, have finalize check the garden repo and the product clone for changes or new commits since dispatch, revert them, and mark the run failed with a card that quotes what was touched. Say in docs/worker-protocol.md that the fence is the runner's, and that a person's answer cannot lift it.
+Acceptance criteria
+[ ] a fake-harness run that writes outside its worktree fails, the write is undone, and the Inbox says what it touched.
+[ ] edits and shell commands outside the worktree are denied (permission rules scoped to the worktree, or a sandbox); edits inside it still need no prompt.
+[ ] docs/worker-protocol.md states the fence.
+Friction This branch hit the revision cap on repeated tests/fake_claude.py conflicts with main as other tasks landed new test modes there. Each rebase was mechanical (disjoint mode-list additions) but the file is a hotspot; a fixture split by concern would reduce future collisions.
+Last automated review ✅ Automated review: approve — Two-layer worktree fence (harness deny rules + finalize revert) correctly implemented, meets all three acceptance criteria, and is thoroughly tested (420 pass, ruff clean). Only the PR description's Friction section carries process narration; rewritten below.
+Nits
+- Worktree-file detection compares whole porcelain lines, so a further edit to an already-dirty pre-existing file is not seen as a worker change; a minor gap covered by the transcript-attribution path and belt-and-braces intent. ( src/garden/scheduler.py :1046)
+PR description
+The Friction section narrates this PR's review/rebase history ("hit the revision cap on repeated conflicts", "Each rebase was mechanical"), which is scar tissue the description standard forbids and which the protocol keeps out of pr_body. Keep the genuine observation (fake_claude.py is a shared hotspot) as a forward-looking follow-up without the round-by-round history.
+Usage by run mode mode runs input cache-read output cost review 3 11,971 1,604,965 32,314 $3.32 revise 5 28,802 7,098,126 66,163 $8.02 work 1 5,202 9,192,338 76,336 $8.50
+Runs
+run mode status model min brief tok input cache-read output cost
+20260905T020459Z-review review done
+claude:claude-opus-4-8 5 24,732
+4070 479352 8596
+$1.05
+open run
+20260905T014600Z-revise revise done
+claude:claude-opus-4-8 3 14,643
+4219 911963 6189
+$1.06
+open run
+20260905T004518Z-revise revise done
+claude:claude-opus-4-8 3 13,982
+7493 692408 5410
+$0.95
+open run
+20260904T222844Z-revise revise done
+claude:claude-opus-4-8 4 13,433
+4215 910148 11592
+$1.27
+open run
+20260904T221542Z-revise revise done
+claude:claude-opus-4-8 5 12,746
+8362 1764107 13410
+$1.78
+open run
+20260904T221244Z-review review done
+claude:claude-opus-4-8 3 22,472
+3941 434553 8400
+$0.94
+open run · error
+20260904T220304Z-revise revise done
+claude:claude-opus-4-8 8 12,655
+4513 2819500 29562
+$2.97
+open run · error
+20260904T215716Z-review review done
+claude:claude-opus-4-8 5 20,228
+3960 691060 15318
+$1.33
+open run
+20260904T213406Z-work work done
+claude:claude-opus-4-8 23 10,351
+5202 9192338 76336
+$8.50
+open run
+Timeline 09-05T02:13 transition in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/57 09-05T02:12 automerged 09-05T02:09 review approve: Two-layer worktree fence (harness deny rules + finalize revert) correctly implemented, meets all three acceptance criteria, and is thoroughly tested (420 pass, ruff clean). Only the PR description's Friction section carries process narration; rewritten below. 09-05T02:09 run_finished review approve $1.05 09-05T02:04 dispatch review claude-opus-4-8 base 09-05T02:04 transition in_review → in_review: triage: marked ready for review 09-05T02:04 triaged ready by human 09-05T01:50 needs_human 2 automated review round(s) used; this PR is yours 09-05T01:50 friction 09-05T01:50 transition running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (friction, omit-body, discover-kinds) and this branch's escape mode and its escaped_path note. All fence commits replayed cleanly; 420 tests pass and ruff is clean. cost=$1.06 09-05T01:50 check pre_pr lint: pass 09-05T01:50 check pre_pr test: pass 09-05T01:49 run_finished revise done $1.06 09-05T01:46 transition changes_requested → running: dispatched revise run 20260905T014600Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14643 tokens) 09-05T01:46 dispatch revise claude-opus-4-8 base main 09-05T01:42 transition changes_requested → changes_requested: re-enabled by hand; revise run will follow 09-05T01:16 transition in_review → changes_requested: PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve 09-05T01:16 conflict vs main: conflicts in tests/fake_claude.py; revise run queued 09-05T00:49 needs_human 2 automated review round(s) used; this PR is yours 09-05T00:49 transition running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (discover-kinds, review-desc, wont_do/no_change) and this branch's escape mode; added escape to the fake-claude docstring for consistency. All fence commits replayed cleanly. cost=$0.95 09-05T00:49 check pre_pr lint: pass 09-05T00:49 check pre_pr test: pass 09-05T00:48 run_finished revise done $0.95 09-05T00:45 transition changes_requested → running: dispatched revise run 20260905T004518Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13982 tokens) 09-05T00:45 dispatch revise claude-opus-4-8 base main 09-05T00:03 transition changes_requested → changes_requested: re-enabled by hand; revise run will follow 09-05T00:02 transition in_review → changes_requested: PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human 09-05T00:02 needs_human PR conflicts with main and 3 revision rounds already used 09-05T00:02 conflict vs main: conflicts in tests/fake_claude.py; revise run queued 09-04T22:33 transition running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Addressed the triage feedback on PR #57: rewrote the two comments that narrated the review process (scheduler _fence_check docstring and a test_fence docstring) to describe the behaviour instead, and took the cheap improvement so transcript attribution also matches paths named relative to the worktree or its parent, with a new test. All 298 tests pass and ruff is clean. cost=$1.27 09-04T22:32 check pre_pr lint: pass 09-04T22:32 check pre_pr test: pass 09-04T22:32 run_finished revise done $1.27 09-04T22:28 transition changes_requested → running: dispatched revise run 20260904T222844Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13433 tokens) 09-04T22:28 dispatch revise claude-opus-4-8 base main 09-04T22:27 transition in_review → changes_requested: triage: changes requested by hand: Two comments narrate the review process instead of the behaviour: src/garden/scheduler.py line 765 and the test docstrin 09-04T22:27 triaged changes by human 09-04T22:21 transition running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's new wont_do/no_change modes and this branch's escape mode. Also fixed a real fragility the rebase surfaced: the fenced-write Inbox card now leads with the repo label and touched files and puts the long absolute path last, so a truncated card still names what was written. cost=$1.78 09-04T22:21 check pre_pr lint: pass 09-04T22:21 check pre_pr test: pass 09-04T22:20 run_finished revise done $1.78 09-04T22:15 transition changes_requested → running: dispatched revise run 20260904T221542Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12746 tokens) 09-04T22:15 dispatch revise claude-opus-4-8 base main 09-04T22:15 run_finished review done $0.94 09-04T22:12 transition in_review → changes_requested: PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve 09-04T22:12 conflict vs main: conflicts in tests/fake_claude.py; revise run queued 09-04T22:12 dispatch review claude-opus-4-8 base 09-04T22:11 transition running → ready: no active run found; back to ready 09-04T22:10 run_finished revise done $2.97 09-04T22:03 transition changes_requested → running: dispatched revise run 20260904T220304Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12655 tokens) 09-04T22:03 dispatch revise claude-opus-4-8 base main 09-04T22:03 transition in_review → changes_requested: 1 new review item(s) 09-04T22:03 feedback 09-04T22:02 review approve: Fence is correctly implemented in two layers, meets the acceptance criteria for the garden/clone incident vector, and is well-tested (246 pass, ruff clean). Default config denies only the two known repos rather than fully scoping to the worktree, but this is disclosed and the belt-and-braces revert is a solid net. 09-04T22:02 run_finished review approve $1.33 09-04T21:59 transition changes_requested → in_review: triage: marked ready for review (the only new item was Codex's usage-limit notice, not a finding; back to in_review while the automat) 09-04T21:59 triaged ready by human 09-04T21:57 transition in_review → changes_requested: 1 new review item(s) 09-04T21:57 feedback 09-04T21:57 dispatch review claude-opus-4-8 base
+Log 2026-09-04T21:34:07+00:00 dispatched work run 20260904T213406Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~10351 tokens)
+2026-09-04T21:57:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/57 (base main): Confined a worker's writes to its own worktree at the runner, not the brief: the claude harness now passes permissions.deny rules (and an opt-in worktree sandbox) for the live garden and product clone, and finalize snapshots those repos at dispatch and reverts any commit or non-owned write on reap, failing the run with an Inbox card that quotes what was touched. Scheduler-owned task-file/.garden changes (e.g. garden sync) are ignored so they don't false-trip. Documented the fence in worker-protocol.md. cost=$8.50
+2026-09-04T21:57:27+00:00 1 new review item(s)
+2026-09-04T21:59:04+00:00 triage: marked ready for review (the only new item was Codex's usage-limit notice, not a finding; back to in_review while the automat)
+2026-09-04T22:02:21+00:00 automated review: approve — Fence is correctly implemented in two layers, meets the acceptance criteria for the garden/clone incident vector, and is well-tested (246 pass, ruff clean). Default config denies only the two known repos rather than fully scoping to the worktree, but this is disclosed and the belt-and-braces revert is a solid net. cost=$1.33
+2026-09-04T22:03:03+00:00 1 new review item(s)
+2026-09-04T22:03:05+00:00 dispatched revise run 20260904T220304Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12655 tokens)
+2026-09-04T22:11:53+00:00 no active run found; back to ready
+2026-09-04T22:12:43+00:00 revise run 20260904T220304Z-revise finished (commit 76e746d) but the orphan sweep closed it before the reap; pushed by hand, review restarted
+2026-09-04T22:12:54+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+2026-09-04T22:15:42+00:00 dispatched revise run 20260904T221542Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~12746 tokens)
+2026-09-04T22:21:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's new wont_do/no_change modes and this branch's escape mode. Also fixed a real fragility the rebase surfaced: the fenced-write Inbox card now leads with the repo label and touched files and puts the long absolute path last, so a truncated card still names what was written. cost=$1.78
+2026-09-04T22:27:58+00:00 triage: changes requested by hand: Two comments narrate the review process instead of the behaviour: src/garden/scheduler.py line 765 and the test docstrin
+2026-09-04T22:28:44+00:00 dispatched revise run 20260904T222844Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13433 tokens)
+2026-09-04T22:33:00+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Addressed the triage feedback on PR #57: rewrote the two comments that narrated the review process (scheduler _fence_check docstring and a test_fence docstring) to describe the behaviour instead, and took the cheap improvement so transcript attribution also matches paths named relative to the worktree or its parent, with a new test. All 298 tests pass and ruff is clean. cost=$1.27
+2026-09-05T00:02:24+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
+2026-09-05T00:03:38+00:00 revision counter reset (web)
+2026-09-05T00:03:38+00:00 re-enabled by hand; revise run will follow
+2026-09-05T00:45:18+00:00 dispatched revise run 20260905T004518Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13982 tokens)
+2026-09-05T00:49:40+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (discover-kinds, review-desc, wont_do/no_change) and this branch's escape mode; added escape to the fake-claude docstring for consistency. All fence commits replayed cleanly. cost=$0.95
+2026-09-05T00:49:40+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-111` for one more round, or review on GitHub
+2026-09-05T01:16:50+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+2026-09-05T01:42:50+00:00 revision counter reset (web)
+2026-09-05T01:42:50+00:00 re-enabled by hand; revise run will follow
+2026-09-05T01:46:00+00:00 dispatched revise run 20260905T014600Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14643 tokens)
+2026-09-05T01:50:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/57: Rebased the branch onto origin/main and resolved the tests/fake_claude.py conflict, keeping both main's newer test modes (friction, omit-body, discover-kinds) and this branch's escape mode and its escaped_path note. All fence commits replayed cleanly; 420 tests pass and ruff is clean. cost=$1.06
+2026-09-05T01:50:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-111` for one more round, or review on GitHub
+2026-09-05T02:04:58+00:00 triage: marked ready for review
+2026-09-05T02:09:54+00:00 automated review: approve — Two-layer worktree fence (harness deny rules + finalize revert) correctly implemented, meets all three acceptance criteria, and is thoroughly tested (420 pass, ruff clean). Only the PR description's Friction section carries process narration; rewritten below. cost=$1.05
+2026-09-05T02:13:37+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/57
+file context-garden/phase-02-friction/tasks/CG-111-a-worker-cannot-write-outside-its-worktree-whate.md
+depends on —
+unblocks —
+reading src/garden/harness.py src/garden/runner/local.py src/garden/scheduler.py docs/worker-protocol.md
+branch garden/cg-111-a-worker-cannot-write-outside-its-worktree-whate
+PR https://github.com/joshmarcus/context-garden/pull/57
+review / CI — / SUCCESS
+auto review approve (2 rounds)
+automerge merged by the garden (merge, 2 review rounds)
+attempts 1 · 1 revision(s)
+runner default / default harness
+updated 2026-09-05T02:13

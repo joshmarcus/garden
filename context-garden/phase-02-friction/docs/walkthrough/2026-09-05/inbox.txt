@@ -1,0 +1,224 @@
+Inbox · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+What needs you Every item here is a decision only a person can make. Beyond that, the garden grows.
+Board Timeline
+14 need you
+0/5 workers running
+0/3 reviews running
+0 PRs open
+$581.07 spent in 24h
+retrying Auto-retrying · 1, no action needed A previous attempt failed; a new run is queued or in progress. No action needed unless you want to cancel.
+sprout
+CG-029 ready sprout · medium · 3h
+Close the phase: friction document, what changed, and the next goals
+manual: closing the phase edits the garden repo (friction.md, the next phase's goals), which no worker checks out; a person or a garden-side agent does it when the phase's work has landed
+Cancel
+approve Approve planned or discovered work Draft tasks waiting for a go.
+seed
+CG-030 draft seed · easy · 2h
+Plates: label what each plate shows, keep every file public domain, credit Thomé
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-125 draft seed · medium · 2h
+Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart
+discovered by CG-065 · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-132 draft seed · easy · 2h
+The web UI can create a task from a form, with the same fields as garden new-task
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-134 draft seed · medium · 2h
+garden walkthrough: render the live web app's pages for the retro and the persona reviews
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03; done by hand for this retro
+Approve
+Drop
+seed
+CG-135 draft seed · hard · 2h
+garden qa: an agent drives the loop end to end through the web app on a throwaway garden
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-137 draft seed · hard · 2h
+Split the scheduler by tick phase and the web actions into a registry so features stop colliding
+planned, not yet approved · deferred by the feature freeze (2026-09-05): first task of phase 03, run alone
+Approve
+Drop
+seed
+CG-139 draft seed · easy · 1h
+Rebase rounds do not count toward the revision cap
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03; cleared by hand when it happens
+Approve
+Drop
+seed
+CG-141 draft seed · medium · 37m
+Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue
+planned, not yet approved · deferred by the feature freeze (2026-09-05): phase 03, after the split (CG-137); absorbs CG-138 and the rebase half of CG-139
+Approve
+Drop
+seed
+CG-142 draft seed · easy · 36m
+Task actions refuse a task that is done or cancelled
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-143 draft seed · easy · 33m
+Ship the garden-operate skill with the tool so every new garden gets it
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-144 draft seed · easy · 26m
+A superseded review run is closed when a newer review starts; no run record outlives its process
+planned, not yet approved · deferred by the feature freeze (2026-09-05): carry into phase 03
+Approve
+Drop
+seed
+CG-145 draft seed · easy · 9m
+garden retro waits for the persona reports before it dispatches the reconciliation
+planned, not yet approved · deferred by the feature freeze (2026-09-05): worked around with --skip-personas this time
+Approve
+Drop
+seed
+CG-146 draft seed · medium · 5m
+A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+planned, not yet approved · deferred by the feature freeze (2026-09-05): phase 03; the phase-02 retro files are under docs/retro, docs/reviews and docs/friction.md meanwhile
+Approve
+Drop
+seed
+CG-147 draft seed · easy · 4m
+A product clone gets a git identity when it is made, and doctor checks every clone
+planned, not yet approved · deferred by the feature freeze (2026-09-05): identity set by hand in the garden clone this time
+Approve
+Drop
+Progress Merged work against scope, all phases
+0
+61
+123
+123 in scope
+84 merged
+84 merged
+2026-09-04T17:02: 1 merged
+2026-09-04T17:18: 2 merged
+2026-09-04T17:24: 3 merged
+2026-09-04T17:32: 4 merged
+2026-09-04T17:40: 5 merged
+2026-09-04T17:42: 6 merged
+2026-09-04T17:42: 7 merged
+2026-09-04T17:45: 8 merged
+2026-09-04T17:49: 9 merged
+2026-09-04T18:05: 10 merged
+2026-09-04T18:06: 11 merged
+2026-09-04T18:06: 12 merged
+2026-09-04T18:09: 13 merged
+2026-09-04T18:25: 14 merged
+2026-09-04T18:28: 15 merged
+2026-09-04T18:29: 16 merged
+2026-09-04T18:33: 17 merged
+2026-09-04T18:54: 18 merged
+2026-09-04T18:55: 19 merged
+2026-09-04T18:59: 20 merged
+2026-09-04T18:59: 21 merged
+2026-09-04T19:05: 22 merged
+2026-09-04T19:09: 23 merged
+2026-09-04T19:11: 24 merged
+2026-09-04T19:18: 25 merged
+2026-09-04T19:34: 26 merged
+2026-09-04T19:34: 27 merged
+2026-09-04T19:36: 28 merged
+2026-09-04T19:38: 29 merged
+2026-09-04T19:44: 30 merged
+2026-09-04T20:14: 31 merged
+2026-09-04T20:15: 32 merged
+2026-09-04T21:18: 33 merged
+2026-09-04T21:18: 34 merged
+2026-09-04T21:20: 35 merged
+2026-09-04T21:21: 36 merged
+2026-09-04T21:26: 37 merged
+2026-09-04T21:26: 38 merged
+2026-09-04T21:27: 39 merged
+2026-09-04T22:02: 40 merged
+2026-09-04T22:02: 41 merged
+2026-09-04T22:03: 42 merged
+2026-09-04T22:04: 43 merged
+2026-09-04T22:06: 44 merged
+2026-09-04T22:09: 45 merged
+2026-09-04T23:57: 46 merged
+2026-09-04T23:58: 47 merged
+2026-09-04T23:58: 48 merged
+2026-09-04T23:58: 49 merged
+2026-09-04T23:58: 50 merged
+2026-09-04T23:58: 51 merged
+2026-09-04T23:58: 52 merged
+2026-09-04T23:59: 53 merged
+2026-09-04T23:59: 54 merged
+2026-09-04T23:59: 55 merged
+2026-09-04T23:59: 56 merged
+2026-09-05T00:00: 57 merged
+2026-09-05T00:01: 58 merged
+2026-09-05T00:01: 59 merged
+2026-09-05T00:05: 60 merged
+2026-09-05T00:06: 61 merged
+2026-09-05T00:07: 62 merged
+2026-09-05T00:17: 63 merged
+2026-09-05T00:26: 64 merged
+2026-09-05T00:28: 65 merged
+2026-09-05T00:29: 66 merged
+2026-09-05T00:41: 67 merged
+2026-09-05T00:49: 68 merged
+2026-09-05T00:57: 69 merged
+2026-09-05T01:10: 70 merged
+2026-09-05T01:13: 71 merged
+2026-09-05T01:14: 72 merged
+2026-09-05T01:18: 73 merged
+2026-09-05T01:24: 74 merged
+2026-09-05T01:45: 75 merged
+2026-09-05T01:53: 76 merged
+2026-09-05T01:54: 77 merged
+2026-09-05T01:58: 78 merged
+2026-09-05T02:07: 79 merged
+2026-09-05T02:10: 80 merged
+2026-09-05T02:12: 81 merged
+2026-09-05T02:13: 82 merged
+2026-09-05T02:17: 83 merged
+2026-09-05T02:30: 84 merged
+Sep 04
+Sep 05 02:55
+merged (84) PRs opened (87)
+Spend Cost by difficulty tier
+easy
+easy: $255.94 over 50 task(s)
+$255.94 · 50 tasks
+medium
+medium: $251.36 over 37 task(s)
+$251.36 · 37 tasks
+hard
+hard: $39.77 over 3 task(s)
+$39.77 · 3 tasks
+If a tier's revisions climb, its model is too cheap for the work; see metrics .
+Report friction…
+Report friction about this process
+context-garden
+context-garden/phase-01-bootstrap context-garden/phase-02-friction
+File report

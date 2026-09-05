@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trellis · context-garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --ground:#f2f5f0; --surface:#ffffff; --surface-2:#e9eee7; --label:#ffffff; --line:#d6ded4; --line-strong:#b9c5bb;
+  --ink:#17201b; --muted:#5f6b64; --faint:#8b968f; --accent:#2b7a57; --accent-ink:#ffffff; --accent-soft:#dcefe4; --stamp:#c23b3b; --tape:rgba(224,214,178,.8);
+  --s-draft:#7f8a83; --s-blocked:#b5850f; --s-ready:#1c9c8c; --s-running:#3b62d9; --s-waiting_human:#c2417f; --s-awaiting_triage:#7c5cd6; --s-in_review:#2a8fa3; --s-changes_requested:#d0702a; --s-done:#2f8a4f; --s-failed:#c23b3b; --s-wont_do:#8a6d3b; --s-cancelled:#9aa39d;
+  --good:#2f8a4f; --warn:#b5850f; --bad:#c23b3b;
+  --viz-1:#2a78d6; --viz-2:#eb6834; --viz-ord-1:#6fbf98; --viz-ord-2:#3f9a6f; --viz-ord-3:#22664a;
+  /* pressed-specimen palette used by the plant and stage drawings: moss greens on the old ground */
+  --sp-ink:#24352b; --leaf:#4f9a72; --leaf-tint:#4f9a72; --hatch:#22664a; --vein:#a8d4bd; --petal:#cfa3b9; --petal-tint:#cfa3b9; --petal2:#e6c6d2; --pea:#7fcaa2;
+  --berry:#4a2f45; --berry-tint:#4a2f45; --berry2:#7a4a63; --apple:#c0383a; --poppy:#d95f4a; --seed:#8a6d4e; --wilt:#9c8b6b; --pressed:#6f9a80; --pin:#c23b3b; --paper:#ffffff;
+  --display:"Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --body:"Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mono:"Courier Prime", "Courier New", Courier, monospace;
+  --radius:2px; --shadow:0 1px 0 #fff inset, 0 6px 18px -12px rgba(0,0,0,.4);
+  --vine-opacity:.17;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --ground:#121614; --surface:#1a201c; --surface-2:#222a25; --label:#1a201c; --line:#2c3630; --line-strong:#3e4b43;
+  --ink:#e6ece7; --muted:#98a59e; --faint:#6f7c75; --accent:#5cc493; --accent-ink:#0f1a14; --accent-soft:#1f3a2c; --stamp:#ef6b6b; --tape:rgba(224,214,178,.28);
+  --s-draft:#8f9a93; --s-blocked:#d3a02a; --s-ready:#3cc2b0; --s-running:#6f8ff0; --s-waiting_human:#e06aa3; --s-awaiting_triage:#a98cf0; --s-in_review:#5fb8cc; --s-changes_requested:#f09a55; --s-done:#5cc47a; --s-failed:#ef6b6b; --s-wont_do:#b89b6a; --s-cancelled:#7f8a83;
+  --good:#5cc47a; --warn:#d3a02a; --bad:#ef6b6b;
+  --viz-1:#3987e5; --viz-2:#d95926; --viz-ord-1:#7fcaa2; --viz-ord-2:#4fa57e; --viz-ord-3:#2f8a62;
+  --sp-ink:#cfe3d5; --leaf:#4fa57e; --leaf-tint:#4fa57e; --hatch:#7fcaa2; --vein:#9fd6b8; --petal:#d19bb5; --petal-tint:#d19bb5; --petal2:#e2bfcd; --pea:#7fcaa2;
+  --berry:#6a4a62; --berry-tint:#6a4a62; --berry2:#a06b86; --apple:#d95252; --poppy:#e0715a; --seed:#b08f68; --wilt:#a89a78; --pressed:#6f9a80; --pin:#ef6b6b; --paper:#1a201c;
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px -14px rgba(0,0,0,.7);
+  --vine-opacity:.13;
+}}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground:#121614; --surface:#1a201c; --surface-2:#222a25; --label:#1a201c; --line:#2c3630; --line-strong:#3e4b43;
+  --ink:#e6ece7; --muted:#98a59e; --faint:#6f7c75; --accent:#5cc493; --accent-ink:#0f1a14; --accent-soft:#1f3a2c; --stamp:#ef6b6b; --tape:rgba(224,214,178,.28);
+  --s-draft:#8f9a93; --s-blocked:#d3a02a; --s-ready:#3cc2b0; --s-running:#6f8ff0; --s-waiting_human:#e06aa3; --s-awaiting_triage:#a98cf0; --s-in_review:#5fb8cc; --s-changes_requested:#f09a55; --s-done:#5cc47a; --s-failed:#ef6b6b; --s-wont_do:#b89b6a; --s-cancelled:#7f8a83;
+  --good:#5cc47a; --warn:#d3a02a; --bad:#ef6b6b;
+  --viz-1:#3987e5; --viz-2:#d95926; --viz-ord-1:#7fcaa2; --viz-ord-2:#4fa57e; --viz-ord-3:#2f8a62;
+  --sp-ink:#cfe3d5; --leaf:#4fa57e; --leaf-tint:#4fa57e; --hatch:#7fcaa2; --vein:#9fd6b8; --petal:#d19bb5; --petal-tint:#d19bb5; --petal2:#e2bfcd; --pea:#7fcaa2;
+  --berry:#6a4a62; --berry-tint:#6a4a62; --berry2:#a06b86; --apple:#d95252; --poppy:#e0715a; --seed:#b08f68; --wilt:#a89a78; --pressed:#6f9a80; --pin:#ef6b6b; --paper:#1a201c;
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px -14px rgba(0,0,0,.7);
+  --vine-opacity:.13;
+}
+* { box-sizing:border-box; }
+html { background:var(--ground); }
+body { margin:0; background:var(--ground); color:var(--ink); font:14.5px/1.45 var(--body); font-variant-numeric: tabular-nums; }
+a { color:inherit; text-decoration:underline; text-decoration-color:var(--line-strong); text-underline-offset:2px; }
+a:hover { text-decoration-color:var(--ink); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:2px solid var(--stamp); outline-offset:2px; }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+
+/* ---- drawings: pressed specimens and growth-stage glyphs ------------------------ */
+svg.plant, svg.stage { --ink:var(--sp-ink); }
+svg.plant { filter: drop-shadow(1px 2px 1.5px rgba(40,40,20,.28)); transform: scaleY(.97); display:block; }
+svg.stage { --ink:var(--sp-ink); vertical-align:middle; flex:none; }
+.specimen { position:relative; background:var(--label); border:1px solid var(--line); box-shadow:var(--shadow); }
+.specimen .tape { position:absolute; width:72px; height:18px; background:var(--tape); box-shadow:0 1px 1px rgba(0,0,0,.08); }
+.specimen .lbl { position:absolute; background:var(--label); border:1px solid var(--ink); padding:8px 10px; font:11.5px/1.45 var(--mono); width:230px; color:var(--ink); }
+.specimen .lbl b { letter-spacing:.06em; }
+.specimen .plate-mount { display:flex; justify-content:center; padding:12px; background:#f4efe3; border:1px solid var(--line); box-shadow:0 1px 1px rgba(0,0,0,.06) inset; }
+.specimen .plate { display:block; width:auto; height:auto; max-width:100%; max-height:420px; mix-blend-mode:multiply; }
+.stamp { display:inline-block; font:700 10.5px/1.6 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--stamp); border:2px solid var(--stamp); border-radius:3px; padding:1px 7px; transform:rotate(-4deg); opacity:.85; mix-blend-mode:multiply; }
+:root[data-theme="dark"] .stamp { mix-blend-mode:normal; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stamp { mix-blend-mode:normal; } }
+.stamp.ink { color:var(--ink); border-color:var(--ink); }
+.state { display:inline-flex; align-items:center; gap:6px; font:12px/1.4 var(--mono); color:var(--ink); white-space:nowrap; }
+.state::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--c, var(--faint)); flex:none; }
+.state.s-draft{--c:var(--s-draft)} .state.s-blocked{--c:var(--s-blocked)} .state.s-ready{--c:var(--s-ready)} .state.s-running{--c:var(--s-running)} .state.s-waiting_human{--c:var(--s-waiting_human)} .state.s-awaiting_triage{--c:var(--s-awaiting_triage)} .state.s-in_review{--c:var(--s-in_review)} .state.s-changes_requested{--c:var(--s-changes_requested)} .state.s-done{--c:var(--s-done)} .state.s-failed{--c:var(--s-failed)} .state.s-wont_do{--c:var(--s-wont_do)} .state.s-cancelled{--c:var(--s-cancelled)}
+.state .stage-word { color:var(--muted); font-style:italic; font-family:var(--body); font-size:12.5px; }
+
+/* ---- the background vine: fixed to the bottom right, behind everything ------------- */
+svg.bg-vine { position:fixed; right:-28px; bottom:-30px; width:min(500px, 40vw); height:auto; z-index:0; pointer-events:none; user-select:none;
+  opacity:var(--vine-opacity); --ink:var(--sp-ink); --leaf:var(--leaf-tint); --vein:var(--vein); --hatch:var(--hatch); }
+@media (max-width: 1000px), print { svg.bg-vine { display:none; } }
+
+/* ---- shell: rail + main ----------------------------------------------------------- */
+.shell { display:grid; grid-template-columns: 236px minmax(0, 1fr); min-height:100vh; position:relative; z-index:1; }
+.rail { position:sticky; top:0; height:100vh; overflow:auto; padding:22px 16px; border-right:1px solid var(--line); background:var(--surface-2); display:flex; flex-direction:column; gap:22px; }
+.wordmark { font:700 13px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--ink); }
+.wordmark small { display:block; font-weight:400; letter-spacing:.08em; color:var(--muted); font-size:10.5px; text-transform:none; }
+.nav { display:flex; flex-direction:column; gap:2px; }
+.nav a { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:40px; padding:0 8px; text-decoration:none; color:var(--ink); font:13px/1 var(--mono); border-left:3px solid transparent; }
+.nav a:hover { background:var(--label); }
+.nav a.on { border-left-color:var(--ink); background:var(--label); }
+.nav .count { font:11px/1 var(--mono); color:var(--stamp); }
+.nav a.on .count.hot, .nav .count.hot { font-weight:700; }
+.rail h4 { margin:0 0 6px 8px; font:400 10.5px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.drawer { display:flex; gap:10px; align-items:center; padding:8px 10px; border:1px solid var(--line); border-left:3px solid transparent; background:var(--label); text-decoration:none; color:var(--ink); margin-bottom:8px; }
+.drawer:hover, .drawer.on { border-left-color:var(--ink); }
+.drawer .thumb { width:40px; height:60px; background:var(--label); border:1px solid var(--line); display:flex; justify-content:center; align-items:center; flex:none; }
+.drawer .thumb img { width:38px; height:58px; object-fit:cover; object-position:center top; display:block; background:#f4efe3; }
+.drawer .k { font:11px/1.4 var(--mono); min-width:0; }
+.drawer .k b { display:block; font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.drawer .k i { display:block; color:var(--muted); font-style:italic; font-family:var(--body); font-size:12px; }
+.drawer .k span { display:block; color:var(--muted); }
+.running-now { display:flex; flex-direction:column; gap:6px; font:12px/1.4 var(--mono); }
+.running-now .r { display:flex; gap:8px; align-items:center; color:var(--muted); }
+.running-now .dot { width:7px; height:7px; border-radius:50%; background:var(--s-running); flex:none; }
+.running-now .idle { color:var(--warn); }
+.rail .foot { margin-top:auto; font:11.5px/1.5 var(--mono); color:var(--faint); display:flex; flex-direction:column; gap:8px; }
+main { padding:26px 32px 60px; max-width:1320px; min-width:0; }  /* min-width:0 so wide content (the board, tables) scrolls inside its container instead of widening the page */
+.page-head { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:18px; }
+.page-head h1 { margin:0; font:500 30px/1.1 var(--display); letter-spacing:-.01em; text-wrap:balance; }
+.page-head p { margin:4px 0 0; color:var(--muted); max-width:62ch; }
+.page-head .tools { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.eyebrow { font:400 11px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+
+/* ---- controls -------------------------------------------------------------------- */
+button, .btn { font:12.5px/1 var(--mono); letter-spacing:.04em; padding:0 13px; min-height:36px; border:1px solid var(--ink); background:var(--label); color:var(--ink); cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:background .12s; }
+button:hover, .btn:hover { background:var(--surface-2); }
+button.primary, .btn.primary { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+button.danger { color:var(--bad); border-color:var(--line-strong); }
+button.quiet, .btn.quiet { border-color:var(--line); background:transparent; color:var(--muted); }
+button.quiet:hover { color:var(--ink); background:var(--label); }
+form.inline { display:inline; }
+input[type=text], input:not([type]), textarea { font:13px/1.4 var(--mono); padding:8px 10px; border:1px solid var(--line-strong); background:var(--label); color:var(--ink); }
+textarea { width:100%; min-height:72px; resize:vertical; }
+label.check { display:inline-flex; gap:6px; align-items:center; color:var(--muted); font-size:13px; }
+
+/* ---- surfaces -------------------------------------------------------------------- */
+.panel { background:var(--label); border:1px solid var(--line); padding:14px 16px; }
+.panel + .panel, .stack > * + * { margin-top:14px; }
+.panel h3 { margin:0 0 10px; font:500 15px/1.2 var(--display); color:var(--ink); }
+.grid2 { display:grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap:16px; align-items:start; }
+@media (max-width: 1000px) { .shell { grid-template-columns: 1fr; } .rail { position:static; height:auto; } .grid2 { grid-template-columns:1fr; } }
+.kpis { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+.kpi { background:var(--label); border:1px solid var(--line); padding:10px 12px; }
+.kpi .v { font:500 26px/1.1 var(--display); }
+.kpi .l { font:11px/1.4 var(--mono); color:var(--muted); letter-spacing:.06em; text-transform:uppercase; margin-top:4px; }
+.kpi.hot { border-color:var(--ink); }
+table { border-collapse:collapse; width:100%; }
+.panel > table { display:block; overflow-x:auto; }  /* a bare table in a panel scrolls inside it */
+.scroll { overflow-x:auto; }
+th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { font:700 10.5px/1.2 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink); border-bottom:2px solid var(--ink); }
+tr:last-child td { border-bottom:none; }
+td .id, td.mono { white-space:nowrap; }
+td.title { min-width:200px; }
+.mono { font-family:var(--mono); font-size:12.5px; }
+.muted { color:var(--muted); }
+.faint { color:var(--faint); }
+.empty { color:var(--faint); padding:18px 0; text-align:center; font-family:var(--mono); font-size:12.5px; }
+.warn { background:color-mix(in srgb, var(--warn) 14%, var(--label)); border:1px solid color-mix(in srgb, var(--warn) 45%, var(--line)); padding:10px 14px; margin-bottom:14px; }
+.flash { background:color-mix(in srgb, var(--bad) 14%, var(--label)); border-color:color-mix(in srgb, var(--bad) 45%, var(--line)); }
+.prose { max-width:70ch; }
+.prose h1,.prose h2,.prose h3 { font-family:var(--display); font-weight:500; margin:1.2em 0 .4em; }
+.prose h2 { font-size:18px; } .prose h3 { font-size:15.5px; }
+.prose pre { background:var(--surface-2); padding:10px 12px; overflow-x:auto; font-size:12.5px; font-family:var(--mono); }
+.prose code { font-family:var(--mono); font-size:12.5px; background:var(--surface-2); padding:1px 4px; }
+.prose pre code { background:none; padding:0; }
+.prose table { font-size:13px; }
+.actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.kv { display:grid; grid-template-columns: 112px 1fr; gap:6px 12px; font-size:13px; }
+.kv dt { color:var(--muted); font:11px/1.6 var(--mono); letter-spacing:.06em; text-transform:uppercase; } .kv dd { margin:0; min-width:0; overflow-wrap:anywhere; }
+details > summary { cursor:pointer; color:var(--muted); list-style:none; font-family:var(--mono); font-size:12.5px; }
+details > summary::before { content:"▸ "; color:var(--faint); }
+details[open] > summary::before { content:"▾ "; }
+.log { font:12px/1.55 var(--mono); white-space:pre-wrap; overflow-wrap:anywhere; color:var(--muted); }
+pre.log { margin:0; max-height:70vh; overflow:auto; background:var(--surface-2); padding:12px 14px; border:1px solid var(--line); }
+
+/* ---- tabs (radio-driven, no JS): a run's brief / transcript / final / stderr ---------- */
+.tabs > input[type=radio] { position:absolute; opacity:0; pointer-events:none; }
+.tab-labels { display:flex; gap:4px; border-bottom:2px solid var(--ink); margin-bottom:14px; flex-wrap:wrap; }
+.tab-labels label { padding:8px 14px; cursor:pointer; font:12.5px/1 var(--mono); color:var(--muted); border:1px solid var(--line); border-bottom:none; background:var(--surface-2); margin-bottom:-2px; }
+.tab-labels label:hover { color:var(--ink); }
+.tab-panel { display:none; }
+#tab-transcript:checked ~ .tab-labels label[for=tab-transcript],
+#tab-brief:checked ~ .tab-labels label[for=tab-brief],
+#tab-final:checked ~ .tab-labels label[for=tab-final],
+#tab-stderr:checked ~ .tab-labels label[for=tab-stderr] { color:var(--ink); background:var(--label); border-bottom:2px solid var(--label); }
+#tab-transcript:checked ~ .tab-panel[data-tab=transcript],
+#tab-brief:checked ~ .tab-panel[data-tab=brief],
+#tab-final:checked ~ .tab-panel[data-tab=final],
+#tab-stderr:checked ~ .tab-panel[data-tab=stderr] { display:block; }
+.tl { list-style:none; padding:0; margin:0; font-size:12.5px; }
+.tl li { display:grid; grid-template-columns: 78px 118px 1fr; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); }
+.tl .k { font:11.5px/1.6 var(--mono); color:var(--muted); }
+.chart { display:block; overflow:visible; }
+.spark { vertical-align:middle; }
+.filters { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+.filters a { padding:6px 10px; border:1px solid var(--line); text-decoration:none; font:12px/1 var(--mono); color:var(--muted); background:var(--label); }
+.filters a.on { border-color:var(--ink); color:var(--ink); }
+.id { font:700 12px/1 var(--mono); color:var(--ink); }
+.badge { display:inline-block; font:400 10.5px/1.4 var(--mono); padding:1px 6px; border:1px solid var(--line); color:var(--muted); margin-left:6px; vertical-align:middle; }
+.badge.hot { border-color:var(--stamp); color:var(--stamp); }
+.pill { display:inline-flex; align-items:center; gap:6px; padding:2px 8px 2px 6px; font:12px/1.6 var(--mono); color:var(--ink); background:var(--surface-2); white-space:nowrap; }
+.pill::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--c, var(--faint)); }
+.s-draft{--c:var(--s-draft)} .s-blocked{--c:var(--s-blocked)} .s-ready{--c:var(--s-ready)} .s-running{--c:var(--s-running)} .s-waiting_human{--c:var(--s-waiting_human)} .s-awaiting_triage{--c:var(--s-awaiting_triage)} .s-in_review{--c:var(--s-in_review)} .s-changes_requested{--c:var(--s-changes_requested)} .s-done{--c:var(--s-done)} .s-failed{--c:var(--s-failed)} .s-wont_do{--c:var(--s-wont_do)} .s-cancelled{--c:var(--s-cancelled)}
+
+/* ---- board ------------------------------------------------------------------------ */
+.board { display:grid; grid-template-columns: repeat(11, minmax(150px, 1fr)); gap:10px; overflow-x:auto; padding-bottom:8px; }
+.col { background:var(--surface); border:1px solid var(--line); min-height:140px; padding:10px; }
+.col h3 { margin:0 0 10px; display:flex; justify-content:space-between; align-items:center; gap:6px; font:700 10.5px/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink); }
+.col h3 .n { color:var(--muted); font-weight:400; }
+.card { display:block; text-decoration:none; border:1px solid var(--line); padding:8px 10px; margin-bottom:8px; background:var(--label); transition:border-color .12s; }
+.card:hover { border-color:var(--ink); }
+.card .t { display:block; margin-top:3px; font-size:14px; line-height:1.3; }
+.card .meta { display:block; color:var(--muted); font:11px/1.4 var(--mono); margin-top:5px; }
+.card .q { display:block; color:var(--s-waiting_human); font-size:12.5px; margin-top:5px; font-style:italic; }
+.card .top { display:flex; align-items:center; gap:6px; }
+
+/* ---- board: list view ------------------------------------------------------------- */
+.viewswitch { display:flex; gap:0; }
+.viewswitch a { padding:6px 12px; border:1px solid var(--line); border-left-width:0; text-decoration:none; font:12px/1 var(--mono); color:var(--muted); background:var(--label); }
+.viewswitch a:first-child { border-left-width:1px; }
+.viewswitch a.on { border-color:var(--ink); color:var(--ink); z-index:1; }
+.board-list { display:flex; flex-direction:column; }
+.lgroup { border-top:1px solid var(--line-strong); }
+.lgroup:first-child { border-top:none; }
+.lgroup > h3 { display:flex; align-items:center; gap:8px; margin:0; padding:11px 4px 8px; font:700 11px/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink); }
+.lgroup > h3 .lg-name { display:inline-flex; align-items:center; gap:8px; }
+.lgroup > h3 .n { color:var(--muted); font-weight:400; margin-left:auto; }
+.lgroup-empty > h3 { color:var(--muted); }
+.lrows { list-style:none; margin:0; padding:0 0 6px; }
+.lrow { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; padding:7px 6px; border-bottom:1px solid var(--line); }
+.lrow:last-child { border-bottom:none; }
+.lrow-main { display:flex; align-items:baseline; gap:10px; flex:1 1 320px; min-width:0; text-decoration:none; }
+.lrow-main:hover .lt { text-decoration:underline; text-decoration-color:var(--ink); }
+.lrow .lt { font-size:14.5px; overflow-wrap:anywhere; flex:1 1 auto; }
+.lrow .meta { font:11px/1.4 var(--mono); color:var(--muted); white-space:nowrap; }
+.lrow .lfact { font:12px/1.4 var(--mono); color:var(--muted); flex:0 1 auto; min-width:0; overflow-wrap:anywhere; }
+.lrow .lfact.q { color:var(--s-waiting_human); font-style:italic; font-family:var(--body); font-size:13px; }
+
+/* ---- inbox --------------------------------------------------------------------------- */
+.group { margin-bottom:20px; border:1px solid var(--line); background:var(--label); }
+.group > header { display:flex; align-items:center; gap:12px; padding:8px 12px; background:var(--surface-2); border-bottom:1px solid var(--line); }
+.group > header h2 { margin:0; font:500 17px/1.2 var(--display); }
+.group > header p { margin:0; color:var(--muted); font-size:13px; }
+.group.notice { opacity:.75; }
+.group.notice > header h2 { font:400 15px/1.2 var(--display); color:var(--muted); }
+.item { display:grid; grid-template-columns: 34px 140px minmax(0,1fr) auto; gap:14px; align-items:center; padding:11px 12px; border-bottom:1px solid var(--line); }
+.item:last-child { border-bottom:none; }
+.item .who { display:flex; flex-direction:column; gap:3px; }
+.item .who .age { font:11px/1.4 var(--mono); color:var(--faint); }
+.item .what .t { font-size:16px; }
+.item .what .why { color:var(--muted); font:12px/1.5 var(--mono); margin-top:2px; }
+.item .what .q { margin-top:6px; font-style:italic; font-size:14.5px; }
+.item .do { display:flex; flex-direction:column; gap:6px; align-items:flex-end; min-width:190px; }
+.item .do form { display:flex; gap:6px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+.item .do input[type=text] { width:200px; padding:7px 8px; font-size:12px; }
+.item.q-open .do { align-items:stretch; }
+.inbox-zero { padding:36px; text-align:center; color:var(--muted); background:var(--label); border:1px dashed var(--line-strong); }
+.inbox-zero b { font:500 20px/1.3 var(--display); color:var(--ink); display:block; margin-bottom:4px; }
+
+/* ---- trellis ---------------------------------------------------------------------------- */
+.trellis .lattice line { stroke:var(--line); stroke-width:.8; stroke-dasharray:2 3; }
+.trellis .post { stroke:var(--line-strong); stroke-width:2; stroke-dasharray:4 3; }
+.trellis .vine path { fill:none; stroke:var(--sp-ink); stroke-width:2.6; stroke-linecap:round; opacity:.9; }
+.trellis .vine .tendril { stroke-width:1.4; stroke-dasharray:5 4; }
+.trellis a { text-decoration:none; }
+.trellis .halo { fill:var(--label); stroke:var(--ink); stroke-width:.8; }
+.trellis text { paint-order:stroke; stroke:var(--label); stroke-width:4px; stroke-linejoin:round; }
+.trellis .nid { font:700 11px var(--mono); fill:var(--ink); }
+.trellis .ntitle { font:12px var(--body); fill:var(--ink); }
+.trellis .nstate { font:10px var(--mono); fill:var(--muted); letter-spacing:.04em; }
+.trellis a:hover .halo { stroke-width:1.6; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)"><rect width="4" height="4" fill="var(--leaf-tint)"/><line x1="0" y1="0" x2="0" y2="4" stroke="var(--hatch)" stroke-width="0.7"/></pattern>
+<pattern id="hatch2" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(-40)"><rect width="4" height="4" fill="var(--petal-tint)"/><line x1="0" y1="0" x2="0" y2="4" stroke="var(--hatch)" stroke-width="0.6"/></pattern>
+<pattern id="hatch3" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(60)"><rect width="3" height="3" fill="var(--berry-tint)"/><line x1="0" y1="0" x2="0" y2="3" stroke="var(--hatch)" stroke-width="0.6"/></pattern>
+<filter id="wobble" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+<filter id="wash" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.4"/></filter>
+
+<g id="lf"><path d="M0 0 C6 -11 24 -13 34 0 C24 13 6 11 0 0 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.1" stroke-linejoin="round"/><path d="M2 0 L31 0" stroke="var(--ink)" stroke-width="0.7" fill="none"/><path d="M8 -1 L13 -6 M14 -1 L20 -8 M20 -1 L26 -6 M8 1 L13 6 M14 1 L20 8 M20 1 L26 6" stroke="var(--vein)" stroke-width="0.5" fill="none"/></g>
+<g id="tendril"><path d="M0 0 c14 -8 26 -4 26 6 c0 9 -12 11 -14 3 c-1 -6 7 -8 9 -2" fill="none" stroke="var(--ink)" stroke-width="0.9" stroke-linecap="round"/></g>
+<g id="peaflower"><path d="M0 0 C-14 -6 -16 -28 -2 -32 C12 -28 12 -6 0 0 Z" fill="var(--petal)" stroke="var(--ink)" stroke-width="1"/><path d="M-3 -2 C-11 -8 -7 -20 -1 -15 Z M3 -2 C11 -8 7 -20 1 -15 Z" fill="var(--petal2)" stroke="var(--ink)" stroke-width="0.8"/><path d="M-2 0 C-1 5 1 5 2 0" stroke="var(--ink)" stroke-width="0.8" fill="none"/></g>
+<g id="pod"><path d="M0 0 C10 -6 34 -2 46 14 C30 20 8 14 0 0 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.1"/><circle cx="12" cy="6" r="3.2" fill="var(--pea)" stroke="var(--ink)" stroke-width=".6"/><circle cx="22" cy="8.5" r="3.2" fill="var(--pea)" stroke="var(--ink)" stroke-width=".6"/><circle cx="32" cy="11" r="3.2" fill="var(--pea)" stroke="var(--ink)" stroke-width=".6"/></g>
+<g id="pea">
+  <path d="M100 292 C92 250 112 214 102 176 C94 146 112 118 100 84 C94 66 100 48 104 30" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M97 288 C90 250 109 214 99 178" fill="none" stroke="var(--hatch)" stroke-width="0.6" stroke-dasharray="1.5 2"/>
+  <use href="#lf" transform="translate(101 252) rotate(-28)"/><use href="#lf" transform="translate(101 252) scale(-1 1) rotate(-28)"/>
+  <use href="#lf" transform="translate(105 220) rotate(-22) scale(.95)"/><use href="#lf" transform="translate(105 220) scale(-1 1) rotate(-22) scale(.95)"/>
+  <use href="#pod" transform="translate(104 198) rotate(20)"/>
+  <use href="#lf" transform="translate(98 186) rotate(-30) scale(.9)"/><use href="#lf" transform="translate(98 186) scale(-1 1) rotate(-30) scale(.9)"/>
+  <use href="#peaflower" transform="translate(84 168) rotate(-30) scale(.9)"/>
+  <use href="#lf" transform="translate(103 150) rotate(-26) scale(.85)"/><use href="#lf" transform="translate(103 150) scale(-1 1) rotate(-26) scale(.85)"/>
+  <use href="#peaflower" transform="translate(118 132) rotate(25) scale(.85)"/>
+  <use href="#tendril" transform="translate(106 118) rotate(-10)"/>
+  <use href="#lf" transform="translate(99 92) rotate(-30) scale(.75)"/><use href="#lf" transform="translate(99 92) scale(-1 1) rotate(-30) scale(.75)"/>
+  <use href="#lf" transform="translate(103 60) rotate(-34) scale(.6)"/><use href="#lf" transform="translate(103 60) scale(-1 1) rotate(-34) scale(.6)"/>
+  <use href="#tendril" transform="translate(103 44) rotate(-30) scale(.8)"/><use href="#tendril" transform="translate(103 40) scale(-1 1) rotate(-50) scale(.7)"/>
+</g>
+
+<g id="bleaf"><path d="M16 2 C4 0 -3 -14 1 -24 C4 -32 10 -37 16 -41 C22 -37 28 -32 31 -24 C35 -14 28 0 16 2 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1" stroke-linejoin="round"/><path d="M16 -38 L16 0" stroke="var(--ink)" stroke-width=".6"/><path d="M16 -28 L7 -20 M16 -20 L5 -12 M16 -12 L8 -5 M16 -28 L25 -20 M16 -20 L27 -12 M16 -12 L24 -5" stroke="var(--vein)" stroke-width=".45" fill="none"/><path d="M1 -24 C4 -32 10 -37 16 -41 C22 -37 28 -32 31 -24" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="1.6 1.4"/></g>
+<g id="thorn"><path d="M0 0 l7 -3 l-2.5 6.5 z" fill="var(--ink)"/></g>
+<g id="berry"><circle cx="0" cy="0" r="3.4" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="6" cy="1" r="3.4" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="3" cy="6" r="3.4" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="-3.5" cy="5" r="3.2" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="2" cy="-5" r="3.1" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="-4" cy="-2" r="3" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="8" cy="7" r="2.9" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><circle cx="1" cy="11" r="2.9" fill="var(--berry)" stroke="var(--ink)" stroke-width=".6"/><path d="M-1 -8 l-4 -5 M1 -8 l1 -6 M3 -8 l5 -4" stroke="var(--ink)" stroke-width=".7" fill="none"/></g>
+<g id="bramble">
+  <path d="M24 292 C40 220 70 160 130 128 C170 108 196 84 190 44" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M62 292 C70 250 58 210 92 178 C110 162 130 156 146 150" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round"/>
+  <use href="#thorn" transform="translate(34 262) rotate(-70)"/><use href="#thorn" transform="translate(46 236) rotate(-65)"/><use href="#thorn" transform="translate(64 204) rotate(-55)"/><use href="#thorn" transform="translate(86 172) rotate(-40)"/><use href="#thorn" transform="translate(112 144) rotate(-25)"/><use href="#thorn" transform="translate(150 118) rotate(-15)"/><use href="#thorn" transform="translate(176 100) rotate(-10)"/><use href="#thorn" transform="translate(68 240) rotate(-80)"/><use href="#thorn" transform="translate(74 200) rotate(-60)"/>
+  <g transform="translate(100 162) scale(1.35)"><use href="#bleaf" transform="rotate(-42)"/><use href="#bleaf" transform="rotate(-2)"/><use href="#bleaf" transform="rotate(38)"/></g>
+  <g transform="translate(160 106) scale(1.05)"><use href="#bleaf" transform="rotate(-50)"/><use href="#bleaf" transform="rotate(-8)"/><use href="#bleaf" transform="rotate(34)"/></g>
+  <g transform="translate(56 230) scale(.9)"><use href="#bleaf" transform="rotate(-70)"/><use href="#bleaf" transform="rotate(-25)"/></g>
+  <use href="#berry" transform="translate(178 74)"/><use href="#berry" transform="translate(140 138) scale(.9)"/><g style="--berry:var(--berry2)"><use href="#berry" transform="translate(120 128) scale(.7)"/></g>
+  <path d="M186 52 c-2 -8 4 -14 8 -12" stroke="var(--ink)" stroke-width="1" fill="none"/>
+</g>
+
+<g id="bell"><path d="M0 0 C-7 10 -9 24 -3 34 C1 37 7 37 11 34 C17 24 15 10 8 0 C5 -2 3 -2 0 0 Z" fill="var(--petal)" stroke="var(--ink)" stroke-width="1"/><circle cx="3" cy="26" r="1" fill="var(--ink)"/><circle cx="7.5" cy="22" r="1" fill="var(--ink)"/><circle cx="4" cy="18" r=".9" fill="var(--ink)"/><circle cx="8" cy="30" r=".9" fill="var(--ink)"/></g>
+<g id="foxglove">
+  <path d="M100 292 C100 240 102 180 100 120 C99 90 100 60 100 34" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M100 282 C72 266 40 272 32 298 C60 302 90 298 100 282 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.1"/><path d="M100 282 C128 266 160 272 168 298 C140 302 110 298 100 282 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.1"/><path d="M98 284 L42 292 M102 284 L158 292" stroke="var(--ink)" stroke-width=".6"/>
+  <path d="M100 262 C82 250 60 256 54 274 C74 276 92 272 100 262 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/><path d="M100 262 C118 250 140 256 146 274 C126 276 108 272 100 262 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/>
+  <use href="#bell" transform="translate(100 226) rotate(-95)"/><use href="#bell" transform="translate(100 206) rotate(95) scale(-1 1) scale(.95)"/>
+  <use href="#bell" transform="translate(100 186) rotate(-92) scale(.9)"/><use href="#bell" transform="translate(100 168) rotate(92) scale(-1 1) scale(.85)"/>
+  <use href="#bell" transform="translate(100 150) rotate(-88) scale(.8)"/><use href="#bell" transform="translate(100 134) rotate(88) scale(-1 1) scale(.72)"/>
+  <use href="#bell" transform="translate(100 118) rotate(-84) scale(.64)"/><use href="#bell" transform="translate(100 104) rotate(84) scale(-1 1) scale(.56)"/>
+  <use href="#bell" transform="translate(100 92) rotate(-80) scale(.48)"/><use href="#bell" transform="translate(100 82) rotate(80) scale(-1 1) scale(.4)"/>
+  <ellipse cx="96" cy="66" rx="3" ry="5.5" transform="rotate(-20 96 66)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".8"/><ellipse cx="104" cy="56" rx="2.6" ry="5" transform="rotate(20 104 56)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".8"/><ellipse cx="100" cy="44" rx="2.2" ry="4.4" fill="var(--petal)" stroke="var(--ink)" stroke-width=".8"/>
+</g>
+
+<g id="pinna"><path d="M0 0 C4 -3 8 -4 12 -3 C16 -5 20 -6 24 -4 C28 -6 32 -6 36 -3 C40 -5 44 -4 48 -2 C52 -3 56 -1 60 0 C56 1 52 3 48 2 C44 4 40 5 36 3 C32 6 28 6 24 4 C20 6 16 5 12 3 C8 4 4 3 0 0 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width=".9" stroke-linejoin="round"/><path d="M0 0 L58 0" stroke="var(--ink)" stroke-width=".55"/></g>
+<g id="fern">
+  <path d="M60 292 C70 230 90 170 120 110 C135 82 150 60 170 40" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/>
+  <use href="#pinna" transform="translate(64 268) rotate(-50) scale(1.05)"/><use href="#pinna" transform="translate(64 268) rotate(-130) scale(-1 1) scale(1.05)"/>
+  <use href="#pinna" transform="translate(70 244) rotate(-52) scale(1.1)"/><use href="#pinna" transform="translate(70 244) rotate(-128) scale(-1 1) scale(1.1)"/>
+  <use href="#pinna" transform="translate(78 218) rotate(-52) scale(1.05)"/><use href="#pinna" transform="translate(78 218) rotate(-128) scale(-1 1) scale(1.05)"/>
+  <use href="#pinna" transform="translate(88 194) rotate(-54) scale(1)"/><use href="#pinna" transform="translate(88 194) rotate(-126) scale(-1 1) scale(1)"/>
+  <use href="#pinna" transform="translate(100 170) rotate(-56) scale(.9)"/><use href="#pinna" transform="translate(100 170) rotate(-124) scale(-1 1) scale(.9)"/>
+  <use href="#pinna" transform="translate(112 146) rotate(-58) scale(.8)"/><use href="#pinna" transform="translate(112 146) rotate(-122) scale(-1 1) scale(.8)"/>
+  <use href="#pinna" transform="translate(124 122) rotate(-60) scale(.68)"/><use href="#pinna" transform="translate(124 122) rotate(-120) scale(-1 1) scale(.68)"/>
+  <use href="#pinna" transform="translate(136 100) rotate(-62) scale(.55)"/><use href="#pinna" transform="translate(136 100) rotate(-118) scale(-1 1) scale(.55)"/>
+  <use href="#pinna" transform="translate(148 80) rotate(-64) scale(.42)"/><use href="#pinna" transform="translate(148 80) rotate(-116) scale(-1 1) scale(.42)"/>
+  <use href="#pinna" transform="translate(158 62) rotate(-66) scale(.3)"/><use href="#pinna" transform="translate(158 62) rotate(-114) scale(-1 1) scale(.3)"/>
+  <path d="M170 40 c6 -8 2 -16 -6 -14 c-6 2 -4 10 2 10" fill="none" stroke="var(--ink)" stroke-width="1"/>
+</g>
+
+<g id="petal"><path d="M0 0 C-30 -6 -40 -40 -12 -46 C0 -50 14 -44 16 -30 C18 -14 12 -2 0 0 Z" fill="var(--poppy)" stroke="var(--ink)" stroke-width="1"/><path d="M-6 -8 C-16 -18 -20 -30 -14 -40" stroke="var(--hatch)" stroke-width=".5" fill="none"/></g>
+<g id="poppy">
+  <path d="M120 292 C118 250 124 200 112 150 C106 126 110 100 116 80" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M116 260 l-4 -2 M118 230 l-4 -1 M114 200 l-4 -2 M112 170 l-4 -1 M110 140 l-4 -2 M112 112 l-4 -1" stroke="var(--ink)" stroke-width=".7"/>
+  <path d="M120 292 C124 250 140 220 150 190 C156 172 152 154 146 140" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-linecap="round"/>
+  <ellipse cx="146" cy="128" rx="9" ry="13" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/><path d="M137 122 c3 -3 15 -3 18 0 M140 116 c3 -2 9 -2 12 0" stroke="var(--ink)" stroke-width=".8" fill="none"/><path d="M142 115 l-2 -5 M146 114 l0 -5 M150 115 l2 -5" stroke="var(--ink)" stroke-width=".8"/>
+  <path d="M60 292 C70 250 62 200 90 170 C100 158 104 150 96 140" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="94" cy="134" rx="5" ry="8" transform="rotate(-30 94 134)" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/>
+  <path d="M96 236 C84 232 70 236 62 250 C76 254 90 250 96 236 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/><path d="M124 210 C136 204 150 206 158 220 C144 226 130 222 124 210 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/>
+  <g transform="translate(116 82)"><use href="#petal" transform="rotate(10) scale(1.05)"/><use href="#petal" transform="rotate(100) scale(1.05)"/><use href="#petal" transform="rotate(190) scale(1.05)"/><use href="#petal" transform="rotate(280) scale(1.05)"/><circle cx="0" cy="0" r="7" fill="var(--ink)"/><circle cx="0" cy="0" r="3" fill="var(--seed)"/><path d="M-11 -4 l-4 -3 M11 -4 l4 -3 M-8 8 l-3 5 M8 8 l3 5 M-12 3 l-5 1 M12 3 l5 1" stroke="var(--ink)" stroke-width=".8"/></g>
+</g>
+
+<!-- generic sprig: the pre-scan placeholder for a plant with a plate but no bespoke drawing -->
+<g id="sprig">
+  <path d="M100 292 C98 240 102 190 100 140 C99 110 100 80 100 50" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/>
+  <use href="#lf" transform="translate(100 230) rotate(-28) scale(1.05)"/><use href="#lf" transform="translate(100 230) scale(-1 1) rotate(-28) scale(1.05)"/>
+  <use href="#lf" transform="translate(100 178) rotate(-25) scale(.95)"/><use href="#lf" transform="translate(100 178) scale(-1 1) rotate(-25) scale(.95)"/>
+  <use href="#lf" transform="translate(100 126) rotate(-30) scale(.82)"/><use href="#lf" transform="translate(100 126) scale(-1 1) rotate(-30) scale(.82)"/>
+  <use href="#bell" transform="translate(100 80) rotate(-90) scale(.7)"/>
+</g>
+
+<!-- growth-stage glyphs: 24x24 -->
+<g id="st-seed"><ellipse cx="12" cy="13" rx="5" ry="7.5" transform="rotate(-25 12 13)" fill="var(--seed)" stroke="var(--ink)" stroke-width="1.1"/><path d="M9.5 9 c1.2 2 1.2 6 0 8" stroke="var(--ink)" stroke-width=".8" fill="none"/></g>
+<g id="st-sprout"><path d="M12 21 V12" stroke="var(--ink)" stroke-width="1.2" fill="none"/><path d="M12 13 C6 13 5 8 4 6 C9 6 12 9 12 13 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/><path d="M12 13 C18 13 19 8 20 6 C15 6 12 9 12 13 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1"/><path d="M6 21 H18" stroke="var(--ink)" stroke-width="1"/></g>
+<g id="st-leaf"><path d="M4 20 C4 8 14 4 20 4 C20 12 14 20 4 20 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.1"/><path d="M5 19 L17 7" stroke="var(--ink)" stroke-width=".7"/></g>
+<g id="st-bud"><path d="M12 22 V14" stroke="var(--ink)" stroke-width="1.2"/><path d="M12 14 C7 14 7 5 12 3 C17 5 17 14 12 14 Z" fill="var(--petal)" stroke="var(--ink)" stroke-width="1"/><path d="M12 14 C9 12 9 8 12 6 M12 14 C15 12 15 8 12 6" stroke="var(--ink)" stroke-width=".7" fill="none"/><path d="M12 14 C9 15 7 13 7 11 M12 14 C15 15 17 13 17 11" stroke="var(--ink)" stroke-width=".8" fill="none"/></g>
+<g id="st-flower"><ellipse cx="12" cy="6" rx="3" ry="5" fill="var(--petal)" stroke="var(--ink)" stroke-width=".9"/><ellipse cx="12" cy="6" rx="3" ry="5" transform="rotate(72 12 12)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".9"/><ellipse cx="12" cy="6" rx="3" ry="5" transform="rotate(144 12 12)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".9"/><ellipse cx="12" cy="6" rx="3" ry="5" transform="rotate(216 12 12)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".9"/><ellipse cx="12" cy="6" rx="3" ry="5" transform="rotate(288 12 12)" fill="var(--petal)" stroke="var(--ink)" stroke-width=".9"/><circle cx="12" cy="12" r="2.6" fill="var(--ink)"/></g>
+<g id="st-cut"><circle cx="12" cy="12" r="7.5" fill="none" stroke="var(--ink)" stroke-width="1" stroke-dasharray="2 1.6"/><circle cx="12" cy="12" r="2.4" fill="var(--ink)"/><path d="M4 4 l4 4 M20 4 l-4 4" stroke="var(--ink)" stroke-width="1"/></g>
+<g id="st-fruit"><path d="M12 7 C16 5 21 9 21 15 C21 20 17 22 12 22 C7 22 3 20 3 15 C3 9 8 5 12 7 Z" fill="var(--apple)" stroke="var(--ink)" stroke-width=".9"/><path d="M12 7 C11 9 11 12 12 14" stroke="var(--ink)" stroke-width=".6" fill="none"/><path d="M12 7 L13 3" stroke="var(--ink)" stroke-width="1" stroke-linecap="round" fill="none"/><path d="M13 4 C16 1 20 2 20 6 C20 8 15 8 13 5 Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width=".7"/></g>
+<g id="st-wilt"><path d="M8 22 C8 14 10 10 14 8 C18 6 18 10 14 12" stroke="var(--ink)" stroke-width="1.2" fill="none"/><path d="M14 12 C18 10 21 14 17 17 C14 18 13 15 14 12 Z" fill="var(--wilt)" stroke="var(--ink)" stroke-width=".9"/><path d="M5 22 H12" stroke="var(--ink)" stroke-width="1"/></g>
+<g id="st-pressed"><path d="M5 19 C5 9 13 5 19 5 C19 13 13 19 5 19 Z" fill="var(--pressed)" stroke="var(--ink)" stroke-width="1"/><path d="M6 18 L17 7" stroke="var(--ink)" stroke-width=".6"/><circle cx="18.5" cy="5.5" r="2.2" fill="var(--pin)" stroke="var(--ink)" stroke-width=".6"/></g>
+<g id="st-tag"><path d="M10 22 V13" stroke="var(--ink)" stroke-width="1.2"/><path d="M10 13 C6 13 6 6 10 4 C14 6 14 13 10 13 Z" fill="var(--petal)" stroke="var(--ink)" stroke-width="1"/><path d="M12 8 l9 -3.5 v6 l-9 3.5 z" fill="var(--paper)" stroke="var(--ink)" stroke-width=".9" stroke-linejoin="round"/><text x="14.6" y="10.6" font-size="5" font-family="serif" font-weight="700" fill="var(--ink)">?</text></g>
+<!-- wont_do: seeds saved back into a labelled packet, set aside rather than sown -->
+<g id="st-fallow"><rect x="5" y="6.5" width="14" height="12" rx="1" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.1"/><path d="M5 10 H19" stroke="var(--ink)" stroke-width=".8"/><path d="M8 13 H16 M8 15.5 H13" stroke="var(--ink)" stroke-width=".7"/><ellipse cx="15.5" cy="15.5" rx="1.4" ry="2" transform="rotate(-25 15.5 15.5)" fill="var(--seed)" stroke="var(--ink)" stroke-width=".5"/></g>
+</defs></svg>
+
+<svg class="bg-vine" viewBox="0 0 300 440" width="500" height="733" aria-hidden="true" focusable="false"><path class="stem" d="M292 440 C312 352 228 300 246 226 C266 152 156 44 44 58" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"/><path d="M292 440 C312 352 228 300 246 226 C266 152 156 44 44 58" fill="none" stroke="var(--hatch)" stroke-width="0.6" stroke-dasharray="1.5 2.5" transform="translate(-3 0)"/><use href="#lf" transform="translate(295.1 409.8) rotate(-153.4) scale(1.55)"/><use href="#lf" transform="translate(289.9 376.9) rotate(-43.7) scale(1.47)"/><use href="#lf" transform="translate(278.7 346.6) rotate(-176.1) scale(1.38)"/><use href="#lf" transform="translate(264.9 317.8) rotate(-53.9) scale(1.30)"/><use href="#tendril" transform="translate(264.9 317.8) rotate(-155.9) scale(1.04)"/><use href="#lf" transform="translate(252.3 289.5) rotate(-172.9) scale(1.22)"/><use href="#lf" transform="translate(244.4 260.8) rotate(-36.2) scale(1.13)"/><use href="#lf" transform="translate(245.0 230.4) rotate(-141.2) scale(1.05)"/><use href="#lf" transform="translate(247.7 197.4) rotate(-35.2) scale(0.97)"/><use href="#lf" transform="translate(236.7 162.5) rotate(-178.4) scale(0.88)"/><use href="#tendril" transform="translate(236.7 162.5) rotate(-76.4) scale(0.71)"/><use href="#lf" transform="translate(213.9 128.6) rotate(-68.7) scale(0.80)"/><use href="#lf" transform="translate(181.5 98.4) rotate(-205.0) scale(0.72)"/><use href="#lf" transform="translate(141.8 74.6) rotate(-93.2) scale(0.63)"/><use href="#lf" transform="translate(97.1 60.0) rotate(-231.0) scale(0.55)"/><use href="#tendril" transform="translate(44.0 58.0) rotate(152.9) scale(1.1)"/><use href="#tendril" transform="translate(44.0 58.0) scale(-1 1) rotate(-322.9) scale(0.8)"/></svg>
+<div class="shell">
+<aside class="rail">
+  <a class="wordmark" href="/">context-garden<small>context garden</small></a>
+  <nav class="nav">
+    <a href="/" class="">Inbox <span class="count hot">14</span></a>
+    <a href="/board" class="">Board</a>
+    <a href="/trellis" class="on">Trellis</a>
+    <a href="/events" class="">Timeline</a>
+    <a href="/trials" class="">Trials</a>
+    <a href="/runs" class="">Runs <span class="count">$581</span></a>
+    <a href="/config" class="">Config</a>
+  </nav>
+  <div>
+    <h4>Phases</h4>
+    <a class="drawer " href="/phases/context-garden/phase-01-bootstrap"><span class="thumb"><img src="/static/plates/pea-thumb.webp" alt="" width="38" height="58" loading="lazy"></span><span class="k"><b>phase-01-bootstrap</b><i>Plate I · Pisum sativum</i><span>context-garden · 19 tasks</span></span></a><a class="drawer " href="/phases/context-garden/phase-02-friction"><span class="thumb"><img src="/static/plates/bramble-thumb.webp" alt="" width="38" height="58" loading="lazy"></span><span class="k"><b>phase-02-friction</b><i>Plate II · Rubus fruticosus</i><span>context-garden · 127 tasks</span></span></a>
+    
+    
+  </div>
+  <div>
+    <h4>Running now</h4>
+    <div class="running-now">
+      <div class="r"><span class="dot"></span><a href="/tasks/_retro-context-garden-phase-02-friction">_retro-context-garden-phase-02-friction</a><span>retro · claude-fable-5-1 · 2 min</span></div>
+    </div>
+  </div>
+  <div class="foot">
+    
+    <span>scheduler loop on · tick 02:54:18Z</span>
+    
+    <form method="post" action="/tick"><button class="quiet" title="Reap finished workers, poll PRs, dispatch ready tasks">↻ Tick now</button></form>
+  </div>
+</aside>
+<main>
+
+
+<script>
+(function() {
+  var hide = new URLSearchParams(location.search).get('hide');
+  if (hide === 'done') localStorage.setItem('garden.trellisHideDone', 'done');
+  else localStorage.removeItem('garden.trellisHideDone');
+})();
+</script>
+<div class="page-head"><div><h1>Trellis</h1><p>The structure the work climbs: dependencies left to right, dashed edges for discovered work. A task with one open dependency stacks on its PR instead of waiting.</p></div>
+  <div class="tools">
+    <a href="/trellis?hide=done" class="btn" data-hide-toggle>hide done (131)</a>
+  </div>
+</div>
+<div class="filters">
+  <a href="/trellis" class="on">all</a>
+  
+    <a href="/trellis?product=context-garden&phase=phase-01-bootstrap" class="">context-garden/phase-01-bootstrap</a>
+  
+    <a href="/trellis?product=context-garden&phase=phase-02-friction" class="">context-garden/phase-02-friction</a>
+  
+  
+</div>
+
+<div class="panel" style="margin-bottom:14px">
+  <span class="muted">ready now:</span> <a href="/tasks/CG-029" class="id">CG-029</a> 
+  &nbsp;·&nbsp;<span class="muted">longest open chain:</span> <span class="mono">CG-030</span>
+</div>
+<div class="specimen" style="overflow-x:auto; padding:10px">
+  <svg xmlns="http://www.w3.org/2000/svg" class="trellis" viewBox="0 0 1560 9754" width="1560" style="max-width:100%; height:auto; display:block" role="img" aria-label="trellis">
+<g class="lattice">
+<line x1="-500" y1="9754" x2="8279" y2="0"/>
+<line x1="8279" y1="9754" x2="-500" y2="0"/>
+<line x1="-390" y1="9754" x2="8389" y2="0"/>
+<line x1="8389" y1="9754" x2="-390" y2="0"/>
+<line x1="-280" y1="9754" x2="8499" y2="0"/>
+<line x1="8499" y1="9754" x2="-280" y2="0"/>
+<line x1="-170" y1="9754" x2="8609" y2="0"/>
+<line x1="8609" y1="9754" x2="-170" y2="0"/>
+<line x1="-60" y1="9754" x2="8719" y2="0"/>
+<line x1="8719" y1="9754" x2="-60" y2="0"/>
+<line x1="50" y1="9754" x2="8829" y2="0"/>
+<line x1="8829" y1="9754" x2="50" y2="0"/>
+<line x1="160" y1="9754" x2="8939" y2="0"/>
+<line x1="8939" y1="9754" x2="160" y2="0"/>
+<line x1="270" y1="9754" x2="9049" y2="0"/>
+<line x1="9049" y1="9754" x2="270" y2="0"/>
+<line x1="380" y1="9754" x2="9159" y2="0"/>
+<line x1="9159" y1="9754" x2="380" y2="0"/>
+<line x1="490" y1="9754" x2="9269" y2="0"/>
+<line x1="9269" y1="9754" x2="490" y2="0"/>
+<line x1="600" y1="9754" x2="9379" y2="0"/>
+<line x1="9379" y1="9754" x2="600" y2="0"/>
+<line x1="710" y1="9754" x2="9489" y2="0"/>
+<line x1="9489" y1="9754" x2="710" y2="0"/>
+<line x1="820" y1="9754" x2="9599" y2="0"/>
+<line x1="9599" y1="9754" x2="820" y2="0"/>
+<line x1="930" y1="9754" x2="9709" y2="0"/>
+<line x1="9709" y1="9754" x2="930" y2="0"/>
+<line x1="1040" y1="9754" x2="9819" y2="0"/>
+<line x1="9819" y1="9754" x2="1040" y2="0"/>
+<line x1="1150" y1="9754" x2="9929" y2="0"/>
+<line x1="9929" y1="9754" x2="1150" y2="0"/>
+<line x1="1260" y1="9754" x2="10039" y2="0"/>
+<line x1="10039" y1="9754" x2="1260" y2="0"/>
+<line x1="1370" y1="9754" x2="10149" y2="0"/>
+<line x1="10149" y1="9754" x2="1370" y2="0"/>
+<line x1="1480" y1="9754" x2="10259" y2="0"/>
+<line x1="10259" y1="9754" x2="1480" y2="0"/>
+</g>
+<line class="post" x1="40" y1="9746" x2="40" y2="8"/><line class="post" x1="1520" y1="9746" x2="1520" y2="8"/>
+<g class="vine"><path d="M50 9748 C50 9698 86 5198 110 5148"/><path d="M1030 4676 C1145 4676 1145 4853 1260 4853"/><path d="M50 9748 C50 9698 86 6496 110 6446"/><path class="tendril" d="M110 7036 C190 7046 248 6003 340 6033"/><path class="tendril" d="M110 1726 C190 1736 248 2581 340 2611"/><path d="M50 9748 C50 9698 86 9328 110 9278"/><path class="tendril" d="M110 2906 C190 2916 248 3997 340 4027"/><path class="tendril" d="M110 192 C190 202 248 3289 340 3319"/><path d="M50 9748 C50 9698 86 5670 110 5620"/><path d="M110 6800 C225 6800 225 6741 340 6741"/><path class="tendril" d="M340 3909 C420 3919 18 3230 110 3260"/><path class="tendril" d="M340 4853 C420 4863 478 5000 570 5030"/><path d="M50 9748 C50 9698 86 4254 110 4204"/><path d="M50 9748 C50 9698 86 596 110 546"/><path d="M800 4558 C915 4558 915 5148 1030 5148"/><path d="M50 9748 C50 9698 86 7794 110 7744"/><path d="M50 9748 C50 9698 86 6260 110 6210"/><path d="M50 9748 C50 9698 86 6024 110 5974"/><path class="tendril" d="M340 4499 C420 4509 478 5236 570 5266"/><path d="M50 9748 C50 9698 86 6142 110 6092"/><path d="M50 9748 C50 9698 86 3192 110 3142"/><path d="M110 310 C225 310 225 4263 340 4263"/><path class="tendril" d="M570 4794 C650 4804 248 4233 340 4263"/><path d="M50 9748 C50 9698 86 1068 110 1018"/><path d="M50 9748 C50 9698 86 1658 110 1608"/><path class="tendril" d="M110 782 C190 792 248 3171 340 3201"/><path d="M110 7154 C225 7154 225 5797 340 5797"/><path d="M50 9748 C50 9698 86 2366 110 2316"/><path d="M50 9748 C50 9698 86 6378 110 6328"/><path d="M50 9748 C50 9698 86 4962 110 4912"/><path class="tendril" d="M110 9514 C190 9524 248 7065 340 7095"/><path d="M50 9748 C50 9698 86 5316 110 5266"/><path d="M50 9748 C50 9698 86 360 110 310"/><path d="M800 4912 C915 4912 915 4794 1030 4794"/><path d="M110 1490 C225 1490 225 3555 340 3555"/><path d="M50 9748 C50 9698 86 1540 110 1490"/><path d="M50 9748 C50 9698 86 2012 110 1962"/><path d="M50 9748 C50 9698 86 6614 110 6564"/><path d="M50 9748 C50 9698 86 5906 110 5856"/><path class="tendril" d="M340 2847 C420 2857 478 4410 570 4440"/><path d="M570 4794 C685 4794 685 5148 800 5148"/><path d="M50 9748 C50 9698 86 3428 110 3378"/><path d="M50 9748 C50 9698 86 4018 110 3968"/><path d="M50 9748 C50 9698 86 9092 110 9042"/><path d="M50 9748 C50 9698 86 2956 110 2906"/><path d="M50 9748 C50 9698 86 7204 110 7154"/><path class="tendril" d="M110 1726 C190 1736 248 4823 340 4853"/><path class="tendril" d="M340 2729 C420 2739 18 634 110 664"/><path d="M570 4676 C685 4676 685 4794 800 4794"/><path class="tendril" d="M340 2729 C420 2739 18 752 110 782"/><path d="M50 9748 C50 9698 86 950 110 900"/><path d="M50 9748 C50 9698 86 8974 110 8924"/><path class="tendril" d="M110 664 C190 674 248 2935 340 2965"/><path d="M50 9748 C50 9698 86 8620 110 8570"/><path class="tendril" d="M110 782 C190 792 248 2817 340 2847"/><path class="tendril" d="M110 1726 C190 1736 248 5295 340 5325"/><path d="M110 2906 C225 2906 455 4912 570 4912"/><path class="tendril" d="M340 4735 C420 4745 478 4882 570 4912"/><path d="M50 9748 C50 9698 86 6732 110 6682"/><path d="M50 9748 C50 9698 86 4608 110 4558"/><path d="M110 74 C225 74 225 2729 340 2729"/><path d="M50 9748 C50 9698 86 4490 110 4440"/><path class="tendril" d="M110 9396 C190 9406 248 6475 340 6505"/><path d="M800 4794 C915 4794 915 4676 1030 4676"/><path d="M50 9748 C50 9698 86 9564 110 9514"/><path d="M50 9748 C50 9698 86 4136 110 4086"/><path d="M50 9748 C50 9698 86 8738 110 8688"/><path d="M50 9748 C50 9698 86 7676 110 7626"/><path d="M50 9748 C50 9698 86 2248 110 2198"/><path d="M50 9748 C50 9698 86 2484 110 2434"/><path d="M50 9748 C50 9698 86 1304 110 1254"/><path d="M110 1726 C225 1726 225 4381 340 4381"/><path d="M570 4676 C685 4676 685 5030 800 5030"/><path d="M50 9748 C50 9698 86 8266 110 8216"/><path d="M50 9748 C50 9698 86 8384 110 8334"/><path class="tendril" d="M110 1726 C190 1736 248 5177 340 5207"/><path d="M50 9748 C50 9698 86 7558 110 7508"/><path class="tendril" d="M340 3083 C420 3093 478 4528 570 4558"/><path d="M50 9748 C50 9698 86 4726 110 4676"/><path d="M110 1490 C225 1490 225 3673 340 3673"/><path class="tendril" d="M110 5974 C190 5984 248 6121 340 6151"/><path d="M50 9748 C50 9698 86 2130 110 2080"/><path d="M50 9748 C50 9698 86 6968 110 6918"/><path d="M50 9748 C50 9698 86 8856 110 8806"/><path d="M50 9748 C50 9698 86 8502 110 8452"/><path class="tendril" d="M110 1726 C190 1736 248 4941 340 4971"/><path d="M800 4912 C915 4912 915 5030 1030 5030"/><path d="M50 9748 C50 9698 86 5552 110 5502"/><path d="M110 7154 C225 7154 225 6859 340 6859"/><path d="M50 9748 C50 9698 86 9446 110 9396"/><path class="tendril" d="M110 664 C190 674 248 3053 340 3083"/><path d="M50 9748 C50 9698 86 1776 110 1726"/><path d="M50 9748 C50 9698 86 3900 110 3850"/><path d="M50 9748 C50 9698 86 3664 110 3614"/><path d="M50 9748 C50 9698 86 124 110 74"/><path d="M50 9748 C50 9698 86 2602 110 2552"/><path class="tendril" d="M340 5089 C420 5099 478 5118 570 5148"/><path d="M110 664 C225 664 455 4794 570 4794"/><path d="M340 3083 C455 3083 455 4794 570 4794"/><path d="M570 4676 C685 4676 685 4676 800 4676"/><path d="M340 3791 C455 3791 685 4676 800 4676"/><path class="tendril" d="M110 3378 C190 3388 248 4115 340 4145"/><path class="tendril" d="M110 1726 C190 1736 248 5059 340 5089"/><path d="M50 9748 C50 9698 86 478 110 428"/><path d="M110 4794 C225 4794 455 5384 570 5384"/><path d="M110 1608 C225 1608 455 5384 570 5384"/><path d="M340 6269 C455 6269 455 5384 570 5384"/><path d="M50 9748 C50 9698 86 2720 110 2670"/><path class="tendril" d="M110 6800 C190 6810 248 5885 340 5915"/><path class="tendril" d="M110 5502 C190 5512 248 6593 340 6623"/><path d="M50 9748 C50 9698 86 7440 110 7390"/><path d="M50 9748 C50 9698 86 6850 110 6800"/><path d="M50 9748 C50 9698 86 1186 110 1136"/><path class="tendril" d="M110 1726 C190 1736 248 5413 340 5443"/><path d="M50 9748 C50 9698 86 4844 110 4794"/><path d="M110 1490 C225 1490 225 3791 340 3791"/><path d="M110 2906 C225 2906 225 3909 340 3909"/><path d="M50 9748 C50 9698 86 9682 110 9632"/><path d="M1030 4676 C1145 4676 1145 4971 1260 4971"/><path class="tendril" d="M340 2611 C420 2621 478 4292 570 4322"/><path class="tendril" d="M110 6564 C190 6574 248 3407 340 3437"/><path class="tendril" d="M110 8924 C190 8934 248 6357 340 6387"/><path d="M50 9748 C50 9698 86 4372 110 4322"/><path d="M50 9748 C50 9698 86 242 110 192"/><path d="M50 9748 C50 9698 86 7912 110 7862"/><path d="M570 4676 C685 4676 685 4912 800 4912"/><path d="M50 9748 C50 9698 86 1422 110 1372"/><path d="M50 9748 C50 9698 86 3546 110 3496"/><path d="M50 9748 C50 9698 86 8030 110 7980"/><path d="M50 9748 C50 9698 86 1894 110 1844"/><path d="M570 4676 C685 4676 685 4558 800 4558"/><path d="M50 9748 C50 9698 86 2838 110 2788"/><path class="tendril" d="M110 1726 C190 1736 248 4705 340 4735"/><path class="tendril" d="M110 1726 C190 1736 248 5531 340 5561"/><path class="tendril" d="M110 1726 C190 1736 248 4587 340 4617"/><path d="M50 9748 C50 9698 86 5080 110 5030"/><path class="tendril" d="M340 6741 C420 6751 18 3702 110 3732"/><path d="M50 9748 C50 9698 86 8148 110 8098"/><path d="M50 9748 C50 9698 86 9210 110 9160"/><path d="M800 4912 C915 4912 915 4912 1030 4912"/><path d="M340 3555 C455 3555 455 4676 570 4676"/><path d="M340 3673 C455 3673 455 4676 570 4676"/><path d="M800 4912 C915 4912 1145 4735 1260 4735"/><path d="M1030 4676 C1145 4676 1145 4735 1260 4735"/><path d="M110 2788 C225 2788 225 5679 340 5679"/><path d="M50 9748 C50 9698 86 7322 110 7272"/><path d="M110 1608 C225 1608 225 6269 340 6269"/><path d="M50 9748 C50 9698 86 5788 110 5738"/><path class="tendril" d="M110 9042 C190 9052 248 6947 340 6977"/><path d="M50 9748 C50 9698 86 3074 110 3024"/><path class="tendril" d="M110 1726 C190 1736 248 4469 340 4499"/><path d="M50 9748 C50 9698 86 7086 110 7036"/><path d="M50 9748 C50 9698 86 5434 110 5384"/><path d="M800 4794 C915 4794 915 4558 1030 4558"/></g>
+<a href="/tasks/CG-054"><g><title>CG-054: A worker's worktree must never act on the live garden — done (in fruit)</title><circle class="halo" cx="110" cy="74" r="19"/><use href="#st-fruit" transform="translate(95 59) scale(1.25)"/><text class="nid" x="110" y="110" text-anchor="middle">CG-054</text><text class="ntitle" x="110" y="126" text-anchor="middle">A worker's worktree must…</text><text class="nstate" x="110" y="140" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-061"><g><title>CG-061: Review runs whose task moved on are reaped, not left running forever — done (in fruit)</title><circle class="halo" cx="110" cy="192" r="19"/><use href="#st-fruit" transform="translate(95 177) scale(1.25)"/><text class="nid" x="110" y="228" text-anchor="middle">CG-061</text><text class="ntitle" x="110" y="244" text-anchor="middle">Review runs whose task m…</text><text class="nstate" x="110" y="258" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-064"><g><title>CG-064: Make test_feedback_triggers_revise_round deterministic — done (in fruit)</title><circle class="halo" cx="110" cy="310" r="19"/><use href="#st-fruit" transform="translate(95 295) scale(1.25)"/><text class="nid" x="110" y="346" text-anchor="middle">CG-064</text><text class="ntitle" x="110" y="362" text-anchor="middle">Make test_feedback_trigg…</text><text class="nstate" x="110" y="376" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-076"><g><title>CG-076: Push with lease when the worker rebased its branch — done (in fruit)</title><circle class="halo" cx="110" cy="428" r="19"/><use href="#st-fruit" transform="translate(95 413) scale(1.25)"/><text class="nid" x="110" y="464" text-anchor="middle">CG-076</text><text class="ntitle" x="110" y="480" text-anchor="middle">Push with lease when the…</text><text class="nstate" x="110" y="494" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-085"><g><title>CG-085: Workers' checkouts live in a configurable work_dir outside the garden — done (in fruit)</title><circle class="halo" cx="110" cy="546" r="19"/><use href="#st-fruit" transform="translate(95 531) scale(1.25)"/><text class="nid" x="110" y="582" text-anchor="middle">CG-085</text><text class="ntitle" x="110" y="598" text-anchor="middle">Workers' checkouts live …</text><text class="nstate" x="110" y="612" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-090"><g><title>CG-090: State.save() never clears dirty keys after a successful write — done (in fruit)</title><circle class="halo" cx="110" cy="664" r="19"/><use href="#st-fruit" transform="translate(95 649) scale(1.25)"/><text class="nid" x="110" y="700" text-anchor="middle">CG-090</text><text class="ntitle" x="110" y="716" text-anchor="middle">State.save() never clear…</text><text class="nstate" x="110" y="730" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-091"><g><title>CG-091: State.save()'s file replacement is not atomic for concurrent readers — done (in fruit)</title><circle class="halo" cx="110" cy="782" r="19"/><use href="#st-fruit" transform="translate(95 767) scale(1.25)"/><text class="nid" x="110" y="818" text-anchor="middle">CG-091</text><text class="ntitle" x="110" y="834" text-anchor="middle">State.save()'s file repl…</text><text class="nstate" x="110" y="848" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-104"><g><title>CG-104: Live log: a tool result whose content is a string no longer breaks the task page — done (in fruit)</title><circle class="halo" cx="110" cy="900" r="19"/><use href="#st-fruit" transform="translate(95 885) scale(1.25)"/><text class="nid" x="110" y="936" text-anchor="middle">CG-104</text><text class="ntitle" x="110" y="952" text-anchor="middle">Live log: a tool result …</text><text class="nstate" x="110" y="966" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-106"><g><title>CG-106: A task the loop can no longer dispatch always gets a card — done (in fruit)</title><circle class="halo" cx="110" cy="1018" r="19"/><use href="#st-fruit" transform="translate(95 1003) scale(1.25)"/><text class="nid" x="110" y="1054" text-anchor="middle">CG-106</text><text class="ntitle" x="110" y="1070" text-anchor="middle">A task the loop can no l…</text><text class="nstate" x="110" y="1084" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-111"><g><title>CG-111: A worker cannot write outside its worktree, whatever it is told — done (in fruit)</title><circle class="halo" cx="110" cy="1136" r="19"/><use href="#st-fruit" transform="translate(95 1121) scale(1.25)"/><text class="nid" x="110" y="1172" text-anchor="middle">CG-111</text><text class="ntitle" x="110" y="1188" text-anchor="middle">A worker cannot write ou…</text><text class="nstate" x="110" y="1202" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-116"><g><title>CG-116: The orphan sweep never closes a run whose task is still running — done (in fruit)</title><circle class="halo" cx="110" cy="1254" r="19"/><use href="#st-fruit" transform="translate(95 1239) scale(1.25)"/><text class="nid" x="110" y="1290" text-anchor="middle">CG-116</text><text class="ntitle" x="110" y="1306" text-anchor="middle">The orphan sweep never c…</text><text class="nstate" x="110" y="1320" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-129"><g><title>CG-129: Automerge merges only into the product's base branch, never into a parent's branch — done (in fruit)</title><circle class="halo" cx="110" cy="1372" r="19"/><use href="#st-fruit" transform="translate(95 1357) scale(1.25)"/><text class="nid" x="110" y="1408" text-anchor="middle">CG-129</text><text class="ntitle" x="110" y="1424" text-anchor="middle">Automerge merges only in…</text><text class="nstate" x="110" y="1438" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-001"><g><title>CG-001: Task file format and on-disk store — done (in fruit)</title><circle class="halo" cx="110" cy="1490" r="19"/><use href="#st-fruit" transform="translate(95 1475) scale(1.25)"/><text class="nid" x="110" y="1526" text-anchor="middle">CG-001</text><text class="ntitle" x="110" y="1542" text-anchor="middle">Task file format and on-…</text><text class="nstate" x="110" y="1556" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-008"><g><title>CG-008: Harvest friction sections from PR bodies — done (in fruit)</title><circle class="halo" cx="110" cy="1608" r="19"/><use href="#st-fruit" transform="translate(95 1593) scale(1.25)"/><text class="nid" x="110" y="1644" text-anchor="middle">CG-008</text><text class="ntitle" x="110" y="1660" text-anchor="middle">Harvest friction section…</text><text class="nstate" x="110" y="1674" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-027"><g><title>CG-027: First live run of the loop on itself — done (in fruit)</title><circle class="halo" cx="110" cy="1726" r="19"/><use href="#st-fruit" transform="translate(95 1711) scale(1.25)"/><text class="nid" x="110" y="1762" text-anchor="middle">CG-027</text><text class="ntitle" x="110" y="1778" text-anchor="middle">First live run of the lo…</text><text class="nstate" x="110" y="1792" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-047"><g><title>CG-047: Pick up the person's own PR comments as feedback — done (in fruit)</title><circle class="halo" cx="110" cy="1844" r="19"/><use href="#st-fruit" transform="translate(95 1829) scale(1.25)"/><text class="nid" x="110" y="1880" text-anchor="middle">CG-047</text><text class="ntitle" x="110" y="1896" text-anchor="middle">Pick up the person's own…</text><text class="nstate" x="110" y="1910" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-050"><g><title>CG-050: The running garden picks up merged changes to itself — cancelled (pressed)</title><circle class="halo" cx="110" cy="1962" r="19"/><use href="#st-pressed" transform="translate(95 1947) scale(1.25)"/><text class="nid" x="110" y="1998" text-anchor="middle">CG-050</text><text class="ntitle" x="110" y="2014" text-anchor="middle">The running garden picks…</text><text class="nstate" x="110" y="2028" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-053"><g><title>CG-053: state.json is saved whole by every writer, so concurrent writers lose updates — done (in fruit)</title><circle class="halo" cx="110" cy="2080" r="19"/><use href="#st-fruit" transform="translate(95 2065) scale(1.25)"/><text class="nid" x="110" y="2116" text-anchor="middle">CG-053</text><text class="ntitle" x="110" y="2132" text-anchor="middle">state.json is saved whol…</text><text class="nstate" x="110" y="2146" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-055"><g><title>CG-055: Turn limit is optional and off by default — done (in fruit)</title><circle class="halo" cx="110" cy="2198" r="19"/><use href="#st-fruit" transform="translate(95 2183) scale(1.25)"/><text class="nid" x="110" y="2234" text-anchor="middle">CG-055</text><text class="ntitle" x="110" y="2250" text-anchor="middle">Turn limit is optional a…</text><text class="nstate" x="110" y="2264" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-057"><g><title>CG-057: A PR that conflicts with its base gets a rebase round — done (in fruit)</title><circle class="halo" cx="110" cy="2316" r="19"/><use href="#st-fruit" transform="translate(95 2301) scale(1.25)"/><text class="nid" x="110" y="2352" text-anchor="middle">CG-057</text><text class="ntitle" x="110" y="2368" text-anchor="middle">A PR that conflicts with…</text><text class="nstate" x="110" y="2382" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-058"><g><title>CG-058: The brief never points a worker at the garden root — done (in fruit)</title><circle class="halo" cx="110" cy="2434" r="19"/><use href="#st-fruit" transform="translate(95 2419) scale(1.25)"/><text class="nid" x="110" y="2470" text-anchor="middle">CG-058</text><text class="ntitle" x="110" y="2486" text-anchor="middle">The brief never points a…</text><text class="nstate" x="110" y="2500" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-060"><g><title>CG-060: Reading lists resolve product paths against the product repo — done (in fruit)</title><circle class="halo" cx="110" cy="2552" r="19"/><use href="#st-fruit" transform="translate(95 2537) scale(1.25)"/><text class="nid" x="110" y="2588" text-anchor="middle">CG-060</text><text class="ntitle" x="110" y="2604" text-anchor="middle">Reading lists resolve pr…</text><text class="nstate" x="110" y="2618" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-063"><g><title>CG-063: Remove the garden files from the tool's repo — done (in fruit)</title><circle class="halo" cx="110" cy="2670" r="19"/><use href="#st-fruit" transform="translate(95 2655) scale(1.25)"/><text class="nid" x="110" y="2706" text-anchor="middle">CG-063</text><text class="ntitle" x="110" y="2722" text-anchor="middle">Remove the garden files …</text><text class="nstate" x="110" y="2736" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-069"><g><title>CG-069: Pause and resume dispatch from a command and a configuration page — done (in fruit)</title><circle class="halo" cx="110" cy="2788" r="19"/><use href="#st-fruit" transform="translate(95 2773) scale(1.25)"/><text class="nid" x="110" y="2824" text-anchor="middle">CG-069</text><text class="ntitle" x="110" y="2840" text-anchor="middle">Pause and resume dispatc…</text><text class="nstate" x="110" y="2854" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-081"><g><title>CG-081: Environment setup is per-product configuration, not a venv assumption — done (in fruit)</title><circle class="halo" cx="110" cy="2906" r="19"/><use href="#st-fruit" transform="translate(95 2891) scale(1.25)"/><text class="nid" x="110" y="2942" text-anchor="middle">CG-081</text><text class="ntitle" x="110" y="2958" text-anchor="middle">Environment setup is per…</text><text class="nstate" x="110" y="2972" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-084"><g><title>CG-084: The garden upgrades its own pinned install after the tool's PRs merge — done (in fruit)</title><circle class="halo" cx="110" cy="3024" r="19"/><use href="#st-fruit" transform="translate(95 3009) scale(1.25)"/><text class="nid" x="110" y="3060" text-anchor="middle">CG-084</text><text class="ntitle" x="110" y="3076" text-anchor="middle">The garden upgrades its …</text><text class="nstate" x="110" y="3090" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-100"><g><title>CG-100: A worker's won't-do or nothing-to-change is a decision for the person, not a failure — done (in fruit)</title><circle class="halo" cx="110" cy="3142" r="19"/><use href="#st-fruit" transform="translate(95 3127) scale(1.25)"/><text class="nid" x="110" y="3178" text-anchor="middle">CG-100</text><text class="ntitle" x="110" y="3194" text-anchor="middle">A worker's won't-do or n…</text><text class="nstate" x="110" y="3208" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-110"><g><title>CG-110: CG-107 duplicates CG-092 — cancelled (pressed)</title><circle class="halo" cx="110" cy="3260" r="19"/><use href="#st-pressed" transform="translate(95 3245) scale(1.25)"/><text class="nid" x="110" y="3296" text-anchor="middle">CG-110</text><text class="ntitle" x="110" y="3312" text-anchor="middle">CG-107 duplicates CG-092</text><text class="nstate" x="110" y="3326" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-112"><g><title>CG-112: A worker's discovery can be a decision for the person, not only a new task — done (in fruit)</title><circle class="halo" cx="110" cy="3378" r="19"/><use href="#st-fruit" transform="translate(95 3363) scale(1.25)"/><text class="nid" x="110" y="3414" text-anchor="middle">CG-112</text><text class="ntitle" x="110" y="3430" text-anchor="middle">A worker's discovery can…</text><text class="nstate" x="110" y="3444" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-117"><g><title>CG-117: After the last automated review round, the person is told the PR is theirs — done (in fruit)</title><circle class="halo" cx="110" cy="3496" r="19"/><use href="#st-fruit" transform="translate(95 3481) scale(1.25)"/><text class="nid" x="110" y="3532" text-anchor="middle">CG-117</text><text class="ntitle" x="110" y="3548" text-anchor="middle">After the last automated…</text><text class="nstate" x="110" y="3562" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-118"><g><title>CG-118: A bot comment that is a notice, not a finding, is not feedback — done (in fruit)</title><circle class="halo" cx="110" cy="3614" r="19"/><use href="#st-fruit" transform="translate(95 3599) scale(1.25)"/><text class="nid" x="110" y="3650" text-anchor="middle">CG-118</text><text class="ntitle" x="110" y="3666" text-anchor="middle">A bot comment that is a …</text><text class="nstate" x="110" y="3680" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-126"><g><title>CG-126: Verify worktree provisioning for stacked tasks actually checks out the parent branch — done (in fruit)</title><circle class="halo" cx="110" cy="3732" r="19"/><use href="#st-fruit" transform="translate(95 3717) scale(1.25)"/><text class="nid" x="110" y="3768" text-anchor="middle">CG-126</text><text class="ntitle" x="110" y="3784" text-anchor="middle">Verify worktree provisio…</text><text class="nstate" x="110" y="3798" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-131"><g><title>CG-131: A check that fails at the branch's base commit triggers a rebase, not a revise round — done (in fruit)</title><circle class="halo" cx="110" cy="3850" r="19"/><use href="#st-fruit" transform="translate(95 3835) scale(1.25)"/><text class="nid" x="110" y="3886" text-anchor="middle">CG-131</text><text class="ntitle" x="110" y="3902" text-anchor="middle">A check that fails at th…</text><text class="nstate" x="110" y="3916" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-133"><g><title>CG-133: garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase — done (in fruit)</title><circle class="halo" cx="110" cy="3968" r="19"/><use href="#st-fruit" transform="translate(95 3953) scale(1.25)"/><text class="nid" x="110" y="4004" text-anchor="middle">CG-133</text><text class="ntitle" x="110" y="4020" text-anchor="middle">garden retro: harvest PR…</text><text class="nstate" x="110" y="4034" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-136"><g><title>CG-136: PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites — done (in fruit)</title><circle class="halo" cx="110" cy="4086" r="19"/><use href="#st-fruit" transform="translate(95 4071) scale(1.25)"/><text class="nid" x="110" y="4122" text-anchor="middle">CG-136</text><text class="ntitle" x="110" y="4138" text-anchor="middle">PR descriptions stop cos…</text><text class="nstate" x="110" y="4152" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-137"><g><title>CG-137: Split the scheduler by tick phase and the web actions into a registry so features stop colliding — draft (seed)</title><circle class="halo" cx="110" cy="4204" r="19"/><use href="#st-seed" transform="translate(95 4189) scale(1.25)"/><text class="nid" x="110" y="4240" text-anchor="middle">CG-137</text><text class="ntitle" x="110" y="4256" text-anchor="middle">Split the scheduler by t…</text><text class="nstate" x="110" y="4270" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-140"><g><title>CG-140: An empty description rewrite falls back to a round; pending feedback never sits on an in_review task — done (in fruit)</title><circle class="halo" cx="110" cy="4322" r="19"/><use href="#st-fruit" transform="translate(95 4307) scale(1.25)"/><text class="nid" x="110" y="4358" text-anchor="middle">CG-140</text><text class="ntitle" x="110" y="4374" text-anchor="middle">An empty description rew…</text><text class="nstate" x="110" y="4388" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-141"><g><title>CG-141: Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue — draft (seed)</title><circle class="halo" cx="110" cy="4440" r="19"/><use href="#st-seed" transform="translate(95 4425) scale(1.25)"/><text class="nid" x="110" y="4476" text-anchor="middle">CG-141</text><text class="ntitle" x="110" y="4492" text-anchor="middle">Rebase is its own mode: …</text><text class="nstate" x="110" y="4506" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-145"><g><title>CG-145: garden retro waits for the persona reports before it dispatches the reconciliation — draft (seed)</title><circle class="halo" cx="110" cy="4558" r="19"/><use href="#st-seed" transform="translate(95 4543) scale(1.25)"/><text class="nid" x="110" y="4594" text-anchor="middle">CG-145</text><text class="ntitle" x="110" y="4610" text-anchor="middle">garden retro waits for t…</text><text class="nstate" x="110" y="4624" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-146"><g><title>CG-146: A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated — draft (seed)</title><circle class="halo" cx="110" cy="4676" r="19"/><use href="#st-seed" transform="translate(95 4661) scale(1.25)"/><text class="nid" x="110" y="4712" text-anchor="middle">CG-146</text><text class="ntitle" x="110" y="4728" text-anchor="middle">A retro page per phase: …</text><text class="nstate" x="110" y="4742" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-009"><g><title>CG-009: Stream-json runner output and live log in the web UI — done (in fruit)</title><circle class="halo" cx="110" cy="4794" r="19"/><use href="#st-fruit" transform="translate(95 4779) scale(1.25)"/><text class="nid" x="110" y="4830" text-anchor="middle">CG-009</text><text class="ntitle" x="110" y="4846" text-anchor="middle">Stream-json runner outpu…</text><text class="nstate" x="110" y="4860" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-010"><g><title>CG-010: Notification hook for human-needed transitions — done (in fruit)</title><circle class="halo" cx="110" cy="4912" r="19"/><use href="#st-fruit" transform="translate(95 4897) scale(1.25)"/><text class="nid" x="110" y="4948" text-anchor="middle">CG-010</text><text class="ntitle" x="110" y="4964" text-anchor="middle">Notification hook for hu…</text><text class="nstate" x="110" y="4978" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-011"><g><title>CG-011: Automated review pass before human review — done (in fruit)</title><circle class="halo" cx="110" cy="5030" r="19"/><use href="#st-fruit" transform="translate(95 5015) scale(1.25)"/><text class="nid" x="110" y="5066" text-anchor="middle">CG-011</text><text class="ntitle" x="110" y="5082" text-anchor="middle">Automated review pass be…</text><text class="nstate" x="110" y="5096" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-030"><g><title>CG-030: Plates: label what each plate shows, keep every file public domain, credit Thomé — draft (seed)</title><circle class="halo" cx="110" cy="5148" r="19"/><use href="#st-seed" transform="translate(95 5133) scale(1.25)"/><text class="nid" x="110" y="5184" text-anchor="middle">CG-030</text><text class="ntitle" x="110" y="5200" text-anchor="middle">Plates: label what each …</text><text class="nstate" x="110" y="5214" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-043"><g><title>CG-043: garden finish must not race the tick — done (in fruit)</title><circle class="halo" cx="110" cy="5266" r="19"/><use href="#st-fruit" transform="translate(95 5251) scale(1.25)"/><text class="nid" x="110" y="5302" text-anchor="middle">CG-043</text><text class="ntitle" x="110" y="5318" text-anchor="middle">garden finish must not r…</text><text class="nstate" x="110" y="5332" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-044"><g><title>CG-044: Report friction from anywhere, and have it scheduled — done (in fruit)</title><circle class="halo" cx="110" cy="5384" r="19"/><use href="#st-fruit" transform="translate(95 5369) scale(1.25)"/><text class="nid" x="110" y="5420" text-anchor="middle">CG-044</text><text class="ntitle" x="110" y="5436" text-anchor="middle">Report friction from any…</text><text class="nstate" x="110" y="5450" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-045"><g><title>CG-045: Attention cards say what the decision is and what each button will do — done (in fruit)</title><circle class="halo" cx="110" cy="5502" r="19"/><use href="#st-fruit" transform="translate(95 5487) scale(1.25)"/><text class="nid" x="110" y="5538" text-anchor="middle">CG-045</text><text class="ntitle" x="110" y="5554" text-anchor="middle">Attention cards say what…</text><text class="nstate" x="110" y="5568" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-046"><g><title>CG-046: Task page: a full text box for the send-back note — done (in fruit)</title><circle class="halo" cx="110" cy="5620" r="19"/><use href="#st-fruit" transform="translate(95 5605) scale(1.25)"/><text class="nid" x="110" y="5656" text-anchor="middle">CG-046</text><text class="ntitle" x="110" y="5672" text-anchor="middle">Task page: a full text b…</text><text class="nstate" x="110" y="5686" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-048"><g><title>CG-048: Set or remove a phase budget from the web UI — done (in fruit)</title><circle class="halo" cx="110" cy="5738" r="19"/><use href="#st-fruit" transform="translate(95 5723) scale(1.25)"/><text class="nid" x="110" y="5774" text-anchor="middle">CG-048</text><text class="ntitle" x="110" y="5790" text-anchor="middle">Set or remove a phase bu…</text><text class="nstate" x="110" y="5804" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-059"><g><title>CG-059: Bot comments count as feedback unless excluded — done (in fruit)</title><circle class="halo" cx="110" cy="5856" r="19"/><use href="#st-fruit" transform="translate(95 5841) scale(1.25)"/><text class="nid" x="110" y="5892" text-anchor="middle">CG-059</text><text class="ntitle" x="110" y="5908" text-anchor="middle">Bot comments count as fe…</text><text class="nstate" x="110" y="5922" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-062"><g><title>CG-062: A worker silent for too long is flagged and stopped before the timeout — done (in fruit)</title><circle class="halo" cx="110" cy="5974" r="19"/><use href="#st-fruit" transform="translate(95 5959) scale(1.25)"/><text class="nid" x="110" y="6010" text-anchor="middle">CG-062</text><text class="ntitle" x="110" y="6026" text-anchor="middle">A worker silent for too …</text><text class="nstate" x="110" y="6040" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-067"><g><title>CG-067: garden commit commits only task files and sees untracked ones — done (in fruit)</title><circle class="halo" cx="110" cy="6092" r="19"/><use href="#st-fruit" transform="translate(95 6077) scale(1.25)"/><text class="nid" x="110" y="6128" text-anchor="middle">CG-067</text><text class="ntitle" x="110" y="6144" text-anchor="middle">garden commit commits on…</text><text class="nstate" x="110" y="6158" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-068"><g><title>CG-068: Automerge: merge a PR when the loop's own gates pass — done (in fruit)</title><circle class="halo" cx="110" cy="6210" r="19"/><use href="#st-fruit" transform="translate(95 6195) scale(1.25)"/><text class="nid" x="110" y="6246" text-anchor="middle">CG-068</text><text class="ntitle" x="110" y="6262" text-anchor="middle">Automerge: merge a PR wh…</text><text class="nstate" x="110" y="6276" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-072"><g><title>CG-072: A merged PR marks its task done even if the task had failed — done (in fruit)</title><circle class="halo" cx="110" cy="6328" r="19"/><use href="#st-fruit" transform="translate(95 6313) scale(1.25)"/><text class="nid" x="110" y="6364" text-anchor="middle">CG-072</text><text class="ntitle" x="110" y="6380" text-anchor="middle">A merged PR marks its ta…</text><text class="nstate" x="110" y="6394" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-073"><g><title>CG-073: Task page shows every run's transcript and final message — done (in fruit)</title><circle class="halo" cx="110" cy="6446" r="19"/><use href="#st-fruit" transform="translate(95 6431) scale(1.25)"/><text class="nid" x="110" y="6482" text-anchor="middle">CG-073</text><text class="ntitle" x="110" y="6498" text-anchor="middle">Task page shows every ru…</text><text class="nstate" x="110" y="6512" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-074"><g><title>CG-074: Reviews do not consume worker slots — done (in fruit)</title><circle class="halo" cx="110" cy="6564" r="19"/><use href="#st-fruit" transform="translate(95 6549) scale(1.25)"/><text class="nid" x="110" y="6600" text-anchor="middle">CG-074</text><text class="ntitle" x="110" y="6616" text-anchor="middle">Reviews do not consume w…</text><text class="nstate" x="110" y="6630" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-075"><g><title>CG-075: Runs page: the table and the scheduler log stay inside their panels — done (in fruit)</title><circle class="halo" cx="110" cy="6682" r="19"/><use href="#st-fruit" transform="translate(95 6667) scale(1.25)"/><text class="nid" x="110" y="6718" text-anchor="middle">CG-075</text><text class="ntitle" x="110" y="6734" text-anchor="middle">Runs page: the table and…</text><text class="nstate" x="110" y="6748" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-078"><g><title>CG-078: Closed phases leave the rail and live in a browsable herbarium — done (in fruit)</title><circle class="halo" cx="110" cy="6800" r="19"/><use href="#st-fruit" transform="translate(95 6785) scale(1.25)"/><text class="nid" x="110" y="6836" text-anchor="middle">CG-078</text><text class="ntitle" x="110" y="6852" text-anchor="middle">Closed phases leave the …</text><text class="nstate" x="110" y="6866" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-079"><g><title>CG-079: Suggest a change to a task from its page, and have an agent fold it in — done (in fruit)</title><circle class="halo" cx="110" cy="6918" r="19"/><use href="#st-fruit" transform="translate(95 6903) scale(1.25)"/><text class="nid" x="110" y="6954" text-anchor="middle">CG-079</text><text class="ntitle" x="110" y="6970" text-anchor="middle">Suggest a change to a ta…</text><text class="nstate" x="110" y="6984" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-083"><g><title>CG-083: A reap is atomic: a restart mid-tick never loses a finished run — done (in fruit)</title><circle class="halo" cx="110" cy="7036" r="19"/><use href="#st-fruit" transform="translate(95 7021) scale(1.25)"/><text class="nid" x="110" y="7072" text-anchor="middle">CG-083</text><text class="ntitle" x="110" y="7088" text-anchor="middle">A reap is atomic: a rest…</text><text class="nstate" x="110" y="7102" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-086"><g><title>CG-086: Web actions report failures as messages, never as a 500 — done (in fruit)</title><circle class="halo" cx="110" cy="7154" r="19"/><use href="#st-fruit" transform="translate(95 7139) scale(1.25)"/><text class="nid" x="110" y="7190" text-anchor="middle">CG-086</text><text class="ntitle" x="110" y="7206" text-anchor="middle">Web actions report failu…</text><text class="nstate" x="110" y="7220" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-096"><g><title>CG-096: Inbox count is the decisions only; retrying tasks show but do not count — done (in fruit)</title><circle class="halo" cx="110" cy="7272" r="19"/><use href="#st-fruit" transform="translate(95 7257) scale(1.25)"/><text class="nid" x="110" y="7308" text-anchor="middle">CG-096</text><text class="ntitle" x="110" y="7324" text-anchor="middle">Inbox count is the decis…</text><text class="nstate" x="110" y="7338" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-099"><g><title>CG-099: Task page: tier and priority are pulldowns that apply on change, with priority in words — done (in fruit)</title><circle class="halo" cx="110" cy="7390" r="19"/><use href="#st-fruit" transform="translate(95 7375) scale(1.25)"/><text class="nid" x="110" y="7426" text-anchor="middle">CG-099</text><text class="ntitle" x="110" y="7442" text-anchor="middle">Task page: tier and prio…</text><text class="nstate" x="110" y="7456" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-109"><g><title>CG-109: A description-only revise round runs on the easy tier — done (in fruit)</title><circle class="halo" cx="110" cy="7508" r="19"/><use href="#st-fruit" transform="translate(95 7493) scale(1.25)"/><text class="nid" x="110" y="7544" text-anchor="middle">CG-109</text><text class="ntitle" x="110" y="7560" text-anchor="middle">A description-only revis…</text><text class="nstate" x="110" y="7574" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-123"><g><title>CG-123: Tasks that edit the garden's own files run in a worktree of the garden repo — done (in fruit)</title><circle class="halo" cx="110" cy="7626" r="19"/><use href="#st-fruit" transform="translate(95 7611) scale(1.25)"/><text class="nid" x="110" y="7662" text-anchor="middle">CG-123</text><text class="ntitle" x="110" y="7678" text-anchor="middle">Tasks that edit the gard…</text><text class="nstate" x="110" y="7692" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-132"><g><title>CG-132: The web UI can create a task from a form, with the same fields as garden new-task — draft (seed)</title><circle class="halo" cx="110" cy="7744" r="19"/><use href="#st-seed" transform="translate(95 7729) scale(1.25)"/><text class="nid" x="110" y="7780" text-anchor="middle">CG-132</text><text class="ntitle" x="110" y="7796" text-anchor="middle">The web UI can create a …</text><text class="nstate" x="110" y="7810" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-134"><g><title>CG-134: garden walkthrough: render the live web app's pages for the retro and the persona reviews — draft (seed)</title><circle class="halo" cx="110" cy="7862" r="19"/><use href="#st-seed" transform="translate(95 7847) scale(1.25)"/><text class="nid" x="110" y="7898" text-anchor="middle">CG-134</text><text class="ntitle" x="110" y="7914" text-anchor="middle">garden walkthrough: rend…</text><text class="nstate" x="110" y="7928" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-135"><g><title>CG-135: garden qa: an agent drives the loop end to end through the web app on a throwaway garden — draft (seed)</title><circle class="halo" cx="110" cy="7980" r="19"/><use href="#st-seed" transform="translate(95 7965) scale(1.25)"/><text class="nid" x="110" y="8016" text-anchor="middle">CG-135</text><text class="ntitle" x="110" y="8032" text-anchor="middle">garden qa: an agent driv…</text><text class="nstate" x="110" y="8046" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-138"><g><title>CG-138: Automerge orders PRs that touch the same file one per cycle instead of letting them rebase against each other — cancelled (pressed)</title><circle class="halo" cx="110" cy="8098" r="19"/><use href="#st-pressed" transform="translate(95 8083) scale(1.25)"/><text class="nid" x="110" y="8134" text-anchor="middle">CG-138</text><text class="ntitle" x="110" y="8150" text-anchor="middle">Automerge orders PRs tha…</text><text class="nstate" x="110" y="8164" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-139"><g><title>CG-139: Rebase rounds do not count toward the revision cap — draft (seed)</title><circle class="halo" cx="110" cy="8216" r="19"/><use href="#st-seed" transform="translate(95 8201) scale(1.25)"/><text class="nid" x="110" y="8252" text-anchor="middle">CG-139</text><text class="ntitle" x="110" y="8268" text-anchor="middle">Rebase rounds do not cou…</text><text class="nstate" x="110" y="8282" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-142"><g><title>CG-142: Task actions refuse a task that is done or cancelled — draft (seed)</title><circle class="halo" cx="110" cy="8334" r="19"/><use href="#st-seed" transform="translate(95 8319) scale(1.25)"/><text class="nid" x="110" y="8370" text-anchor="middle">CG-142</text><text class="ntitle" x="110" y="8386" text-anchor="middle">Task actions refuse a ta…</text><text class="nstate" x="110" y="8400" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-143"><g><title>CG-143: Ship the garden-operate skill with the tool so every new garden gets it — draft (seed)</title><circle class="halo" cx="110" cy="8452" r="19"/><use href="#st-seed" transform="translate(95 8437) scale(1.25)"/><text class="nid" x="110" y="8488" text-anchor="middle">CG-143</text><text class="ntitle" x="110" y="8504" text-anchor="middle">Ship the garden-operate …</text><text class="nstate" x="110" y="8518" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-144"><g><title>CG-144: A superseded review run is closed when a newer review starts; no run record outlives its process — draft (seed)</title><circle class="halo" cx="110" cy="8570" r="19"/><use href="#st-seed" transform="translate(95 8555) scale(1.25)"/><text class="nid" x="110" y="8606" text-anchor="middle">CG-144</text><text class="ntitle" x="110" y="8622" text-anchor="middle">A superseded review run …</text><text class="nstate" x="110" y="8636" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-147"><g><title>CG-147: A product clone gets a git identity when it is made, and doctor checks every clone — draft (seed)</title><circle class="halo" cx="110" cy="8688" r="19"/><use href="#st-seed" transform="translate(95 8673) scale(1.25)"/><text class="nid" x="110" y="8724" text-anchor="middle">CG-147</text><text class="ntitle" x="110" y="8740" text-anchor="middle">A product clone gets a g…</text><text class="nstate" x="110" y="8754" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-012"><g><title>CG-012: Brief cost report per phase — done (in fruit)</title><circle class="halo" cx="110" cy="8806" r="19"/><use href="#st-fruit" transform="translate(95 8791) scale(1.25)"/><text class="nid" x="110" y="8842" text-anchor="middle">CG-012</text><text class="ntitle" x="110" y="8858" text-anchor="middle">Brief cost report per ph…</text><text class="nstate" x="110" y="8872" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-031"><g><title>CG-031: Draw the done stage as a red apple — done (in fruit)</title><circle class="halo" cx="110" cy="8924" r="19"/><use href="#st-fruit" transform="translate(95 8909) scale(1.25)"/><text class="nid" x="110" y="8960" text-anchor="middle">CG-031</text><text class="ntitle" x="110" y="8976" text-anchor="middle">Draw the done stage as a…</text><text class="nstate" x="110" y="8990" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-065"><g><title>CG-065: Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows — done (in fruit)</title><circle class="halo" cx="110" cy="9042" r="19"/><use href="#st-fruit" transform="translate(95 9027) scale(1.25)"/><text class="nid" x="110" y="9078" text-anchor="middle">CG-065</text><text class="ntitle" x="110" y="9094" text-anchor="middle">Plates and plants: posit…</text><text class="nstate" x="110" y="9108" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-066"><g><title>CG-066: garden usage shows the phase header and brief estimates before any run — done (in fruit)</title><circle class="halo" cx="110" cy="9160" r="19"/><use href="#st-fruit" transform="translate(95 9145) scale(1.25)"/><text class="nid" x="110" y="9196" text-anchor="middle">CG-066</text><text class="ntitle" x="110" y="9212" text-anchor="middle">garden usage shows the p…</text><text class="nstate" x="110" y="9226" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-070"><g><title>CG-070: Auto-approve every discovered task, not only blocking ones — cancelled (pressed)</title><circle class="halo" cx="110" cy="9278" r="19"/><use href="#st-pressed" transform="translate(95 9263) scale(1.25)"/><text class="nid" x="110" y="9314" text-anchor="middle">CG-070</text><text class="ntitle" x="110" y="9330" text-anchor="middle">Auto-approve every disco…</text><text class="nstate" x="110" y="9344" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-071"><g><title>CG-071: Set a task's priority and difficulty from the CLI and the task page — done (in fruit)</title><circle class="halo" cx="110" cy="9396" r="19"/><use href="#st-fruit" transform="translate(95 9381) scale(1.25)"/><text class="nid" x="110" y="9432" text-anchor="middle">CG-071</text><text class="ntitle" x="110" y="9448" text-anchor="middle">Set a task's priority an…</text><text class="nstate" x="110" y="9462" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-088"><g><title>CG-088: Trellis and phase page can hide completed tasks — done (in fruit)</title><circle class="halo" cx="110" cy="9514" r="19"/><use href="#st-fruit" transform="translate(95 9499) scale(1.25)"/><text class="nid" x="110" y="9550" text-anchor="middle">CG-088</text><text class="ntitle" x="110" y="9566" text-anchor="middle">Trellis and phase page c…</text><text class="nstate" x="110" y="9580" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-094"><g><title>CG-094: Board: a list view grouped by status beside the columns — done (in fruit)</title><circle class="halo" cx="110" cy="9632" r="19"/><use href="#st-fruit" transform="translate(95 9617) scale(1.25)"/><text class="nid" x="110" y="9668" text-anchor="middle">CG-094</text><text class="ntitle" x="110" y="9684" text-anchor="middle">Board: a list view group…</text><text class="nstate" x="110" y="9698" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-037"><g><title>CG-037: Stop the revise template and the review prompt contradicting each other — done (in fruit)</title><circle class="halo" cx="340" cy="2611" r="19"/><use href="#st-fruit" transform="translate(325 2596) scale(1.25)"/><text class="nid" x="340" y="2647" text-anchor="middle">CG-037</text><text class="ntitle" x="340" y="2663" text-anchor="middle">Stop the revise template…</text><text class="nstate" x="340" y="2677" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-082"><g><title>CG-082: Separate GARDEN_ROOT (guard) from the check-command venv path variable — done (in fruit)</title><circle class="halo" cx="340" cy="2729" r="19"/><use href="#st-fruit" transform="translate(325 2714) scale(1.25)"/><text class="nid" x="340" y="2765" text-anchor="middle">CG-082</text><text class="ntitle" x="340" y="2781" text-anchor="middle">Separate GARDEN_ROOT (gu…</text><text class="nstate" x="340" y="2795" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-093"><g><title>CG-093: Store.save() for task files has the same non-atomic write_text pattern — done (in fruit)</title><circle class="halo" cx="340" cy="2847" r="19"/><use href="#st-fruit" transform="translate(325 2832) scale(1.25)"/><text class="nid" x="340" y="2883" text-anchor="middle">CG-093</text><text class="ntitle" x="340" y="2899" text-anchor="middle">Store.save() for task fi…</text><text class="nstate" x="340" y="2913" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-097"><g><title>CG-097: Worktree setup sometimes skips creating .venv, breaking pre-PR checks — cancelled (pressed)</title><circle class="halo" cx="340" cy="2965" r="19"/><use href="#st-pressed" transform="translate(325 2950) scale(1.25)"/><text class="nid" x="340" y="3001" text-anchor="middle">CG-097</text><text class="ntitle" x="340" y="3017" text-anchor="middle">Worktree setup sometimes…</text><text class="nstate" x="340" y="3031" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-101"><g><title>CG-101: Pre-PR `tests` check environment doesn't match test suite assumptions — done (in fruit)</title><circle class="halo" cx="340" cy="3083" r="19"/><use href="#st-fruit" transform="translate(325 3068) scale(1.25)"/><text class="nid" x="340" y="3119" text-anchor="middle">CG-101</text><text class="ntitle" x="340" y="3135" text-anchor="middle">Pre-PR `tests` check env…</text><text class="nstate" x="340" y="3149" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-103"><g><title>CG-103: Orchestrating garden's pre-PR check command still resolves venv/tool paths via $GARDEN_ROOT for this product — cancelled (pressed)</title><circle class="halo" cx="340" cy="3201" r="19"/><use href="#st-pressed" transform="translate(325 3186) scale(1.25)"/><text class="nid" x="340" y="3237" text-anchor="middle">CG-103</text><text class="ntitle" x="340" y="3253" text-anchor="middle">Orchestrating garden's p…</text><text class="nstate" x="340" y="3267" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-105"><g><title>CG-105: Test suite should isolate/unset GARDEN_ROOT so worker sandboxing doesn't masquerade as test failures — cancelled (pressed)</title><circle class="halo" cx="340" cy="3319" r="19"/><use href="#st-pressed" transform="translate(325 3304) scale(1.25)"/><text class="nid" x="340" y="3355" text-anchor="middle">CG-105</text><text class="ntitle" x="340" y="3371" text-anchor="middle">Test suite should isolat…</text><text class="nstate" x="340" y="3385" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-127"><g><title>CG-127: test_set_budget_none_removes_cap fails on main — done (in fruit)</title><circle class="halo" cx="340" cy="3437" r="19"/><use href="#st-fruit" transform="translate(325 3422) scale(1.25)"/><text class="nid" x="340" y="3473" text-anchor="middle">CG-127</text><text class="ntitle" x="340" y="3489" text-anchor="middle">test_set_budget_none_rem…</text><text class="nstate" x="340" y="3503" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-002"><g><title>CG-002: Dependency graph and ready set — done (in fruit)</title><circle class="halo" cx="340" cy="3555" r="19"/><use href="#st-fruit" transform="translate(325 3540) scale(1.25)"/><text class="nid" x="340" y="3591" text-anchor="middle">CG-002</text><text class="ntitle" x="340" y="3607" text-anchor="middle">Dependency graph and rea…</text><text class="nstate" x="340" y="3621" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-003"><g><title>CG-003: Worker brief builder and result contract — done (in fruit)</title><circle class="halo" cx="340" cy="3673" r="19"/><use href="#st-fruit" transform="translate(325 3658) scale(1.25)"/><text class="nid" x="340" y="3709" text-anchor="middle">CG-003</text><text class="ntitle" x="340" y="3725" text-anchor="middle">Worker brief builder and…</text><text class="nstate" x="340" y="3739" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-005"><g><title>CG-005: Planner: goals and specs to draft tasks — done (in fruit)</title><circle class="halo" cx="340" cy="3791" r="19"/><use href="#st-fruit" transform="translate(325 3776) scale(1.25)"/><text class="nid" x="340" y="3827" text-anchor="middle">CG-005</text><text class="ntitle" x="340" y="3843" text-anchor="middle">Planner: goals and specs…</text><text class="nstate" x="340" y="3857" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-092"><g><title>CG-092: Remove venv install lines from the context-garden garden config and product overview — done (in fruit)</title><circle class="halo" cx="340" cy="3909" r="19"/><use href="#st-fruit" transform="translate(325 3894) scale(1.25)"/><text class="nid" x="340" y="3945" text-anchor="middle">CG-092</text><text class="ntitle" x="340" y="3961" text-anchor="middle">Remove venv install line…</text><text class="nstate" x="340" y="3975" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-107"><g><title>CG-107: Driving garden config should adopt the setup block for context-garden — cancelled (pressed)</title><circle class="halo" cx="340" cy="4027" r="19"/><use href="#st-pressed" transform="translate(325 4012) scale(1.25)"/><text class="nid" x="340" y="4063" text-anchor="middle">CG-107</text><text class="ntitle" x="340" y="4079" text-anchor="middle">Driving garden config sh…</text><text class="nstate" x="340" y="4093" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-114"><g><title>CG-114: Per-worktree test environment so pytest imports the local src — cancelled (pressed)</title><circle class="halo" cx="340" cy="4145" r="19"/><use href="#st-pressed" transform="translate(325 4130) scale(1.25)"/><text class="nid" x="340" y="4181" text-anchor="middle">CG-114</text><text class="ntitle" x="340" y="4197" text-anchor="middle">Per-worktree test enviro…</text><text class="nstate" x="340" y="4211" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-119"><g><title>CG-119: test_happy_path_dispatch_reap_pr_merge flakes intermittently in CI — done (in fruit)</title><circle class="halo" cx="340" cy="4263" r="19"/><use href="#st-fruit" transform="translate(325 4248) scale(1.25)"/><text class="nid" x="340" y="4299" text-anchor="middle">CG-119</text><text class="ntitle" x="340" y="4315" text-anchor="middle">test_happy_path_dispatch…</text><text class="nstate" x="340" y="4329" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-028"><g><title>CG-028: Calibrate the tier map with a model trial — cancelled (pressed)</title><circle class="halo" cx="340" cy="4381" r="19"/><use href="#st-pressed" transform="translate(325 4366) scale(1.25)"/><text class="nid" x="340" y="4417" text-anchor="middle">CG-028</text><text class="ntitle" x="340" y="4433" text-anchor="middle">Calibrate the tier map w…</text><text class="nstate" x="340" y="4447" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-032"><g><title>CG-032: Doctor checks that gh and the harness are logged in and git has an identity — done (in fruit)</title><circle class="halo" cx="340" cy="4499" r="19"/><use href="#st-fruit" transform="translate(325 4484) scale(1.25)"/><text class="nid" x="340" y="4535" text-anchor="middle">CG-032</text><text class="ntitle" x="340" y="4551" text-anchor="middle">Doctor checks that gh an…</text><text class="nstate" x="340" y="4565" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-033"><g><title>CG-033: An environment error in a worker pauses dispatch instead of burning attempts — cancelled (pressed)</title><circle class="halo" cx="340" cy="4617" r="19"/><use href="#st-pressed" transform="translate(325 4602) scale(1.25)"/><text class="nid" x="340" y="4653" text-anchor="middle">CG-033</text><text class="ntitle" x="340" y="4669" text-anchor="middle">An environment error in …</text><text class="nstate" x="340" y="4683" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-034"><g><title>CG-034: Windows: run the harness by its resolved path and give pre-PR checks a shell — done (in fruit)</title><circle class="halo" cx="340" cy="4735" r="19"/><use href="#st-fruit" transform="translate(325 4720) scale(1.25)"/><text class="nid" x="340" y="4771" text-anchor="middle">CG-034</text><text class="ntitle" x="340" y="4787" text-anchor="middle">Windows: run the harness…</text><text class="nstate" x="340" y="4801" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-035"><g><title>CG-035: Inbox and digest show what actually happened to a task — done (in fruit)</title><circle class="halo" cx="340" cy="4853" r="19"/><use href="#st-fruit" transform="translate(325 4838) scale(1.25)"/><text class="nid" x="340" y="4889" text-anchor="middle">CG-035</text><text class="ntitle" x="340" y="4905" text-anchor="middle">Inbox and digest show wh…</text><text class="nstate" x="340" y="4919" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-036"><g><title>CG-036: Revise brief: a pre-PR variant, and tell the worker what is already on the branch — done (in fruit)</title><circle class="halo" cx="340" cy="4971" r="19"/><use href="#st-fruit" transform="translate(325 4956) scale(1.25)"/><text class="nid" x="340" y="5007" text-anchor="middle">CG-036</text><text class="ntitle" x="340" y="5023" text-anchor="middle">Revise brief: a pre-PR v…</text><text class="nstate" x="340" y="5037" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-038"><g><title>CG-038: Stall detection judges a description-only round by the description — done (in fruit)</title><circle class="halo" cx="340" cy="5089" r="19"/><use href="#st-fruit" transform="translate(325 5074) scale(1.25)"/><text class="nid" x="340" y="5125" text-anchor="middle">CG-038</text><text class="ntitle" x="340" y="5141" text-anchor="middle">Stall detection judges a…</text><text class="nstate" x="340" y="5155" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-039"><g><title>CG-039: Show cache reads, not just fresh input tokens, in runs and usage — done (in fruit)</title><circle class="halo" cx="340" cy="5207" r="19"/><use href="#st-fruit" transform="translate(325 5192) scale(1.25)"/><text class="nid" x="340" y="5243" text-anchor="middle">CG-039</text><text class="ntitle" x="340" y="5259" text-anchor="middle">Show cache reads, not ju…</text><text class="nstate" x="340" y="5273" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-040"><g><title>CG-040: Tell the worker its turn cap, and set it per tier — done (in fruit)</title><circle class="halo" cx="340" cy="5325" r="19"/><use href="#st-fruit" transform="translate(325 5310) scale(1.25)"/><text class="nid" x="340" y="5361" text-anchor="middle">CG-040</text><text class="ntitle" x="340" y="5377" text-anchor="middle">Tell the worker its turn…</text><text class="nstate" x="340" y="5391" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-041"><g><title>CG-041: Mark the garden's own PR comments as the garden's — done (in fruit)</title><circle class="halo" cx="340" cy="5443" r="19"/><use href="#st-fruit" transform="translate(325 5428) scale(1.25)"/><text class="nid" x="340" y="5479" text-anchor="middle">CG-041</text><text class="ntitle" x="340" y="5495" text-anchor="middle">Mark the garden's own PR…</text><text class="nstate" x="340" y="5509" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-042"><g><title>CG-042: Say when the garden's own state edits get committed — done (in fruit)</title><circle class="halo" cx="340" cy="5561" r="19"/><use href="#st-fruit" transform="translate(325 5546) scale(1.25)"/><text class="nid" x="340" y="5597" text-anchor="middle">CG-042</text><text class="ntitle" x="340" y="5613" text-anchor="middle">Say when the garden's ow…</text><text class="nstate" x="340" y="5627" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-080"><g><title>CG-080: Change parallelism from the configuration page and the CLI, effective next tick — done (in fruit)</title><circle class="halo" cx="340" cy="5679" r="19"/><use href="#st-fruit" transform="translate(325 5664) scale(1.25)"/><text class="nid" x="340" y="5715" text-anchor="middle">CG-080</text><text class="ntitle" x="340" y="5731" text-anchor="middle">Change parallelism from …</text><text class="nstate" x="340" y="5745" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-087"><g><title>CG-087: Trial form picks contenders from the known harnesses and models — done (in fruit)</title><circle class="halo" cx="340" cy="5797" r="19"/><use href="#st-fruit" transform="translate(325 5782) scale(1.25)"/><text class="nid" x="340" y="5833" text-anchor="middle">CG-087</text><text class="ntitle" x="340" y="5849" text-anchor="middle">Trial form picks contend…</text><text class="nstate" x="340" y="5863" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-120"><g><title>CG-120: CG-029's brief must name `garden close-phase` — cancelled (pressed)</title><circle class="halo" cx="340" cy="5915" r="19"/><use href="#st-pressed" transform="translate(325 5900) scale(1.25)"/><text class="nid" x="340" y="5951" text-anchor="middle">CG-120</text><text class="ntitle" x="340" y="5967" text-anchor="middle">CG-029's brief must name…</text><text class="nstate" x="340" y="5981" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-124"><g><title>CG-124: test_feedback_triggers_revise_round commit-collision flake (already tracked as CG-064) — cancelled (pressed)</title><circle class="halo" cx="340" cy="6033" r="19"/><use href="#st-pressed" transform="translate(325 6018) scale(1.25)"/><text class="nid" x="340" y="6069" text-anchor="middle">CG-124</text><text class="ntitle" x="340" y="6085" text-anchor="middle">test_feedback_triggers_r…</text><text class="nstate" x="340" y="6099" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-128"><g><title>CG-128: test_set_budget_none_removes_cap fails under Python 3.14 — cancelled (pressed)</title><circle class="halo" cx="340" cy="6151" r="19"/><use href="#st-pressed" transform="translate(325 6136) scale(1.25)"/><text class="nid" x="340" y="6187" text-anchor="middle">CG-128</text><text class="ntitle" x="340" y="6203" text-anchor="middle">test_set_budget_none_rem…</text><text class="nstate" x="340" y="6217" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-013"><g><title>CG-013: Replan a phase after failures — done (in fruit)</title><circle class="halo" cx="340" cy="6269" r="19"/><use href="#st-fruit" transform="translate(325 6254) scale(1.25)"/><text class="nid" x="340" y="6305" text-anchor="middle">CG-013</text><text class="ntitle" x="340" y="6321" text-anchor="middle">Replan a phase after fai…</text><text class="nstate" x="340" y="6335" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-056"><g><title>CG-056: CLAUDE.md venv path breaks in worktrees — cancelled (pressed)</title><circle class="halo" cx="340" cy="6387" r="19"/><use href="#st-pressed" transform="translate(325 6372) scale(1.25)"/><text class="nid" x="340" y="6423" text-anchor="middle">CG-056</text><text class="ntitle" x="340" y="6439" text-anchor="middle">CLAUDE.md venv path brea…</text><text class="nstate" x="340" y="6453" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-089"><g><title>CG-089: Board: reorder ready tasks with up/down priority controls — cancelled (pressed)</title><circle class="halo" cx="340" cy="6505" r="19"/><use href="#st-pressed" transform="translate(325 6490) scale(1.25)"/><text class="nid" x="340" y="6541" text-anchor="middle">CG-089</text><text class="ntitle" x="340" y="6557" text-anchor="middle">Board: reorder ready tas…</text><text class="nstate" x="340" y="6571" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-115"><g><title>CG-115: Store a short diff summary on run records for attention/triage evidence — done (in fruit)</title><circle class="halo" cx="340" cy="6623" r="19"/><use href="#st-fruit" transform="translate(325 6608) scale(1.25)"/><text class="nid" x="340" y="6659" text-anchor="middle">CG-115</text><text class="ntitle" x="340" y="6675" text-anchor="middle">Store a short diff summa…</text><text class="nstate" x="340" y="6689" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-121"><g><title>CG-121: Planner and friction reports can still create tasks in a closed phase — done (in fruit)</title><circle class="halo" cx="340" cy="6741" r="19"/><use href="#st-fruit" transform="translate(325 6726) scale(1.25)"/><text class="nid" x="340" y="6777" text-anchor="middle">CG-121</text><text class="ntitle" x="340" y="6793" text-anchor="middle">Planner and friction rep…</text><text class="nstate" x="340" y="6807" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-122"><g><title>CG-122: Extend the flash-message pattern to friction-report and phase/global actions — done (in fruit)</title><circle class="halo" cx="340" cy="6859" r="19"/><use href="#st-fruit" transform="translate(325 6844) scale(1.25)"/><text class="nid" x="340" y="6895" text-anchor="middle">CG-122</text><text class="ntitle" x="340" y="6911" text-anchor="middle">Extend the flash-message…</text><text class="nstate" x="340" y="6925" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-125"><g><title>CG-125: Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart — draft (seed)</title><circle class="halo" cx="340" cy="6977" r="19"/><use href="#st-seed" transform="translate(325 6962) scale(1.25)"/><text class="nid" x="340" y="7013" text-anchor="middle">CG-125</text><text class="ntitle" x="340" y="7029" text-anchor="middle">Scheduler/task log shoul…</text><text class="nstate" x="340" y="7043" text-anchor="middle">draft</text></g></a>
+<a href="/tasks/CG-130"><g><title>CG-130: test_set_budget_none_removes_cap is missing a reap tick — cancelled (pressed)</title><circle class="halo" cx="340" cy="7095" r="19"/><use href="#st-pressed" transform="translate(325 7080) scale(1.25)"/><text class="nid" x="340" y="7131" text-anchor="middle">CG-130</text><text class="ntitle" x="340" y="7147" text-anchor="middle">test_set_budget_none_rem…</text><text class="nstate" x="340" y="7161" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-095"><g><title>CG-095: checks.pre_pr can fail with a confusing exit-127 error if GARDEN_ROOT's venv isn't provisioned — cancelled (pressed)</title><circle class="halo" cx="570" cy="4322" r="19"/><use href="#st-pressed" transform="translate(555 4307) scale(1.25)"/><text class="nid" x="570" y="4358" text-anchor="middle">CG-095</text><text class="ntitle" x="570" y="4374" text-anchor="middle">checks.pre_pr can fail w…</text><text class="nstate" x="570" y="4388" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-102"><g><title>CG-102: State.save() in scheduler.py still not atomic — cancelled (pressed)</title><circle class="halo" cx="570" cy="4440" r="19"/><use href="#st-pressed" transform="translate(555 4425) scale(1.25)"/><text class="nid" x="570" y="4476" text-anchor="middle">CG-102</text><text class="ntitle" x="570" y="4492" text-anchor="middle">State.save() in schedule…</text><text class="nstate" x="570" y="4506" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-108"><g><title>CG-108: Document (or design a dedicated mode for) the GARDEN_ROOT-sentinel gotcha for self-hosted check commands — cancelled (pressed)</title><circle class="halo" cx="570" cy="4558" r="19"/><use href="#st-pressed" transform="translate(555 4543) scale(1.25)"/><text class="nid" x="570" y="4594" text-anchor="middle">CG-108</text><text class="ntitle" x="570" y="4610" text-anchor="middle">Document (or design a de…</text><text class="nstate" x="570" y="4624" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-004"><g><title>CG-004: Scheduler: reap, poll, dispatch — done (in fruit)</title><circle class="halo" cx="570" cy="4676" r="19"/><use href="#st-fruit" transform="translate(555 4661) scale(1.25)"/><text class="nid" x="570" y="4712" text-anchor="middle">CG-004</text><text class="ntitle" x="570" y="4728" text-anchor="middle">Scheduler: reap, poll, d…</text><text class="nstate" x="570" y="4742" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-098"><g><title>CG-098: Tests do not read the developer's GARDEN_ROOT; the check command need not unset it — done (in fruit)</title><circle class="halo" cx="570" cy="4794" r="19"/><use href="#st-fruit" transform="translate(555 4779) scale(1.25)"/><text class="nid" x="570" y="4830" text-anchor="middle">CG-098</text><text class="ntitle" x="570" y="4846" text-anchor="middle">Tests do not read the de…</text><text class="nstate" x="570" y="4860" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-049"><g><title>CG-049: CLAUDE.md: document PYTHONPATH=src for manual test runs in worktrees — done (in fruit)</title><circle class="halo" cx="570" cy="4912" r="19"/><use href="#st-fruit" transform="translate(555 4897) scale(1.25)"/><text class="nid" x="570" y="4948" text-anchor="middle">CG-049</text><text class="ntitle" x="570" y="4964" text-anchor="middle">CLAUDE.md: document PYTH…</text><text class="nstate" x="570" y="4978" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-051"><g><title>CG-051: Worktree tests need PYTHONPATH or a per-worktree venv — cancelled (pressed)</title><circle class="halo" cx="570" cy="5030" r="19"/><use href="#st-pressed" transform="translate(555 5015) scale(1.25)"/><text class="nid" x="570" y="5066" text-anchor="middle">CG-051</text><text class="ntitle" x="570" y="5082" text-anchor="middle">Worktree tests need PYTH…</text><text class="nstate" x="570" y="5096" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-052"><g><title>CG-052: Worktree venv isolation: document or automate per-worktree install — cancelled (pressed)</title><circle class="halo" cx="570" cy="5148" r="19"/><use href="#st-pressed" transform="translate(555 5133) scale(1.25)"/><text class="nid" x="570" y="5184" text-anchor="middle">CG-052</text><text class="ntitle" x="570" y="5200" text-anchor="middle">Worktree venv isolation:…</text><text class="nstate" x="570" y="5214" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-077"><g><title>CG-077: Document pip install -e requirement for worktree development — cancelled (pressed)</title><circle class="halo" cx="570" cy="5266" r="19"/><use href="#st-pressed" transform="translate(555 5251) scale(1.25)"/><text class="nid" x="570" y="5302" text-anchor="middle">CG-077</text><text class="ntitle" x="570" y="5318" text-anchor="middle">Document pip install -e …</text><text class="nstate" x="570" y="5332" text-anchor="middle">cancelled</text></g></a>
+<a href="/tasks/CG-029"><g><title>CG-029: Close the phase: friction document, what changed, and the next goals — ready (sprout)</title><circle class="halo" cx="570" cy="5384" r="19"/><use href="#st-sprout" transform="translate(555 5369) scale(1.25)"/><text class="nid" x="570" y="5420" text-anchor="middle">CG-029</text><text class="ntitle" x="570" y="5436" text-anchor="middle">Close the phase: frictio…</text><text class="nstate" x="570" y="5450" text-anchor="middle">ready</text></g></a>
+<a href="/tasks/CG-006"><g><title>CG-006: Web UI and TUI — done (in fruit)</title><circle class="halo" cx="800" cy="4558" r="19"/><use href="#st-fruit" transform="translate(785 4543) scale(1.25)"/><text class="nid" x="800" y="4594" text-anchor="middle">CG-006</text><text class="ntitle" x="800" y="4610" text-anchor="middle">Web UI and TUI</text><text class="nstate" x="800" y="4624" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-007"><g><title>CG-007: Claude Code skills and README — done (in fruit)</title><circle class="halo" cx="800" cy="4676" r="19"/><use href="#st-fruit" transform="translate(785 4661) scale(1.25)"/><text class="nid" x="800" y="4712" text-anchor="middle">CG-007</text><text class="ntitle" x="800" y="4728" text-anchor="middle">Claude Code skills and R…</text><text class="nstate" x="800" y="4742" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-014"><g><title>CG-014: Harness abstraction and difficulty-based model selection — done (in fruit)</title><circle class="halo" cx="800" cy="4794" r="19"/><use href="#st-fruit" transform="translate(785 4779) scale(1.25)"/><text class="nid" x="800" y="4830" text-anchor="middle">CG-014</text><text class="ntitle" x="800" y="4846" text-anchor="middle">Harness abstraction and …</text><text class="nstate" x="800" y="4860" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-017"><g><title>CG-017: Event log, digest and metrics — done (in fruit)</title><circle class="halo" cx="800" cy="4912" r="19"/><use href="#st-fruit" transform="translate(785 4897) scale(1.25)"/><text class="nid" x="800" y="4948" text-anchor="middle">CG-017</text><text class="ntitle" x="800" y="4964" text-anchor="middle">Event log, digest and me…</text><text class="nstate" x="800" y="4978" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-024"><g><title>CG-024: Token-free pre-PR and CI checks — done (in fruit)</title><circle class="halo" cx="800" cy="5030" r="19"/><use href="#st-fruit" transform="translate(785 5015) scale(1.25)"/><text class="nid" x="800" y="5066" text-anchor="middle">CG-024</text><text class="ntitle" x="800" y="5082" text-anchor="middle">Token-free pre-PR and CI…</text><text class="nstate" x="800" y="5096" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-113"><g><title>CG-113: Drop the `env -u GARDEN_ROOT` stopgap from the live garden's tests check — done (in fruit)</title><circle class="halo" cx="800" cy="5148" r="19"/><use href="#st-fruit" transform="translate(785 5133) scale(1.25)"/><text class="nid" x="800" y="5184" text-anchor="middle">CG-113</text><text class="ntitle" x="800" y="5200" text-anchor="middle">Drop the `env -u GARDEN_…</text><text class="nstate" x="800" y="5214" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-015"><g><title>CG-015: Remote workers over ssh — done (in fruit)</title><circle class="halo" cx="1030" cy="4558" r="19"/><use href="#st-fruit" transform="translate(1015 4543) scale(1.25)"/><text class="nid" x="1030" y="4594" text-anchor="middle">CG-015</text><text class="ntitle" x="1030" y="4610" text-anchor="middle">Remote workers over ssh</text><text class="nstate" x="1030" y="4624" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-016"><g><title>CG-016: Automated review pass and PR tracking — done (in fruit)</title><circle class="halo" cx="1030" cy="4676" r="19"/><use href="#st-fruit" transform="translate(1015 4661) scale(1.25)"/><text class="nid" x="1030" y="4712" text-anchor="middle">CG-016</text><text class="ntitle" x="1030" y="4728" text-anchor="middle">Automated review pass an…</text><text class="nstate" x="1030" y="4742" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-018"><g><title>CG-018: Pause and resume: waiting_human and garden answer — done (in fruit)</title><circle class="halo" cx="1030" cy="4794" r="19"/><use href="#st-fruit" transform="translate(1015 4779) scale(1.25)"/><text class="nid" x="1030" y="4830" text-anchor="middle">CG-018</text><text class="ntitle" x="1030" y="4846" text-anchor="middle">Pause and resume: waitin…</text><text class="nstate" x="1030" y="4860" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-019"><g><title>CG-019: Discovered work from worker results — done (in fruit)</title><circle class="halo" cx="1030" cy="4912" r="19"/><use href="#st-fruit" transform="translate(1015 4897) scale(1.25)"/><text class="nid" x="1030" y="4948" text-anchor="middle">CG-019</text><text class="ntitle" x="1030" y="4964" text-anchor="middle">Discovered work from wor…</text><text class="nstate" x="1030" y="4978" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-021"><g><title>CG-021: Stacked dependencies with restack on merge — done (in fruit)</title><circle class="halo" cx="1030" cy="5030" r="19"/><use href="#st-fruit" transform="translate(1015 5015) scale(1.25)"/><text class="nid" x="1030" y="5066" text-anchor="middle">CG-021</text><text class="ntitle" x="1030" y="5082" text-anchor="middle">Stacked dependencies wit…</text><text class="nstate" x="1030" y="5096" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-026"><g><title>CG-026: Botanical theme: plants per phase and growth-stage glyphs — done (in fruit)</title><circle class="halo" cx="1030" cy="5148" r="19"/><use href="#st-fruit" transform="translate(1015 5133) scale(1.25)"/><text class="nid" x="1030" y="5184" text-anchor="middle">CG-026</text><text class="ntitle" x="1030" y="5200" text-anchor="middle">Botanical theme: plants …</text><text class="nstate" x="1030" y="5214" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-020"><g><title>CG-020: Stall detection and phase budgets — done (in fruit)</title><circle class="halo" cx="1260" cy="4735" r="19"/><use href="#st-fruit" transform="translate(1245 4720) scale(1.25)"/><text class="nid" x="1260" y="4771" text-anchor="middle">CG-020</text><text class="ntitle" x="1260" y="4787" text-anchor="middle">Stall detection and phas…</text><text class="nstate" x="1260" y="4801" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-022"><g><title>CG-022: Model trials with a leaderboard — done (in fruit)</title><circle class="halo" cx="1260" cy="4853" r="19"/><use href="#st-fruit" transform="translate(1245 4838) scale(1.25)"/><text class="nid" x="1260" y="4889" text-anchor="middle">CG-022</text><text class="ntitle" x="1260" y="4905" text-anchor="middle">Model trials with a lead…</text><text class="nstate" x="1260" y="4919" text-anchor="middle">done</text></g></a>
+<a href="/tasks/CG-023"><g><title>CG-023: Persona reviews of PRs and phases — done (in fruit)</title><circle class="halo" cx="1260" cy="4971" r="19"/><use href="#st-fruit" transform="translate(1245 4956) scale(1.25)"/><text class="nid" x="1260" y="5007" text-anchor="middle">CG-023</text><text class="ntitle" x="1260" y="5023" text-anchor="middle">Persona reviews of PRs a…</text><text class="nstate" x="1260" y="5037" text-anchor="middle">done</text></g></a>
+</svg>
+  <div style="display:flex; gap:18px; flex-wrap:wrap; margin:12px 4px 4px; font:11px/1.4 var(--mono); color:var(--muted); letter-spacing:.04em">
+    <span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="seed"><title>seed</title><use href="#st-seed"/></svg>draft <span class="faint">· seed</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="sprout"><title>sprout</title><use href="#st-sprout"/></svg>ready <span class="faint">· sprout</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="in leaf"><title>in leaf</title><use href="#st-leaf"/></svg>running <span class="faint">· in leaf</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="bud, tagged"><title>bud, tagged</title><use href="#st-tag"/></svg>waiting human <span class="faint">· bud, tagged</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="in bud"><title>in bud</title><use href="#st-bud"/></svg>awaiting triage <span class="faint">· in bud</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="in flower"><title>in flower</title><use href="#st-flower"/></svg>in review <span class="faint">· in flower</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="pruned"><title>pruned</title><use href="#st-cut"/></svg>changes requested <span class="faint">· pruned</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="in fruit"><title>in fruit</title><use href="#st-fruit"/></svg>done <span class="faint">· in fruit</span></span><span style="display:inline-flex;align-items:center;gap:6px"><svg class="stage" viewBox="0 0 24 24" width="18" height="18" role="img" aria-label="wilted"><title>wilted</title><use href="#st-wilt"/></svg>failed <span class="faint">· wilted</span></span>
+  </div>
+  <details style="margin-top:10px"><summary>mermaid source (paste into docs or PRs)</summary><pre class="mono" style="margin-top:8px">graph LR
+  CG_001[&#34;CG-001&lt;br/&gt;Task file format and on-disk store&#34;]
+  style CG_001 fill:#d4edda,stroke:#155724,color:#333
+  CG_002[&#34;CG-002&lt;br/&gt;Dependency graph and ready set&#34;]
+  style CG_002 fill:#d4edda,stroke:#155724,color:#333
+  CG_003[&#34;CG-003&lt;br/&gt;Worker brief builder and result contract&#34;]
+  style CG_003 fill:#d4edda,stroke:#155724,color:#333
+  CG_004[&#34;CG-004&lt;br/&gt;Scheduler: reap, poll, dispatch&#34;]
+  style CG_004 fill:#d4edda,stroke:#155724,color:#333
+  CG_005[&#34;CG-005&lt;br/&gt;Planner: goals and specs to draft tasks&#34;]
+  style CG_005 fill:#d4edda,stroke:#155724,color:#333
+  CG_006[&#34;CG-006&lt;br/&gt;Web UI and TUI&#34;]
+  style CG_006 fill:#d4edda,stroke:#155724,color:#333
+  CG_007[&#34;CG-007&lt;br/&gt;Claude Code skills and README&#34;]
+  style CG_007 fill:#d4edda,stroke:#155724,color:#333
+  CG_008[&#34;CG-008&lt;br/&gt;Harvest friction sections from PR bodies&#34;]
+  style CG_008 fill:#d4edda,stroke:#155724,color:#333
+  CG_009[&#34;CG-009&lt;br/&gt;Stream-json runner output and live lo...&#34;]
+  style CG_009 fill:#d4edda,stroke:#155724,color:#333
+  CG_010[&#34;CG-010&lt;br/&gt;Notification hook for human-needed tr...&#34;]
+  style CG_010 fill:#d4edda,stroke:#155724,color:#333
+  CG_011[&#34;CG-011&lt;br/&gt;Automated review pass before human re...&#34;]
+  style CG_011 fill:#d4edda,stroke:#155724,color:#333
+  CG_012[&#34;CG-012&lt;br/&gt;Brief cost report per phase&#34;]
+  style CG_012 fill:#d4edda,stroke:#155724,color:#333
+  CG_013[&#34;CG-013&lt;br/&gt;Replan a phase after failures&#34;]
+  style CG_013 fill:#d4edda,stroke:#155724,color:#333
+  CG_014[&#34;CG-014&lt;br/&gt;Harness abstraction and difficulty-ba...&#34;]
+  style CG_014 fill:#d4edda,stroke:#155724,color:#333
+  CG_015[&#34;CG-015&lt;br/&gt;Remote workers over ssh&#34;]
+  style CG_015 fill:#d4edda,stroke:#155724,color:#333
+  CG_016[&#34;CG-016&lt;br/&gt;Automated review pass and PR tracking&#34;]
+  style CG_016 fill:#d4edda,stroke:#155724,color:#333
+  CG_017[&#34;CG-017&lt;br/&gt;Event log, digest and metrics&#34;]
+  style CG_017 fill:#d4edda,stroke:#155724,color:#333
+  CG_018[&#34;CG-018&lt;br/&gt;Pause and resume: waiting_human and g...&#34;]
+  style CG_018 fill:#d4edda,stroke:#155724,color:#333
+  CG_019[&#34;CG-019&lt;br/&gt;Discovered work from worker results&#34;]
+  style CG_019 fill:#d4edda,stroke:#155724,color:#333
+  CG_020[&#34;CG-020&lt;br/&gt;Stall detection and phase budgets&#34;]
+  style CG_020 fill:#d4edda,stroke:#155724,color:#333
+  CG_021[&#34;CG-021&lt;br/&gt;Stacked dependencies with restack on ...&#34;]
+  style CG_021 fill:#d4edda,stroke:#155724,color:#333
+  CG_022[&#34;CG-022&lt;br/&gt;Model trials with a leaderboard&#34;]
+  style CG_022 fill:#d4edda,stroke:#155724,color:#333
+  CG_023[&#34;CG-023&lt;br/&gt;Persona reviews of PRs and phases&#34;]
+  style CG_023 fill:#d4edda,stroke:#155724,color:#333
+  CG_024[&#34;CG-024&lt;br/&gt;Token-free pre-PR and CI checks&#34;]
+  style CG_024 fill:#d4edda,stroke:#155724,color:#333
+  CG_026[&#34;CG-026&lt;br/&gt;Botanical theme: plants per phase and...&#34;]
+  style CG_026 fill:#d4edda,stroke:#155724,color:#333
+  CG_027[&#34;CG-027&lt;br/&gt;First live run of the loop on itself&#34;]
+  style CG_027 fill:#d4edda,stroke:#155724,color:#333
+  CG_028[&#34;CG-028&lt;br/&gt;Calibrate the tier map with a model t...&#34;]
+  style CG_028 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_029[&#34;CG-029&lt;br/&gt;Close the phase: friction document, w...&#34;]
+  style CG_029 fill:#d1ecf1,stroke:#0c5460,color:#333
+  CG_030[&#34;CG-030&lt;br/&gt;Plates: label what each plate shows, ...&#34;]
+  style CG_030 fill:#eee,stroke:#999,color:#333
+  CG_031[&#34;CG-031&lt;br/&gt;Draw the done stage as a red apple&#34;]
+  style CG_031 fill:#d4edda,stroke:#155724,color:#333
+  CG_032[&#34;CG-032&lt;br/&gt;Doctor checks that gh and the harness...&#34;]
+  style CG_032 fill:#d4edda,stroke:#155724,color:#333
+  CG_033[&#34;CG-033&lt;br/&gt;An environment error in a worker paus...&#34;]
+  style CG_033 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_034[&#34;CG-034&lt;br/&gt;Windows: run the harness by its resol...&#34;]
+  style CG_034 fill:#d4edda,stroke:#155724,color:#333
+  CG_035[&#34;CG-035&lt;br/&gt;Inbox and digest show what actually h...&#34;]
+  style CG_035 fill:#d4edda,stroke:#155724,color:#333
+  CG_036[&#34;CG-036&lt;br/&gt;Revise brief: a pre-PR variant, and t...&#34;]
+  style CG_036 fill:#d4edda,stroke:#155724,color:#333
+  CG_037[&#34;CG-037&lt;br/&gt;Stop the revise template and the revi...&#34;]
+  style CG_037 fill:#d4edda,stroke:#155724,color:#333
+  CG_038[&#34;CG-038&lt;br/&gt;Stall detection judges a description-...&#34;]
+  style CG_038 fill:#d4edda,stroke:#155724,color:#333
+  CG_039[&#34;CG-039&lt;br/&gt;Show cache reads, not just fresh inpu...&#34;]
+  style CG_039 fill:#d4edda,stroke:#155724,color:#333
+  CG_040[&#34;CG-040&lt;br/&gt;Tell the worker its turn cap, and set...&#34;]
+  style CG_040 fill:#d4edda,stroke:#155724,color:#333
+  CG_041[&#34;CG-041&lt;br/&gt;Mark the garden&#39;s own PR comments as ...&#34;]
+  style CG_041 fill:#d4edda,stroke:#155724,color:#333
+  CG_042[&#34;CG-042&lt;br/&gt;Say when the garden&#39;s own state edits...&#34;]
+  style CG_042 fill:#d4edda,stroke:#155724,color:#333
+  CG_043[&#34;CG-043&lt;br/&gt;garden finish must not race the tick&#34;]
+  style CG_043 fill:#d4edda,stroke:#155724,color:#333
+  CG_044[&#34;CG-044&lt;br/&gt;Report friction from anywhere, and ha...&#34;]
+  style CG_044 fill:#d4edda,stroke:#155724,color:#333
+  CG_045[&#34;CG-045&lt;br/&gt;Attention cards say what the decision...&#34;]
+  style CG_045 fill:#d4edda,stroke:#155724,color:#333
+  CG_046[&#34;CG-046&lt;br/&gt;Task page: a full text box for the se...&#34;]
+  style CG_046 fill:#d4edda,stroke:#155724,color:#333
+  CG_047[&#34;CG-047&lt;br/&gt;Pick up the person&#39;s own PR comments ...&#34;]
+  style CG_047 fill:#d4edda,stroke:#155724,color:#333
+  CG_048[&#34;CG-048&lt;br/&gt;Set or remove a phase budget from the...&#34;]
+  style CG_048 fill:#d4edda,stroke:#155724,color:#333
+  CG_049[&#34;CG-049&lt;br/&gt;CLAUDE.md: document PYTHONPATH=src fo...&#34;]
+  style CG_049 fill:#d4edda,stroke:#155724,color:#333
+  CG_050[&#34;CG-050&lt;br/&gt;The running garden picks up merged ch...&#34;]
+  style CG_050 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_051[&#34;CG-051&lt;br/&gt;Worktree tests need PYTHONPATH or a p...&#34;]
+  style CG_051 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_052[&#34;CG-052&lt;br/&gt;Worktree venv isolation: document or ...&#34;]
+  style CG_052 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_053[&#34;CG-053&lt;br/&gt;state.json is saved whole by every wr...&#34;]
+  style CG_053 fill:#d4edda,stroke:#155724,color:#333
+  CG_054[&#34;CG-054&lt;br/&gt;A worker&#39;s worktree must never act on...&#34;]
+  style CG_054 fill:#d4edda,stroke:#155724,color:#333
+  CG_055[&#34;CG-055&lt;br/&gt;Turn limit is optional and off by def...&#34;]
+  style CG_055 fill:#d4edda,stroke:#155724,color:#333
+  CG_056[&#34;CG-056&lt;br/&gt;CLAUDE.md venv path breaks in worktrees&#34;]
+  style CG_056 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_057[&#34;CG-057&lt;br/&gt;A PR that conflicts with its base get...&#34;]
+  style CG_057 fill:#d4edda,stroke:#155724,color:#333
+  CG_058[&#34;CG-058&lt;br/&gt;The brief never points a worker at th...&#34;]
+  style CG_058 fill:#d4edda,stroke:#155724,color:#333
+  CG_059[&#34;CG-059&lt;br/&gt;Bot comments count as feedback unless...&#34;]
+  style CG_059 fill:#d4edda,stroke:#155724,color:#333
+  CG_060[&#34;CG-060&lt;br/&gt;Reading lists resolve product paths a...&#34;]
+  style CG_060 fill:#d4edda,stroke:#155724,color:#333
+  CG_061[&#34;CG-061&lt;br/&gt;Review runs whose task moved on are r...&#34;]
+  style CG_061 fill:#d4edda,stroke:#155724,color:#333
+  CG_062[&#34;CG-062&lt;br/&gt;A worker silent for too long is flagg...&#34;]
+  style CG_062 fill:#d4edda,stroke:#155724,color:#333
+  CG_063[&#34;CG-063&lt;br/&gt;Remove the garden files from the tool...&#34;]
+  style CG_063 fill:#d4edda,stroke:#155724,color:#333
+  CG_064[&#34;CG-064&lt;br/&gt;Make test_feedback_triggers_revise_ro...&#34;]
+  style CG_064 fill:#d4edda,stroke:#155724,color:#333
+  CG_065[&#34;CG-065&lt;br/&gt;Plates and plants: positional assignm...&#34;]
+  style CG_065 fill:#d4edda,stroke:#155724,color:#333
+  CG_066[&#34;CG-066&lt;br/&gt;garden usage shows the phase header a...&#34;]
+  style CG_066 fill:#d4edda,stroke:#155724,color:#333
+  CG_067[&#34;CG-067&lt;br/&gt;garden commit commits only task files...&#34;]
+  style CG_067 fill:#d4edda,stroke:#155724,color:#333
+  CG_068[&#34;CG-068&lt;br/&gt;Automerge: merge a PR when the loop&#39;s...&#34;]
+  style CG_068 fill:#d4edda,stroke:#155724,color:#333
+  CG_069[&#34;CG-069&lt;br/&gt;Pause and resume dispatch from a comm...&#34;]
+  style CG_069 fill:#d4edda,stroke:#155724,color:#333
+  CG_070[&#34;CG-070&lt;br/&gt;Auto-approve every discovered task, n...&#34;]
+  style CG_070 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_071[&#34;CG-071&lt;br/&gt;Set a task&#39;s priority and difficulty ...&#34;]
+  style CG_071 fill:#d4edda,stroke:#155724,color:#333
+  CG_072[&#34;CG-072&lt;br/&gt;A merged PR marks its task done even ...&#34;]
+  style CG_072 fill:#d4edda,stroke:#155724,color:#333
+  CG_073[&#34;CG-073&lt;br/&gt;Task page shows every run&#39;s transcrip...&#34;]
+  style CG_073 fill:#d4edda,stroke:#155724,color:#333
+  CG_074[&#34;CG-074&lt;br/&gt;Reviews do not consume worker slots&#34;]
+  style CG_074 fill:#d4edda,stroke:#155724,color:#333
+  CG_075[&#34;CG-075&lt;br/&gt;Runs page: the table and the schedule...&#34;]
+  style CG_075 fill:#d4edda,stroke:#155724,color:#333
+  CG_076[&#34;CG-076&lt;br/&gt;Push with lease when the worker rebas...&#34;]
+  style CG_076 fill:#d4edda,stroke:#155724,color:#333
+  CG_077[&#34;CG-077&lt;br/&gt;Document pip install -e requirement f...&#34;]
+  style CG_077 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_078[&#34;CG-078&lt;br/&gt;Closed phases leave the rail and live...&#34;]
+  style CG_078 fill:#d4edda,stroke:#155724,color:#333
+  CG_079[&#34;CG-079&lt;br/&gt;Suggest a change to a task from its p...&#34;]
+  style CG_079 fill:#d4edda,stroke:#155724,color:#333
+  CG_080[&#34;CG-080&lt;br/&gt;Change parallelism from the configura...&#34;]
+  style CG_080 fill:#d4edda,stroke:#155724,color:#333
+  CG_081[&#34;CG-081&lt;br/&gt;Environment setup is per-product conf...&#34;]
+  style CG_081 fill:#d4edda,stroke:#155724,color:#333
+  CG_082[&#34;CG-082&lt;br/&gt;Separate GARDEN_ROOT (guard) from the...&#34;]
+  style CG_082 fill:#d4edda,stroke:#155724,color:#333
+  CG_083[&#34;CG-083&lt;br/&gt;A reap is atomic: a restart mid-tick ...&#34;]
+  style CG_083 fill:#d4edda,stroke:#155724,color:#333
+  CG_084[&#34;CG-084&lt;br/&gt;The garden upgrades its own pinned in...&#34;]
+  style CG_084 fill:#d4edda,stroke:#155724,color:#333
+  CG_085[&#34;CG-085&lt;br/&gt;Workers&#39; checkouts live in a configur...&#34;]
+  style CG_085 fill:#d4edda,stroke:#155724,color:#333
+  CG_086[&#34;CG-086&lt;br/&gt;Web actions report failures as messag...&#34;]
+  style CG_086 fill:#d4edda,stroke:#155724,color:#333
+  CG_087[&#34;CG-087&lt;br/&gt;Trial form picks contenders from the ...&#34;]
+  style CG_087 fill:#d4edda,stroke:#155724,color:#333
+  CG_088[&#34;CG-088&lt;br/&gt;Trellis and phase page can hide compl...&#34;]
+  style CG_088 fill:#d4edda,stroke:#155724,color:#333
+  CG_089[&#34;CG-089&lt;br/&gt;Board: reorder ready tasks with up/do...&#34;]
+  style CG_089 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_090[&#34;CG-090&lt;br/&gt;State.save() never clears dirty keys ...&#34;]
+  style CG_090 fill:#d4edda,stroke:#155724,color:#333
+  CG_091[&#34;CG-091&lt;br/&gt;State.save()&#39;s file replacement is no...&#34;]
+  style CG_091 fill:#d4edda,stroke:#155724,color:#333
+  CG_092[&#34;CG-092&lt;br/&gt;Remove venv install lines from the co...&#34;]
+  style CG_092 fill:#d4edda,stroke:#155724,color:#333
+  CG_093[&#34;CG-093&lt;br/&gt;Store.save() for task files has the s...&#34;]
+  style CG_093 fill:#d4edda,stroke:#155724,color:#333
+  CG_094[&#34;CG-094&lt;br/&gt;Board: a list view grouped by status ...&#34;]
+  style CG_094 fill:#d4edda,stroke:#155724,color:#333
+  CG_095[&#34;CG-095&lt;br/&gt;checks.pre_pr can fail with a confusi...&#34;]
+  style CG_095 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_096[&#34;CG-096&lt;br/&gt;Inbox count is the decisions only; re...&#34;]
+  style CG_096 fill:#d4edda,stroke:#155724,color:#333
+  CG_097[&#34;CG-097&lt;br/&gt;Worktree setup sometimes skips creati...&#34;]
+  style CG_097 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_098[&#34;CG-098&lt;br/&gt;Tests do not read the developer&#39;s GAR...&#34;]
+  style CG_098 fill:#d4edda,stroke:#155724,color:#333
+  CG_099[&#34;CG-099&lt;br/&gt;Task page: tier and priority are pull...&#34;]
+  style CG_099 fill:#d4edda,stroke:#155724,color:#333
+  CG_100[&#34;CG-100&lt;br/&gt;A worker&#39;s won&#39;t-do or nothing-to-cha...&#34;]
+  style CG_100 fill:#d4edda,stroke:#155724,color:#333
+  CG_101[&#34;CG-101&lt;br/&gt;Pre-PR `tests` check environment does...&#34;]
+  style CG_101 fill:#d4edda,stroke:#155724,color:#333
+  CG_102[&#34;CG-102&lt;br/&gt;State.save() in scheduler.py still no...&#34;]
+  style CG_102 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_103[&#34;CG-103&lt;br/&gt;Orchestrating garden&#39;s pre-PR check c...&#34;]
+  style CG_103 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_104[&#34;CG-104&lt;br/&gt;Live log: a tool result whose content...&#34;]
+  style CG_104 fill:#d4edda,stroke:#155724,color:#333
+  CG_105[&#34;CG-105&lt;br/&gt;Test suite should isolate/unset GARDE...&#34;]
+  style CG_105 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_106[&#34;CG-106&lt;br/&gt;A task the loop can no longer dispatc...&#34;]
+  style CG_106 fill:#d4edda,stroke:#155724,color:#333
+  CG_107[&#34;CG-107&lt;br/&gt;Driving garden config should adopt th...&#34;]
+  style CG_107 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_108[&#34;CG-108&lt;br/&gt;Document (or design a dedicated mode ...&#34;]
+  style CG_108 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_109[&#34;CG-109&lt;br/&gt;A description-only revise round runs ...&#34;]
+  style CG_109 fill:#d4edda,stroke:#155724,color:#333
+  CG_110[&#34;CG-110&lt;br/&gt;CG-107 duplicates CG-092&#34;]
+  style CG_110 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_111[&#34;CG-111&lt;br/&gt;A worker cannot write outside its wor...&#34;]
+  style CG_111 fill:#d4edda,stroke:#155724,color:#333
+  CG_112[&#34;CG-112&lt;br/&gt;A worker&#39;s discovery can be a decisio...&#34;]
+  style CG_112 fill:#d4edda,stroke:#155724,color:#333
+  CG_113[&#34;CG-113&lt;br/&gt;Drop the `env -u GARDEN_ROOT` stopgap...&#34;]
+  style CG_113 fill:#d4edda,stroke:#155724,color:#333
+  CG_114[&#34;CG-114&lt;br/&gt;Per-worktree test environment so pyte...&#34;]
+  style CG_114 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_115[&#34;CG-115&lt;br/&gt;Store a short diff summary on run rec...&#34;]
+  style CG_115 fill:#d4edda,stroke:#155724,color:#333
+  CG_116[&#34;CG-116&lt;br/&gt;The orphan sweep never closes a run w...&#34;]
+  style CG_116 fill:#d4edda,stroke:#155724,color:#333
+  CG_117[&#34;CG-117&lt;br/&gt;After the last automated review round...&#34;]
+  style CG_117 fill:#d4edda,stroke:#155724,color:#333
+  CG_118[&#34;CG-118&lt;br/&gt;A bot comment that is a notice, not a...&#34;]
+  style CG_118 fill:#d4edda,stroke:#155724,color:#333
+  CG_119[&#34;CG-119&lt;br/&gt;test_happy_path_dispatch_reap_pr_merg...&#34;]
+  style CG_119 fill:#d4edda,stroke:#155724,color:#333
+  CG_120[&#34;CG-120&lt;br/&gt;CG-029&#39;s brief must name `garden clos...&#34;]
+  style CG_120 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_121[&#34;CG-121&lt;br/&gt;Planner and friction reports can stil...&#34;]
+  style CG_121 fill:#d4edda,stroke:#155724,color:#333
+  CG_122[&#34;CG-122&lt;br/&gt;Extend the flash-message pattern to f...&#34;]
+  style CG_122 fill:#d4edda,stroke:#155724,color:#333
+  CG_123[&#34;CG-123&lt;br/&gt;Tasks that edit the garden&#39;s own file...&#34;]
+  style CG_123 fill:#d4edda,stroke:#155724,color:#333
+  CG_124[&#34;CG-124&lt;br/&gt;test_feedback_triggers_revise_round c...&#34;]
+  style CG_124 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_125[&#34;CG-125&lt;br/&gt;Scheduler/task log should distinguish...&#34;]
+  style CG_125 fill:#eee,stroke:#999,color:#333
+  CG_126[&#34;CG-126&lt;br/&gt;Verify worktree provisioning for stac...&#34;]
+  style CG_126 fill:#d4edda,stroke:#155724,color:#333
+  CG_127[&#34;CG-127&lt;br/&gt;test_set_budget_none_removes_cap fail...&#34;]
+  style CG_127 fill:#d4edda,stroke:#155724,color:#333
+  CG_128[&#34;CG-128&lt;br/&gt;test_set_budget_none_removes_cap fail...&#34;]
+  style CG_128 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_129[&#34;CG-129&lt;br/&gt;Automerge merges only into the produc...&#34;]
+  style CG_129 fill:#d4edda,stroke:#155724,color:#333
+  CG_130[&#34;CG-130&lt;br/&gt;test_set_budget_none_removes_cap is m...&#34;]
+  style CG_130 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_131[&#34;CG-131&lt;br/&gt;A check that fails at the branch&#39;s ba...&#34;]
+  style CG_131 fill:#d4edda,stroke:#155724,color:#333
+  CG_132[&#34;CG-132&lt;br/&gt;The web UI can create a task from a f...&#34;]
+  style CG_132 fill:#eee,stroke:#999,color:#333
+  CG_133[&#34;CG-133&lt;br/&gt;garden retro: harvest PR friction, ru...&#34;]
+  style CG_133 fill:#d4edda,stroke:#155724,color:#333
+  CG_134[&#34;CG-134&lt;br/&gt;garden walkthrough: render the live w...&#34;]
+  style CG_134 fill:#eee,stroke:#999,color:#333
+  CG_135[&#34;CG-135&lt;br/&gt;garden qa: an agent drives the loop e...&#34;]
+  style CG_135 fill:#eee,stroke:#999,color:#333
+  CG_136[&#34;CG-136&lt;br/&gt;PR descriptions stop costing rounds: ...&#34;]
+  style CG_136 fill:#d4edda,stroke:#155724,color:#333
+  CG_137[&#34;CG-137&lt;br/&gt;Split the scheduler by tick phase and...&#34;]
+  style CG_137 fill:#eee,stroke:#999,color:#333
+  CG_138[&#34;CG-138&lt;br/&gt;Automerge orders PRs that touch the s...&#34;]
+  style CG_138 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_139[&#34;CG-139&lt;br/&gt;Rebase rounds do not count toward the...&#34;]
+  style CG_139 fill:#eee,stroke:#999,color:#333
+  CG_140[&#34;CG-140&lt;br/&gt;An empty description rewrite falls ba...&#34;]
+  style CG_140 fill:#d4edda,stroke:#155724,color:#333
+  CG_141[&#34;CG-141&lt;br/&gt;Rebase is its own mode: mechanical fi...&#34;]
+  style CG_141 fill:#eee,stroke:#999,color:#333
+  CG_142[&#34;CG-142&lt;br/&gt;Task actions refuse a task that is do...&#34;]
+  style CG_142 fill:#eee,stroke:#999,color:#333
+  CG_143[&#34;CG-143&lt;br/&gt;Ship the garden-operate skill with th...&#34;]
+  style CG_143 fill:#eee,stroke:#999,color:#333
+  CG_144[&#34;CG-144&lt;br/&gt;A superseded review run is closed whe...&#34;]
+  style CG_144 fill:#eee,stroke:#999,color:#333
+  CG_145[&#34;CG-145&lt;br/&gt;garden retro waits for the persona re...&#34;]
+  style CG_145 fill:#eee,stroke:#999,color:#333
+  CG_146[&#34;CG-146&lt;br/&gt;A retro page per phase: the reconcile...&#34;]
+  style CG_146 fill:#eee,stroke:#999,color:#333
+  CG_147[&#34;CG-147&lt;br/&gt;A product clone gets a git identity w...&#34;]
+  style CG_147 fill:#eee,stroke:#999,color:#333
+  CG_001 --&gt; CG_002
+  CG_001 --&gt; CG_003
+  CG_002 --&gt; CG_004
+  CG_003 --&gt; CG_004
+  CG_001 --&gt; CG_005
+  CG_004 --&gt; CG_006
+  CG_004 --&gt; CG_007
+  CG_005 --&gt; CG_007
+  CG_004 --&gt; CG_014
+  CG_014 --&gt; CG_015
+  CG_014 --&gt; CG_016
+  CG_004 --&gt; CG_017
+  CG_017 --&gt; CG_018
+  CG_017 --&gt; CG_019
+  CG_017 --&gt; CG_020
+  CG_016 --&gt; CG_020
+  CG_017 --&gt; CG_021
+  CG_016 --&gt; CG_022
+  CG_016 --&gt; CG_023
+  CG_004 --&gt; CG_024
+  CG_006 --&gt; CG_026
+  CG_008 --&gt; CG_013
+  CG_027 --&gt; CG_028
+  CG_009 --&gt; CG_029
+  CG_008 --&gt; CG_029
+  CG_013 --&gt; CG_029
+  CG_027 -.-&gt;|discovered| CG_032
+  CG_027 -.-&gt;|discovered| CG_033
+  CG_027 -.-&gt;|discovered| CG_034
+  CG_027 -.-&gt;|discovered| CG_035
+  CG_027 -.-&gt;|discovered| CG_036
+  CG_027 -.-&gt;|discovered| CG_037
+  CG_027 -.-&gt;|discovered| CG_038
+  CG_027 -.-&gt;|discovered| CG_039
+  CG_027 -.-&gt;|discovered| CG_040
+  CG_027 -.-&gt;|discovered| CG_041
+  CG_027 -.-&gt;|discovered| CG_042
+  CG_081 --&gt; CG_049
+  CG_034 -.-&gt;|discovered| CG_049
+  CG_035 -.-&gt;|discovered| CG_051
+  CG_038 -.-&gt;|discovered| CG_052
+  CG_031 -.-&gt;|discovered| CG_056
+  CG_032 -.-&gt;|discovered| CG_077
+  CG_069 --&gt; CG_080
+  CG_054 --&gt; CG_082
+  CG_054 -.-&gt;|discovered| CG_082
+  CG_086 --&gt; CG_087
+  CG_071 -.-&gt;|discovered| CG_089
+  CG_082 -.-&gt;|discovered| CG_090
+  CG_082 -.-&gt;|discovered| CG_091
+  CG_081 --&gt; CG_092
+  CG_081 -.-&gt;|discovered| CG_092
+  CG_091 -.-&gt;|discovered| CG_093
+  CG_037 -.-&gt;|discovered| CG_095
+  CG_090 -.-&gt;|discovered| CG_097
+  CG_090 --&gt; CG_098
+  CG_101 --&gt; CG_098
+  CG_090 -.-&gt;|discovered| CG_101
+  CG_093 -.-&gt;|discovered| CG_102
+  CG_091 -.-&gt;|discovered| CG_103
+  CG_061 -.-&gt;|discovered| CG_105
+  CG_081 -.-&gt;|discovered| CG_107
+  CG_101 -.-&gt;|discovered| CG_108
+  CG_092 -.-&gt;|discovered| CG_110
+  CG_098 --&gt; CG_113
+  CG_098 -.-&gt;|discovered| CG_113
+  CG_112 -.-&gt;|discovered| CG_114
+  CG_045 -.-&gt;|discovered| CG_115
+  CG_064 --&gt; CG_119
+  CG_098 -.-&gt;|discovered| CG_119
+  CG_078 -.-&gt;|discovered| CG_120
+  CG_078 --&gt; CG_121
+  CG_078 -.-&gt;|discovered| CG_121
+  CG_086 --&gt; CG_122
+  CG_086 -.-&gt;|discovered| CG_122
+  CG_083 -.-&gt;|discovered| CG_124
+  CG_065 -.-&gt;|discovered| CG_125
+  CG_121 -.-&gt;|discovered| CG_126
+  CG_074 -.-&gt;|discovered| CG_127
+  CG_062 -.-&gt;|discovered| CG_128
+  CG_088 -.-&gt;|discovered| CG_130</pre></details>
+</div>
+
+</main>
+</div>
+<script>
+document.querySelectorAll("[data-poll]").forEach(el => {
+  const every = parseInt(el.dataset.every || "5000", 10);
+  setInterval(async () => {
+    if (document.hidden) return;
+    try { const r = await fetch(el.dataset.poll, {cache: "no-store"}); if (r.ok) el.innerHTML = await r.text(); } catch (e) {}
+  }, every);
+});
+document.querySelectorAll("[data-toggle]").forEach(b => b.addEventListener("click", e => {
+  e.preventDefault(); const t = document.getElementById(b.dataset.toggle); if (t) { t.hidden = !t.hidden; if (!t.hidden) { const f = t.querySelector("textarea,input"); if (f) f.focus(); } }
+}));
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async e => {
+  e.preventDefault(); const t = document.getElementById(b.dataset.copy); if (!t) return;
+  try { await navigator.clipboard.writeText(t.value); } catch (err) { t.select(); document.execCommand("copy"); }
+  const old = b.textContent; b.textContent = "Copied"; setTimeout(() => b.textContent = old, 1500);
+}));
+if (localStorage.getItem("garden.trellisHideDone") === "done") {
+  document.querySelectorAll('a[href^="/trellis"]:not([data-hide-toggle]), a[href^="/graph"]:not([data-hide-toggle])').forEach(a => {
+    const url = new URL(a.getAttribute("href"), location.origin);
+    if (!url.searchParams.has("hide")) { url.searchParams.set("hide", "done"); a.setAttribute("href", url.pathname + url.search); }
+  });
+}
+document.querySelectorAll('a[href^="/phases/"]:not([data-hide-toggle])').forEach(a => {
+  const url = new URL(a.getAttribute("href"), location.origin);
+  const m = url.pathname.match(/^\/phases\/([^/]+)\/([^/]+)$/);
+  if (m && !url.searchParams.has("hide") && localStorage.getItem(`garden.phaseHideDone:${m[1]}/${m[2]}`) === "done") {
+    url.searchParams.set("hide", "done");
+    a.setAttribute("href", url.pathname + url.search);
+  }
+});
+
+// ---- trial contender picker: a harness select + model select (from garden.yaml's
+// harnesses:), with an "other…" escape and a "current tier" default. Used by the task
+// page's trial form (add/remove rows) and the trials page's leaderboard filter (one row).
+function trialRow(harnesses, opts) {
+  opts = opts || {};
+  const names = Object.keys(harnesses);
+  const row = document.createElement("div");
+  row.style.cssText = "display:flex;gap:6px;align-items:center;margin-bottom:6px;flex-wrap:wrap";
+  const hSel = document.createElement("select");
+  names.forEach(name => hSel.appendChild(new Option(name, name)));
+  if (names.includes(opts.harness)) hSel.value = opts.harness;
+  const mSel = document.createElement("select");
+  const other = document.createElement("input");
+  other.type = "text"; other.placeholder = "model name"; other.hidden = true; other.style.width = "160px";
+  function fillModels() {
+    mSel.innerHTML = "";
+    mSel.appendChild(new Option(opts.emptyLabel || "current tier", ""));
+    (harnesses[hSel.value] || []).forEach(m => mSel.appendChild(new Option(m, m)));
+    mSel.appendChild(new Option("other…", "__other__"));
+    if (opts.model && (harnesses[hSel.value] || []).includes(opts.model)) {
+      mSel.value = opts.model;
+    } else if (opts.model) {
+      mSel.value = "__other__"; other.hidden = false; other.value = opts.model;
+    }
+    opts.model = "";  // only apply the initial value once
+  }
+  fillModels();
+  hSel.addEventListener("change", fillModels);
+  mSel.addEventListener("change", () => { other.hidden = mSel.value !== "__other__"; if (!other.hidden) other.focus(); });
+  row.append(hSel, mSel, other);
+  if (opts.removable !== false) {
+    const rm = document.createElement("button");
+    rm.type = "button"; rm.className = "quiet"; rm.textContent = "Remove";
+    rm.addEventListener("click", () => row.remove());
+    row.append(rm);
+  }
+  row._value = () => ({harness: hSel.value, model: mSel.value === "__other__" ? other.value.trim() : mSel.value});
+  return row;
+}
+document.querySelectorAll("[data-trial-form]").forEach(form => {
+  const harnesses = JSON.parse(form.dataset.harnesses || "{}");
+  const rows = form.querySelector(".trial-rows");
+  const add = () => rows.appendChild(trialRow(harnesses, {harness: form.dataset.defaultHarness}));
+  add(); add();
+  const addBtn = form.querySelector(".trial-add");
+  if (addBtn) addBtn.addEventListener("click", add);
+  form.addEventListener("submit", () => {
+    const pairs = Array.from(rows.children).map(r => { const v = r._value(); return v.harness ? `${v.harness}:${v.model}` : ""; }).filter(Boolean);
+    form.querySelector('input[name="note"]').value = pairs.join(", ");
+  });
+});
+document.querySelectorAll("[data-trial-filter]").forEach(form => {
+  const harnesses = JSON.parse(form.dataset.harnesses || "{}");
+  const slot = form.querySelector(".trial-filter-row");
+  const row = trialRow(harnesses, {removable: false, emptyLabel: "any model", harness: form.dataset.harness, model: form.dataset.model});
+  slot.appendChild(row);
+  form.addEventListener("submit", () => {
+    const v = row._value();
+    form.querySelector('input[name="harness"]').value = v.harness;
+    form.querySelector('input[name="model"]').value = v.model;
+  });
+});
+</script>
+</body>
+</html>

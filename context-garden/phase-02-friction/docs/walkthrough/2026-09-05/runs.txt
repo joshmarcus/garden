@@ -1,0 +1,712 @@
+Runs · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Runs Every worker, review, persona and comparison run, with what it cost.
+342 runs
+$581.07 total cost
+1,027,469 input tokens
+629,180,128 cache reads
+task run mode status model min brief tok input cache-read output cost
+_retro-context-garden-phase-02-friction 20260905T025312Z-retro retro running claude:claude-fable-5-1
+2 21,676
+_retro-context-garden-phase-02-friction 20260905T024133Z-retro retro done claude:claude-fable-5-1
+4 14,921 194 416771 19770 $2.23
+_persona 20260905T024440Z-persona persona done claude:claude-fable-5-1
+6 44,090 802 3101489 21228 $4.43
+_persona 20260905T024354Z-persona persona done claude:claude-fable-5-1
+7 44,124 418 1820976 23790 $4.71
+_persona 20260905T024302Z-persona persona done claude:claude-fable-5-1
+6 44,122 390 2755424 21868 $6.49
+_persona 20260905T024210Z-persona persona done claude:claude-fable-5-1
+7 44,142 162 765664 22945 $5.80
+_persona 20260905T024121Z-persona persona done claude:claude-fable-5-1
+6 44,125 770 2810384 18610 $3.76
+_persona 20260905T024018Z-persona persona done claude:claude-fable-5-1
+6 44,129 354 2014720 24523 $6.57
+CG-140 20260905T020415Z-review review done claude:claude-opus-4-8
+2 11,933 3933 148771 3885 $0.51
+CG-140 20260905T015441Z-work work done claude:claude-sonnet-5
+9 5,347 4743 3930188 23658 $3.46
+CG-136 20260905T010826Z-review review done claude:claude-opus-4-8
+3 18,546 4074 586029 8649 $1.06
+CG-136 20260905T005008Z-work work done claude:claude-opus-4-8
+17 8,293 5353 10974030 63611 $9.02
+CG-133 20260905T011037Z-review review done claude:claude-opus-4-8
+4 18,062 4070 468985 8266 $1.05
+CG-133 20260905T004959Z-work work done claude:claude-opus-4-8
+20 6,289 8919 9244573 78395 $8.47
+CG-131 20260905T010420Z-review review done claude:claude-opus-4-8
+3 14,236 4070 418089 8353 $0.95
+CG-131 20260905T004950Z-work work done claude:claude-opus-4-8
+14 7,718 4789 4831462 45735 $4.85
+CG-129 20260905T005415Z-review review done claude:claude-opus-4-8
+2 8,032 4066 217968 5084 $0.54
+CG-129 20260905T004518Z-work work done claude:claude-opus-4-8
+8 8,248 4650 2703479 25892 $2.75
+CG-127 20260905T001416Z-review review done claude:claude-opus-4-8
+1 6,207 3937 190025 2050 $0.37
+CG-127 20260905T000828Z-work work done claude:claude-opus-4-8
+5 4,714 4360 1123968 12737 $1.34
+CG-126 20260905T010731Z-review review done claude:claude-opus-4-8
+4 13,073 3939 357647 5876 $0.82
+CG-126 20260905T005538Z-revise revise done claude:claude-opus-4-8
+11 11,113 8002 1492738 32350 $2.46
+CG-126 20260905T005320Z-review review done claude:claude-opus-4-8
+2 12,128 4066 273509 4623 $0.67
+CG-126 20260905T004640Z-work work done claude:claude-opus-4-8
+6 15,412 4217 1486147 20505 $2.22
+CG-123 20260904T232903Z-review review done claude:claude-opus-4-8
+3 16,446 3939 326887 6284 $0.74
+CG-123 20260904T231757Z-work work done claude:claude-opus-4-8
+10 11,006 8263 3463401 40634 $4.07
+CG-122 20260904T233605Z-review review done claude:claude-opus-4-8
+1 10,425 3933 147828 3054 $0.49
+CG-122 20260904T233102Z-work work done claude:claude-sonnet-5
+4 5,900 4449 2199858 19419 $2.25
+CG-121 20260904T234608Z-review review done claude:claude-opus-4-8
+3 12,407 4070 349394 5113 $0.69
+CG-121 20260904T233628Z-work work done claude:claude-sonnet-5
+9 9,493 5009 4893808 35710 $4.36
+CG-121 20260904T232924Z-work work blocked claude:claude-sonnet-5
+6 14,952 4582 2615743 23654 $2.78
+CG-119 20260904T223940Z-review review done claude:claude-opus-4-8
+2 13,655 3941 354239 3521 $0.63
+CG-119 20260904T223310Z-work work done claude:claude-opus-4-8
+6 11,482 4352 1526784 14959 $1.97
+CG-118 20260904T222712Z-review review done claude:claude-opus-4-8
+1 10,821 3931 95334 3196 $0.42
+CG-118 20260904T221725Z-work work done claude:claude-sonnet-5
+9 6,600 4864 3216271 22628 $2.90
+CG-117 20260904T222316Z-review review done claude:claude-opus-4-8
+3 13,502 3941 369447 4688 $0.70
+CG-117 20260904T221044Z-work work done claude:claude-sonnet-5
+12 5,680 5331 9665878 58203 $7.76
+CG-116 20260904T221538Z-review review done claude:claude-opus-4-8
+3 5,800 4072 314875 6959 $0.61
+CG-116 20260904T220610Z-work work done claude:claude-opus-4-8
+9 6,589 8342 2912144 29257 $3.25
+CG-115 20260904T232824Z-review review done claude:claude-opus-4-8
+2 12,877 3933 153748 2480 $0.48
+CG-115 20260904T232021Z-work work done claude:claude-sonnet-5
+7 7,681 5025 5594648 21480 $4.37
+CG-112 20260904T221043Z-revise revise done claude:claude-opus-4-8
+6 11,346 8132 3217996 22139 $2.96
+CG-112 20260904T221042Z-review review done claude:claude-opus-4-8
+5 20,177 4084 882316 12296 $1.30
+CG-112 20260904T220305Z-revise revise done claude:claude-opus-4-8
+7 11,542 4540 3174087 24629 $2.91
+CG-112 20260904T215406Z-review review done claude:claude-opus-4-8
+3 17,608 4076 609966 7682 $1.01
+CG-112 20260904T214026Z-work work done claude:claude-opus-4-8
+13 9,711 5220 8077172 50116 $6.75
+CG-111 20260905T020459Z-review review done claude:claude-opus-4-8
+5 24,732 4070 479352 8596 $1.05
+CG-111 20260905T014600Z-revise revise done claude:claude-opus-4-8
+3 14,643 4219 911963 6189 $1.06
+CG-111 20260905T004518Z-revise revise done claude:claude-opus-4-8
+3 13,982 7493 692408 5410 $0.95
+CG-111 20260904T222844Z-revise revise done claude:claude-opus-4-8
+4 13,433 4215 910148 11592 $1.27
+CG-111 20260904T221542Z-revise revise done claude:claude-opus-4-8
+5 12,746 8362 1764107 13410 $1.78
+CG-111 20260904T221244Z-review review done claude:claude-opus-4-8
+3 22,472 3941 434553 8400 $0.94
+CG-111 20260904T220304Z-revise revise done claude:claude-opus-4-8
+8 12,655 4513 2819500 29562 $2.97
+CG-111 20260904T215716Z-review review done claude:claude-opus-4-8
+5 20,228 3960 691060 15318 $1.33
+CG-111 20260904T213406Z-work work done claude:claude-opus-4-8
+23 10,351 5202 9192338 76336 $8.50
+CG-109 20260905T011654Z-revise revise done claude:claude-sonnet-5
+4 8,514 4588 2816309 8402 $2.43
+CG-109 20260905T011629Z-review review done claude:claude-opus-4-8
+7 11,231 4348 963492 10438 $1.24
+CG-109 20260905T011207Z-revise revise done claude:claude-sonnet-5
+3 8,067 4431 1167728 5385 $1.16
+CG-109 20260904T235956Z-revise revise done claude:claude-sonnet-5
+4 7,517 8228 1505012 5317 $1.40
+CG-109 20260904T231738Z-review review done claude:claude-opus-4-8
+2 10,935 4070 330887 5209 $0.65
+CG-109 20260904T230951Z-work work done claude:claude-sonnet-5
+7 6,850 5168 5602918 25071 $4.33
+CG-106 20260904T215902Z-review review done claude:claude-opus-4-8
+4 15,264 4084 822288 11312 $1.19
+CG-106 20260904T215410Z-revise revise done claude:claude-opus-4-8
+4 10,169 4360 1448566 13618 $1.60
+CG-106 20260904T213850Z-review review done claude:claude-opus-4-8
+4 13,877 4213 776016 11943 $1.16
+CG-106 20260904T212653Z-work work done claude:claude-opus-4-8
+11 8,405 4924 5014091 38609 $4.66
+CG-104 20260904T212030Z-review review done claude:claude-opus-4-8
+1 7,052 3931 84961 1952 $0.31
+CG-104 20260904T211520Z-work work done claude:claude-sonnet-5
+5 5,228 4590 2105898 11355 $1.83
+CG-101 20260904T211851Z-review review done claude:claude-opus-4-8
+3 9,363 4070 303396 3500 $0.54
+CG-101 20260904T211520Z-work work done claude:claude-sonnet-5
+3 8,497 4302 1408873 8504 $1.44
+CG-100 20260904T220220Z-review review done claude:claude-opus-4-8
+4 29,626 4084 1175161 11145 $1.63
+CG-100 20260904T213519Z-work work done claude:claude-opus-4-8
+26 13,923 10429 26844207 82434 $18.03
+CG-099 20260905T004506Z-review review done claude:claude-opus-4-8
+1 13,892 3937 264167 3932 $0.62
+CG-099 20260905T004122Z-revise revise done claude:claude-sonnet-5
+3 10,408 4290 818285 3546 $0.89
+CG-099 20260904T231144Z-review review done claude:claude-opus-4-8
+1 13,394 3939 320044 4439 $0.67
+CG-099 20260904T230419Z-work work done claude:claude-sonnet-5
+7 8,387 4888 4426091 18618 $3.46
+CG-098 20260904T220756Z-review review done claude:claude-opus-4-8
+3 14,603 3931 108477 2015 $0.44
+CG-098 20260904T220015Z-revise revise done claude:claude-sonnet-5
+7 13,831 4294 1109439 8687 $1.22
+CG-098 20260904T214415Z-revise revise done claude:claude-sonnet-5
+10 13,128 4359 3588114 27645 $3.35
+CG-098 20260904T214300Z-review review done claude:claude-opus-4-8
+1 14,093 3933 152296 2192 $0.46
+CG-098 20260904T213518Z-work work done claude:claude-sonnet-5
+7 11,620 4576 2007670 12565 $1.89
+CG-096 20260905T020503Z-review review done claude:claude-opus-4-8
+1 16,055 3902 232232 3575 $0.64
+CG-096 20260905T014559Z-revise revise done claude:claude-sonnet-5
+2 11,362 4290 816784 2689 $0.79
+CG-096 20260905T004640Z-revise revise no_change claude:claude-sonnet-5
+2 10,785 4008 126733 1113 $0.39
+CG-096 20260905T004414Z-review review done claude:claude-opus-4-8
+2 15,419 3941 376568 5146 $0.72
+CG-096 20260905T003920Z-revise revise done claude:claude-sonnet-5
+4 9,557 4431 1194348 5439 $1.16
+CG-096 20260904T230642Z-review review done claude:claude-opus-4-8
+3 14,131 4215 833474 7440 $1.08
+CG-096 20260904T225645Z-work work done claude:claude-sonnet-5
+9 11,586 5313 9142768 41176 $6.96
+CG-094 20260905T003546Z-review review done claude:claude-opus-4-8
+3 9,540 3937 233806 6953 $0.63
+CG-094 20260905T002649Z-revise revise done claude:claude-opus-4-8
+8 5,383 4495 1169580 13310 $1.32
+CG-094 20260904T232748Z-review review done claude:claude-opus-4-8
+3 8,698 4068 273388 6106 $0.63
+CG-094 20260904T232013Z-work work done claude:claude-opus-4-8
+7 3,860 4640 2817256 25404 $2.92
+CG-093 20260904T211407Z-review review done claude:claude-opus-4-8
+1 9,857 3931 89849 1969 $0.33
+CG-093 20260904T211109Z-work work done claude:claude-sonnet-5
+2 8,684 4147 380216 2769 $0.57
+CG-093 20260904T210647Z-work work done claude:claude-sonnet-5
+4 8,494 4596 2190699 11963 $1.84
+CG-092 20260904T212102Z-resume resume failed claude:claude-sonnet-5
+6 183 984 2915564 23054 $2.49
+CG-092 20260904T211110Z-work work waiting claude:claude-sonnet-5
+2 10,800 4020 487142 11713 $0.96
+CG-091 20260904T211339Z-review review done claude:claude-opus-4-8
+2 10,422 3931 92852 1694 $0.34
+CG-091 20260904T211108Z-work work done claude:claude-sonnet-5
+2 8,755 4149 440238 3016 $0.58
+CG-091 20260904T205958Z-revise revise blocked claude:claude-sonnet-5
+6 8,750 4314 1677889 21219 $1.96
+CG-091 20260904T205551Z-work work done claude:claude-sonnet-5
+4 8,506 4594 2246702 11673 $1.89
+CG-090 20260904T213233Z-revise revise done claude:claude-sonnet-5
+1 9,723 4010 172901 1322 $0.42
+CG-090 20260904T213129Z-review review done claude:claude-opus-4-8
+1 10,309 3931 93596 2387 $0.37
+CG-090 20260904T212757Z-revise revise done claude:claude-sonnet-5
+3 9,189 4578 1790949 7740 $1.50
+CG-090 20260904T212644Z-review review done claude:claude-opus-4-8
+1 10,073 3935 182890 2805 $0.47
+CG-090 20260904T212417Z-work work done claude:claude-sonnet-5
+2 8,723 4147 390839 2267 $0.58
+CG-090 20260904T210543Z-revise revise done claude:claude-sonnet-5
+5 9,261 4298 1195101 12027 $1.39
+CG-090 20260904T205855Z-revise revise done claude:claude-sonnet-5
+5 8,723 4059 1302317 7567 $1.30
+CG-090 20260904T205550Z-work work done claude:claude-sonnet-5
+3 8,496 4437 1342090 6236 $1.24
+CG-088 20260905T014247Z-review review done claude:claude-opus-4-8
+2 13,052 3935 219598 5107 $0.66
+CG-088 20260905T004518Z-revise revise done claude:claude-sonnet-5
+3 7,489 4290 838328 7564 $1.05
+CG-088 20260905T003906Z-review review done claude:claude-opus-4-8
+4 12,509 4070 358934 8076 $0.77
+CG-088 20260905T003603Z-revise revise done claude:claude-sonnet-5
+2 7,218 4294 864232 3201 $0.91
+CG-088 20260905T000109Z-revise revise done claude:claude-sonnet-5
+6 6,565 4735 3670197 20078 $3.18
+CG-088 20260904T233529Z-review review done claude:claude-opus-4-8
+2 12,303 3935 202704 5771 $0.61
+CG-088 20260904T232004Z-work work done claude:claude-sonnet-5
+15 5,553 5571 9102245 61247 $7.48
+CG-087 20260904T231509Z-review review done claude:claude-opus-4-8
+2 17,821 3933 176070 5673 $0.66
+CG-087 20260904T230410Z-work work done claude:claude-sonnet-5
+10 11,399 5021 6593940 49039 $5.85
+CG-086 20260905T020502Z-review review done claude:claude-opus-4-8
+5 19,825 4068 396286 7111 $0.92
+CG-086 20260905T014559Z-revise revise done claude:claude-sonnet-5
+6 8,735 8111 1659156 5835 $1.55
+CG-086 20260905T003711Z-revise revise done claude:claude-sonnet-5
+5 8,241 4600 2821535 15246 $2.44
+CG-086 20260905T003453Z-review review done claude:claude-opus-4-8
+2 18,744 4072 521670 8018 $1.01
+CG-086 20260905T002648Z-revise revise done claude:claude-sonnet-5
+7 7,710 5150 4303236 17207 $3.48
+CG-086 20260904T230353Z-review review done claude:claude-opus-4-8
+2 11,623 3935 199918 5007 $0.58
+CG-086 20260904T225523Z-work work done claude:claude-sonnet-5
+8 6,027 4880 5360589 35338 $4.75
+CG-085 20260904T193418Z-review review done claude:claude-opus-4-8
+2 7,161 3945 346456 4341 $0.53
+CG-085 20260904T193159Z-work work done human
+2 4,398
+CG-084 20260904T212616Z-review review done claude:claude-opus-4-8
+9 11,416 4360 1239593 13235 $1.42
+CG-084 20260904T211109Z-work work done claude:claude-opus-4-8
+15 2,801 4957 9129611 53911 $7.65
+CG-084 20260904T210750Z-work work failed claude:claude-opus-4-8
+3 2,736
+CG-083 20260905T015441Z-revise revise done claude:claude-sonnet-5
+2 6,590 4153 550881 2725 $0.68
+CG-083 20260905T014249Z-review review done claude:claude-opus-4-8
+3 7,682 4068 285732 5033 $0.64
+CG-083 20260905T003603Z-revise revise done claude:claude-sonnet-5
+4 5,855 4439 1444067 6016 $1.35
+CG-083 20260905T003359Z-review review done claude:claude-opus-4-8
+8 8,464 4055 896220 12383 $1.27
+CG-083 20260905T002340Z-revise revise done claude:claude-sonnet-5
+9 5,490 4872 3099667 18546 $2.71
+CG-083 20260904T231942Z-review review done claude:claude-opus-4-8
+3 8,183 4070 322265 8693 $0.72
+CG-083 20260904T230950Z-revise revise done claude:claude-sonnet-5
+9 5,629 4878 3887316 26213 $3.34
+CG-083 20260904T230700Z-work work done claude:claude-sonnet-5
+2 4,552 4149 559457 6672 $0.97
+CG-083 20260904T225403Z-work work done claude:claude-sonnet-5
+10 4,498 4890 5769206 39307 $4.90
+CG-082 20260904T195926Z-revise revise done claude:claude-sonnet-5
+2 9,583 4157 672797 3836 $0.77
+CG-082 20260904T195614Z-review review done claude:claude-opus-4-8
+3 13,399 4068 310687 7380 $0.74
+CG-082 20260904T195040Z-revise revise done claude:claude-sonnet-5
+5 9,908 4586 2521056 17150 $2.35
+CG-082 20260904T194830Z-review review done claude:claude-opus-4-8
+2 12,044 4068 303248 5076 $0.65
+CG-082 20260904T194448Z-work work done claude:claude-sonnet-5
+3 8,763
+CG-082 20260904T193626Z-work work done claude:claude-sonnet-5
+8 8,590 5174 6383482 32237 $4.96
+CG-082 20260904T193247Z-work work blocked claude:claude-sonnet-5
+2 8,324 4157 714559 9401 $1.04
+CG-081 20260904T220015Z-revise revise done claude:claude-opus-4-8
+1 14,135 3931 108065 2432 $0.42
+CG-081 20260904T215522Z-review review done claude:claude-opus-4-8
+3 23,401 4074 590774 7100 $1.01
+CG-081 20260904T212757Z-revise revise done claude:claude-opus-4-8
+12 14,949 5069 4703030 33580 $4.18
+CG-081 20260904T212547Z-review review done claude:claude-opus-4-8
+2 21,147 4068 369539 5957 $0.78
+CG-081 20260904T212243Z-revise revise done claude:claude-opus-4-8
+3 13,411 3771 150047 3276 $0.46
+CG-081 20260904T211821Z-review review done claude:claude-opus-4-8
+4 20,965 4082 818848 9175 $1.16
+CG-081 20260904T210100Z-revise revise done claude:claude-opus-4-8
+17 12,841 4775 3414734 66746 $4.62
+CG-081 20260904T205550Z-revise revise done claude:claude-opus-4-8
+5 13,483 4368 1616655 16554 $1.80
+CG-081 20260904T201042Z-work work done claude:claude-opus-4-8
+15 11,193 9313 7146528 52158 $6.25
+CG-080 20260905T002322Z-review review done claude:claude-opus-4-8
+3 10,203 3943 369268 5633 $0.67
+CG-080 20260905T001932Z-revise revise done claude:claude-sonnet-5
+3 6,016 4296 882869 3601 $0.86
+CG-080 20260904T225350Z-review review done claude:claude-opus-4-8
+3 10,033 4070 326802 7350 $0.70
+CG-080 20260904T224511Z-work work done claude:claude-sonnet-5
+8 4,592 5301 7617144 30601 $5.76
+CG-079 20260905T021845Z-review review done claude:claude-opus-4-8
+3 28,600 3935 329006 7820 $1.04
+CG-079 20260905T021231Z-revise revise done claude:claude-opus-4-8
+4 15,762 4366 1660427 10315 $1.65
+CG-079 20260905T021139Z-review review failed claude:claude-opus-4-8
+17 28,432
+CG-079 20260905T020640Z-revise revise done claude:claude-opus-4-8
+2 15,521 4074 473965 3033 $0.70
+CG-079 20260905T014436Z-revise revise done claude:claude-opus-4-8
+2 15,296 4076 521406 2944 $0.72
+CG-079 20260905T012217Z-revise revise done claude:claude-opus-4-8
+3 14,641 4215 863043 6180 $1.05
+CG-079 20260905T003021Z-revise revise done claude:claude-opus-4-8
+2 14,064 3931 108879 1915 $0.41
+CG-079 20260905T002629Z-review review done claude:claude-opus-4-8
+4 26,779 4078 815834 11251 $1.33
+CG-079 20260905T001932Z-revise revise done claude:claude-opus-4-8
+6 14,410 4131 2756152 15528 $2.63
+CG-079 20260905T000756Z-revise revise done claude:claude-opus-4-8
+8 13,305 4795 3153548 16214 $2.64
+CG-079 20260904T230605Z-review review done claude:claude-opus-4-8
+4 26,149 4072 607581 10047 $1.24
+CG-079 20260904T224502Z-work work done claude:claude-opus-4-8
+20 11,192 5345 12337088 71815 $10.22
+CG-078 20260904T225940Z-review review done claude:claude-opus-4-8
+4 23,646 4066 352948 8939 $1.03
+CG-078 20260904T224340Z-work work done claude:fable
+15 15,822 5206 9108985 64652 $15.94
+CG-076 20260904T190936Z-review review failed claude:sonnet
+465 6,621
+CG-076 20260904T190326Z-work work done claude:sonnet
+6 2,170 24 1655449 13605 $1.10
+CG-075 20260904T185549Z-review review failed claude:sonnet
+479 10,582
+CG-075 20260904T185202Z-work work done human
+3 8,631
+CG-074 20260905T021759Z-review review done claude:claude-opus-4-8
+3 7,392 4217 864983 7311 $1.08
+CG-074 20260905T021114Z-revise revise done claude:claude-sonnet-5
+3 7,546 4439 1387003 5284 $1.29
+CG-074 20260905T020500Z-review review done claude:claude-opus-4-8
+6 10,918 4080 636909 10731 $1.05
+CG-074 20260905T014323Z-revise revise done claude:claude-sonnet-5
+8 7,021 12455 4671377 18492 $3.62
+CG-074 20260905T001932Z-revise revise done claude:claude-sonnet-5
+2 6,487 4153 542215 2471 $0.66
+CG-074 20260905T001106Z-review review done claude:claude-opus-4-8
+4 9,762 4203 442477 8789 $0.85
+CG-074 20260905T000452Z-revise revise done claude:claude-sonnet-5
+5 6,753 4600 2811329 14887 $2.44
+CG-074 20260904T235956Z-revise revise done claude:claude-sonnet-5
+4 5,639 4445 1599779 9059 $1.51
+CG-074 20260904T225314Z-review review done claude:claude-opus-4-8
+2 9,138 4088 779029 7303 $0.98
+CG-074 20260904T224146Z-work work done claude:claude-sonnet-5
+11 4,523 5184 9512259 47567 $7.43
+CG-073 20260904T224330Z-review review done claude:claude-opus-4-8
+1 16,641 4070 406073 4467 $0.81
+CG-073 20260904T223435Z-work work done claude:claude-opus-4-8
+8 11,189 4775 3771162 27749 $3.66
+CG-072 20260904T223908Z-review review done claude:claude-opus-4-8
+2 3,907 3937 186334 3700 $0.43
+CG-072 20260904T223319Z-work work done claude:claude-sonnet-5
+5 2,302 4733 3153301 17328 $2.76
+CG-071 20260904T195209Z-review review done claude:claude-opus-4-8
+4 4,424 4354 867711 12560 $1.12
+CG-071 20260904T194657Z-work work done human
+5 2,295
+CG-069 20260904T193239Z-review review failed claude:claude-opus-4-8
+442 8,604
+CG-069 20260904T192245Z-work work done claude:sonnet
+9 9,813 57 6421825 17771 $2.87
+CG-068 20260904T224131Z-review review done claude:claude-opus-4-8
+3 17,240 4066 290236 7718 $0.82
+CG-068 20260904T222853Z-work work done claude:claude-opus-4-8
+12 8,976 4940 6956999 43567 $6.03
+CG-067 20260904T223222Z-review review done claude:claude-opus-4-8
+1 6,216 3931 80779 2193 $0.29
+CG-067 20260904T222844Z-work work done claude:claude-sonnet-5
+3 4,336 4439 1337453 10919 $1.37
+CG-066 20260904T231700Z-review review done claude:claude-opus-4-8
+2 7,230 3933 121318 3236 $0.38
+CG-066 20260904T231325Z-work work done claude:claude-sonnet-5
+3 5,830 4441 1554186 10931 $1.55
+CG-065 20260905T014246Z-review review done claude:claude-opus-4-8
+3 11,822 4072 408727 9638 $0.85
+CG-065 20260905T002915Z-revise revise done claude:claude-sonnet-5
+2 9,261 4149 477208 2902 $0.69
+CG-065 20260905T002534Z-review review done claude:claude-opus-4-8
+3 11,558 4068 308465 11053 $0.84
+CG-065 20260905T001931Z-revise revise done claude:claude-sonnet-5
+5 9,458 4439 1572405 12504 $1.67
+CG-065 20260905T000408Z-revise revise done claude:claude-sonnet-5
+6 8,603 7805 2852145 16202 $2.46
+CG-065 20260904T232556Z-review review done claude:claude-opus-4-8
+3 10,724 4074 446694 11229 $0.89
+CG-065 20260904T232304Z-work work done claude:claude-sonnet-5
+2 7,848 4153 728660 5209 $1.06
+CG-065 20260904T231316Z-work work done claude:claude-sonnet-5
+6 7,555 4713 3719108 28154 $3.70
+CG-064 20260905T001931Z-revise revise done claude:claude-sonnet-5
+5 9,054 4425 1052716 6110 $1.12
+CG-064 20260905T000755Z-revise revise no_change claude:claude-sonnet-5
+4 8,802 4302 1294799 11109 $1.42
+CG-064 20260905T000226Z-revise revise done claude:claude-sonnet-5
+5 12,723 4576 1890106 7666 $1.68
+CG-064 20260904T223147Z-review review done claude:claude-opus-4-8
+3 14,324 4070 381164 5573 $0.74
+CG-064 20260904T220305Z-work work done claude:claude-sonnet-5
+28 10,054 5611 13732989 93733 $11.12
+CG-063 20260904T191708Z-review review failed claude:sonnet
+458 2,570
+CG-063 20260904T191219Z-work work done claude:sonnet
+4 2,133 25 1050347 7335 $0.64
+CG-062 20260905T014245Z-review review done claude:claude-opus-4-8
+3 13,014 4064 219251 9688 $0.80
+CG-062 20260905T011654Z-revise revise done claude:claude-opus-4-8
+3 9,167 4221 825822 6858 $0.97
+CG-062 20260905T000755Z-revise revise no_change claude:claude-opus-4-8
+10 8,406 4811 3584846 31541 $3.35
+CG-062 20260905T000226Z-revise revise done claude:claude-opus-4-8
+5 7,261 4358 930753 8993 $1.04
+CG-062 20260904T225129Z-review review done claude:claude-opus-4-8
+2 11,870 4068 305570 7576 $0.72
+CG-062 20260904T224146Z-revise revise done claude:claude-opus-4-8
+9 7,617 4366 1609120 25425 $2.08
+CG-062 20260904T223832Z-review review done claude:claude-opus-4-8
+5 11,202 4217 890588 13395 $1.31
+CG-062 20260904T222723Z-work work done claude:claude-opus-4-8
+11 6,201 4797 3561592 28717 $3.51
+CG-061 20260904T211752Z-review review done claude:claude-opus-4-8
+17 5,034 3827 361819 7376 $0.66
+CG-061 20260904T211412Z-work work done claude:claude-sonnet-5
+3 3,143 4161 1013739 6904 $1.28
+CG-061 20260904T210443Z-revise revise failed claude:claude-sonnet-5
+6 3,690
+CG-061 20260904T205550Z-work work done claude:claude-sonnet-5
+9 3,003 4739 4862185 31229 $4.35
+CG-060 20260904T182123Z-review review done claude:sonnet
+4 4,452 6 171538 8720 $0.35
+CG-060 20260904T181639Z-work work done human
+4 2,509
+CG-059 20260904T175953Z-review review done claude:sonnet
+2 9,065 3 55036 2783 $0.19
+CG-059 20260904T175736Z-work work done human
+2 7,387
+CG-058 20260904T175733Z-review review done claude:sonnet
+3 6,485 12 403008 7487 $0.39
+CG-058 20260904T175336Z-work work done human
+4 5,168
+CG-057 20260904T194310Z-review review failed claude:claude-opus-4-8
+432 10,310
+CG-057 20260904T193455Z-work work done claude:claude-opus-4-8
+8 6,601 4761 2242870 24811 $2.56
+CG-057 20260904T191218Z-work work failed claude:sonnet
+21 6,443 58 6281927 60277 $3.92
+CG-055 20260904T174731Z-review review failed claude:sonnet
+548 12,941
+CG-055 20260904T174319Z-work work done human
+4 11,155
+CG-054 20260904T193623Z-review review failed claude:claude-opus-4-8
+439 10,770
+CG-054 20260904T193350Z-revise revise done claude:claude-opus-4-8
+2 10,252 4072 431906 5795 $0.77
+CG-054 20260904T193211Z-review review failed claude:claude-opus-4-8
+443 12,496
+CG-054 20260904T192245Z-revise revise done claude:sonnet
+9 9,801 25 1166560 10294 $0.73
+CG-054 20260904T191837Z-review review done claude:sonnet
+4 12,160 8 298593 10904 $0.47
+CG-054 20260904T190809Z-revise revise done claude:sonnet
+10 9,515 22 1306105 30402 $1.24
+CG-054 20260904T185958Z-work work done claude:sonnet
+8 2,483 37 3094527 22885 $1.80
+CG-053 20260904T193143Z-review review done claude:claude-opus-4-8
+3 11,443 4324 249995 8507 $0.73
+CG-053 20260904T191218Z-work work done claude:sonnet
+19 7,520 47 4688989 53995 $2.91
+CG-050 20260904T192631Z-review review done claude:sonnet
+5 13,126 5 162419 7409 $0.32
+CG-050 20260904T192403Z-work work done claude:sonnet
+2 7,604 11 785798 3093 $0.75
+CG-050 20260904T191217Z-work work done claude:sonnet
+11 7,553 42 4707467 33270 $2.64
+CG-049 20260904T222636Z-review review done claude:claude-opus-4-8
+2 8,498 3931 89481 3574 $0.40
+CG-049 20260904T222130Z-work work done claude:claude-sonnet-5
+4 7,295 4155 682547 13229 $1.13
+CG-048 20260904T222559Z-review review done claude:claude-opus-4-8
+3 11,212 4076 493058 5884 $0.77
+CG-048 20260904T221838Z-work work done claude:claude-opus-4-8
+7 6,389 4646 3479679 23305 $3.26
+CG-047 20260904T172849Z-review review done claude:haiku
+2 7,901 9 18741 6507 $0.07
+CG-047 20260904T172702Z-work work done human
+1 6,044
+CG-046 20260904T174046Z-revise revise failed claude:sonnet
+8 11,126 63 3743820 17387 $1.75
+CG-046 20260904T172403Z-review review done claude:haiku
+2 11,468 9 18741 7109 $0.09
+CG-046 20260904T172257Z-work work done human
+1 10,755
+CG-045 20260904T215908Z-revise revise failed claude:fable
+1 11,073
+CG-045 20260904T215643Z-review review done claude:claude-opus-4-8
+3 21,381 4209 804388 9669 $1.24
+CG-045 20260904T214307Z-work work done claude:fable
+13 8,140 5067 8068758 61663 $14.83
+CG-045 20260904T173814Z-work work failed claude:sonnet
+14 7,108 61 6535101 38099 $3.28
+CG-044 20260904T174548Z-review review done claude:sonnet
+3 15,856 13 557874 8798 $0.53
+CG-044 20260904T173814Z-work work done claude:sonnet
+7 9,649 57 4489671 17712 $2.07
+CG-043 20260904T175557Z-review review done claude:sonnet
+2 3,923 5 119807 5833 $0.24
+CG-043 20260904T173813Z-work work done claude:sonnet
+17 2,577 57 6894803 52260 $3.67
+CG-042 20260904T174356Z-review review done claude:sonnet
+3 11,789 5 142987 4377 $0.26
+CG-042 20260904T173639Z-work work done claude:sonnet
+7 9,018 31 2238385 17636 $1.41
+CG-041 20260904T174210Z-review review done claude:sonnet
+3 7,170 9 284417 5056 $0.30
+CG-041 20260904T173915Z-revise revise done claude:sonnet
+3 6,363 19 757654 4100 $0.43
+CG-041 20260904T173626Z-review review done claude:sonnet
+3 7,921 14 540495 5112 $0.43
+CG-041 20260904T173235Z-work work done claude:haiku
+3 5,894 401 4005156 14316 $0.63
+CG-040 20260904T190803Z-review review failed claude:sonnet
+467 14,538
+CG-040 20260904T185855Z-revise revise done claude:sonnet
+9 2,492 45 3729643 19830 $1.95
+CG-040 20260904T173805Z-review review done claude:sonnet
+2 11,923 7 241423 5839 $0.34
+CG-040 20260904T173235Z-work work done claude:haiku
+5 8,291 473 3808591 20630 $0.61
+CG-039 20260904T173041Z-work work failed claude:haiku
+7 5,647 481 5302028 33578 $0.89
+CG-039 20260904T172617Z-work work done claude:haiku
+4 5,595 305 2686632 18636 $0.50
+CG-038 20260904T173904Z-review review failed claude:sonnet
+556 6,286
+CG-038 20260904T172447Z-work work done claude:sonnet
+14 3,766 44 4056760 39681 $2.39
+CG-037 20260904T212141Z-revise revise done claude:claude-sonnet-5
+2 8,600 4147 376157 4995 $0.64
+CG-037 20260904T210339Z-revise revise done claude:claude-sonnet-5
+3 7,564 4697 1317332 4663 $1.10
+CG-037 20260904T210236Z-review review done claude:claude-opus-4-8
+5 10,373 4193 182534 5605 $0.53
+CG-037 20260904T205753Z-revise revise done claude:claude-sonnet-5
+4 7,373 4564 1447211 15870 $1.70
+CG-037 20260904T205549Z-revise revise done claude:claude-sonnet-5
+2 7,561 4693 1449088 8943 $1.41
+CG-037 20260904T200934Z-review review done claude:claude-opus-4-8
+1 8,955 4195 212218 3364 $0.47
+CG-037 20260904T200159Z-work work done claude:claude-sonnet-5
+7 7,485 4717 2688331 24134 $2.78
+CG-037 20260904T173639Z-work work failed claude:sonnet
+4 6,511 9 328287 7930 $0.41
+CG-037 20260904T173040Z-work work done claude:haiku
+4 6,237 257 1549402 10187 $0.29
+CG-037 20260904T172447Z-work work failed claude:haiku
+5 6,176 481 3470613 16479 $0.55
+CG-036 20260904T172949Z-review review done claude:haiku
+3 6,711 9 18741 8580 $0.08
+CG-036 20260904T172446Z-work work done claude:haiku
+5 4,749 417 2622504 14293 $0.43
+CG-035 20260904T173603Z-review review done claude:sonnet
+3 7,217 6 178955 6229 $0.31
+CG-035 20260904T172446Z-work work done claude:sonnet
+11 3,766 36 3162115 31198 $1.99
+CG-034 20260904T185418Z-review review failed claude:sonnet
+481 8,574
+CG-034 20260904T184339Z-revise revise done claude:sonnet
+10 6,749 43 3030833 29085 $1.79
+CG-034 20260904T173442Z-review review done claude:sonnet
+3 8,140 4 94800 4804 $0.25
+CG-034 20260904T172445Z-work work done claude:sonnet
+10 6,266 46 2693786 30099 $1.64
+CG-033 20260904T174510Z-work work failed claude:sonnet
+8 4,623 37 2587765 23503 $1.60
+CG-033 20260904T172444Z-work work failed claude:sonnet
+11 4,521 34 2785884 29393 $1.80
+CG-032 20260904T185152Z-revise revise done claude:sonnet
+11 7,492 32 2407655 30288 $1.68
+CG-032 20260904T174920Z-revise revise failed claude:sonnet
+25 8,189
+CG-032 20260904T174648Z-review review failed claude:sonnet
+548 10,337
+CG-032 20260904T174338Z-work work done claude:sonnet
+3 7,088 12 600042 3938 $0.50
+CG-032 20260904T173639Z-revise revise failed claude:sonnet
+1 7,094 8 331233 1972 $0.37
+CG-032 20260904T173227Z-review review done claude:haiku
+2 9,794 49 250298 8535 $0.13
+CG-032 20260904T172825Z-revise revise done claude:haiku
+4 7,583 313 2878582 16478 $0.52
+CG-032 20260904T172444Z-work work done claude:haiku
+4 6,509 337 2999100 16630 $0.53
+CG-031 20260904T174628Z-review review done claude:sonnet
+6 5,084 12 396610 8879 $0.40
+CG-031 20260904T173916Z-work work done claude:sonnet
+7 3,006 21 1130025 20064 $0.96
+CG-029 20260904T231000Z-work work waiting claude:claude-opus-4-8
+3 5,758 3773 151384 11740 $0.64
+CG-027 20260904T170850Z-review review done claude:haiku
+4 10,193 41 199759 15207 $0.17
+CG-027 20260904T170828Z-revise revise done human
+0 7,765
+CG-027 20260904T170548Z-revise revise done human
+1 6,952
+CG-027 20260904T170332Z-review review done claude:haiku
+2 9,632 9 18741 7985 $0.08
+CG-027 20260904T160635Z-work work done human
+57 6,486
+CG-013 20260904T174524Z-review review done claude:sonnet
+7 5,082 12 486011 16584 $0.63
+CG-013 20260904T173915Z-work work done claude:sonnet
+6 2,273 35 1856283 13897 $1.04
+CG-012 20260904T165554Z-revise revise done claude:haiku
+2 3,432 113 467935 5424 $0.10
+CG-012 20260904T165350Z-review review done claude:haiku
+2 6,712 9 18741 7402 $0.07
+CG-012 20260904T165125Z-revise revise done claude:haiku
+2 3,197 177 919183 5555 $0.18
+CG-012 20260904T164817Z-review review done claude:haiku
+2 6,239 9 18741 7524 $0.07
+CG-012 20260904T164554Z-revise revise done claude:haiku
+2 3,106 185 926596 5581 $0.17
+CG-012 20260904T164333Z-work work done claude:haiku
+2 2,698 233 1520600 6193 $0.28
+CG-012 20260904T163832Z-work work failed claude:haiku
+5 2,636 481 3419006 23745 $0.58
+CG-010 20260904T185753Z-review review done claude:sonnet
+2 7,134 4 91921 4818 $0.24
+CG-010 20260904T184338Z-revise revise done claude:sonnet
+14 2,900 73 6968878 38739 $3.34
+CG-010 20260904T174503Z-review review failed claude:sonnet
+550 6,369
+CG-010 20260904T174046Z-revise revise done claude:sonnet
+4 2,688 29 1168199 9794 $0.66
+CG-010 20260904T173540Z-review review done claude:sonnet
+4 5,182 12 407052 8088 $0.42
+CG-010 20260904T173040Z-work work done claude:haiku
+5 2,242 361 3227181 10983 $0.51
+CG-010 20260904T172443Z-work work failed claude:haiku
+5 2,180 481 3255580 17714 $0.53
+CG-009 20260904T184338Z-revise revise done claude:sonnet
+8 3,974 54 3424452 22297 $1.77
+CG-009 20260904T173040Z-revise revise done claude:sonnet
+1 3,748 5 114308 1042 $0.11
+CG-009 20260904T172611Z-review review done claude:sonnet
+3 8,793 5 143117 6828 $0.32
+CG-009 20260904T172340Z-revise revise done claude:sonnet
+2 3,556 9 278789 2738 $0.23
+CG-009 20260904T172032Z-review review done claude:sonnet
+3 8,659 13 480821 5135 $0.38
+CG-009 20260904T171707Z-work work done claude:sonnet
+3 3,052 22 1287389 5659 $0.80
+CG-009 20260904T170423Z-work work failed claude:sonnet
+13 2,990 61 5644913 34195 $2.79
+CG-008 20260904T171252Z-review review done claude:sonnet
+2 7,359 10 330625 5173 $0.31
+CG-008 20260904T170423Z-work work done claude:sonnet
+8 2,945 37 2703891 21070 $1.77
+Scheduler log 02:51:01 persona user: report written to context-garden/phase-02-friction/docs/reviews/user-2026-09-05.md
+02:51:01 persona usability-expert: report written to context-garden/phase-02-friction/docs/reviews/usability-expert-2026-09-05.md
+02:48:52 persona staff-engineer: report written to context-garden/phase-02-friction/docs/reviews/staff-engineer-2026-09-05.md
+02:48:52 persona security: report written to context-garden/phase-02-friction/docs/reviews/security-2026-09-05.md
+02:47:50 persona project-manager: report written to context-garden/phase-02-friction/docs/reviews/project-manager-2026-09-05.md
+02:46:47 persona designer: report written to context-garden/phase-02-friction/docs/reviews/designer-2026-09-05.md

@@ -1,0 +1,402 @@
+Board · context-garden
+?
+context-garden context garden
+Inbox 14
+Board
+Trellis
+Timeline
+Trials
+Runs $581
+Config
+Phases
+phase-01-bootstrap Plate I · Pisum sativum context-garden · 19 tasks phase-02-friction Plate II · Rubus fruticosus context-garden · 127 tasks
+Running now
+_retro-context-garden-phase-02-friction retro · claude-fable-5-1 · 2 min
+scheduler loop on · tick 02:54:18Z
+↻ Tick now
+Board Every task by state. Blocked and stacked tasks show what they wait on; running ones show elapsed time.
+columns
+list
+all
+context-garden/phase-01-bootstrap
+context-garden/phase-02-friction
+seed draft 14
+CG-137 p1 · hard
+Split the scheduler by tick phase and the web actions into a registry so features stop colliding
+phase-02-friction
+CG-141 p1 · medium
+Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff is unchanged, a merge queue
+phase-02-friction
+CG-145 p1 · easy
+garden retro waits for the persona reports before it dispatches the reconciliation
+phase-02-friction
+CG-146 p1 · medium
+A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated
+phase-02-friction
+CG-030 p2 · easy
+Plates: label what each plate shows, keep every file public domain, credit Thomé
+phase-02-friction
+CG-132 p2 · easy
+The web UI can create a task from a form, with the same fields as garden new-task
+phase-02-friction
+CG-134 p2 · medium
+garden walkthrough: render the live web app's pages for the retro and the persona reviews
+phase-02-friction
+CG-135 p2 · hard
+garden qa: an agent drives the loop end to end through the web app on a throwaway garden
+phase-02-friction
+CG-139 p2 · easy
+Rebase rounds do not count toward the revision cap
+phase-02-friction
+CG-142 p2 · easy
+Task actions refuse a task that is done or cancelled
+phase-02-friction
+CG-143 p2 · easy
+Ship the garden-operate skill with the tool so every new garden gets it
+phase-02-friction
+CG-144 p2 · easy
+A superseded review run is closed when a newer review starts; no run record outlives its process
+phase-02-friction
+CG-147 p2 · easy
+A product clone gets a git identity when it is made, and doctor checks every clone
+phase-02-friction
+CG-125 p3 · medium
+Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from a clean restart found
+phase-02-friction
+seed, waiting blocked 0
+sprout ready 1
+CG-029 p3 · medium
+Close the phase: friction document, what changed, and the next goals
+phase-02-friction
+in leaf running 0
+bud, tagged waiting human 0
+in bud awaiting triage 0
+in flower in review 0
+pruned changes requested 0
+in fruit done 108
+CG-037 p0 · easy
+Stop the revise template and the review prompt contradicting each other found
+phase-02-friction · PR
+CG-054 p0 · medium
+A worker's worktree must never act on the live garden
+phase-02-friction · PR
+CG-061 p0 · easy
+Review runs whose task moved on are reaped, not left running forever
+phase-02-friction · PR
+CG-064 p0 · easy
+Make test_feedback_triggers_revise_round deterministic
+phase-02-friction · PR
+CG-076 p0 · easy
+Push with lease when the worker rebased its branch
+phase-02-friction · PR
+CG-082 p0 · easy
+Separate GARDEN_ROOT (guard) from the check-command venv path variable found
+phase-02-friction · PR
+CG-085 p0 · easy
+Workers' checkouts live in a configurable work_dir outside the garden
+phase-02-friction · PR
+CG-090 p0 · easy
+State.save() never clears dirty keys after a successful write found
+phase-02-friction · PR
+CG-091 p0 · easy
+State.save()'s file replacement is not atomic for concurrent readers found
+phase-02-friction · PR
+CG-093 p0 · easy
+Store.save() for task files has the same non-atomic write_text pattern found
+phase-02-friction · PR
+CG-101 p0 · easy
+Pre-PR `tests` check environment doesn't match test suite assumptions found
+phase-02-friction · PR
+CG-104 p0 · easy
+Live log: a tool result whose content is a string no longer breaks the task page
+phase-02-friction · PR
+CG-106 p0 · medium
+A task the loop can no longer dispatch always gets a card
+phase-02-friction · PR
+CG-111 p0 · medium
+A worker cannot write outside its worktree, whatever it is told
+phase-02-friction · PR
+CG-116 p0 · medium
+The orphan sweep never closes a run whose task is still running
+phase-02-friction · PR
+CG-127 p0 · medium
+test_set_budget_none_removes_cap fails on main found
+phase-02-friction · PR
+CG-129 p0 · medium
+Automerge merges only into the product's base branch, never into a parent's branch
+phase-02-friction · PR
+CG-001 p1 · medium
+Task file format and on-disk store
+phase-01-bootstrap
+CG-002 p1 · medium
+Dependency graph and ready set
+phase-01-bootstrap
+CG-003 p1 · medium
+Worker brief builder and result contract
+phase-01-bootstrap
+CG-004 p1 · medium
+Scheduler: reap, poll, dispatch
+phase-01-bootstrap
+CG-005 p1 · medium
+Planner: goals and specs to draft tasks
+phase-01-bootstrap
+CG-006 p1 · medium
+Web UI and TUI
+phase-01-bootstrap
+CG-007 p1 · medium
+Claude Code skills and README
+phase-01-bootstrap
+CG-008 p1 · medium
+Harvest friction sections from PR bodies
+phase-02-friction · PR
+CG-014 p1 · hard
+Harness abstraction and difficulty-based model selection
+phase-01-bootstrap
+CG-015 p1 · hard
+Remote workers over ssh
+phase-01-bootstrap
+CG-016 p1 · hard
+Automated review pass and PR tracking
+phase-01-bootstrap
+CG-017 p1 · hard
+Event log, digest and metrics
+phase-01-bootstrap
+CG-018 p1 · hard
+Pause and resume: waiting_human and garden answer
+phase-01-bootstrap
+CG-019 p1 · hard
+Discovered work from worker results
+phase-01-bootstrap
+CG-020 p1 · hard
+Stall detection and phase budgets
+phase-01-bootstrap
+CG-021 p1 · hard
+Stacked dependencies with restack on merge
+phase-01-bootstrap
+CG-022 p1 · hard
+Model trials with a leaderboard
+phase-01-bootstrap
+CG-023 p1 · hard
+Persona reviews of PRs and phases
+phase-01-bootstrap
+CG-024 p1 · hard
+Token-free pre-PR and CI checks
+phase-01-bootstrap
+CG-026 p1 · medium
+Botanical theme: plants per phase and growth-stage glyphs
+phase-01-bootstrap
+CG-027 p1 · easy
+First live run of the loop on itself needs you
+phase-02-friction · PR
+CG-047 p1 · easy
+Pick up the person's own PR comments as feedback
+phase-02-friction · PR
+CG-053 p1 · medium
+state.json is saved whole by every writer, so concurrent writers lose updates
+phase-02-friction · PR
+CG-055 p1 · easy
+Turn limit is optional and off by default
+phase-02-friction · PR
+CG-057 p1 · medium
+A PR that conflicts with its base gets a rebase round
+phase-02-friction · PR
+CG-058 p1 · easy
+The brief never points a worker at the garden root
+phase-02-friction · PR
+CG-060 p1 · easy
+Reading lists resolve product paths against the product repo
+phase-02-friction · PR
+CG-063 p1 · easy
+Remove the garden files from the tool's repo
+phase-02-friction · PR
+CG-069 p1 · medium
+Pause and resume dispatch from a command and a configuration page
+phase-02-friction · PR
+CG-081 p1 · medium
+Environment setup is per-product configuration, not a venv assumption
+phase-02-friction · PR
+CG-084 p1 · medium
+The garden upgrades its own pinned install after the tool's PRs merge
+phase-02-friction · PR
+CG-092 p1 · hard
+Remove venv install lines from the context-garden garden config and product overview found
+phase-02-friction
+CG-098 p1 · easy
+Tests do not read the developer's GARDEN_ROOT; the check command need not unset it
+phase-02-friction · PR
+CG-100 p1 · medium
+A worker's won't-do or nothing-to-change is a decision for the person, not a failure
+phase-02-friction · PR
+CG-112 p1 · medium
+A worker's discovery can be a decision for the person, not only a new task
+phase-02-friction · PR
+CG-113 p1 · easy
+Drop the `env -u GARDEN_ROOT` stopgap from the live garden's tests check found
+phase-02-friction
+CG-117 p1 · easy
+After the last automated review round, the person is told the PR is theirs
+phase-02-friction · PR
+CG-118 p1 · easy
+A bot comment that is a notice, not a finding, is not feedback
+phase-02-friction · PR
+CG-119 p1 · medium
+test_happy_path_dispatch_reap_pr_merge flakes intermittently in CI found stack
+phase-02-friction · PR
+CG-126 p1 · medium
+Verify worktree provisioning for stacked tasks actually checks out the parent branch found
+phase-02-friction · PR
+CG-131 p1 · medium
+A check that fails at the branch's base commit triggers a rebase, not a revise round
+phase-02-friction · PR
+CG-133 p1 · medium
+garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next phase
+phase-02-friction · PR
+CG-136 p1 · medium
+PR descriptions stop costing rounds: a body contract in the brief, friction out of the body, reviewer rewrites
+phase-02-friction · PR
+CG-140 p1 · easy
+An empty description rewrite falls back to a round; pending feedback never sits on an in_review task
+phase-02-friction · PR
+CG-009 p2 · medium
+Stream-json runner output and live log in the web UI
+phase-02-friction · PR
+CG-010 p2 · easy
+Notification hook for human-needed transitions
+phase-02-friction · PR
+CG-011 p2 · medium
+Automated review pass before human review
+phase-02-friction
+CG-032 p2 · easy
+Doctor checks that gh and the harness are logged in and git has an identity found
+phase-02-friction · PR
+CG-034 p2 · medium
+Windows: run the harness by its resolved path and give pre-PR checks a shell found
+phase-02-friction · PR
+CG-035 p2 · medium
+Inbox and digest show what actually happened to a task found
+phase-02-friction · PR
+CG-036 p2 · easy
+Revise brief: a pre-PR variant, and tell the worker what is already on the branch found
+phase-02-friction · PR
+CG-038 p2 · medium
+Stall detection judges a description-only round by the description found
+phase-02-friction · PR
+CG-039 p2 · easy
+Show cache reads, not just fresh input tokens, in runs and usage found
+phase-02-friction
+CG-040 p2 · easy
+Tell the worker its turn cap, and set it per tier found
+phase-02-friction · PR
+CG-041 p2 · easy
+Mark the garden's own PR comments as the garden's found
+phase-02-friction · PR
+CG-042 p2 · medium
+Say when the garden's own state edits get committed found
+phase-02-friction · PR
+CG-043 p2 · medium
+garden finish must not race the tick
+phase-02-friction · PR
+CG-044 p2 · medium
+Report friction from anywhere, and have it scheduled
+phase-02-friction · PR
+CG-045 p2 · hard
+Attention cards say what the decision is and what each button will do
+phase-02-friction · PR
+CG-046 p2 · easy
+Task page: a full text box for the send-back note
+phase-02-friction · PR
+CG-048 p2 · medium
+Set or remove a phase budget from the web UI
+phase-02-friction · PR
+CG-049 p2 · easy
+CLAUDE.md: document PYTHONPATH=src for manual test runs in worktrees found
+phase-02-friction · PR
+CG-059 p2 · easy
+Bot comments count as feedback unless excluded
+phase-02-friction · PR
+CG-062 p2 · medium
+A worker silent for too long is flagged and stopped before the timeout
+phase-02-friction · PR
+CG-067 p2 · easy
+garden commit commits only task files and sees untracked ones
+phase-02-friction · PR
+CG-068 p2 · medium
+Automerge: merge a PR when the loop's own gates pass
+phase-02-friction · PR
+CG-072 p2 · easy
+A merged PR marks its task done even if the task had failed
+phase-02-friction · PR
+CG-073 p2 · medium
+Task page shows every run's transcript and final message
+phase-02-friction · PR
+CG-074 p2 · easy
+Reviews do not consume worker slots
+phase-02-friction · PR
+CG-075 p2 · easy
+Runs page: the table and the scheduler log stay inside their panels
+phase-02-friction · PR
+CG-078 p2 · hard
+Closed phases leave the rail and live in a browsable herbarium
+phase-02-friction · PR
+CG-079 p2 · medium
+Suggest a change to a task from its page, and have an agent fold it in
+phase-02-friction · PR
+CG-080 p2 · easy
+Change parallelism from the configuration page and the CLI, effective next tick
+phase-02-friction · PR
+CG-083 p2 · easy
+A reap is atomic: a restart mid-tick never loses a finished run needs you
+phase-02-friction · PR
+CG-086 p2 · easy
+Web actions report failures as messages, never as a 500
+phase-02-friction · PR
+CG-087 p2 · easy
+Trial form picks contenders from the known harnesses and models stack
+phase-02-friction · PR
+CG-096 p2 · easy
+Inbox count is the decisions only; retrying tasks show but do not count
+phase-02-friction · PR
+CG-099 p2 · easy
+Task page: tier and priority are pulldowns that apply on change, with priority in words
+phase-02-friction · PR
+CG-109 p2 · easy
+A description-only revise round runs on the easy tier needs you
+phase-02-friction · PR
+CG-123 p2 · medium
+Tasks that edit the garden's own files run in a worktree of the garden repo
+phase-02-friction · PR
+CG-012 p3 · easy
+Brief cost report per phase needs you
+phase-02-friction · PR
+CG-013 p3 · medium
+Replan a phase after failures
+phase-02-friction · PR
+CG-031 p3 · easy
+Draw the done stage as a red apple
+phase-02-friction · PR
+CG-065 p3 · easy
+Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source rows
+phase-02-friction · PR
+CG-066 p3 · easy
+garden usage shows the phase header and brief estimates before any run
+phase-02-friction · PR
+CG-071 p3 · easy
+Set a task's priority and difficulty from the CLI and the task page
+phase-02-friction · PR
+CG-088 p3 · easy
+Trellis and phase page can hide completed tasks
+phase-02-friction · PR
+CG-094 p3 · medium
+Board: a list view grouped by status beside the columns
+phase-02-friction · PR
+CG-115 p3 · easy
+Store a short diff summary on run records for attention/triage evidence found
+phase-02-friction · PR
+CG-121 p3 · easy
+Planner and friction reports can still create tasks in a closed phase found
+phase-02-friction · PR
+CG-122 p3 · easy
+Extend the flash-message pattern to friction-report and phase/global actions found stack
+phase-02-friction · PR
+wilted failed 0
+set aside wont do 0
