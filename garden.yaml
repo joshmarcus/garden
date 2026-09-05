@@ -62,14 +62,14 @@ harnesses:
     output_format: stream-json     # one event per line while the worker runs, so the task page tails it live (CG-009)
     # max_turns: 60                # optional hard cap on agent turns; off by default
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
-    review_model: claude-fable-5-1   # reviews on the top model regardless of tier (user, 2026-09-05 20:45); split with codex astra once CG-230's review pool lands
+    review_model: ""                 # reviews follow review.difficulty (easy = sonnet 5); fable reviews were judged too expensive (user, 2026-09-05 20:50)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
     models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-opus-4-8}   # since 2026-09-05 14:50 to cut spend: mediums on sonnet, hard on opus; fable (claude-fable-5-1, CLI >= 2.1.251) is for the retro tier once CG-207 lands
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex
     permission_mode: bypass        # since 2026-09-05 18:55: full-auto (workspace-write) blocks .git writes and network, so codex could never commit; the fence and the scrubbed env are the guard, as for claude
-    review_model: gpt-6-astra      # reviews on the top model when codex reviews (user, 2026-09-05 20:45)
+    review_model: gpt-5.6-terra    # when codex reviews (CG-230 pool), the sonnet-class model, not astra (user, 2026-09-05 20:50)
     models: {easy: gpt-5.6-luna, medium: gpt-5.6-terra, hard: gpt-5.6-sol}   # since 2026-09-05 19:40: the CLI default is gpt-6-astra ($10/$50), the top-line model; luna $0.20/$1.20, terra $2/$12, sol $4/$20
     resume: false                  # true if your codex supports `codex exec resume <id>`
 
