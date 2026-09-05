@@ -14,7 +14,7 @@ discovered_from: retro:context-garden/phase-03
 attempts: 1
 last_dispatched_at: '2026-09-05T11:22:54+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T11:22:54+00:00'
+updated: '2026-09-05T11:43:28+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,4 @@ Proposed at the context-garden/phase-03 retro. Phase 03 showed that structure fi
 
 - 2026-09-05T10:31:18+00:00 approved (web)
 - 2026-09-05T11:22:54+00:00 dispatched work run 20260905T112245Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-182-the-tick-never-blocks-the-ui-actions-do-not-wait stacked on CG-182, ~4521 tokens)
+- 2026-09-05T11:43:28+00:00 parent CG-182 merged; will rebase onto main when the current run finishes
