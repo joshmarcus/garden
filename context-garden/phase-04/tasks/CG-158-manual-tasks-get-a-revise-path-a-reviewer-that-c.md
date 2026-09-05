@@ -2,7 +2,7 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,10 +12,12 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-158-manual-tasks-get-a-revise-path-a-reviewer-that-c
+harness: codex
 discovered_from: retro:context-garden/phase-02-friction
-last_dispatched_at: '2026-09-05T13:14:44+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T15:20:20+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T15:10:26+00:00'
+updated: '2026-09-05T15:20:20+00:00'
 ---
 
 ## Goal
@@ -45,3 +47,4 @@ From the phase-02 retro's open list (item 13), reconciled against what merged on
 Please commit your changes or stash them before you merge.
 Aborting
 - 2026-09-05T15:10:26+00:00 reset to ready by hand
+- 2026-09-05T15:20:20+00:00 dispatched work run 20260905T152020Z-work via local [codex] (fresh session, base main, ~4854 tokens)

@@ -2,7 +2,7 @@
 id: CG-201
 title: 'Notify and walkthrough hygiene: GARDEN_MESSAGE is quoted in the documented Slack example, and
   the walkthrough scrubs stderr and absolute paths before it is committed'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,10 +12,11 @@ priority: 3
 difficulty: easy
 reading: []
 branch: garden/cg-201-notify-and-walkthrough-hygiene-garden-message-is
+pr: https://github.com/joshmarcus/context-garden/pull/162
 attempts: 1
 last_dispatched_at: '2026-09-05T15:05:54+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:05:54+00:00'
+updated: '2026-09-05T15:19:44+00:00'
 ---
 
 ## Goal
@@ -43,3 +44,6 @@ From the phase-03 persona reviews of 2026-09-05 (security:low, security:low); fi
 - 2026-09-05T14:34:03+00:00 dispatched work run 20260905T143403Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4767 tokens)
 - 2026-09-05T14:37:34+00:00 reset to ready by hand
 - 2026-09-05T15:05:54+00:00 dispatched work run 20260905T150554Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4863 tokens)
+- 2026-09-05T15:11:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/162 (base main): Verified the existing commit on this branch fully implements CG-201: the Slack notify example now quotes GARDEN_MESSAGE via jq, doctor warns on unsafe splicing, and garden walkthrough redacts home paths and omits stderr unless --include-stderr is passed. Full test suite and lint pass with no further changes needed. cost=$0.25
+- 2026-09-05T15:15:47+00:00 automated review: approve — Both hygiene fixes are correctly implemented and tested: the Slack example now quotes GARDEN_MESSAGE via jq and doctor warns on unsafe splicing; walkthrough captures redact the home directory and omit stderr unless --include-stderr is passed. cost=$0.40
+- 2026-09-05T15:19:44+00:00 rebasing before merge; rebased onto main mechanically and force-pushed

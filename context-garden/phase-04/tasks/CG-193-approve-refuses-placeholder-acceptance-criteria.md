@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -14,9 +14,9 @@ branch: garden/cg-193-approve-refuses-placeholder-acceptance-criteria
 pr: https://github.com/joshmarcus/context-garden/pull/149
 discovered_from: retro:context-garden/phase-03
 attempts: 2
-last_dispatched_at: '2026-09-05T13:14:44+00:00'
+last_dispatched_at: '2026-09-05T15:10:35+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T15:10:16+00:00'
+updated: '2026-09-05T15:19:35+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,6 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T14:34:10+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-193`) or send it back (`garden triage CG-193 --changes "..."`)
 - 2026-09-05T15:10:01+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-05T15:10:16+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/inbox.py, src/garden/web/templates/inbox.html); a rebase agent will resolve it
+- 2026-09-05T15:10:35+00:00 dispatched rebase run 20260905T151035Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9673 tokens)
+- 2026-09-05T15:19:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/149: Rebased onto origin/main, resolving conflicts in src/garden/inbox.py, src/garden/web/templates/inbox.html, and tests/fake_claude.py (kept both sides in each). Full suite then surfaced 2 failures in tests/test_approve_phase.py (a CG-186 test file merged from main whose draft fixtures hit this branch's new brief_gaps() approve gate); fixed by applying this branch's own existing complete_brief() test helper to those two tests, in a separate commit. Full suite: 713 passed, 3 skipped; ruff clean. cost=$0.82
+- 2026-09-05T15:19:35+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-193` for one more round, or review on GitHub

@@ -2,7 +2,7 @@
 id: CG-200
 title: 'Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product
   PRs need a person or a second round'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/155
 attempts: 2
 last_dispatched_at: '2026-09-05T14:59:37+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:10:11+00:00'
+updated: '2026-09-05T15:17:08+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - 2026-09-05T14:33:48+00:00 re-enabled by hand; revise run will follow
 - 2026-09-05T14:59:37+00:00 dispatched revise run 20260905T145937Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5309 tokens)
 - 2026-09-05T15:10:11+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/155: Rebased the PR onto main (resolving conflicts in web/app.py and cli/diagnostics.py from the interim CG-185/serve-logging changes) and fixed a gap the rebase exposed: github.trusted_bots wasn't in config.RESTART_KEYS even though it's baked into the GitHub client at construction like its siblings, so the Config page would have wrongly called it live-reloadable. cost=$1.02
+- 2026-09-05T15:15:46+00:00 automated review: approve — Origin check, bot-trust opt-in, and self/tool two-round gate are all correctly implemented and thoroughly tested; verified tests (711 passed) and lint pass locally. cost=$0.46
+- 2026-09-05T15:17:08+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/trust.py, tests/test_web.py); a rebase agent will resolve it
