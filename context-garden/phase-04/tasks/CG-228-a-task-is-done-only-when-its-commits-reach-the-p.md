@@ -14,10 +14,11 @@ reading:
 - src/garden/graph.py
 - tests/scheduler/test_poll.py
 branch: garden/cg-228-a-task-is-done-only-when-its-commits-reach-the-p
+pr: https://github.com/joshmarcus/context-garden/pull/178
 attempts: 1
-last_dispatched_at: '2026-09-05T18:16:06+00:00'
+last_dispatched_at: '2026-09-05T18:47:53+00:00'
 created: '2026-09-05T18:14:53+00:00'
-updated: '2026-09-05T18:16:06+00:00'
+updated: '2026-09-05T18:47:53+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,6 @@ updated: '2026-09-05T18:16:06+00:00'
 
 - 2026-09-05T18:14:53+00:00 approved (web)
 - 2026-09-05T18:16:06+00:00 dispatched work run 20260905T181552Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16648 tokens)
+- 2026-09-05T18:41:58+00:00 opened https://github.com/joshmarcus/context-garden/pull/178 (base main): Added a merged_into_parent task status: the poll now checks a merged PR's base against the product's base branch, holds a stacked child there (with the parent named in state/log/task page) instead of marking it done, and promotes it to done via an ancestor check once the parent itself reaches the base. Wired the new status into the Board (in_review column, badge), garden status, graph/TUI/CLI colour maps, and the stuck-task audit, plus a full-loop test. cost=$7.32
+- 2026-09-05T18:47:36+00:00 automated review requested changes: The merged_into_parent status, gating, and surfaces are correctly wired, but the promotion-to-done check uses git ancestry, which cannot succeed once the parent's own merge to the base is a squash merge — the garden's own default automerge method — so affected children get stuck forever with no retry path; the new test only exercises fast-forward merges and misses this. cost=$0.82
+- 2026-09-05T18:47:53+00:00 dispatched revise run 20260905T184753Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~17313 tokens)

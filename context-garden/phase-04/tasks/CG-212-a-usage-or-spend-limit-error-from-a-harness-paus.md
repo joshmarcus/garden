@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-212-a-usage-or-spend-limit-error-from-a-harness-paus
 pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
-last_dispatched_at: '2026-09-05T18:19:23+00:00'
+last_dispatched_at: '2026-09-05T18:49:17+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T18:19:23+00:00'
+updated: '2026-09-05T18:49:17+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,7 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T17:52:02+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/harness.py); a rebase agent will resolve it
 - 2026-09-05T18:18:59+00:00 triage: changes requested by hand: Address the reviewer's blocking finding: trial contenders, automated reviews and persona/compare aux runs are not gated
 - 2026-09-05T18:19:23+00:00 dispatched rebase run 20260905T181923Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6931 tokens)
+- 2026-09-05T18:34:51+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased onto origin/main, resolving conflicts in src/garden/harness.py (merged the env_error docstring to cover both auth and quota kinds), tests/fake_claude.py (kept both this branch's `quota` SPECIAL entry and main's `kickoff` marker), and src/garden/scheduler/dispatch.py (reconciled this branch's early run-id reservation with CG-220's already-merged sync-to-origin-head logic, which needs the same run_id). Also fixed two non-textual breaks the merge left behind: src/garden/scheduler/review.py referenced an undefined `pending_triage` in the env_error path of `reap_review` because CG-198 had since moved that variable into a different method — restored it and the matching `review_run` clear inline; and this branch's own pre-dispatch stash (dispatch.py's `gitops.stash_dirty`, plus its test) was fully redundant with CG-198's `_stash_dirty_worktree`, already on main and running earlier in the same function, so removed the dead duplicate (function, call site, and its now-failing test). Full test suite (885 passed) and ruff both pass. cost=$1.97
+- 2026-09-05T18:34:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T18:34:54+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/inbox.py); a rebase agent will resolve it
+- 2026-09-05T18:49:17+00:00 dispatched rebase run 20260905T184917Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9388 tokens)

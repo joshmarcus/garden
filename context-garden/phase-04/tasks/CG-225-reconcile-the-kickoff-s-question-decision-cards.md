@@ -1,6 +1,7 @@
 ---
 id: CG-225
-title: Reconcile the kickoff's question-decision cards with CG-189 once it merges
+title: The retro's questions become decision cards through the kickoff's mechanism (re-doing CG-189, whose
+  implementation was dropped from CG-178 before merge)
 status: running
 product: context-garden
 phase: phase-04
@@ -17,23 +18,25 @@ reading:
 - src/garden/cli/planning.py
 branch: garden/cg-225-reconcile-the-kickoff-s-question-decision-cards
 discovered_from: CG-224
-attempts: 1
-last_dispatched_at: '2026-09-05T18:25:04+00:00'
+last_dispatched_at: '2026-09-05T18:50:17+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T18:25:04+00:00'
+updated: '2026-09-05T18:50:17+00:00'
 ---
 
 ## Goal
 
-CG-189 (on its own unmerged branch) builds a fuller retro-question mechanism (Inbox, retro page, CLI answer flow). CG-224 added a smaller, self-contained question-decision-card mechanism for kickoff questions since CG-189 wasn't merged. Once CG-189 lands, reconcile the two so there is one question/decision mechanism shared by the retro and the kickoff, not two.
+The retro's "questions for the human" reach the owner as decision cards and their answers land in the retro document and the next phase's goals, as CG-189 specified, built on the question-card mechanism CG-224 (phase kickoff) merged to main. There is one question/decision mechanism, shared by kickoff and retro.
 
 ## Context
 
-See src/garden/scheduler/kickoff.py's answer_kickoff_question/dismiss_kickoff_question and src/garden/web/actions/decisions.py.
+CG-189 was implemented on a branch stacked on CG-178 and its PR #150 was merged into CG-178's branch on 2026-09-05, which marked CG-189 `done`. During CG-178's later revise rounds commit a08b6b8 removed the CG-189 questions feature, and CG-178 merged to main without it. So main has no retro-question cards, CG-189's status is wrong (see CG-228 for the rule that fixes it), and this task's original wording, "reconcile the two mechanisms", sent two workers and two trial contenders to look for code that is not there. Both stopped correctly. CG-224's kickoff cards are on main (`garden decide --answer/--dismiss`, the Inbox card, the phase page panel); extend them rather than add a second path.
 
-## Provenance
+## Acceptance criteria
 
-Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that need design, goals without a definition of done, questions for the owner, and docs that need attention) during run `20260905T170505Z-work`.
+- [ ] The retro reconciliation's `questions` (CG-189's field) are filed as decision cards of the kickoff kind, one per question, with the retro as their source; the Inbox shows them and `garden decide` answers or dismisses them.
+- [ ] An answer is appended under `## Answers` in `docs/retro.md` and under `## Decisions` in the next phase's `goals.md` with who and when, and `garden plan` for the next phase includes them.
+- [ ] The retro page (CG-146) lists the questions with their answers; a question the retro marked blocking (CG-178's `reopen`) is answered before the verdict card can be accepted.
+- [ ] Tests with the fake harness: a retro with two questions, one answered on the web and one on the CLI.
 
 ## Log
 
@@ -52,3 +55,8 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 - 2026-09-05T18:25:03+00:00 dispatched trial run 20260905T182503Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~26164 tokens)
 - 2026-09-05T18:25:04+00:00 dispatched trial run 20260905T182504Z-trial via local [codex] (fresh session, base main, ~26198 tokens)
 - 2026-09-05T18:25:04+00:00 trial started with claude:claude-sonnet-5, codex
+- 2026-09-05T18:27:25+00:00 trial: no contender produced a PR
+- 2026-09-05T18:49:52+00:00 reset to ready by hand
+- 2026-09-05T18:50:17+00:00 dispatched trial run 20260905T185017Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~26557 tokens)
+- 2026-09-05T18:50:17+00:00 dispatched trial run 20260905T185017Z-trial-2 via local [codex] (fresh session, base main, ~26592 tokens)
+- 2026-09-05T18:50:17+00:00 trial started with claude:claude-sonnet-5, codex

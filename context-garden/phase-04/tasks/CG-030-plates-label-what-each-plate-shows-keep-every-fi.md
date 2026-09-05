@@ -1,7 +1,7 @@
 ---
 id: CG-030
 title: 'Plates: label what each plate shows, keep every file public domain, credit Thomé'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -13,11 +13,14 @@ difficulty: easy
 reading:
 - src/garden/web/static/plates/SOURCES.md
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
-branch: garden/cg-030-plates-label-what-each-plate-shows-keep-every-fi
+branch: garden/cg-030-plates-label-what-each-plate-shows-keep-every-fi-trial-claude-claude-sonnet-5
+pr: https://github.com/joshmarcus/context-garden/pull/177
 runner: manual
+harness: claude
+model: claude-sonnet-5
 last_dispatched_at: '2026-09-05T18:16:22+00:00'
 created: '2026-09-04T14:36:12+00:00'
-updated: '2026-09-05T18:16:22+00:00'
+updated: '2026-09-05T18:31:55+00:00'
 ---
 
 ## Goal
@@ -63,3 +66,4 @@ Everything involved lives in `PLANTS` (`src/garden/plants.py`), `CANDIDATES` and
 - 2026-09-05T18:16:22+00:00 dispatched trial run 20260905T181622Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~7410 tokens)
 - 2026-09-05T18:16:22+00:00 dispatched trial run 20260905T181622Z-trial-2 via local [codex] (fresh session, base main, ~7444 tokens)
 - 2026-09-05T18:16:22+00:00 trial started with claude:claude-sonnet-5, codex
+- 2026-09-05T18:31:55+00:00 trial won by claude:claude-sonnet-5 (scores: claude:claude-sonnet-5=–, codex=–): https://github.com/joshmarcus/context-garden/pull/177
