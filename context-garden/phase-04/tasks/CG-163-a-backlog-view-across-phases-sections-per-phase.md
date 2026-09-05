@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-163-a-backlog-view-across-phases-sections-per-phase
 pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
-last_dispatched_at: '2026-09-05T14:59:48+00:00'
+last_dispatched_at: '2026-09-05T15:31:00+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T15:18:21+00:00'
+updated: '2026-09-05T15:31:00+00:00'
 ---
 
 ## Goal
@@ -65,3 +65,7 @@ Design:
 - 2026-09-05T15:10:27+00:00 no-change accepted by the person (accepted by the operator: the earlier attempt's commits complete the task; push the branch and open the PR); resuming the round without a new work run
 - 2026-09-05T15:13:01+00:00 opened https://github.com/joshmarcus/context-garden/pull/163 (base main): Reviewed the three existing commits on this branch against every acceptance criterion; the backlog view, order/move drag-and-drop, order frontmatter field, dispatch_sort_key and Scheduler.reorder are already fully implemented and tested. Full suite (704 passed, 3 skipped) and ruff are clean, so no changes were needed.
 - 2026-09-05T15:18:21+00:00 automated review requested changes: The backlog view, order/move actions and tests all work and the suite/ruff are clean, but Scheduler.reorder rewrites the order field of every non-terminal task in the whole phase section on each drag instead of only the moved row and colliding neighbours, contradicting the task's own design and polluting unrelated task files on every drop. cost=$0.64
+- 2026-09-05T15:21:23+00:00 dispatched revise run 20260905T152123Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~16739 tokens)
+- 2026-09-05T15:30:38+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Fixed Scheduler.reorder to renumber order only within the destination priority band (the moved row plus colliding band-mates), instead of the entire phase section; added a regression test proving unrelated-band tasks are left untouched. cost=$0.87
+- 2026-09-05T15:30:42+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/common.py); a rebase agent will resolve it
+- 2026-09-05T15:31:00+00:00 dispatched rebase run 20260905T153100Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~5021 tokens)

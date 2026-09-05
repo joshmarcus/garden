@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/164
 attempts: 1
 last_dispatched_at: '2026-09-05T15:07:31+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T15:17:05+00:00'
+updated: '2026-09-05T15:32:01+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,6 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - 2026-09-05T14:34:42+00:00 reset to ready by hand
 - 2026-09-05T15:07:31+00:00 dispatched work run 20260905T150731Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5032 tokens)
 - 2026-09-05T15:17:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/164 (base main): Verified the four prior commits on this branch fully satisfy CG-204: a shared GitHubLike protocol with a cross-fake test, a real LocalRunner.launch end-to-end test, event-based assertions replacing log-prose checks in test_automerge/test_rebase, and a _TaskState.get override that snapshots mutable values like __getitem__. No further changes were needed. cost=$0.45
+- 2026-09-05T15:22:24+00:00 automated review: approve — All four test-debt items are implemented as described and verified: shared GitHubLike protocol with cross-fake tests, a real LocalRunner.launch end-to-end test, event-based assertions replacing log prose, and _TaskState.get snapshotting. Full suite (711 passed, 3 skipped) and ruff are clean. cost=$0.32
+- 2026-09-05T15:23:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T15:32:01+00:00 automated review: approve — All four test-debt items are implemented correctly and covered by passing tests (737 passed, 3 skipped; ruff clean); no correctness issues found and the diff stays tightly scoped to the task. cost=$0.51

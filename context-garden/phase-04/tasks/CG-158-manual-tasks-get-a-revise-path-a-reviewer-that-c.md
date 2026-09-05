@@ -2,7 +2,7 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: running
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,12 +12,10 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-158-manual-tasks-get-a-revise-path-a-reviewer-that-c
-harness: codex
 discovered_from: retro:context-garden/phase-02-friction
-attempts: 1
 last_dispatched_at: '2026-09-05T15:20:20+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T15:20:20+00:00'
+updated: '2026-09-05T15:31:55+00:00'
 ---
 
 ## Goal
@@ -48,3 +46,10 @@ Please commit your changes or stash them before you merge.
 Aborting
 - 2026-09-05T15:10:26+00:00 reset to ready by hand
 - 2026-09-05T15:20:20+00:00 dispatched work run 20260905T152020Z-work via local [codex] (fresh session, base main, ~4854 tokens)
+- 2026-09-05T15:25:05+00:00 attempt 1 failed: worker exited 1: {'message': "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 3:35 PM."}; will retry
+- 2026-09-05T15:25:21+00:00 dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-158): error: Your local changes to the following files would be overwritten by merge:
+	src/garden/cli/loop.py
+	tests/test_cli.py
+Please commit your changes or stash them before you merge.
+Aborting
+- 2026-09-05T15:31:55+00:00 reset to ready by hand
