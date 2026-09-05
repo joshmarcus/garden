@@ -80,7 +80,9 @@ ssh:
   # options: ["-o", "BatchMode=yes"]
 
 github:
-  bot_logins: ["chatgpt-codex-connector[bot]"]   # temporary: Codex is at its review usage limit and posts only notices (CG-118 filters those properly); remove when the limit resets
+  automerge: true           # 2026-09-05: the person delegated merging; the scheduler merges once every gate is green
+  automerge_method: merge   # merge commits, matching the repo history
+  bot_logins: []            # every bot counts; notices are filtered by bot_notice_patterns (CG-118)
   use_gh: true              # prefer the gh CLI; falls back to REST with GITHUB_TOKEN
   draft_pr: false           # PRs open ready for review; set true to open drafts that wait for triage on the Inbox
   reviewers: []
