@@ -9,7 +9,12 @@ depends_on:
 - CG-162
 priority: 2
 difficulty: medium
-reading: []
+reading:
+- src/garden/web/pages/board.py
+- src/garden/web/templates/board.html
+- src/garden/web/actions/tasks.py
+- src/garden/graph.py
+- src/garden/scheduler/dispatch.py
 created: '2026-09-05T03:58:24+00:00'
 updated: '2026-09-05T03:58:24+00:00'
 ---
