@@ -12,9 +12,9 @@ difficulty: medium
 reading: []
 branch: garden/cg-196-rebase-runs-the-new-event-kinds-and-the-merge-qu
 discovered_from: retro:context-garden/phase-03
-last_dispatched_at: '2026-09-05T13:18:09+00:00'
+last_dispatched_at: '2026-09-05T14:34:02+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T14:33:48+00:00'
+updated: '2026-09-05T14:34:42+00:00'
 ---
 
 ## Goal
@@ -37,3 +37,5 @@ Proposed at the context-garden/phase-03 retro. The queue and rebase mode are the
 - 2026-09-05T13:18:09+00:00 dispatched work run 20260905T131809Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4469 tokens)
 - 2026-09-05T13:19:15+00:00 attempt 2 failed: worker exited 1: worker error: success You've hit your monthly spend limit · raise it at claude.ai/settings/usage?from=cc_cli_limit_message · your session limit resets 10:30am (America/New_York); giving up
 - 2026-09-05T14:33:48+00:00 reset to ready by hand
+- 2026-09-05T14:34:02+00:00 dispatched work run 20260905T143402Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4754 tokens)
+- 2026-09-05T14:34:42+00:00 reset to ready by hand

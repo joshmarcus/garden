@@ -2,7 +2,7 @@
 id: CG-210
 title: 'The pre-merge rebase keeps the verdict when the PR''s own patch is unchanged: compare git patch-ids,
   not diff hashes, so a rebase onto a moved main never forces a re-review'
-status: ready
+status: failed
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,7 +16,7 @@ reading:
 branch: garden/cg-210-the-pre-merge-rebase-keeps-the-verdict-when-the
 last_dispatched_at: '2026-09-05T13:02:47+00:00'
 created: '2026-09-05T13:02:16+00:00'
-updated: '2026-09-05T14:33:49+00:00'
+updated: '2026-09-05T14:34:00+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,9 @@ Phase 04, 2026-09-05 12:39 to 12:58: with twelve approved, green PRs queued, eve
 Please commit your changes or stash them before you merge.
 Aborting
 - 2026-09-05T14:33:49+00:00 reset to ready by hand
+- 2026-09-05T14:34:00+00:00 dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-210): error: Your local changes to the following files would be overwritten by merge:
+	docs/architecture.md
+	src/garden/scheduler/checkruns.py
+	tests/test_rebase.py
+Please commit your changes or stash them before you merge.
+Aborting
