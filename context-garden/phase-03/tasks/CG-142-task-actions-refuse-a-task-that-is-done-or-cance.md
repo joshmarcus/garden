@@ -1,10 +1,11 @@
 ---
 id: CG-142
 title: Task actions refuse a task that is done or cancelled
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 2
 difficulty: easy
 reading:
@@ -12,7 +13,7 @@ reading:
 - src/garden/scheduler.py
 - src/garden/cli.py
 created: '2026-09-05T02:18:30+00:00'
-updated: '2026-09-05T03:05:54+00:00'
+updated: '2026-09-05T03:19:58+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,4 @@ Found on the first live run. Automerge merged #71 at 02:17:55; three seconds lat
 - 2026-09-05T02:19:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
 - 2026-09-05T03:01:24+00:00 approved (web)
 - 2026-09-05T03:05:54+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+- 2026-09-05T03:19:58+00:00 approved (web)

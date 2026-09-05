@@ -2,16 +2,17 @@
 id: CG-149
 title: Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief
   cost is measured per phase
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 2
 difficulty: medium
 reading: []
-created: '2026-09-05T03:14:36+00:00'
-updated: '2026-09-05T03:14:36+00:00'
 discovered_from: retro:context-garden/phase-02-friction
+created: '2026-09-05T03:14:36+00:00'
+updated: '2026-09-05T03:19:59+00:00'
 ---
 
 ## Goal
@@ -28,3 +29,4 @@ From the phase-02 retro's open list (item 1), reconciled against what merged on 
 
 ## Log
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 1)
+- 2026-09-05T03:19:59+00:00 approved (web)

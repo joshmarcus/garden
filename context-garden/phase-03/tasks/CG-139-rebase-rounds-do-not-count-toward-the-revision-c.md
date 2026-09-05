@@ -1,17 +1,18 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 2
 difficulty: easy
 reading:
 - src/garden/scheduler.py
 - tests/test_scheduler.py
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T03:05:55+00:00'
+updated: '2026-09-05T03:19:58+00:00'
 ---
 
 ## Goal
@@ -37,3 +38,4 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T01:20:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03; cleared by hand when it happens
 - 2026-09-05T03:01:20+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+- 2026-09-05T03:19:58+00:00 approved (web)

@@ -1,10 +1,11 @@
 ---
 id: CG-134
 title: 'garden walkthrough: render the live web app''s pages for the retro and the persona reviews'
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 2
 difficulty: medium
 reading:
@@ -12,7 +13,7 @@ reading:
 - src/garden/web/app.py
 - personas/designer.md
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:05:55+00:00'
+updated: '2026-09-05T03:19:57+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,4 @@ Asked at the freeze of the first live run. Persona reviews read code, PR bodies 
 - 2026-09-05T00:40:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03; done by hand for this retro
 - 2026-09-05T03:01:10+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+- 2026-09-05T03:19:57+00:00 approved (web)

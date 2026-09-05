@@ -1,10 +1,11 @@
 ---
 id: CG-135
 title: 'garden qa: an agent drives the loop end to end through the web app on a throwaway garden'
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 2
 difficulty: hard
 reading:
@@ -12,7 +13,7 @@ reading:
 - tests/fake_claude.py
 - tests/conftest.py
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:05:55+00:00'
+updated: '2026-09-05T03:19:57+00:00'
 ---
 
 ## Goal
@@ -35,3 +36,4 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 - 2026-09-05T00:40:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
 - 2026-09-05T03:01:13+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
+- 2026-09-05T03:19:57+00:00 approved (web)

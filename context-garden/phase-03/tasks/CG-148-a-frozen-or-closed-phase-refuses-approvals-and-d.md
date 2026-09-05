@@ -1,10 +1,11 @@
 ---
 id: CG-148
 title: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 1
 difficulty: easy
 reading:
@@ -13,7 +14,7 @@ reading:
 - src/garden/model.py
 - src/garden/cli.py
 created: '2026-09-05T03:07:37+00:00'
-updated: '2026-09-05T03:07:37+00:00'
+updated: '2026-09-05T03:19:59+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,4 @@ Found at the phase-02 close on the first live run. The freeze was a paragraph in
 
 - 2026-09-05T03:15:00+00:00 moved to phase-03 at the phase-02 close (deferred by the freeze)
 - 2026-09-05T03:08:00+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
+- 2026-09-05T03:19:59+00:00 approved (web)

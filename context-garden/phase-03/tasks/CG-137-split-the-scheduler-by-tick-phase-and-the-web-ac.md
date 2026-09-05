@@ -1,7 +1,7 @@
 ---
 id: CG-137
 title: Split the scheduler by tick phase and the web actions into a registry so features stop colliding
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -17,7 +17,7 @@ branch: garden/cg-137-split-the-scheduler-by-tick-phase-and-the-web-ac
 attempts: 1
 last_dispatched_at: '2026-09-05T03:01:55+00:00'
 created: '2026-09-05T00:47:36+00:00'
-updated: '2026-09-05T03:17:38+00:00'
+updated: '2026-09-05T03:19:57+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,4 @@ Measured at the end of the first live run. Of 22 conflict events after 20:00, fo
 - 2026-09-05T03:01:55+00:00 dispatched work run 20260905T030145Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~14688 tokens)
 - 2026-09-05T03:05:28+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
 - 2026-09-05T03:17:38+00:00 priority 1 -> 0
+- 2026-09-05T03:19:57+00:00 approved (web)
