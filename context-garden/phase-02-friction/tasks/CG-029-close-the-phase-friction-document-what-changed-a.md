@@ -35,7 +35,7 @@ Closing the phase itself is `garden close-phase context-garden/phase-02-friction
 
 ## Process (added at the freeze, 2026-09-05)
 
-Run the retro as one process, by hand if `garden retro` (CG-133) has not landed: (1) `garden friction context-garden/phase-02-friction` to harvest the Friction sections from every PR body; (2) `garden persona-review context-garden/phase-02-friction -p designer -p project-manager -p staff-engineer -p usability-expert -p user -p security`; (3) reconcile every harvested friction item against what merged: still true, fixed by which task, outdated, or wrong, with the evidence; (4) write the friction document from the reconciled table and the persona reports, then the next phase's goals; (5) `garden close-phase`. The output is a PR to the garden repo.
+Run the retro as one process (`garden retro`, CG-133, is on main): (0) the operator's retro first, written by the agent that watched the loop all evening, as `docs/retro-operator.md`: what the process did well, every hand intervention with its cause and cost, and what to change, with the phase's numbers; independent of the personas, so write it before they run; (1) `garden friction context-garden/phase-02-friction` to harvest the Friction sections from every PR body; (2) `garden persona-review context-garden/phase-02-friction -p designer -p project-manager -p staff-engineer -p usability-expert -p user -p security`; (3) reconcile every harvested friction item against what merged: still true, fixed by which task, outdated, or wrong, with the evidence; (4) write the friction document from the reconciled table and the persona reports, then the next phase's goals; (5) `garden close-phase`. The output is a PR to the garden repo.
 
 
 ## Acceptance criteria

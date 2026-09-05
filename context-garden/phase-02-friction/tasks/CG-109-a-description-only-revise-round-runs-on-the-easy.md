@@ -1,7 +1,7 @@
 ---
 id: CG-109
 title: A description-only revise round runs on the easy tier
-status: running
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/80
 attempts: 1
 last_dispatched_at: '2026-09-05T01:16:55+00:00'
 created: '2026-09-04T21:23:07+00:00'
-updated: '2026-09-05T01:16:55+00:00'
+updated: '2026-09-05T01:24:35+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,7 @@ Found on the first live run. CG-081's review (PR #48) said the code was correct 
 - 2026-09-05T01:16:29+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/80: Rebased the branch onto origin/main, resolving the conflict in src/garden/scheduler.py by keeping main's refactored _handle_failed_checks/_start_check_revise split and adding the pending_feedback_easy reset to the new single call site. Tests (380 passed, 3 skipped) and ruff both pass. cost=$1.16
 - 2026-09-05T01:16:49+00:00 PR conflicts with main (tests/fake_claude.py, tests/test_review.py); revise run will rebase and resolve
 - 2026-09-05T01:16:55+00:00 dispatched revise run 20260905T011654Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8514 tokens)
+- 2026-09-05T01:22:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/80: Rebased the branch onto origin/main, resolving conflicts in src/garden/scheduler.py (import block only — logic auto-merged cleanly), tests/fake_claude.py (kept both review-desc and the newer review-rewrite modes), and tests/test_review.py (kept both this task's and CG-136's tests). Full suite (401 passed, 3 skipped) and ruff pass. cost=$2.43
+- 2026-09-05T01:22:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-109` for one more round, or review on GitHub
+- 2026-09-05T01:23:19+00:00 automated review: approve — Meets all three acceptance criteria with passing fake-harness tests for both paths; the easy-tier routing is correct and pending_feedback_easy cannot leak into an unrelated round. Diff and description are clean. cost=$1.24
+- 2026-09-05T01:24:35+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/80

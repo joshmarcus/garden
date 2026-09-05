@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-079-suggest-a-change-to-a-task-from-its-page-and-hav
 pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
-last_dispatched_at: '2026-09-05T00:30:22+00:00'
+last_dispatched_at: '2026-09-05T01:22:18+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T01:19:30+00:00'
+updated: '2026-09-05T01:26:38+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,7 @@ Design:
 - 2026-09-05T01:19:07+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
 - 2026-09-05T01:19:30+00:00 revision counter reset (web)
 - 2026-09-05T01:19:30+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T01:22:18+00:00 dispatched revise run 20260905T012217Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14641 tokens)
+- 2026-09-05T01:26:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Rebased the suggestions branch onto current main, resolving the tests/fake_claude.py conflict by keeping both the retro (main) and edit (this branch) harness modes. Full suite (411 passed) and ruff pass; the branch diff is only the suggestions feature. cost=$1.05
+- 2026-09-05T01:26:35+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub
+- 2026-09-05T01:26:38+00:00 PR conflicts with main (src/garden/scheduler.py); revise run will rebase and resolve
