@@ -1,7 +1,7 @@
 ---
 id: CG-142
 title: Task actions refuse a task that is done or cancelled
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/112
 attempts: 1
 last_dispatched_at: '2026-09-05T04:40:56+00:00'
 created: '2026-09-05T02:18:30+00:00'
-updated: '2026-09-05T04:40:56+00:00'
+updated: '2026-09-05T04:49:15+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Found on the first live run. Automerge merged #71 at 02:17:55; three seconds lat
 - 2026-09-05T04:39:58+00:00 opened https://github.com/joshmarcus/context-garden/pull/112 (base main): Added a shared ensure_open() guard so every task action (web, CLI, and the scheduler's own automated review/persona dispatch) refuses a done or cancelled task with a message naming the state and what happened; set-status now requires --force to leave those states. cost=$6.27
 - 2026-09-05T04:40:48+00:00 PR conflicts with main (src/garden/scheduler/dispatch.py, src/garden/scheduler/human.py); revise run will rebase and resolve
 - 2026-09-05T04:40:56+00:00 dispatched revise run 20260905T044056Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5260 tokens)
+- 2026-09-05T04:45:57+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/112: Rebased CG-142 onto main, resolving conflicts in scheduler/dispatch.py, scheduler/human.py, and web/actions/tasks.py by keeping both this branch's ensure_open guard and main's phase_refusal guard; all tests (515 passed, 3 skipped) and ruff pass. cost=$0.89
+- 2026-09-05T04:49:15+00:00 automated review: approve — Clean, well-tested implementation: a shared ensure_open() guard refuses done/cancelled tasks across every scheduler entry point, the web dispatcher, and the CLI, with set-status --force as the sanctioned escape hatch. Both acceptance criteria are met and covered by tests; full suite and ruff pass. cost=$0.92

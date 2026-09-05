@@ -2,7 +2,7 @@
 id: CG-173
 title: Merging a stack parent retargets its children before the branch is deleted, and a child never opens
   a PR against a deleted branch
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -15,10 +15,11 @@ reading:
 - src/garden/github.py
 - tests/scheduler/test_poll.py
 branch: garden/cg-173-merging-a-stack-parent-retargets-its-children-be
+pr: https://github.com/joshmarcus/context-garden/pull/115
 attempts: 1
 last_dispatched_at: '2026-09-05T04:33:29+00:00'
 created: '2026-09-05T04:31:41+00:00'
-updated: '2026-09-05T04:33:29+00:00'
+updated: '2026-09-05T04:47:31+00:00'
 ---
 
 ## Goal
@@ -44,3 +45,4 @@ In the same minute CG-141 (#102) merged the same way while CG-170, stacked on it
 
 - 2026-09-05T04:31:41+00:00 approved (web)
 - 2026-09-05T04:33:29+00:00 dispatched work run 20260905T043320Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8335 tokens)
+- 2026-09-05T04:47:31+00:00 opened https://github.com/joshmarcus/context-garden/pull/115 (base main): A merging stack parent now retargets its open stacked-child PRs to the final base before its branch is deleted; a child whose parent is already terminal at run finish opens its PR against the final base and rebases onto it; and a child PR GitHub closed because its base branch was deleted is reopened (or recreated) onto the final base instead of failing the task. cost=$5.04

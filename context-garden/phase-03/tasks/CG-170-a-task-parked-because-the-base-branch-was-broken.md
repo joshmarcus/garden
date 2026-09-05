@@ -2,7 +2,7 @@
 id: CG-170
 title: A task parked because the base branch was broken re-probes the base every tick and continues by
   itself when it goes green
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/113
 attempts: 1
 last_dispatched_at: '2026-09-05T04:24:49+00:00'
 created: '2026-09-05T04:20:21+00:00'
-updated: '2026-09-05T04:40:47+00:00'
+updated: '2026-09-05T04:47:41+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ The same applies to the CI path: a PR whose CI failed on the merge commit becaus
 - 2026-09-05T04:29:02+00:00 parent CG-141 merged; will rebase onto main when the current run finishes
 - 2026-09-05T04:40:42+00:00 opened https://github.com/joshmarcus/context-garden/pull/113 (base garden/cg-141-rebase-is-its-own-mode-mechanical-first-an-agent): A task parked with the base_broken stop now re-probes its base each tick and, once the base branch goes green, rebases the branch mechanically (no worker), force-pushes so stale CI re-runs, re-runs the pre-PR checks and opens/updates the PR — all on its own. A rebase that doesn't apply or checks that still fail fall through to the normal revise path. cost=$6.40
 - 2026-09-05T04:40:47+00:00 parent CG-141 merged; rebased onto main and retargeted the PR
+- 2026-09-05T04:43:51+00:00 automated review: approve — Correctly makes a base_broken task re-probe its base each tick and continue on its own once green — mechanical rebase, re-check, PR open/update, no worker — falling through to revise only on conflict or a still-red base. All acceptance criteria met and tested; full suite and lint pass. cost=$1.17
+- 2026-09-05T04:47:41+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/113
