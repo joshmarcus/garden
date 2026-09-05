@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
 last_dispatched_at: '2026-09-05T01:44:37+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T01:48:02+00:00'
+updated: '2026-09-05T02:05:03+00:00'
 ---
 
 ## Goal
@@ -73,3 +73,5 @@ Design:
 - 2026-09-05T01:44:37+00:00 dispatched revise run 20260905T014436Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~15296 tokens)
 - 2026-09-05T01:48:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Rebased the suggestions branch onto current origin/main, resolving the src/garden/scheduler.py conflict by keeping both the CG-109 revise_easy flag and this branch's pending-suggestions revise-brief block. Full suite (420 passed) and ruff pass; the branch diff is only the suggestions feature. cost=$0.72
 - 2026-09-05T01:48:02+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub
+- 2026-09-05T01:54:38+00:00 PR conflicts with main (tests/test_coordination.py); revise run will rebase and resolve
+- 2026-09-05T02:05:03+00:00 re-enabled by hand; revise run will follow

@@ -1,7 +1,7 @@
 ---
 id: CG-083
 title: 'A reap is atomic: a restart mid-tick never loses a finished run'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,9 +13,9 @@ reading:
 branch: garden/cg-083-a-reap-is-atomic-a-restart-mid-tick-never-loses
 pr: https://github.com/joshmarcus/context-garden/pull/81
 attempts: 2
-last_dispatched_at: '2026-09-05T00:36:03+00:00'
+last_dispatched_at: '2026-09-05T01:54:41+00:00'
 created: '2026-09-04T19:25:01+00:00'
-updated: '2026-09-05T01:53:36+00:00'
+updated: '2026-09-05T01:58:59+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,7 @@ At 19:23 UTC during the first live run, `garden serve` was restarted while a tic
 - 2026-09-05T01:42:48+00:00 triage: marked ready for review
 - 2026-09-05T01:45:50+00:00 automated review: approve — Atomic-reap resume is correctly implemented: an interrupted reap (terminal run + finished_at + RUNNING task) is finalized idempotently on the next tick instead of redispatching, and `garden runs` labels it distinctly. All three acceptance criteria are met with direct tests; full suite (367 passed) and ruff pass. cost=$0.64
 - 2026-09-05T01:53:36+00:00 re-enabled by hand; revise run will follow
+- 2026-09-05T01:54:41+00:00 dispatched revise run 20260905T015441Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6590 tokens)
+- 2026-09-05T01:57:46+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/81: Revision round addressed the sole review comment (PR description read as rebase narration) by rewriting pr_body to stand on its own; no code changes were needed since all three acceptance criteria were already met and verified (367 passed, ruff clean). cost=$0.68
+- 2026-09-05T01:57:46+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-083` for one more round, or review on GitHub
+- 2026-09-05T01:58:59+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/81

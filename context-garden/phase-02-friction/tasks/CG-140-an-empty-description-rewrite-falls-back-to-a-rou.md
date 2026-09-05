@@ -2,7 +2,7 @@
 id: CG-140
 title: An empty description rewrite falls back to a round; pending feedback never sits on an in_review
   task
-status: ready
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,8 +12,12 @@ reading:
 - src/garden/scheduler.py
 - src/garden/review.py
 - tests/test_review.py
+branch: garden/cg-140-an-empty-description-rewrite-falls-back-to-a-rou
+pr: https://github.com/joshmarcus/context-garden/pull/95
+attempts: 1
+last_dispatched_at: '2026-09-05T01:54:50+00:00'
 created: '2026-09-05T01:53:36+00:00'
-updated: '2026-09-05T01:53:36+00:00'
+updated: '2026-09-05T02:04:14+00:00'
 ---
 
 ## Goal
@@ -28,3 +32,8 @@ Found on the first live run half an hour after CG-136 (#93) went live. CG-083 (#
 
 - [ ] an approve verdict with `description_ok: false` and a rewrite applies the rewrite and stores no pending feedback; with an empty rewrite it dispatches a description round; tests for both with the fake harness.
 - [ ] no code path stores `pending_feedback` without transitioning to `changes_requested`; the tick audit flags the state if it ever appears.
+
+## Log
+
+- 2026-09-05T01:54:50+00:00 dispatched work run 20260905T015441Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5347 tokens)
+- 2026-09-05T02:04:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/95 (base main): reap_review now applies the reviewer's description_rewrite (or dispatches an easy-tier description-only revise round when it's empty) on an approve verdict with description_ok false, not just on request_changes; the tick audit flags an in_review task that ends up carrying pending_feedback anyway. cost=$3.46

@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/76
 attempts: 1
 last_dispatched_at: '2026-09-05T01:46:00+00:00'
 created: '2026-09-04T21:02:13+00:00'
-updated: '2026-09-05T01:49:03+00:00'
+updated: '2026-09-05T02:05:02+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,4 @@ Asked during the first live run. CG-035 added the "Retrying" group so a first fa
 - 2026-09-05T01:46:00+00:00 dispatched revise run 20260905T014559Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~11362 tokens)
 - 2026-09-05T01:49:03+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/76: Rebased CG-096 onto main, resolving the single conflict in src/garden/web/app.py by keeping both main's PRIORITY_SCALE/priority_label import and this branch's decisions import; full test suite and lint pass. cost=$0.79
 - 2026-09-05T01:49:03+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-096` for one more round, or review on GitHub
+- 2026-09-05T02:05:02+00:00 triage: marked ready for review
