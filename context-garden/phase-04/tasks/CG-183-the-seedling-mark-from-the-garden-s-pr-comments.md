@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/141
 attempts: 1
 last_dispatched_at: '2026-09-05T12:15:39+00:00'
 created: '2026-09-05T10:03:57+00:00'
-updated: '2026-09-05T12:23:56+00:00'
+updated: '2026-09-05T12:47:32+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Asked by the user on 2026-09-05: "can we get the little context-garden icon we p
 - 2026-09-05T12:15:39+00:00 dispatched work run 20260905T121530Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~11358 tokens)
 - 2026-09-05T12:22:23+00:00 opened https://github.com/joshmarcus/context-garden/pull/141 (base main): Added a seedling mark (the sprout growth-stage glyph) to the left of the web header's wordmark and serve the same drawing as the favicon at /favicon.svg, with a test covering both. cost=$1.10
 - 2026-09-05T12:23:56+00:00 automated review: approve — The seedling mark sits left of the wordmark and serves as the /favicon.svg, drawn from one shared _SPROUT_PATHS source; all four acceptance criteria are met with a covering test, and tests and lint pass. cost=$0.58
+- 2026-09-05T12:43:37+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:47:32+00:00 automated review: approve — Reuses the sprout glyph via a shared _SPROUT_PATHS source for a header mark and the /favicon.svg favicon; all four acceptance criteria are met with a covering test, and web tests plus lint pass. cost=$0.58

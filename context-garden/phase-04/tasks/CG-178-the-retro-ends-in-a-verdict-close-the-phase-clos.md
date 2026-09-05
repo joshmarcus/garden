@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 1
 last_dispatched_at: '2026-09-05T12:28:29+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T12:35:20+00:00'
+updated: '2026-09-05T12:41:44+00:00'
 ---
 
 ## Goal
@@ -68,3 +68,5 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T12:28:29+00:00 dispatched revise run 20260905T122829Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~23345 tokens)
 - 2026-09-05T12:32:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Removed the duplicated "worker_env" dictionary key in the _live_garden config helper in tests/test_retro.py that failed the pre-PR lint check (ruff F601). Lint and the full test suite (619 passed, 3 skipped) now pass. cost=$0.67
 - 2026-09-05T12:35:20+00:00 description rewritten by the reviewer cost=$1.30
+- 2026-09-05T12:39:28+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:41:44+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub

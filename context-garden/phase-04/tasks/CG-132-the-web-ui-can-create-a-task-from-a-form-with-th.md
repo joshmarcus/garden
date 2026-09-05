@@ -19,7 +19,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/133
 attempts: 2
 last_dispatched_at: '2026-09-05T12:28:28+00:00'
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T12:33:40+00:00'
+updated: '2026-09-05T12:39:11+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,4 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 - 2026-09-05T12:28:28+00:00 dispatched revise run 20260905T122828Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~15201 tokens)
 - 2026-09-05T12:33:40+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/133: Fixed the CI flake in test_new_task_matches_cli_new_task_for_the_same_inputs by also freezing garden.model.now_iso, since Store.save()'s Task.touch() stamps `updated` via that separate binding rather than the store module's now_iso the test was already patching. cost=$0.55
 - 2026-09-05T12:33:40+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-132` for one more round, or review on GitHub
+- 2026-09-05T12:39:11+00:00 automated review: approve — Adds a New task form to the phase page plus a rail link, validating like garden validate and producing byte-identical output to garden new-task; all three acceptance criteria are met and tested, ruff and the relevant tests pass. cost=$1.02

@@ -2,7 +2,7 @@
 id: CG-198
 title: A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch
   onto a dirty worktree stashes and continues
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-198-a-restart-reaps-finished-but-unreaped-runs-of-ev
+attempts: 1
+last_dispatched_at: '2026-09-05T12:48:16+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:31:18+00:00'
+updated: '2026-09-05T12:48:16+00:00'
 ---
 
 ## Goal
@@ -32,3 +35,4 @@ From the phase-03 persona reviews of 2026-09-05 (product-manager:medium, user:lo
 ## Log
 
 - 2026-09-05T10:31:18+00:00 approved (web)
+- 2026-09-05T12:48:16+00:00 dispatched work run 20260905T124807Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4500 tokens)

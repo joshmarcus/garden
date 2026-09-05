@@ -17,7 +17,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T12:01:53+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T12:36:51+00:00'
+updated: '2026-09-05T12:39:11+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ From the phase-02 retro's open list (item 10), reconciled against what merged on
 - 2026-09-05T12:29:41+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T12:35:18+00:00 automated review: approve — Delivers the derived CG-156 criteria — one retry label across CLI/web/TUI, ten help panels, --version matching the subcommand, and an 80-column status table with a wont_do column — plus the intentional unpause/resume split, all tested and green. No blocking issues. cost=$0.84
 - 2026-09-05T12:36:51+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T12:39:11+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-156` for one more round, or review on GitHub

@@ -2,7 +2,7 @@
 id: CG-194
 title: Workers get no HOME, retry_command comes only from config, and the fence hash-checks garden.yaml
   and state.json
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,9 +11,12 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-194-workers-get-no-home-retry-command-comes-only-fro
 discovered_from: retro:context-garden/phase-03
+attempts: 1
+last_dispatched_at: '2026-09-05T12:42:19+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:31:17+00:00'
+updated: '2026-09-05T12:42:19+00:00'
 ---
 
 ## Goal
@@ -31,3 +34,4 @@ Proposed at the context-garden/phase-03 retro. Phase 03 claimed trust at the edg
 ## Log
 
 - 2026-09-05T10:31:17+00:00 approved (web)
+- 2026-09-05T12:42:19+00:00 dispatched work run 20260905T124209Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4384 tokens)

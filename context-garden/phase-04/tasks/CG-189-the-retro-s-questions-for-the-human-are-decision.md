@@ -2,7 +2,7 @@
 id: CG-189
 title: 'The retro''s questions for the human are decision cards: answer each in the UI, the answers land
   in the retro document and the next phase''s goals, and the planner reads them'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -19,10 +19,11 @@ reading:
 - src/garden/web/actions/decisions.py
 - context-garden/phase-03/docs/reviews/product-manager-vision-2026-09-05.md
 branch: garden/cg-189-the-retro-s-questions-for-the-human-are-decision
+pr: https://github.com/joshmarcus/context-garden/pull/150
 attempts: 1
 last_dispatched_at: '2026-09-05T12:32:36+00:00'
 created: '2026-09-05T10:23:11+00:00'
-updated: '2026-09-05T12:32:36+00:00'
+updated: '2026-09-05T12:49:38+00:00'
 ---
 
 ## Goal
@@ -51,3 +52,5 @@ Asked by the user on 2026-09-05 after reading the product manager's phase-03 rep
 
 - 2026-09-05T10:31:16+00:00 approved (web)
 - 2026-09-05T12:32:36+00:00 dispatched work run 20260905T123227Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos stacked on CG-178, ~22281 tokens)
+- 2026-09-05T12:49:27+00:00 opened https://github.com/joshmarcus/context-garden/pull/150 (base garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos): The retro's questions to the owner are now decision cards: each is filed in state on reap, shown on the Inbox and retro page, and answered via the web, the retro page or `garden retro-answer`. An answer lands under `## Answers` in the retro document and `## Decisions` in the next phase's goals, emits a `retro_answered` event, and reaches the planner brief; a blocking question holds the verdict card until answered. cost=$7.44
+- 2026-09-05T12:49:38+00:00 PR conflicts with garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos; rebased onto garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos mechanically and force-pushed

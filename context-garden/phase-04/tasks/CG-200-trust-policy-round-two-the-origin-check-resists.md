@@ -2,7 +2,7 @@
 id: CG-200
 title: 'Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product
   PRs need a person or a second round'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-200-trust-policy-round-two-the-origin-check-resists
+attempts: 1
+last_dispatched_at: '2026-09-05T12:50:05+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:31:18+00:00'
+updated: '2026-09-05T12:50:05+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 ## Log
 
 - 2026-09-05T10:31:18+00:00 approved (web)
+- 2026-09-05T12:50:05+00:00 dispatched work run 20260905T124956Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4432 tokens)
