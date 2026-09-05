@@ -2,7 +2,7 @@
 id: CG-220
 title: A revise or rebase run starts from the branch's head on origin and pushes with a lease, and the
   queue never rewrites a branch with a worker run in flight
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,8 +14,11 @@ reading:
 - src/garden/scheduler/reap.py
 - src/garden/gitops.py
 - tests/scheduler/test_dispatch.py
+branch: garden/cg-220-a-revise-or-rebase-run-starts-from-the-branch-s
+attempts: 1
+last_dispatched_at: '2026-09-05T16:50:26+00:00'
 created: '2026-09-05T16:49:39+00:00'
-updated: '2026-09-05T16:49:39+00:00'
+updated: '2026-09-05T16:50:26+00:00'
 ---
 
 ## Goal
@@ -35,3 +38,4 @@ Two writers never race on one branch. Before a revise, rebase or resume run star
 ## Log
 
 - 2026-09-05T16:49:39+00:00 approved (web)
+- 2026-09-05T16:50:26+00:00 dispatched work run 20260905T165010Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~23607 tokens)
