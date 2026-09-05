@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
 last_dispatched_at: '2026-09-05T02:12:32+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T02:22:01+00:00'
+updated: '2026-09-05T02:30:15+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,4 @@ Design:
 - 2026-09-05T02:17:55+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub
 - 2026-09-05T02:18:44+00:00 triage: marked ready for review
 - 2026-09-05T02:22:01+00:00 automated review: approve — Clean vertical slice: suggestions capture (page + CLI), a cheap text-only edit run that folds them in and keeps the old body for a diff, running-task suggestions riding the revise brief, and scheduler fields untouched. All four acceptance criteria are tested; full suite (456 passed) and ruff pass. cost=$1.04
+- 2026-09-05T02:30:15+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/75
