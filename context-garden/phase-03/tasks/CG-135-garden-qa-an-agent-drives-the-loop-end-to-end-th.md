@@ -1,7 +1,7 @@
 ---
 id: CG-135
 title: 'garden qa: an agent drives the loop end to end through the web app on a throwaway garden'
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/107
 attempts: 1
 last_dispatched_at: '2026-09-05T04:20:04+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T04:20:04+00:00'
+updated: '2026-09-05T04:31:21+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 - 2026-09-05T04:18:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/107 (base main): garden qa builds and serves a throwaway garden with fake workers and a pretend GitHub, has a scripted or harness-driven agent complete nine flows through the web app, files findings as friction reports with the page HTML, and exits non-zero naming a failed step. Adds a close-phase route and a stand-in GitHub hook on the web hub. cost=$10.34
 - 2026-09-05T04:19:48+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
 - 2026-09-05T04:20:04+00:00 dispatched revise run 20260905T042003Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~12797 tokens)
+- 2026-09-05T04:26:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/107: Rebased onto origin/main, resolved the tests/fake_claude.py conflict keeping CG-152's in-process shape plus the qa mode, and restored the real local runner for the garden qa tests since the in-process runner has no fake for the QA sandbox's own worker. Full suite and lint pass. cost=$2.05
+- 2026-09-05T04:31:21+00:00 automated review: approve — garden qa builds a throwaway garden, serves the web app against a pretend GitHub, and drives nine end-to-end flows; all three acceptance criteria are met with a scripted and a harness-driven test, the full suite and lint pass, and the description is clean. cost=$1.55

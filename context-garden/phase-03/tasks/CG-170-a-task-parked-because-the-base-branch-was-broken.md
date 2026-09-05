@@ -2,7 +2,7 @@
 id: CG-170
 title: A task parked because the base branch was broken re-probes the base every tick and continues by
   itself when it goes green
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -15,8 +15,11 @@ reading:
 - src/garden/scheduler/human.py
 - src/garden/scheduler/rebase.py
 - src/garden/inbox.py
+branch: garden/cg-170-a-task-parked-because-the-base-branch-was-broken
+attempts: 1
+last_dispatched_at: '2026-09-05T04:24:49+00:00'
 created: '2026-09-05T04:20:21+00:00'
-updated: '2026-09-05T04:20:21+00:00'
+updated: '2026-09-05T04:29:02+00:00'
 ---
 
 ## Goal
@@ -39,3 +42,5 @@ The same applies to the CI path: a PR whose CI failed on the merge commit becaus
 ## Log
 
 - 2026-09-05T04:20:21+00:00 approved (web)
+- 2026-09-05T04:24:49+00:00 dispatched work run 20260905T042440Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-141-rebase-is-its-own-mode-mechanical-first-an-agent stacked on CG-141, ~6184 tokens)
+- 2026-09-05T04:29:02+00:00 parent CG-141 merged; will rebase onto main when the current run finishes

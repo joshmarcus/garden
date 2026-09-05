@@ -2,7 +2,7 @@
 id: CG-141
 title: 'Rebase is its own mode: mechanical first, an agent only for conflicts, no re-review when the diff
   is unchanged, a merge queue'
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/102
 attempts: 2
 last_dispatched_at: '2026-09-05T04:15:49+00:00'
 created: '2026-09-05T02:17:26+00:00'
-updated: '2026-09-05T04:19:44+00:00'
+updated: '2026-09-05T04:29:02+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,5 @@ Three parts. (1) `rebase` becomes a run mode with its own counter on the task, i
 - 2026-09-05T04:10:01+00:00 automated review requested changes: The rebase mode, verdict-keep, merge queue and metrics are all implemented and covered by tests, but the delivered branch fails to collect its own test suite: test_rebase.py imports the removed wait_for_runs helper (CG-152's in-process runner deleted it), aborting all collection. The PR's '461 passed' claim is false as delivered. cost=$1.49
 - 2026-09-05T04:15:49+00:00 dispatched revise run 20260905T041549Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~11848 tokens)
 - 2026-09-05T04:19:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/102: Removed the obsolete wait_for_runs helper usages that aborted test collection: dropped the import in tests/test_rebase.py and the unimported call in tests/test_retro.py, and scoped the clean-rebase no-review assertion to DM-001 since a stacked sibling now reaches in_review synchronously under the in-process runner. Full suite: 469 passed, 3 skipped; ruff clean. cost=$1.24
+- 2026-09-05T04:26:51+00:00 automated review: approve — Rebase-as-its-own-mode, verdict-keep, the merge queue and the new metrics are all implemented cleanly and covered by tests; full suite passes (469 passed, 3 skipped) and ruff is clean. Description is complete and free of scar tissue. cost=$1.70
+- 2026-09-05T04:29:02+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/102

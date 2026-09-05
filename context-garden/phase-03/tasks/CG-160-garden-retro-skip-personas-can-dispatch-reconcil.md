@@ -1,7 +1,7 @@
 ---
 id: CG-160
 title: garden retro --skip-personas can dispatch reconciliation with an empty persona-reviews section
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -18,7 +18,7 @@ discovered_from: CG-145
 attempts: 1
 last_dispatched_at: '2026-09-05T04:08:57+00:00'
 created: '2026-09-05T03:54:03+00:00'
-updated: '2026-09-05T04:19:45+00:00'
+updated: '2026-09-05T04:24:33+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,4 @@ Discovered by CG-145 (garden retro waits for the persona reports before it dispa
 - 2026-09-05T04:15:37+00:00 pre-PR check(s) test, lint failed at the stale base 55a935290123; the base branch `main` had moved, so rebased onto it and the checks pass now — no revise round
 - 2026-09-05T04:15:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/106 (base main): start_retro now raises before dispatching if --skip-personas is set and none of the requested personas have any report on disk, preventing reconciliation from running with an empty Persona reviews section while preserving the reuse-existing-reports semantics. cost=$0.87
 - 2026-09-05T04:19:45+00:00 automated review: approve — Correct, minimal fix: start_retro raises before mutating state when --skip-personas is set and none of the requested personas have a report on disk, preserving the reuse case. Tested and lint/tests green. cost=$0.47
+- 2026-09-05T04:24:33+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/106

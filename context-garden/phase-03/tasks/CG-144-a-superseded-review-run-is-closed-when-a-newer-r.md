@@ -1,7 +1,7 @@
 ---
 id: CG-144
 title: A superseded review run is closed when a newer review starts; no run record outlives its process
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -12,8 +12,11 @@ reading:
 - src/garden/scheduler.py
 - src/garden/runs.py
 - tests/test_scheduler.py
+branch: garden/cg-144-a-superseded-review-run-is-closed-when-a-newer-r
+attempts: 1
+last_dispatched_at: '2026-09-05T04:27:14+00:00'
 created: '2026-09-05T02:28:49+00:00'
-updated: '2026-09-05T03:19:58+00:00'
+updated: '2026-09-05T04:27:14+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Found on the last PR of the first live run. CG-079 had a review dispatched at 02
 - 2026-09-05T03:01:34+00:00 approved (web)
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:58+00:00 approved (web)
+- 2026-09-05T04:27:14+00:00 dispatched work run 20260905T042706Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~10297 tokens)
