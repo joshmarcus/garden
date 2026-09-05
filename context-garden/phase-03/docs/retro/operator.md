@@ -60,7 +60,7 @@ PR by hand resets the cache (CG-174), a finished task drops its stop (CG-175).
    the lock between ticks. Filed CG-173; merged by 04:57.
 5. **04:32 a task fell back to `ready` with its PR open** because its work run had finished
    and its review run was the only active record ("no active run found"). `garden pr` put it
-   back. This is the same family as CG-116 from phase 02 and is not yet filed as its own task.
+   back. The poll had dispatched a review under a running revise; filed as CG-177.
 6. **04:48 and 05:04 review-cap cards on rebases.** Rebase rounds counted as review rounds
    until CG-139 merged at 05:47; each card was cleared with `resume` or one more `review`.
 7. **05:00 the pin moved** (aac0c28 to 51ed711) after twelve behaviour-changing merges. The
@@ -89,7 +89,7 @@ and each is now a task or a merged fix.
 
 ## What to change
 
-- **Merge queue stickiness (CG-176)** before phase 04 opens many PRs at once.
+- **Merge queue stickiness (CG-176) and no review under a running task (CG-177)** before phase 04 opens many PRs at once.
 - **Hard tier still needs a person to merge.** Either let the queue merge hard-tier PRs after
   two approving rounds, or make the scratch-merge check the queue's own step so a person's
   merge adds nothing. The user should decide this one.
