@@ -1,11 +1,11 @@
 ---
 id: CG-218
 title: SSH remote workers don't get the CLAUDE_CONFIG_DIR/CODEX_HOME defaults
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
-priority: 0
+priority: 3
 difficulty: easy
 reading:
 - src/garden/runner/base.py
@@ -15,7 +15,7 @@ reading:
 - docs/architecture.md
 discovered_from: CG-217
 created: '2026-09-05T16:45:22+00:00'
-updated: '2026-09-05T16:45:22+00:00'
+updated: '2026-09-05T17:48:27+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,5 @@ Discovered by CG-217 (The private worker HOME carries each harness's own config 
 ## Log
 
 - 2026-09-05T16:45:22+00:00 discovered by CG-217
+- 2026-09-05T17:48:26+00:00 approved (web)
+- 2026-09-05T17:48:27+00:00 priority 0 -> 3 (web)

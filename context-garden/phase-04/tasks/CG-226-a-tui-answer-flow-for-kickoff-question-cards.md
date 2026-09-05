@@ -1,11 +1,13 @@
 ---
 id: CG-226
 title: A TUI answer flow for kickoff question cards
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
-priority: 1
+depends_on:
+- CG-224
+- CG-225
+priority: 3
 difficulty: easy
 reading:
 - src/garden/planner.py
@@ -16,7 +18,7 @@ reading:
 - src/garden/cli/planning.py
 discovered_from: CG-224
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T17:39:03+00:00'
+updated: '2026-09-05T17:48:28+00:00'
 ---
 
 ## Goal
@@ -34,3 +36,5 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 ## Log
 
 - 2026-09-05T17:39:03+00:00 discovered by CG-224
+- 2026-09-05T17:48:28+00:00 approved (web)
+- 2026-09-05T17:48:28+00:00 priority 1 -> 3 (web)

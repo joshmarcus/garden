@@ -1,10 +1,11 @@
 ---
 id: CG-225
 title: Reconcile the kickoff's question-decision cards with CG-189 once it merges
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-224
 priority: 1
 difficulty: medium
 reading:
@@ -16,7 +17,7 @@ reading:
 - src/garden/cli/planning.py
 discovered_from: CG-224
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T17:39:03+00:00'
+updated: '2026-09-05T17:48:27+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,4 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 ## Log
 
 - 2026-09-05T17:39:03+00:00 discovered by CG-224
+- 2026-09-05T17:48:27+00:00 approved (web)
