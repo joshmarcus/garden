@@ -2,7 +2,7 @@
 id: CG-202
 title: 'One approve and one rebase: the CLI, web and TUI call the same approve gate, and the sync-rebase-force-push
   sequence lives in one place'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -12,10 +12,11 @@ priority: 1
 difficulty: medium
 reading: []
 branch: garden/cg-202-one-approve-and-one-rebase-the-cli-web-and-tui-c
+pr: https://github.com/joshmarcus/context-garden/pull/134
 attempts: 1
 last_dispatched_at: '2026-09-05T11:51:18+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T11:55:55+00:00'
+updated: '2026-09-05T12:10:41+00:00'
 ---
 
 ## Goal
@@ -37,3 +38,7 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:high, staff-engi
 - 2026-09-05T10:31:19+00:00 approved (web)
 - 2026-09-05T11:51:18+00:00 dispatched work run 20260905T115109Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~4611 tokens)
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
+- 2026-09-05T12:05:47+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
+- 2026-09-05T12:06:57+00:00 opened https://github.com/joshmarcus/context-garden/pull/134 (base main): Added Scheduler.approve() as the one draft→ready gate for CLI, web and TUI (the TUI now refuses frozen phases); added gitops.sync_and_rebase() used by the shared _rebase_and_record helper; and centralised all merge-queue state writes into scheduler/queue.py with a test asserting no other writer. Full suite (600 passed) and ruff clean. cost=$6.64
+- 2026-09-05T12:10:37+00:00 automated review: approve — All three acceptance criteria are met with evidence and tests; suite (604 passed) and ruff are clean, and the consolidations faithfully reproduce prior semantics with no behavioural regression. cost=$0.54
+- 2026-09-05T12:10:41+00:00 rebasing before merge; already on main's tip; not rebased or pushed

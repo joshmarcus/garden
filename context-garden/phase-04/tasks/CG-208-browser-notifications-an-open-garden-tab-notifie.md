@@ -17,10 +17,11 @@ reading:
 - src/garden/events.py
 - src/garden/web/pages/inbox.py
 branch: garden/cg-208-browser-notifications-an-open-garden-tab-notifie
+pr: https://github.com/joshmarcus/context-garden/pull/132
 attempts: 1
-last_dispatched_at: '2026-09-05T11:51:26+00:00'
+last_dispatched_at: '2026-09-05T12:04:39+00:00'
 created: '2026-09-05T10:36:25+00:00'
-updated: '2026-09-05T11:55:55+00:00'
+updated: '2026-09-05T12:04:39+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,7 @@ The user on 2026-09-05, asked which channel `notify.command` should use to reach
 - 2026-09-05T10:36:27+00:00 approved (web)
 - 2026-09-05T11:51:26+00:00 dispatched work run 20260905T115118Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~13188 tokens)
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
+- 2026-09-05T12:00:18+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
+- 2026-09-05T12:01:30+00:00 opened https://github.com/joshmarcus/context-garden/pull/132 (base main): Added GET /api/decisions (decision-kind events → title+URL, notices dropped) and a rail 'Notify me in this browser' toggle with a 30s poll that fires one coalesced, tagged Chrome notification per interval and opens the task/phase on click. Server side is fully tested; the JS is progressive enhancement verified structurally. cost=$3.29
+- 2026-09-05T12:04:23+00:00 automated review requested changes: Server side (endpoint + mapper) is correct and well-tested, but the untested client re-fires a notification for the most-recent decision on every 30s poll because /api/decisions is inclusive of `since` and the client stores SEEN as the last event's timestamp. cost=$0.76
+- 2026-09-05T12:04:39+00:00 dispatched revise run 20260905T120439Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14711 tokens)

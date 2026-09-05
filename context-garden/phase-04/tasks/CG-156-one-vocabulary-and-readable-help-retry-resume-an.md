@@ -2,7 +2,7 @@
 id: CG-156
 title: 'One vocabulary and readable help: retry, resume and decide named once; help panels; --version;
   garden status at 80 columns'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,9 +11,12 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-156-one-vocabulary-and-readable-help-retry-resume-an
 discovered_from: retro:context-garden/phase-02-friction
+attempts: 1
+last_dispatched_at: '2026-09-05T12:01:53+00:00'
 created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T10:31:13+00:00'
+updated: '2026-09-05T12:01:53+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ From the phase-02 retro's open list (item 10), reconciled against what merged on
 - 2026-09-05T03:25:00+00:00 moved to phase-04: user-facing work, not structure
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 10)
 - 2026-09-05T10:31:13+00:00 approved (web)
+- 2026-09-05T12:01:53+00:00 dispatched work run 20260905T120144Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4406 tokens)

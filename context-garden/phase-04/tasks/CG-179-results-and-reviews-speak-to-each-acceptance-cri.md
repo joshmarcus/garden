@@ -1,7 +1,7 @@
 ---
 id: CG-179
 title: Results and reviews speak to each acceptance criterion by name, with evidence
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -10,8 +10,11 @@ depends_on:
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-179-results-and-reviews-speak-to-each-acceptance-cri
+attempts: 1
+last_dispatched_at: '2026-09-05T12:11:04+00:00'
 created: '2026-09-05T09:41:59+00:00'
-updated: '2026-09-05T10:31:14+00:00'
+updated: '2026-09-05T12:11:04+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ Asked by the user on 2026-09-05 after phase 03: "should we have asked the tasks 
 ## Log
 
 - 2026-09-05T10:31:14+00:00 approved (web)
+- 2026-09-05T12:11:04+00:00 dispatched work run 20260905T121055Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4592 tokens)

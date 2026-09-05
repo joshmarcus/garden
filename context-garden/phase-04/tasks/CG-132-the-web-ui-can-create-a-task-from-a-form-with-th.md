@@ -1,7 +1,7 @@
 ---
 id: CG-132
 title: The web UI can create a task from a form, with the same fields as garden new-task
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,10 +15,11 @@ reading:
 - src/garden/scaffold.py
 - src/garden/cli.py
 branch: garden/cg-132-the-web-ui-can-create-a-task-from-a-form-with-th
+pr: https://github.com/joshmarcus/context-garden/pull/133
 attempts: 2
-last_dispatched_at: '2026-09-05T11:51:27+00:00'
+last_dispatched_at: '2026-09-05T12:07:09+00:00'
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T11:55:55+00:00'
+updated: '2026-09-05T12:12:10+00:00'
 ---
 
 ## Goal
@@ -46,3 +47,9 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 - 2026-09-05T10:31:12+00:00 approved (web)
 - 2026-09-05T11:51:27+00:00 dispatched work run 20260905T115127Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~13606 tokens)
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
+- 2026-09-05T12:03:10+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
+- 2026-09-05T12:04:20+00:00 opened https://github.com/joshmarcus/context-garden/pull/133 (base main): Added a New task form to the phase page (title, goal, context, acceptance criteria, difficulty, priority, reading list, dependencies, approve-now) with a rail link, validation matching `garden validate`, and a test proving the created file matches `garden new-task`'s output. cost=$2.65
+- 2026-09-05T12:05:49+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/pages/phase.py); a rebase agent will resolve it
+- 2026-09-05T12:06:55+00:00 automated review: approve — Adds a New task form to the phase page with a rail link, validation like garden validate, and byte-identical output to garden new-task; all three acceptance criteria are met and tested, checks pass. cost=$0.85
+- 2026-09-05T12:07:09+00:00 dispatched rebase run 20260905T120709Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~4544 tokens)
+- 2026-09-05T12:12:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/133: Rebased onto main; resolved the single conflict in src/garden/web/pages/phase.py by keeping both sides' additions — main's has_retro/_retro_doc/_retro_operator/_persona_scores (from CG-146) and this branch's new_task/_new_task_prefill (from CG-132) — in both the phase_page template context and the module-level helper functions. Full test suite (607 passed, 3 skipped) and ruff both pass. cost=$0.25

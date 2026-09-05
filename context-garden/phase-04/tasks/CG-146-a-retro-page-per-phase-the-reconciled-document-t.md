@@ -2,7 +2,7 @@
 id: CG-146
 title: 'A retro page per phase: the reconciled document, the operator retro, persona reports with scores,
   and the tasks the retro generated'
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,10 +17,11 @@ reading:
 - src/garden/retro.py
 - src/garden/model.py
 branch: garden/cg-146-a-retro-page-per-phase-the-reconciled-document-t
+pr: https://github.com/joshmarcus/context-garden/pull/131
 attempts: 2
 last_dispatched_at: '2026-09-05T11:50:43+00:00'
 created: '2026-09-05T02:49:08+00:00'
-updated: '2026-09-05T11:55:55+00:00'
+updated: '2026-09-05T12:05:49+00:00'
 ---
 
 ## Goal
@@ -47,3 +48,8 @@ Asked at the phase-02 retro on the first live run. Today the pieces exist as fil
 - 2026-09-05T10:31:12+00:00 approved (web)
 - 2026-09-05T11:50:43+00:00 dispatched work run 20260905T115043Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~15372 tokens)
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
+- 2026-09-05T12:00:15+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
+- 2026-09-05T12:01:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/131 (base main): Added a per-phase retro page at /phases/<product>/<phase>/retro rendering the reconciled document (with friction verdicts), the operator retro, a persona table with scores and high findings, and the tasks the retro filed across phases; linked it from the closed-phase header, the phase page and the Herbarium (which now shows persona scores). Tasks gain retro provenance via garden retro and a new garden new-task --from-retro flag. cost=$4.46
+- 2026-09-05T12:03:11+00:00 automated review: approve — Adds the per-phase retro page with all required artefacts, retro provenance via store.create_task and new-task --from-retro (consistent with garden retro's format), and links from the closed-phase header, phase page and Herbarium. All three acceptance criteria are met and tested; ruff and targeted tests pass. cost=$0.83
+- 2026-09-05T12:04:27+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T12:05:49+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/131

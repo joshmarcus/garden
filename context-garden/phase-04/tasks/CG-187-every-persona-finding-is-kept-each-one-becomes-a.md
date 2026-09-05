@@ -2,7 +2,7 @@
 id: CG-187
 title: 'Every persona finding is kept: each one becomes a draft with its severity as priority, the retro
   reconciles all of them, and nothing below high is dropped'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,10 +17,11 @@ reading:
 - src/garden/scheduler/retro.py
 - src/garden/cli.py
 branch: garden/cg-187-every-persona-finding-is-kept-each-one-becomes-a
+pr: https://github.com/joshmarcus/context-garden/pull/136
 attempts: 1
 last_dispatched_at: '2026-09-05T11:51:00+00:00'
 created: '2026-09-05T10:21:05+00:00'
-updated: '2026-09-05T11:55:55+00:00'
+updated: '2026-09-05T12:12:13+00:00'
 ---
 
 ## Goal
@@ -44,3 +45,5 @@ The user on 2026-09-05, reading the product manager's phase-03 review: "We shoul
 - 2026-09-05T10:31:15+00:00 approved (web)
 - 2026-09-05T11:51:00+00:00 dispatched work run 20260905T115052Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~18641 tokens)
 - 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
+- 2026-09-05T12:10:33+00:00 parent CG-197 merged; rebased onto main and retargeted the PR
+- 2026-09-05T12:12:13+00:00 opened https://github.com/joshmarcus/context-garden/pull/136 (base main): Every persona finding (not just high) now files as a draft task with priority from severity and persona:<name>:<run> provenance; a frozen/closed reviewed phase redirects to the next phase. The retro reconciles all findings across every persona that ran, merging same-titled ones into one task and listing every finding with its task id, grouped by severity, in the retro document. Added --min-severity to persona-review --file-tasks. cost=$4.71

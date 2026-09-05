@@ -1,7 +1,7 @@
 ---
 id: CG-162
 title: Move a task to another phase from the task page and the CLI, keeping its id, history and state
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,8 +15,11 @@ reading:
 - src/garden/web/actions/tasks.py
 - src/garden/web/pages/task.py
 - src/garden/inbox.py
+branch: garden/cg-162-move-a-task-to-another-phase-from-the-task-page
+attempts: 1
+last_dispatched_at: '2026-09-05T12:02:03+00:00'
 created: '2026-09-05T03:56:09+00:00'
-updated: '2026-09-05T10:31:13+00:00'
+updated: '2026-09-05T12:02:03+00:00'
 ---
 
 ## Goal
@@ -44,3 +47,4 @@ Design:
 ## Log
 
 - 2026-09-05T10:31:13+00:00 approved (web)
+- 2026-09-05T12:02:03+00:00 dispatched work run 20260905T120154Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~15732 tokens)
