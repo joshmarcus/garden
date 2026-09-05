@@ -17,3 +17,32 @@ _No friction reported yet._
 ### 2026-09-05 · reported by CG-197 (Split cli.py into a cli/ package and fold the four rebase copies into one recorded helper) in run 20260905T112245Z-work
 
 - The brief's "Reading list (read these)" was referenced by the operating rules but no reading list was actually included in the task, so I had to discover the four rebase call sites and the metrics block by search.
+
+### 2026-09-05 · discovered by CG-208 (Browser notifications: an open garden tab notifies through Chrome when a decision appears, with a one-time permission toggle and one notification per tick) in run 20260905T115118Z-work
+
+No scheduler currently emits a retro_question event, though the CG-208 design lists it as a decision kind the notifications endpoint returns. If a retro is ever made to pause for a human decision, emitting retro_question with a phase= field will light up notifications for it with no further work.
+
+### 2026-09-05 · reported by CG-146 (A retro page per phase: the reconciled document, the operator retro, persona reports with scores, and the tasks the retro generated) in run 20260905T115043Z-work
+
+- The task Context points at retro artefact paths (docs/retro/operator.md, docs/retro/README.md) that differ from what garden retro writes today (docs/retro.md); the page handles both, but the spec's file layout is stale.
+
+### 2026-09-05 · reported by CG-208 (Browser notifications: an open garden tab notifies through Chrome when a decision appears, with a one-time permission toggle and one notification per tick) in run 20260905T115118Z-work
+
+- Acceptance criterion 2 asks for a test that drives the client script with a fake Notification, but the test app (TestClient) and garden qa are HTTP-only and there is no JS runtime in the worker environment, so the client JS cannot be unit-tested here.
+- The design lists retro_question as a decision kind the endpoint returns, but no scheduler emits that event yet.
+
+### 2026-09-05 · reported by CG-132 (The web UI can create a task from a form, with the same fields as garden new-task) in run 20260905T115127Z-work
+
+- The brief's acceptance criteria didn't say whether the web form's free-text Goal/Context/Acceptance-criteria fields (which `garden new-task` has no flags for) should affect the byte-comparison test; I read 'same inputs' as the CLI's own flags and tested with those fields blank, where the two must match exactly.
+
+### 2026-09-05 · reported by CG-202 (One approve and one rebase: the CLI, web and TUI call the same approve gate, and the sync-rebase-force-push sequence lives in one place) in run 20260905T115109Z-work
+
+- Acceptance criterion 2 describes four sync-rebase call sites, but its parent CG-197 had already unified them into one helper (_rebase_and_record); the criterion reads as if against the pre-parent code.
+
+### 2026-09-05 · reported by CG-191 (The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check) in run 20260905T115101Z-work
+
+- The brief's 'Reading list (read these)' section was referenced but empty in the task text — I explored the merge-queue/automerge code myself to find the touch points.
+
+### 2026-09-05 · reported by CG-187 (Every persona finding is kept: each one becomes a draft with its severity as priority, the retro reconciles all of them, and nothing below high is dropped) in run 20260905T115052Z-work
+
+- dispatch_aux records every phase-persona run under the shared aux task id "_persona" rather than a per-phase id, which the retro's findings lookup has to work around; not something this task changed, but worth knowing if a future task wants per-phase run history.
