@@ -1,81 +1,81 @@
-# phase-05 goals (draft)
+---
+plant: poppy
+latin: Papaver argemone
+plate: V
+---
 
-_Drafted by `garden retro` from context-garden/phase-04; edit before planning._
+# phase-05 goals
 
-# phase-05 goals draft
+_Stub written by the operator on 2026-09-05; rewritten by the phase-04 retro (joined from two reconcile runs) with the owner's decisions under Decisions._
 
-## Purpose
-After phase-04's security, data-integrity and admission-control blockers land, help a second team bring an existing repository into a working garden, with cost per accepted task measured before routing changes. This adoption headline is provisional pending the owner's decision; measurement is required under either headline.
+**In one sentence: the garden runs in someone else's environment, not only in this one, and it can say what a merged task costs.** Phase 03 made the loop leaveable and phase 04 gave it its features and made the leaveability mechanism true; phase 05 is about adoption: a team points it at a project they already have, on models and machines they already pay for, and the tier map is set from cost per accepted task rather than from a price list.
 
-## Entry conditions
-Phase 04 remains reopened until the blocking work is complete. Reuse CG-238 and CG-239 rather than duplicating them. Confirm regression evidence for reading containment, safe scheduler git, held untrusted reloads, isolated planning and worker control state, concurrent task saves, reserved retro IDs, single-run admission and base-branch completion. Performance misses alone do not prolong phase 04, but its closing document must label them honestly.
+## Why this phase
 
-## 1. Measure accepted outcomes before optimizing
-Ship cost per accepted task and first-pass approval by model, tier and harness before CG-213 or CG-230 experiments. Define accepted as merged into the product base, include failed and revision work, state mixed-model attribution and distinguish unpriced usage from zero cost. Report hand merges with reasons, mechanical and agent rebases separately, tick mean/max and operator spend with explicit product/phase attribution. Reconcile the reported phase-04 baseline: 16/57 hand merges, $5.04 per easy task, 1.57 rebase rounds per merge and 71–79% first-pass approval. Retrieve an exact operator-share comparison rather than repeating inconsistent historical estimates. Proposed next-phase targets, pending owner approval: accepted easy-task cost at most $4 and first-pass approval at least 90% on a stated comparable cohort; retain zero unexplained hand merges and the under-ten-second tick and under-one-second action goals.
+A second team cannot use the garden today: setting it up means writing product.md, principles and the setup block by hand, its workers only run on the scheduler's own machine or over ssh from it, and every model call goes through two vendor accounts that both hit their quota on 2026-09-05. Phase 04 also left three numbers pointing the wrong way (hand merges 16 of 57, cost per easy task $5.04, first-pass approval 71 to 79%) and no metric that would tell a routing experiment apart from noise: sonnet halved the run price and did not lower the bill per task. And the security review of the phase-04 build found three new highs and three mediums in the worker fence, two of which block phase 04's close and the rest of which land here first.
 
-## 2. Complete the unattended review path
-Widen existing CG-236 to every eligible PR with no review for its current head, including trial winners and manual runners. Align manual resume semantics, prevent duplicate review dispatch and discard stale-head verdicts. Cancel obsolete review processes promptly. Classify environment failures from harness error results rather than quoted worker prose; inspect the referenced CG-237 before assigning overlapping work. Test quota recovery without spending attempts on environment failures and without an infinite false-positive pause loop.
+## Goals
 
-## 3. Make onboarding the adoption slice
-Keep CG-215 as the existing onboarding task. Its output must pass doctor on a non-Python repository fixture without hand edits and produce criteria and reading paths accepted by the common gate. Use the isolated planner. Name a second team and repository for an observed onboarding session; if none is available, explicitly limit the acceptance claim to fixture validation. Fix brief repair and first-run guidance where they obstruct that journey.
+1. **Onboarding.** `garden onboard` and the `garden-onboard` skill read an existing project and its environment and draft the garden for it (CG-215). Its output passes `garden doctor` on a non-Python fixture with no hand edits, its planner runs in the scrubbed environment, and every draft it writes passes the approve gate.
+2. **Any model, at the right price.** An OpenRouter harness with per-tier models and cost from the response (CG-213), as an adapter around an existing OpenAI-compatible CLI rather than a garden-owned tool-calling loop, routed by difficulty with failure-driven escalation and measured by cost per accepted task, per `specs/cost-aware-model-routing.md`. It dispatches only after the measurement in goal 5 has merged.
+3. **Shared quotas.** A tier can name several harness and model options and dispatch spreads runs across them, skipping a paused or exhausted account and recording the member on each run (CG-230).
+4. **Any machine.** Workers on independent remote hosts that claim runs over HTTP and push results back (CG-216); last in dispatch order, and its acceptance test is a named second team's machine if one exists, a throwaway host otherwise.
+5. **What the phase-04 retro adds.**
+   - *The numbers exist before the experiments.* Cost per accepted task and first-pass approval per model, tier and harness in `garden metrics`, the Costs page and the retro's Numbers; hand merges and tick duration in metrics and the rail; the retro captures its own walkthrough before the personas run and its Numbers section reads the operator ledger at `context-garden/docs/operator-spend.jsonl`.
+   - *Trust, round three.* The planner and the synchronous kickoff run in the worker environment; a worker cannot rewrite state.json, a task file or the harness config dir without it being restored and attributed; notify.command runs scrubbed. These follow CG-239 and CG-242 from the reopen.
+   - *One writer, no lost writes.* Task files get optimistic concurrency and a duplicate id is a validate problem, not a fatal exception; retro-filed drafts reserve ids that cannot collide; every status write goes through `_transition` (Scheduler.mark_done and unapprove exist, with a source-grep test); Mark done honours the base-branch rule.
+   - *Every PR reaches the queue.* Any PR with no review recorded for its head is queued on the next tick, on every runner (widen CG-236); resume means the same on the manual runner; a review whose head moved is discarded and a review whose task went terminal is cancelled.
+   - *Briefs are right the first time.* No brief ships with an empty or unresolved reading list; inlined files come from the task's base, not a dirty worktree; a revise brief restates the criteria and the concrete blocker; dependent tasks are sequenced at planning; retro evidence is inlined; a missing or false criterion is a mechanical changes_requested.
+   - *Hand steps become commands.* redispatch kills the superseded worker; pin runs the canary, installs and restarts after a tick; a reopen verdict carries through approve, dispatch and close without hand steps (CG-250).
+   - *The surfaces say one thing.* One word for the operating point and stops that name a tier per harness; no task ids in copy; one needs-you predicate; a draft's criteria and reading list editable inline; the scaffolded operate skill, design.md, roadmap.md and the architecture map match the product.
 
-## 4. Make routing valid, then test it
-Make operating profiles reference compatible per-harness tier maps and use one vocabulary for operating profile versus observation feed. Do not send Claude model IDs to a Codex harness or claim economy is cheaper without accepted-outcome evidence. Then evaluate existing CG-230's harness/model pool with member attribution and paused-member avoidance. Keep CG-213 to an adapter around an existing compatible CLI if pursued; do not build another tool-calling loop in this phase.
+## Non-goals
 
-## 5. Reduce the cost of operating and planning
-Add safe redispatch and canary-backed pin operations as separate sequenced slices. Build briefs from explicit criteria, current source revisions, real diagnostic feedback and inlined retro evidence. At planning, sequence shared schema and behavior work rather than relying on unmerged siblings. Mechanically refuse approving reviews with missing or negative criterion evidence. Document recovery ordering and make check continuations and shared scheduler interfaces explicit.
+- Hosted or multi-user operation of the garden itself.
+- New UI beyond what the goals need; TUI parity tasks are not filed by default.
+- A garden-owned tool-calling loop for OpenRouter; the 20 to 50 task evaluation corpus in the routing spec is phase 06.
+- Changing the operating point (workers, tier map) before cost per accepted task can be read.
+- A cap on the drafts a retro files (the owner's decision: every finding at its severity, pruned at approval).
 
-## 6. Make the next retro trustworthy and manageable
-Capture a current walkthrough before personas, including Costs, Backlog and Retro, and fix text extraction so hidden content and attributes do not become phantom UI findings. Add execution coverage for notification and kickoff interactions. Every finding remains visible with provenance and an existing-task link where applicable; automatic draft severity and cap remain governed by the owner's decision. Do not silently replace CG-187's policy. File each approved feature or follow-up once, deduplicating persona findings, feature entries and kickoff output.
+## Definition of done
 
-## Surface and documentation completion
-Use one needs-you predicate across interfaces; make incomplete-brief cards lead to repair; remove task IDs, redundant controls and contradictory restart guidance. Keep kickoff subordinate to active work. Align watch and serve configuration behavior, operator skill templates, design and roadmap claims and the architecture map. Enforce the module-size limit and remove implementation-only tests and test-only production wrappers where behavior coverage replaces them.
+Measured with `garden metrics` against phase 04, by the tool, not by hand.
 
-## Scope accounting and non-goals
-Record CG-206 as cancelled and decide separately whether unattended notifications remain required. Use the final task list for CG-189 and CG-225 despite the earlier persona snapshot describing cancellation. Confirm phase-05 statuses for CG-213, CG-215, CG-216 and CG-230, and resolve CG-222's unknown disposition; do not invent statuses. Defer CG-216's HTTP remote-worker service until a named team needs it. No hosted multi-user expansion, new agent loop, broad evaluation corpus or default TUI-parity program. Do not raise concurrency merely to finish faster before accepted-outcome measurements support the change.
-
-## Closure evidence
-The phase-04 closing record must include the exact live metric command outputs or explicit unavailable markers, operator spend numerator and denominator, all hand-merge and outside-tick exceptions, final blocker task IDs, current walkthrough and owner policy answers. Phase 05 closes against the same documented definitions, with its current walkthrough captured before review and its known limitations stated explicitly.
-
-## Features for the next phase
-
-- CG-248: Measure cost per accepted task and first-pass approval
-- CG-249: Keep retro triage within a visible draft budget
-- CG-250: Add safe redispatch and canary-backed pin commands
-- CG-251: Make retros capture and measure their own evidence
-- CG-252: Make operating profiles harness-aware and consistently named
-
-## Follow-ups carried from the retro verdict
-
-- CG-284: Build revision briefs from current criteria and failure evidence
-- CG-285: Sequence tasks that share a behavior or schema
-- CG-286: Enforce acceptance evidence at review finalization
-- CG-287: Classify harness failures from structured error results
-- CG-288: Cancel obsolete review runs when tasks finish
-- CG-289: Make check continuations explicit and recoverable
-- CG-290: Enforce scheduler interfaces and the module-size cap
-- CG-291: Unify actionable counts and brief-repair controls
-- CG-292: Finish phase-page and CLI interaction consistency
-- CG-293: Test notification and kickoff behavior in a browser
-- CG-294: Align config reload behavior and operating documentation
-- CG-295: Validate persona-run provenance and scrub notifications
+- A non-Python fixture project is onboarded to a passing `garden validate` and `garden doctor` with no hand-written files.
+- One task each completes through OpenRouter and through a remote worker on a throwaway host, reviewed and merged by the loop.
+- Cost per accepted easy task at or under $4 (phase 04: $5.04) and first-pass approval at or above 90% (phase 04: 79% easy, 71% medium), both reported per model, tier and harness; the sonnet-era figures from the phase-04 operator retro are the baseline.
+- Hand merges zero on every tier and runner (phase 04: 16 of 57); agent rebase rounds per merge under 0.3 (phase 04: 0.55, with 1.02 mechanical by design).
+- A phase-05 walkthrough committed by the retro before the personas run; tick duration and hand merges visible in the rail and in metrics.
+- No task reaches ready or a run without Scheduler.approve on any surface; no brief ships with an empty or unresolved reading list; no status assigned outside `_transition` (a source-grep test).
+- The security persona's three phase-04 highs closed (CG-239, CG-242 and the planner) and its three mediums closed or reworded in the goals as accepted risk; no new high.
+- The retro's Numbers section reports the operator's spend and share from the ledger; operator share below phase 04's 29%.
+- Every task through `garden tick`; exceptions listed in the closing document.
 
 ## Decisions
 
 - **Does the reopen carry all three blocking items, or only the brief-gate closure, with the two security fixes moved to phase 05 as its first tasks?** — answered: All of them. With the user's standing authority: CG-238 is merged and CG-239 is in review, so the reopen carries both; nothing moves to phase 05. Astra's reconcile has since filed CG-240 to CG-247 as further blocking items; which of those block and which become phase-05 follow-ups is settled by the joined retro. (by cli at 2026-09-05T23:43:16+00:00)
-- **Is phase 05 about adoption (a second team on its own machines) or about cost per accepted task?** — answered: Adoption is the headline: phase 05 is the garden running in someone else's environment (onboarding CG-215, any model CG-213, shared quotas CG-230, any machine CG-216). Cost per accepted task is measured from the phase's first task as a prerequisite, not the headline (user's stub, 2026-09-05). (by cli at 2026-09-05T23:45:33+00:00)
-- **Should phase 05 make onboarding the headline, with cost measurement as its first prerequisite, or make cost reduction the headline?** — answered: Adoption is the headline: phase 05 is the garden running in someone else's environment (onboarding CG-215, any model CG-213, shared quotas CG-230, any machine CG-216). Cost per accepted task is measured from the phase's first task as a prerequisite, not the headline (user's stub, 2026-09-05). (by cli at 2026-09-05T23:45:34+00:00)
-- **How many drafts may a retro file, and at what severity?** — answered: Every finding is filed as a draft at its severity, no cap (user, 2026-09-05: do not schedule only two high items per review and toss the rest). The kickoff and the operator prune at approval; a finding that is not worth a task is cancelled with a reason, not dropped silently. (by cli at 2026-09-05T23:45:36+00:00)
-- **Should retros keep filing every finding, or automatically file only high findings with an eight-draft cap and retain all others for explicit filing?** — answered: Every finding is filed as a draft at its severity, no cap (user, 2026-09-05: do not schedule only two high items per review and toss the rest). The kickoff and the operator prune at approval; a finding that is not worth a task is cancelled with a reason, not dropped silently. (by cli at 2026-09-05T23:45:38+00:00)
-- **Are cost per accepted easy task at or under $4 and first-pass approval at or above 90% the phase-05 numbers?** — answered: Yes: at most $4 per accepted easy task and at least 90% first-pass approval carry over as phase-05 targets, measured per accepted task (garden metrics), with the sonnet-era baseline from the phase-04 operator retro as the starting point. (by cli at 2026-09-05T23:45:39+00:00)
-- **Are phase-05 targets of at most $4 per accepted easy task and at least 90% first-pass approval the intended acceptance thresholds?** — answered: Yes: at most $4 per accepted easy task and at least 90% first-pass approval carry over as phase-05 targets, measured per accepted task (garden metrics), with the sonnet-era baseline from the phase-04 operator retro as the starting point. (by cli at 2026-09-05T23:45:41+00:00)
-- **Ratify the decisions made in the owner's name this phase: automerge_method merge, review.max_rounds 4, reviews on the easy tier, the codex tier map, and eight queue-rotation hand merges.** — answered: Ratified (user, 2026-09-05: 'I ratify your decisions'): automerge by merge commit, review.max_rounds 4, reviews on the easy tier, the codex tier map luna/terra/sol. The eight queue-rotation hand merges were a bug (fixed by CG-176), not a policy. (by cli at 2026-09-05T23:45:42+00:00)
-- **Do you ratify the phase's merge method, four-round review cap, easy-tier reviews, Codex tier map and eight queue-rotation hand merges?** — answered: Ratified (user, 2026-09-05: 'I ratify your decisions'): automerge by merge commit, review.max_rounds 4, reviews on the easy tier, the codex tier map luna/terra/sol. The eight queue-rotation hand merges were a bug (fixed by CG-176), not a policy. (by cli at 2026-09-05T23:45:44+00:00)
-- **Does docs/operator-spend.jsonl live at the garden root's docs directory?** — answered: Yes: one ledger at context-garden/docs/operator-spend.jsonl in the garden repo (the product's docs directory), appended by tools/operator_spend.py and shown on the costs page (CG-223). Product and phase attribution per record is welcome. (by cli at 2026-09-05T23:45:45+00:00)
-- **Should operator sessions use one garden-root docs/operator-spend.jsonl ledger with explicit product and phase attribution?** — answered: Yes: one ledger at context-garden/docs/operator-spend.jsonl in the garden repo (the product's docs directory), appended by tools/operator_spend.py and shown on the costs page (CG-223). Product and phase attribution per record is welcome. (by cli at 2026-09-05T23:45:47+00:00)
-- **Was CG-206 cancelled because browser notifications are sufficient, or is unattended notification delivery still required?** — answered: Yes for now: the user chose Chrome notifications first (CG-208); unattended delivery to a phone is parked (Tailscale idea, 2026-09-05). (by cli at 2026-09-05T23:45:49+00:00)
-- **Who is the second team, and is there a real repository to onboard before phase 05 closes?** — answered: No second team is named yet. Phase 05's kickoff (CG-224) asks the owner for it before CG-215 is approved; the acceptance case is one existing repository with its own docs and task list, on a machine that is not this one, not context-garden itself. Until it is named, CG-215 is built against a fresh clone of a public, well-documented repository and the real onboarding is the phase's exit criterion. (by cli at 2026-09-05T23:55:08+00:00)
-- **Which second team and existing repository will serve as the onboarding acceptance user?** — answered: No second team is named yet. Phase 05's kickoff (CG-224) asks the owner for it before CG-215 is approved; the acceptance case is one existing repository with its own docs and task list, on a machine that is not this one, not context-garden itself. Until it is named, CG-215 is built against a fresh clone of a public, well-documented repository and the real onboarding is the phase's exit criterion. (by cli at 2026-09-05T23:55:10+00:00)
-- **Codex runs in bypass-permissions mode since 2026-09-05; ratify or revert?** — answered: Keep bypass as the live policy until the containment fixes land (CG-239: reading paths and the clone's git config and hooks; CG-246: workers cannot mutate shared control or harness state), then return codex to sandboxed execution with the two allowances it needs (.git writes in its own worktree and network for gh) and record the change on the costs page annotations. Decided by the operator on the owner's instruction, 2026-09-05. (by cli at 2026-09-05T23:55:11+00:00)
-- **Should Codex bypass permission mode remain the live operating policy after the required containment fixes, or should the live garden return to sandboxed execution?** — answered: Keep bypass as the live policy until the containment fixes land (CG-239: reading paths and the clone's git config and hooks; CG-246: workers cannot mutate shared control or harness state), then return codex to sandboxed execution with the two allowances it needs (.git writes in its own worktree and network for gh) and record the change on the costs page annotations. Decided by the operator on the owner's instruction, 2026-09-05. (by cli at 2026-09-05T23:55:13+00:00)
-- **Should self-product approval require an independent second reviewer or retain repeated rounds from the same reviewer?** — answered: Hard-tier PRs get a second round from a stronger model (the harness's retro_model) before the queue merges them, on top of CG-191's two approving rounds; easy and medium PRs keep repeated rounds from the review-tier reviewer. Decided by the operator on the owner's instruction, 2026-09-05. (by cli at 2026-09-05T23:55:15+00:00)
+- **Joined retro on astra's CG-240 to CG-247:** CG-242 (hold a config reload while an in-flight worker's fence manifest disagrees) joins the reopen as its third blocker; CG-240 and CG-241 are duplicates of CG-238 and CG-239 and are cancelled; CG-243, CG-244, CG-245, CG-246 and CG-247 move to phase 05 and dispatch first, in that order.
+- **Is phase 05 about adoption or about cost per accepted task?** — answered: Adoption is the headline (CG-215, CG-213, CG-230, CG-216). Cost per accepted task is measured from the phase's first task as a prerequisite, not the headline. (2026-09-05T23:45Z)
+- **How many drafts may a retro file, and at what severity?** — answered: Every finding is filed as a draft at its severity, no cap. The kickoff and the operator prune at approval; a finding that is not worth a task is cancelled with a reason, not dropped silently. (2026-09-05T23:45Z)
+- **Phase-05 numbers** — answered: at most $4 per accepted easy task and at least 90% first-pass approval, measured per accepted task, from the sonnet-era baseline. (2026-09-05T23:45Z)
+- **Decisions made in the owner's name in phase 04** — answered: ratified: automerge by merge commit, review.max_rounds 4, reviews on the easy tier, the codex tier map luna/terra/sol. The eight queue-rotation hand merges were a bug (CG-176), not a policy. (2026-09-05T23:45Z)
+- **Where the operator ledger lives** — answered: one ledger at `context-garden/docs/operator-spend.jsonl`, product and phase attribution welcome. The tool's default path must follow. (2026-09-05T23:45Z)
+- **CG-206** — answered: cancelled; browser notifications first, unattended delivery to a phone parked. (2026-09-05T23:45Z)
+- **Open:** whether codex stays in bypass-permissions mode once CG-239 and CG-242 land; whether a named second team and repository exist for CG-215 and CG-216, or fixtures are the acceptance claim; whether a self product's second approving round should be a persona or a person rather than the same reviewer twice.
+
+## Carried over from phase 04
+
+Blocking the phase-04 close: CG-238 (merged), CG-239 (PR #193, in revise), CG-242 (draft). Moved here from astra's blocking set, first in dispatch order: CG-243 task-file concurrency, CG-244 retro id reservation and duplicate ids as a validate problem, CG-245 the planner in the worker environment, CG-246 worker writes to state.json, task files and the harness config dir, CG-247 Mark done through `_transition`. Follow-ups filed by the retro, refiled once as CG-251 to CG-299 (the two reconcile runs had drawn ids from one counter): brief completeness and revise briefs, planning sequencing and retro evidence, one writer for status, docs drift, one vocabulary, the walkthrough renderer and check retry on a signal exit, per-phase persona runs and run-id validation, acceptance evidence enforced at review, harness failures classified from structured errors, obsolete reviews cancelled, typed check continuations, a scheduler interface and a module-size test, browser-driven tests for notifications and kickoff, and the small items (retro_question kind, backlog noscript, the ambient config dir in tests, a second opinion for self products). Drafts already here: CG-213, CG-215, CG-216, CG-230, CG-236, CG-237 (merged as PR #191), CG-250; CG-222 sits in phase 06. Cancelled: CG-206, CG-240, CG-241. Exceptions for the phase-04 closing document: sixteen hand merges (eight from the queue-rotation bug), reviews to the easy tier at 14:40Z, mediums to sonnet at 14:50Z, automerge_method merge, review.max_rounds 4, codex in bypass-permissions mode, CG-189 redone as CG-225, CG-234's first run killed by hand, four persona runs discarded and restored by hand after CG-237, and the retro branch's drafts refiled by hand as CG-251 to CG-299.
+
+## Features for the next phase
+
+- CG-215: Onboarding: garden onboard drafts a garden from an existing repository (the headline)
+- Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs page and the retro (CG-251)
+- Widen CG-236: every PR with no review recorded for its head is queued on the next tick, on every runner
+- The retro captures its own walkthrough, hand merges and tick duration are in metrics and the rail, and the Numbers section reads the product's ledger (CG-253)
+- redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a tick (CG-254)
+- Operating-profile stops name a tier per harness, one word for the operating point, and user-facing copy drops task ids (CG-255)
+- A draft's acceptance criteria and reading list can be edited inline on the task page (CG-256)
+- CG-230: A tier can name several harness and model options, after the measurement lands
+- CG-213: OpenRouter as an adapter around an existing CLI, after the measurement lands
+- CG-216: Workers on independent remote hosts, last
