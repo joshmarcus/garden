@@ -1,3 +1,8 @@
+---
+frozen: '2026-09-05'
+closed: '2026-09-05'
+---
+
 # phase-03 goals
 
 ## Why this phase

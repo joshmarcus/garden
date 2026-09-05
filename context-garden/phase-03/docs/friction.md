@@ -129,3 +129,15 @@ tests/inprocess.py keys its fakes on argv[0]'s file name, so a harness configure
 
 - The brief's reading list pointed at `../phase-02-friction/docs/retro.md` and its `docs/reviews/` persona reports for context, but this worktree only contains the context-garden repo itself at phase-03 — that sibling phase directory doesn't exist in the checkout, so the retro evidence was unavailable and the fix was derived directly from the described symptom and the form code instead.
 - The task's acceptance criteria were left as 'to be written at planning' and were apparently never filled in before dispatch.
+
+### 2026-09-05 · reported by CG-165 (The ssh runner's remote worker runs in an allowlisted environment) in run 20260905T051447Z-work
+
+- The brief's operating rules reference a "Reading list (read these)" section, but no such section was present in the task.
+
+### 2026-09-05 · reported by CG-175 (A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished task) in run 20260905T051438Z-work
+
+- The reading list pointed at src/garden/scheduler/__init__.py, poll.py and review.py as 'not found when the brief was built', which cost some initial exploration to map the tick ordering (poll -> merge queue -> rebase -> review) before the actual race condition became clear.
+
+### 2026-09-05 · reported by CG-177 (No review is dispatched while a worker run is in flight, and the reap finds a task's worker run by mode, so a review record can never send a running task back to ready) in run 20260905T093410Z-work
+
+- The inlined poll.py in the reading list no longer contains the head-changed review-dispatch path the Context section attributes to the poll; that path predates the CG-137 scheduler split. The current review-dispatch chokepoint is _dispatch_or_defer_reviews.
