@@ -3,7 +3,7 @@ id: CG-245
 title: Isolate planner execution from operator state
 status: draft
 product: context-garden
-phase: phase-04
+phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
@@ -14,7 +14,7 @@ freeze_exception_reason: A stated phase trust goal remains unshipped, and model-
   drive an edit-capable process in the live garden with operator credentials.
 retro_blocking: true
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-05T23:15:10+00:00'
+updated: '2026-09-05T23:58:00+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:15:10+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:58:00+00:00 moved from context-garden/phase-04 to context-garden/phase-05

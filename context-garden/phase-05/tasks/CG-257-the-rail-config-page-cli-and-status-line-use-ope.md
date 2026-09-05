@@ -1,0 +1,26 @@
+---
+id: CG-257
+title: The rail, Config page, CLI and status line use 'operating profile', 'stop' and '
+status: draft
+product: context-garden
+phase: phase-05
+depends_on: []
+priority: 1
+difficulty: medium
+reading: []
+created: '2026-09-05T23:58:10+00:00'
+updated: '2026-09-05T23:58:10+00:00'
+discovered_from: persona:designer:context-garden/phase-04
+---
+
+## Goal
+
+Pick one word for the operating point and rename the observe level to 'feed' or 'observe level' on every surface and in docs.
+
+## Context
+
+Raised by the designer persona review (operating profile). persona:designer:context-garden/phase-04.
+
+## Log
+
+- 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-246 (renumbered by the operator: two reconcile runs drew ids from one counter)

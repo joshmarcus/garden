@@ -1,7 +1,7 @@
 ---
 id: CG-241
 title: 'Complete CG-239: contain reading paths and scheduler git'
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,7 +14,7 @@ freeze_exception_reason: The security review demonstrates both arbitrary local-f
   prompts and worker-triggered code execution with scheduler credentials.
 retro_blocking: true
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-05T23:15:09+00:00'
+updated: '2026-09-05T23:57:12+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:15:09+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:57:12+00:00 cancelled by the joined retro (2026-09-05 23:55Z): duplicate of CG-239, which is already merged or in review

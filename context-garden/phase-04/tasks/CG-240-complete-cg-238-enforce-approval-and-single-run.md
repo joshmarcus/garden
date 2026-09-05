@@ -1,7 +1,7 @@
 ---
 id: CG-240
 title: 'Complete CG-238: enforce approval and single-run admission'
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,7 +14,7 @@ freeze_exception_reason: The phase explicitly promises that incomplete briefs ne
   demonstrated UI and CLI paths bypass the gate and can launch competing workers.
 retro_blocking: true
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-05T23:15:09+00:00'
+updated: '2026-09-05T23:57:12+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:15:09+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:57:12+00:00 cancelled by the joined retro (2026-09-05 23:55Z): duplicate of CG-238, which is already merged or in review

@@ -3,7 +3,7 @@ id: CG-244
 title: Reserve retro task IDs and survive duplicate records
 status: draft
 product: context-garden
-phase: phase-04
+phase: phase-05
 depends_on: []
 priority: 1
 difficulty: hard
@@ -14,7 +14,7 @@ freeze_exception_reason: Running this phase's own retro can create colliding tas
   every page and tick, so postponing the fix would expose closure itself to the defect.
 retro_blocking: true
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-05T23:15:10+00:00'
+updated: '2026-09-05T23:58:00+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:15:10+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:58:00+00:00 moved from context-garden/phase-04 to context-garden/phase-05
