@@ -2,7 +2,7 @@
 id: CG-065
 title: 'Plates and plants: positional assignment, invalid --plant, --out, atomic publish, one-line source
   rows'
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/82
 attempts: 2
 last_dispatched_at: '2026-09-05T00:19:31+00:00'
 created: '2026-09-04T18:35:08+00:00'
-updated: '2026-09-05T00:19:31+00:00'
+updated: '2026-09-05T00:25:34+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,4 @@ Five small defects in the plates and plants code, all raised by Codex reviews on
 - 2026-09-05T00:04:08+00:00 dispatched revise run 20260905T000408Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8603 tokens)
 - 2026-09-05T00:10:17+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$2.46
 - 2026-09-05T00:19:31+00:00 dispatched revise run 20260905T001931Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9458 tokens)
+- 2026-09-05T00:25:34+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/82: Fixed the one remaining pre-PR check failure (test_set_budget_none_removes_cap), which was a pre-existing test bug unrelated to this task's plates/plants scope — it reproduces on the branch's own base commit. Full suite (356 passed, 3 skipped) and ruff both pass; the five plates/plants fixes from the prior attempt remain intact and SOURCES.md still renders as one table. cost=$1.67

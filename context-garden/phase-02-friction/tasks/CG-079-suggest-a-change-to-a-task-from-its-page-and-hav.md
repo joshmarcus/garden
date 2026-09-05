@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
 last_dispatched_at: '2026-09-05T00:19:32+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T00:19:32+00:00'
+updated: '2026-09-05T00:26:28+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,4 @@ Design:
 - 2026-09-05T00:07:56+00:00 dispatched revise run 20260905T000756Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13305 tokens)
 - 2026-09-05T00:15:41+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$2.64
 - 2026-09-05T00:19:32+00:00 dispatched revise run 20260905T001932Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14410 tokens)
+- 2026-09-05T00:26:28+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Fixed the failing pre-PR check: test_set_budget_none_removes_cap was missing the intermediate reap tick its two sibling budget tests use, so the first batch's finished runs held both max_parallel slots and the retried tasks could not dispatch. Added the reap tick; full test suite and ruff now pass. cost=$2.63

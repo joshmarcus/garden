@@ -1,7 +1,7 @@
 ---
 id: CG-121
 title: Planner and friction reports can still create tasks in a closed phase
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -22,7 +22,7 @@ discovered_from: CG-078
 attempts: 1
 last_dispatched_at: '2026-09-04T23:36:28+00:00'
 created: '2026-09-04T22:59:04+00:00'
-updated: '2026-09-04T23:58:23+00:00'
+updated: '2026-09-05T00:26:48+00:00'
 ---
 
 CG-078 guards `new-task` and the scheduler, per the spec. `garden plan`/`import_plan`, the web plan form and friction draft-task creation can still write tasks into a closed phase (the phase page for a closed phase no longer offers the forms, but the CLI paths remain). Decide whether those paths should refuse or implicitly reopen.
@@ -44,3 +44,4 @@ Discovered by CG-078 (Closed phases leave the rail and live in a browsable herba
 - 2026-09-04T23:46:08+00:00 opened https://github.com/joshmarcus/context-garden/pull/88 (base garden/cg-078-closed-phases-leave-the-rail-and-live-in-a-brows): Guarded garden plan/import_plan and friction-report (CLI + web) against writing tasks into a closed phase, mirroring CG-078's new-task convention: plan refuses unless --reopen (dry-run still allowed; web plan refuses outright), friction-report still records to friction.md but skips creating a draft task when the phase is closed. cost=$4.36
 - 2026-09-04T23:48:50+00:00 automated review: approve — Guards garden plan/import_plan, the web plan endpoint, and friction draft-task creation against closed phases, mirroring CG-078's new-task convention; plan refuses unless --reopen, friction records but skips the draft. Well-tested (25 pass) and cleanly scoped. cost=$0.69
 - 2026-09-04T23:58:23+00:00 parent CG-078 merged; rebased onto main and retargeted the PR
+- 2026-09-05T00:26:48+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/88

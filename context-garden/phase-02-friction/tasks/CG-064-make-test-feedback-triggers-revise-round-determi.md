@@ -1,7 +1,7 @@
 ---
 id: CG-064
 title: Make test_feedback_triggers_revise_round deterministic
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/64
 attempts: 1
 last_dispatched_at: '2026-09-05T00:19:31+00:00'
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-05T00:19:31+00:00'
+updated: '2026-09-05T00:26:49+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,11 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 - 2026-09-05T00:19:07+00:00 no-change accepted by the person (accepted: the failing check was CG-127's bug on main, fixed by #89; main is green); resuming the round without a new work run
 - 2026-09-05T00:19:20+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
 - 2026-09-05T00:19:31+00:00 dispatched revise run 20260905T001931Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~9054 tokens)
+- 2026-09-05T00:24:42+00:00 push failed: git push -u origin HEAD:refs/heads/garden/cg-064-make-test-feedback-triggers-revise-round-determi (in /home/joshua/work/worktrees/CG-064): To https://github.com/joshmarcus/context-garden.git
+ ! [rejected]        HEAD -> garden/cg-064-make-test-feedback-triggers-revise-round-determi (non-fast-forward)
+error: failed to push some refs to 'https://github.com/joshmarcus/context-garden.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.12
+- 2026-09-05T00:26:49+00:00 triage: marked ready for review
