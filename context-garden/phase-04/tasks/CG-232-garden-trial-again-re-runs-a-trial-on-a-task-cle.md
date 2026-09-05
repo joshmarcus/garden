@@ -2,7 +2,7 @@
 id: CG-232
 title: 'garden trial --again re-runs a trial on a task cleanly: closes or archives the previous contender
   PRs, clears the task''s cached PR state, and names branches from the task''s base, not the last winner'
-status: running
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/187
 attempts: 1
 last_dispatched_at: '2026-09-05T20:25:55+00:00'
 created: '2026-09-05T19:47:53+00:00'
-updated: '2026-09-05T20:25:55+00:00'
+updated: '2026-09-05T20:36:30+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,7 @@ A trial can be run again on the same task without hand surgery: `garden trial <t
 - 2026-09-05T20:25:34+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/187: Addressed the review's blocking finding: --again's PR closes now reflect back into the already-written trials.jsonl record via a new TrialLog.mark_closed, so trial-history views never show a PR as open after --again has closed it. cost=$0.59
 - 2026-09-05T20:25:39+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/cli/loop.py); a rebase agent will resolve it
 - 2026-09-05T20:25:55+00:00 dispatched rebase run 20260905T202555Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9795 tokens)
+- 2026-09-05T20:30:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/187: Rebased onto origin/main; resolved the single conflict in src/garden/cli/loop.py's trial() signature by keeping both sides' new options (--wait/--interval from main's CG-231, --again/--keep-prs from this branch) rather than letting one clobber the other. Rebase completed cleanly, no other files touched. cost=$0.22
+- 2026-09-05T20:34:50+00:00 automated review: approve — The --again reset, branch naming, and trial-history backfill are all correctly implemented and verified against a full test run (910 passed) and lint; no correctness, scope, or description issues found. cost=$0.35
+- 2026-09-05T20:34:55+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T20:36:30+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/187

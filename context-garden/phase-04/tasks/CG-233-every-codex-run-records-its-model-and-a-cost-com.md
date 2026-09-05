@@ -2,7 +2,7 @@
 id: CG-233
 title: Every codex run records its model and a cost computed from its usage and a per-model price table,
   so cost per accepted task compares across harnesses
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -15,8 +15,11 @@ reading:
 - src/garden/events.py
 - src/garden/config.py
 - context-garden/phase-05/specs/cost-aware-model-routing.md
+branch: garden/cg-233-every-codex-run-records-its-model-and-a-cost-com
+attempts: 1
+last_dispatched_at: '2026-09-05T20:30:45+00:00'
 created: '2026-09-05T20:29:25+00:00'
-updated: '2026-09-05T20:29:25+00:00'
+updated: '2026-09-05T20:30:45+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ The user on 2026-09-05, after the CG-225 trials: "let's be sure to apply the abo
 ## Log
 
 - 2026-09-05T20:29:25+00:00 approved (web)
+- 2026-09-05T20:30:45+00:00 dispatched work run 20260905T203030Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~26792 tokens)
