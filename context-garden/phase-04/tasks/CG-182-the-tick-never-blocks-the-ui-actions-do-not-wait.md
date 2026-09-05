@@ -2,7 +2,7 @@
 id: CG-182
 title: 'The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records
   outside the tick'
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-182-the-tick-never-blocks-the-ui-actions-do-not-wait
 pr: https://github.com/joshmarcus/context-garden/pull/129
 attempts: 1
-last_dispatched_at: '2026-09-05T10:31:45+00:00'
+last_dispatched_at: '2026-09-05T11:29:43+00:00'
 created: '2026-09-05T10:00:03+00:00'
-updated: '2026-09-05T11:22:38+00:00'
+updated: '2026-09-05T11:29:43+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,5 @@ Seen by the user on 2026-09-05 at 09:43 and again at 09:55 ("the web page isn't 
 - 2026-09-05T10:31:14+00:00 approved (web)
 - 2026-09-05T10:31:45+00:00 dispatched work run 20260905T103136Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~23545 tokens)
 - 2026-09-05T11:22:38+00:00 opened https://github.com/joshmarcus/context-garden/pull/129 (base main): The web actions take a short action-only lock (never the tick's), and pre-PR checks, base probes, pre-merge rebase-checks and CI analysers all run as detached `check` run records reaped on a later tick, so no product-check subprocess runs inside tick(); the tick reports its own duration and slowest step and warns over budget. cost=$29.19
+- 2026-09-05T11:29:39+00:00 automated review requested changes: Solid non-blocking-tick conversion with all four acceptance criteria tested, but detaching the pre-merge check opens a multi-tick window where the merge queue rebases a second candidate while the head's check is in flight, breaking CG-176's one-head invariant in the very config this task enables. cost=$3.25
+- 2026-09-05T11:29:43+00:00 dispatched revise run 20260905T112943Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~25146 tokens)
