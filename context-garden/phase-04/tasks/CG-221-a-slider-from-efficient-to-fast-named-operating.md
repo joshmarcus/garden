@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/175
 attempts: 1
 last_dispatched_at: '2026-09-05T18:05:54+00:00'
 created: '2026-09-05T16:51:03+00:00'
-updated: '2026-09-05T18:14:07+00:00'
+updated: '2026-09-05T18:19:00+00:00'
 ---
 
 ## Goal
@@ -63,3 +63,4 @@ The user on 2026-09-05, after a day that spent $1,100 and then cut the tier map 
 - 2026-09-05T18:05:35+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/charts.py, src/garden/web/pages/costs.py, tests/test_costs.py); a rebase agent will resolve it
 - 2026-09-05T18:05:54+00:00 dispatched rebase run 20260905T180554Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9646 tokens)
 - 2026-09-05T18:14:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/175: Rebased onto origin/main; resolved conflicts in src/garden/charts.py, src/garden/web/pages/costs.py, and tests/test_costs.py by merging main's compaction-mark annotations (CG-223) with this branch's profile_changed annotations (CG-221) into one cost_stack_svg(compactions=, annotations=) call and one costs-page handler, keeping the session filter from main and fixing a stale _bucket_key reference to the renamed bucket_key. Full test suite (879 passed, 3 skipped) and ruff pass. cost=$0.62
+- 2026-09-05T18:19:00+00:00 automated review: approve — All five acceptance criteria are met with direct test coverage; the full suite (879 passed) and ruff pass, and the effective()/profile precedence mechanism is threaded consistently through dispatch, review, persona, retro and model selection. Two non-blocking polish nits found, no correctness or scope issues. cost=$0.64

@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
 last_dispatched_at: '2026-09-05T18:01:18+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T18:11:09+00:00'
+updated: '2026-09-05T18:18:59+00:00'
 ---
 
 ## Goal
@@ -110,3 +110,4 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=
 - 2026-09-05T18:09:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Rebased onto origin/main; one conflict in src/garden/web/pages/phase.py's phase_page ctx() call, resolved by keeping both kickoff=_kickoff_panel(...) (from main) and retro_verdict=verdict_view (from this branch) as separate kwargs. Full test suite (866 passed, 3 skipped) and ruff pass on the final 7-commit branch. Checked the current PR #139 body against the rebased code — it doesn't claim anything main now already has, so no pr_body change is needed. cost=$0.40
 - 2026-09-05T18:09:35+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
 - 2026-09-05T18:11:09+00:00 automated review: approve — CG-178 delivers the three-verdict retro end-to-end (verdict filing, close-phase guard, verdict surfaces on both phase and retro pages, Inbox decision card) with thorough tests; full suite and ruff pass, and the branch is now correctly scoped to just this task. cost=$1.12
+- 2026-09-05T18:18:59+00:00 nothing to fix; needs-human stop cleared by hand

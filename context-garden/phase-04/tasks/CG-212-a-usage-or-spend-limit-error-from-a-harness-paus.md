@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T17:25:29+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T17:52:02+00:00'
+updated: '2026-09-05T18:18:59+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T17:51:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Extended the CG-212 harness-pause mechanism to trial contenders, automated review and persona/compare aux runs: each now refuses to dispatch while its harness is paused and pauses the harness (instead of failing) if it hits a quota env_error mid-round, per the reviewer's feedback on PR #168. cost=$6.13
 - 2026-09-05T17:51:55+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
 - 2026-09-05T17:52:02+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/harness.py); a rebase agent will resolve it
+- 2026-09-05T18:18:59+00:00 triage: changes requested by hand: Address the reviewer's blocking finding: trial contenders, automated reviews and persona/compare aux runs are not gated
