@@ -263,3 +263,7 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T201649Z-revise
 
 - The brief's reading list didn't include review.py itself even though the fix and blocking finding were both there; had to read it directly rather than from the inlined excerpt.
+
+### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T203030Z-revise
+
+- Rebasing onto a task (CG-229) whose own commit message assumed CG-212 had already merged ("the convention CG-212 extends with quota") produced not a textual conflict but a design conflict that only showed up as a failing test after a clean rebase — worth flagging for planning so dependent tasks are sequenced rather than merged out of order.
