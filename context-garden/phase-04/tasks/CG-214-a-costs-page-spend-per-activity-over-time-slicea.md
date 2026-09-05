@@ -17,10 +17,10 @@ reading:
 - src/garden/plants.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 branch: garden/cg-214-a-costs-page-spend-per-activity-over-time-slicea
-attempts: 1
-last_dispatched_at: '2026-09-05T16:08:22+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-05T16:09:43+00:00'
 created: '2026-09-05T16:05:50+00:00'
-updated: '2026-09-05T16:08:22+00:00'
+updated: '2026-09-05T16:09:43+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,5 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - 2026-09-05T16:07:01+00:00 dispatched work run 20260905T160647Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16782 tokens)
 - 2026-09-05T16:07:13+00:00 reset to ready by hand
 - 2026-09-05T16:08:22+00:00 dispatched work run 20260905T160822Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16833 tokens)
+- 2026-09-05T16:09:28+00:00 attempt 1 failed: worker exited 1: worker error: success Not logged in · Please run /login; will retry
+- 2026-09-05T16:09:43+00:00 dispatched work run 20260905T160943Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16904 tokens)
