@@ -2,7 +2,7 @@
 id: CG-229
 title: Trial contender worktrees get the product setup like any work run, and a contender that reports
   a blocked environment is a harness failure, not a model loss
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,8 +14,11 @@ reading:
 - src/garden/runner/local.py
 - src/garden/trials.py
 - tests/test_trials.py
+branch: garden/cg-229-trial-contender-worktrees-get-the-product-setup
+attempts: 1
+last_dispatched_at: '2026-09-05T18:52:21+00:00'
 created: '2026-09-05T18:50:57+00:00'
-updated: '2026-09-05T18:50:58+00:00'
+updated: '2026-09-05T18:52:21+00:00'
 ---
 
 ## Goal
@@ -36,3 +39,4 @@ A model trial compares models, not environments. Every contender's worktree is p
 ## Log
 
 - 2026-09-05T18:50:58+00:00 approved (web)
+- 2026-09-05T18:52:21+00:00 dispatched work run 20260905T185206Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16679 tokens)

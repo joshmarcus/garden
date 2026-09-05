@@ -1,7 +1,7 @@
 ---
 id: CG-226
 title: A TUI answer flow for kickoff question cards
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,9 +16,13 @@ reading:
 - src/garden/scheduler/discovered.py
 - src/garden/web/pages/phase.py
 - src/garden/cli/planning.py
+branch: garden/cg-226-a-tui-answer-flow-for-kickoff-question-cards
+harness: codex
 discovered_from: CG-224
+attempts: 1
+last_dispatched_at: '2026-09-05T18:57:58+00:00'
 created: '2026-09-05T17:39:03+00:00'
-updated: '2026-09-05T17:48:28+00:00'
+updated: '2026-09-05T18:57:58+00:00'
 ---
 
 ## Goal
@@ -38,3 +42,4 @@ Discovered by CG-224 (Phase kickoff: before a phase starts, flag topics that nee
 - 2026-09-05T17:39:03+00:00 discovered by CG-224
 - 2026-09-05T17:48:28+00:00 approved (web)
 - 2026-09-05T17:48:28+00:00 priority 1 -> 3 (web)
+- 2026-09-05T18:57:58+00:00 dispatched work run 20260905T185744Z-work via local [codex] (fresh session, base main, ~21166 tokens)
