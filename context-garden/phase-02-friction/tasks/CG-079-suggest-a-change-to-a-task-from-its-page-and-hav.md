@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-079-suggest-a-change-to-a-task-from-its-page-and-hav
 pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
-last_dispatched_at: '2026-09-04T22:45:11+00:00'
+last_dispatched_at: '2026-09-05T00:07:56+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T00:02:15+00:00'
+updated: '2026-09-05T00:07:56+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Design:
 - 2026-09-04T22:45:11+00:00 dispatched work run 20260904T224502Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~11192 tokens)
 - 2026-09-04T23:06:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/75 (base main): Added task suggestions: capture on the task page and via `garden suggest`, a new cheap `edit` run that folds pending suggestions into the task body and marks them integrated (with the old/new body kept for a diff), running tasks' suggestions ride the next revise brief, and the page/inbox show suggestion state. Scheduler-owned fields are untouched. cost=$10.22
 - 2026-09-05T00:02:15+00:00 PR conflicts with main (src/garden/scheduler.py); revise run will rebase and resolve
+- 2026-09-05T00:07:56+00:00 dispatched revise run 20260905T000756Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~13305 tokens)

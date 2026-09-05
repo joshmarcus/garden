@@ -1,7 +1,7 @@
 ---
 id: CG-128
 title: test_set_budget_none_removes_cap fails under Python 3.14
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -11,7 +11,7 @@ reading:
 - docs/worker-protocol.md
 discovered_from: CG-062
 created: '2026-09-05T00:07:08+00:00'
-updated: '2026-09-05T00:07:08+00:00'
+updated: '2026-09-05T00:07:57+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,4 @@ Discovered by CG-062 (A worker silent for too long is flagged and stopped before
 ## Log
 
 - 2026-09-05T00:07:08+00:00 discovered by CG-062
+- 2026-09-05T00:07:57+00:00 duplicate of CG-127: same failing test, one cause

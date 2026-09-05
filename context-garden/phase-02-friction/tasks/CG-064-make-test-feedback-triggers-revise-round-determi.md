@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-064-make-test-feedback-triggers-revise-round-determi
 pr: https://github.com/joshmarcus/context-garden/pull/64
 attempts: 1
-last_dispatched_at: '2026-09-05T00:02:27+00:00'
+last_dispatched_at: '2026-09-05T00:07:56+00:00'
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-05T00:02:27+00:00'
+updated: '2026-09-05T00:07:56+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,5 @@ Failed twice on 2026-09-04: once as a pre-PR check while two other workers loade
 - 2026-09-04T22:34:29+00:00 automated review: approve — Correctly identifies and fixes a byte-identical-commit collision in the fake harness (independently reproduced) as the real cause of the flake, with a deterministic regression test and a legitimate assertion rescoping. Both acceptance criteria met; 50/50 local runs clean. cost=$0.74
 - 2026-09-05T00:02:12+00:00 PR conflicts with main (tests/test_scheduler.py); revise run will rebase and resolve
 - 2026-09-05T00:02:27+00:00 dispatched revise run 20260905T000226Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~12723 tokens)
+- 2026-09-05T00:07:34+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$1.68
+- 2026-09-05T00:07:56+00:00 dispatched revise run 20260905T000755Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8802 tokens)
