@@ -2,72 +2,60 @@
 
 _Drafted by `garden retro` from context-garden/phase-04; edit before planning._
 
-# phase-05 goals
+# phase-05 goals draft
 
-_Drafted by `garden retro` from context-garden/phase-04 on 2026-09-05. The owner's answers to the retro's questions go under Decisions._
+## Purpose
+After phase-04's security, data-integrity and admission-control blockers land, help a second team bring an existing repository into a working garden, with cost per accepted task measured before routing changes. This adoption headline is provisional pending the owner's decision; measurement is required under either headline.
 
-## Why this phase
+## Entry conditions
+Phase 04 remains reopened until the blocking work is complete. Reuse CG-238 and CG-239 rather than duplicating them. Confirm regression evidence for reading containment, safe scheduler git, held untrusted reloads, isolated planning and worker control state, concurrent task saves, reserved retro IDs, single-run admission and base-branch completion. Performance misses alone do not prolong phase 04, but its closing document must label them honestly.
 
-**In one sentence: make the numbers readable, then spend on what they say.** Phase 04 finished the leaveability mechanism (a non-blocking tick, live config, harness pauses, restart recovery, hard-tier queue merges) and the operator's share of spend fell to under a third. But hand merges rose to 16 of 57, cost per easy task rose to $5.04, rebase rounds sit at 1.57 per merge, first-pass approval fell to about 75%, and three definition-of-done lines were never measured because nothing in the tool measures them. The personas agree the surfaces drifted behind the mechanism and that the brief gate and the fence both have open doors. Phase 05 first makes the garden report cost per accepted task and first-pass approval per model, tier and harness, closes the trust gaps the security review verified, then takes the routing and onboarding features that depend on those numbers.
+## 1. Measure accepted outcomes before optimizing
+Ship cost per accepted task and first-pass approval by model, tier and harness before CG-213 or CG-230 experiments. Define accepted as merged into the product base, include failed and revision work, state mixed-model attribution and distinguish unpriced usage from zero cost. Report hand merges with reasons, mechanical and agent rebases separately, tick mean/max and operator spend with explicit product/phase attribution. Reconcile the reported phase-04 baseline: 16/57 hand merges, $5.04 per easy task, 1.57 rebase rounds per merge and 71–79% first-pass approval. Retrieve an exact operator-share comparison rather than repeating inconsistent historical estimates. Proposed next-phase targets, pending owner approval: accepted easy-task cost at most $4 and first-pass approval at least 90% on a stated comparable cohort; retain zero unexplained hand merges and the under-ten-second tick and under-one-second action goals.
 
-## Goals
+## 2. Complete the unattended review path
+Widen existing CG-236 to every eligible PR with no review for its current head, including trial winners and manual runners. Align manual resume semantics, prevent duplicate review dispatch and discard stale-head verdicts. Cancel obsolete review processes promptly. Classify environment failures from harness error results rather than quoted worker prose; inspect the referenced CG-237 before assigning overlapping work. Test quota recovery without spending attempts on environment failures and without an infinite false-positive pause loop.
 
-1. **The numbers exist before the experiments.** Cost per accepted task and first-pass approval per model, tier and harness in garden metrics, the Costs page and the retro's Numbers section; hand merges and tick duration in metrics and the rail; the retro captures its own walkthrough before the personas run and refuses to run them without it. CG-213 and CG-230 dispatch only after this merges.
+## 3. Make onboarding the adoption slice
+Keep CG-215 as the existing onboarding task. Its output must pass doctor on a non-Python repository fixture without hand edits and produce criteria and reading paths accepted by the common gate. Use the isolated planner. Name a second team and repository for an observed onboarding session; if none is available, explicitly limit the acceptance claim to fixture validation. Fix brief repair and first-run guidance where they obstruct that journey.
 
-2. **Every PR reaches the queue and every status write is one writer.** Any PR with no review recorded for its head is queued on the next tick, on every runner (widen CG-236); resume means the same on the manual runner; Scheduler.mark_done and unapprove exist and a source-grep test forbids status assignment elsewhere; task files get optimistic concurrency and a duplicate id degrades to a validate problem; retro-filed drafts cannot collide with live ids.
+## 4. Make routing valid, then test it
+Make operating profiles reference compatible per-harness tier maps and use one vocabulary for operating profile versus observation feed. Do not send Claude model IDs to a Codex harness or claim economy is cheaper without accepted-outcome evidence. Then evaluate existing CG-230's harness/model pool with member attribution and paused-member avoidance. Keep CG-213 to an adapter around an existing compatible CLI if pursued; do not build another tool-calling loop in this phase.
 
-3. **Trust matches the mechanism, round three.** The brief-gate and git-config items from the reopen are in; the config reload holds while an in-flight fence manifest disagrees; notify.command runs scrubbed; the planner and kickoff run in the worker environment; each worker gets a private harness config dir with only credentials; state.json is restored and task files are attributed rather than exempt.
+## 5. Reduce the cost of operating and planning
+Add safe redispatch and canary-backed pin operations as separate sequenced slices. Build briefs from explicit criteria, current source revisions, real diagnostic feedback and inlined retro evidence. At planning, sequence shared schema and behavior work rather than relying on unmerged siblings. Mechanically refuse approving reviews with missing or negative criterion evidence. Document recovery ordering and make check continuations and shared scheduler interfaces explicit.
 
-4. **Briefs are right the first time.** No brief ships with an empty or unresolved reading list; inlined files come from the task's base, not a dirty worktree; revise briefs restate the criteria and the concrete blocker; dependent tasks are sequenced at planning; retro evidence is inlined. Per-criterion evidence is enforced: a reviewer met:false or missing evidence is a mechanical changes_requested.
+## 6. Make the next retro trustworthy and manageable
+Capture a current walkthrough before personas, including Costs, Backlog and Retro, and fix text extraction so hidden content and attributes do not become phantom UI findings. Add execution coverage for notification and kickoff interactions. Every finding remains visible with provenance and an existing-task link where applicable; automatic draft severity and cap remain governed by the owner's decision. Do not silently replace CG-187's policy. File each approved feature or follow-up once, deduplicating persona findings, feature entries and kickoff output.
 
-5. **The retro leaves a list the owner can triage in one sitting.** Only high findings become drafts; the rest render on the retro page with file-as-task; the retro reports what it held back. One vocabulary across rail, Config, CLI and Inbox; no task ids in copy; one needs-you predicate; the scaffolded operate skill, design.md, roadmap.md and the architecture map match the product.
+## Surface and documentation completion
+Use one needs-you predicate across interfaces; make incomplete-brief cards lead to repair; remove task IDs, redundant controls and contradictory restart guidance. Keep kickoff subordinate to active work. Align watch and serve configuration behavior, operator skill templates, design and roadmap claims and the architecture map. Enforce the module-size limit and remove implementation-only tests and test-only production wrappers where behavior coverage replaces them.
 
-6. **The features.** Onboarding from an existing repository (CG-215) as the headline; harness-aware profile stops; redispatch and pin commands; inline editing of a draft's criteria and reading list; a tier that names several harness and model options (CG-230) once goal 1 can read it; OpenRouter only as an adapter around an existing CLI (CG-213 option b) and only after goal 1.
+## Scope accounting and non-goals
+Record CG-206 as cancelled and decide separately whether unattended notifications remain required. Use the final task list for CG-189 and CG-225 despite the earlier persona snapshot describing cancellation. Confirm phase-05 statuses for CG-213, CG-215, CG-216 and CG-230, and resolve CG-222's unknown disposition; do not invent statuses. Defer CG-216's HTTP remote-worker service until a named team needs it. No hosted multi-user expansion, new agent loop, broad evaluation corpus or default TUI-parity program. Do not raise concurrency merely to finish faster before accepted-outcome measurements support the change.
 
-## Non-goals
-
-- Workers on independent remote hosts over HTTP (CG-216) until a named second team asks.
-- A garden-owned tool-calling loop for OpenRouter.
-- TUI parity tasks filed by default.
-- Changing the operating point before goal 1 lands.
-
-## Definition of done
-
-Measured with `garden metrics` against phase 04, by the tool.
-
-- cost per accepted easy task at or under $4 (phase 04: $5.04); first-pass approval at or above 90% (phase 04: about 75%); both reported per model, tier and harness.
-- hand merges zero on every tier and runner (phase 04: 16 of 57); rebase rounds per merge under 0.5 (phase 04: 1.57).
-- a phase-05 walkthrough committed by the retro before the personas run; tick duration and hand merges visible in the rail.
-- no task reaches ready or a run without Scheduler.approve, on any surface; no brief ships with an empty or unresolved reading list.
-- the security persona's three phase-04 highs closed and no new high.
-- the retro files no more drafts than the owner's cap and reports what it held back.
-- a garden doctor pass from garden onboard on a non-Python fixture with no hand edits.
-- operator share of spend below phase 04's.
-
-## Carried over from phase 04
-
-Blocking the phase-04 close: the approve-gate bypasses and the reading-list and git-config fence. Follow-ups filed by the retro: config-reload hold, task-file concurrency and duplicate ids, the scrubbed planner, the private harness config dir, one writer for status, brief completeness, planning sequencing, docs drift, vocabulary, the walkthrough renderer and check retry, per-phase persona runs, and the small items. Drafts already in phase 05: CG-213, CG-215, CG-216, CG-230, CG-236, CG-237; CG-222 sits in phase 06. Cancelled: CG-206 (notify.command in the driving garden is an operator edit, not a product task). Exceptions for the phase-04 closing document: sixteen hand merges (eight queue-rotation), reviews moved to the easy tier at 14:40, mediums to sonnet at 14:50, automerge_method merge, review.max_rounds 4, codex in bypass-permissions mode, and four persona runs discarded and restored by hand after CG-237.
+## Closure evidence
+The phase-04 closing record must include the exact live metric command outputs or explicit unavailable markers, operator spend numerator and denominator, all hand-merge and outside-tick exceptions, final blocker task IDs, current walkthrough and owner policy answers. Phase 05 closes against the same documented definitions, with its current walkthrough captured before review and its known limitations stated explicitly.
 
 ## Features for the next phase
 
-- CG-240: Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs page and the retro
-- CG-241: The retro files only high findings as drafts and keeps the rest on the retro page with a one-press file-as-task
-- CG-242: The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail
-- CG-243: redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a tick
-- CG-244: Operating-profile stops name a tier per harness, and user-facing copy drops task ids
-- CG-245: A draft's acceptance criteria and reading list can be edited inline on the task page
+- CG-248: Measure cost per accepted task and first-pass approval
+- CG-249: Keep retro triage within a visible draft budget
+- CG-250: Add safe redispatch and canary-backed pin commands
+- CG-251: Make retros capture and measure their own evidence
+- CG-252: Make operating profiles harness-aware and consistently named
 
 ## Follow-ups carried from the retro verdict
 
-- CG-277: Live config reload holds while any in-flight worker's fence manifest disagrees with garden.yaml on disk
-- CG-278: Task files get optimistic concurrency and a duplicate id is a validate problem, not a fatal exception
-- CG-279: The planner and synchronous kickoff run in the worker environment
-- CG-280: Each worker gets a private harness config dir holding only credentials, and the fence covers state.json and task files
-- CG-281: Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep test
-- CG-282: A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria and the concrete blocker
-- CG-283: Planning sequences dependent tasks and inlines retro evidence into the brief
-- CG-284: Docs match the mechanism: the scaffolded operate skill, design.md and roadmap.md non-goals, and the architecture module map
-- CG-285: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-- CG-286: The walkthrough renderer skips hidden elements and attributes, and check runs retry once on a signal exit
-- CG-287: Persona runs are recorded per phase and the retro validates the run id it reads
-- CG-288: Small follow-ups: retro_question kind, backlog noscript, CI flake, ambient config dir in tests, a second opinion for self products
+- CG-284: Build revision briefs from current criteria and failure evidence
+- CG-285: Sequence tasks that share a behavior or schema
+- CG-286: Enforce acceptance evidence at review finalization
+- CG-287: Classify harness failures from structured error results
+- CG-288: Cancel obsolete review runs when tasks finish
+- CG-289: Make check continuations explicit and recoverable
+- CG-290: Enforce scheduler interfaces and the module-size cap
+- CG-291: Unify actionable counts and brief-repair controls
+- CG-292: Finish phase-page and CLI interaction consistency
+- CG-293: Test notification and kickoff behavior in a browser
+- CG-294: Align config reload behavior and operating documentation
+- CG-295: Validate persona-run provenance and scrub notifications
