@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-079-suggest-a-change-to-a-task-from-its-page-and-hav
 pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
-last_dispatched_at: '2026-09-05T00:19:32+00:00'
+last_dispatched_at: '2026-09-05T00:30:22+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T00:26:28+00:00'
+updated: '2026-09-05T00:33:06+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,7 @@ Design:
 - 2026-09-05T00:15:41+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$2.64
 - 2026-09-05T00:19:32+00:00 dispatched revise run 20260905T001932Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14410 tokens)
 - 2026-09-05T00:26:28+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Fixed the failing pre-PR check: test_set_budget_none_removes_cap was missing the intermediate reap tick its two sibling budget tests use, so the first batch's finished runs held both max_parallel slots and the retried tasks could not dispatch. Added the reap tick; full test suite and ruff now pass. cost=$2.63
+- 2026-09-05T00:30:16+00:00 automated review requested changes: Code meets all four acceptance criteria with clean tests and correct scheduler integration; full suite and ruff pass. The only blocker is one line of process/scar-tissue narration in the PR description. cost=$1.33
+- 2026-09-05T00:30:22+00:00 dispatched revise run 20260905T003021Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14064 tokens)
+- 2026-09-05T00:33:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Addressed the sole review blocker by removing the process-narration sentence from the PR description; the budget-test rationale stays in the Friction section. No code change was needed — the suggestions feature already met all four acceptance criteria and the full suite (366 passed) and ruff pass. cost=$0.41
+- 2026-09-05T00:33:06+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub

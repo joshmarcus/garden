@@ -1,7 +1,7 @@
 ---
 id: CG-080
 title: Change parallelism from the configuration page and the CLI, effective next tick
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/72
 attempts: 1
 last_dispatched_at: '2026-09-05T00:19:32+00:00'
 created: '2026-09-04T19:16:39+00:00'
-updated: '2026-09-05T00:26:30+00:00'
+updated: '2026-09-05T00:28:00+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Asked during the first live run, after three restarts in an hour to move `max_pa
 - 2026-09-05T00:19:32+00:00 dispatched revise run 20260905T001932Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6016 tokens)
 - 2026-09-05T00:23:22+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/72: Rebased the branch onto the current main, resolving the two-hunk conflict in src/garden/web/app.py by keeping both sides' additions (closed_count + max_parallel in ctx(), budget_overrides + max_parallel controls in the config route). All tests (359 passed) and ruff lint pass after rebase. cost=$0.86
 - 2026-09-05T00:26:30+00:00 automated review: approve — Live max_parallel override via garden set/clear and the Configuration page, effective next tick; all three acceptance criteria met with passing tests, and the tick reloads state from disk so no restart is needed. cost=$0.67
+- 2026-09-05T00:28:00+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/72

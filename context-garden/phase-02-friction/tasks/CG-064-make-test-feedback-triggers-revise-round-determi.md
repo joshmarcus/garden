@@ -1,7 +1,7 @@
 ---
 id: CG-064
 title: Make test_feedback_triggers_revise_round deterministic
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/64
 attempts: 1
 last_dispatched_at: '2026-09-05T00:19:31+00:00'
 created: '2026-09-04T18:24:37+00:00'
-updated: '2026-09-05T00:26:49+00:00'
+updated: '2026-09-05T00:29:06+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,4 @@ hint: its remote counterpart. If you want to integrate the remote changes,
 hint: use 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$1.12
 - 2026-09-05T00:26:49+00:00 triage: marked ready for review
+- 2026-09-05T00:29:06+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/64

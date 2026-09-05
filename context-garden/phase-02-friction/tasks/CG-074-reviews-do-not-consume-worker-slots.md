@@ -1,7 +1,7 @@
 ---
 id: CG-074
 title: Reviews do not consume worker slots
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/71
 attempts: 1
 last_dispatched_at: '2026-09-05T00:19:32+00:00'
 created: '2026-09-04T18:51:13+00:00'
-updated: '2026-09-05T00:22:30+00:00'
+updated: '2026-09-05T00:29:08+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Asked during the first live run. `free_slots()` is `max_parallel` minus every ac
 - 2026-09-05T00:19:32+00:00 dispatched revise run 20260905T001932Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6487 tokens)
 - 2026-09-05T00:22:30+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/71: No code changes needed this round; rewrote the PR description per review feedback to present the retry() fix as an intentional part of the change (mirroring cancel()) rather than revision-round narration, and trimmed the Friction note's reference to how the revision brief framed it. cost=$0.66
 - 2026-09-05T00:22:30+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-074` for one more round, or review on GitHub
+- 2026-09-05T00:29:08+00:00 PR conflicts with main (src/garden/cli.py, src/garden/scheduler.py, src/garden/web/app.py, src/garden/web/templates/inbox.html, tests/test_scheduler.py); revision cap reached; needs a human

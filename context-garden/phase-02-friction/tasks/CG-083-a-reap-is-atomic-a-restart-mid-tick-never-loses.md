@@ -1,7 +1,7 @@
 ---
 id: CG-083
 title: 'A reap is atomic: a restart mid-tick never loses a finished run'
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/81
 attempts: 2
 last_dispatched_at: '2026-09-05T00:23:41+00:00'
 created: '2026-09-04T19:25:01+00:00'
-updated: '2026-09-05T00:23:41+00:00'
+updated: '2026-09-05T00:33:59+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,4 @@ At 19:23 UTC during the first live run, `garden serve` was restarted while a tic
 - 2026-09-04T23:22:47+00:00 automated review: approve — Atomic-reap resume is correctly designed (terminal-run + RUNNING-task uniquely flags an interrupted reap; resume is idempotent for PR/discovery/push) and all three acceptance criteria are met with direct tests; full suite and ruff pass. cost=$0.72
 - 2026-09-05T00:02:18+00:00 PR conflicts with main (tests/test_scheduler.py); revise run will rebase and resolve
 - 2026-09-05T00:23:41+00:00 dispatched revise run 20260905T002340Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~5490 tokens)
+- 2026-09-05T00:33:59+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/81: Rebased onto origin/main and resolved the tests/test_scheduler.py conflict, then fixed a real regression the rebase exposed where _is_unreaped() mis-matched a pre-existing CG-116 test's synthetic run; now requires run.finished_at (set only by our own finalize/timeout code) to distinguish a genuinely interrupted reap. cost=$2.71

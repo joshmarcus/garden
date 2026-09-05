@@ -1,7 +1,7 @@
 ---
 id: CG-088
 title: Trellis and phase page can hide completed tasks
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/86
 attempts: 1
 last_dispatched_at: '2026-09-05T00:01:10+00:00'
 created: '2026-09-04T19:48:28+00:00'
-updated: '2026-09-05T00:20:42+00:00'
+updated: '2026-09-05T00:29:10+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Asked during the first live run, when phase 2 had 30 done tasks and 25 open ones
 - 2026-09-05T00:07:47+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$3.18
 - 2026-09-05T00:20:42+00:00 revision counter reset (web)
 - 2026-09-05T00:20:42+00:00 triage: marked ready for review
+- 2026-09-05T00:29:10+00:00 PR conflicts with main (tests/test_cli.py); revise run will rebase and resolve

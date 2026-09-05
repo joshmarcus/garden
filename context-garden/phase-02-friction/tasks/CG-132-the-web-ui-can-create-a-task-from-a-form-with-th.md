@@ -1,7 +1,7 @@
 ---
 id: CG-132
 title: The web UI can create a task from a form, with the same fields as garden new-task
-status: ready
+status: draft
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - src/garden/scaffold.py
 - src/garden/cli.py
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T00:27:31+00:00'
+updated: '2026-09-05T00:34:28+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,7 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 - [ ] the phase page has a New task form with the fields above; submitting creates the file and redirects to the task page.
 - [ ] the created file matches `garden new-task` output for the same inputs; a test compares them.
 - [ ] validation errors show as a message on the form with the typed text kept.
+
+## Log
+
+- 2026-09-05T00:34:28+00:00 deferred by the feature freeze (2026-09-05): carry into phase 03
