@@ -2,7 +2,7 @@
 id: CG-214
 title: 'A costs page: spend per activity over time, sliceable by difficulty, model, harness, phase and
   task, with the same numbers in garden costs'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/170
 attempts: 1
 last_dispatched_at: '2026-09-05T16:24:39+00:00'
 created: '2026-09-05T16:05:50+00:00'
-updated: '2026-09-05T16:59:11+00:00'
+updated: '2026-09-05T17:01:58+00:00'
 ---
 
 ## Goal
@@ -61,3 +61,4 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - 2026-09-05T16:56:45+00:00 automated review: approve — All four acceptance criteria are met and verified by passing tests (765 passed, ruff clean); the aggregation, chart, CLI/web parity and hourly-drop scenario all check out against the diff and by hand-tracing the fixture math. cost=$0.55
 - 2026-09-05T16:56:52+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T16:59:11+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-05T17:01:58+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/170
