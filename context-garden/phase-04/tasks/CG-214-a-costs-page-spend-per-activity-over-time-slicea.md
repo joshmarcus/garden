@@ -2,7 +2,7 @@
 id: CG-214
 title: 'A costs page: spend per activity over time, sliceable by difficulty, model, harness, phase and
   task, with the same numbers in garden costs'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -17,10 +17,11 @@ reading:
 - src/garden/plants.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 branch: garden/cg-214-a-costs-page-spend-per-activity-over-time-slicea
+pr: https://github.com/joshmarcus/context-garden/pull/170
 attempts: 1
 last_dispatched_at: '2026-09-05T16:24:39+00:00'
 created: '2026-09-05T16:05:50+00:00'
-updated: '2026-09-05T16:24:39+00:00'
+updated: '2026-09-05T16:59:11+00:00'
 ---
 
 ## Goal
@@ -56,3 +57,7 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - 2026-09-05T16:10:49+00:00 attempt 2 failed: worker exited 1: worker error: success Not logged in · Please run /login; giving up
 - 2026-09-05T16:24:29+00:00 reset to ready by hand
 - 2026-09-05T16:24:39+00:00 dispatched work run 20260905T162439Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16988 tokens)
+- 2026-09-05T16:51:36+00:00 opened https://github.com/joshmarcus/context-garden/pull/170 (base main): Added a /costs page and garden costs CLI command sharing one cost_series aggregation over run_finished events, sliceable by activity/difficulty/model/harness/phase/task with a stacked SVG chart and breakdown table, plus nav/phase-page links. cost=$5.54
+- 2026-09-05T16:56:45+00:00 automated review: approve — All four acceptance criteria are met and verified by passing tests (765 passed, ruff clean); the aggregation, chart, CLI/web parity and hourly-drop scenario all check out against the diff and by hand-tracing the fixture math. cost=$0.55
+- 2026-09-05T16:56:52+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T16:59:11+00:00 rebased; patch id unchanged; verdict kept

@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
 last_dispatched_at: '2026-09-05T16:49:53+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T16:49:53+00:00'
+updated: '2026-09-05T17:00:25+00:00'
 ---
 
 ## Goal
@@ -99,3 +99,5 @@ hint: use 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details. cost=$2.11
 - 2026-09-05T16:49:07+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
 - 2026-09-05T16:49:53+00:00 dispatched revise run 20260905T164953Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~15556 tokens)
+- 2026-09-05T17:00:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Rebased CG-178 onto current main (which had moved 39 commits since the branch's last push attempt) and reapplied a previously-lost fix that scoped the branch to CG-178 only by dropping the entangled CG-189 (retro-questions) commits, which the last reviewer had flagged as an undisclosed bundle. Full suite (786 passed, 3 skipped) and ruff pass on the final 7-commit branch. cost=$0.77
+- 2026-09-05T17:00:25+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub

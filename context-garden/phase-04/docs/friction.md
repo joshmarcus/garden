@@ -173,3 +173,11 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-198 (A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch onto a dirty worktree stashes and continues) in run 20260905T163302Z-revise
 
 - The recovery path's correctness turns on subtle timing between run.save(), events.emit(), and state.save() at different granularities (per-run vs per-tick); worth a design note in docs/architecture.md if another mode grows a similar restart-recovery path.
+
+### 2026-09-05 · reported by CG-214 (A costs page: spend per activity over time, sliceable by difficulty, model, harness, phase and task, with the same numbers in garden costs) in run 20260905T162439Z-work
+
+- No project-specific 'run' skill exists for this repo's web UI, and garden CLI invocations are blocked in this sandbox (GARDEN_ROOT sentinel) plus no headless browser is available, so visual verification was done by hand-building a throwaway garden, running uvicorn directly against garden.web.app.create_app, and curling/inspecting the rendered SVG rather than a real screenshot.
+
+### 2026-09-05 · reported by CG-178 (The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen with named tasks that must land first) in run 20260905T164953Z-revise
+
+- A branch reset (likely from the automated re-enable/reset-to-origin flow after a failed non-fast-forward push) silently discarded a completed revise commit that had already fixed the reviewer's undisclosed-bundling complaint; the fix had to be recovered from the local reflog rather than being redone from scratch, which only worked because the dangling commit was still reachable.

@@ -4,7 +4,7 @@ title: 'A collective, searchable context: every run leaves structured notes abou
   search them, and the retro consolidates them'
 status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 3
 difficulty: hard
@@ -17,7 +17,7 @@ reading:
 - docs/design.md
 - context-garden/phase-03/docs/retro.md
 created: '2026-09-05T16:58:10+00:00'
-updated: '2026-09-05T16:58:10+00:00'
+updated: '2026-09-05T17:00:33+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,6 @@ Phase 03's friction said the same things repeatedly: reading lists that omitted 
 - [ ] A prototype: `notes` in the result contract, the markdown store, FTS search, and the brief section behind a config flag; a measured trial on one phase comparing revise rounds and first-pass approval with and without it.
 - [ ] Consolidation and promotion left for a follow-up task once the trial says the store is worth keeping.
 
+## Log
+
+- 2026-09-05T17:00:33+00:00 moved from context-garden/phase-05 to context-garden/phase-06

@@ -2,7 +2,7 @@
 id: CG-219
 title: 'garden observe: a configurable operator feed (interval, event kinds, digest window) that prints
   one status line, the cards, stuck runs and a digest, for a person or an operator agent'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,9 +16,10 @@ reading:
 - .claude/skills/garden-operate/SKILL.md
 - docs/architecture.md
 branch: garden/cg-219-garden-observe-a-configurable-operator-feed-inte
-last_dispatched_at: '2026-09-05T16:50:09+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T16:51:57+00:00'
 created: '2026-09-05T16:48:29+00:00'
-updated: '2026-09-05T16:50:12+00:00'
+updated: '2026-09-05T16:51:57+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,4 @@ Asked by the user on 2026-09-05 ("can we make it configurable?") after the opera
 - 2026-09-05T16:48:29+00:00 approved (web)
 - 2026-09-05T16:50:09+00:00 dispatched work run 20260905T164954Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~14853 tokens)
 - 2026-09-05T16:50:12+00:00 reset to ready by hand
+- 2026-09-05T16:51:57+00:00 dispatched work run 20260905T165157Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~14904 tokens)

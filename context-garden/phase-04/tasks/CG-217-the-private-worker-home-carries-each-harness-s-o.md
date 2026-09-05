@@ -2,7 +2,7 @@
 id: CG-217
 title: The private worker HOME carries each harness's own config by default (CLAUDE_CONFIG_DIR, CODEX_HOME),
   doctor checks a worker can log in, and a not-logged-in exit is an environment stop
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -17,9 +17,9 @@ reading:
 branch: garden/cg-217-the-private-worker-home-carries-each-harness-s-o
 pr: https://github.com/joshmarcus/context-garden/pull/169
 attempts: 1
-last_dispatched_at: '2026-09-05T16:27:40+00:00'
+last_dispatched_at: '2026-09-05T16:54:27+00:00'
 created: '2026-09-05T16:26:12+00:00'
-updated: '2026-09-05T16:48:04+00:00'
+updated: '2026-09-05T16:54:27+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,6 @@ Isolating a worker's HOME (CG-194) must not log the harness out. By default the 
 - 2026-09-05T16:26:12+00:00 approved (web)
 - 2026-09-05T16:27:40+00:00 dispatched work run 20260905T162724Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~17849 tokens)
 - 2026-09-05T16:48:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/169 (base main): scrubbed_env now defaults CLAUDE_CONFIG_DIR/CODEX_HOME to the operator's home (overridable via worker_env.config_dirs), garden doctor verifies each harness's login through that same environment with a trivial prompt, and Harness.parse tags a login failure as an auth env_error. cost=$3.73
+- 2026-09-05T16:52:58+00:00 automated review: approve — Scrubbed-env config-dir defaults, doctor's real login probe, and the auth error_kind classification are all correctly implemented and tested; full suite and lint pass. cost=$0.70
+- 2026-09-05T16:54:10+00:00 CI failure
+- 2026-09-05T16:54:27+00:00 dispatched revise run 20260905T165427Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~20290 tokens)
