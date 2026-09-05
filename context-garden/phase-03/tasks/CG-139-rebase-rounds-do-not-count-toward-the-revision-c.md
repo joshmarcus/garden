@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: running
+status: ready
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/105
 attempts: 1
 last_dispatched_at: '2026-09-05T04:29:11+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T04:29:11+00:00'
+updated: '2026-09-05T04:32:28+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,4 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T04:28:58+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/105: Rebased the CG-139 branch onto main (it had fallen behind CG-152's in-process test runner) and removed the now-obsolete wait_for_runs calls the two new CG-139 tests still made, which is what ruff's F821 was actually flagging; full suite (469 passed) and lint are clean. cost=$1.33
 - 2026-09-05T04:29:01+00:00 PR conflicts with main (src/garden/scheduler/dispatch.py, src/garden/scheduler/poll.py); revise run will rebase and resolve
 - 2026-09-05T04:29:11+00:00 dispatched revise run 20260905T042911Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8866 tokens)
+- 2026-09-05T04:32:28+00:00 no active run found; back to ready — expected run 20260905T043128Z-review but it is running (mode review): (no closer recorded)

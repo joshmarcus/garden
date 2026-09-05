@@ -14,12 +14,12 @@ reading:
 - src/garden/model.py
 - src/garden/cli.py
 branch: garden/cg-161-garden-plan-does-not-check-a-frozen-phase-only-c
-pr: https://github.com/joshmarcus/context-garden/pull/108
+pr: https://github.com/joshmarcus/context-garden/pull/110
 discovered_from: CG-148
 attempts: 1
 last_dispatched_at: '2026-09-05T04:15:57+00:00'
 created: '2026-09-05T03:55:13+00:00'
-updated: '2026-09-05T04:31:25+00:00'
+updated: '2026-09-05T04:33:16+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Discovered by CG-148 (A frozen or closed phase refuses approvals and dispatch; a
 - 2026-09-05T04:30:17+00:00 parent CG-148 merged; rebased onto main and retargeted the PR
 - 2026-09-05T04:30:19+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/108
 - 2026-09-05T04:31:25+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/108
+- 2026-09-05T04:32:06+00:00 PR attached: https://github.com/joshmarcus/context-garden/pull/110
+- 2026-09-05T04:33:16+00:00 PR closed without merging: https://github.com/joshmarcus/context-garden/pull/110

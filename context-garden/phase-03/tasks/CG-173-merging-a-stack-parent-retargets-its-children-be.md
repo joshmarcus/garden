@@ -2,7 +2,7 @@
 id: CG-173
 title: Merging a stack parent retargets its children before the branch is deleted, and a child never opens
   a PR against a deleted branch
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -14,8 +14,11 @@ reading:
 - src/garden/scheduler/dispatch.py
 - src/garden/github.py
 - tests/scheduler/test_poll.py
+branch: garden/cg-173-merging-a-stack-parent-retargets-its-children-be
+attempts: 1
+last_dispatched_at: '2026-09-05T04:33:29+00:00'
 created: '2026-09-05T04:31:41+00:00'
-updated: '2026-09-05T04:31:41+00:00'
+updated: '2026-09-05T04:33:29+00:00'
 ---
 
 ## Goal
@@ -40,3 +43,4 @@ In the same minute CG-141 (#102) merged the same way while CG-170, stacked on it
 ## Log
 
 - 2026-09-05T04:31:41+00:00 approved (web)
+- 2026-09-05T04:33:29+00:00 dispatched work run 20260905T043320Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~8335 tokens)
