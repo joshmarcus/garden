@@ -1,3 +1,7 @@
+---
+closed: '2026-09-04'
+---
+
 # phase-01-bootstrap goals
 
 ## Why this phase
