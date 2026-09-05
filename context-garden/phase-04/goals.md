@@ -37,6 +37,7 @@ Answered by the owner on 2026-09-05, at the close of phase 03:
 - **The retro's close verdict closes the phase** without waiting for approval; only reopen raises a decision (CG-178).
 - **Workers 7** once CG-182 is in and the tick is fast again; back to 5 if the cascade returns.
 - **Hard-tier merges by hand** (scratch merge, lint, suite) until CG-191 lands.
+- **The operator thread's cost is a goal** (2026-09-05, after the session's own cost was measured at about 60% of the workers'): the observation feed is configurable (CG-219), the operating point is one slider (CG-221), the operator compacts at phase, retro and pin boundaries, and its spend is recorded per session beside the workers' spend.
 
 ## Definition of done
 
@@ -52,6 +53,7 @@ Measured with `garden metrics` against phase 03.
 - the walkthrough shows no Inbox fragment, no needs-you badge on a done task and a described rebase run.
 - the security persona's three high findings are closed.
 - every task shipped through `garden tick`; exceptions listed in the closing document.
+- operator turns and spend recorded for the phase (`docs/operator-spend.jsonl`), with the operator's share of total spend reported in the retro and lower than phase 03's.
 
 ## Carried over from phase 03
 

@@ -159,6 +159,23 @@ Acceptance criteria, and `garden commit && git push`. Under a feature freeze, le
 ideas as drafts with a log line "deferred by the feature freeze (date)". Judge discovered
 drafts the same way: cancel duplicates and already-fixed items with a note naming why.
 
+## Your own cost
+
+You are the most expensive seat when you are an agent: each turn re-reads your whole context,
+so cost is context size times turn count. Measured on 2026-09-05: 3,750 turns at about 385K
+tokens each was roughly 60% of what all the workers cost that day. Rules:
+
+- Observe through `garden observe` (or the compact heartbeat script until it ships) on the
+  quiet profile unless you are actively watching something; never tail the raw event log.
+- Batch tool calls; one heartbeat every 30 minutes and a monitor for questions, needs-human
+  stops and failures is enough for a healthy loop.
+- **Compact at convenient boundaries**: after a phase closes, after a retro merges, after a
+  pin moves, and before a long wait. Write what the next context needs to memory and to the
+  phase's docs first; the loop keeps its own state, so nothing is lost by compacting.
+- Record your spend: `python3 tools/operator_spend.py` appends a line to
+  `context-garden/docs/operator-spend.jsonl` from the session transcript (the heartbeat runs
+  it); the retro reports the operator's share beside the workers'.
+
 ## Never
 
 - Edit a task's `status:` by hand, or `state.json` while a tick may be writing it.

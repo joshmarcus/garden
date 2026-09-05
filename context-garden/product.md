@@ -9,6 +9,23 @@ a TUI show the board and the dependency graph.
 Users: a single developer (or small team) who wants to specify work and review PRs, and
 have the rest of the loop automated without an LLM sitting in the scheduler seat.
 
+## Cost of the operator thread
+
+The loop is driven by a token-free scheduler, but in practice a person or an operator agent
+watches it, clears cards and moves pins. That operator thread is the most expensive seat in
+the system when it is an agent: every observation is a turn that re-reads its whole context.
+Keeping that thread cheap is a product goal, on a par with keeping worker runs cheap:
+
+- the loop should need the operator rarely (every card is a defect to file), and when it
+  does, one press should be enough;
+- what the operator has to read should be small and configurable (`garden observe`, the
+  observation profiles, the efficient-to-fast slider), so a quiet garden costs a few turns an
+  hour and a watched one costs more only by choice;
+- the operator should compact or restart its context at convenient boundaries: a phase
+  closing, a retro merging, a pin moving, the start of a long wait;
+- the operator's spend is recorded beside the workers' (`docs/operator-spend.jsonl`, the
+  `operator` activity on the costs page) so the two are compared, not guessed.
+
 ## Repo
 
 This repository is both the tool and its own first product. Python 3.11+, packaged with
