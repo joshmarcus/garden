@@ -2,7 +2,7 @@
 id: CG-235
 title: retro.model (or a best tier) names the model retros, persona reviews and trial comparisons run
   on, independent of the hard tier's price
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -15,8 +15,11 @@ reading:
 - src/garden/scheduler/trials.py
 - src/garden/scheduler/__init__.py
 - garden.yaml
+branch: garden/cg-235-retro-model-or-a-best-tier-names-the-model-retro
+attempts: 1
+last_dispatched_at: '2026-09-05T20:49:24+00:00'
 created: '2026-09-05T20:48:03+00:00'
-updated: '2026-09-05T20:48:04+00:00'
+updated: '2026-09-05T20:49:24+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ The user on 2026-09-05: "I want retros on best models but normal reviews don't n
 ## Log
 
 - 2026-09-05T20:48:04+00:00 approved (web)
+- 2026-09-05T20:49:24+00:00 dispatched work run 20260905T204908Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~19122 tokens)

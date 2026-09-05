@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T20:47:36+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T20:47:36+00:00'
+updated: '2026-09-05T20:55:12+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,5 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T20:46:03+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-05T20:47:16+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/trials.py); a rebase agent will resolve it
 - 2026-09-05T20:47:36+00:00 dispatched rebase run 20260905T204736Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9103 tokens)
+- 2026-09-05T20:55:12+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased onto origin/main; resolved the single textual conflict in src/garden/scheduler/trials.py by keeping this branch's paused-harness gating additions in start_trial (the early default_h/parsed computation with _raise_if_harness_paused check, and the base_branch = task.branch or task.default_branch() / for label, harness, model in parsed loop) alongside main's existing _reset_trial method, and adding the new _redispatch_contender method (used by reap_trial to resume a paused contender) right after it rather than replacing it. Full test suite (935 passed, 3 skipped) and ruff both pass. cost=$0.41
+- 2026-09-05T20:55:12+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub

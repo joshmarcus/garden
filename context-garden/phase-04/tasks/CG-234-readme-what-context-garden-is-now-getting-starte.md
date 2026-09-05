@@ -20,10 +20,10 @@ reading:
 branch: garden/cg-234-readme-what-context-garden-is-now-getting-starte
 harness: claude
 model: claude-fable-5-1
-attempts: 1
-last_dispatched_at: '2026-09-05T20:44:13+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-05T20:50:58+00:00'
 created: '2026-09-05T20:40:39+00:00'
-updated: '2026-09-05T20:44:13+00:00'
+updated: '2026-09-05T20:50:58+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,5 @@ The user on 2026-09-05, high priority. The README predates phases 03 and 04: the
 - 2026-09-05T20:41:32+00:00 dispatched work run 20260905T204117Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13559 tokens)
 - 2026-09-05T20:44:09+00:00 reset to ready by hand
 - 2026-09-05T20:44:13+00:00 dispatched work run 20260905T204413Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~13609 tokens)
+- 2026-09-05T20:50:33+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+- 2026-09-05T20:50:58+00:00 dispatched work run 20260905T205058Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~16211 tokens)
