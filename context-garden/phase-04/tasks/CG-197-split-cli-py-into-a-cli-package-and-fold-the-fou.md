@@ -1,7 +1,7 @@
 ---
 id: CG-197
 title: Split cli.py into a cli/ package and fold the four rebase copies into one recorded helper
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -9,9 +9,12 @@ depends_on:
 priority: 4
 difficulty: medium
 reading: []
+branch: garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou
 discovered_from: retro:context-garden/phase-03
+attempts: 1
+last_dispatched_at: '2026-09-05T11:22:54+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:31:18+00:00'
+updated: '2026-09-05T11:22:54+00:00'
 ---
 
 ## Goal
@@ -29,3 +32,4 @@ Proposed at the context-garden/phase-03 retro. Phase 03 showed that structure fi
 ## Log
 
 - 2026-09-05T10:31:18+00:00 approved (web)
+- 2026-09-05T11:22:54+00:00 dispatched work run 20260905T112245Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-182-the-tick-never-blocks-the-ui-actions-do-not-wait stacked on CG-182, ~4521 tokens)
