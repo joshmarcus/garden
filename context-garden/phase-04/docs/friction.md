@@ -169,3 +169,7 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 
 - CG-212 (the mechanism that pauses a harness on an environment stop) isn't in the codebase yet, so the brief's reference to 'with CG-212 that pauses the harness' describes a future consumer of Harness.parse's new error_kind field, not something this task could verify end-to-end.
 - Changing garden doctor's harness login check broke five existing test_cli.py doctor tests that mocked subprocess.run around the old 'auth status' call shape; all had to be updated to match the new trivial-prompt invocation.
+
+### 2026-09-05 · reported by CG-198 (A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch onto a dirty worktree stashes and continues) in run 20260905T163302Z-revise
+
+- The recovery path's correctness turns on subtle timing between run.save(), events.emit(), and state.save() at different granularities (per-run vs per-tick); worth a design note in docs/architecture.md if another mode grows a similar restart-recovery path.
