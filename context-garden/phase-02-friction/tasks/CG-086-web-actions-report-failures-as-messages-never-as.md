@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: in_review
+status: running
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -13,9 +13,9 @@ reading:
 branch: garden/cg-086-web-actions-report-failures-as-messages-never-as
 pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
-last_dispatched_at: '2026-09-05T00:26:49+00:00'
+last_dispatched_at: '2026-09-05T00:37:12+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T00:34:52+00:00'
+updated: '2026-09-05T00:37:12+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-05T00:02:19+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve
 - 2026-09-05T00:26:49+00:00 dispatched revise run 20260905T002648Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7710 tokens)
 - 2026-09-05T00:34:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Rebased the branch onto the latest origin/main (which had advanced twice during the session) and resolved all conflicts in src/garden/web/app.py, preserving both sides' intent (flash-message error handling, trial validation, and the closed-phase guard combined with 404-on-unknown-phase). Tests (373 passed) and ruff both pass, and the branch is a clean linear rebase ready for force-push. cost=$3.48
+- 2026-09-05T00:37:05+00:00 automated review requested changes: All three acceptance criteria are met and tested, but the refactor silently swaps the /review action from review_again to dispatch_review, breaking the 'One more automated review' button that bypasses the review cap and clears the needs_human stop. cost=$1.01
+- 2026-09-05T00:37:12+00:00 dispatched revise run 20260905T003711Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8241 tokens)
