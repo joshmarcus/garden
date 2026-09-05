@@ -1,0 +1,43 @@
+---
+id: CG-186
+title: 'Approve says which phase the task joins and offers another: an Approve button with a phase pulldown
+  beside it, on the Inbox card and the task page'
+status: draft
+product: context-garden
+phase: phase-04
+depends_on:
+- CG-162
+priority: 2
+difficulty: easy
+reading:
+- src/garden/web/templates/inbox.html
+- src/garden/web/templates/task.html
+- src/garden/web/actions/tasks.py
+- src/garden/inbox.py
+- context-garden/phase-01-bootstrap/specs/botanical-theme.md
+created: '2026-09-05T10:18:25+00:00'
+updated: '2026-09-05T10:18:25+00:00'
+---
+
+## Goal
+
+Approving a draft says where it goes. The Approve control on an Inbox draft card and on a draft's task page reads "Approve into phase-03" (the task's current phase) and carries a small pulldown of the product's other open phases beside it; picking another phase moves the task there and approves it in one press. The look stays as it is now: one primary button, one quiet pulldown, no extra rows.
+
+## Context
+
+Asked by the user on 2026-09-05: "Approve should indicate what phase to add it to (the current phase) e.g. 'Add to phase-03' and have a control to add to another phase. Maybe it's 'Approve' and there's a drop down for which phase to add it to? I like the way it looks now but maybe there's a way to elegantly organize it." The common case behind it: a discovered draft lands in the running phase but belongs to the next one, and during a freeze (CG-148) the running phase refuses approvals, so today the operator moves files by hand first. CG-162 adds the move itself (CLI and a task-page pulldown); this task is the approve-time shape of it. The priority and tier pulldowns from CG-099 set the pattern: apply on change, no Set button.
+
+## Design
+
+- The button label is "Approve into <phase>" where <phase> is the pulldown's current value, defaulting to the task's phase; the pulldown lists the product's open phases in order, marks a frozen phase "(frozen)" and hides closed ones. Changing the pulldown updates the label without a request; pressing the button posts `approve` with a `phase` field.
+- The `approve` action accepts `phase`: when it differs from the task's phase it calls the move from CG-162 first (same refusals, shown as a flash), then approves. When the target phase is frozen the action refuses with the freeze message unless the task carries an exception.
+- On the task page the same control replaces the plain Approve button for drafts; everywhere else (ready and later statuses) nothing changes.
+- Keyboard and no-JavaScript: the pulldown is a real `<select>` inside the form, so the post works without the label script.
+
+## Acceptance criteria
+
+- [ ] A draft's Inbox card and task page show "Approve into <phase>" with a pulldown of the product's open phases beside it; the label follows the pulldown.
+- [ ] Approving into another phase moves then approves in one request, with CG-162's refusals surfaced as flashes; approving into a frozen phase without an exception is refused with the freeze message.
+- [ ] The control fits the current card layout with no new row; the walkthrough page for the Inbox shows it.
+- [ ] Tests for the default phase, a move-and-approve, and the frozen refusal.
+
