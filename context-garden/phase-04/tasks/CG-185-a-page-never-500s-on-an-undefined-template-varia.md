@@ -2,10 +2,12 @@
 id: CG-185
 title: 'A page never 500s on an undefined template variable: tojson gets a value on every path, and a
   template error renders as a flash, not a traceback'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading:
@@ -15,7 +17,7 @@ reading:
 - src/garden/web/templates/trials.html
 - src/garden/web/trust.py
 created: '2026-09-05T10:17:58+00:00'
-updated: '2026-09-05T10:17:58+00:00'
+updated: '2026-09-05T10:31:15+00:00'
 ---
 
 ## Goal
@@ -33,3 +35,6 @@ At 10:12:19 on 2026-09-05 the web UI returned "Internal Server Error" to the use
 - [ ] A template exception at runtime renders the error as a flash on a 500 page that keeps the header and navigation, and logs the traceback with the request path.
 - [ ] Uvicorn's access log reaches the journal (or the serve log) so the next 500 can be tied to its request.
 
+## Log
+
+- 2026-09-05T10:31:15+00:00 approved (web)

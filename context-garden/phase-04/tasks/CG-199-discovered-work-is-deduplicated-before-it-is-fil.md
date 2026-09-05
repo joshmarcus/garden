@@ -2,15 +2,17 @@
 id: CG-199
 title: 'Discovered work is deduplicated before it is filed: the same finding from several workers becomes
   one draft'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading: []
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:30:00+00:00'
+updated: '2026-09-05T10:31:18+00:00'
 ---
 
 ## Goal
@@ -27,3 +29,6 @@ From the phase-03 persona reviews of 2026-09-05 (project-manager:medium); filed 
 - [ ] The existing task's page lists who else found it.
 - [ ] A test files the same discovery from three workers and sees one draft.
 
+## Log
+
+- 2026-09-05T10:31:18+00:00 approved (web)

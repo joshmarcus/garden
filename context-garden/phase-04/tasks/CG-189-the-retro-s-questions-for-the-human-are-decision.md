@@ -2,11 +2,13 @@
 id: CG-189
 title: 'The retro''s questions for the human are decision cards: answer each in the UI, the answers land
   in the retro document and the next phase''s goals, and the planner reads them'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
 - CG-178
+- CG-182
+- CG-197
 priority: 1
 difficulty: medium
 reading:
@@ -17,7 +19,7 @@ reading:
 - src/garden/web/actions/decisions.py
 - context-garden/phase-03/docs/reviews/product-manager-vision-2026-09-05.md
 created: '2026-09-05T10:23:11+00:00'
-updated: '2026-09-05T10:23:11+00:00'
+updated: '2026-09-05T10:31:16+00:00'
 ---
 
 ## Goal
@@ -42,3 +44,6 @@ Asked by the user on 2026-09-05 after reading the product manager's phase-03 rep
 - [ ] The planner brief for the next phase includes the answered decisions.
 - [ ] Tests with the fake harness: a retro with two questions, one answered on the web and one on the CLI, both visible on the retro page and in the goals.
 
+## Log
+
+- 2026-09-05T10:31:16+00:00 approved (web)

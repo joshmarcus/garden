@@ -2,15 +2,17 @@
 id: CG-203
 title: Every tick phase is wrapped so one failure cannot skip the rest, state is saved on error, and deferred
   reviews are deduplicated
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading: []
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:30:01+00:00'
+updated: '2026-09-05T10:31:19+00:00'
 ---
 
 ## Goal
@@ -27,3 +29,6 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - [ ] Deferred reviews are keyed by task; the CG-177 test asserts one entry.
 - [ ] A test raises in dispatch and sees the earlier transition persisted.
 
+## Log
+
+- 2026-09-05T10:31:19+00:00 approved (web)

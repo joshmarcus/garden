@@ -1,16 +1,18 @@
 ---
 id: CG-195
 title: Inbox cards read only the log, and terminal tasks drop needs-you and automerge notes in every view
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 3
 difficulty: easy
 reading: []
 discovered_from: retro:context-garden/phase-03
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:26:55+00:00'
+updated: '2026-09-05T10:31:17+00:00'
 ---
 
 ## Goal
@@ -24,3 +26,7 @@ updated: '2026-09-05T10:26:55+00:00'
 ## Context
 
 Proposed at the context-garden/phase-03 retro. Cheap, visible on every page and the top finding of the designer, usability and user personas.
+
+## Log
+
+- 2026-09-05T10:31:17+00:00 approved (web)

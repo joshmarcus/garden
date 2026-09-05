@@ -2,10 +2,12 @@
 id: CG-190
 title: 'No Set buttons anywhere: every editable value in the web UI applies when the user changes it,
   with a saved mark and an undo'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading:
@@ -15,7 +17,7 @@ reading:
 - src/garden/web/actions/control.py
 - src/garden/web/actions/tasks.py
 created: '2026-09-05T10:26:48+00:00'
-updated: '2026-09-05T10:26:48+00:00'
+updated: '2026-09-05T10:31:16+00:00'
 ---
 
 ## Goal
@@ -33,3 +35,6 @@ The user on 2026-09-05: "task for next time: no 'Set' buttons, automatically upd
 - [ ] Without JavaScript every control still works: the form posts on Enter and the page reloads with the new value.
 - [ ] The walkthrough's Config and task pages show the pattern; a test edits `max_parallel` on the Config page and sees it applied without a button.
 
+## Log
+
+- 2026-09-05T10:31:16+00:00 approved (web)

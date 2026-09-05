@@ -2,15 +2,17 @@
 id: CG-202
 title: 'One approve and one rebase: the CLI, web and TUI call the same approve gate, and the sync-rebase-force-push
   sequence lives in one place'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 1
 difficulty: medium
 reading: []
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:30:01+00:00'
+updated: '2026-09-05T10:31:19+00:00'
 ---
 
 ## Goal
@@ -27,3 +29,6 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:high, staff-engi
 - [ ] A single `gitops.sync_and_rebase(worktree, branch, base)` used by the rebase mixin, the restack, the base probe and the queue.
 - [ ] Queue state is written through one helper; a test asserts no other writer.
 
+## Log
+
+- 2026-09-05T10:31:19+00:00 approved (web)

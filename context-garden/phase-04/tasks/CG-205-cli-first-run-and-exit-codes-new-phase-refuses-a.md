@@ -2,15 +2,17 @@
 id: CG-205
 title: 'CLI first-run and exit codes: new-phase refuses an unregistered product, approve exits non-zero
   on a refusal, doctor says how to fix a missing git identity'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading: []
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:30:01+00:00'
+updated: '2026-09-05T10:31:20+00:00'
 ---
 
 ## Goal
@@ -28,3 +30,6 @@ From the phase-03 persona reviews of 2026-09-05 (usability-expert:medium, usabil
 - [ ] Doctor's lines each carry a fix; the closing line names the failing checks.
 - [ ] The Herbarium plate omits counts a phase has no records for, with a note.
 
+## Log
+
+- 2026-09-05T10:31:20+00:00 approved (web)

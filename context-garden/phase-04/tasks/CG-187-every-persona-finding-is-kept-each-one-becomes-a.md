@@ -2,10 +2,12 @@
 id: CG-187
 title: 'Every persona finding is kept: each one becomes a draft with its severity as priority, the retro
   reconciles all of them, and nothing below high is dropped'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 1
 difficulty: easy
 reading:
@@ -15,7 +17,7 @@ reading:
 - src/garden/scheduler/retro.py
 - src/garden/cli.py
 created: '2026-09-05T10:21:05+00:00'
-updated: '2026-09-05T10:21:05+00:00'
+updated: '2026-09-05T10:31:15+00:00'
 ---
 
 ## Goal
@@ -34,3 +36,6 @@ The user on 2026-09-05, reading the product manager's phase-03 review: "We shoul
 - [ ] `--file-tasks` gains `--min-severity` for a person who wants fewer drafts, defaulting to low.
 - [ ] Tests with the fake harness for a review with one finding at each severity.
 
+## Log
+
+- 2026-09-05T10:31:15+00:00 approved (web)

@@ -2,10 +2,12 @@
 id: CG-146
 title: 'A retro page per phase: the reconciled document, the operator retro, persona reports with scores,
   and the tasks the retro generated'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 1
 difficulty: medium
 reading:
@@ -18,7 +20,7 @@ branch: garden/cg-146-a-retro-page-per-phase-the-reconciled-document-t
 attempts: 1
 last_dispatched_at: '2026-09-05T03:02:23+00:00'
 created: '2026-09-05T02:49:08+00:00'
-updated: '2026-09-05T03:05:29+00:00'
+updated: '2026-09-05T10:31:12+00:00'
 ---
 
 ## Goal
@@ -42,3 +44,4 @@ Asked at the phase-02 retro on the first live run. Today the pieces exist as fil
 - 2026-09-05T03:00:43+00:00 approved (web)
 - 2026-09-05T03:02:23+00:00 dispatched work run 20260905T030213Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5737 tokens)
 - 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
+- 2026-09-05T10:31:12+00:00 approved (web)

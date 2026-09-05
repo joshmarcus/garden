@@ -2,10 +2,12 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 1
 difficulty: medium
 reading:
@@ -16,7 +18,7 @@ reading:
 - src/garden/inbox.py
 - src/garden/web/pages/phase.py
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T09:40:41+00:00'
+updated: '2026-09-05T10:31:14+00:00'
 ---
 
 ## Goal
@@ -47,3 +49,6 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - [ ] The phase page and the retro page show the verdict and the generated tasks with status.
 - [ ] Tests for each verdict path with the fake harness, including the refusal and the override.
 
+## Log
+
+- 2026-09-05T10:31:14+00:00 approved (web)

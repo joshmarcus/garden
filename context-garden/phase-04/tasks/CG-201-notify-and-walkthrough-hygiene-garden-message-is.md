@@ -2,15 +2,17 @@
 id: CG-201
 title: 'Notify and walkthrough hygiene: GARDEN_MESSAGE is quoted in the documented Slack example, and
   the walkthrough scrubs stderr and absolute paths before it is committed'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 3
 difficulty: easy
 reading: []
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:30:00+00:00'
+updated: '2026-09-05T10:31:19+00:00'
 ---
 
 ## Goal
@@ -27,3 +29,6 @@ From the phase-03 persona reviews of 2026-09-05 (security:low, security:low); fi
 - [ ] The walkthrough redacts absolute home paths and skips stderr blocks unless `--include-stderr` is given.
 - [ ] Tests for both.
 
+## Log
+
+- 2026-09-05T10:31:19+00:00 approved (web)

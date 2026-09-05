@@ -1,16 +1,18 @@
 ---
 id: CG-191
 title: The merge queue merges hard-tier PRs after two approving rounds and its own scratch-merge check
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 1
 difficulty: medium
 reading: []
 discovered_from: retro:context-garden/phase-03
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:26:55+00:00'
+updated: '2026-09-05T10:31:16+00:00'
 ---
 
 ## Goal
@@ -24,3 +26,7 @@ updated: '2026-09-05T10:26:55+00:00'
 ## Context
 
 Proposed at the context-garden/phase-03 retro. The queue exists but half the merges still need a button; this closes the phase-03 promise the personas say is only half kept.
+
+## Log
+
+- 2026-09-05T10:31:16+00:00 approved (web)

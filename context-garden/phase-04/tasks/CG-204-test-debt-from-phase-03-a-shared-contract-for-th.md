@@ -2,15 +2,17 @@
 id: CG-204
 title: 'Test debt from phase 03: a shared contract for the two GitHub fakes, real LocalRunner coverage,
   event-based assertions, and the state store''s dict.get snapshot'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 3
 difficulty: medium
 reading: []
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:30:01+00:00'
+updated: '2026-09-05T10:31:19+00:00'
 ---
 
 ## Goal
@@ -28,3 +30,6 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - [ ] The prose assertions named in the staff engineer's review assert on events instead.
 - [ ] `_TaskState.get` snapshots like `__getitem__`; a test mutates a value read through `.get` and sees it saved.
 
+## Log
+
+- 2026-09-05T10:31:19+00:00 approved (web)

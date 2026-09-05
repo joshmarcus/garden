@@ -1,15 +1,17 @@
 ---
 id: CG-179
 title: Results and reviews speak to each acceptance criterion by name, with evidence
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading: []
 created: '2026-09-05T09:41:59+00:00'
-updated: '2026-09-05T09:41:59+00:00'
+updated: '2026-09-05T10:31:14+00:00'
 ---
 
 ## Goal
@@ -28,3 +30,6 @@ Asked by the user on 2026-09-05 after phase 03: "should we have asked the tasks 
 - [ ] `garden metrics` reports criteria met on the first review per tier.
 - [ ] Tests with the fake harness for a result that skips a criterion.
 
+## Log
+
+- 2026-09-05T10:31:14+00:00 approved (web)

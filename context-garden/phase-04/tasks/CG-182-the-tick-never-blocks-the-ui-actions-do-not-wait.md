@@ -2,7 +2,7 @@
 id: CG-182
 title: 'The tick never blocks the UI: actions do not wait for a tick, and checks and rebases run as records
   outside the tick'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -17,7 +17,7 @@ reading:
 - src/garden/checks.py
 - src/garden/scheduler/state.py
 created: '2026-09-05T10:00:03+00:00'
-updated: '2026-09-05T10:00:03+00:00'
+updated: '2026-09-05T10:31:14+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,6 @@ Seen by the user on 2026-09-05 at 09:43 and again at 09:55 ("the web page isn't 
 - [ ] The tick report carries the pass duration and the slowest step; a pass over ten seconds logs a warning.
 - [ ] The `test` pre-PR check can be turned back on in garden.yaml without the UI slowing down.
 
+## Log
+
+- 2026-09-05T10:31:14+00:00 approved (web)

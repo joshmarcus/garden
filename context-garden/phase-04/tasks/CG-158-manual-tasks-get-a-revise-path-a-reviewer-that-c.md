@@ -2,16 +2,18 @@
 id: CG-158
 title: Manual tasks get a revise path, a reviewer that can see garden state, and a cost field on garden
   finish
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 3
 difficulty: medium
 reading: []
-created: '2026-09-05T03:14:37+00:00'
-updated: '2026-09-05T03:14:37+00:00'
 discovered_from: retro:context-garden/phase-02-friction
+created: '2026-09-05T03:14:37+00:00'
+updated: '2026-09-05T10:31:13+00:00'
 ---
 
 ## Goal
@@ -30,3 +32,4 @@ From the phase-02 retro's open list (item 13), reconciled against what merged on
 
 - 2026-09-05T03:25:00+00:00 moved to phase-04: user-facing work, not structure
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 13)
+- 2026-09-05T10:31:13+00:00 approved (web)

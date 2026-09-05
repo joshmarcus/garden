@@ -1,16 +1,17 @@
 ---
 id: CG-197
 title: Split cli.py into a cli/ package and fold the four rebase copies into one recorded helper
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
 priority: 4
 difficulty: medium
 reading: []
 discovered_from: retro:context-garden/phase-03
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:26:55+00:00'
+updated: '2026-09-05T10:31:18+00:00'
 ---
 
 ## Goal
@@ -24,3 +25,7 @@ updated: '2026-09-05T10:26:55+00:00'
 ## Context
 
 Proposed at the context-garden/phase-03 retro. Phase 03 showed that structure first and alone removes conflicts for the rest of the phase, and the metric the phase is judged by is currently wrong.
+
+## Log
+
+- 2026-09-05T10:31:18+00:00 approved (web)

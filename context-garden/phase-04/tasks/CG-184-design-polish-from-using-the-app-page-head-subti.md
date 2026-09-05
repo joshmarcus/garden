@@ -1,10 +1,12 @@
 ---
 id: CG-184
 title: 'Design polish from using the app: page-head subtitles wrap too early, and other small layout nits'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading:
@@ -12,7 +14,7 @@ reading:
 - src/garden/web/templates/inbox.html
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 created: '2026-09-05T10:04:27+00:00'
-updated: '2026-09-05T10:04:27+00:00'
+updated: '2026-09-05T10:31:15+00:00'
 ---
 
 ## Goal
@@ -31,3 +33,6 @@ Small layout fixes the user noticed while using the web app on 2026-09-05. Each 
 - [ ] No page scrolls horizontally at 1000px; the page head stacks the tools under the title below that width.
 - [ ] A test renders the Inbox and checks the page-head paragraph has no fixed 62ch cap.
 
+## Log
+
+- 2026-09-05T10:31:15+00:00 approved (web)

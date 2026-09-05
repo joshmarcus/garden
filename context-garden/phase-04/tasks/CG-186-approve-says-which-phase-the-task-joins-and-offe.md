@@ -2,11 +2,13 @@
 id: CG-186
 title: 'Approve says which phase the task joins and offers another: an Approve button with a phase pulldown
   beside it, on the Inbox card and the task page'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
 - CG-162
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading:
@@ -16,7 +18,7 @@ reading:
 - src/garden/inbox.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 created: '2026-09-05T10:18:25+00:00'
-updated: '2026-09-05T10:18:25+00:00'
+updated: '2026-09-05T10:31:15+00:00'
 ---
 
 ## Goal
@@ -41,3 +43,6 @@ Asked by the user on 2026-09-05: "Approve should indicate what phase to add it t
 - [ ] The control fits the current card layout with no new row; the walkthrough page for the Inbox shows it.
 - [ ] Tests for the default phase, a move-and-approve, and the frozen refusal.
 
+## Log
+
+- 2026-09-05T10:31:15+00:00 approved (web)

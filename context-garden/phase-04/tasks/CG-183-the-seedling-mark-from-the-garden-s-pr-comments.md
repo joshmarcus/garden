@@ -2,10 +2,12 @@
 id: CG-183
 title: The seedling mark from the garden's PR comments sits left of the wordmark in the web header, and
   is the favicon
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading:
@@ -14,7 +16,7 @@ reading:
 - src/garden/github.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 created: '2026-09-05T10:03:57+00:00'
-updated: '2026-09-05T10:03:57+00:00'
+updated: '2026-09-05T10:31:14+00:00'
 ---
 
 ## Goal
@@ -32,3 +34,6 @@ Asked by the user on 2026-09-05: "can we get the little context-garden icon we p
 - [ ] A test renders a page and checks the header contains the mark and the favicon link.
 - [ ] The PR comment marker is unchanged.
 
+## Log
+
+- 2026-09-05T10:31:14+00:00 approved (web)

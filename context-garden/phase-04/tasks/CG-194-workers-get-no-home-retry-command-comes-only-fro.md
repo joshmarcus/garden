@@ -2,16 +2,18 @@
 id: CG-194
 title: Workers get no HOME, retry_command comes only from config, and the fence hash-checks garden.yaml
   and state.json
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading: []
 discovered_from: retro:context-garden/phase-03
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T10:26:55+00:00'
+updated: '2026-09-05T10:31:17+00:00'
 ---
 
 ## Goal
@@ -25,3 +27,7 @@ updated: '2026-09-05T10:26:55+00:00'
 ## Context
 
 Proposed at the context-garden/phase-03 retro. Phase 03 claimed trust at the edges; the verified gaps are small, local fixes that make the claim true.
+
+## Log
+
+- 2026-09-05T10:31:17+00:00 approved (web)

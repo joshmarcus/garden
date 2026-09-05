@@ -2,10 +2,12 @@
 id: CG-188
 title: 'A persona can report in its own shape: the review runner keeps the findings block and adds the
   persona''s sections (vision, features, not now, questions), rendered in the report and fed to the retro'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading:
@@ -15,7 +17,7 @@ reading:
 - personas/product-manager.md
 - context-garden/phase-03/docs/reviews/product-manager-vision-2026-09-05.md
 created: '2026-09-05T10:22:27+00:00'
-updated: '2026-09-05T10:22:27+00:00'
+updated: '2026-09-05T10:31:16+00:00'
 ---
 
 ## Goal
@@ -40,3 +42,6 @@ On 2026-09-05 the phase-03 retro ran the new product-manager persona (`personas/
 - [ ] The retro reads the sections; a persona's structured `features` reach the retro's features list with the persona named as the source.
 - [ ] Tests with the fake harness for a persona with sections and one without.
 
+## Log
+
+- 2026-09-05T10:31:16+00:00 approved (web)

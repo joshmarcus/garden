@@ -2,15 +2,17 @@
 id: CG-180
 title: The fake GitHub models CI latency and base-branch deletion, and a canary run checks a new pin before
   it is trusted
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading: []
 created: '2026-09-05T09:42:00+00:00'
-updated: '2026-09-05T09:42:00+00:00'
+updated: '2026-09-05T10:31:14+00:00'
 ---
 
 ## Goal
@@ -28,3 +30,6 @@ Three bugs merged in phase 03 with green tests and failed in the live loop withi
 - [ ] A scheduler test stops one `Scheduler` after reaping a review and starts another on the same garden; the verdict survives.
 - [ ] `garden canary` (or `garden qa --scripted --pin <sha>`) installs the given build into a throwaway venv, runs the scripted QA flows plus one stacked-PR and one merge-queue scenario against the fake GitHub, and exits non-zero on any failure; the operator skill says to run it before moving the pin.
 
+## Log
+
+- 2026-09-05T10:31:14+00:00 approved (web)

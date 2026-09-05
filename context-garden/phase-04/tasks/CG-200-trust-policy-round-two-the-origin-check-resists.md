@@ -2,15 +2,17 @@
 id: CG-200
 title: 'Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product
   PRs need a person or a second round'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading: []
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T10:30:00+00:00'
+updated: '2026-09-05T10:31:18+00:00'
 ---
 
 ## Goal
@@ -28,3 +30,6 @@ From the phase-03 persona reviews of 2026-09-05 (security:medium, security:mediu
 - [ ] PRs against a product with `self: true` or `provides_tool: true` require `automerge_min_review_rounds: 2` by default or a person; the setting is documented.
 - [ ] Tests for each.
 
+## Log
+
+- 2026-09-05T10:31:18+00:00 approved (web)

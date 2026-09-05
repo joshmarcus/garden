@@ -4,7 +4,9 @@ title: Configure notify.command in the driving garden so a needs-human transitio
 status: draft
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: easy
 reading: []

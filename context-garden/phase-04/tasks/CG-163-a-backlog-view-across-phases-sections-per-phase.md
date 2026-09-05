@@ -2,12 +2,14 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on:
 - CG-162
-priority: 2
+- CG-182
+- CG-197
+priority: 3
 difficulty: medium
 reading:
 - src/garden/web/pages/board.py
@@ -16,7 +18,7 @@ reading:
 - src/garden/graph.py
 - src/garden/scheduler/dispatch.py
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T03:58:24+00:00'
+updated: '2026-09-05T10:31:20+00:00'
 ---
 
 ## Goal
@@ -43,3 +45,7 @@ Design:
 - [ ] Every drag action has a button or pulldown equivalent that works without JavaScript.
 - [ ] Tests cover the order action, the multi-phase render and the refusal path.
 
+## Log
+
+- 2026-09-05T10:31:13+00:00 approved (web)
+- 2026-09-05T10:31:20+00:00 priority 2 -> 3 (web)

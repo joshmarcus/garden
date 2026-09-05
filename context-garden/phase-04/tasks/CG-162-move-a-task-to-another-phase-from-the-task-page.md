@@ -1,10 +1,12 @@
 ---
 id: CG-162
 title: Move a task to another phase from the task page and the CLI, keeping its id, history and state
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-182
+- CG-197
 priority: 2
 difficulty: medium
 reading:
@@ -14,7 +16,7 @@ reading:
 - src/garden/web/pages/task.py
 - src/garden/inbox.py
 created: '2026-09-05T03:56:09+00:00'
-updated: '2026-09-05T03:56:09+00:00'
+updated: '2026-09-05T10:31:13+00:00'
 ---
 
 ## Goal
@@ -39,3 +41,6 @@ Design:
 - [ ] State, run history and dependencies survive the move; a dependency that now points into a later phase is shown as a warning on the task page.
 - [ ] Tests cover the CLI and the web action, including both refusals.
 
+## Log
+
+- 2026-09-05T10:31:13+00:00 approved (web)
