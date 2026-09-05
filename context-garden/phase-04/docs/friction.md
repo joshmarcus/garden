@@ -255,3 +255,11 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 
 - tests/test_trials.py, named in the brief's reading list, doesn't exist; the repo's existing trial tests all live in tests/test_extras.py, so new tests were added there instead to match convention.
 - src/garden/cli/reviews.py, also named in the reading list, doesn't exist either — the CLI trial command lives in src/garden/cli/loop.py.
+
+### 2026-09-05 · reported by CG-231 (garden trial can optionally wait for a trial to conclude) in run 20260905T201219Z-revise
+
+- The reading list said tests/test_trials.py was 'not found when the brief was built', but the relevant test actually lives in tests/test_cli.py (test_trial_wait_polls_until_the_trial_concludes) and was already present on the branch from the prior attempt — worth pointing future briefs at the right file.
+
+### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T201649Z-revise
+
+- The brief's reading list didn't include review.py itself even though the fix and blocking finding were both there; had to read it directly rather than from the inlined excerpt.
