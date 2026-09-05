@@ -95,3 +95,37 @@ tests/inprocess.py keys its fakes on argv[0]'s file name, so a harness configure
 ### 2026-09-05 · reported by CG-170 (A task parked because the base branch was broken re-probes the base every tick and continues by itself when it goes green) in run 20260905T042440Z-work
 
 - The inlined src/garden/inbox.py in the brief's reading list was an older version than the file on disk (no needs_human_info / attention_view / ATTENTION_KINDS); I worked from the actual file.
+
+### 2026-09-05 · reported by CG-144 (A superseded review run is closed when a newer review starts; no run record outlives its process) in run 20260905T042706Z-work
+
+- The brief's inlined reading list (runs.py, tests/test_scheduler.py) reflected a pre-CG-137 monolithic scheduler.py; the actual code is already split into src/garden/scheduler/ mixins with an existing orphan sweep (CG-116) in review.py, so the brief needed re-deriving from the current module layout rather than the inlined excerpts.
+
+### 2026-09-05 · reported by CG-173 (Merging a stack parent retargets its children before the branch is deleted, and a child never opens a PR against a deleted branch) in run 20260905T043320Z-work
+
+- Reading list pointed at src/garden/scheduler/poll.py, reap.py, dispatch.py and tests/scheduler/test_poll.py as "not found when the brief was built" though they exist at those paths in the checkout — the brief's file-discovery seems to have run before the worktree was materialised.
+
+### 2026-09-05 · reported by CG-150 (garden friction keeps hand-written sections and the retro reads the Reported section and comment friction) in run 20260905T044804Z-work
+
+- The task brief pointed at `../phase-02-friction/docs/retro.md` and `../phase-02-friction/docs/reviews/` for the original evidence, but those live in the separate garden data repo, not this tool repo — they weren't reachable from this checkout, so the fix was derived from the retro item's one-line description and the current code instead.
+
+### 2026-09-05 · reported by CG-139 (Rebase rounds do not count toward the revision cap) in run 20260905T044056Z-revise
+
+- The brief's Context/acceptance criteria describe rebase-round exemptions as one undifferentiated concern, but by the time this revision ran, a sibling task (CG-141) had already merged a complete, independently-designed implementation for the PR-conflict half. Worth flagging in planning when two tasks in the same phase goal (here, phase-03 goal 2) target overlapping scheduler behavior: the later one should either be scoped narrower up front or explicitly told to check the other's status before drafting its own mechanism.
+
+### 2026-09-05 · reported by CG-149 (Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief cost is measured per phase) in run 20260905T044755Z-work
+
+- The task's reading list was empty and the acceptance criteria were left 'to be written at planning', so the concrete requirement had to be reconstructed from the retro item quoted in the context.
+- The retro and persona reports referenced (../phase-02-friction/...) live in the garden repo, not the product checkout, so they could not be read from the worktree.
+
+### 2026-09-05 · reported by CG-147 (A product clone gets a git identity when it is made, and doctor checks every clone) in run 20260905T044746Z-work
+
+- gitops.py had grown several functions (sync_remote_branch, rebase_onto_capture, etc.) since the brief's inlined copy was generated — had to re-read the live file rather than trust the brief's snapshot.
+
+### 2026-09-05 · reported by CG-174 (garden pr and the web attach a new PR by refreshing the cached PR number and state, so the poll follows the new PR) in run 20260905T045725Z-work
+
+- The brief's reading list pointed at scheduler/__init__.py, poll.py and state.py, but the actual fix (a hand-actions method) belonged in scheduler/human.py alongside triage/retry/mark_wont_do — worth noting for future PR-attach-related briefs so the reading list points there too.
+
+### 2026-09-05 · reported by CG-157 (The Inbox friction form's product and phase selects cannot produce a 404) in run 20260905T050153Z-work
+
+- The brief's reading list pointed at `../phase-02-friction/docs/retro.md` and its `docs/reviews/` persona reports for context, but this worktree only contains the context-garden repo itself at phase-03 — that sibling phase directory doesn't exist in the checkout, so the retro evidence was unavailable and the fix was derived directly from the described symptom and the form code instead.
+- The task's acceptance criteria were left as 'to be written at planning' and were apparently never filled in before dispatch.
