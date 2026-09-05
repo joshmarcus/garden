@@ -92,3 +92,7 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 ### 2026-09-05 · reported by CG-189 (The retro's questions for the human are decision cards: answer each in the UI, the answers land in the retro document and the next phase's goals, and the planner reads them) in run 20260905T123227Z-work
 
 - The brief's Design says the answer appends to `docs/retro.md` and the next phase's `goals.md`, but the retro writes those into a PR worktree, not the live garden; it took a read of scheduler/retro.py to confirm the answer is meant to edit the live (post-merge) copies. One sentence in the brief on that timing would have saved the digging.
+
+### 2026-09-05 · reported by CG-199 (Discovered work is deduplicated before it is filed: the same finding from several workers becomes one draft) in run 20260905T124816Z-work
+
+- The discovered-item schema (title/body free text) has no structured file/error field, so the 'same file and error' match had to be a regex heuristic over free text rather than a precise comparison — reasonable for the common case but not foolproof against very differently-worded reports of the same bug.
