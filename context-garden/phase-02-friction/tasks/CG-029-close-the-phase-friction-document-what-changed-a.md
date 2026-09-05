@@ -33,6 +33,11 @@ By the time this runs, `garden friction context-garden/phase-02-friction` (CG-00
 
 Closing the phase itself is `garden close-phase context-garden/phase-02-friction` (from CG-078, PR #73), run against the live garden; do that last, after the friction document and the next phase's goals are committed.
 
+## Process (added at the freeze, 2026-09-05)
+
+Run the retro as one process, by hand if `garden retro` (CG-133) has not landed: (1) `garden friction context-garden/phase-02-friction` to harvest the Friction sections from every PR body; (2) `garden persona-review context-garden/phase-02-friction -p designer -p project-manager -p staff-engineer -p usability-expert -p user -p security`; (3) reconcile every harvested friction item against what merged: still true, fixed by which task, outdated, or wrong, with the evidence; (4) write the friction document from the reconciled table and the persona reports, then the next phase's goals; (5) `garden close-phase`. The output is a PR to the garden repo.
+
+
 ## Acceptance criteria
 
 - [ ] `docs/friction.md` is organised as: what workers reported (harvested), what the first live run showed, the tier numbers, what changed in response (with task ids), and what remains.

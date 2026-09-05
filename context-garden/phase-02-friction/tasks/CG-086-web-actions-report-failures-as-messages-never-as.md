@@ -1,7 +1,7 @@
 ---
 id: CG-086
 title: Web actions report failures as messages, never as a 500
-status: running
+status: in_review
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/74
 attempts: 1
 last_dispatched_at: '2026-09-05T00:26:49+00:00'
 created: '2026-09-04T19:37:26+00:00'
-updated: '2026-09-05T00:26:49+00:00'
+updated: '2026-09-05T00:34:52+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,4 @@ Also: the Answer form on a task that is no longer `waiting_human` does nothing a
 - 2026-09-04T23:06:06+00:00 automated review: approve — All three acceptance criteria are met with tests; the task_action refactor cleanly converts scheduler errors and stale preconditions into 303 flash messages, preserves typed answers, and logs unexpected errors. Web tests pass and ruff is clean. cost=$0.58
 - 2026-09-05T00:02:19+00:00 PR conflicts with main (src/garden/web/app.py); revise run will rebase and resolve
 - 2026-09-05T00:26:49+00:00 dispatched revise run 20260905T002648Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~7710 tokens)
+- 2026-09-05T00:34:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/74: Rebased the branch onto the latest origin/main (which had advanced twice during the session) and resolved all conflicts in src/garden/web/app.py, preserving both sides' intent (flash-message error handling, trial validation, and the closed-phase guard combined with 404-on-unknown-phase). Tests (373 passed) and ruff both pass, and the branch is a clean linear rebase ready for force-push. cost=$3.48
