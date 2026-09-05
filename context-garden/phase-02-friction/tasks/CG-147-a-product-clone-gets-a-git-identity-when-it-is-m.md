@@ -1,7 +1,7 @@
 ---
 id: CG-147
 title: A product clone gets a git identity when it is made, and doctor checks every clone
-status: ready
+status: draft
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/cli.py
 - src/garden/scheduler.py
 created: '2026-09-05T02:50:49+00:00'
-updated: '2026-09-05T03:02:34+00:00'
+updated: '2026-09-05T03:05:55+00:00'
 ---
 
 ## Goal
@@ -32,3 +32,4 @@ Found at the phase-02 retro on the first live run. The first friction of the day
 ## Log
 - 2026-09-05T02:56:00+00:00 deferred by the feature freeze (2026-09-05): identity set by hand in the garden clone this time
 - 2026-09-05T03:02:34+00:00 approved (web)
+- 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
