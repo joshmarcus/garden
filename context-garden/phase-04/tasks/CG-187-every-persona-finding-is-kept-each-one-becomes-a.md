@@ -1,0 +1,36 @@
+---
+id: CG-187
+title: 'Every persona finding is kept: each one becomes a draft with its severity as priority, the retro
+  reconciles all of them, and nothing below high is dropped'
+status: draft
+product: context-garden
+phase: phase-04
+depends_on: []
+priority: 1
+difficulty: easy
+reading:
+- src/garden/personas.py
+- src/garden/scheduler/persona.py
+- src/garden/retro.py
+- src/garden/scheduler/retro.py
+- src/garden/cli.py
+created: '2026-09-05T10:21:05+00:00'
+updated: '2026-09-05T10:21:05+00:00'
+---
+
+## Goal
+
+A persona review never throws a finding away. Every finding, at every severity, becomes a draft task in the phase the review names (the phase under review, or the next phase when the reviewed phase is frozen or closed), with the severity mapped to priority (high 1, medium 2, low 3), the persona and run in its provenance, and the finding's suggestion as its body. The retro reconciles all findings, not only the high ones, and its `duplicate_of` judgement collapses the same finding from several personas into one task.
+
+## Context
+
+The user on 2026-09-05, reading the product manager's phase-03 review: "We shouldn't arbitrarily only schedule two high items per review and toss away the rest." Today `garden persona-review --file-tasks` files only findings with `severity == "high"`; medium and low findings live in the report under `docs/reviews/` and nowhere else, so the planner sees them only if it reads that directory. The phase-02 retro reconciled 41 items but its persona inputs were the reports as prose, and the phase-03 product-manager review carried three medium and one low finding (live config reload, restart-safe reaps, placeholder acceptance criteria, three UI copy fixes) that no task captured. The reviewer chooses severity to rank, not to filter.
+
+## Acceptance criteria
+
+- [ ] `persona-review --file-tasks` and the retro file a draft for every finding, priority from severity, body from summary and suggestion, provenance `persona:<name>:<run>`; a frozen or closed reviewed phase sends them to the next phase.
+- [ ] Findings that say the same thing across personas become one task: the reconciliation's `duplicate_of` (or a title match) merges them and the task body lists the personas that raised it.
+- [ ] The retro document lists every finding with the task id it became, grouped by severity.
+- [ ] `--file-tasks` gains `--min-severity` for a person who wants fewer drafts, defaulting to low.
+- [ ] Tests with the fake harness for a review with one finding at each severity.
+
