@@ -5,7 +5,7 @@ title: 'Rebase is its own mode: mechanical first, an agent only for conflicts, n
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 1
 difficulty: medium
 reading:

@@ -4,7 +4,7 @@ title: garden retro waits for the persona reports before it dispatches the recon
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 1
 difficulty: easy
 reading:

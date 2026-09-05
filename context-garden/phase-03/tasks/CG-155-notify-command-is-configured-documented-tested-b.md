@@ -5,7 +5,7 @@ title: notify.command is configured, documented, tested by doctor and loud on fa
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 2
 difficulty: easy
 reading: []

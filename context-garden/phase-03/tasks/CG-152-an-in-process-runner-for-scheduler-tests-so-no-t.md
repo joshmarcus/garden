@@ -4,7 +4,7 @@ title: An in-process runner for scheduler tests so no test drives a subprocess w
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 1
 difficulty: hard
 reading: []

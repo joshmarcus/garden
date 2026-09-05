@@ -4,7 +4,7 @@ title: principles/00-index.md says friction goes in the result's friction field,
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 3
 difficulty: easy
 reading: []

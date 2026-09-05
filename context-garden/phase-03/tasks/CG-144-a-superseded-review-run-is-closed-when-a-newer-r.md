@@ -4,7 +4,7 @@ title: A superseded review run is closed when a newer review starts; no run reco
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 2
 difficulty: easy
 reading:

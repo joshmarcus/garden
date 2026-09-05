@@ -5,7 +5,7 @@ title: Manual tasks get a revise path, a reviewer that can see garden state, and
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 3
 difficulty: medium
 reading: []

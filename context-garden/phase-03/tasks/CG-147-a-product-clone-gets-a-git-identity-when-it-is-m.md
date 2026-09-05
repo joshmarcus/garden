@@ -4,7 +4,7 @@ title: A product clone gets a git identity when it is made, and doctor checks ev
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 2
 difficulty: easy
 reading:

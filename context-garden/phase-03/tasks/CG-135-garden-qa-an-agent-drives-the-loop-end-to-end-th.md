@@ -4,7 +4,7 @@ title: 'garden qa: an agent drives the loop end to end through the web app on a 
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 2
 difficulty: hard
 reading:

@@ -4,7 +4,7 @@ title: Ship the garden-operate skill with the tool so every new garden gets it
 status: draft
 product: context-garden
 phase: phase-03
-depends_on: []
+depends_on: [CG-137]
 priority: 2
 difficulty: easy
 reading:
