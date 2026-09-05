@@ -31,7 +31,7 @@ review:
   max_rounds: 2             # correctness, scope, PR description quality / no scar tissue)
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
   harness: ""               # empty = the default harness
-  difficulty: "medium"    # PR reviews on the medium tier; set to hard for a retro (personas and the reconciliation use this tier too)
+  difficulty: "easy"      # PR reviews on the easy tier (sonnet 5) since 2026-09-05 14:40 to cut spend; retro/persona tier comes from retro.difficulty once CG-207 lands
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
 # Token-free checks. pre_pr runs in the worktree before a PR is opened or updated (failures
