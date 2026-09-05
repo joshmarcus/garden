@@ -2,7 +2,7 @@
 id: CG-228
 title: 'A task is done only when its commits reach the product''s base branch: a stacked child merged
   into its parent''s branch stays open until the parent merges'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -13,8 +13,11 @@ reading:
 - src/garden/scheduler/rebase.py
 - src/garden/graph.py
 - tests/scheduler/test_poll.py
+branch: garden/cg-228-a-task-is-done-only-when-its-commits-reach-the-p
+attempts: 1
+last_dispatched_at: '2026-09-05T18:16:06+00:00'
 created: '2026-09-05T18:14:53+00:00'
-updated: '2026-09-05T18:14:53+00:00'
+updated: '2026-09-05T18:16:06+00:00'
 ---
 
 ## Goal
@@ -35,3 +38,4 @@ updated: '2026-09-05T18:14:53+00:00'
 ## Log
 
 - 2026-09-05T18:14:53+00:00 approved (web)
+- 2026-09-05T18:16:06+00:00 dispatched work run 20260905T181552Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16648 tokens)

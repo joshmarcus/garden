@@ -15,9 +15,9 @@ reading:
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 branch: garden/cg-030-plates-label-what-each-plate-shows-keep-every-fi
 runner: manual
-last_dispatched_at: '2026-09-05T18:13:42+00:00'
+last_dispatched_at: '2026-09-05T18:16:22+00:00'
 created: '2026-09-04T14:36:12+00:00'
-updated: '2026-09-05T18:13:42+00:00'
+updated: '2026-09-05T18:16:22+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,7 @@ Everything involved lives in `PLANTS` (`src/garden/plants.py`), `CANDIDATES` and
 - 2026-09-05T18:13:41+00:00 dispatched trial run 20260905T181341Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~7307 tokens)
 - 2026-09-05T18:13:42+00:00 dispatched trial run 20260905T181342Z-trial via local [codex] (fresh session, base main, ~7341 tokens)
 - 2026-09-05T18:13:42+00:00 trial started with claude:claude-sonnet-5, codex
+- 2026-09-05T18:16:16+00:00 reset to ready by hand
+- 2026-09-05T18:16:22+00:00 dispatched trial run 20260905T181622Z-trial via local [claude model=claude-sonnet-5] (fresh session, base main, ~7410 tokens)
+- 2026-09-05T18:16:22+00:00 dispatched trial run 20260905T181622Z-trial-2 via local [codex] (fresh session, base main, ~7444 tokens)
+- 2026-09-05T18:16:22+00:00 trial started with claude:claude-sonnet-5, codex
