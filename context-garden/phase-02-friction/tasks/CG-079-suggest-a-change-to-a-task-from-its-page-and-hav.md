@@ -1,7 +1,7 @@
 ---
 id: CG-079
 title: Suggest a change to a task from its page, and have an agent fold it in
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/75
 attempts: 1
 last_dispatched_at: '2026-09-05T00:30:22+00:00'
 created: '2026-09-04T19:15:32+00:00'
-updated: '2026-09-05T00:33:06+00:00'
+updated: '2026-09-05T01:19:30+00:00'
 ---
 
 ## Goal
@@ -61,3 +61,6 @@ Design:
 - 2026-09-05T00:30:22+00:00 dispatched revise run 20260905T003021Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~14064 tokens)
 - 2026-09-05T00:33:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/75: Addressed the sole review blocker by removing the process-narration sentence from the PR description; the budget-test rationale stays in the Friction section. No code change was needed — the suggestions feature already met all four acceptance criteria and the full suite (366 passed) and ruff pass. cost=$0.41
 - 2026-09-05T00:33:06+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-079` for one more round, or review on GitHub
+- 2026-09-05T01:19:07+00:00 PR conflicts with main (tests/fake_claude.py); revision cap reached; needs a human
+- 2026-09-05T01:19:30+00:00 revision counter reset (web)
+- 2026-09-05T01:19:30+00:00 re-enabled by hand; revise run will follow

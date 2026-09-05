@@ -2,7 +2,7 @@
 id: CG-133
 title: 'garden retro: harvest PR friction, run the personas, reconcile what is still true, draft the next
   phase'
-status: in_review
+status: done
 product: context-garden
 phase: phase-02-friction
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/94
 attempts: 1
 last_dispatched_at: '2026-09-05T00:50:08+00:00'
 created: '2026-09-05T00:36:04+00:00'
-updated: '2026-09-05T01:14:23+00:00'
+updated: '2026-09-05T01:18:04+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Asked at the end of the first live run, when the phase had 59 PRs with Friction 
 - 2026-09-05T00:50:08+00:00 dispatched work run 20260905T004959Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~6289 tokens)
 - 2026-09-05T01:10:37+00:00 opened https://github.com/joshmarcus/context-garden/pull/94 (base main): Added `garden retro product/phase`: harvests PR-body friction, runs or reuses persona reviews, has one agent reconcile each friction item against what merged (still true/fixed/outdated/disputed with evidence), and opens a PR to the garden's own self repo with a retro document and a next-phase goals draft. --dry-run prints the plan and a cost estimate. 9 new tests; full suite and lint green. cost=$8.47
 - 2026-09-05T01:14:23+00:00 automated review: approve — Adds `garden retro` end-to-end (harvest → personas → reconcile → PR to the self repo) with a clean, well-tested reconciliation table; acceptance criteria met, full suite (376 passed) and lint green, scope limited to retro files. cost=$1.05
+- 2026-09-05T01:18:04+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/94
