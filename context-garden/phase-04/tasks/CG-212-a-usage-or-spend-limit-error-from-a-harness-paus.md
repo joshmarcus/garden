@@ -2,7 +2,7 @@
 id: CG-212
 title: A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task
   ready, instead of burning attempts and failing tasks
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T19:12:43+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T19:30:02+00:00'
+updated: '2026-09-05T20:15:23+00:00'
 ---
 
 ## Goal
@@ -70,3 +70,7 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T19:12:43+00:00 dispatched revise run 20260905T191243Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~20639 tokens)
 - 2026-09-05T19:30:02+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Addressed both reviewer-blocking findings: a quota hit mid-resume now restores the question/session and returns to waiting_human instead of losing the PR to a ready reset, and the harness probe now runs via Harness.login_probe() (no edit/Bash permissions, no fence) instead of the full dispatch command. cost=$3.22
 - 2026-09-05T19:30:02+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T19:54:58+00:00 automated review requested changes: Solid, well-tested quota-pause mechanism across work/revise/rebase/resume/review/trial/persona paths, but the review env_error handler mishandles the after-rebase (uncounted) review round, corrupting review_rounds. cost=$0.90
+- 2026-09-05T19:55:08+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-212`) or send it back (`garden triage CG-212 --changes "..."`)
+- 2026-09-05T20:15:23+00:00 revision counter reset (web)
+- 2026-09-05T20:15:23+00:00 re-enabled by hand; revise run will follow

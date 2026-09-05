@@ -2,7 +2,7 @@
 id: CG-232
 title: 'garden trial --again re-runs a trial on a task cleanly: closes or archives the previous contender
   PRs, clears the task''s cached PR state, and names branches from the task''s base, not the last winner'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,10 +14,11 @@ reading:
 - src/garden/scheduler/human.py
 - tests/test_trials.py
 branch: garden/cg-232-garden-trial-again-re-runs-a-trial-on-a-task-cle
+pr: https://github.com/joshmarcus/context-garden/pull/187
 attempts: 1
 last_dispatched_at: '2026-09-05T19:48:30+00:00'
 created: '2026-09-05T19:47:53+00:00'
-updated: '2026-09-05T19:48:30+00:00'
+updated: '2026-09-05T20:13:29+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,4 @@ A trial can be run again on the same task without hand surgery: `garden trial <t
 
 - 2026-09-05T19:47:54+00:00 approved (web)
 - 2026-09-05T19:48:30+00:00 dispatched work run 20260905T194814Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~9181 tokens)
+- 2026-09-05T20:13:29+00:00 opened https://github.com/joshmarcus/context-garden/pull/187 (base main): garden trial --again now resets a task cleanly: it closes (or, with --keep-prs, leaves open) the previous contenders' PRs, deletes their remote branches, drops their worktrees, and clears the task's cached PR/review state before starting new contenders named from the task's default branch rather than the last winner's; the trials and task pages show every past trial for a task with closed contenders marked. cost=$4.72
