@@ -2,7 +2,7 @@
 id: CG-203
 title: Every tick phase is wrapped so one failure cannot skip the rest, state is saved on error, and deferred
   reviews are deduplicated
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 2
 difficulty: easy
 reading: []
+branch: garden/cg-203-every-tick-phase-is-wrapped-so-one-failure-canno
+attempts: 1
+last_dispatched_at: '2026-09-05T12:50:14+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:31:19+00:00'
+updated: '2026-09-05T12:50:14+00:00'
 ---
 
 ## Goal
@@ -32,3 +35,4 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 ## Log
 
 - 2026-09-05T10:31:19+00:00 approved (web)
+- 2026-09-05T12:50:14+00:00 dispatched work run 20260905T125005Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~4411 tokens)

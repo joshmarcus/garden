@@ -1,16 +1,17 @@
 ---
 id: CG-209
 title: Brief gate for blocking discovered tasks
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
-depends_on: []
+depends_on:
+- CG-193
 priority: 2
 difficulty: easy
 reading: []
 discovered_from: CG-193
 created: '2026-09-05T12:46:14+00:00'
-updated: '2026-09-05T12:46:14+00:00'
+updated: '2026-09-05T12:50:55+00:00'
 ---
 
 ## Goal
@@ -28,3 +29,4 @@ Discovered by CG-193 (Approve refuses placeholder acceptance criteria and unreso
 ## Log
 
 - 2026-09-05T12:46:14+00:00 discovered by CG-193
+- 2026-09-05T12:50:55+00:00 approved (web)
