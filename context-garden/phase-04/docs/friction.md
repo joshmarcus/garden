@@ -229,3 +229,7 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-221 (A slider from efficient to fast: named operating profiles that set workers, the tier map, the review tier and the observation feed together, switched live from the rail) in run 20260905T175649Z-revise
 
 - The review flagged that CG-214 (the /costs page) already existed on main; the prior attempt had incorrectly treated it as not-yet-built and skipped the annotation work on that premise.
+
+### 2026-09-05 · reported by CG-228 (A task is done only when its commits reach the product's base branch: a stacked child merged into its parent's branch stays open until the parent merges) in run 20260905T181552Z-work
+
+- The brief's reading list only pointed at poll.py/rebase.py/graph.py; getting the status fully surfaced also required touching plants.py, web/common.py, web/templates/{base,task,_board}.html, cli/views.py, cli/common.py, tui/app.py and scheduler/dispatch.py's stuck-audit whitelist - none of that was discoverable from the reading list alone, only from a full-repo grep for status-keyed maps.

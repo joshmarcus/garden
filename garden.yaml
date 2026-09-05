@@ -67,7 +67,7 @@ harnesses:
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex
-    permission_mode: full-auto     # or bypass (== --dangerously-bypass-approvals-and-sandbox)
+    permission_mode: bypass        # since 2026-09-05 18:55: full-auto (workspace-write) blocks .git writes and network, so codex could never commit; the fence and the scrubbed env are the guard, as for claude
     models: {}                     # empty = the codex CLI default for every tier
     resume: false                  # true if your codex supports `codex exec resume <id>`
 
