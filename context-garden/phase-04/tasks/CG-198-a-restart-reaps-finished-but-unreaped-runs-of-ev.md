@@ -14,9 +14,9 @@ reading: []
 branch: garden/cg-198-a-restart-reaps-finished-but-unreaped-runs-of-ev
 pr: https://github.com/joshmarcus/context-garden/pull/154
 attempts: 2
-last_dispatched_at: '2026-09-05T15:32:23+00:00'
+last_dispatched_at: '2026-09-05T15:43:17+00:00'
 created: '2026-09-05T10:30:00+00:00'
-updated: '2026-09-05T15:42:52+00:00'
+updated: '2026-09-05T15:49:01+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,7 @@ From the phase-03 persona reviews of 2026-09-05 (product-manager:medium, user:lo
 - 2026-09-05T15:37:48+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/task.html); a rebase agent will resolve it
 - 2026-09-05T15:38:53+00:00 automated review: request_changes — The dirty-worktree stash and single run_finished emit are correct and well-tested, but the restart's review-recovery path can duplicate the posted GitHub review comment in exactly the crash scenario the task describes. cost=$1.30
 - 2026-09-05T15:42:52+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-05T15:42:57+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/task.html); a rebase agent will resolve it
+- 2026-09-05T15:43:17+00:00 dispatched rebase run 20260905T154317Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~8693 tokens)
+- 2026-09-05T15:49:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/154: Rebased onto origin/main; resolved the single conflict in src/garden/web/templates/task.html by combining both timeline event-kind chains — kept main's newer 'rebase', 'merge_head', 'feedback_ignored', and 'rebased_stale_base' event cases alongside this branch's 'stashed' event case (inserted right after 'moved', matching its original position). Full test suite (751 passed, 3 skipped) and ruff both pass post-rebase. Verified main still doesn't contain the reap-on-start, dirty-worktree-stash, or single run_finished changes, so no pr_body update is needed. cost=$0.32
+- 2026-09-05T15:49:01+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-198` for one more round, or review on GitHub

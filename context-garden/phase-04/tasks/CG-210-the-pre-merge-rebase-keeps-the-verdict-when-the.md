@@ -2,7 +2,7 @@
 id: CG-210
 title: 'The pre-merge rebase keeps the verdict when the PR''s own patch is unchanged: compare git patch-ids,
   not diff hashes, so a rebase onto a moved main never forces a re-review'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 branch: garden/cg-210-the-pre-merge-rebase-keeps-the-verdict-when-the
 pr: https://github.com/joshmarcus/context-garden/pull/166
 attempts: 1
-last_dispatched_at: '2026-09-05T15:14:45+00:00'
+last_dispatched_at: '2026-09-05T15:46:43+00:00'
 created: '2026-09-05T13:02:16+00:00'
-updated: '2026-09-05T15:38:54+00:00'
+updated: '2026-09-05T15:57:58+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,9 @@ Aborting
 - 2026-09-05T15:14:45+00:00 dispatched work run 20260905T151445Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~19332 tokens)
 - 2026-09-05T15:36:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/166 (base main): Replaced the sha1-of-diff-text comparison in the pre-merge/stale-base rebase verdict-keep logic with a git patch-id comparison (blind to hunk-header/context churn from unrelated merges), added gitops.patch_id, stored patch_id_before/after on the rebase run, and updated the rebase event and tests accordingly. cost=$3.86
 - 2026-09-05T15:38:54+00:00 automated review: approve — patch_id is correctly added and wired into the single shared rebase primitive so both the pre-merge and stale-base rebase paths compare patch ids; all four acceptance criteria are met, tests and lint pass, and the description is clean. cost=$0.51
+- 2026-09-05T15:45:24+00:00 PR conflicts with main; rebase onto main conflicts (tests/test_rebase.py); a rebase agent will resolve it
+- 2026-09-05T15:46:43+00:00 dispatched rebase run 20260905T154643Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~7312 tokens)
+- 2026-09-05T15:53:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/166: Rebased onto origin/main; resolved the sole conflict in tests/test_rebase.py by taking the incoming CG-210 patch-id-based assertions (dropping main's superseded diff_unchanged single-line assert from CG-204/CG-141), preserving both new patch-id tests. Full test suite (750 passed, 3 skipped) and ruff pass. cost=$0.29
+- 2026-09-05T15:57:21+00:00 automated review: approve — Patch-id comparison is correctly implemented and threaded through the single shared rebase helper; all four acceptance criteria are met with matching tests, and the full suite plus lint pass. cost=$0.65
+- 2026-09-05T15:57:27+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-05T15:57:58+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/166

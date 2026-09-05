@@ -2,7 +2,7 @@
 id: CG-163
 title: 'A backlog view across phases: sections per phase, drag a task to reorder it or to move it to another
   phase'
-status: changes_requested
+status: waiting_human
 product: context-garden
 phase: phase-04
 depends_on:
@@ -20,9 +20,9 @@ reading:
 branch: garden/cg-163-a-backlog-view-across-phases-sections-per-phase
 pr: https://github.com/joshmarcus/context-garden/pull/163
 attempts: 1
-last_dispatched_at: '2026-09-05T15:31:00+00:00'
+last_dispatched_at: '2026-09-05T15:43:18+00:00'
 created: '2026-09-05T03:58:24+00:00'
-updated: '2026-09-05T15:41:35+00:00'
+updated: '2026-09-05T15:46:25+00:00'
 ---
 
 ## Goal
@@ -72,3 +72,5 @@ Design:
 - 2026-09-05T15:40:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/163: Rebased onto origin/main; resolved the textual conflict in src/garden/web/common.py by merging both branches' new imports (Status, dispatch_sort_key, _last_log_line) and keeping the CG-163 backlog_data method and _split_log helper (main's side of that hunk was empty). Rebase completed cleanly. Running the suite afterward surfaced two test failures unrelated to the conflict: main gained a DNS-rebinding Host guard (CG-194) after this branch's last sync, and tests/test_backlog.py's TestClient used the default non-loopback host, so a couple of POSTs with an explicit referer got refused. Fixed by aligning test_backlog.py's client() and referer headers with the same 127.0.0.1 convention test_web.py already uses (a mechanical fix matching an established pattern, not a design decision). Full suite now passes (737 passed, 3 skipped) and ruff is clean. PR description still accurate — main has none of this branch's features yet, so no pr_body change needed. cost=$0.65
 - 2026-09-05T15:40:07+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-163` for one more round, or review on GitHub
 - 2026-09-05T15:41:35+00:00 automated review requested changes: Core backlog feature (order field, sort key, band-scoped reorder, move refusal wiring) is solid, but two of the new tests fail against the real base branch because the test client doesn't use a loopback base_url like tests/test_web.py's convention requires post-CG-194, contradicting the author's claimed passing suite. cost=$0.78
+- 2026-09-05T15:43:18+00:00 dispatched revise run 20260905T154318Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~17635 tokens)
+- 2026-09-05T15:46:25+00:00 worker says nothing to change: The review's finding matches commit db85388's client() (TestClient with no base_url), but HEAD is already 2696b93, which fixed exactly this by adding base_url="http://127.0.0.1" and aligning the referer headers, pushed at 15:40:07 — before the review that flagged it completed at 15:41:35. The review evaluated a stale commit, not the pushed HEAD. Verified fresh: `.venv/bin/python -m pytest -q` gives 737 passed, 3 skipped (matching the log's claim), tests/test_backlog.py's 7 tests all pass including both refusal-path tests, and `ruff check src tests` is clean. No code change is needed. cost=$0.39

@@ -1,7 +1,7 @@
 ---
 id: CG-193
 title: Approve refuses placeholder acceptance criteria and unresolved reading-list paths
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -14,9 +14,9 @@ branch: garden/cg-193-approve-refuses-placeholder-acceptance-criteria
 pr: https://github.com/joshmarcus/context-garden/pull/149
 discovered_from: retro:context-garden/phase-03
 attempts: 2
-last_dispatched_at: '2026-09-05T15:26:47+00:00'
+last_dispatched_at: '2026-09-05T15:50:32+00:00'
 created: '2026-09-05T10:26:55+00:00'
-updated: '2026-09-05T15:33:27+00:00'
+updated: '2026-09-05T15:50:32+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,5 @@ Proposed at the context-garden/phase-03 retro. The recurring brief defects have 
 - 2026-09-05T15:26:47+00:00 dispatched revise run 20260905T152647Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6149 tokens)
 - 2026-09-05T15:33:26+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/149: This round required no code changes — the review feedback was about disclosure only. Rewrote the PR description to explicitly own CG-209's inclusion (a blocking discovered task now runs the same brief_gaps check before skipping straight to ready) and removed the Follow-ups paragraph that falsely described that exact gap as still unresolved. cost=$0.43
 - 2026-09-05T15:33:27+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-193` for one more round, or review on GitHub
+- 2026-09-05T15:50:13+00:00 automated review requested changes: Core gate works and is tested, but brief_gaps derives its own criteria-parsing instead of reusing criteria.parse_criteria, so a non-checkbox bullet can pass approve yet be invisible to review/verification downstream. cost=$0.59
+- 2026-09-05T15:50:32+00:00 dispatched revise run 20260905T155032Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~6313 tokens)

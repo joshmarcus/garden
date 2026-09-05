@@ -2,7 +2,7 @@
 id: CG-204
 title: 'Test debt from phase 03: a shared contract for the two GitHub fakes, real LocalRunner coverage,
   event-based assertions, and the state store''s dict.get snapshot'
-status: in_review
+status: done
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/164
 attempts: 1
 last_dispatched_at: '2026-09-05T15:07:31+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T15:40:15+00:00'
+updated: '2026-09-05T15:44:20+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,5 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:medium, staff-en
 - 2026-09-05T15:23:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T15:32:01+00:00 automated review: approve — All four test-debt items are implemented correctly and covered by passing tests (737 passed, 3 skipped; ruff clean); no correctness issues found and the diff stays tightly scoped to the task. cost=$0.51
 - 2026-09-05T15:40:15+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T15:42:55+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T15:44:20+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/164

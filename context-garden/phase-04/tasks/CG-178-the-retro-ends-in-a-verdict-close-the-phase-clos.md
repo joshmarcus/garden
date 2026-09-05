@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on:
@@ -22,7 +22,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/139
 attempts: 2
 last_dispatched_at: '2026-09-05T15:36:44+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T15:36:44+00:00'
+updated: '2026-09-05T15:51:41+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,5 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 - 2026-09-05T15:20:53+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
 - 2026-09-05T15:36:24+00:00 automated review requested changes: Core verdict/filing/close-phase logic is solid and well tested, but the retro page never shows the verdict and the reopen decision (and close notice) are never surfaced in the Inbox or digest, leaving a blocking decision invisible outside the phase page. cost=$1.07
 - 2026-09-05T15:36:44+00:00 dispatched revise run 20260905T153644Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~20915 tokens)
+- 2026-09-05T15:51:40+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/139: Addressed both PR #139 review items: the retro page now shows the verdict panel (shared with the phase page via a new partial), and a pending reopen verdict now surfaces as an Inbox decision card, a browser notification, and a digest needs_human entry. cost=$3.35
+- 2026-09-05T15:51:41+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-178` for one more round, or review on GitHub
