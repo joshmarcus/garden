@@ -13,10 +13,11 @@ reading:
 - tests/fake_claude.py
 - tests/conftest.py
 branch: garden/cg-135-garden-qa-an-agent-drives-the-loop-end-to-end-th
+pr: https://github.com/joshmarcus/context-garden/pull/107
 attempts: 1
-last_dispatched_at: '2026-09-05T03:57:33+00:00'
+last_dispatched_at: '2026-09-05T04:20:04+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:57:33+00:00'
+updated: '2026-09-05T04:20:04+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,7 @@ Asked at the freeze of the first live run, as the interactive half of the QA wal
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:57+00:00 approved (web)
 - 2026-09-05T03:57:33+00:00 dispatched work run 20260905T035723Z-work via local [claude model=claude-fable-5-1] (fresh session, base main, ~7673 tokens)
+- 2026-09-05T04:17:48+00:00 discovered work filed: CG-169
+- 2026-09-05T04:18:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/107 (base main): garden qa builds and serves a throwaway garden with fake workers and a pretend GitHub, has a scripted or harness-driven agent complete nine flows through the web app, files findings as friction reports with the page HTML, and exits non-zero naming a failed step. Adds a close-phase route and a stand-in GitHub hook on the web hub. cost=$10.34
+- 2026-09-05T04:19:48+00:00 PR conflicts with main (tests/fake_claude.py); revise run will rebase and resolve
+- 2026-09-05T04:20:04+00:00 dispatched revise run 20260905T042003Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~12797 tokens)
