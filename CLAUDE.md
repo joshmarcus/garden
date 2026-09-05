@@ -3,7 +3,7 @@
 The context garden for `joshmarcus/context-garden`: goals, specs and tasks for the tool, kept
 apart from the tool's own code so that workers never run inside the garden they are driven by.
 
-- The tool is installed in `.venv` from a pinned commit of https://github.com/joshmarcus/context-garden (currently 4d3199b);
+- The tool is installed in `.venv` from a pinned commit of https://github.com/joshmarcus/context-garden (currently cf78e2d);
   upgrade on purpose with `.venv/bin/pip install --upgrade "context-garden[dev,plates] @ git+https://github.com/joshmarcus/context-garden@<sha>"`.
 - `garden.yaml` names the product by URL; the clone lives under `.garden/repos/context-garden` and
   worktrees under `.garden/worktrees/<id>` are cut from it.
