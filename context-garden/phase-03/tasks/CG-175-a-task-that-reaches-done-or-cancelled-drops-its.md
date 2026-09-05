@@ -2,7 +2,7 @@
 id: CG-175
 title: A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished
   task
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -13,8 +13,11 @@ reading:
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/review.py
 - src/garden/inbox.py
+branch: garden/cg-175-a-task-that-reaches-done-or-cancelled-drops-its
+attempts: 1
+last_dispatched_at: '2026-09-05T05:14:47+00:00'
 created: '2026-09-05T05:05:28+00:00'
-updated: '2026-09-05T05:05:28+00:00'
+updated: '2026-09-05T05:14:47+00:00'
 ---
 
 ## Goal
@@ -34,3 +37,4 @@ On 2026-09-05 at 05:04 `garden inbox` said "13 need you" while three of those we
 ## Log
 
 - 2026-09-05T05:05:28+00:00 approved (web)
+- 2026-09-05T05:14:47+00:00 dispatched work run 20260905T051438Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5771 tokens)

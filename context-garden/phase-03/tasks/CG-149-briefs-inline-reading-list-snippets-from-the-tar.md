@@ -2,7 +2,7 @@
 id: CG-149
 title: Briefs inline reading-list snippets from the target checkout and verify every path; the fixed brief
   cost is measured per phase
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-02-friction
 attempts: 1
 last_dispatched_at: '2026-09-05T04:48:04+00:00'
 created: '2026-09-05T03:14:36+00:00'
-updated: '2026-09-05T05:04:18+00:00'
+updated: '2026-09-05T05:13:30+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,7 @@ From the phase-02 retro's open list (item 1), reconciled against what merged on 
 - 2026-09-05T05:00:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/117 (base main): Dispatch now prepares the task worktree before building the brief, so reading-list snippets are inlined from the target checkout (a stacked parent's or dependency's files included) instead of a stale base repo, and genuinely-absent paths are correctly flagged. Added brief.phase_fixed_tokens() and used it from the phase page and usage CLI so the fixed brief cost is measured once per phase. cost=$3.06
 - 2026-09-05T05:03:06+00:00 automated review: approve — Preparing the task worktree before building the brief makes reading-list snippets resolve against the target checkout (via product_dirs preferring the worktree), and phase_fixed_tokens measures the fixed brief cost once per phase. Both are correctly tested; the dispatch refactor is behavior-preserving. cost=$0.43
 - 2026-09-05T05:04:18+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:07:15+00:00 automated review: approve — Preparing the worktree before building the brief makes reading-list snippets resolve against the target checkout (worktree preferred in product_dirs), and phase_fixed_tokens measures the fixed cost once per phase. Both are correctly tested and the dispatch refactor is behavior-preserving; ruff and the relevant tests pass. cost=$0.61
+- 2026-09-05T05:08:24+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:09:16+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T05:13:30+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/117
