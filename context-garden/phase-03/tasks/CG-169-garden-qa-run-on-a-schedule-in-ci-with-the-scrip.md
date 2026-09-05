@@ -1,7 +1,7 @@
 ---
 id: CG-169
 title: 'garden qa: run on a schedule in CI with the scripted agent'
-status: draft
+status: ready
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -13,7 +13,7 @@ reading:
 - tests/conftest.py
 discovered_from: CG-135
 created: '2026-09-05T04:17:48+00:00'
-updated: '2026-09-05T04:17:48+00:00'
+updated: '2026-09-05T05:05:27+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ Discovered by CG-135 (garden qa: an agent drives the loop end to end through the
 ## Log
 
 - 2026-09-05T04:17:48+00:00 discovered by CG-135
+- 2026-09-05T05:05:27+00:00 approved (web)

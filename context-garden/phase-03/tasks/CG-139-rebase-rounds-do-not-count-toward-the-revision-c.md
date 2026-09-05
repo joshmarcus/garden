@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/105
 attempts: 1
 last_dispatched_at: '2026-09-05T04:40:56+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T05:00:38+00:00'
+updated: '2026-09-05T05:05:17+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,4 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T04:59:33+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/105: Rebased onto main and resolved the dispatch.py/poll.py conflicts by keeping CG-141's now-merged rebase mode, which already covers the PR-conflict half of this task; added the remaining piece — the pre-PR check probe's stale-base rebase (CG-131), whose hand-resolve revise round now shares the rebases counter and is exempt from max_revisions and review.max_rounds. Retargeted the two CG-139 tests at that path and fixed a leftover dead field. cost=$3.65
 - 2026-09-05T04:59:34+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-139` for one more round, or review on GitHub
 - 2026-09-05T05:00:38+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/review.py); a rebase agent will resolve it
+- 2026-09-05T05:05:17+00:00 nothing to fix; resumed to in review by hand

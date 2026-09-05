@@ -1,7 +1,7 @@
 ---
 id: CG-171
 title: garden new-task does not check a frozen phase either
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -14,7 +14,7 @@ reading:
 - src/garden/cli.py
 discovered_from: CG-161
 created: '2026-09-05T04:21:17+00:00'
-updated: '2026-09-05T04:21:17+00:00'
+updated: '2026-09-05T05:05:27+00:00'
 ---
 
 `garden new-task` (src/garden/cli.py, ~line 173) checks `ph.closed` but not `ph.frozen`, the same gap CG-161 fixed for `garden plan`/web `plan_phase`. A new manually-created task can materialize as a draft during a freeze. Low risk since the resulting draft still can't be approved without a freeze exception (or none exists to grant, same as planning), but for parity it could be blocked the same way. Out of scope for CG-161, which was scoped explicitly to plan_phase/garden plan.
@@ -26,3 +26,4 @@ Discovered by CG-161 (garden plan does not check a frozen phase (only closed)) d
 ## Log
 
 - 2026-09-05T04:21:17+00:00 discovered by CG-161
+- 2026-09-05T05:05:27+00:00 by design: new-task must keep working in a frozen phase so friction can be filed as drafts during a freeze (standing rule from the user, 2026-09-04); drafts cannot be approved there, which is the gate

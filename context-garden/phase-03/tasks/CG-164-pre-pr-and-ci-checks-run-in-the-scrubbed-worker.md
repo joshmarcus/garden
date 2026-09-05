@@ -1,7 +1,7 @@
 ---
 id: CG-164
 title: Pre-PR and CI checks run in the scrubbed worker environment
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -15,7 +15,7 @@ discovered_from: CG-154
 attempts: 1
 last_dispatched_at: '2026-09-05T04:50:39+00:00'
 created: '2026-09-05T04:01:03+00:00'
-updated: '2026-09-05T05:01:38+00:00'
+updated: '2026-09-05T05:03:10+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors,
 - 2026-09-05T05:00:29+00:00 automated review: approve — checks.run_check now builds a command check's subprocess env from runner.base.scrubbed_env (threaded through an optional config arg for worker_env.pass) instead of raw os.environ, closing the credential leak CG-154 left open for pre-PR/CI checks; python: checks stay in-process and are documented as trusted. All criteria met, tests and lint pass. cost=$0.64
 - 2026-09-05T05:00:47+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T05:01:38+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-164` for one more round, or review on GitHub
+- 2026-09-05T05:03:10+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/109
