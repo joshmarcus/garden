@@ -2,7 +2,7 @@
 id: CG-176
 title: 'The merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped,
   and merges when CI goes green'
-status: failed
+status: running
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 - tests/test_automerge.py
 branch: garden/cg-176-the-merge-queue-stays-on-its-head-a-rebased-head
 attempts: 1
-last_dispatched_at: '2026-09-05T05:51:13+00:00'
+last_dispatched_at: '2026-09-05T09:35:19+00:00'
 created: '2026-09-05T05:50:08+00:00'
-updated: '2026-09-05T09:34:10+00:00'
+updated: '2026-09-05T09:35:19+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,5 @@ Observed 2026-09-05 05:37 to 05:46 with eight approved, mergeable, green PRs ope
 	src/garden/scheduler/rebase.py
 Please commit your changes or stash them before you merge.
 Aborting
+- 2026-09-05T09:35:00+00:00 reset to ready by hand
+- 2026-09-05T09:35:19+00:00 dispatched work run 20260905T093519Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~16172 tokens)

@@ -2,7 +2,7 @@
 id: CG-181
 title: The retro has a Features for the next phase section, fed by the product-manager persona, and each
   feature becomes a draft in the next phase
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -14,7 +14,7 @@ reading:
 - src/garden/personas.py
 - personas/product-manager.md
 created: '2026-09-05T09:52:59+00:00'
-updated: '2026-09-05T09:52:59+00:00'
+updated: '2026-09-05T09:53:46+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,6 @@ Asked by the user on 2026-09-05 at the phase-03 wrap-up: "before ending this pha
 - [ ] The retro page (CG-146) lists the features with their task ids and status.
 - [ ] A test with the fake harness files two features and skips one duplicate.
 
+## Log
+
+- 2026-09-05T09:53:46+00:00 approved (web)

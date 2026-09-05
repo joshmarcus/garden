@@ -2,7 +2,7 @@
 id: CG-175
 title: A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished
   task
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/125
 attempts: 1
 last_dispatched_at: '2026-09-05T05:54:39+00:00'
 created: '2026-09-05T05:05:28+00:00'
-updated: '2026-09-05T09:34:01+00:00'
+updated: '2026-09-05T09:35:15+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ On 2026-09-05 at 05:04 `garden inbox` said "13 need you" while three of those we
 - 2026-09-05T09:32:51+00:00 automated review produced no verdict (failed)
 - 2026-09-05T09:32:56+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-05T09:34:01+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T09:35:15+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/125
