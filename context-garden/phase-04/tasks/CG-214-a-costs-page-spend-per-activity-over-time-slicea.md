@@ -2,7 +2,7 @@
 id: CG-214
 title: 'A costs page: spend per activity over time, sliceable by difficulty, model, harness, phase and
   task, with the same numbers in garden costs'
-status: failed
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -17,10 +17,10 @@ reading:
 - src/garden/plants.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
 branch: garden/cg-214-a-costs-page-spend-per-activity-over-time-slicea
-attempts: 2
-last_dispatched_at: '2026-09-05T16:09:43+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-05T16:24:39+00:00'
 created: '2026-09-05T16:05:50+00:00'
-updated: '2026-09-05T16:10:49+00:00'
+updated: '2026-09-05T16:24:39+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,5 @@ Asked by the user on 2026-09-05 after a day in which spend reached $1,100, the a
 - 2026-09-05T16:09:28+00:00 attempt 1 failed: worker exited 1: worker error: success Not logged in · Please run /login; will retry
 - 2026-09-05T16:09:43+00:00 dispatched work run 20260905T160943Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16904 tokens)
 - 2026-09-05T16:10:49+00:00 attempt 2 failed: worker exited 1: worker error: success Not logged in · Please run /login; giving up
+- 2026-09-05T16:24:29+00:00 reset to ready by hand
+- 2026-09-05T16:24:39+00:00 dispatched work run 20260905T162439Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~16988 tokens)
