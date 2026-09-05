@@ -233,3 +233,16 @@ CG-198 (the dirty-worktree stash task referenced in this brief) does not exist y
 ### 2026-09-05 · reported by CG-228 (A task is done only when its commits reach the product's base branch: a stacked child merged into its parent's branch stays open until the parent merges) in run 20260905T181552Z-work
 
 - The brief's reading list only pointed at poll.py/rebase.py/graph.py; getting the status fully surfaced also required touching plants.py, web/common.py, web/templates/{base,task,_board}.html, cli/views.py, cli/common.py, tui/app.py and scheduler/dispatch.py's stuck-audit whitelist - none of that was discoverable from the reading list alone, only from a full-repo grep for status-keyed maps.
+
+### 2026-09-05 · reported by CG-226 (A TUI answer flow for kickoff question cards) in run 20260905T185744Z-work
+
+- The task brief contains no Acceptance criteria list; verification quotes its stated goal instead.
+
+### 2026-09-05 · reported by CG-229 (Trial contender worktrees get the product setup like any work run, and a contender that reports a blocked environment is a harness failure, not a model loss) in run 20260905T185206Z-work
+
+- CG-212 (the 'quota' env_kind classifier this task's AC assumes exists) is still an open branch, not merged into main; only CG-217's 'auth' kind is present today, so quota can't be exercised end-to-end yet, though the code consumes env_kind generically and will pick it up once CG-212 lands.
+- The reading list pointed at tests/test_trials.py, which doesn't exist; the trial tests actually live in tests/test_extras.py.
+
+### 2026-09-05 · reported by CG-212 (A usage or spend-limit error from a harness pauses dispatch for that harness and leaves the task ready, instead of burning attempts and failing tasks) in run 20260905T191243Z-revise
+
+- The revision-round brief's reading list did not include scheduler/human.py, where the actual answer()/resume dispatch lives; had to locate it via grep for mode=="resume" call sites.
