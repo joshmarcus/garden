@@ -96,3 +96,21 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 ### 2026-09-05 · reported by CG-199 (Discovered work is deduplicated before it is filed: the same finding from several workers becomes one draft) in run 20260905T124816Z-work
 
 - The discovered-item schema (title/body free text) has no structured file/error field, so the 'same file and error' match had to be a regex heuristic over free text rather than a precise comparison — reasonable for the common case but not foolproof against very differently-worded reports of the same bug.
+
+### 2026-09-05 · reported by CG-198 (A restart reaps finished-but-unreaped runs of every mode before its first tick, and a dispatch onto a dirty worktree stashes and continues) in run 20260905T124807Z-work
+
+- The brief's 'Reading list (read these)' section was empty, so I had to locate the relevant scheduler code (reap/finalize/review/dispatch) myself.
+
+### 2026-09-05 · reported by CG-200 (Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product PRs need a person or a second round) in run 20260905T124956Z-work
+
+- The brief's "Reading list (read these)" section was referenced by the operating rules but not present in the task, so I explored to find the three touch points myself.
+- github.automerge_min_review_rounds is set to 1 in DEFAULTS, so a resolved config value can't distinguish operator-set-1 from the default; I keyed the self/tool floor on the absence of a per-product override instead.
+
+### 2026-09-05 · reported by CG-207 (Retros and persona reviews use the hard tier by default (retro.difficulty), so nobody edits garden.yaml before a retro) in run 20260905T130057Z-work
+
+- The brief's acceptance criteria ask for the 'live garden' garden.yaml to drop its 'set to hard for a retro' comment on review.difficulty, but that file lives in the separate joshmarcus/garden repo per CLAUDE.md, not in this checkout — this worktree has no way to make that edit.
+
+### 2026-09-05 · reported by CG-194 (Workers get no HOME, retry_command comes only from config, and the fence hash-checks garden.yaml and state.json) in run 20260905T124209Z-work
+
+- Dropping HOME can break claude subscription auth (~/.claude) for workers; needed a judgement call — followed the explicit spec and added the worker_env.pass:[HOME] escape hatch, but the operational impact on the live garden should be verified before merge.
+- The brief's 'Reading list (read these)' was referenced in the operating rules but no list was actually included in the task; had to explore to find the relevant modules.
