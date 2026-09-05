@@ -34,7 +34,7 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 ## Design
 
 - The reconciliation brief asks for a `GARDEN_RETRO` block: `verdict` (`close` | `close_with_followups` | `reopen`), `followups` (title, body, difficulty, priority) and `blocking` (same fields, plus the reason it blocks). The retro document gets a `## Verdict` section that states the choice and lists the tasks by id once filed.
-- On reap, the garden files `followups` as drafts in the next phase and `blocking` as drafts in the current phase with `retro_blocking: true` and `freeze_exception: true`, all with `discovered_from: retro:<phase>` provenance, and raises one decision card: "Retro verdict for <phase>: <verdict>" with accept, change to another verdict, or reject (with a note). Accepting `close` closes the phase; accepting `close_with_followups` closes it and leaves the drafts for approval; accepting `reopen` approves the blocking tasks.
+- On reap, the garden files `followups` as drafts in the next phase and `blocking` as drafts in the current phase with `retro_blocking: true` and `freeze_exception: true`, all with `discovered_from: retro:<phase>` provenance, and acts on the verdict: `close` and `close_with_followups` close the phase at once and record the verdict on a notice card (the owner decided on 2026-09-05 that closing does not wait for approval); `reopen` raises a decision card that approves the blocking tasks when accepted, or can be changed to close. Any verdict can be reversed from the phase page (`garden reopen-phase`).
 - `garden close-phase` refuses while any `retro_blocking` task is open, names them, and says `--force` overrides; it warns (does not refuse) when the phase has no retro verdict at all.
 - The phase page and the retro page show the verdict, who accepted it and when, and the generated tasks with their current status.
 - CLI parity: `garden retro` prints the verdict; `garden retro-decide <phase> close|followups|reopen [--note]` accepts or changes it.
@@ -42,7 +42,7 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 ## Acceptance criteria
 
 - [ ] The reconciliation result carries a verdict and the task lists; the retro document has a `## Verdict` section.
-- [ ] Follow-ups are filed as drafts in the next phase and blocking tasks in the current phase with `retro_blocking` and a freeze exception, all with retro provenance; one decision card is raised and accepting it does what the verdict says.
+- [ ] Follow-ups are filed as drafts in the next phase and blocking tasks in the current phase with `retro_blocking` and a freeze exception, all with retro provenance; `close` verdicts close the phase at once with a notice, `reopen` raises a decision card that does what the verdict says when accepted.
 - [ ] `garden close-phase` refuses with the names of open blocking tasks unless forced, and warns when no verdict exists.
 - [ ] The phase page and the retro page show the verdict and the generated tasks with status.
 - [ ] Tests for each verdict path with the fake harness, including the refusal and the override.
