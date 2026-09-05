@@ -63,7 +63,7 @@ harnesses:
     # max_turns: 60                # optional hard cap on agent turns; off by default
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
-    models: {easy: claude-sonnet-5, medium: claude-opus-4-8, hard: claude-fable-5}   # Fable 5.0, the best this CLI reaches: claude-fable-5-1 returned 400 on 2026-09-05; claude-opus-5 works and is the best Opus
+    models: {easy: claude-sonnet-5, medium: claude-opus-4-8, hard: claude-fable-5-1}   # Fable 5.1 (needs claude CLI >= 2.1.251; updated to 2.1.261 on 2026-09-05); claude-opus-5 is the best Opus
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex
