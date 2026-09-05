@@ -2,7 +2,7 @@
 id: CG-177
 title: No review is dispatched while a worker run is in flight, and the reap finds a task's worker run
   by mode, so a review record can never send a running task back to ready
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -14,8 +14,11 @@ reading:
 - src/garden/scheduler/reap.py
 - src/garden/scheduler/__init__.py
 - tests/scheduler/test_reap.py
+branch: garden/cg-177-no-review-is-dispatched-while-a-worker-run-is-in
+attempts: 2
+last_dispatched_at: '2026-09-05T09:34:11+00:00'
 created: '2026-09-05T05:55:53+00:00'
-updated: '2026-09-05T05:55:53+00:00'
+updated: '2026-09-05T09:34:11+00:00'
 ---
 
 ## Goal
@@ -35,3 +38,6 @@ CG-139 on 2026-09-05: 04:28:58 a revise run pushed a rebase to PR #105; 04:29:01
 ## Log
 
 - 2026-09-05T05:55:53+00:00 approved (web)
+- 2026-09-05T05:58:03+00:00 dispatched work run 20260905T055755Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4135 tokens)
+- 2026-09-05T09:32:51+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+- 2026-09-05T09:34:11+00:00 dispatched work run 20260905T093410Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~24410 tokens)

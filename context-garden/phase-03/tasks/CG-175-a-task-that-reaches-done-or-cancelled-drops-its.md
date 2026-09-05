@@ -2,7 +2,7 @@
 id: CG-175
 title: A task that reaches done or cancelled drops its needs-human stop so the Inbox never counts a finished
   task
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/125
 attempts: 1
 last_dispatched_at: '2026-09-05T05:54:39+00:00'
 created: '2026-09-05T05:05:28+00:00'
-updated: '2026-09-05T05:54:39+00:00'
+updated: '2026-09-05T09:34:01+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,7 @@ On 2026-09-05 at 05:04 `garden inbox` said "13 need you" while three of those we
 - 2026-09-05T05:33:00+00:00 automated review: approve — Correctly clears needs_human/pending_feedback/automerge_blocked on a terminal transition and fails the automerge gate closed when a needs-human stop is set, preventing a merge on a stale pre-rebase verdict. All three acceptance criteria are met and tested; full suite (551) and lint pass. cost=$1.10
 - 2026-09-05T05:54:35+00:00 PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_poll.py); a rebase agent will resolve it
 - 2026-09-05T05:54:39+00:00 dispatched rebase run 20260905T055438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~3256 tokens)
+- 2026-09-05T05:57:47+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/125: Resolved the rebase conflict in tests/scheduler/test_poll.py by keeping both CG-174's new tests (test_attach_new_pr_after_old_closed_follows_new_pr, test_pr_number_prefers_pr_url_over_a_stale_cache) and CG-175's new test (test_merged_pr_clears_needs_human_and_automerge_blocked) as separate, unmodified test functions. Rebase completed cleanly; full suite (586 passed, 3 skipped) and ruff lint both pass. cost=$0.23
+- 2026-09-05T09:32:51+00:00 automated review produced no verdict (failed)
+- 2026-09-05T09:32:56+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T09:34:01+00:00 rebased; diff unchanged; verdict kept

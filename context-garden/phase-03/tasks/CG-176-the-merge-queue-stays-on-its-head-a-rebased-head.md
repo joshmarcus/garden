@@ -2,7 +2,7 @@
 id: CG-176
 title: 'The merge queue stays on its head: a rebased head whose CI is pending is in flight, not dropped,
   and merges when CI goes green'
-status: running
+status: failed
 product: context-garden
 phase: phase-03
 depends_on: []
@@ -17,7 +17,7 @@ branch: garden/cg-176-the-merge-queue-stays-on-its-head-a-rebased-head
 attempts: 1
 last_dispatched_at: '2026-09-05T05:51:13+00:00'
 created: '2026-09-05T05:50:08+00:00'
-updated: '2026-09-05T05:51:13+00:00'
+updated: '2026-09-05T09:34:10+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,8 @@ Observed 2026-09-05 05:37 to 05:46 with eight approved, mergeable, green PRs ope
 
 - 2026-09-05T05:50:08+00:00 approved (web)
 - 2026-09-05T05:51:13+00:00 dispatched work run 20260905T055105Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4176 tokens)
+- 2026-09-05T09:32:51+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+- 2026-09-05T09:34:10+00:00 dispatch failed: git merge --ff-only -q origin/main (in /home/joshua/work/worktrees/CG-176): error: Your local changes to the following files would be overwritten by merge:
+	src/garden/scheduler/rebase.py
+Please commit your changes or stash them before you merge.
+Aborting
