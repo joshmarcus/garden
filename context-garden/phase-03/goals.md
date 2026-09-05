@@ -2,7 +2,15 @@
 
 ## Why this phase
 
-Phase 02 proved the loop runs on itself: 89 tasks done, 94 PRs merged, $547. It also showed where the code fights the loop. Two files took 20 of 22 conflicts. The caps counted rebases. Fifteen finished runs were lost to the sweep. The scheduler tests drive subprocess workers and flaked four times. The staff-engineer and security personas found state, accounting and trust holes. This phase changes structure and non-functional properties only. No user-visible feature enters it; features wait for phase 04. The retro that produced this list is in `../phase-02-friction/docs/retro.md` and `../phase-02-friction/docs/retro/`.
+**In one sentence: make the loop something you can leave running.** Phase 02 proved the loop can build the tool: 89 tasks done, 94 PRs merged, $547. It also proved that an operator had to press a button about a hundred times in a day, almost always for the same five reasons. This phase removes those reasons rather than adding anything a person would notice.
+
+- **Nothing collides.** The scheduler and the web actions are split so two changes rarely touch the same file (two files took 20 of 22 conflicts), and a PR is rebased once, right before it merges, with no re-review of code the reviewer already approved.
+- **Nothing is lost or counted twice.** Runs survive sweeps and restarts (fifteen were lost), superseded and dead records are closed, state does not clobber a concurrent write, cost is counted once, and the caps count only what they were meant to.
+- **Nothing is trusted that should not be.** Feedback only from trusted authors, workers with a scrubbed environment and a fence, a frozen or closed phase that refuses work, and a web UI that checks who is posting.
+- **The tests do not lie.** Scheduler tests run in-process instead of driving subprocess workers (four flake fixes in one phase), and the QA agent and walkthrough exercise the real pages.
+- **The operator needs the button less.** Config changes without restarts, notifications that fire, clones with an identity, briefs that match the checkout, and a retro that waits for its own inputs.
+
+No user-visible feature enters this phase; features wait for phase 04. The retro that produced this list is in `../phase-02-friction/docs/retro.md` and `../phase-02-friction/docs/retro/`.
 
 ## Goals
 
