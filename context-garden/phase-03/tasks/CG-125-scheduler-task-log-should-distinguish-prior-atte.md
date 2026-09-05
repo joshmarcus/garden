@@ -2,7 +2,7 @@
 id: CG-125
 title: Scheduler/task log should distinguish 'prior attempt made real progress but didn't report' from
   a clean restart
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -20,7 +20,7 @@ discovered_from: CG-065
 attempts: 1
 last_dispatched_at: '2026-09-05T05:14:38+00:00'
 created: '2026-09-04T23:25:21+00:00'
-updated: '2026-09-05T05:14:38+00:00'
+updated: '2026-09-05T05:21:01+00:00'
 ---
 
 This task's log showed 'no active run found; back to ready' after a prior dispatch, but that prior run had actually committed 3 of 5 fixes plus tests before being interrupted. A fresh worker had to re-derive that state by reading git log/diff rather than it being visible from the task file or brief. Might be worth surfacing partial-completion state (e.g. commits made during an interrupted run) more explicitly so re-dispatched workers don't have to reverse-engineer prior progress.
@@ -43,3 +43,4 @@ Discovered by CG-065 (Plates and plants: positional assignment, invalid --plant,
 - 2026-09-05T05:11:33+00:00 opened https://github.com/joshmarcus/context-garden/pull/120 (base main): The scheduler now distinguishes an interrupted attempt that made real, unreported progress from a clean restart: reap notes when the worktree holds commits ahead of base (with the count on the no_active_run event), and dispatch lists those commits in the brief for every re-dispatched round so the next worker builds on prior progress instead of reverse-engineering git. cost=$3.71
 - 2026-09-05T05:13:27+00:00 PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_dispatch.py); a rebase agent will resolve it
 - 2026-09-05T05:14:38+00:00 dispatched rebase run 20260905T051438Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~3858 tokens)
+- 2026-09-05T05:21:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/120: Rebased onto origin/main; resolved the single conflict in tests/scheduler/test_dispatch.py by keeping both tests (test_brief_inlines_reading_from_the_target_checkout from main and test_redispatched_work_brief_lists_prior_commits from this branch), which sat adjacent with no logical overlap. Full test suite (549 passed, 3 skipped) confirms the rebase is clean. cost=$0.21

@@ -1,7 +1,7 @@
 ---
 id: CG-147
 title: A product clone gets a git identity when it is made, and doctor checks every clone
-status: in_review
+status: done
 product: context-garden
 phase: phase-03
 depends_on:
@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/118
 attempts: 1
 last_dispatched_at: '2026-09-05T04:47:55+00:00'
 created: '2026-09-05T02:50:49+00:00'
-updated: '2026-09-05T05:13:40+00:00'
+updated: '2026-09-05T05:21:06+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,7 @@ Found at the phase-02 retro on the first live run. The first friction of the day
 - 2026-09-05T05:07:13+00:00 opened https://github.com/joshmarcus/context-garden/pull/118 (base main): Fresh product/self clones now get a repo-local git identity (from garden.yaml, the garden checkout's config, or the gh login), `garden doctor` flags any clone under work_dir/repos/ missing one, and a failed commit or push inside reap_retro is logged and recorded as an event instead of silently vanishing. cost=$3.80
 - 2026-09-05T05:11:34+00:00 automated review: approve — CG-147 is implemented cleanly and fully tested: fresh clones get a repo-local git identity resolved from config/checkout/gh, doctor flags identity-less clones under repos_dir and exits 1, and a failed retro commit/push is logged, recorded in tick errors, and emitted as a durable event instead of vanishing. Diff and description are clean. cost=$1.02
 - 2026-09-05T05:13:40+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:16:52+00:00 automated review: approve — CG-147 is implemented cleanly and fully tested: fresh clones get a repo-local git identity resolved from config/checkout/gh, doctor flags identity-less clones under repos_dir and exits 1, and a failed retro commit/push is logged, recorded in tick errors, and emitted as a durable event. Diff and description are clean; all checks pass. cost=$1.05
+- 2026-09-05T05:18:01+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:18:56+00:00 rebased; diff unchanged; verdict kept
+- 2026-09-05T05:21:06+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/118

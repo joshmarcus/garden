@@ -1,7 +1,7 @@
 ---
 id: CG-139
 title: Rebase rounds do not count toward the revision cap
-status: running
+status: in_review
 product: context-garden
 phase: phase-03
 depends_on:
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/105
 attempts: 1
 last_dispatched_at: '2026-09-05T05:09:24+00:00'
 created: '2026-09-05T01:19:30+00:00'
-updated: '2026-09-05T05:09:24+00:00'
+updated: '2026-09-05T05:22:14+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,7 @@ The same for the review cap (`review.max_rounds`): a review that follows a confl
 - 2026-09-05T05:05:17+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-05T05:08:15+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/review.py); a rebase agent will resolve it
 - 2026-09-05T05:09:24+00:00 dispatched rebase run 20260905T050923Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6597 tokens)
+- 2026-09-05T05:16:51+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/105: Rebased onto origin/main, resolving three conflicts: src/garden/scheduler/review.py (merged CG-141's new _supersede_running_review guard with this branch's count_round parameter on dispatch_review), tests/scheduler/test_reap.py (kept both CG-170's base_broken/green-base tests and this branch's new stale-base-rebase-exemption test, which were inserted at the same location), and docs/architecture.md (kept CG-170's base-broken-parks-and-continues bullet and added this branch's exemption note as a nested sub-bullet). Full suite (548 passed, 3 skipped) and ruff lint are clean; not pushing per instructions. cost=$0.58
+- 2026-09-05T05:16:51+00:00 2 automated review round(s) used; this PR is yours — run `garden review CG-139` for one more round, or review on GitHub
+- 2026-09-05T05:21:16+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-05T05:22:14+00:00 rebased; diff unchanged; verdict kept
