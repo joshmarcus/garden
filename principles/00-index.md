@@ -8,6 +8,7 @@ Inlined into every agent brief. Keep it short; long-form reasoning lives in the 
 - Follow existing conventions in the repo before inventing new ones. Match the surrounding style.
 - Tests are part of the change. Run the project's fast checks before you finish; fix what you broke.
 - Prefer boring, dependency-light solutions. New dependencies need a one-line justification in the PR body.
+- Optimise for cognitive complexity. At every level of abstraction the code should be as easy to understand as makes sense there: a reader of a module sees what it is for, a reader of a function sees what it does without holding the rest of the file in their head. Prefer one clear path over a clever one, names that say what a thing is, and small units with a single reason to change; do not spread one idea across layers or fold three ideas into one function. See `cognitive-complexity.md`.
 
 ## Reporting
 - Be precise about what you did, what you verified, and what you did not do.
