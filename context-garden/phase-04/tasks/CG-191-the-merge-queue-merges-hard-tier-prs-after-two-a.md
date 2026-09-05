@@ -19,7 +19,7 @@ updated: '2026-09-05T10:26:55+00:00'
 
 **Why now:** twelve of thirty phase-03 merges were by hand, eight when the queue rotated and four on hard-tier PRs; the operator already asked for this policy.
 
-**Size:** medium. **Depends on:** CG-176 (merged); a config key such as merge.hard_tier: two_rounds that the owner turns on, default off.
+**Size:** medium. **Depends on:** CG-176 (merged); a config key such as merge.hard_tier: two_rounds that a team can turn off, default on (the owner decided on 2026-09-05 that the queue may merge hard-tier PRs).
 
 ## Context
 

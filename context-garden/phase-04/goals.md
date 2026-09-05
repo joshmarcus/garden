@@ -1,8 +1,7 @@
-# phase-04 goals (draft)
-
-_Drafted by `garden retro` from context-garden/phase-03; edit before planning._
-
 # phase-04 goals
+
+_Drafted by `garden retro` from context-garden/phase-03 on 2026-09-05, with the owner's decisions added by the operator._
+
 
 ## Why this phase
 
@@ -27,6 +26,17 @@ _Drafted by `garden retro` from context-garden/phase-03; edit before planning._
 - Hosted or multi-user operation.
 - Changing the herbarium look beyond CG-184 and CG-183.
 - A new runner or harness.
+
+## Decisions
+
+Answered by the owner on 2026-09-05, at the close of phase 03:
+
+- **The merge queue merges hard-tier PRs** after two approving rounds and its own scratch-merge check; the setting defaults on (CG-191).
+- **Structure gate:** CG-182 (the tick never blocks the UI) runs first and alone; then CG-197 (the cli.py split); features dispatch only after both merge. Encoded as dependencies on every other phase-04 task.
+- **No budget cap** on this phase.
+- **The retro's close verdict closes the phase** without waiting for approval; only reopen raises a decision (CG-178).
+- **Workers 7** once CG-182 is in and the tick is fast again; back to 5 if the cascade returns.
+- **Hard-tier merges by hand** (scratch merge, lint, suite) until CG-191 lands.
 
 ## Definition of done
 

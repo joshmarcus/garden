@@ -128,7 +128,29 @@ Scores ranged from 5 (designer, security) to 7 (product-manager, project-manager
 
 **Size:** medium. **Depends on:** nothing; run early and alone like CG-137 did.
 
+## Verdict
+
+**Close with follow-ups.** Every phase-03 task is done or cancelled, the definition of done is met on
+first-pass approval (93%), trust items (5) and the testing goal, and missed on conflict rounds per
+merge (0.47 against 0.2), one module over 800 lines (`cli.py`) and live config reload. Nothing in the
+still-open list blocks closing: each item is a phase-04 task (CG-182, CG-191 to CG-197, and the
+drafts filed from the persona findings). Decided by the operator with the owner's authority on
+2026-09-05; the owner's answers to the product manager's questions are below.
+
+## Answers
+
+The product manager's five questions, answered by the owner on 2026-09-05:
+
+- **Hard-tier merges** — the queue may merge them, after two approving rounds and its own scratch-merge check (CG-191, default on).
+- **Structure gate** — yes: phase 04 dispatches CG-182 first and alone, then the cli.py split (CG-197), before any feature.
+- **Budget** — no cap on phase 04; the owner does not want to block on budget.
+- **Retro closing a phase** — a close verdict closes without waiting for approval; only reopen raises a decision (CG-178).
+- **Operator decisions** — ratified: the eight hand merges when the queue rotated, cancelling CG-171, filing CG-162 and CG-163 in phase 04, hard-tier merges by hand until CG-191.
+
 ## Persona reports
+
+Also: the operator retro at `retro/operator.md`, the product manager's vision report at
+`reviews/product-manager-vision-2026-09-05.md`, and the walkthrough at `walkthrough/2026-09-05/`.
 
 - [designer](context-garden/phase-03/docs/reviews/designer-2026-09-05.md)
 - [product-manager](context-garden/phase-03/docs/reviews/product-manager-2026-09-05.md)
