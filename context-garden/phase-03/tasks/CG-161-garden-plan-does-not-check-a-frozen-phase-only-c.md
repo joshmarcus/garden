@@ -1,7 +1,7 @@
 ---
 id: CG-161
 title: garden plan does not check a frozen phase (only closed)
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -13,9 +13,12 @@ reading:
 - src/garden/web/app.py
 - src/garden/model.py
 - src/garden/cli.py
+branch: garden/cg-161-garden-plan-does-not-check-a-frozen-phase-only-c
 discovered_from: CG-148
+attempts: 1
+last_dispatched_at: '2026-09-05T04:15:57+00:00'
 created: '2026-09-05T03:55:13+00:00'
-updated: '2026-09-05T03:57:42+00:00'
+updated: '2026-09-05T04:15:57+00:00'
 ---
 
 ## Goal
@@ -34,3 +37,4 @@ Discovered by CG-148 (A frozen or closed phase refuses approvals and dispatch; a
 
 - 2026-09-05T03:55:13+00:00 discovered by CG-148
 - 2026-09-05T03:57:42+00:00 approved (web)
+- 2026-09-05T04:15:57+00:00 dispatched work run 20260905T041549Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-148-a-frozen-or-closed-phase-refuses-approvals-and-d stacked on CG-148, ~6379 tokens)

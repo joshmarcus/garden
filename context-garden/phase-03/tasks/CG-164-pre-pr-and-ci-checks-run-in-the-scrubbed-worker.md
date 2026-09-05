@@ -1,7 +1,7 @@
 ---
 id: CG-164
 title: Pre-PR and CI checks run in the scrubbed worker environment
-status: ready
+status: running
 product: context-garden
 phase: phase-03
 depends_on:
@@ -9,9 +9,12 @@ depends_on:
 priority: 1
 difficulty: easy
 reading: []
+branch: garden/cg-164-pre-pr-and-ci-checks-run-in-the-scrubbed-worker
 discovered_from: CG-154
+attempts: 1
+last_dispatched_at: '2026-09-05T04:16:06+00:00'
 created: '2026-09-05T04:01:03+00:00'
-updated: '2026-09-05T04:05:54+00:00'
+updated: '2026-09-05T04:16:06+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,4 @@ Discovered by CG-154 (Trust at the edges: PR feedback only from trusted authors,
 
 - 2026-09-05T04:01:03+00:00 discovered by CG-154
 - 2026-09-05T04:05:54+00:00 approved (web)
+- 2026-09-05T04:16:06+00:00 dispatched work run 20260905T041557Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-154-trust-at-the-edges-pr-feedback-only-from-trusted stacked on CG-154, ~3892 tokens)

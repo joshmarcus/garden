@@ -13,10 +13,11 @@ reading:
 - src/garden/web/app.py
 - personas/designer.md
 branch: garden/cg-134-garden-walkthrough-render-the-live-web-app-s-pag
+pr: https://github.com/joshmarcus/context-garden/pull/103
 attempts: 1
-last_dispatched_at: '2026-09-05T03:57:23+00:00'
+last_dispatched_at: '2026-09-05T04:08:48+00:00'
 created: '2026-09-05T00:37:32+00:00'
-updated: '2026-09-05T03:57:23+00:00'
+updated: '2026-09-05T04:08:48+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,6 @@ Asked at the freeze of the first live run. Persona reviews read code, PR bodies 
 - 2026-09-05T03:05:55+00:00 back to draft: approved by mistake during the phase 02 freeze; carried into phase 03
 - 2026-09-05T03:19:57+00:00 approved (web)
 - 2026-09-05T03:57:23+00:00 dispatched work run 20260905T035715Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~4389 tokens)
+- 2026-09-05T04:07:43+00:00 opened https://github.com/joshmarcus/context-garden/pull/103 (base main): Added `garden walkthrough product/phase`, which renders every web page to screenshots, HTML and plain text with an index.md describing each page, and made the phase persona review inline the newest walkthrough. Screenshots use an optional Playwright/Chromium extra and fall back to HTML+text with a note when no browser is present. cost=$3.97
+- 2026-09-05T04:08:44+00:00 CI failure
+- 2026-09-05T04:08:48+00:00 dispatched revise run 20260905T040848Z-revise via local [claude model=claude-opus-4-8] (fresh session, base main, ~5648 tokens)

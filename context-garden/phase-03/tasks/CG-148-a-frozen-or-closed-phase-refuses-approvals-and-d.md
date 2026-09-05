@@ -1,7 +1,7 @@
 ---
 id: CG-148
 title: A frozen or closed phase refuses approvals and dispatch; a freeze is a phase state, not a note
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-03
 depends_on:
@@ -18,7 +18,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/99
 attempts: 1
 last_dispatched_at: '2026-09-05T04:02:14+00:00'
 created: '2026-09-05T03:07:37+00:00'
-updated: '2026-09-05T04:02:14+00:00'
+updated: '2026-09-05T04:08:40+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,5 @@ Found at the phase-02 close on the first live run. The freeze was a paragraph in
 - 2026-09-05T03:59:54+00:00 automated review: approve — All three acceptance criteria are met and well-tested (CLI, web, scheduler), the shared phase_refusal() gate is cleanly centralized, and full suite + lint pass. Freeze also blocks in-flight revise/resume, which is deliberate and documented. cost=$1.03
 - 2026-09-05T03:59:58+00:00 PR conflicts with main (src/garden/web/templates/phase.html); revise run will rebase and resolve
 - 2026-09-05T04:02:14+00:00 dispatched revise run 20260905T040214Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~8797 tokens)
+- 2026-09-05T04:07:45+00:00 discovered work filed: CG-166
+- 2026-09-05T04:08:40+00:00 base branch `main` is itself broken — pre-PR check(s) test, lint fail at its own commit 55a935290123, not because of this branch; waiting for the base to go green, no revise round cost=$1.11
