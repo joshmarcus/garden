@@ -114,3 +114,20 @@ CG-146 (a retro page per phase) should render the retro verdict record (schedule
 
 - Dropping HOME can break claude subscription auth (~/.claude) for workers; needed a judgement call — followed the explicit spec and added the worker_env.pass:[HOME] escape hatch, but the operational impact on the live garden should be verified before merge.
 - The brief's 'Reading list (read these)' was referenced in the operating rules but no list was actually included in the task; had to explore to find the relevant modules.
+
+### 2026-09-05 · reported by CG-194 (Workers get no HOME, retry_command comes only from config, and the fence hash-checks garden.yaml and state.json) in run 20260905T145937Z-revise
+
+- The 'review feedback to address' in this revision round was generic ('re-check open review comments and CI') but GitHub had no actual review comments, reviews, or CI runs on the PR — the real blocker was the unresolved rebase conflict already noted in the task log from the prior attempt's failed rebase run (hit the monthly spend limit twice).
+
+### 2026-09-05 · reported by CG-195 (Inbox cards read only the log, and terminal tasks drop needs-you and automerge notes in every view) in run 20260905T145948Z-work
+
+- The brief's 'walkthrough test' phrasing could be read as literally belonging in tests/test_walkthrough.py (a separate docs-capture test module); the prior attempt reasonably read it as 'a test that walks through the scenario' and placed it in test_inbox_digest.py instead — worth clarifying in future task wording.
+
+### 2026-09-05 · reported by CG-200 (Trust policy round two: the origin check resists DNS rebinding, bot trust is opt-in, and self-product PRs need a person or a second round) in run 20260905T145937Z-revise
+
+- The branch had fallen ~55 commits behind main (a large batch of phase-04 work, including CG-185, CG-190, CG-192, CG-197's cli split, CG-199, CG-203, CG-207, and a Codex-adaptation merge) while paused for spend-limit retries, so the revision round required a full rebase with real conflict resolution rather than a small fix.
+- No GitHub review comments, review threads, or CI check results existed on PR #155 to address; the only outstanding item was the merge conflict.
+
+### 2026-09-05 · reported by CG-204 (Test debt from phase 03: a shared contract for the two GitHub fakes, real LocalRunner coverage, event-based assertions, and the state store's dict.get snapshot) in run 20260905T150731Z-work
+
+- The task's Provenance points at context-garden/phase-03/docs/reviews/ for the staff-engineer findings, but only a product-manager review file exists there now — the staff-engineer reviews referenced in the task weren't recoverable at that path, so completeness of the 'prose assertions named in the review' criterion was judged from the goal text and commit history rather than the original review documents.
