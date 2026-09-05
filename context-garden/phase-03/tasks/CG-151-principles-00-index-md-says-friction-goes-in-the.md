@@ -1,16 +1,17 @@
 ---
 id: CG-151
 title: principles/00-index.md says friction goes in the result's friction field, not the PR body
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-03
-depends_on: [CG-137]
+depends_on:
+- CG-137
 priority: 3
 difficulty: easy
 reading: []
-created: '2026-09-05T03:14:36+00:00'
-updated: '2026-09-05T03:14:36+00:00'
 discovered_from: retro:context-garden/phase-02-friction
+created: '2026-09-05T03:14:36+00:00'
+updated: '2026-09-05T03:18:26+00:00'
 ---
 
 ## Goal
@@ -27,3 +28,4 @@ From the phase-02 retro's open list (item 3), reconciled against what merged on 
 
 ## Log
 - 2026-09-05T03:15:00+00:00 filed from the phase-02 retro (open item 3)
+- 2026-09-05T03:18:26+00:00 done by hand at the phase close: principles/00-index.md now sends friction to the result's friction field
