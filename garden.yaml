@@ -30,7 +30,7 @@ review:
   enabled: true             # automated first review of every PR round (acceptance criteria,
   max_rounds: 4             # correctness, scope, PR description quality / no scar tissue)   # raised 2026-09-05 17:10: reviews are on sonnet now and every third round was a hand press
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
-  harness: "claude"         # reviews stay on claude (sonnet 5) even for tasks that run on codex (2026-09-05 20:40)
+  harness: "codex"   # TEMPORARY 2026-09-05 23:0x: the astra reconcile; back to "claude" once it is dispatched         # reviews stay on claude (sonnet 5) even for tasks that run on codex (2026-09-05 20:40)
   difficulty: "easy"      # PR reviews on the easy tier (sonnet 5) since 2026-09-05 14:40 to cut spend; retro/persona tier comes from retro.difficulty once CG-207 lands
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
@@ -63,13 +63,15 @@ harnesses:
     # max_turns: 60                # optional hard cap on agent turns; off by default
     permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
     review_model: ""                 # reviews follow review.difficulty (easy = sonnet 5); fable reviews were judged too expensive (user, 2026-09-05 20:50)
+    retro_model: claude-fable-5-1    # retros, persona reviews and trial judging on the best model (user, 2026-09-05 20:50; CG-235)
     allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
-    models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-fable-5-1}   # hard on fable for the phase-04 retro window only (user 2026-09-05: retros on the best model); back to claude-opus-4-8 after. Since 14:50 mediums on sonnet to cut spend
+    models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-opus-4-8}   # since 2026-09-05 14:50 to cut spend: mediums on sonnet, hard on opus; judges are named by retro_model below
     resume: true                   # continue the same session after `garden answer`
   codex:
     bin: codex
     permission_mode: bypass        # since 2026-09-05 18:55: full-auto (workspace-write) blocks .git writes and network, so codex could never commit; the fence and the scrubbed env are the guard, as for claude
     review_model: gpt-5.6-terra    # when codex reviews (CG-230 pool), the sonnet-class model, not astra (user, 2026-09-05 20:50)
+    retro_model: gpt-6-astra       # codex judges on its best model (the astra retro comparison, user 2026-09-05 22:45)
     models: {easy: gpt-5.6-luna, medium: gpt-5.6-terra, hard: gpt-5.6-sol}   # since 2026-09-05 19:40: the CLI default is gpt-6-astra ($10/$50), the top-line model; luna $0.20/$1.20, terra $2/$12, sol $4/$20
     resume: false                  # true if your codex supports `codex exec resume <id>`
 
