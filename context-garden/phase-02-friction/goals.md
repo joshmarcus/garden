@@ -2,7 +2,7 @@
 
 ## Feature freeze (2026-09-05 00:35 UTC)
 
-No new features enter this phase. Approved from here on: only fixes needed to merge what is already built and to keep the loop honest (CG-129, CG-126, CG-131). New feature ideas go to phase 03; discovered features are filed as drafts with "deferred by the freeze" in the log. The wrap-up order: open PRs merge, the manual items close (CG-113, then CG-029), persona reviews run against the finished phase, then CG-029 writes the friction document and the next goals and the phase closes.
+No new features enter this phase. Approved from here on: only fixes needed to merge what is already built and to keep the loop honest (CG-129, CG-126, CG-131). New feature ideas go to phase 03; discovered features are filed as drafts with "deferred by the freeze" in the log. The wrap-up order: open PRs merge, the manual items close, the operator's retro is written (`docs/retro-operator.md`, from the agent that watched the loop), persona reviews run against the finished phase, then CG-029 reconciles all of it into the friction document and the next goals, and the phase closes.
 
 ## Why this phase
 
