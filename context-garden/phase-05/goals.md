@@ -1,6 +1,6 @@
 ---
 plant: poppy
-latin: Papaver rhoeas
+latin: Papaver argemone
 plate: V
 ---
 
