@@ -2,7 +2,7 @@
 id: CG-202
 title: 'One approve and one rebase: the CLI, web and TUI call the same approve gate, and the sync-rebase-force-push
   sequence lives in one place'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -11,8 +11,11 @@ depends_on:
 priority: 1
 difficulty: medium
 reading: []
+branch: garden/cg-202-one-approve-and-one-rebase-the-cli-web-and-tui-c
+attempts: 1
+last_dispatched_at: '2026-09-05T11:51:18+00:00'
 created: '2026-09-05T10:30:01+00:00'
-updated: '2026-09-05T10:31:19+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -32,3 +35,5 @@ From the phase-03 persona reviews of 2026-09-05 (staff-engineer:high, staff-engi
 ## Log
 
 - 2026-09-05T10:31:19+00:00 approved (web)
+- 2026-09-05T11:51:18+00:00 dispatched work run 20260905T115109Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~4611 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes

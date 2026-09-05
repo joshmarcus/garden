@@ -2,7 +2,7 @@
 id: CG-146
 title: 'A retro page per phase: the reconciled document, the operator retro, persona reports with scores,
   and the tasks the retro generated'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,10 +17,10 @@ reading:
 - src/garden/retro.py
 - src/garden/model.py
 branch: garden/cg-146-a-retro-page-per-phase-the-reconciled-document-t
-attempts: 1
-last_dispatched_at: '2026-09-05T03:02:23+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-05T11:50:43+00:00'
 created: '2026-09-05T02:49:08+00:00'
-updated: '2026-09-05T10:31:12+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,5 @@ Asked at the phase-02 retro on the first live run. Today the pieces exist as fil
 - 2026-09-05T03:02:23+00:00 dispatched work run 20260905T030213Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5737 tokens)
 - 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
 - 2026-09-05T10:31:12+00:00 approved (web)
+- 2026-09-05T11:50:43+00:00 dispatched work run 20260905T115043Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~15372 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes

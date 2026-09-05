@@ -2,7 +2,7 @@
 id: CG-208
 title: 'Browser notifications: an open garden tab notifies through Chrome when a decision appears, with
   a one-time permission toggle and one notification per tick'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,8 +16,11 @@ reading:
 - src/garden/inbox.py
 - src/garden/events.py
 - src/garden/web/pages/inbox.py
+branch: garden/cg-208-browser-notifications-an-open-garden-tab-notifie
+attempts: 1
+last_dispatched_at: '2026-09-05T11:51:26+00:00'
 created: '2026-09-05T10:36:25+00:00'
-updated: '2026-09-05T10:36:27+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -45,3 +48,5 @@ The user on 2026-09-05, asked which channel `notify.command` should use to reach
 ## Log
 
 - 2026-09-05T10:36:27+00:00 approved (web)
+- 2026-09-05T11:51:26+00:00 dispatched work run 20260905T115118Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~13188 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes

@@ -2,7 +2,7 @@
 id: CG-187
 title: 'Every persona finding is kept: each one becomes a draft with its severity as priority, the retro
   reconciles all of them, and nothing below high is dropped'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -16,8 +16,11 @@ reading:
 - src/garden/retro.py
 - src/garden/scheduler/retro.py
 - src/garden/cli.py
+branch: garden/cg-187-every-persona-finding-is-kept-each-one-becomes-a
+attempts: 1
+last_dispatched_at: '2026-09-05T11:51:00+00:00'
 created: '2026-09-05T10:21:05+00:00'
-updated: '2026-09-05T10:31:15+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -39,3 +42,5 @@ The user on 2026-09-05, reading the product manager's phase-03 review: "We shoul
 ## Log
 
 - 2026-09-05T10:31:15+00:00 approved (web)
+- 2026-09-05T11:51:00+00:00 dispatched work run 20260905T115052Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~18641 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes

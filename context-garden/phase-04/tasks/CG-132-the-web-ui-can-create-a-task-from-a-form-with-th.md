@@ -1,7 +1,7 @@
 ---
 id: CG-132
 title: The web UI can create a task from a form, with the same fields as garden new-task
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -15,10 +15,10 @@ reading:
 - src/garden/scaffold.py
 - src/garden/cli.py
 branch: garden/cg-132-the-web-ui-can-create-a-task-from-a-form-with-th
-attempts: 1
-last_dispatched_at: '2026-09-05T03:02:32+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-05T11:51:27+00:00'
 created: '2026-09-05T00:27:31+00:00'
-updated: '2026-09-05T10:31:12+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,5 @@ Asked on the first live run. The web has three ways to make tasks appear and non
 - 2026-09-05T03:02:32+00:00 dispatched work run 20260905T030223Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5932 tokens)
 - 2026-09-05T03:05:29+00:00 back to draft: approved by mistake during the phase 02 freeze; phase 03 work (CG-137 runs alone, first)
 - 2026-09-05T10:31:12+00:00 approved (web)
+- 2026-09-05T11:51:27+00:00 dispatched work run 20260905T115127Z-work via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~13606 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes

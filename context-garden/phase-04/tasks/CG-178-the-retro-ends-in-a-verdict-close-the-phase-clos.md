@@ -2,7 +2,7 @@
 id: CG-178
 title: 'The retro ends in a verdict: close the phase, close with follow-ups for the next phase, or reopen
   with named tasks that must land first'
-status: ready
+status: running
 product: context-garden
 phase: phase-04
 depends_on:
@@ -17,8 +17,11 @@ reading:
 - src/garden/cli.py
 - src/garden/inbox.py
 - src/garden/web/pages/phase.py
+branch: garden/cg-178-the-retro-ends-in-a-verdict-close-the-phase-clos
+attempts: 1
+last_dispatched_at: '2026-09-05T11:50:51+00:00'
 created: '2026-09-05T09:40:41+00:00'
-updated: '2026-09-05T10:31:14+00:00'
+updated: '2026-09-05T11:55:55+00:00'
 ---
 
 ## Goal
@@ -52,3 +55,5 @@ Requested by the user on 2026-09-05 during the phase-03 wrap-up. Today `garden r
 ## Log
 
 - 2026-09-05T10:31:14+00:00 approved (web)
+- 2026-09-05T11:50:51+00:00 dispatched work run 20260905T115043Z-work via local [claude model=claude-opus-4-8] (fresh session, base garden/cg-197-split-cli-py-into-a-cli-package-and-fold-the-fou stacked on CG-197, ~24177 tokens)
+- 2026-09-05T11:55:55+00:00 parent CG-197 merged; will rebase onto main when the current run finishes
