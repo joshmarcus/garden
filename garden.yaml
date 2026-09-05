@@ -100,7 +100,7 @@ products:
     id_prefix: CG
     setup:                  # how this product's working environment is prepared, on this machine (no uv here)
       command: "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"   # once per fresh worktree
-      test: ".venv/bin/python -m pytest -q -x"
+      # test: ".venv/bin/python -m pytest -q -x"   # off since 2026-09-05 09:58: the suite ran inside the tick on every pre-merge rebase and froze the UI; GitHub CI still gates every merge (CG-182)
       lint: ".venv/bin/ruff check src tests"
       timeout_seconds: 600
     # runner: ssh           # per-product overrides
