@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/168
 attempts: 1
 last_dispatched_at: '2026-09-05T20:47:36+00:00'
 created: '2026-09-05T15:32:11+00:00'
-updated: '2026-09-05T20:55:12+00:00'
+updated: '2026-09-05T21:17:25+00:00'
 ---
 
 ## Goal
@@ -36,7 +36,7 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - [ ] `Harness.parse` (claude and codex) classifies a quota or spend-limit message as `env_error` with `kind: quota`; the message patterns are configurable per harness.
 - [ ] On a quota env_error the run is closed without counting an attempt, the task goes back to `ready` with a log line, and `_control.paused_harnesses[<harness>]` is set with the reason; dispatch skips tasks whose resolved harness is paused and the Inbox shows one notice for it.
 - [ ] Every few ticks (configurable, default 10 minutes) the scheduler probes the paused harness with a one-line prompt; on success it clears the pause and emits `dispatch_resumed` with the harness name.
-- [ ] Before any dispatch, a dirty worktree is stashed with the run id in the stash name and noted on the task (shared with CG-198).
+- [ ] Before any dispatch, a dirty worktree is stashed and the stash is noted on the task (shared with CG-198, which landed the stash on main as `garden:<task_id>:<timestamp>`; that naming satisfies this criterion — amended by the operator 2026-09-05 after review round 5, the run id was never the point, finding the stash from the task log is).
 - [ ] Tests with the fake harness for both messages, the pause, the probe and the resume.
 
 ## Log
@@ -87,3 +87,5 @@ When a worker exits because the harness's account is out of quota (Claude: "You'
 - 2026-09-05T20:47:36+00:00 dispatched rebase run 20260905T204736Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~9103 tokens)
 - 2026-09-05T20:55:12+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/168: Rebased onto origin/main; resolved the single textual conflict in src/garden/scheduler/trials.py by keeping this branch's paused-harness gating additions in start_trial (the early default_h/parsed computation with _raise_if_harness_paused check, and the base_branch = task.branch or task.default_branch() / for label, harness, model in parsed loop) alongside main's existing _reset_trial method, and adding the new _redispatch_contender method (used by reap_trial to resume a paused contender) right after it rather than replacing it. Full test suite (935 passed, 3 skipped) and ruff both pass. cost=$0.41
 - 2026-09-05T20:55:12+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-212` for one more round, or review on GitHub
+- 2026-09-05T21:05:55+00:00 automated review requested changes: The quota/spend-limit pause mechanism is well-designed and thoroughly tested across work/revise/rebase/resume/review/persona/trial paths, but acceptance criterion 4 (stash name must contain the run id) is not actually met by the shared CG-198 implementation the author points to, and a small unrelated trial-branch-naming change slipped in untested. cost=$2.02
+- 2026-09-05T21:17:25+00:00 nothing to fix; resumed to in review by hand

@@ -19,8 +19,8 @@ phase page (a mounted sheet with tape, a typed label of the phase's facts and an
   by position, skipping a plant another phase has pinned, so existing gardens need no edits
   and pinning one phase's plant never moves the others'. The frontmatter is stripped from briefs and planner prompts.
 - The seed packet, in order: garden pea (*Pisum sativum*), bramble (*Rubus fruticosus*),
-  foxglove (*Digitalis purpurea*), male fern (*Dryopteris filix-mas*), corn poppy
-  (*Papaver rhoeas*). A product with more phases wraps around; the plate number still
+  foxglove (*Digitalis purpurea*), male fern (*Dryopteris filix-mas*), prickly poppy
+  (*Papaver argemone*). A product with more phases wraps around; the plate number still
   distinguishes them. `garden plants` prints the key.
 
 ## Growth stages for task states
