@@ -57,6 +57,8 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 
 - [ ] The worker looked at its own page: captures at 1280 and 390, light and dark, taken with the Edge recipe in the product overview, read back and iterated on, and listed in the PR; the design departs from the spec's layout wherever it has a better idea and says why (owner, 2026-09-06 03:40Z: new and beautiful ideas, not the prescription followed precisely).
 
+- [ ] The last-period region also shows hand merges, rebase rounds per merge split into mechanical and agent, and the operator's spend and share of the total from the operator ledger, so the phase's definition-of-done numbers read from the Now page (owner, 2026-09-06 03:55Z).
+
 ## Log
 
 - 2026-09-06T01:02:00+00:00 filed by the operator: the owner asked for both trial designs to ship as Now 1 and Now 2

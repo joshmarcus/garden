@@ -1,0 +1,39 @@
+---
+id: CG-324
+title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
+  by a task''s criteria run when its PR opens, before the first review'
+status: ready
+product: context-garden
+phase: phase-05
+depends_on: []
+priority: 1
+difficulty: medium
+reading:
+- src/garden/scheduler/review.py
+- src/garden/scheduler/persona.py
+- src/garden/scheduler/poll.py
+- src/garden/personas.py
+- src/garden/web/pages/task.py
+- docs/worker-protocol.md
+- tests/scheduler/test_poll.py
+created: '2026-09-06T03:59:38+00:00'
+updated: '2026-09-06T03:59:39+00:00'
+---
+
+## Goal
+
+When a task's acceptance criteria name evidence the loop can produce, the loop produces it without a hand: a criterion that asks for a persona review dispatches those personas on the PR when it opens; one that asks for captures runs the ui check; one that names a command runs it as a check; the review round waits until that evidence is on the PR, and the review brief carries it. The task page shows each required item with its state (queued, running, posted).
+
+## Context
+
+Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks required designer and usability persona reviews on their PRs; nobody runs those automatically, so sol sent CG-314 back three times for their absence while the operator pressed them by hand for both design PRs. Reviews that wait on evidence that exists cost a round each time; evidence that is produced automatically costs one dispatch.
+
+## Acceptance criteria
+
+- [ ] A criterion matching 'persona-review ... -p <name>' (or a structured requires: list in the task frontmatter) dispatches those personas on the PR when it opens, and the automated review is queued after their comments are posted; tests with the fake harness cover the ordering
+- [ ] A criterion requiring captures or a named check runs it as a pre-review check whose result the review brief includes; a failed check is a mechanical changes_requested with the diagnostic
+- [ ] The task page lists each required evidence item and its state; the Inbox never shows a review-cap card for a PR whose required evidence has not been produced yet
+- [ ] Docs: worker-protocol.md describes requires: and the review ordering
+
+## Log
+- 2026-09-06T03:59:39+00:00 approved (cli)
