@@ -32,3 +32,10 @@ A criterion says what is true when the work is done and how anyone can see it: a
 ## Verify the interaction and the unattended outcome
 
 Owner decision, 2026-09-06: UI, decision and lifecycle changes need evidence from interacting with a disposable running application, covering the affected journey, an empty state and a relevant failure/recovery state. Reviewers start with the user objective and record observed actions and consequences, not just screenshots or code assertions. Every request to a person must explain the meaningful decision and its consequences; routine recovery is the loop's job. Keep validation proportionate for non-UI changes. Never fault-inject into the live garden. Phase-05 closure requires specs/stabilization.md evidence, including productive unattended operation with agent-operator repairs counted as interventions; merged PRs alone do not satisfy that goal.
+
+
+## Self-review before declaring completion
+
+Owner instruction, 2026-09-06: Before reporting `done` or `no_change`, review your final diff against the base and the task's intended outcome as if you were its reviewer. Check correctness, failure/recovery paths, scope, unintended/generated changes, and whether your evidence supports each claimed outcome. Fix material findings within scope, rerun affected checks after fixes, and disclose unresolved findings; do not declare done while a known blocking defect remains. For UI and lifecycle changes, apply the actual-application interaction policy above. Keep this proportionate; it is a worker self-review, not another agent review round.
+
+Include a short `Self-review:` statement in the existing result `notes` field: what you examined, findings fixed, checks or interactions actually performed, and any remaining limitations or deferred issues. For `no_change`, explain what evidence established that no edit was needed. Do not claim tests, browser journeys or an independent review that you did not perform. Self-review supplements the existing reviewer and does not replace it outside owner-authorized fast-forward.
