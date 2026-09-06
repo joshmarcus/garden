@@ -1,7 +1,7 @@
 ---
 id: CG-338
 title: Keep the operator machine responsive under concurrent workers and test suites
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,9 +11,10 @@ difficulty: hard
 reading: []
 branch: garden/cg-338-keep-the-operator-machine-responsive-under-concu
 pr: https://github.com/joshmarcus/context-garden/pull/238
-last_dispatched_at: '2026-09-06T20:10:40+00:00'
+attempts: 1
+last_dispatched_at: '2026-09-06T20:27:40+00:00'
 created: '2026-09-06T13:27:34+00:00'
-updated: '2026-09-06T20:12:22+00:00'
+updated: '2026-09-06T21:12:43+00:00'
 ---
 
 ## Goal
@@ -56,3 +57,8 @@ CG-294 had four simultaneous pytest processes that survived stopping its harness
 - 2026-09-06T20:11:34+00:00 reset to ready by hand
 - 2026-09-06T20:11:54+00:00 Reconciled to existing active revision; automatic dispatch had started before operator retry. Preserve existing run, do not duplicate.
 - 2026-09-06T20:12:22+00:00 Operator retry raced automatic revision startup and cancelled run201038. Verified cancelled PID20418 absent; no live replacement yet. Return ready for exactly one replacement; preserve worktree/transcript. Previous running reconciliation was incorrect and is superseded.
+- 2026-09-06T20:27:37+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply b42c294b945c6425addfcc615d54c152de280a64` in /home/joshua/work/worktrees/CG-338 to recover them (garden:CG-338:2026-09-06T20:27:36+00:00)
+- 2026-09-06T20:27:40+00:00 dispatched work run 20260906T202735Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9832 tokens)
+- 2026-09-06T20:55:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/238: Local admission is now atomic across service, web, and CLI processes, preventing concurrent launchers from claiming the same final slot. A per-run Linux subreaper owns daemonized descendants so stopping, accounting, and temporary-directory cleanup wait for the complete process tree. cost=$3.40
+- 2026-09-06T21:03:04+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, now, now; run `garden triage CG-338 --changes "<feedback>" to unblock`
+- 2026-09-06T21:12:43+00:00 PR238 merged after current-head CI and all criteria verified by reviewer. Permanent description corrected; historical cleanup commit wording is not a correctness blocker. Shared admission not installed/enabled yet; retain containment.
