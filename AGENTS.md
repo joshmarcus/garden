@@ -20,8 +20,8 @@ Fast-forward is ACTIVE. The existing `garden-serve.service` serves the UI with `
 
 Owner scope: leave frozen #221 (CG-216 remote workers) and #222 (CG-230 model pools) OPEN. Finish the other eligible PRs, reconcile their task states and exit through the fast-forward protocol.
 
-- #232 / CG-344 memory-bounded fence bookkeeping: MERGED at bda4911f5a9854212298294ef957813f5b1c016d; task done. Direct integrity/recovery repair, 182 targeted tests, lint and full CI passed. Not yet installed.
-- #229 / CG-254 lifecycle commands: MERGED at d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 after 64 targeted tests, lint and full CI passed. Task reconciled to done; not yet installed.
+- #232 / CG-344 memory-bounded fence bookkeeping: MERGED at bda4911f5a9854212298294ef957813f5b1c016d; task done. Direct integrity/recovery repair, 182 targeted tests, lint and full CI passed. Installed in d5825a3.
+- #229 / CG-254 lifecycle commands: MERGED at d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 after 64 targeted tests, lint and full CI passed. Task reconciled to done; Installed in d5825a3.
 - #228 / CG-296 operating controls/Inbox: worktree refreshed with main in 0e00a06. Uncommitted fixes address duplicated taskless questions, feed wording, repeated rail spend and the Costs fallback button. Needs tests, disposable-app journeys/captures, current main after #229, push and CI. Original dirty generated snapshot preserved at `/home/joshua/work/operator-test-tmp/CG296-snapshot-recovery.patch`; base snapshot restored.
 - #223 / CG-324 required evidence: still open; inspect latest findings, including failed persona runs stranding review.
 - #216 / CG-215 onboarding: still open and explicitly authorized to land; inspect convention derivation and provenance findings. Do not reinstate the old hold.
@@ -40,6 +40,6 @@ The host previously locked up: overlapping test suites, RAM-backed temp and a 10
 
 ## Installed build and safe exit
 
-Installed pin remains b72dbcc; verify before changing it. After eligible PRs land and all work drains, install a verified merged build per the manual, preserving the resource settings. Remove only fast-forward.conf, daemon-reload/restart the existing service, verify health and then resume globally with POST http://127.0.0.1:8765/resume and a matching loopback Origin header. `garden resume` requires a task id and is not global resume. Do not exit into a known critical resource/main failure.
+Installed pin is d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 as of 2026-09-06 17:16 UTC; Now 1 and Now 2 routes both verified HTTP 200 and Now 1 viewed in browser. Maintenance remains serve --no-watch with caps and pause preserved. Verify before changing the pin. After eligible PRs land and all work drains, install a verified merged build per the manual, preserving the resource settings. Remove only fast-forward.conf, daemon-reload/restart the existing service, verify health and then resume globally with POST http://127.0.0.1:8765/resume and a matching loopback Origin header. `garden resume` requires a task id and is not global resume. Do not exit into a known critical resource/main failure.
 
 Read git log before pushing. Avoid garden-repo commits while Claude/Fable workers are active until the relevant fence fix is installed. Commit only intended files; existing task/log changes may belong to the scheduler. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
