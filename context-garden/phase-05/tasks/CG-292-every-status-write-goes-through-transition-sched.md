@@ -2,7 +2,7 @@
 id: CG-292
 title: 'Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep
   test'
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T02:15:00+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T02:15:00+00:00'
+updated: '2026-09-06T02:33:04+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,10 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict. 
 - 2026-09-06T02:04:24+00:00 dispatched rebase run 20260906T020423Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~12411 tokens)
 - 2026-09-06T02:14:22+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$0.01
 - 2026-09-06T02:15:00+00:00 dispatched revise run 20260906T021459Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8303 tokens)
+- 2026-09-06T02:28:09+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/201: Planner auto-approval now uses Scheduler._transition, satisfying the status-write guard. Restored the retro reopen brief-completeness gate that the prior refactor had bypassed. cost=$0.46
+- 2026-09-06T02:30:21+00:00 feedback from an untrusted author ignored: Copilot: > @copilot resolve the merge conflicts in this pull request
+
+Verified: `git merge origin/main` reports "Already up to date" — this branch already contains all of main, so there's no textual merge conf
+- 2026-09-06T02:31:39+00:00 automated review: approve — Status mutations are centralized through `_transition`, with the explicit forced completion escape hatch and base-branch guard implemented. Targeted regressions (162 passed) and Ruff pass. cost=$0.21
+- 2026-09-06T02:31:43+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-06T02:33:04+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/201

@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: in_review
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -29,9 +29,9 @@ branch: garden/cg-307-design-the-now-page-information-architecture-vis-trial-cla
 pr: https://github.com/joshmarcus/context-garden/pull/206
 harness: claude
 model: claude-fable-5-1
-last_dispatched_at: '2026-09-06T01:53:12+00:00'
+last_dispatched_at: '2026-09-06T02:28:45+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T02:14:26+00:00'
+updated: '2026-09-06T02:28:45+00:00'
 ---
 
 ## Goal
@@ -63,3 +63,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T01:53:11+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply c2cc330d1e9be866075960b4e4f709250f2e8b1c` in /home/joshua/work/worktrees/CG-307-trial-claude-claude-fable-5-1 to recover them (garden:CG-307:2026-09-06T01:53:11+00:00)
 - 2026-09-06T01:53:12+00:00 dispatched trial run 20260906T015311Z-trial via local [claude model=claude-fable-5-1] (fresh session, base main, ~28176 tokens)
 - 2026-09-06T02:14:26+00:00 trial inconclusive (only one contender produced a PR; the trial is inconclusive, not a win); kept claude:claude-fable-5-1's PR: https://github.com/joshmarcus/context-garden/pull/206
+- 2026-09-06T02:25:27+00:00 automated review requested changes: The Now 1 design and real-state mock are substantial, but required persona evidence, difficulty-by-model tables, and the live-clock contract/test are missing. The PR also includes unrelated CG-248/CG-250 changes and its description contains process narration. cost=$0.30
+- 2026-09-06T02:28:45+00:00 dispatched revise run 20260906T022844Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~29440 tokens)

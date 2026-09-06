@@ -2,7 +2,7 @@
 id: CG-237
 title: 'The not-logged-in check reads a worker''s prose as an auth failure: match the CLI''s own error,
   not the report text'
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,8 +11,12 @@ difficulty: easy
 reading:
 - src/garden/harness.py
 - tests/test_harness.py
+branch: garden/cg-237-the-not-logged-in-check-reads-a-worker-s-prose-a
+pr: https://github.com/joshmarcus/context-garden/pull/207
+attempts: 1
+last_dispatched_at: '2026-09-06T02:29:02+00:00'
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-06T00:50:16+00:00'
+updated: '2026-09-06T02:40:21+00:00'
 ---
 
 ## Goal
@@ -33,3 +37,6 @@ A worker whose report talks about a login outage is a finished run, not a login 
 ## Log
 
 - 2026-09-06T00:50:16+00:00 approved (cli)
+- 2026-09-06T02:29:02+00:00 dispatched work run 20260906T022845Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~11411 tokens)
+- 2026-09-06T02:38:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/207 (base main): Narrowed auth detection to CLI error/stderr output and protected worker prose, garden blocks, and Codex agent messages from false auth failures. cost=$0.05
+- 2026-09-06T02:40:21+00:00 automated review requested changes: The auth guard still misclassifies an error result containing a parsed GARDEN_RESULT block, and the required replay of the four discarded persona outputs is absent. The branch also includes substantial unrelated work. cost=$0.15

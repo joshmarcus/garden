@@ -2,7 +2,7 @@
 id: CG-310
 title: 'Worker temp files live on disk and are pruned: TMPDIR under the work root, per-run cleanup at
   reap, and a sweep of finished tasks'' worktree venvs and caches'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/config.py
 - examples/garden.work.yaml
 - docs/worker-protocol.md
+branch: garden/cg-310-worker-temp-files-live-on-disk-and-are-pruned-tm
+attempts: 1
+last_dispatched_at: '2026-09-06T02:39:04+00:00'
 created: '2026-09-06T01:45:39+00:00'
-updated: '2026-09-06T01:45:39+00:00'
+updated: '2026-09-06T02:39:04+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ A garden running for a day does not fill the machine's temp space. Every worker,
 ## Log
 
 - 2026-09-06T01:45:39+00:00 approved (cli)
+- 2026-09-06T02:39:04+00:00 dispatched work run 20260906T023849Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21460 tokens)

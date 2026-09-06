@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -25,7 +25,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T02:14:59+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T02:14:59+00:00'
+updated: '2026-09-06T02:28:05+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T02:04:20+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T02:14:59+00:00 kept 1 local-only commit(s) on `backup/20260906T021458Z-revise` before syncing to origin/garden/cg-242-hold-untrusted-config-changes-before-live-reload's head: 6fada6b Close the canary's own route around the config-reload gate
 - 2026-09-06T02:14:59+00:00 dispatched revise run 20260906T021458Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~16965 tokens)
+- 2026-09-06T02:28:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Closed the canary route that could unconditionally adopt a held executable config reload. The fix is committed as a9db9f9 and all local checks pass. cost=$0.60
