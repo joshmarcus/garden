@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/223
 attempts: 1
 last_dispatched_at: '2026-09-06T13:25:03+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T13:47:49+00:00'
+updated: '2026-09-06T17:40:13+00:00'
 ---
 
 ## Goal
@@ -60,3 +60,5 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 - 2026-09-06T13:38:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/223: Rebased onto origin/main and resolved all three conflicts while preserving both sides' changes. cost=$0.02
 - 2026-09-06T13:41:34+00:00 CI failure, but 3 revision rounds already used; needs a human
 - 2026-09-06T13:47:49+00:00 automated review: request_changes — The required-evidence behavior is implemented and all 1,108 tests pass, but the PR contains a large unrelated CG-308 feature stack and snapshot rewrite that must be removed. cost=$0.97
+- 2026-09-06T16:55:26+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-06T17:40:13+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/223

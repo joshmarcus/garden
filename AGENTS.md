@@ -14,23 +14,17 @@ Phase 05 is stabilization/adoption, governed by `context-garden/phase-05/specs/s
 
 Workers must internally self-review, fix findings and recheck before completion. They report ordinary acceptance-criterion evidence, not a separate self-review report. This is included in `principles/00-index.md` and verified in generated briefs.
 
-## Active operation: finish the eligible PRs
+## Normal operation restored, 2026-09-06 17:40 UTC
 
-Fast-forward is ACTIVE. The existing `garden-serve.service` serves the UI with `serve --no-watch`, via `~/.config/systemd/user/garden-serve.service.d/fast-forward.conf`. Dispatch is also paused. Do not tick, dispatch, launch automated reviews, globally resume or start another server while maintenance is active. Ordinary pause alone does not suppress all work in this installed build.
+Josh explicitly ended fast-forward and requested normal operation before the final eligible PR merged. Fast-forward is INACTIVE: its service drop-in was removed, existing garden-serve.service restarted with normal watch, and global dispatch resumed (HTTP 200). Do not re-enter maintenance merely because #223 remains open. The disposable UI fixture services were stopped.
 
-Owner scope: leave frozen #221 (CG-216 remote workers) and #222 (CG-230 model pools) OPEN. Finish the other eligible PRs, reconcile their task states and exit through the fast-forward protocol.
+PRs #232/CG-344, #229/CG-254 and #228/CG-296 merged and tasks are done. Josh merged #216/CG-215 at 545c745f6cc38087f4623a7a5726768e17856a02; reconciled done. #223/CG-324 subsequently merged at cf76e6ed1f671b5a9d5a6055ae8f3d1f127a07ae; normal scheduler reconciled it to done. All five eligible PRs are now merged. Frozen #221/#222 remain open and excluded.
 
-- #232 / CG-344 memory-bounded fence bookkeeping: MERGED at bda4911f5a9854212298294ef957813f5b1c016d; task done. Direct integrity/recovery repair, 182 targeted tests, lint and full CI passed. Installed in d5825a3.
-- #229 / CG-254 lifecycle commands: MERGED at d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 after 64 targeted tests, lint and full CI passed. Task reconciled to done; Installed in d5825a3.
-- #228 / CG-296 operating UI: MERGED at 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa; task done. 169 targeted tests, full CI and disposable browser journeys passed. Not yet installed.
-- #223 / CG-324 required evidence: conflicts resolved and pushed at 8135d50055d8e8db0fc3eaddb0725a3b8d595e20, including current main/#228. 125 targeted tests, lint and evidence-state UI captures passed; current-head CI pending.
-- #216 / CG-215 onboarding: pushed a5c12d6 after main/#228 integration, runtime snapshot cleanup and preserving existing trusted authors. Latest worker commits already fix documented-convention/provenance findings; 18 tests and lint pass. Current CI pending. CG-356 tracks partial-draft recovery after rejected planner output.
-
-The existing Codex heartbeat `operate-context-garden` runs every five minutes to continue direct PR resolution. A timer is a reminder, not evidence that work is happening: perform repairs instead of ending after status narration. When these two remaining PRs are handled, follow the safe exit, update this handoff, and restore ordinary 25-minute duties. Notify only meaningful changes.
+The operator heartbeat checks every five minutes until 18:41 UTC after the owner increased concurrency, then returns to ordinary 25-minute duties: status/inbox/digest and live resource checks, act on actionable stalls with owner authority. Continue stabilization work with three worker slots, one review and caps; no unattended stabilization claim follows from supervised repairs. CG-355 tracks automatic update/restart regression; CG-356 tracks onboarding rejected-plan recovery.
 
 ## Resource limits and services
 
-Persistent garden service limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. max_parallel=1 and review_parallel=1. Do not restore historical limits of 2, 3 or 5 without new evidence/authority. Restart only after verifying no active workers or checks; KillMode=process means detached work can survive.
+Persistent garden service limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. Josh explicitly increased the live max_parallel override to 3 at 17:41 UTC; review_parallel remains 1. garden.yaml retains its conservative default of 1; the persisted live override governs dispatch. Retain CPU/memory caps and watch actual pressure. Restart only after verifying no active workers or checks; KillMode=process means detached work can survive.
 
 CLI-spawned work bypasses service limits. During maintenance launch manual checks in a separate bounded systemd user service (2 GiB memory, 2 CPUs used for current fixes), with disk temp `/home/joshua/work/operator-test-tmp`. Normal future work should use capped server launch paths. CG-338 owns comprehensive resource admission.
 
@@ -38,8 +32,8 @@ CLI-spawned work bypasses service limits. During maintenance launch manual check
 
 The host previously locked up: overlapping test suites, RAM-backed temp and a 102 MiB state file with duplicated manifests were measured contributors, not a proven final OOM cause. Preserve recovery data; do not clear state/manifests or caches blindly.
 
-## Installed build and safe exit
+## Installed build
 
-Installed pin is d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 as of 2026-09-06 17:16 UTC; Now 1 and Now 2 routes both verified HTTP 200 and Now 1 viewed in browser. Maintenance remains serve --no-watch with caps and pause preserved. Verify before changing the pin. After eligible PRs land and all work drains, install a verified merged build per the manual, preserving the resource settings. Remove only fast-forward.conf, daemon-reload/restart the existing service, verify health and then resume globally with POST http://127.0.0.1:8765/resume and a matching loopback Origin header. `garden resume` requires a task id and is not global resume. Do not exit into a known critical resource/main failure.
+Installed pin is 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa as of 2026-09-06 17:40 UTC (verified main CI). It includes memory/lifecycle/operating UI repairs; onboarding's merge had main CI in progress at install time and is not yet installed. Existing server runs normal watch; /, /now1 and /now2 returned HTTP 200 after restart, and global resume returned 200. Verify current state before future pin movement; only install/restart when workers/checks drain. Retain caps and phase holds. Global resume is POST http://127.0.0.1:8765/resume with matching loopback Origin; CLI resume requires a task id.
 
-Read git log before pushing. Avoid garden-repo commits while Claude/Fable workers are active until the relevant fence fix is installed. Commit only intended files; existing task/log changes may belong to the scheduler. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
+Read git log before pushing and commit only intended files. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.

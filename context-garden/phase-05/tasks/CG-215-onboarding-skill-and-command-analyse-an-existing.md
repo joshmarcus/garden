@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
 last_dispatched_at: '2026-09-06T13:54:03+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T14:10:55+00:00'
+updated: '2026-09-06T17:39:29+00:00'
 ---
 
 ## Goal
@@ -96,3 +96,7 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T13:53:56+00:00 kept 1 local-only commit(s) on `backup/20260906T135355Z-revise` before syncing to origin/garden/cg-215-onboarding-skill-and-command-analyse-an-existing's head: 01c798d Ground onboarding drafts in project evidence
 - 2026-09-06T13:54:03+00:00 dispatched revise run 20260906T135355Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24261 tokens)
 - 2026-09-06T14:10:55+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit a63946ec2545, not because of this branch; waiting for the base to go green, no revise round cost=$0.92
+- 2026-09-06T16:17:21+00:00 base branch `main` recovered (moved to f1ddcdcced39); rebased onto it and the pre-PR checks pass now — continuing without a worker run
+- 2026-09-06T16:17:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Rebased the existing onboarding PR onto current main and completed grounded convention extraction and strict backlog provenance validation. Onboarding/planner tests and lint pass; the full suite stops on an unrelated Now-page inconsistency already present on origin/main.
+- 2026-09-06T16:17:24+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-06T17:39:29+00:00 Owner merged PR #216 at 545c745f6cc38087f4623a7a5726768e17856a02
