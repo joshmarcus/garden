@@ -1,16 +1,16 @@
 ---
 id: CG-285
 title: tick_interval appears both under live re-read values and under the needs-a-resta
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 3
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:17+00:00'
-updated: '2026-09-05T23:58:17+00:00'
 discovered_from: persona:user:context-garden/phase-04
+created: '2026-09-05T23:58:17+00:00'
+updated: '2026-09-06T00:20:42+00:00'
 ---
 
 ## Goal
@@ -24,3 +24,4 @@ Raised by the user persona review (Config page). persona:user:context-garden/pha
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-274 (renumbered by the operator: two reconcile runs drew ids from one counter)
+- 2026-09-06T00:20:42+00:00 pruned at approval (kickoff q2): folded into CG-296 as a checklist line, which owns one vocabulary and one place for each fact across the surfaces

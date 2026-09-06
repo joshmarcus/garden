@@ -22,6 +22,8 @@ Web done and unapprove, CLI set-status and take, approve, _approve_retro_blockin
 
 A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
 
+Folded in from CG-247 and CG-282 (cancelled as duplicates): the web Mark done on an in-review card is the escape hatch, labelled 'Mark done without merging' with a confirm and dropped from the card's primary row; a PR-backed task reports done only when its commits are on the base branch (CG-228's rule), so mark_done refuses otherwise unless forced.
+
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-281 (renumbered by the operator: two reconcile runs drew ids from one counter)

@@ -1,16 +1,16 @@
 ---
 id: CG-257
 title: The rail, Config page, CLI and status line use 'operating profile', 'stop' and '
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-05T23:58:10+00:00'
 discovered_from: persona:designer:context-garden/phase-04
+created: '2026-09-05T23:58:10+00:00'
+updated: '2026-09-06T00:20:38+00:00'
 ---
 
 ## Goal
@@ -24,3 +24,4 @@ Raised by the designer persona review (operating profile). persona:designer:cont
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-246 (renumbered by the operator: two reconcile runs drew ids from one counter)
+- 2026-09-06T00:20:38+00:00 pruned at approval (kickoff q2): folded into CG-296 as a checklist line, which owns one vocabulary and one place for each fact across the surfaces
