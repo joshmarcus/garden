@@ -33,3 +33,7 @@ updated: '2026-09-06T13:14:39+00:00'
 - 2026-09-06T07:19:25+00:00 approved (cli)
 - 2026-09-06T13:13:25+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:39+00:00 reset to ready by hand
+
+## Web-incident retro clarification, 2026-09-06
+
+Keep the deterministic lock-order regression objective, but do not suppress evidence of real overloaded application latency. Pair the unit check with CG-339's separate controlled served-performance workload; a loaded host can reveal an actual availability failure even when the tick lock is correct. Counterfactual: separate architectural correctness from service performance instead of dismissing slow pages as merely environmental.

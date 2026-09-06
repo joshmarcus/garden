@@ -35,3 +35,7 @@ The reaper reads the worktree before it reads the transcript. When a work or rev
 - 2026-09-06T09:09:19+00:00 approved (cli)
 - 2026-09-06T13:13:01+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:45+00:00 reset to ready by hand
+
+## Related web-incident prevention
+
+CG-359 owns provenance-safe handling of unrelated dirty files during leftover recovery. Coordinate: salvage intended existing commits here, but do not infer permission to commit all dirty artifacts. CG-357's excluded snapshot was reintroduced twice by scheduler salvage during outage recovery.

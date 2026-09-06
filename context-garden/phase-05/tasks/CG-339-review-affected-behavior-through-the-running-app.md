@@ -29,3 +29,7 @@ Build on CG-315 capture evidence and CG-324 required evidence. Add actual intera
 ## Log
 
 - 2026-09-06T13:46:34+00:00 approved (cli)
+
+## Web-incident retro extension, 2026-09-06
+
+CG-357 initially claimed performance evidence using inert worker records and ten in-process HTTP samples; an extrapolated p95 exceeded the maximum. Require applicable scalability claims to include a served disposable app, representative and larger history sizes, repeated cache-expiry intervals, actual executing bounded workload processes, empirical latency distribution and read/scan counts. Explicitly distinguish controlled load from real model harnesses. Tie evidence to reviewed head; a reviewer must refresh the comparison base before claiming unrelated history. Counterfactual: this evidence gate before the Now rollout would have exposed repeated full-history reads before normal operation failed. Existing operator recovery benchmark in product docs/design/cg357-validation is a starting point, not proof this policy is enforced.

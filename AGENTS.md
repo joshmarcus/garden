@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current handoff, consolidated 2026-09-06 19:01 UTC. Replace obsolete state here instead of appending contradictory updates. Verify live state before acting. Historical handoffs are archived in `context-garden/docs/operator-history/`; do not read them as current instructions.
+Current handoff, consolidated 2026-09-06 19:14 UTC. Replace obsolete state here instead of appending contradictory updates. Verify live state before acting. Historical handoffs are archived in `context-garden/docs/operator-history/`; do not read them as current instructions.
 
 ## Start here
 
@@ -20,7 +20,7 @@ Josh explicitly ended fast-forward and requested normal operation before the fin
 
 PRs #232/CG-344, #229/CG-254 and #228/CG-296 merged and tasks are done. Josh merged #216/CG-215 at 545c745f6cc38087f4623a7a5726768e17856a02; reconciled done. #223/CG-324 subsequently merged at cf76e6ed1f671b5a9d5a6055ae8f3d1f127a07ae; normal scheduler reconciled it to done. All five eligible PRs are now merged. Frozen #221/#222 remain open and excluded.
 
-The operator heartbeat checks every five minutes until 18:41 UTC after the owner increased concurrency, then returns to ordinary 25-minute duties: status/inbox/digest and live resource checks, act on actionable stalls with owner authority. Continue stabilization work with three worker slots, one review and caps; no unattended stabilization claim follows from supervised repairs. CG-355 tracks automatic update/restart regression; CG-356 tracks onboarding rejected-plan recovery.
+The operator heartbeat returns to ordinary25-minute duties after incident closure and completed retrospective at19:14 UTC. Check status/inbox/digest and live resources, resolve actionable stalls with owner authority. Phase05 unattended stabilization remains unproven. CG-355 owns safe automatic updates; CG-356 owns rejected-onboarding recovery.
 
 ## Resource limits and services
 
@@ -38,12 +38,10 @@ Installed pin8842552190ef675dd0af281ea23a82f15cdb1963 (CG-357 PR234) at18:59 UTC
 
 Read git log before pushing and commit only intended files. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
 
-## Web incident: observing recovery from 19:00 UTC
+## Normal operation after web incident
 
-Follow `context-garden/docs/incident-protocol.md`; current record `context-garden/docs/incidents/2026-09-06-web-responsiveness.md`. CG-357 merged and task done. Operator served benchmarks under caps passed (p95 .213s/ .570s at1546/6000 records with three executing local CPU/metadata workers); Windows browser journeys passed. Actual production Inbox, Board, Now1/Now2 all returned200 after installation and Windows browser navigation succeeded at19:00. WSL Now2 was .55s; Windows PowerShell localhost requests took2.5–2.8s (client-path overhead remains to distinguish). This is initial recovery, not incident closure.
+Incident CLOSED at19:13 UTC after successful production checks at19:00,19:07,19:13, including genuine controlled revision/check work. Windows browser navigation succeeded; final dynamic pages were .46–.63s WSL and Now2 .645s WindowsIPv4. No new memory pressure or swap after recovery restart. Global resume returned200, owner3 worker slots/review1 and persistent caps retained. CG-357 is merged/installed/done; do not redispatch it. Monitor recurrence and use incident protocol if basic operation fails again.
 
-Ordinary admission remains paused. One controlled CG-329 revision was dispatched through capped server at19:01 (HTTP303); verify actual PID/output. Observe three successful representative journey checks over at least ten minutes from19:00, including resumed workload, with no renewed pressure. If healthy at/after19:10, resume ordinary operation conservatively up to owner's3 workers/review1. If symptoms recur contain immediately. Do not duplicate CG-357 work or its old dispatches. Keep five-minute monitoring through observation and retrospective.
+Incident evidence: `context-garden/docs/incidents/2026-09-06-web-responsiveness.md`. Owner-required retrospective COMPLETE: `context-garden/docs/incidents/2026-09-06-web-responsiveness-retro.md`. New prevention tasks CG-358 (responsive retry-safe recovery controls, priority0) and CG-359 (provenance-safe dirty-file salvage, priority1); existing CG-338/339 strengthened, CG-331 clarified and CG-333 linked. Task creation does not establish implemented prevention. No production history moved/deleted; no temporary runtime experiment remains.
 
-CG-294 preemption: worktree head f129ed553e6fcc7733be06d87628166ebbe0d454, dirty snapshot/transcript preserved; extra patch /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. Four escaped tests stopped. Resume its preserved work after recovery. CG-337 needs later normal reconciliation. Frozen phase06 and PR221/222 remain held.
-
-After verified recovery, run the owner-requested retrospective and file/link prevention tasks with counterfactuals and measurable criteria. Record task IDs and retro beside the incident before restoring ordinary25-minute follow-ups. Restoration/merged tasks do not establish unattended phase05 stabilization.
+CG-294 preemption recovery remains: worktree head f129ed553e6fcc7733be06d87628166ebbe0d454, dirty snapshot/transcript preserved; extra patch /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. It is ready to resume preserved work in normal priority order. Four escaped tests were stopped. CG-337 and CG-329 need normal current-state reconciliation; inspect their latest checks/reviews/PRs. Frozen phase06 and PR221/222 remain held.

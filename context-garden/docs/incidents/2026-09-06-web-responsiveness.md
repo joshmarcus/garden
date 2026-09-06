@@ -1,6 +1,6 @@
 # Web responsiveness incident — 2026-09-06
 
-Status: OBSERVING RECOVERY since19:00 UTC. Lead: current garden operator. Impact began around 17:43 UTC: dynamic pages unavailable or timing out for the owner and browser-dependent work. Static/clock success does not establish recovery.
+Status: CLOSED after verified recovery at19:13 UTC; retrospective and prevention tasks completed. Lead: current garden operator. Impact began around 17:43 UTC: dynamic pages unavailable or timing out for the owner and browser-dependent work. Static/clock success does not establish recovery.
 
 ## Current containment and recovery
 
@@ -41,3 +41,5 @@ Owner explicitly requested a retrospective and prevention tasks after recovery. 
 19:00 initial production verification: Windows HTTP Inbox/Board/Now1/Now2 all200 (2.825/2.510/2.637/2.599s including Windows client path); WSL Now2 .547s. Windows browser opened live Now2 and navigated Board→Inbox→Now1 successfully. Server PID2315784; caps retained. Observation begins19:00, needs two further samples through at least19:10 including controlled workload. At19:01 one CG-329 revision dispatched through server,303; ordinary admission remains paused. Verify worker PID/progress and page/resource health on next checks.
 
 19:07 recovery sample2: actual Inbox/Board/Now1/Now2 all200 in .688/.506/.641/.626s from WSL. Windows127.0.0.1 Now2 200 in .754s, supporting localhost client-resolution/fallback overhead as the earlier extra ~2s (inference, not fully isolated). CG-329 controlled revision has advanced to live check20260906T190657Z-check PID2441933. Service memory538MiB, zero swap and no memory.high/max/OOM events since restart. Observation not yet ten minutes; keep admission pause until next successful sample at/after19:10.
+
+19:13 recovery sample3: Inbox/Board/Now1/Now2 all200 in .626/.456/.548/.581s WSL; WindowsIPv4 Now2 .645s. Three successful samples span13 minutes and included a genuine CG-329 revision/check workload. Memory357MiB, zero swap/high/max/OOM events after restart. Normal global resume returned200; concurrency remains3 workers/1 review with caps. Incident closed. Retrospective completed in 2026-09-06-web-responsiveness-retro.md. Filed CG-358/359; expanded CG-338/339, clarified CG-331 and linked CG-333. Existing CG-354/355 retained without duplicate tasks. Return operator reminder to25 minutes; preserve recurrence monitoring and CG-294 recovery.
