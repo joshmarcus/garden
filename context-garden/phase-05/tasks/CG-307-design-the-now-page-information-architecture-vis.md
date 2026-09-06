@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T03:37:50+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T03:37:50+00:00'
+updated: '2026-09-06T04:28:21+00:00'
 ---
 
 ## Goal
@@ -76,3 +76,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T03:20:54+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T03:30:06+00:00 automated review: request_changes — The design is substantial and the focused checks pass, but required row-relative table shading/marks are missing, the model tables do not yet use the garden metrics computation, and the real-state mock contains a contradictory review-capacity explanation. Visual verification at the required viewport/theme combinations is also not evidenced. cost=$0.50
 - 2026-09-06T03:37:50+00:00 dispatched revise run 20260906T033749Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~8905 tokens)
+- 2026-09-06T04:04:15+00:00 fenced: worker wrote outside its worktree; the writes it made were reverted. Touched the live garden: wrote context-garden/phase-05/specs/now-page.md and 10 commit(s) [56fdbd1 garden: update task state; b8d7355 garden: update task state; 605caf8 Now page: hand merges, rebase split and operator share join the last-period numbers; 9616773 garden: update task state; 600705e Criteria naming a file or
+- 2026-09-06T04:28:21+00:00 re-enabled by hand; revise run will follow

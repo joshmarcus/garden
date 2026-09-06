@@ -30,9 +30,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/215
 harness: codex
 model: gpt-6-astra
 attempts: 1
-last_dispatched_at: '2026-09-06T04:02:53+00:00'
+last_dispatched_at: '2026-09-06T04:26:55+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T04:02:53+00:00'
+updated: '2026-09-06T04:26:55+00:00'
 ---
 
 ## Goal
@@ -77,3 +77,7 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T03:57:51+00:00 persona designer review: score 7/10, 3 finding(s)
 - 2026-09-06T03:57:51+00:00 persona usability-expert review: score 7/10, 3 finding(s)
 - 2026-09-06T04:02:53+00:00 dispatched revise run 20260906T040250Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~9733 tokens)
+- 2026-09-06T04:13:50+00:00 worker asks: Can you supply the snapshot’s generator and sanitized task/run/event inputs so I can reproduce its matrices through the shared metrics computation? cost=$8.28
+- 2026-09-06T04:26:52+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply bbca90d989386ea956bb8768546059c971cc501e` in /home/joshua/work/worktrees/CG-314 to recover them (garden:CG-314:2026-09-06T04:26:52+00:00)
+- 2026-09-06T04:26:53+00:00 kept 2 local-only commit(s) on `backup/20260906T042651Z-resume` before syncing to origin/garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform's head: 03f955a docs: refresh inspected Now 2 captures and validation evidence; 4b2c9ac design: clarify Now 2 recovery paths and cost cohorts
+- 2026-09-06T04:26:55+00:00 dispatched resume run 20260906T042651Z-resume via local [codex model=gpt-6-astra] (fresh session, base main, ~9817 tokens)

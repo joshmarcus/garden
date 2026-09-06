@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
 last_dispatched_at: '2026-09-06T03:50:20+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T03:50:20+00:00'
+updated: '2026-09-06T04:08:26+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 - 2026-09-06T03:35:32+00:00 dispatched rebase run 20260906T033526Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~7574 tokens)
 - 2026-09-06T03:47:19+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.01
 - 2026-09-06T03:50:20+00:00 dispatched revise run 20260906T035020Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21094 tokens)
+- 2026-09-06T04:08:26+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 06839c21bbdf, not because of this branch; waiting for the base to go green, no revise round cost=$1.16

@@ -2,7 +2,7 @@
 id: CG-216
 title: 'Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP,
   works in its own clone, pushes the branch and posts the result and transcript back'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,8 +18,11 @@ reading:
 - src/garden/web/trust.py
 - docs/worker-protocol.md
 - docs/architecture.md
+branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
+attempts: 1
+last_dispatched_at: '2026-09-06T04:10:53+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T03:38:35+00:00'
+updated: '2026-09-06T04:10:53+00:00'
 ---
 
 ## Goal
@@ -50,3 +53,4 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 ## Log
 
 - 2026-09-06T03:38:35+00:00 approved (web)
+- 2026-09-06T04:10:53+00:00 dispatched work run 20260906T040922Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~25151 tokens)

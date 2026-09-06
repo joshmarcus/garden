@@ -2,7 +2,7 @@
 id: CG-317
 title: 'The task page renders a trial in progress: the trial panel treats winner, scores and PRs as optional,
   and a test renders a task mid-trial with a failed contender'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 - tests/test_web.py
 branch: garden/cg-317-the-task-page-renders-a-trial-in-progress-the-tr
 attempts: 1
-last_dispatched_at: '2026-09-06T03:03:16+00:00'
+last_dispatched_at: '2026-09-06T04:06:57+00:00'
 created: '2026-09-06T02:14:10+00:00'
-updated: '2026-09-06T03:21:46+00:00'
+updated: '2026-09-06T04:06:57+00:00'
 ---
 
 ## Goal
@@ -39,3 +39,4 @@ A task page never fails while a trial is running. The trial panel reads `winner`
 - 2026-09-06T02:14:11+00:00 approved (cli)
 - 2026-09-06T03:03:16+00:00 dispatched work run 20260906T030249Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14905 tokens)
 - 2026-09-06T03:21:46+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$0.06
+- 2026-09-06T04:06:57+00:00 dispatched revise run 20260906T040655Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~16721 tokens)

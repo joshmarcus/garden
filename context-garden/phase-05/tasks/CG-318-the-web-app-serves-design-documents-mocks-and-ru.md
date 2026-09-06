@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-318-the-web-app-serves-design-documents-mocks-and-ru
 pr: https://github.com/joshmarcus/context-garden/pull/217
 attempts: 1
-last_dispatched_at: '2026-09-06T03:37:48+00:00'
+last_dispatched_at: '2026-09-06T04:09:21+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T03:47:20+00:00'
+updated: '2026-09-06T04:09:21+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Anything a worker renders for a person to look at is one click away in the web a
 - 2026-09-06T03:37:48+00:00 dispatched rebase run 20260906T033748Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~2365 tokens)
 - 2026-09-06T03:43:53+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/217: Rebased onto origin/main and resolved the runs.py capture conflict while preserving both capture listing and UI capture serving. cost=$0.01
 - 2026-09-06T03:47:20+00:00 automated review requested changes: The core surfaces are present, but required route coverage is missing, Design navigation checks the wrong directory, HTML run captures are served unsandboxed, and snapshot sanitization does not reliably remove sensitive values. The run template also retains a now-broken legacy capture panel. cost=$0.60
+- 2026-09-06T04:09:21+00:00 dispatched revise run 20260906T040919Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14902 tokens)

@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-237-the-not-logged-in-check-reads-a-worker-s-prose-a
 pr: https://github.com/joshmarcus/context-garden/pull/214
 attempts: 1
-last_dispatched_at: '2026-09-06T03:53:44+00:00'
+last_dispatched_at: '2026-09-06T04:14:30+00:00'
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-06T03:53:44+00:00'
+updated: '2026-09-06T04:14:30+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,6 @@ A worker whose report talks about a login outage is a finished run, not a login 
 - 2026-09-06T03:49:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/214: Made the surviving persona replay fixtures self-describing and verified auth detection across Claude and Codex output shapes. All required tests and lint checks pass. cost=$0.04
 - 2026-09-06T03:51:39+00:00 automated review requested changes: Auth classification now behaves correctly for Claude and Codex, but the required replay of the four discarded persona stdout artifacts is still not present. The test constructs synthetic success events with manifest-supplied costs, so the fourth acceptance criterion is unmet. cost=$0.26
 - 2026-09-06T03:53:44+00:00 dispatched revise run 20260906T035343Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14402 tokens)
+- 2026-09-06T04:08:23+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/214: Auth detection distinguishes CLI login failures from worker prose for Claude and Codex. Test evidence wording now accurately describes the surviving persona result fixtures. cost=$0.04
+- 2026-09-06T04:12:16+00:00 automated review requested changes: Auth detection behaves correctly for Claude and Codex, and the focused harness/CLI suite passes. The required four phase-04 stdout replays are still absent; synthetic success envelopes with manifest-injected costs do not prove those captured outputs parse correctly. cost=$0.23
+- 2026-09-06T04:14:30+00:00 dispatched revise run 20260906T041429Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14593 tokens)
