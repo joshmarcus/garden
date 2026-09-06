@@ -2,7 +2,7 @@
 id: CG-316
 title: A dispatch that fails before its process starts closes the run record at once, and the orphan sweep
   closes any running record with no live process
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-316-a-dispatch-that-fails-before-its-process-starts
 pr: https://github.com/joshmarcus/context-garden/pull/212
 attempts: 1
-last_dispatched_at: '2026-09-06T04:06:55+00:00'
+last_dispatched_at: '2026-09-06T04:53:08+00:00'
 created: '2026-09-06T02:11:57+00:00'
-updated: '2026-09-06T04:06:55+00:00'
+updated: '2026-09-06T05:26:00+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,10 @@ A run record is `running` only while a process is running. When `dispatch` fails
 - 2026-09-06T03:10:54+00:00 dispatched revise run 20260906T031053Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~24640 tokens)
 - 2026-09-06T03:37:01+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.06
 - 2026-09-06T04:06:55+00:00 dispatched revise run 20260906T040653Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~25880 tokens)
+- 2026-09-06T04:34:45+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/212: Fixed the exit-143 regression while preserving dispatch-failure closure, orphan sweeping, and live-process-only Running cards. cost=$0.10
+- 2026-09-06T04:36:28+00:00 CI failure
+- 2026-09-06T04:38:44+00:00 automated review: request_changes — The intended paths are covered, but the exception boundary can close a run after its process has launched without terminating it, recreating an inaccurate run/process state. cost=$0.37
+- 2026-09-06T04:53:08+00:00 dispatched revise run 20260906T045305Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~26418 tokens)
+- 2026-09-06T05:20:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/212: Dispatch and orphan lifecycle handling now avoid falsely closing launched workers while still closing pre-start failures. CI-related cleanup regression and reviewer feedback were addressed. cost=$0.12
+- 2026-09-06T05:25:25+00:00 automated review requested changes: Pre-start dispatch failures and Board filtering are covered, but the orphan sweep still leaves pid-less run records active when their task is terminal. This recreates the reported failed-task/running-record state and can consume worker capacity indefinitely. cost=$0.31
+- 2026-09-06T05:26:00+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-316`) or send it back (`garden triage CG-316 --changes "..."`)

@@ -2,7 +2,7 @@
 id: CG-314
 title: 'Design Now 2: astra''s take on the Now page, information architecture, visual system, motion,
   and a static mock of every state'
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -32,7 +32,7 @@ model: gpt-6-astra
 attempts: 1
 last_dispatched_at: '2026-09-06T04:26:55+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T04:26:55+00:00'
+updated: '2026-09-06T05:19:02+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,9 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T04:26:52+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply bbca90d989386ea956bb8768546059c971cc501e` in /home/joshua/work/worktrees/CG-314 to recover them (garden:CG-314:2026-09-06T04:26:52+00:00)
 - 2026-09-06T04:26:53+00:00 kept 2 local-only commit(s) on `backup/20260906T042651Z-resume` before syncing to origin/garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform's head: 03f955a docs: refresh inspected Now 2 captures and validation evidence; 4b2c9ac design: clarify Now 2 recovery paths and cost cohorts
 - 2026-09-06T04:26:55+00:00 dispatched resume run 20260906T042651Z-resume via local [codex model=gpt-6-astra] (fresh session, base main, ~9817 tokens)
+- 2026-09-06T04:52:20+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/215: Completed the Now 2 design handoff with persona responses, fixed-snapshot provenance, matrix fidelity tests and inspected desktop/phone captures in both themes. All changes are committed on the assigned branch. cost=$9.67
+- 2026-09-06T04:54:53+00:00 automated review: approve — The Now 2 design provides a complete, implementation-ready specification, a snapshot-backed responsive mock, inspected visual evidence, and documented responses to all persona findings. Focused tests and lint pass. cost=$0.44
+- 2026-09-06T05:04:33+00:00 hard-tier scratch-merge check passed; ready to merge once the queue reaches it
+- 2026-09-06T05:04:47+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T05:14:11+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-06T05:19:02+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/215

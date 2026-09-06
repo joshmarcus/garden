@@ -19,10 +19,11 @@ reading:
 - docs/worker-protocol.md
 - docs/architecture.md
 branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
+pr: https://github.com/joshmarcus/context-garden/pull/221
 attempts: 1
-last_dispatched_at: '2026-09-06T04:10:53+00:00'
+last_dispatched_at: '2026-09-06T05:07:42+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T04:10:53+00:00'
+updated: '2026-09-06T05:07:42+00:00'
 ---
 
 ## Goal
@@ -54,3 +55,6 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 
 - 2026-09-06T03:38:35+00:00 approved (web)
 - 2026-09-06T04:10:53+00:00 dispatched work run 20260906T040922Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~25151 tokens)
+- 2026-09-06T04:54:48+00:00 opened https://github.com/joshmarcus/context-garden/pull/221 (base main): Added bearer-authenticated, lease-based remote run claiming plus the `garden worker` agent, independent clone execution, branch pushing, transcript/result reporting, and scheduler integration for work, review, and check runs. Added end-to-end coverage and updated the worker protocol and architecture documentation. cost=$4.22
+- 2026-09-06T04:59:44+00:00 automated review requested changes: The pull-based work path is present, but remote checks lose required context, leases do not fence stale workers, and the worker does not upload its transcript. The tests also do not exercise a completed remote review or check run. cost=$0.76
+- 2026-09-06T05:07:42+00:00 dispatched revise run 20260906T050735Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~27819 tokens)

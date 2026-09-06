@@ -31,9 +31,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/218
 harness: claude
 model: claude-fable-5-1
 attempts: 1
-last_dispatched_at: '2026-09-06T03:48:06+00:00'
+last_dispatched_at: '2026-09-06T04:45:49+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T03:48:06+00:00'
+updated: '2026-09-06T04:45:49+00:00'
 ---
 
 ## Goal
@@ -73,3 +73,6 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T03:40:39+00:00 opened https://github.com/joshmarcus/context-garden/pull/218 (base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1): Now 1 is built at /now1 from Fable's design: the four regions rendered from a new now1 module, live over a server-sent-events stream that never holds the hub lock, a browser clock on every running card, the difficulty-by-model tables computed in events.metrics with heat-map shading, garden now --page 1 and a walkthrough capture. Full suite and lint pass. cost=$18.47
 - 2026-09-06T03:42:28+00:00 automated review requested changes: The implementation is broadly complete and its focused tests pass, but two explicit acceptance criteria remain unmet: all numeric tables must follow the row-based heat-map convention, and four compliant screenshots must be inspected and listed. cost=$0.70
 - 2026-09-06T03:48:06+00:00 dispatched revise run 20260906T034805Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~26896 tokens)
+- 2026-09-06T04:28:42+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/218: The runs-by-harness-and-model table is now a per-row heat-map table computed in the now module and rendered by the same macro as the difficulty tables; the four captures of the live page at 1280 and 390, light and dark, were taken, read back, iterated on (a phone overflow and a too-narrow column fixed) and filed under docs/screenshots; the merge queue's round limit reads the scheduler's default. cost=$9.81
+- 2026-09-06T04:34:42+00:00 automated review requested changes: The Now 1 implementation is otherwise broad and well tested, including live updates, clocks, shaded tables, text output, and responsive captures. It cannot merge because the last-period region omits required hand-merge, rebase-round, and operator-spend metrics. cost=$1.11
+- 2026-09-06T04:45:49+00:00 dispatched revise run 20260906T044547Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~27583 tokens)

@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-215-onboarding-skill-and-command-analyse-an-existing
 pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
-last_dispatched_at: '2026-09-06T04:04:57+00:00'
+last_dispatched_at: '2026-09-06T04:37:11+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T04:04:57+00:00'
+updated: '2026-09-06T05:25:16+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,8 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T04:02:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Made onboarding collision-safe, auditable, and locally deterministic. Optional GitHub enrichment is now separated from deterministic discovery, generated facts carry provenance, and stable project names are retained across worktrees and URL clones. cost=$0.86
 - 2026-09-06T04:04:13+00:00 automated review requested changes: The core onboarding flow works for the Node fixture, but required provenance, secret safety, and environment discovery remain incomplete. cost=$0.35
 - 2026-09-06T04:04:57+00:00 dispatched revise run 20260906T040456Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~21948 tokens)
+- 2026-09-06T04:28:33+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Completed safe, deterministic onboarding discovery with preserved backlog provenance, credential-safe CI command handling, broader environment input support, and exact inference reporting. The revision is committed and the full test and lint suites pass. cost=$1.32
+- 2026-09-06T04:34:40+00:00 automated review requested changes: The Node fixture flow works, but onboarding does not produce this repository's required commands and the report/provenance guarantees remain incomplete. cost=$0.45
+- 2026-09-06T04:37:11+00:00 dispatched revise run 20260906T043710Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~22266 tokens)
+- 2026-09-06T05:06:08+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human cost=$1.63
+- 2026-09-06T05:25:16+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow

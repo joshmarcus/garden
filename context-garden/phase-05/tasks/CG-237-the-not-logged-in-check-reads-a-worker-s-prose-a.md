@@ -2,7 +2,7 @@
 id: CG-237
 title: 'The not-logged-in check reads a worker''s prose as an auth failure: match the CLI''s own error,
   not the report text'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/214
 attempts: 1
 last_dispatched_at: '2026-09-06T04:14:30+00:00'
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-06T04:14:30+00:00'
+updated: '2026-09-06T04:35:26+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,6 @@ A worker whose report talks about a login outage is a finished run, not a login 
 - 2026-09-06T04:08:23+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/214: Auth detection distinguishes CLI login failures from worker prose for Claude and Codex. Test evidence wording now accurately describes the surviving persona result fixtures. cost=$0.04
 - 2026-09-06T04:12:16+00:00 automated review requested changes: Auth detection behaves correctly for Claude and Codex, and the focused harness/CLI suite passes. The required four phase-04 stdout replays are still absent; synthetic success envelopes with manifest-injected costs do not prove those captured outputs parse correctly. cost=$0.23
 - 2026-09-06T04:14:30+00:00 dispatched revise run 20260906T041429Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14593 tokens)
+- 2026-09-06T04:28:38+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/214: Auth failures are recognized only from CLI-originated error channels, while worker prose and parsed results remain successful runs. Replay tests preserve done status, costs, and persona payloads using the surviving final-result text. cost=$0.03
+- 2026-09-06T04:34:41+00:00 automated review requested changes: Auth classification works correctly for Claude and Codex, and the focused harness and doctor tests pass. The fourth criterion remains unmet because the test reconstructs success envelopes instead of replaying the discarded stdout artifacts. cost=$0.29
+- 2026-09-06T04:35:26+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-237`) or send it back (`garden triage CG-237 --changes "..."`)

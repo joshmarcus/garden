@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-311-the-task-page-shows-the-decision-a-worker-s-no-c
 pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
-last_dispatched_at: '2026-09-06T03:50:20+00:00'
+last_dispatched_at: '2026-09-06T04:50:49+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T04:08:26+00:00'
+updated: '2026-09-06T05:25:55+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,8 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 - 2026-09-06T03:47:19+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.01
 - 2026-09-06T03:50:20+00:00 dispatched revise run 20260906T035020Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21094 tokens)
 - 2026-09-06T04:08:26+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 06839c21bbdf, not because of this branch; waiting for the base to go green, no revise round cost=$1.16
+- 2026-09-06T04:28:43+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T04:50:49+00:00 dispatched revise run 20260906T045045Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20590 tokens)
+- 2026-09-06T05:01:12+00:00 worker says nothing to change: Current branch code addresses the outstanding review behavior without requiring another change. cost=$1.04
+- 2026-09-06T05:22:52+00:00 no-change accepted by the person; resuming the round without a new work run
+- 2026-09-06T05:25:55+00:00 operator: the accepted no-change landed in waiting_human with no question; back to in review for its round

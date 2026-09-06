@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,8 +18,11 @@ reading:
 - docs/worker-protocol.md
 - tests/test_brief.py
 - tests/test_review.py
+branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
+attempts: 1
+last_dispatched_at: '2026-09-06T05:25:22+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-06T03:59:39+00:00'
+updated: '2026-09-06T05:25:22+00:00'
 ---
 
 ## Goal
@@ -40,3 +43,4 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 
 ## Log
 - 2026-09-06T03:59:39+00:00 approved (cli)
+- 2026-09-06T05:25:22+00:00 dispatched work run 20260906T052256Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~28859 tokens)
