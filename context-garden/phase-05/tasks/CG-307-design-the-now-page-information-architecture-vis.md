@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T02:28:45+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T02:55:05+00:00'
+updated: '2026-09-06T03:04:18+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T02:28:45+00:00 dispatched revise run 20260906T022844Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~29440 tokens)
 - 2026-09-06T02:55:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/206: Added the difficulty-by-model tables and the live elapsed clock to the Now 1 design and mock, re-took the snapshot from the live garden, wrote tests for the clock attributes and the tables' computation, and added a persona-review section answering the designer and usability lenses. The persona-review command itself could not be run in the worker. cost=$9.20
 - 2026-09-06T02:55:05+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-307` for one more round, or review on GitHub
+- 2026-09-06T03:01:55+00:00 persona usability-expert review: score 6/10, 3 finding(s)
+- 2026-09-06T03:04:18+00:00 persona designer review: score 6/10, 3 finding(s)

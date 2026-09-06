@@ -2,7 +2,7 @@
 id: CG-308
 title: 'Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on:
@@ -26,10 +26,13 @@ reading:
 - src/garden/scheduler/queue.py
 - src/garden/web/app.py
 - src/garden/web/common.py
+branch: garden/cg-308-build-now-1-at-now1-from-the-fable-design-live-v
 harness: claude
 model: claude-fable-5-1
+attempts: 1
+last_dispatched_at: '2026-09-06T02:58:27+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T02:48:48+00:00'
+updated: '2026-09-06T02:58:27+00:00'
 ---
 
 ## Goal
@@ -61,3 +64,4 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T00:57:47+00:00 operator: back to draft until both designs are on main under their final names (now-1, now-2); approved again then
 - 2026-09-06T02:14:26+00:00 approved (cli)
 - 2026-09-06T02:48:48+00:00 also found by CG-307 (Design the Now page: information architecture, visual system, motion, and a static mock of every state) during run `20260906T022844Z-revise`
+- 2026-09-06T02:58:27+00:00 dispatched work run 20260906T025753Z-work via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1 stacked on CG-307, ~29307 tokens)

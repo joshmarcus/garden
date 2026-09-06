@@ -2,7 +2,7 @@
 id: CG-310
 title: 'Worker temp files live on disk and are pruned: TMPDIR under the work root, per-run cleanup at
   reap, and a sweep of finished tasks'' worktree venvs and caches'
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -17,10 +17,11 @@ reading:
 - examples/garden.work.yaml
 - docs/worker-protocol.md
 branch: garden/cg-310-worker-temp-files-live-on-disk-and-are-pruned-tm
+pr: https://github.com/joshmarcus/context-garden/pull/209
 attempts: 1
 last_dispatched_at: '2026-09-06T02:39:04+00:00'
 created: '2026-09-06T01:45:39+00:00'
-updated: '2026-09-06T02:39:04+00:00'
+updated: '2026-09-06T03:08:02+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,7 @@ A garden running for a day does not fill the machine's temp space. Every worker,
 
 - 2026-09-06T01:45:39+00:00 approved (cli)
 - 2026-09-06T02:39:04+00:00 dispatched work run 20260906T023849Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21460 tokens)
+- 2026-09-06T03:01:57+00:00 opened https://github.com/joshmarcus/context-garden/pull/209 (base main): Worker, setup, and check temporary files now use disk-backed per-run directories under the work root and are cleaned after reap. Terminal worktree caches are pruned conservatively, aged worktrees are removed, and doctor reports free space. cost=$2.16
+- 2026-09-06T03:05:47+00:00 description rewritten by the reviewer cost=$0.33
+- 2026-09-06T03:05:59+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-06T03:08:02+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/209

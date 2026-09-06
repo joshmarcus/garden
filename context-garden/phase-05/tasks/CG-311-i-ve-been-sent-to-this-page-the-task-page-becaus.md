@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -17,10 +17,11 @@ reading:
 - src/garden/notify.py
 - tests/test_web.py
 branch: garden/cg-311-the-task-page-shows-the-decision-a-worker-s-no-c
+pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
-last_dispatched_at: '2026-09-06T02:43:52+00:00'
+last_dispatched_at: '2026-09-06T03:02:48+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T02:43:52+00:00'
+updated: '2026-09-06T03:15:44+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,7 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 ## Log
 - 2026-09-06T02:09:41+00:00 approved (cli)
 - 2026-09-06T02:43:52+00:00 dispatched work run 20260906T024331Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13053 tokens)
+- 2026-09-06T03:00:01+00:00 opened https://github.com/joshmarcus/context-garden/pull/208 (base main): Task pages now show the same shared pending-decision card as the Inbox directly below the task title. The card supports worker reports, questions, and stopped/failed runs, with regression coverage and commit 9523d65. cost=$0.82
+- 2026-09-06T03:01:58+00:00 automated review requested changes: The shared card is correctly placed and focused web tests pass, but the new shared Inbox card breaks Discuss when more than one attention item is present. The PR description also needs phase context and verification results. cost=$0.23
+- 2026-09-06T03:02:48+00:00 dispatched revise run 20260906T030243Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~19351 tokens)
+- 2026-09-06T03:15:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/208: Task pages retain the shared pending-decision card, and shared Inbox attention cards now use task-specific Discuss panel and copy targets so multiple stopped tasks remain independently actionable. cost=$0.39

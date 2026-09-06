@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -25,7 +25,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T02:55:45+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T02:55:45+00:00'
+updated: '2026-09-06T03:10:06+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,5 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T02:51:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Rebased onto origin/main and resolved the two marked conflicts while preserving both sides' intent. cost=$0.01
 - 2026-09-06T02:54:58+00:00 automated review requested changes: A fresh `garden tick` process loads the worker-modified config before the gate compares it, so it can execute untrusted settings before reap. The focused acceptance tests pass, but only retain the same Scheduler instance. cost=$0.36
 - 2026-09-06T02:55:45+00:00 dispatched revise run 20260906T025544Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13439 tokens)
+- 2026-09-06T03:10:03+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Persisted each dispatch's executable configuration signature and bootstrap a fresh Scheduler from that trusted signature when an active fence disagrees with disk. A standalone tick now holds the reload before reap, while accepted operator edits remain durable across process restarts. cost=$0.84
+- 2026-09-06T03:10:06+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-242` for one more round, or review on GitHub

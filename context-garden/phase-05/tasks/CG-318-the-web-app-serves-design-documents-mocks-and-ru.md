@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,8 +15,11 @@ reading:
 - src/garden/web/templates/base.html
 - src/garden/web/trust.py
 - tests/test_web.py
+branch: garden/cg-318-the-web-app-serves-design-documents-mocks-and-ru
+attempts: 1
+last_dispatched_at: '2026-09-06T03:11:10+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T02:15:43+00:00'
+updated: '2026-09-06T03:11:10+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Anything a worker renders for a person to look at is one click away in the web a
 
 ## Log
 - 2026-09-06T02:15:43+00:00 approved (cli)
+- 2026-09-06T03:11:10+00:00 dispatched work run 20260906T031054Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~12758 tokens)

@@ -19,10 +19,11 @@ reading:
 - tests/test_web.py
 - docs/worker-protocol.md
 branch: garden/cg-315-ui-changes-are-reviewed-against-rendered-pages-a
+pr: https://github.com/joshmarcus/context-garden/pull/210
 attempts: 1
-last_dispatched_at: '2026-09-06T02:47:20+00:00'
+last_dispatched_at: '2026-09-06T03:06:38+00:00'
 created: '2026-09-06T02:10:34+00:00'
-updated: '2026-09-06T02:47:20+00:00'
+updated: '2026-09-06T03:06:38+00:00'
 ---
 
 ## Goal
@@ -44,3 +45,6 @@ Owner's friction, 2026-09-06 02:10Z: "we're not actually looking at the real web
 ## Log
 - 2026-09-06T02:10:34+00:00 approved (cli)
 - 2026-09-06T02:47:20+00:00 dispatched work run 20260906T024657Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~19890 tokens)
+- 2026-09-06T03:02:00+00:00 opened https://github.com/joshmarcus/context-garden/pull/210 (base main): UI-changing PRs now receive a built-in rendered-page check with desktop/mobile, light/dark captures stored on the check run. Automated reviewers and PR personas receive those images, reviews must report every page in pages_seen, and Chromium is prepared automatically with explicit HTML-only fallback when unavailable. cost=$3.03
+- 2026-09-06T03:05:51+00:00 automated review requested changes: The UI check renders the scheduler’s installed app and live garden, not the PR worktree against a seeded fake garden, so its screenshots cannot validate the proposed UI change. Browser setup and required integration coverage are also incomplete. cost=$0.30
+- 2026-09-06T03:06:38+00:00 dispatched revise run 20260906T030636Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~21182 tokens)

@@ -17,10 +17,11 @@ reading:
 - tests/scheduler/test_dispatch.py
 - tests/scheduler/test_orphan_sweep.py
 branch: garden/cg-316-a-dispatch-that-fails-before-its-process-starts
+pr: https://github.com/joshmarcus/context-garden/pull/212
 attempts: 1
-last_dispatched_at: '2026-09-06T02:53:33+00:00'
+last_dispatched_at: '2026-09-06T03:10:54+00:00'
 created: '2026-09-06T02:11:57+00:00'
-updated: '2026-09-06T02:53:33+00:00'
+updated: '2026-09-06T03:10:54+00:00'
 ---
 
 ## Goal
@@ -40,3 +41,6 @@ A run record is `running` only while a process is running. When `dispatch` fails
 ## Log
 - 2026-09-06T02:11:57+00:00 approved (cli)
 - 2026-09-06T02:53:33+00:00 dispatched work run 20260906T025240Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~24078 tokens)
+- 2026-09-06T03:07:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/212 (base main): Dispatch-start failures and orphaned worker records now close immediately, and the Running list only shows live processes. cost=$0.13
+- 2026-09-06T03:10:12+00:00 automated review requested changes: The start-failure handler does not cover all exceptions after run creation, and pid-less records with stdout are still treated as live. Focused tests pass (4 passed). cost=$0.18
+- 2026-09-06T03:10:54+00:00 dispatched revise run 20260906T031053Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~24640 tokens)

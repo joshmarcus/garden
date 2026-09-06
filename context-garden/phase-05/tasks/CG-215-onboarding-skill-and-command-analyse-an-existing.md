@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - .claude/skills/garden-operate/SKILL.md
 - examples/garden.work.yaml
 - docs/design.md
+branch: garden/cg-215-onboarding-skill-and-command-analyse-an-existing
+attempts: 1
+last_dispatched_at: '2026-09-06T03:11:25+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T00:50:16+00:00'
+updated: '2026-09-06T03:11:25+00:00'
 ---
 
 ## Goal
@@ -55,3 +58,4 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 
 - 2026-09-05T16:11:15+00:00 moved from context-garden/phase-04 to context-garden/phase-05
 - 2026-09-06T00:50:16+00:00 approved (cli)
+- 2026-09-06T03:11:25+00:00 dispatched work run 20260906T031110Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~20130 tokens)

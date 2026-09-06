@@ -29,9 +29,9 @@ branch: garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform
 harness: codex
 model: gpt-6-astra
 attempts: 1
-last_dispatched_at: '2026-09-06T02:46:57+00:00'
+last_dispatched_at: '2026-09-06T03:15:07+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T02:46:57+00:00'
+updated: '2026-09-06T03:15:07+00:00'
 ---
 
 ## Goal
@@ -63,3 +63,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T02:08:00+00:00 filed by the operator: the astra contender of the CG-307 trial died in the /tmp outage and the trial relaunch only re-dispatched the fable side; astra designs Now 2 as its own task
 - 2026-09-06T02:06:03+00:00 approved (cli)
 - 2026-09-06T02:46:57+00:00 dispatched work run 20260906T024636Z-work via local [codex model=gpt-6-astra] (fresh session, base main, ~7470 tokens)
+- 2026-09-06T03:10:10+00:00 worker asks: Can the runner return 1280px and 390px light/dark browser captures, designer and usability-expert persona reports, and confirmation of the supplied snapshot's metric computation provenance? cost=$9.91
+- 2026-09-06T03:15:07+00:00 dispatched resume run 20260906T031506Z-resume via local [codex model=gpt-6-astra] (fresh session, base main, ~7975 tokens)
