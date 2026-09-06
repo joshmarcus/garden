@@ -30,3 +30,5 @@ In CG-357 the worker explicitly left docs/design/snapshot.json uncommitted. Sche
 ## Counterfactual
 
 Provenance-aware salvage would have prevented repeated enormous unrelated diffs, review failures and manual cleanup during incident restoration.
+
+19:43 recurrence evidence: CG-329 and CG-330 were also held on unrelated snapshot diffs committed by leftover salvage; operator preserved /home/joshua/work/operator-test-tmp/CG-329-snapshot-1943.json and CG-330-snapshot-1943.json and removed only those diffs in8874a88/31b2db9. Review correctness findings were otherwise satisfied; this is repeated recovery overhead, not speculative scope.

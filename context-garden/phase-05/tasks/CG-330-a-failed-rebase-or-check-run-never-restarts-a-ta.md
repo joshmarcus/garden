@@ -2,11 +2,12 @@
 id: CG-330
 title: 'A failed rebase or check run never restarts a task''s work from scratch: the PR stays, the rebase
   or check is retried, and only a failed work or revise run counts as an attempt'
-status: ready
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
+order: 2
 difficulty: medium
 reading:
 - src/garden/scheduler/reap.py
@@ -15,9 +16,11 @@ reading:
 - src/garden/scheduler/dispatch.py
 - tests/scheduler/test_reap.py
 branch: garden/cg-330-a-failed-rebase-or-check-run-never-restarts-a-ta
-last_dispatched_at: '2026-09-06T13:04:41+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/236
+attempts: 1
+last_dispatched_at: '2026-09-06T19:27:57+00:00'
 created: '2026-09-06T06:24:13+00:00'
-updated: '2026-09-06T13:46:58+00:00'
+updated: '2026-09-06T19:43:12+00:00'
 ---
 
 ## Goal
@@ -46,3 +49,16 @@ Auxiliary runs fail on their own terms. When a rebase run, a check run or an edi
 The WSL restart interrupted the prior revise. Its unfinished changes are preserved in this task worktree in the stash named `operator-recovery-20260906-CG330` (check `git stash list`; restore by its verified identifier before continuing). It preserves the structured killed-check summary in checkruns.py and its test; also contains the pre-existing design snapshot. Continue the existing implementation, run checks, commit and open its PR. Do not discard the saved work. The previous suite error involved a vanished /tmp fixture; the worker temp target is now restored.
 - 2026-09-06T13:19:31+00:00 reset to ready by hand
 - 2026-09-06T13:46:58+00:00 priority 1 -> 0
+- 2026-09-06T19:14:20+00:00 dispatched work run 20260906T191418Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~14937 tokens)
+- 2026-09-06T19:27:49+00:00 opened https://github.com/joshmarcus/context-garden/pull/236 (base main): Auxiliary rebase, validation, and edit failures now retry independently once, preserve task context, and park with a human stop after a repeat failure. Work dispatch is blocked for human-stopped tasks. cost=$0.71
+- 2026-09-06T19:27:55+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py); a rebase agent will resolve it
+- 2026-09-06T19:27:57+00:00 dispatched rebase run 20260906T192755Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8320 tokens)
+- 2026-09-06T19:34:21+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 8842552190ef, not because of this branch; waiting for the base to go green, no revise round cost=$0.03
+- 2026-09-06T19:35:28+00:00 automated review: request_changes — Auxiliary rebase, check, and edit failures retry independently without consuming work attempts, and the focused tests pass. Remove the unrelated generated snapshot and clean the final commit story before merge. cost=$0.25
+- 2026-09-06T19:43:12+00:00 nothing to fix; resumed to in review by hand
+
+19:43 operator diagnosis: branch check193106 ended SIGTERM; base probe193318 did not execute Python at all (/bin/sh .venv/bin/python not found, exit127). This is an environment/setup failure, not evidence that main8842552 is broken. Snapshot review finding removed/preserved in31b2db9. Resume through normal review/CI without treating missing interpreter as a source regression. Preserve PR/worktree.
+
+## Follow-up acceptance: clean-base environment classification
+
+- [ ] A clean-base probe whose configured interpreter is absent or whose test is terminated is classified as setup/interruption, never as proof that main is source-broken. Preserve work, surface the concrete missing prerequisite, and exercise missing executable and SIGTERM regression cases without rerunning ordinary work from scratch.
