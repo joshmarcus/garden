@@ -24,3 +24,7 @@ Inlined into every agent brief. Keep it short; long-form reasoning lives in the 
 ## Design work is an invitation, not a prescription
 
 When a task asks for a page, a mock or a visual system, the spec states the problem and what must be present; how it looks, reads and moves is yours to invent. We want new and beautiful ideas, not the requirements list laid out as boxes; depart from the prescription when you have a better idea and say why. And never call a page done without having looked at it: capture it (see "Looking at pages" in the product overview) at both widths, light and dark, read the captures back, and adjust until it is right. (Owner, 2026-09-06.)
+
+## Acceptance criteria are outcomes with evidence, never implementation
+
+A criterion says what is true when the work is done and how anyone can see it: a page that answers, a test that proves, a number that reads. It never names a file, a function, a field or a mechanism; those belong in the task's context and reading list, where they guide without binding. Three to five lines, each verifiable. A worker who finds a criterion wrong or impossible as written amends it in the task file with one sentence of reason and says so in the result, and the reviewer judges the amended line, not the original. A reviewer marks each criterion met only with evidence it can point to. (Owner, 2026-09-06, from 304 reviews: a third of send-backs turn on a criterion; every misfire was a criterion that named an implementation detail.)

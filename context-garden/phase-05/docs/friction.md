@@ -63,3 +63,18 @@ Nobody looks at the real web pages. Workers build UI changes, reviewers approve 
 - Subsequent Windows Edge launches failed with WSL UtilAcceptVsock accept4 timeout; the narrow capture was clipped and its CSS viewport could not be measured.
 - External reading-list files are absent locally; GitHub authentication was unavailable to re-fetch the sources recorded by the prior attempt.
 - The supplied aggregate snapshot lacks shared-metrics computation provenance; required persona reviews depend on runner publication.
+
+### 2026-09-06 · discovered by CG-308 (Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where the phase is, and the last period) in run 20260906T025753Z-work
+
+The Now page shows hand merges as '— until metrics carries them'; the metrics work that records hand merges and tick duration should also feed the Now page's last period when it lands.
+
+### 2026-09-06 · reported by CG-318 (The web app serves design documents, mocks and run captures: /design/<file> for the product's docs/design and a run page link to each capture) in run 20260906T031054Z-work
+
+- The full required test suite takes approximately 7 minutes in this environment.
+
+### 2026-09-06 · reported by CG-308 (Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where the phase is, and the last period) in run 20260906T025753Z-work
+
+- No Playwright in the worktree: screenshots came from Windows Chrome over WSL, and desktop Chrome will not lay out a 390px window, so the phone view needs an iframe
+- The mock's stage_word_for disagreed with the design prose on the growth-stage bands (0.1 read as seed); the prose was followed
+- Task state written with dict.update on a _TaskState is silently not saved (only __setitem__ is tracked); cost a debugging round in a test
+- The garden fixture's review round cap is 2, not the design's 4, which the first test assumed
