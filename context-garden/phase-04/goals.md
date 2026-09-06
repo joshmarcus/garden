@@ -1,5 +1,6 @@
 ---
 frozen: '2026-09-05'
+closed: '2026-09-05'
 ---
 
 # phase-04 goals

@@ -306,3 +306,7 @@ docs/design.md still lists automatic merging under Non-goals while the opt-in me
 ### 2026-09-06 · reported by CG-242 (Hold untrusted config changes before live reload) in run 20260906T021458Z-revise
 
 - GitHub CLI is unauthenticated in this worktree, so live PR comments and CI could not be queried directly.
+
+### 2026-09-06 · reported by CG-242 (Hold untrusted config changes before live reload) in run 20260906T025544Z-revise
+
+- Full pytest output was truncated by the terminal time slice despite the process completing.

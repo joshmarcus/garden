@@ -43,3 +43,17 @@ I've been sent to this page (the task page) because the worker reported there wa
 ### 2026-09-05 · cli
 
 Nobody looks at the real web pages. Workers build UI changes, reviewers approve them and personas review the phase without rendering a page: the Inbox card layout shipped collapsed to one word per line and buttons over text (CG-312), the task page a notification sends you to shows no decision (CG-311), and the phase-04 walkthrough was never captured. UI PRs must be reviewed against rendered pages, and the walkthrough must be part of every review that touches a template. Reported by the owner, 2026-09-06 02:10Z.
+
+### 2026-09-06 · reported by CG-307 (Design the Now page: information architecture, visual system, motion, and a static mock of every state) in run 20260906T022844Z-revise
+
+- garden persona-review cannot run inside a worker (garden commands are refused), so a criterion phrased as 'the command returns no high finding' cannot be met by the worker
+- The automated review's diff included commits already merged to main (CG-248, CG-250); the review base was stale
+- Headless desktop Chrome on Windows will not open a 390px window and lays out wider than it captures; a 390-wide iframe was needed to check the phone view
+
+### 2026-09-06 · reported by CG-311 (The task page shows the decision a worker's no-change or question report needs: the same card and actions as the Inbox, right where the notification sends you) in run 20260906T024331Z-work
+
+- The execution wrapper stopped complete pytest runs at roughly 30 seconds; focused web tests and lint completed successfully.
+
+### 2026-09-06 · reported by CG-312 (Inbox decision cards lay out at full width: the text column no longer collapses to one word per line and the action buttons no longer overlap the evidence list) in run 20260906T024545Z-work
+
+- Playwright is not installed, so browser screenshot validation was unavailable; HTML walkthrough capture remains covered.
