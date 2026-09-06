@@ -1,15 +1,19 @@
 ---
 id: CG-357
 title: Keep web requests responsive while workers run and run history grows
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
 difficulty: hard
 reading: []
+branch: garden/cg-357-keep-web-requests-responsive-while-workers-run-a
+pr: https://github.com/joshmarcus/context-garden/pull/234
+attempts: 1
+last_dispatched_at: '2026-09-06T18:01:06+00:00'
 created: '2026-09-06T17:45:27+00:00'
-updated: '2026-09-06T17:48:30+00:00'
+updated: '2026-09-06T18:29:12+00:00'
 ---
 
 ## Goal
@@ -46,3 +50,14 @@ Related: CG-344 reduced duplicated fence manifests; state.json is now about 3.3 
 ## Log
 
 - 2026-09-06T17:48:30+00:00 priority 0 -> 0
+- 2026-09-06T17:58:24+00:00 Owner requested server restart; interrupted pre-worker setup superseded, orphaned setup stopped, worktree preserved. Retry startup through capped server.
+- 2026-09-06T17:59:34+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply dfeceb430fa1861454701877b65bfd3297b2a691` in /home/joshua/work/worktrees/CG-357 to recover them (garden:CG-357:2026-09-06T17:59:33+00:00)
+- 2026-09-06T18:01:06+00:00 dispatched work run 20260906T175931Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9362 tokens)
+- 2026-09-06T18:24:57+00:00 opened https://github.com/joshmarcus/context-garden/pull/234 (base main): Kept web history reads bounded with a shared, freshness-controlled run index; added one-pass phase cost summaries and read-only scheduler construction for pages. Added conservative retry-safe run archival with compact metadata, on-demand historical access, restoration, corruption reporting, and documented deployment. cost=$3.43
+- 2026-09-06T18:29:12+00:00 automated review requested changes: The shared index still rebuilds and materializes all active and archived metadata every second, while archived corruption and cost corrections can produce incomplete or stale totals. The performance evidence lacks real concurrent capped workers, and the PR contains extensive unrelated history. cost=$0.34
+
+## Operator revision guidance, 18:30 UTC
+
+Priority is restoring the unavailable application; fix material review findings and validate recovery, not a broad rewrite. Operator preserved the unrelated snapshot at /home/joshua/work/operator-test-tmp/CG357-snapshot-salvage.json and removed its PR diff in a7bab24; do not restore it. Review's claim of 89 unrelated commits is stale-base analysis: after fetching origin/main, only four original CG-357 commits plus this cleanup differ. Do not cherry-pick/rewrite unrelated history on that premise.
+
+Address real issues: repeated full index rebuild/materialization, honest archive corruption/missing-index behavior, and archived cost-backfill invalidation. Use a measured pre/post responsiveness comparison with sufficient samples across cache expiry and realistic capped concurrent process load; report empirical percentiles that cannot exceed observed maximum. Three fixture run records are not actual worker load. Keep experiments resource-bounded and serial. Restore basic service promptly; if safe archival expansion prevents a small verifiable recovery, propose splitting it into linked follow-up work rather than delaying the outage fix. No archive operations on live history during development.
