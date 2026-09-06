@@ -1,7 +1,7 @@
 ---
 id: CG-243
 title: Preserve task actions across concurrent ticks and moves
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,7 +18,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T00:01:13+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T00:37:22+00:00'
+updated: '2026-09-06T01:54:19+00:00'
 ---
 
 ## Goal
@@ -37,3 +37,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T00:01:13+00:00 dispatched work run 20260906T000059Z-work via local [claude model=claude-opus-4-8] (fresh session, base main, ~5769 tokens)
 - 2026-09-06T00:22:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/194 (base main): Task-file saves now merge under a lock, reapplying only the fields a writer changed onto the current on-disk file, and a save whose file a concurrent move deleted is dropped rather than recreating a duplicate id. Adds tests for cancellation/priority/log edits interleaved with a tick and a move during a transition. cost=$4.74
 - 2026-09-06T00:37:22+00:00 automated review: approve — Lock + 3-way field/body merge replaces the whole-file clobber, with tests for interleaved cancellation/priority/log edits and a move-during-transition; a narrow residual race in move()'s own write-then-unlink (outside the lock) is a good follow-up but not a regression. cost=$0.77
+- 2026-09-06T01:54:19+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/194

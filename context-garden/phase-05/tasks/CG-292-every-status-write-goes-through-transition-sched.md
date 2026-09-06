@@ -2,7 +2,7 @@
 id: CG-292
 title: 'Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep
   test'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T00:50:48+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T01:49:16+00:00'
+updated: '2026-09-06T02:01:13+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,5 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict. 
 - 2026-09-06T00:48:10+00:00 automated review requested changes: Status-write centralization is correct and well-tested, but the web review card's 'Mark done without merging' relocation criterion isn't actually met: the button was deleted from the Inbox review card entirely rather than relabeled/confirmed/demoted in place, and its new home on the task page sits in the same undivided actions row as primary buttons. cost=$0.85
 - 2026-09-06T00:50:48+00:00 dispatched revise run 20260906T005047Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7325 tokens)
 - 2026-09-06T01:49:16+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/201: Restored the Inbox review-card escape hatch as a distinct, visually secondary action with explicit confirmation. The existing status-transition centralization remains intact. cost=$0.47
+- 2026-09-06T01:53:16+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/retro.py); a rebase agent will resolve it
+- 2026-09-06T02:01:13+00:00 automated review: approve — All five acceptance criteria are met and verified against the diff and a full test run; only a harmless unnecessary --force in one CLI test as a nit. cost=$0.68

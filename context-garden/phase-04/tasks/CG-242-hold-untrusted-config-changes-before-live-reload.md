@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: changes_requested
+status: failed
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -23,9 +23,9 @@ freeze_exception_reason: Live reload currently activates a worker's configuratio
   can reject it, creating a newly introduced privileged execution path.
 retro_blocking: true
 attempts: 1
-last_dispatched_at: '2026-09-06T00:40:12+00:00'
+last_dispatched_at: '2026-09-06T01:51:53+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T01:46:22+00:00'
+updated: '2026-09-06T01:57:49+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,5 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T00:59:10+00:00 automated review requested changes: The hold/accept mechanism, tests, and docs are solid, but the fix is incomplete: garden canary's _drive() loop still calls the unconditional store.invalidate() after every tick, leaving one live route around the new gate that the PR's own docs claim doesn't exist. cost=$1.31
 - 2026-09-06T01:01:02+00:00 dispatch failed: [Errno 28] No space left on device: '/tmp/garden-empty-hooks-vbiklx7n'
 - 2026-09-06T01:46:22+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T01:51:53+00:00 dispatched revise run 20260906T015152Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~15662 tokens)
+- 2026-09-06T01:57:49+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)

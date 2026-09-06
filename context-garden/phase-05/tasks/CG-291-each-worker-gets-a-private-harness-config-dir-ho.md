@@ -2,7 +2,7 @@
 id: CG-291
 title: Each worker gets a private harness config dir holding only credentials, and the fence covers state.json
   and task files
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T00:48:46+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T01:49:12+00:00'
+updated: '2026-09-06T01:57:52+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Carried into phase-05 from the phase-04 retro. Includes CG-246's scope: write se
 - 2026-09-06T00:48:09+00:00 automated review requested changes: Tests and lint pass and each criterion has a passing test, but the state-restore wholesale-replaces other tasks' entire entries (real data-loss risk on a live scheduler), the SSH runner silently drops custom harness config-dir variables, and the sibling-run guard re-copies the entire run history on every dispatch. cost=$0.63
 - 2026-09-06T00:48:46+00:00 dispatched revise run 20260906T004845Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7482 tokens)
 - 2026-09-06T01:49:12+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/200: Resolved all three blocking review findings and added regression coverage. The revision is committed as 9c859cb. cost=$0.50
+- 2026-09-06T01:57:52+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/200

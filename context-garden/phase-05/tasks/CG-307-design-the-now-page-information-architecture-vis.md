@@ -28,9 +28,9 @@ reading:
 branch: garden/cg-307-design-the-now-page-information-architecture-vis
 harness: claude
 model: claude-fable-5-1
-last_dispatched_at: '2026-09-06T00:56:13+00:00'
+last_dispatched_at: '2026-09-06T01:53:12+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T00:56:13+00:00'
+updated: '2026-09-06T01:53:12+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T00:55:57+00:00 dispatched trial run 20260906T005540Z-trial via local [claude model=claude-fable-5-1] (fresh session, base main, ~27815 tokens)
 - 2026-09-06T00:56:13+00:00 dispatched trial run 20260906T005557Z-trial via local [codex model=gpt-6-astra] (fresh session, base main, ~27853 tokens)
 - 2026-09-06T00:56:13+00:00 trial started with claude:claude-fable-5-1, codex:gpt-6-astra
+- 2026-09-06T01:53:11+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply c2cc330d1e9be866075960b4e4f709250f2e8b1c` in /home/joshua/work/worktrees/CG-307-trial-claude-claude-fable-5-1 to recover them (garden:CG-307:2026-09-06T01:53:11+00:00)
+- 2026-09-06T01:53:12+00:00 dispatched trial run 20260906T015311Z-trial via local [claude model=claude-fable-5-1] (fresh session, base main, ~28176 tokens)
