@@ -1,0 +1,29 @@
+# Friction
+
+_No friction reported yet._
+
+## Reported
+
+### 2026-09-06 · reported by CG-244 (Reserve retro task IDs and survive duplicate records) in run 20260906T000113Z-work
+
+- The brief's task section has no explicit "Acceptance criteria" list, though the operating rules require one entry per criterion in that list; I mapped verified entries to the four clauses of the Goal sentence in order.
+
+### 2026-09-06 · reported by CG-251 (Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs page and the retro) in run 20260906T002504Z-work
+
+- The full pytest suite runs longer than the terminal tool's synchronous output window in this shared environment.
+
+### 2026-09-06 · reported by CG-292 (Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep test) in run 20260906T002733Z-work
+
+- The full pytest invocation exceeded the tool's 30-second foreground window, so the complete suite was run successfully in bounded batches.
+
+### 2026-09-06 · reported by CG-245 (Isolate planner execution from operator state) in run 20260906T003620Z-work
+
+- The worktree's prior-attempt diff against current main looked like a large, alarming revert of CG-239's git-internals guard (gitops.py, fence.py, reap.py, ~250 lines) until I checked merge-base: the branch was simply forked before PR #193/#195 merged into main. A rebase resolved it with zero conflicts. Worth flagging because that diff shape (security code vanishing) is exactly what a careful reviewer should stop and investigate rather than assume is fine.
+
+### 2026-09-06 · reported by CG-248 (TUI's dispatch action ('d' key) also bypasses the approve gate on a draft) in run 20260906T003801Z-work
+
+- The brief cited src/garden/web/actions/control.py as the web dispatch guard to match, but that file has no per-task dispatch logic; the real guard from CG-238 is in web/actions/tasks.py's dispatch action (active-run check) and templates/task.html (hides the button on a draft task).
+
+### 2026-09-06 · reported by CG-249 (`garden dispatch <id>` (CLI) allows dispatching a draft directly) in run 20260906T004012Z-work
+
+- Acceptance criterion 4 names src/garden/web/actions/control.py as holding draft-gate logic to mirror, but that file only has tick/pause/resume/upgrade/config actions — the actual shared gate is Scheduler.approve in scheduler/human.py, called by web/actions/tasks.py's approve action and garden take. Fixed by calling the same Scheduler.approve, but the file reference in the brief was off.

@@ -297,3 +297,8 @@ docs/design.md still lists automatic merging under Non-goals while the opt-in me
 ### 2026-09-05 · reported by CG-239 (resolve_reading refuses absolute and parent paths, and the fence hashes the clone's git config and hooks) in run 20260905T231218Z-work
 
 - The brief's own reading list for this task pointed at src/garden/scheduler/reap.py as a separate 'too large to inline' entry; fine once fetched, but worth folding into the main list if the size budget allows next time.
+
+### 2026-09-06 · reported by CG-242 (Hold untrusted config changes before live reload) in run 20260906T000043Z-work
+
+- The fence manifest (fence_guard.json) stores file hashes, not parsed executable-field values, so the acceptance criterion's literal phrasing ("compare with the fence manifest") wasn't directly implementable; I compared against the scheduler's currently-applied config instead, which is provably equivalent since a reload never advances past a fenced run in flight — worth calling out in case a future reader expects a literal manifest read.
+- The reading list didn't flag that several long-lived processes (web Hub, TUI, garden trial --wait) call Store.invalidate() outside of Scheduler.tick(), which would have silently defeated the whole hold from any of those paths; finding and fixing that took more exploration than the brief's file list suggested.
