@@ -43,6 +43,8 @@ Every routing decision in phase 05 is a guess until the garden reports this numb
 
 - [x] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; never invent a path); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
 
+- [ ] Owner's ask (2026-09-06 02:25Z): one table per metric with difficulty as rows and every model that did work as columns, on the Costs page and in `garden metrics`: mean total cost per accepted task, work-run cost, revise rounds, review rounds, first-pass approval, median lead time and runs per task, each cell with its n; the model is the one whose work or trial run produced the merged PR, and reviews, rebases and checks count toward the task's total regardless of their own model.
+
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-240 (renumbered by the operator: two reconcile runs drew ids from one counter)
