@@ -6,6 +6,10 @@ _Requested by the owner on 2026-09-06 00:52Z: "a 'what's happening now' operatio
 
 One page a person keeps open on a second screen or shows in a demo. In five seconds it answers: what is the garden doing right now, what will it do next, where is the product in its phase, and how did the last hour or day go. It should feel alive: runs start, advance and finish in front of you without a reload, and the phase's progress is visible as growth, not as a table.
 
+## For the designers and builders (owner, 2026-09-06 03:40Z)
+
+This document is the problem and the must-haves, not the layout. We are looking for new and beautiful ideas: if a better composition, a better motion or a better way to show the numbers occurs to you, take it and explain the choice in the design document. Look at what you build before you call it done: capture the page at 1280 and 390, light and dark (the Edge recipe in the product overview), read the captures back, and iterate; a design run that never saw its page is not finished.
+
 ## Content, in order of prominence
 
 1. **Now.** Every run in flight: task id and title, mode (work, revise, review, rebase, check, persona, edit, retro, kickoff, trial), harness and model, elapsed time against the run's typical duration for its mode and tier, the last thing the worker said (its latest assistant text, one line), and spend so far. A run that has just finished stays for a beat with its verdict before it leaves. A held merge, a paused harness or a needs-you card is visible here, not hidden in the Inbox.

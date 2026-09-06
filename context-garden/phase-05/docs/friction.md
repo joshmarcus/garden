@@ -57,3 +57,9 @@ Nobody looks at the real web pages. Workers build UI changes, reviewers approve 
 ### 2026-09-06 · reported by CG-312 (Inbox decision cards lay out at full width: the text column no longer collapses to one word per line and the action buttons no longer overlap the evidence list) in run 20260906T024545Z-work
 
 - Playwright is not installed, so browser screenshot validation was unavailable; HTML walkthrough capture remains covered.
+
+### 2026-09-06 · reported by CG-314 (Design Now 2: astra's take on the Now page, information architecture, visual system, motion, and a static mock of every state) in run 20260906T031506Z-resume
+
+- Subsequent Windows Edge launches failed with WSL UtilAcceptVsock accept4 timeout; the narrow capture was clipped and its CSS viewport could not be measured.
+- External reading-list files are absent locally; GitHub authentication was unavailable to re-fetch the sources recorded by the prior attempt.
+- The supplied aggregate snapshot lacks shared-metrics computation provenance; required persona reviews depend on runner publication.

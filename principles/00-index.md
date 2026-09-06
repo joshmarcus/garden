@@ -20,3 +20,7 @@ Inlined into every agent brief. Keep it short; long-form reasoning lives in the 
 - Do not widen the task. Follow-ups go in the PR body, not in the diff.
 - Do not edit task files under `**/tasks/`; the scheduler owns them.
 - Never rewrite history on shared branches; never disable or skip tests to get green.
+
+## Design work is an invitation, not a prescription
+
+When a task asks for a page, a mock or a visual system, the spec states the problem and what must be present; how it looks, reads and moves is yours to invent. We want new and beautiful ideas, not the requirements list laid out as boxes; depart from the prescription when you have a better idea and say why. And never call a page done without having looked at it: capture it (see "Looking at pages" in the product overview) at both widths, light and dark, read the captures back, and adjust until it is right. (Owner, 2026-09-06.)
