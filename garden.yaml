@@ -31,7 +31,7 @@ review:
   max_rounds: 4             # correctness, scope, PR description quality / no scar tissue)   # raised 2026-09-05 17:10: reviews are on sonnet now and every third round was a hand press
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
   harness: "codex"          # reviews on codex terra too, to keep the Claude quota for the judges (retro/persona on fable) and the Now 1 build (user, 2026-09-06 01:55Z)
-  difficulty: "easy"      # PR reviews on the easy tier (sonnet 5) since 2026-09-05 14:40 to cut spend; retro/persona tier comes from retro.difficulty once CG-207 lands
+  difficulty: "hard"   # interim "one step up" (user, 2026-09-06 03:20Z): every review on the hard tier (codex sol) until review.ladder lands
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
 # Token-free checks. pre_pr runs in the worktree before a PR is opened or updated (failures
@@ -70,7 +70,7 @@ harnesses:
   codex:
     bin: codex
     permission_mode: bypass        # since 2026-09-05 18:55: full-auto (workspace-write) blocks .git writes and network, so codex could never commit; the fence and the scrubbed env are the guard, as for claude
-    review_model: gpt-5.6-terra    # when codex reviews (CG-230 pool), the sonnet-class model, not astra (user, 2026-09-05 20:50)
+    review_model: ""               # unset so reviews follow review.difficulty (hard = sol); was terra (user, 2026-09-06 03:20Z)
     retro_model: gpt-6-astra       # codex judges on its best model (the astra retro comparison, user 2026-09-05 22:45)
     models: {easy: gpt-5.6-luna, medium: gpt-5.6-terra, hard: gpt-5.6-sol}   # since 2026-09-05 19:40: the CLI default is gpt-6-astra ($10/$50), the top-line model; luna $0.20/$1.20, terra $2/$12, sol $4/$20
     resume: false                  # true if your codex supports `codex exec resume <id>`
