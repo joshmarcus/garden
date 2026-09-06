@@ -4,7 +4,7 @@ Current handoff, consolidated 2026-09-06 ~17:14 UTC. Replace obsolete state here
 
 ## Start here
 
-Read `.claude/skills/garden-operate/SKILL.md` for supported operator actions, then `context-garden/docs/fast-forward.md` for the active maintenance protocol and action ledger. This file owns current state; the manual supplies procedures. The garden is `/home/joshua/garden`; product worktrees are `/home/joshua/work/worktrees/CG-NNN`. Use the installed `.venv/bin/garden` for state-only actions. Never manually edit task status or race the scheduler's state writer.
+Read `.claude/skills/garden-operate/SKILL.md` for supported operator actions, then `context-garden/docs/incident-protocol.md` when basic operation is interrupted. `context-garden/docs/fast-forward.md` documents owner-invoked PR maintenance; it is currently inactive. This file owns current state; the manual supplies procedures. The garden is `/home/joshua/garden`; product worktrees are `/home/joshua/work/worktrees/CG-NNN`. Use the installed `.venv/bin/garden` for state-only actions. Never manually edit task status or race the scheduler's state writer.
 
 ## Owner authority and priorities
 
@@ -24,7 +24,7 @@ The operator heartbeat checks every five minutes until 18:41 UTC after the owner
 
 ## Resource limits and services
 
-Persistent garden service limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. Josh explicitly increased the live max_parallel override to 3 at 17:41 UTC; review_parallel remains 1. garden.yaml retains its conservative default of 1; the persisted live override governs dispatch. Retain CPU/memory caps and watch actual pressure. Restart only after verifying no active workers or checks; KillMode=process means detached work can survive.
+Persistent garden service limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. Josh explicitly increased the live max_parallel override to 3 at 17:41 UTC; review_parallel remains 1. garden.yaml retains its conservative default of 1; the persisted live override governs dispatch. Retain CPU/memory caps and watch actual pressure. For routine restarts, verify no active workers or checks. During an incident use the deliberate preservation/restart procedure in `context-garden/docs/incident-protocol.md`; KillMode=process means detached work can survive.
 
 CLI-spawned work bypasses service limits. During maintenance launch manual checks in a separate bounded systemd user service (2 GiB memory, 2 CPUs used for current fixes), with disk temp `/home/joshua/work/operator-test-tmp`. Normal future work should use capped server launch paths. CG-338 owns comprehensive resource admission.
 
@@ -34,11 +34,15 @@ The host previously locked up: overlapping test suites, RAM-backed temp and a 10
 
 ## Installed build
 
-Installed pin is 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa as of 2026-09-06 17:40 UTC (verified main CI). It includes memory/lifecycle/operating UI repairs; onboarding's merge had main CI in progress at install time and is not yet installed. Existing server runs normal watch; /, /now1 and /now2 returned HTTP 200 after restart, and global resume returned 200. Verify current state before future pin movement; only install/restart when workers/checks drain. Retain caps and phase holds. Global resume is POST http://127.0.0.1:8765/resume with matching loopback Origin; CLI resume requires a task id.
+Installed pin is 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa as of 2026-09-06 17:40 UTC (verified main CI). It includes memory/lifecycle/operating UI repairs; onboarding's merge had main CI in progress at install time and is not yet installed. Existing server runs normal watch; /, /now1 and /now2 returned HTTP 200 after restart, and global resume returned 200. Verify current state before future pin movement; prefer drained installation/restart; incident exceptions require the preservation and verification procedure. Retain caps and phase holds. Global resume is POST http://127.0.0.1:8765/resume with matching loopback Origin; CLI resume requires a task id.
 
 Read git log before pushing and commit only intended files. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
 
-## Active web responsiveness incident — current at 18:04 UTC
+## Active web responsiveness incident
+
+Incident protocol is ACTIVE. Current incident record: `context-garden/docs/incidents/2026-09-06-web-responsiveness.md`. Recovery is not verified; preserve admission pause.
+
+Last verified process/resource details at 18:04 UTC
 
 CG-357 is now genuinely running: replacement run 20260906T175931Z-work, worker PID 1748262 verified alive with transcript output six seconds old. No duplicate dispatch needed. CG-337 (1441776) and CG-329 (1460347) also remain alive. Keep admission paused while the urgent web fix proceeds; phase holds and caps unchanged. Full /now2 still times out; do not report access restored.
 

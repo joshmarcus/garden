@@ -188,3 +188,7 @@ tokens each was roughly 60% of what all the workers cost that day. Rules:
 ## Fast-forward maintenance mode
 
 When the owner invokes fast-forward, follow `context-garden/docs/fast-forward.md`. It authorizes direct operator repairs and self-review in place of further automated review rounds, with validated serial merges and honest finding dispositions. Fully quiesce scheduling, not just dispatch. Preserve explicit phase holds and record supervised interventions.
+
+## Interrupted basic operation
+
+When basic web, dispatch, state, main-branch or host operation fails, follow `context-garden/docs/incident-protocol.md`. Contain ordinary admission, give priority recovery a real slot, preserve preempted work, and verify the actual failing journey before resuming. Use its deliberate restart procedure during an incident; routine restarts still use the drained-boundary recipe above. This does not activate fast-forward.
