@@ -45,6 +45,8 @@ Every routing decision in phase 05 is a guess until the garden reports this numb
 
 - [ ] Owner's ask (2026-09-06 02:25Z): one table per metric with difficulty as rows and every model that did work as columns, on the Costs page and in `garden metrics`: mean total cost per accepted task, work-run cost, revise rounds, review rounds, first-pass approval, median lead time and runs per task, each cell with its n; the model is the one whose work or trial run produced the merged PR, and reviews, rebases and checks count toward the task's total regardless of their own model.
 
+- [ ] Every table of numbers shades its cells within each row from a light green ground for the best value to a light red for the worst (direction per metric: lower is better for cost, revise rounds and lead time; higher for first-pass approval), cells with n under three shaded faintly and marked, legible in light and dark, with a small mark on best and worst so colour is never the only signal (owner, 2026-09-06 02:45Z).
+
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-240 (renumbered by the operator: two reconcile runs drew ids from one counter)
