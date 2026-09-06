@@ -2,7 +2,7 @@
 id: CG-216
 title: 'Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP,
   works in its own clone, pushes the branch and posts the result and transcript back'
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,7 +19,7 @@ reading:
 - docs/worker-protocol.md
 - docs/architecture.md
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-05T16:12:08+00:00'
+updated: '2026-09-06T03:38:35+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,7 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - [ ] `docs/worker-protocol.md` and `docs/architecture.md` describe the remote flow; `garden doctor` on the worker host checks git access, the harness and the token.
 - [ ] No scheduler credential reaches the worker host; a test asserts the claim payload carries only the allowlisted names.
 - 2026-09-06T00:55:00+00:00 deferred by the operator: last in dispatch order (joined phase-05 goals, goal 4); approve once the onboarding and routing work is in
+
+## Log
+
+- 2026-09-06T03:38:35+00:00 approved (web)

@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,10 +16,11 @@ reading:
 - src/garden/web/trust.py
 - tests/test_web.py
 branch: garden/cg-318-the-web-app-serves-design-documents-mocks-and-ru
+pr: https://github.com/joshmarcus/context-garden/pull/217
 attempts: 1
-last_dispatched_at: '2026-09-06T03:11:10+00:00'
+last_dispatched_at: '2026-09-06T03:37:48+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T03:11:10+00:00'
+updated: '2026-09-06T03:47:20+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,8 @@ Anything a worker renders for a person to look at is one click away in the web a
 ## Log
 - 2026-09-06T02:15:43+00:00 approved (cli)
 - 2026-09-06T03:11:10+00:00 dispatched work run 20260906T031054Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~12758 tokens)
+- 2026-09-06T03:37:03+00:00 opened https://github.com/joshmarcus/context-garden/pull/217 (base main): The web app now serves design documents, exposes PR design files and run captures, adds Design navigation and walkthrough coverage, and writes sanitized live-state snapshots for design/UI workers. cost=$0.12
+- 2026-09-06T03:37:10+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/pages/runs.py); a rebase agent will resolve it
+- 2026-09-06T03:37:48+00:00 dispatched rebase run 20260906T033748Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~2365 tokens)
+- 2026-09-06T03:43:53+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/217: Rebased onto origin/main and resolved the runs.py capture conflict while preserving both capture listing and UI capture serving. cost=$0.01
+- 2026-09-06T03:47:20+00:00 automated review requested changes: The core surfaces are present, but required route coverage is missing, Design navigation checks the wrong directory, HTML run captures are served unsandboxed, and snapshot sanitization does not reliably remove sensitive values. The run template also retains a now-broken legacy capture panel. cost=$0.60

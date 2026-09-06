@@ -2,7 +2,7 @@
 id: CG-230
 title: A tier can name several harness and model options, and dispatch spreads runs across them to share
   quotas, skipping a paused or exhausted one
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ reading:
 - src/garden/scheduler/trials.py
 - context-garden/phase-05/specs/cost-aware-model-routing.md
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-05T19:22:53+00:00'
+updated: '2026-09-06T03:38:44+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,7 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - [ ] `review.pool` (a list of harness:model members with weights) spreads reviews across harnesses; a test with two members sees alternating review harnesses and the skip of a paused one.
 - [ ] Docs: `docs/architecture.md` describes pools and the spread policies; the example configs show a claude-and-codex medium tier.
 - 2026-09-06T00:55:00+00:00 deferred by the operator: after the measurement (CG-251) merges, so each pool member can be compared
+
+## Log
+
+- 2026-09-06T03:38:44+00:00 approved (web)

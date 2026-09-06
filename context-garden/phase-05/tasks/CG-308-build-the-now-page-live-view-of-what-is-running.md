@@ -27,12 +27,13 @@ reading:
 - src/garden/web/app.py
 - src/garden/web/common.py
 branch: garden/cg-308-build-now-1-at-now1-from-the-fable-design-live-v
+pr: https://github.com/joshmarcus/context-garden/pull/218
 harness: claude
 model: claude-fable-5-1
 attempts: 1
-last_dispatched_at: '2026-09-06T02:58:27+00:00'
+last_dispatched_at: '2026-09-06T03:48:06+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T02:58:27+00:00'
+updated: '2026-09-06T03:48:06+00:00'
 ---
 
 ## Goal
@@ -67,3 +68,6 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T02:14:26+00:00 approved (cli)
 - 2026-09-06T02:48:48+00:00 also found by CG-307 (Design the Now page: information architecture, visual system, motion, and a static mock of every state) during run `20260906T022844Z-revise`
 - 2026-09-06T02:58:27+00:00 dispatched work run 20260906T025753Z-work via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1 stacked on CG-307, ~29307 tokens)
+- 2026-09-06T03:40:39+00:00 opened https://github.com/joshmarcus/context-garden/pull/218 (base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1): Now 1 is built at /now1 from Fable's design: the four regions rendered from a new now1 module, live over a server-sent-events stream that never holds the hub lock, a browser clock on every running card, the difficulty-by-model tables computed in events.metrics with heat-map shading, garden now --page 1 and a walkthrough capture. Full suite and lint pass. cost=$18.47
+- 2026-09-06T03:42:28+00:00 automated review requested changes: The implementation is broadly complete and its focused tests pass, but two explicit acceptance criteria remain unmet: all numeric tables must follow the row-based heat-map convention, and four compliant screenshots must be inspected and listed. cost=$0.70
+- 2026-09-06T03:48:06+00:00 dispatched revise run 20260906T034805Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~26896 tokens)

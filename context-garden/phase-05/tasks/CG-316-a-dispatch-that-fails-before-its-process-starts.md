@@ -2,7 +2,7 @@
 id: CG-316
 title: A dispatch that fails before its process starts closes the run record at once, and the orphan sweep
   closes any running record with no live process
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/212
 attempts: 1
 last_dispatched_at: '2026-09-06T03:10:54+00:00'
 created: '2026-09-06T02:11:57+00:00'
-updated: '2026-09-06T03:10:54+00:00'
+updated: '2026-09-06T03:37:01+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ A run record is `running` only while a process is running. When `dispatch` fails
 - 2026-09-06T03:07:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/212 (base main): Dispatch-start failures and orphaned worker records now close immediately, and the Running list only shows live processes. cost=$0.13
 - 2026-09-06T03:10:12+00:00 automated review requested changes: The start-failure handler does not cover all exceptions after run creation, and pid-less records with stdout are still treated as live. Focused tests pass (4 passed). cost=$0.18
 - 2026-09-06T03:10:54+00:00 dispatched revise run 20260906T031053Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~24640 tokens)
+- 2026-09-06T03:37:01+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.06
