@@ -32,3 +32,7 @@ One page a person keeps open on a second screen or shows in a demo. In five seco
 - A person who has never seen the garden can say what it is doing and what is next within five seconds of opening `/now`.
 - The page is the one to show in a demo and the one the operator leaves open; the Inbox and Board remain for acting.
 - `garden walkthrough` captures it; the designer and usability personas review it before the phase closes.
+
+## Two Nows (owner, 2026-09-06 01:00Z)
+
+The design ran as a trial between claude-fable-5-1 and gpt-6-astra, and the owner asked for both to ship rather than one to win: **Now 1** is built from Fable's design at `/now1` and **Now 2** from astra's at `/now2`, each by the model that designed it, both in the nav as "Now 1" and "Now 2". The designs live at `docs/design/now-1.md` with its mock `now-1.html` and `docs/design/now-2.md` with `now-2.html`. Each page owns its template, route and motion; data helpers may be shared (`garden/now.py`) or separate (`now1.py`, `now2.py`), whichever lets the two land in parallel without a conflict. When the owner has lived with both, one becomes `/now` and the other is retired; that is a follow-up task, not part of either build.
