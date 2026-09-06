@@ -1,7 +1,7 @@
 ---
 id: CG-256
 title: A draft's acceptance criteria and reading list can be edited inline on the task page
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,12 +9,13 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-256-a-draft-s-acceptance-criteria-and-reading-list-c
+pr: https://github.com/joshmarcus/context-garden/pull/230
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T13:16:31+00:00'
+last_dispatched_at: '2026-09-06T14:12:18+00:00'
 created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-06T13:16:31+00:00'
+updated: '2026-09-06T15:04:18+00:00'
 ---
 
 ## Goal
@@ -47,3 +48,7 @@ A refusal without a repair path sends the owner to a text editor. This adds inli
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002112Z-edit) cost=$0.10
 - 2026-09-06T00:24:03+00:00 approved (cli)
 - 2026-09-06T13:16:31+00:00 dispatched work run 20260906T131505Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7768 tokens)
+- 2026-09-06T13:49:40+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); no PR opened yet; revise run will fix cost=$1.30
+- 2026-09-06T14:12:18+00:00 dispatched revise run 20260906T141200Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9202 tokens)
+- 2026-09-06T15:02:07+00:00 opened https://github.com/joshmarcus/context-garden/pull/230 (base main): Inline draft brief editing remains in place, and the pre-PR CLI command-registration conflict is fixed. Both Now pages are selectable and all required checks pass. cost=$0.31
+- 2026-09-06T15:04:18+00:00 automated review requested changes: The inline brief editor satisfies the task criteria and focused tests pass, but the PR includes unrelated Now CLI behavior that should be separated. The description also omits test verification and phase context. cost=$0.27

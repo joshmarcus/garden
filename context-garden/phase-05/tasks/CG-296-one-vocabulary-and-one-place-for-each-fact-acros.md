@@ -1,7 +1,7 @@
 ---
 id: CG-296
 title: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-status: changes_requested
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,9 +13,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/228
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T13:20:54+00:00'
+last_dispatched_at: '2026-09-06T13:51:20+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T13:45:54+00:00'
+updated: '2026-09-06T13:53:09+00:00'
 ---
 
 ## Goal
@@ -68,3 +68,5 @@ Each of these persona findings was a draft of its own; they are cancelled with t
 - 2026-09-06T13:20:54+00:00 dispatched work run 20260906T131807Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8662 tokens)
 - 2026-09-06T13:44:51+00:00 opened https://github.com/joshmarcus/context-garden/pull/228 (base main): Unified operating controls, Inbox decision presentation, and Costs activity naming across CLI and web surfaces. Committed as e42daf6. cost=$1.35
 - 2026-09-06T13:45:54+00:00 PR conflicts with main; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
+- 2026-09-06T13:51:20+00:00 dispatched rebase run 20260906T135114Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~399467 tokens)
+- 2026-09-06T13:53:09+00:00 attempt 1 failed: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1597868}; will retry

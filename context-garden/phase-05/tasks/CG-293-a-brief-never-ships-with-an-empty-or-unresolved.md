@@ -2,7 +2,7 @@
 id: CG-293
 title: A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria
   and the concrete blocker
-status: changes_requested
+status: failed
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,9 +13,9 @@ branch: garden/cg-293-a-brief-never-ships-with-an-empty-or-unresolved
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T07:11:04+00:00'
+last_dispatched_at: '2026-09-06T14:19:17+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T13:35:20+00:00'
+updated: '2026-09-06T14:59:03+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,5 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T13:19:11+00:00 nothing to fix; needs-human stop cleared by hand
 - 2026-09-06T13:25:38+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-293`) or send it back (`garden triage CG-293 --changes "..."`)
 - 2026-09-06T13:35:20+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T14:19:17+00:00 dispatched revise run 20260906T141858Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9686 tokens)
+- 2026-09-06T14:59:03+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)

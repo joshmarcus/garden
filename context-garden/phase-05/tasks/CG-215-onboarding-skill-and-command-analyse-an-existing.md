@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-215-onboarding-skill-and-command-analyse-an-existing
 pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
-last_dispatched_at: '2026-09-06T12:16:36+00:00'
+last_dispatched_at: '2026-09-06T13:54:03+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T13:47:00+00:00'
+updated: '2026-09-06T14:10:55+00:00'
 ---
 
 ## Goal
@@ -93,3 +93,6 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T13:22:28+00:00 triage: changes requested by hand: Owner-authorized continuation after interrupted revise. Rebase this existing PR onto current main; do not restart the im
 - 2026-09-06T13:22:41+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T13:47:00+00:00 priority 2 -> 1
+- 2026-09-06T13:53:56+00:00 kept 1 local-only commit(s) on `backup/20260906T135355Z-revise` before syncing to origin/garden/cg-215-onboarding-skill-and-command-analyse-an-existing's head: 01c798d Ground onboarding drafts in project evidence
+- 2026-09-06T13:54:03+00:00 dispatched revise run 20260906T135355Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24261 tokens)
+- 2026-09-06T14:10:55+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit a63946ec2545, not because of this branch; waiting for the base to go green, no revise round cost=$0.92

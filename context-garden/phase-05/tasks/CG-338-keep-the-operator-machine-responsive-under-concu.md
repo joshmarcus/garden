@@ -31,3 +31,7 @@ Josh reported high load on 2026-09-06 at 13:26Z. The 7.7GiB WSL instance had fiv
 
 - 2026-09-06T13:27:36+00:00 approved (cli)
 - 2026-09-06T13:46:58+00:00 priority 1 -> 0
+
+## Memory incident evidence, 2026-09-06 15:00Z
+
+The owner rebooted after host lockup. The prior garden cgroup peaked at 6.5GiB with no memory cap. Full pytest suites overlapped in workers and reviews; /tmp is a 3GiB tmpfs. After reboot the runtime CPU cap was lost. Persistent service limits now CPUQuota=200%, CPUWeight=20, MemoryHigh=3GiB, MemoryMax=4GiB, MemorySwapMax=512MiB; worker and review concurrency are one each. A lightweight guard samples every 15 seconds for an hour, recording cgroup anon/file/shmem, swap, VM available memory, temp space and top process RSS, and pauses dispatch on pressure. Logs: /home/joshua/.local/state/garden-operator/resource-watch.jsonl (operator-owned, do not edit). Distinguish anonymous memory, reclaimable file cache and shmem: memory.current is not process RSS, and summing RSS double-counts shared pages. The 102MiB scheduler state amplification is separately tracked in CG-344. No retained kernel OOM event proves the exact lockup cause.
