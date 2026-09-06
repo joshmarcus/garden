@@ -9,10 +9,11 @@ priority: 1
 difficulty: medium
 reading: []
 branch: garden/cg-354-split-tests-into-focused-suites-to-shorten-devel
+pr: https://github.com/joshmarcus/context-garden/pull/245
 attempts: 1
-last_dispatched_at: '2026-09-06T23:11:15+00:00'
+last_dispatched_at: '2026-09-06T23:36:59+00:00'
 created: '2026-09-06T17:04:04+00:00'
-updated: '2026-09-06T23:11:15+00:00'
+updated: '2026-09-06T23:36:59+00:00'
 ---
 
 ## Goal
@@ -52,3 +53,11 @@ Extend the fixture inventory and acceptance evidence to bounded Git subprocess w
 - 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CG-363 merged and installed: full worker suites now offloaded to GitHub, pre-PR avoids local repetition. Retain this task for focused-test selection and the measured unbounded Git fixture pipe/descendant stall; do not duplicate the CI work.
 - 2026-09-06T23:10:32+00:00 Owner requested concurrency increase after CI offload. Selected as independent second stabilization task for monitored2-run trial; scoped around in-flight CG361 changes, focused local tests and full GitHub CI.
 - 2026-09-06T23:11:15+00:00 dispatched work run 20260906T231053Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~10080 tokens)
+- 2026-09-06T23:30:02+00:00 opened https://github.com/joshmarcus/context-garden/pull/245 (base main): Split pure retro-document tests into a fast suite, added a bounded Git-fixture descendant-cleanup regression, and documented serial focused-test selection. Final GitHub CI passed for c4e6ca3199d2271e7dcb37a13f52eac170fd0d81. cost=$1.45
+- 2026-09-06T23:32:35+00:00 automated review requested changes: The focused suite organization and fixture timeout work are sound, but the branch contains a large unrelated runtime snapshot rewrite and the current head lacks a completed full-suite CI result. The benchmark also omits the required resource caps and reproducible measurement commands. cost=$0.33
+
+
+## Revision preservation note, 2026-09-06 23:36 UTC
+
+The scheduler automatically committed the deliberately excluded snapshot in dd7ff92 after your successful c4e6ca3 CI, creating unrelated PR scope and invalidating the CI evidence. CG359 now owns the scheduler root-cause fix. For this revision, preserve any unrelated snapshot in a named Git stash/other existing commit with a recorded recovery reference, restore the current-main snapshot in the PR diff, and do not reintroduce an unrelated dirty snapshot into the worktree before completion. Do not discard recovery data. Address useful review findings, run exact-final-commit CI and report only established measurement evidence; benchmark comparisons remain serial and bounded.
+- 2026-09-06T23:36:59+00:00 dispatched revise run 20260906T233657Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11239 tokens)
