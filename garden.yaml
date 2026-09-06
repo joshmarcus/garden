@@ -5,7 +5,7 @@
 name: context-garden
 runner: local               # default runner: local | ssh | manual
 work_dir: /home/joshua/work   # product clones and task worktrees, outside the garden (CG-085)
-harness: claude             # default harness: claude | codex | any name under harnesses:
+harness: codex             # default harness for work, revise, rebase and edit runs: codex since 2026-09-06 01:55Z (user: Claude at 76% of its usage; workers on OpenAI models)
 max_parallel: 5             # concurrent detached workers (work, revise, resume, trial)
 review_parallel: 3          # concurrent review, persona and comparison runs (CG-074)
 max_attempts: 2             # work runs before a task is marked failed
@@ -30,7 +30,7 @@ review:
   enabled: true             # automated first review of every PR round (acceptance criteria,
   max_rounds: 4             # correctness, scope, PR description quality / no scar tissue)   # raised 2026-09-05 17:10: reviews are on sonnet now and every third round was a hand press
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
-  harness: "claude"         # reviews stay on claude (sonnet 5) even for tasks that run on codex (2026-09-05 20:40)
+  harness: "codex"          # reviews on codex terra too, to keep the Claude quota for the judges (retro/persona on fable) and the Now 1 build (user, 2026-09-06 01:55Z)
   difficulty: "easy"      # PR reviews on the easy tier (sonnet 5) since 2026-09-05 14:40 to cut spend; retro/persona tier comes from retro.difficulty once CG-207 lands
   personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
 
