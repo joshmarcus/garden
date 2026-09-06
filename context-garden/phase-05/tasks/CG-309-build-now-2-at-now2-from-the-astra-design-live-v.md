@@ -2,14 +2,12 @@
 id: CG-309
 title: 'Build Now 2 at /now2 from the astra design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on:
 - CG-314
 priority: 1
-harness: codex
-model: gpt-6-astra
 difficulty: hard
 reading:
 - context-garden/phase-05/specs/now-page.md
@@ -28,8 +26,10 @@ reading:
 - src/garden/scheduler/queue.py
 - src/garden/web/app.py
 - src/garden/web/common.py
+harness: codex
+model: gpt-6-astra
 created: '2026-09-06T00:57:47+00:00'
-updated: '2026-09-06T00:57:47+00:00'
+updated: '2026-09-06T02:14:26+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,4 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 ## Log
 
 - 2026-09-06T01:02:00+00:00 filed by the operator: the owner asked for both trial designs to ship as Now 1 and Now 2
+- 2026-09-06T02:14:26+00:00 approved (cli)
