@@ -2,7 +2,7 @@
 id: CG-254
 title: redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a
   tick
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/229
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T13:54:11+00:00'
+last_dispatched_at: '2026-09-06T15:22:38+00:00'
 created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-06T14:58:43+00:00'
+updated: '2026-09-06T17:13:58+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,7 @@ Proposed at the context-garden/phase-04 retro. Operator hand steps are the opera
 - 2026-09-06T13:54:11+00:00 dispatched revise run 20260906T135407Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13143 tokens)
 - 2026-09-06T14:14:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/229 (base main): Restored selectable Now page output after the Now 2 command shadowed page 1, while retaining the redispatch and pin implementation already on the branch. Updated stale Now 1 assertions to reflect that this build includes Now 2. cost=$0.75
 - 2026-09-06T14:58:43+00:00 automated review requested changes: Redispatch can start a replacement before the terminated worker exits, while pin neither coordinates with an existing tick nor restarts the scheduler process correctly. The focused tests pass but do not exercise these production behaviors. cost=$1.06
+- 2026-09-06T15:22:38+00:00 dispatched revise run 20260906T152235Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13537 tokens)
+- 2026-09-06T15:35:18+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/229: Synchronizes redispatch termination and controller-owned pin upgrades. Redispatch now refuses an unconfirmed stop, while canaried pins are consumed and restarted by the process holding the scheduler tick lock. cost=$0.99
+- 2026-09-06T15:37:33+00:00 automated review requested changes: Redispatch and pin satisfy the requested lifecycle behavior, with all six focused tests passing. The branch is not mergeable as scoped because it also rewrites a 50,000-line generated snapshot and changes unrelated Now-page behavior. cost=$0.41
+- 2026-09-06T17:13:58+00:00 Owner fast-forward: PR 229 verified merged at d5825a3 after direct repair; 64 targeted tests, lint and full CI passed.

@@ -21,12 +21,12 @@ Fast-forward is ACTIVE. The existing `garden-serve.service` serves the UI with `
 Owner scope: leave frozen #221 (CG-216 remote workers) and #222 (CG-230 model pools) OPEN. Finish the other eligible PRs, reconcile their task states and exit through the fast-forward protocol.
 
 - #232 / CG-344 memory-bounded fence bookkeeping: MERGED at bda4911f5a9854212298294ef957813f5b1c016d; task done. Direct integrity/recovery repair, 182 targeted tests, lint and full CI passed. Not yet installed.
-- #229 / CG-254 lifecycle commands: repair pushed at b5eb3d53710beabc0c815c22dfc6cb983fcf89fc. Removed unrelated changes, merged #232/main, fixed stale-exit-file stop checks and deferred pin installation until active runs drain. 64 targeted tests and lint passed. Full new-head CI was pending at last check; verify before merging.
+- #229 / CG-254 lifecycle commands: MERGED at d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 after 64 targeted tests, lint and full CI passed. Task reconciled to done; not yet installed.
 - #228 / CG-296 operating controls/Inbox: worktree refreshed with main in 0e00a06. Uncommitted fixes address duplicated taskless questions, feed wording, repeated rail spend and the Costs fallback button. Needs tests, disposable-app journeys/captures, current main after #229, push and CI. Original dirty generated snapshot preserved at `/home/joshua/work/operator-test-tmp/CG296-snapshot-recovery.patch`; base snapshot restored.
 - #223 / CG-324 required evidence: still open; inspect latest findings, including failed persona runs stranding review.
 - #216 / CG-215 onboarding: still open and explicitly authorized to land; inspect convention derivation and provenance findings. Do not reinstate the old hold.
 
-The existing Codex heartbeat `operate-context-garden` runs every five minutes to continue direct PR resolution. A timer is a reminder, not evidence that work is happening: perform repairs instead of ending after status narration. When these four remaining PRs are handled, follow the safe exit, update this handoff, and restore ordinary 25-minute duties. Notify only meaningful changes.
+The existing Codex heartbeat `operate-context-garden` runs every five minutes to continue direct PR resolution. A timer is a reminder, not evidence that work is happening: perform repairs instead of ending after status narration. When these three remaining PRs are handled, follow the safe exit, update this handoff, and restore ordinary 25-minute duties. Notify only meaningful changes.
 
 ## Resource limits and services
 
