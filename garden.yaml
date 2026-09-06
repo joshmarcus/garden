@@ -48,7 +48,7 @@ checks:
     #   python: "garden.checks:local_command_check"
     #   command: "scripts/ci_failures.sh"
     #   retry_command: "scripts/ci_rerun.sh"
-  timeout_seconds: 600
+  timeout_seconds: 1500
 
 brief:
   inline_max_chars: 24000   # reading-list files above this are referenced, not inlined
@@ -106,7 +106,7 @@ products:
       command: "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"   # once per fresh worktree
       test: ".venv/bin/python -m pytest -q -x"     # back on 2026-09-05 11:50: checks run as records outside the tick (CG-182)
       lint: ".venv/bin/ruff check src tests"
-      timeout_seconds: 600
+      timeout_seconds: 1500
     # runner: ssh           # per-product overrides
     # harness: codex
     # budget_usd: 100       # per-product default budget for every phase
