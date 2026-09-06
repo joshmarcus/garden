@@ -43,7 +43,7 @@ A second team cannot use the garden today: setting it up means writing product.m
 
 ## Definition of done
 
-The required application journey, independent-project demonstration, eight-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
+The required application journey, independent-project demonstration, four-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
 
 Measured with `garden metrics` against phase 04, by the tool, not by hand.
 

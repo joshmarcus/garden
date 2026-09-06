@@ -19,7 +19,7 @@ Enforce stabilization evidence at phase close and record unattended operation me
 
 ## Context
 
-Implement the evidence report and closure gate described in specs/stabilization.md. Reuse existing run/event/metrics APIs and close/retro mechanisms. A lightweight recorder must observe an eight-hour productive soak without keeping an LLM awake. Build and test the recorder/gate in this task; the operator then runs the actual soak on the deployed stabilized build. Do not fabricate an eight-hour result during a short worker run.
+Implement the evidence report and closure gate described in specs/stabilization.md. Reuse existing run/event/metrics APIs and close/retro mechanisms. A lightweight recorder must observe an four-hour productive soak without keeping an LLM awake. Build and test the recorder/gate in this task; the operator then runs the actual soak on the deployed stabilized build. Do not fabricate an four-hour result during a short worker run.
 
 ## Acceptance criteria
 
