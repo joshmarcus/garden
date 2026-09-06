@@ -14,7 +14,7 @@ reading:
 - src/garden/scheduler/reap.py
 - tests/scheduler/test_quota.py
 created: '2026-09-06T08:11:54+00:00'
-updated: '2026-09-06T08:11:54+00:00'
+updated: '2026-09-06T13:14:43+00:00'
 ---
 
 ## Goal
@@ -32,3 +32,5 @@ When a harness pause lifts (the probe succeeds and `dispatch_resumed` fires), ev
 
 ## Log
 - 2026-09-06T08:11:54+00:00 approved (cli)
+- 2026-09-06T13:12:58+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:43+00:00 reset to ready by hand

@@ -2,7 +2,7 @@
 id: CG-309
 title: 'Build Now 2 at /now2 from the astra design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on:
@@ -31,9 +31,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/227
 harness: codex
 model: gpt-6-astra
 attempts: 1
-last_dispatched_at: '2026-09-06T11:12:44+00:00'
+last_dispatched_at: '2026-09-06T13:04:33+00:00'
 created: '2026-09-06T00:57:47+00:00'
-updated: '2026-09-06T11:12:44+00:00'
+updated: '2026-09-06T13:13:31+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,7 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T11:01:47+00:00 PR attached: https://github.com/joshmarcus/context-garden/pull/227 (pr_number none -> 227)
 - 2026-09-06T11:10:02+00:00 automated review requested changes: Now 2 is broadly implemented and its focused tests pass, but the required per-goal phase status is missing. The PR description also contains process narration and does not summarize verification cleanly. cost=$0.67
 - 2026-09-06T11:12:44+00:00 dispatched revise run 20260906T111240Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~27709 tokens)
+- 2026-09-06T12:43:22+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$13.23
+- 2026-09-06T13:04:33+00:00 dispatched revise run 20260906T130429Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~27783 tokens)
+- 2026-09-06T13:07:03+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
+- 2026-09-06T13:13:31+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow

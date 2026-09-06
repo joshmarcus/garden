@@ -15,7 +15,7 @@ reading:
 - tests/test_retro.py
 discovered_from: retro-editor:context-garden/phase-04
 created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-06T00:24:05+00:00'
+updated: '2026-09-06T13:14:33+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,5 @@ The phase-04 retro ran twice (fable, then astra with --skip-personas). Each aske
 ## Log
 
 - 2026-09-06T00:24:05+00:00 approved (cli)
+- 2026-09-06T13:13:16+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:33+00:00 reset to ready by hand

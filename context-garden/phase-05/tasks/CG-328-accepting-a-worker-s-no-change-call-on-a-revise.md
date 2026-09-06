@@ -14,7 +14,7 @@ reading:
 - src/garden/inbox.py
 - tests/scheduler/test_human.py
 created: '2026-09-06T05:26:03+00:00'
-updated: '2026-09-06T05:26:03+00:00'
+updated: '2026-09-06T13:14:37+00:00'
 ---
 
 ## Goal
@@ -32,3 +32,5 @@ When a person accepts a worker's "nothing to change" on a revise round, the task
 
 ## Log
 - 2026-09-06T05:26:03+00:00 approved (cli)
+- 2026-09-06T13:13:22+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:37+00:00 reset to ready by hand

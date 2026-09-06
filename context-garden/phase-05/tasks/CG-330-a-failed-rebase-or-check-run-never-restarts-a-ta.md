@@ -2,7 +2,7 @@
 id: CG-330
 title: 'A failed rebase or check run never restarts a task''s work from scratch: the PR stays, the rebase
   or check is retried, and only a failed work or revise run counts as an attempt'
-status: running
+status: failed
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,9 +16,9 @@ reading:
 - tests/scheduler/test_reap.py
 branch: garden/cg-330-a-failed-rebase-or-check-run-never-restarts-a-ta
 attempts: 1
-last_dispatched_at: '2026-09-06T11:36:45+00:00'
+last_dispatched_at: '2026-09-06T13:04:41+00:00'
 created: '2026-09-06T06:24:13+00:00'
-updated: '2026-09-06T11:36:45+00:00'
+updated: '2026-09-06T13:07:05+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,6 @@ Auxiliary runs fail on their own terms. When a rebase run, a check run or an edi
 ## Log
 - 2026-09-06T06:24:16+00:00 approved (cli)
 - 2026-09-06T11:36:45+00:00 dispatched work run 20260906T112700Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~25030 tokens)
+- 2026-09-06T12:51:35+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); no PR opened yet; revise run will fix cost=$1.13
+- 2026-09-06T13:04:41+00:00 dispatched revise run 20260906T130437Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~14537 tokens)
+- 2026-09-06T13:07:05+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)

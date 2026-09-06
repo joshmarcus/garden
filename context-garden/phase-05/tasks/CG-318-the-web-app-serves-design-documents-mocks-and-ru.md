@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/217
 attempts: 1
 last_dispatched_at: '2026-09-06T10:13:34+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T10:50:44+00:00'
+updated: '2026-09-06T12:44:09+00:00'
 ---
 
 ## Goal
@@ -65,3 +65,4 @@ Anything a worker renders for a person to look at is one click away in the web a
 - 2026-09-06T10:35:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/217: Rebased CG-318 onto origin/main and resolved the task.py conflict while preserving both sides. cost=$0.01
 - 2026-09-06T10:49:26+00:00 automated review requested changes: The core single-product surfaces work, but multi-product design links resolve against the wrong checkout, snapshots omit real queue state, and required visual verification is incomplete. cost=$1.00
 - 2026-09-06T10:50:44+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-318`) or send it back (`garden triage CG-318 --changes "..."`)
+- 2026-09-06T12:44:09+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/217

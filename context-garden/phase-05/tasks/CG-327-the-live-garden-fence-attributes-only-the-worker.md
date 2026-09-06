@@ -2,7 +2,7 @@
 id: CG-327
 title: 'The live-garden fence attributes only the worker''s own writes: the operator''s and the scheduler''s
   commits during a run''s window are never counted against the run'
-status: running
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,10 +14,9 @@ reading:
 - src/garden/runs.py
 - tests/test_fence.py
 branch: garden/cg-327-the-live-garden-fence-attributes-only-the-worker
-attempts: 1
-last_dispatched_at: '2026-09-06T12:41:53+00:00'
+last_dispatched_at: '2026-09-06T13:04:44+00:00'
 created: '2026-09-06T04:28:19+00:00'
-updated: '2026-09-06T12:41:53+00:00'
+updated: '2026-09-06T13:13:32+00:00'
 ---
 
 ## Goal
@@ -39,3 +38,7 @@ A run is fenced only for writes the run made. The live-garden check attributes a
 - 2026-09-06T11:04:12+00:00 dispatched work run 20260906T110121Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11491 tokens)
 - 2026-09-06T12:13:41+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$1.98
 - 2026-09-06T12:41:53+00:00 dispatched revise run 20260906T124150Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11892 tokens)
+- 2026-09-06T12:52:43+00:00 environment stop (auth): auth limit hit on codex; not counted as an attempt; dispatch paused for codex until a probe succeeds
+- 2026-09-06T13:04:44+00:00 dispatched work run 20260906T130442Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11698 tokens)
+- 2026-09-06T13:07:04+00:00 attempt 2 failed: no GARDEN_RESULT in worker output (see final.md); giving up
+- 2026-09-06T13:13:32+00:00 reset to ready by hand

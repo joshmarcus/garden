@@ -2,7 +2,7 @@
 id: CG-254
 title: redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a
   tick
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,10 +13,13 @@ reading:
 - src/garden/gitops.py
 - src/garden/harness.py
 - tests/test_cli.py
+branch: garden/cg-254-redispatch-kills-the-superseded-worker-and-pin-r
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T13:15:04+00:00'
 created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-06T00:50:43+00:00'
+updated: '2026-09-06T13:15:04+00:00'
 ---
 
 ## Goal
@@ -48,3 +51,4 @@ Proposed at the context-garden/phase-04 retro. Operator hand steps are the opera
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-243 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:24:19+00:00 integrated 1 suggestion(s) (run 20260906T002109Z-edit) cost=$0.35
 - 2026-09-06T00:50:43+00:00 approved (cli)
+- 2026-09-06T13:15:04+00:00 dispatched work run 20260906T131329Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11607 tokens)

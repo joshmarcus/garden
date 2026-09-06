@@ -17,7 +17,7 @@ reading:
 - docs/design.md
 - context-garden/phase-03/docs/retro.md
 created: '2026-09-05T16:58:10+00:00'
-updated: '2026-09-06T03:38:40+00:00'
+updated: '2026-09-06T13:14:22+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,5 @@ Phase 03's friction said the same things repeatedly: reading lists that omitted 
 - 2026-09-05T17:00:33+00:00 moved from context-garden/phase-05 to context-garden/phase-06
 - 2026-09-06T03:38:40+00:00 approved (web)
 - 2026-09-06T03:38:40+00:00 no kickoff report for context-garden/phase-06
+- 2026-09-06T13:13:29+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:22+00:00 reset to ready by hand

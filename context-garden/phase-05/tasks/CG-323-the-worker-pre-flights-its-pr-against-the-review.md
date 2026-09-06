@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: running
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,10 +19,9 @@ reading:
 - tests/test_brief.py
 - tests/test_review.py
 branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
-attempts: 1
-last_dispatched_at: '2026-09-06T11:47:30+00:00'
+last_dispatched_at: '2026-09-06T13:04:37+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-06T11:47:30+00:00'
+updated: '2026-09-06T13:13:31+00:00'
 ---
 
 ## Goal
@@ -54,3 +53,7 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-06T11:00:31+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round cost=$0.81
 - 2026-09-06T11:26:56+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T11:47:30+00:00 dispatched revise run 20260906T114724Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~29917 tokens)
+- 2026-09-06T12:52:43+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$2.01
+- 2026-09-06T13:04:37+00:00 dispatched revise run 20260906T130433Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, rebase round 2 (not counted), ~9403 tokens)
+- 2026-09-06T13:07:04+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
+- 2026-09-06T13:13:31+00:00 reset to ready by hand

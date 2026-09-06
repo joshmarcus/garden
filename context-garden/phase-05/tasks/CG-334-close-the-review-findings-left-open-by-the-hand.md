@@ -16,7 +16,7 @@ reading:
 - tests/test_harness.py
 - tests/test_web.py
 created: '2026-09-06T12:43:08+00:00'
-updated: '2026-09-06T12:43:09+00:00'
+updated: '2026-09-06T13:14:47+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,5 @@ The owner: "anything that's not terrible, let's merge" (12:30Z), while draining 
 
 ## Log
 - 2026-09-06T12:43:09+00:00 approved (cli)
+- 2026-09-06T13:13:03+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:47+00:00 reset to ready by hand

@@ -14,7 +14,7 @@ reading:
 - src/garden/gitops.py
 - tests/scheduler/test_reap.py
 created: '2026-09-06T09:09:18+00:00'
-updated: '2026-09-06T09:09:19+00:00'
+updated: '2026-09-06T13:14:45+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,5 @@ The reaper reads the worktree before it reads the transcript. When a work or rev
 
 ## Log
 - 2026-09-06T09:09:19+00:00 approved (cli)
+- 2026-09-06T13:13:01+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:45+00:00 reset to ready by hand

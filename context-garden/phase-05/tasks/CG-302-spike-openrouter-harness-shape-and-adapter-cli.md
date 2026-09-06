@@ -13,7 +13,7 @@ reading:
 - docs/design.md
 discovered_from: kickoff:context-garden/phase-05
 created: '2026-09-06T00:07:46+00:00'
-updated: '2026-09-06T00:24:07+00:00'
+updated: '2026-09-06T13:14:34+00:00'
 spike: true
 ---
 
@@ -44,3 +44,5 @@ Raised at the context-garden/phase-05 kickoff. Relevant to CG-213, CG-230.
 
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002119Z-edit) cost=$0.12
 - 2026-09-06T00:24:07+00:00 approved (cli)
+- 2026-09-06T13:13:18+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:34+00:00 reset to ready by hand

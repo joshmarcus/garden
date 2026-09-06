@@ -2,7 +2,7 @@
 id: CG-321
 title: 'Reviews suggest fixes and improvements, not only a verdict: each finding carries a concrete fix,
   a separate improvements list goes beyond the criteria, and the revise brief carries both to the worker'
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/226
 attempts: 1
 last_dispatched_at: '2026-09-06T11:20:43+00:00'
 created: '2026-09-06T03:19:28+00:00'
-updated: '2026-09-06T12:41:03+00:00'
+updated: '2026-09-06T12:44:10+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Owner, 2026-09-06 03:22Z: "reviews can actually suggest fixes and improvements a
 - 2026-09-06T12:15:28+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/226: Automated reviews now provide concrete fixes and optional improvements, carry all findings into revision briefs, render them on PRs and task pages, and retain declined improvements as retro-visible friction.
 - 2026-09-06T12:39:11+00:00 automated review: approve — Automated reviews now carry actionable fixes and optional improvements through comments, task pages, revision briefs, and retro-visible friction. The focused parser, scheduler, brief, friction, and web tests passed. cost=$0.72
 - 2026-09-06T12:41:03+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-06T12:44:10+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/226

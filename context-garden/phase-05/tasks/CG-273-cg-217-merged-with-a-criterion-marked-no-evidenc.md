@@ -11,7 +11,7 @@ reading: []
 harness: codex
 discovered_from: persona:project-manager:context-garden/phase-04
 created: '2026-09-05T23:58:14+00:00'
-updated: '2026-09-06T03:51:39+00:00'
+updated: '2026-09-06T13:14:25+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,5 @@ Raised by the project-manager persona review (acceptance criteria). persona:proj
 - 2026-09-06T00:51:50+00:00 integrated 1 suggestion(s) (run 20260906T005020Z-edit) cost=$0.07
 - 2026-09-06T00:52:22+00:00 approved (cli)
 - 2026-09-06T03:51:39+00:00 integrated 1 suggestion(s) (run 20260906T035012Z-edit) cost=$0.03
+- 2026-09-06T13:13:10+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:25+00:00 reset to ready by hand

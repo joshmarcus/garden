@@ -14,7 +14,7 @@ reading:
 - tests/test_harness.py
 - docs/worker-protocol.md
 created: '2026-09-06T02:04:20+00:00'
-updated: '2026-09-06T02:04:21+00:00'
+updated: '2026-09-06T13:14:35+00:00'
 ---
 
 ## Goal
@@ -34,3 +34,5 @@ A worker's result is read whenever it is there. `parse_result` (and the persona,
 ## Log
 
 - 2026-09-06T02:04:21+00:00 approved (cli)
+- 2026-09-06T13:13:19+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:35+00:00 reset to ready by hand

@@ -13,7 +13,7 @@ reading:
 - src/garden/web/app.py
 - src/garden/scheduler/checkruns.py
 created: '2026-09-06T07:19:24+00:00'
-updated: '2026-09-06T07:19:25+00:00'
+updated: '2026-09-06T13:14:39+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,5 @@ updated: '2026-09-06T07:19:25+00:00'
 
 ## Log
 - 2026-09-06T07:19:25+00:00 approved (cli)
+- 2026-09-06T13:13:25+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:39+00:00 reset to ready by hand

@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
 last_dispatched_at: '2026-09-06T12:16:36+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T12:16:36+00:00'
+updated: '2026-09-06T13:14:52+00:00'
 ---
 
 ## Goal
@@ -87,3 +87,5 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T11:41:11+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-215`) or send it back (`garden triage CG-215 --changes "..."`)
 - 2026-09-06T11:53:27+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
 - 2026-09-06T12:16:36+00:00 dispatched revise run 20260906T121626Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~23143 tokens)
+- 2026-09-06T12:52:39+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
+- 2026-09-06T13:14:52+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow

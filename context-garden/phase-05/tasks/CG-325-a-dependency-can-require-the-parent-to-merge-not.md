@@ -15,7 +15,7 @@ reading:
 - docs/design.md
 - tests/test_graph.py
 created: '2026-09-06T04:03:15+00:00'
-updated: '2026-09-06T04:03:15+00:00'
+updated: '2026-09-06T13:14:36+00:00'
 ---
 
 ## Goal
@@ -34,3 +34,5 @@ Owner, 2026-09-06 04:05Z: "Why is Now 1 design and build running at the same tim
 
 ## Log
 - 2026-09-06T04:03:15+00:00 approved (cli)
+- 2026-09-06T13:13:21+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:36+00:00 reset to ready by hand

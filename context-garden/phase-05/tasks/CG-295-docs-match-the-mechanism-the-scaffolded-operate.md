@@ -19,7 +19,7 @@ reading:
 - src/garden/inbox.py
 discovered_from: retro:context-garden/phase-04
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T00:52:24+00:00'
+updated: '2026-09-06T13:14:31+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,5 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-284 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:51:50+00:00 integrated 1 suggestion(s) (run 20260906T005024Z-edit) cost=$0.07
 - 2026-09-06T00:52:24+00:00 approved (cli)
+- 2026-09-06T13:13:13+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:31+00:00 reset to ready by hand

@@ -11,7 +11,7 @@ reading: []
 harness: codex
 discovered_from: persona:user:context-garden/phase-04
 created: '2026-09-05T23:58:16+00:00'
-updated: '2026-09-06T00:52:23+00:00'
+updated: '2026-09-06T13:14:27+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Renaming or restructuring tasks beyond this mechanism; task-id references in use
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-272 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:51:50+00:00 integrated 1 suggestion(s) (run 20260906T005021Z-edit) cost=$0.09
 - 2026-09-06T00:52:23+00:00 approved (cli)
+- 2026-09-06T13:13:11+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
+- 2026-09-06T13:14:27+00:00 reset to ready by hand

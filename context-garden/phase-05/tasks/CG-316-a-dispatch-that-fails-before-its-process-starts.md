@@ -2,7 +2,7 @@
 id: CG-316
 title: A dispatch that fails before its process starts closes the run record at once, and the orphan sweep
   closes any running record with no live process
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/212
 attempts: 1
 last_dispatched_at: '2026-09-06T04:53:08+00:00'
 created: '2026-09-06T02:11:57+00:00'
-updated: '2026-09-06T05:26:00+00:00'
+updated: '2026-09-06T12:44:08+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ A run record is `running` only while a process is running. When `dispatch` fails
 - 2026-09-06T05:20:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/212: Dispatch and orphan lifecycle handling now avoid falsely closing launched workers while still closing pre-start failures. CI-related cleanup regression and reviewer feedback were addressed. cost=$0.12
 - 2026-09-06T05:25:25+00:00 automated review requested changes: Pre-start dispatch failures and Board filtering are covered, but the orphan sweep still leaves pid-less run records active when their task is terminal. This recreates the reported failed-task/running-record state and can consume worker capacity indefinitely. cost=$0.31
 - 2026-09-06T05:26:00+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-316`) or send it back (`garden triage CG-316 --changes "..."`)
+- 2026-09-06T12:44:08+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/212

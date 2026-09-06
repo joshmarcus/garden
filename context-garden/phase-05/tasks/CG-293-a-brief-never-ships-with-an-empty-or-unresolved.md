@@ -15,7 +15,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T07:11:04+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T12:18:02+00:00'
+updated: '2026-09-06T12:51:22+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,4 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T08:50:02+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 746c745d314f, not because of this branch; waiting for the base to go green, no revise round
 - 2026-09-06T09:25:17+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round
 - 2026-09-06T12:18:02+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 40fc26107ed2, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-06T12:51:22+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
