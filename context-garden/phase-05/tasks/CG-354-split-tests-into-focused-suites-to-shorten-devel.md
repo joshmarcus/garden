@@ -37,3 +37,10 @@ Phase-05 stabilization/developer-feedback improvement, priority 2; created as a 
 - 2026-09-06: Filed at the owner's request from a side conversation; implementation has not started.
 - 2026-09-06T21:39:50+00:00 priority 2 -> 1
 - 2026-09-06T21:39:50+00:00 approved (cli)
+
+
+## Measured fixture stall, 2026-09-06 22:08 UTC
+
+During CG-361 validation, a full suite spent 694.80s before reporting 425 passed and a fixture error. A stack sample found pytest PID1962007 in tests/conftest.py git() -> subprocess.run(). Its direct git push child1995747 had already exited128, but orphan sh1995748 and git-receive-pack1995749 retained its stderr pipe in the throwaway test_persona_without_sections_0 remote. CPU time stopped advancing while communicate() waited for pipe EOF. The operator verified process identities, start times, cwd and shared pipe, then terminated only those orphan fixture helpers; pytest immediately finished. Preserve raw evidence /home/joshua/work/operator-test-tmp/CG361-orphan-git-helpers.json. No product worktree Git process was stopped.
+
+Extend the fixture inventory and acceptance evidence to bounded Git subprocess waits and complete helper cleanup, including a child that exits while a descendant holds captured output open. Surface command/stderr/timeouts promptly, preserve useful failed fixtures and avoid declaring unrelated branch code broken. This task should measure useful test execution separately from stuck setup and repeated full-suite retries. The originating git push failure still needs diagnosis; terminating the helpers explains recovery, not the original exit128.

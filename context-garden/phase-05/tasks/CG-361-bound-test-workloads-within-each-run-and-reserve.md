@@ -44,3 +44,8 @@ Keep validation serial and resource-bounded while implementing this fix. Do not 
 - 2026-09-06: Priority-0 incident prevention filed with owner authority after measuring test memory and inspecting the newly installed shared run guard. Implementation pending.
 - 2026-09-06T21:39:49+00:00 approved (cli)
 - 2026-09-06T21:40:23+00:00 dispatched work run 20260906T214006Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9314 tokens)
+
+
+## Operator validation intervention, 2026-09-06 22:08 UTC
+
+The full-suite test process1962007 stalled in Git fixture setup after its direct git push child exited128. Orphaned fixture helpers1995748/1995749 kept stderr open; operator verified exact identities and fixture paths and terminated only those helpers, preserving files and evidence in operator-test-tmp/CG361-orphan-git-helpers.json. Pytest then reported425 passed and one fixture error after694.80s. This is partial validation with an operator intervention, not a full-suite pass. CG-354 now includes bounded fixture waits/descendant cleanup. Diagnose the original Git stderr/environment before treating this as a source defect or repeating the full suite.
