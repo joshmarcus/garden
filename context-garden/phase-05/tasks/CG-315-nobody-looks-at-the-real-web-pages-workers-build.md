@@ -3,7 +3,7 @@ id: CG-315
 title: 'UI changes are reviewed against rendered pages: a template or style change captures the affected
   pages as screenshots at two widths, the reviewer and the personas read them, and the walkthrough uses
   the same capture'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,8 +18,11 @@ reading:
 - src/garden/web/app.py
 - tests/test_web.py
 - docs/worker-protocol.md
+branch: garden/cg-315-ui-changes-are-reviewed-against-rendered-pages-a
+attempts: 1
+last_dispatched_at: '2026-09-06T02:47:20+00:00'
 created: '2026-09-06T02:10:34+00:00'
-updated: '2026-09-06T02:10:34+00:00'
+updated: '2026-09-06T02:47:20+00:00'
 ---
 
 ## Goal
@@ -40,3 +43,4 @@ Owner's friction, 2026-09-06 02:10Z: "we're not actually looking at the real web
 
 ## Log
 - 2026-09-06T02:10:34+00:00 approved (cli)
+- 2026-09-06T02:47:20+00:00 dispatched work run 20260906T024657Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~19890 tokens)

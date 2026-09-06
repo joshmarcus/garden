@@ -2,7 +2,7 @@
 id: CG-314
 title: 'Design Now 2: astra''s take on the Now page, information architecture, visual system, motion,
   and a static mock of every state'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -25,10 +25,13 @@ reading:
 - src/garden/scheduler/queue.py
 - src/garden/web/app.py
 - src/garden/web/common.py
+branch: garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform
 harness: codex
 model: gpt-6-astra
+attempts: 1
+last_dispatched_at: '2026-09-06T02:46:57+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T02:06:03+00:00'
+updated: '2026-09-06T02:46:57+00:00'
 ---
 
 ## Goal
@@ -59,3 +62,4 @@ The owner asked for an operational dashboard that is the gem of the experience a
 
 - 2026-09-06T02:08:00+00:00 filed by the operator: the astra contender of the CG-307 trial died in the /tmp outage and the trial relaunch only re-dispatched the fable side; astra designs Now 2 as its own task
 - 2026-09-06T02:06:03+00:00 approved (cli)
+- 2026-09-06T02:46:57+00:00 dispatched work run 20260906T024636Z-work via local [codex model=gpt-6-astra] (fresh session, base main, ~7470 tokens)

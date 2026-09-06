@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/scheduler/human.py
 - src/garden/notify.py
 - tests/test_web.py
+branch: garden/cg-311-the-task-page-shows-the-decision-a-worker-s-no-c
+attempts: 1
+last_dispatched_at: '2026-09-06T02:43:52+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T02:09:41+00:00'
+updated: '2026-09-06T02:43:52+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 
 ## Log
 - 2026-09-06T02:09:41+00:00 approved (cli)
+- 2026-09-06T02:43:52+00:00 dispatched work run 20260906T024331Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13053 tokens)

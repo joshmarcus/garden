@@ -2,7 +2,7 @@
 id: CG-312
 title: 'Inbox decision cards lay out at full width: the text column no longer collapses to one word per
   line and the action buttons no longer overlap the evidence list'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/inbox.py
 - tests/test_web.py
 - context-garden/phase-01-bootstrap/specs/botanical-theme.md
+branch: garden/cg-312-inbox-decision-cards-lay-out-at-full-width-the-t
+attempts: 1
+last_dispatched_at: '2026-09-06T02:46:36+00:00'
 created: '2026-09-06T02:03:53+00:00'
-updated: '2026-09-06T02:03:53+00:00'
+updated: '2026-09-06T02:46:36+00:00'
 ---
 
 ## Goal
@@ -38,3 +41,4 @@ Seen by the owner on 2026-09-06 01:58Z on the live Inbox (CG-242's failed-worker
 ## Log
 
 - 2026-09-06T02:03:53+00:00 approved (cli)
+- 2026-09-06T02:46:36+00:00 dispatched work run 20260906T024545Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11337 tokens)

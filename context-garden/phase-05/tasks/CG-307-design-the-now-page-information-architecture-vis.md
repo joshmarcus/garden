@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T02:28:45+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T02:28:45+00:00'
+updated: '2026-09-06T02:55:05+00:00'
 ---
 
 ## Goal
@@ -67,3 +67,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T02:14:26+00:00 trial inconclusive (only one contender produced a PR; the trial is inconclusive, not a win); kept claude:claude-fable-5-1's PR: https://github.com/joshmarcus/context-garden/pull/206
 - 2026-09-06T02:25:27+00:00 automated review requested changes: The Now 1 design and real-state mock are substantial, but required persona evidence, difficulty-by-model tables, and the live-clock contract/test are missing. The PR also includes unrelated CG-248/CG-250 changes and its description contains process narration. cost=$0.30
 - 2026-09-06T02:28:45+00:00 dispatched revise run 20260906T022844Z-revise via local [claude model=claude-fable-5-1] (fresh session, base main, ~29440 tokens)
+- 2026-09-06T02:55:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/206: Added the difficulty-by-model tables and the live elapsed clock to the Now 1 design and mock, re-took the snapshot from the live garden, wrote tests for the clock attributes and the tables' computation, and added a persona-review section answering the designer and usability lenses. The persona-review command itself could not be run in the worker. cost=$9.20
+- 2026-09-06T02:55:05+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-307` for one more round, or review on GitHub

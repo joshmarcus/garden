@@ -2,7 +2,7 @@
 id: CG-316
 title: A dispatch that fails before its process starts closes the run record at once, and the orphan sweep
   closes any running record with no live process
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/web/pages/board.py
 - tests/scheduler/test_dispatch.py
 - tests/scheduler/test_orphan_sweep.py
+branch: garden/cg-316-a-dispatch-that-fails-before-its-process-starts
+attempts: 1
+last_dispatched_at: '2026-09-06T02:53:33+00:00'
 created: '2026-09-06T02:11:57+00:00'
-updated: '2026-09-06T02:11:57+00:00'
+updated: '2026-09-06T02:53:33+00:00'
 ---
 
 ## Goal
@@ -36,3 +39,4 @@ A run record is `running` only while a process is running. When `dispatch` fails
 
 ## Log
 - 2026-09-06T02:11:57+00:00 approved (cli)
+- 2026-09-06T02:53:33+00:00 dispatched work run 20260906T025240Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~24078 tokens)

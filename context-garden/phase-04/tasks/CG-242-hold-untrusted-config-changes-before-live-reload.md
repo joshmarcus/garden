@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: in_review
+status: running
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -23,9 +23,9 @@ freeze_exception_reason: Live reload currently activates a worker's configuratio
   can reject it, creating a newly introduced privileged execution path.
 retro_blocking: true
 attempts: 1
-last_dispatched_at: '2026-09-06T02:14:59+00:00'
+last_dispatched_at: '2026-09-06T02:55:45+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T02:28:05+00:00'
+updated: '2026-09-06T02:55:45+00:00'
 ---
 
 ## Goal
@@ -61,3 +61,8 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T02:14:59+00:00 kept 1 local-only commit(s) on `backup/20260906T021458Z-revise` before syncing to origin/garden/cg-242-hold-untrusted-config-changes-before-live-reload's head: 6fada6b Close the canary's own route around the config-reload gate
 - 2026-09-06T02:14:59+00:00 dispatched revise run 20260906T021458Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~16965 tokens)
 - 2026-09-06T02:28:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Closed the canary route that could unconditionally adopt a held executable config reload. The fix is committed as a9db9f9 and all local checks pass. cost=$0.60
+- 2026-09-06T02:42:56+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/retro.py, src/garden/store.py); a rebase agent will resolve it
+- 2026-09-06T02:43:30+00:00 dispatched rebase run 20260906T024330Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~19382 tokens)
+- 2026-09-06T02:51:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Rebased onto origin/main and resolved the two marked conflicts while preserving both sides' intent. cost=$0.01
+- 2026-09-06T02:54:58+00:00 automated review requested changes: A fresh `garden tick` process loads the worker-modified config before the gate compares it, so it can execute untrusted settings before reap. The focused acceptance tests pass, but only retain the same Scheduler instance. cost=$0.36
+- 2026-09-06T02:55:45+00:00 dispatched revise run 20260906T025544Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13439 tokens)

@@ -33,5 +33,7 @@ Anything a worker renders for a person to look at is one click away in the web a
 - [ ] The task page lists design files added or changed by the task's PR with links; the run page links each capture file recorded under the run directory (png, html, md).
 - [ ] The nav shows "Design" when the product has a docs/design directory; the walkthrough captures /design once one exists.
 
+- [ ] A design or UI task's worktree gets a sanitized snapshot of the garden's state (tasks, runs in flight and recent, control, queue, phases, the last day's events, the metrics tables) at `docs/design/snapshot.json`, written by the runner at dispatch from the live store with paths and secrets stripped, so a mock can render real data without a worker reading the garden (astra's request, 2026-09-06 02:55Z).
+
 ## Log
 - 2026-09-06T02:15:43+00:00 approved (cli)

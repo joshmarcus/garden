@@ -2,7 +2,7 @@
 id: CG-237
 title: 'The not-logged-in check reads a worker''s prose as an auth failure: match the CLI''s own error,
   not the report text'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,9 +14,9 @@ reading:
 branch: garden/cg-237-the-not-logged-in-check-reads-a-worker-s-prose-a
 pr: https://github.com/joshmarcus/context-garden/pull/207
 attempts: 1
-last_dispatched_at: '2026-09-06T02:29:02+00:00'
+last_dispatched_at: '2026-09-06T02:43:31+00:00'
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-06T02:40:21+00:00'
+updated: '2026-09-06T02:57:06+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,5 @@ A worker whose report talks about a login outage is a finished run, not a login 
 - 2026-09-06T02:29:02+00:00 dispatched work run 20260906T022845Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~11411 tokens)
 - 2026-09-06T02:38:15+00:00 opened https://github.com/joshmarcus/context-garden/pull/207 (base main): Narrowed auth detection to CLI error/stderr output and protected worker prose, garden blocks, and Codex agent messages from false auth failures. cost=$0.05
 - 2026-09-06T02:40:21+00:00 automated review requested changes: The auth guard still misclassifies an error result containing a parsed GARDEN_RESULT block, and the required replay of the four discarded persona outputs is absent. The branch also includes substantial unrelated work. cost=$0.15
+- 2026-09-06T02:43:31+00:00 dispatched revise run 20260906T024331Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~12143 tokens)
+- 2026-09-06T02:57:06+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/207: Auth detection now ignores markers in parsed worker results and Codex agent messages while preserving real CLI login failures. Added four persona replay cases that retain done status and cost. cost=$0.05
