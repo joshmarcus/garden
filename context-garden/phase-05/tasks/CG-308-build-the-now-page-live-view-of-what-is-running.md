@@ -49,6 +49,8 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - [ ] Live updates arrive over the existing events stream and change only the affected elements; the page never polls and never holds the hub lock; a test drives an event through the stream and asserts the DOM fragment it produces
 - [ ] garden now --page 1 prints the same four regions in text; garden walkthrough captures /now1; tests cover the now module's typical-duration and window computations with the fake harness
 
+- [ ] The last-period region shows the difficulty-by-model tables (rows easy, medium, hard; a column per model that did work in the window; cells with n) for mean total cost per accepted task, work-run cost, first-pass approval, revise rounds and median lead time, with a metric picker or one compact table per metric, from the same computation as `garden metrics`, and the design chooses how they read at a glance (owner, 2026-09-06 02:30Z).
+
 ## Log
 
 - 2026-09-06T00:53:26+00:00 approved (cli)

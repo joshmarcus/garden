@@ -49,6 +49,8 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - [ ] garden persona-review with the designer and usability-expert personas on this PR returns no high finding, or the PR answers each in the document
 - [ ] The PR description states the design's goal and the choices made, not the process
 
+- [ ] The last-period region shows the difficulty-by-model tables (rows easy, medium, hard; a column per model that did work in the window; cells with n) for mean total cost per accepted task, work-run cost, first-pass approval, revise rounds and median lead time, with a metric picker or one compact table per metric, from the same computation as `garden metrics`, and the design chooses how they read at a glance (owner, 2026-09-06 02:30Z).
+
 ## Log
 
 - 2026-09-06T02:08:00+00:00 filed by the operator: the astra contender of the CG-307 trial died in the /tmp outage and the trial relaunch only re-dispatched the fable side; astra designs Now 2 as its own task
