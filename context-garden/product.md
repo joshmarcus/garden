@@ -71,6 +71,10 @@ Layout:
 - Task files are the source of truth; `.garden/` holds only run records and PR bookkeeping.
 - Keep the CLI, web and TUI thin: all logic lives in `scheduler`, `graph`, `brief`, `store`.
 
+## The run ends when you stop
+
+A worker runs headless: when you finish your turn, the process exits and nothing wakes it again. Never background the test suite, a build or a capture and wait for a notification; run long commands in the foreground and read their output before you write your result. If the suite takes ten minutes, wait ten minutes. A run that ends without its `GARDEN_RESULT` line is a failed run, however much it committed; five Fable runs were lost this way on 2026-09-06 while "waiting for the monitor to report".
+
 ## Looking at pages: screenshots from a WSL worker
 
 Workers on this machine have no browser inside WSL, but Windows Edge is reachable and renders both files and the running app. Use it to see what a person would see before you call a UI change done, and read the PNGs back with the Read tool.
