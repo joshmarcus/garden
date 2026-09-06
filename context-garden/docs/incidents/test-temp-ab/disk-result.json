@@ -1,0 +1,76 @@
+{
+  "variant": "disk",
+  "exit_code": 1,
+  "seconds": 222.01044108100177,
+  "peak_memory_bytes": 1595420672,
+  "kernel_peak_bytes": 1596534784,
+  "peak_swap_bytes": 0,
+  "peak_parts_bytes": {
+    "anon": 296804352,
+    "file": 1002270720,
+    "shmem": 0,
+    "kernel": 297226240
+  },
+  "cpu_delta": {
+    "usage_usec": 147217170,
+    "user_usec": 82014095,
+    "system_usec": 65203074,
+    "nr_periods": 1928,
+    "nr_throttled": 1,
+    "throttled_usec": 51254,
+    "nr_bursts": 0,
+    "burst_usec": 0
+  },
+  "memory_events_delta": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "stall_percent": {
+    "cpu": {
+      "some": 0.10047410334120917,
+      "full": 0.10039798079527075
+    },
+    "memory": {
+      "some": 0.0,
+      "full": 0.0
+    },
+    "io": {
+      "some": 11.469184005949414,
+      "full": 11.469184005949414
+    }
+  },
+  "vm_delta": {
+    "pswpin": 0,
+    "pswpout": 0,
+    "pgmajfault": 0
+  },
+  "temp": "/home/joshua/work/operator-test-tmp/io-ab-20260906/garden-io-ab-disk-1777389",
+  "disk_delta": {
+    "sda": {
+      "read_MiB": 0.0,
+      "write_MiB": 0.0,
+      "busy_percent": 0.0
+    },
+    "sdb": {
+      "read_MiB": 0.0,
+      "write_MiB": 0.0,
+      "busy_percent": 0.0
+    },
+    "sdc": {
+      "read_MiB": 0.0,
+      "write_MiB": 0.0,
+      "busy_percent": 0.0
+    },
+    "sdd": {
+      "read_MiB": 237.74609375,
+      "write_MiB": 1523.0859375,
+      "busy_percent": 22.815143176765876
+    }
+  },
+  "temp_bytes": 108292560,
+  "test_tail": "....................................... [ 30%]\n........................................................................ [ 36%]\n........................................................................ [ 42%]\n........................................................................ [ 48%]\n........................................................................ [ 54%]\n........................................................................ [ 60%]\n........................................................................ [ 66%]\n................................................sss..................... [ 72%]\n........................................................................ [ 79%]\n..............F......................................................... [ 85%]\n........................................................................ [ 91%]\n........................................................................ [ 97%]\n................................                                         [100%]\n=================================== FAILURES ===================================\n___________ test_archive_round_trip_preserves_summary_and_artifacts ____________\ntests/test_run_index.py:69: in test_archive_round_trip_preserves_summary_and_artifacts\n    restored = rs.all_runs()[0]\n               ^^^^^^^^^^^^^^^^\nE   IndexError: list index out of range\n=============================== warnings summary ===============================\n../../worktrees/CG-322/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1\n  /home/joshua/work/worktrees/CG-322/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n../../worktrees/CG-322/.venv/lib/python3.14/site-packages/starlette/testclient.py:53\n  /home/joshua/work/worktrees/CG-322/.venv/lib/python3.14/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED tests/test_run_index.py::test_archive_round_trip_preserves_summary_and_artifacts\n1 failed, 1180 passed, 3 skipped, 2 warnings in 220.64s (0:03:40)\n"
+}
