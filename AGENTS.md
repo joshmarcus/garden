@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current state consolidated 2026-09-06 23:38 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
+Current state consolidated 2026-09-06 23:44 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
 
 ## Start here
 
@@ -87,3 +87,7 @@ At23:37:51 live processes: CG361 revise232501/PID2045385, CG354 revise233657/PID
 Resources23:35: memory2.50GiB,high2342 unchanged since23:27,memory/CPU/IO PSIavg10 all0,swap/max/OOM0; Now2/Inbox/Config .604/.660/.261s and WindowsNow2 .780s. At23:37 after another startup: memory3125350400 bytes,anon326569984/file2645655552,high2622, memory PSI0,IO PSIavg10 6.14%,swap/max/OOM0; Now2 .652s/Inbox .691s. Additional cache/IO startup pressure still resolves without sustained memory PSI; keep two-minute monitoring until23:55 and check deltas before replenishing slots. No loaded control-journey incident closure or unattended stabilization claim.
 
 CG364 is approved priority2, depends onCG354/CG361: remove demonstrated redundant/ineffective assertions and unnecessary fixture work, preserving distinct regression cases and measuring actual savings. This is queued only; no tests were removed by the operator audit.
+
+At23:41 the three current workers had live PIDs; memory3177615360 bytes was mostlyfile2565791744/anon389193728,shmem140050432,high3415,cumulative memory stall42822microseconds, memory/IO PSIavg10 zero,swap/max/OOM0,Now2 .711s/Inbox .730s. Continue monitoring; no material pressure recurrence.
+
+CG340/PR246 received a mechanical operator cleanup at23:43 with no active run: preserved snapshot6dc8fb0 under operator-test-tmp/snapshot-salvage-20260906T2343Z (JSON plus hashed backup), restored only docs/design/snapshot.json from base58e13b99 and pushed0484952b76a9fa0144ed08868e944dfa8d27b4eb. Verified its entire Git tree equals intended worker7df508f2f1706b6a2511389c74d5553f0e1b0fd3. PreviousCI evidence is not called a new-head pass; new CI pending, PR body updated. After current-head CI succeeds, update evidence and request review through supported actions; do not spend a worker revision removing the already-cleaned artifact. CG341/PR247 still follows ordinary review; do not alter its branch while a reviewer is active. This is a supervised intervention, not unattended evidence.
