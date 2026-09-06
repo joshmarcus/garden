@@ -16,7 +16,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/205
 attempts: 1
 last_dispatched_at: '2026-09-06T00:47:05+00:00'
 created: '2026-09-05T20:56:29+00:00'
-updated: '2026-09-06T01:56:29+00:00'
+updated: '2026-09-06T02:05:58+00:00'
 ---
 
 ## Goal
@@ -44,3 +44,4 @@ Observed 2026-09-05: CG-225's winner (codex terra, PR #184) sat in `in_review` f
 - 2026-09-06T00:47:05+00:00 dispatched work run 20260906T004649Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~12178 tokens)
 - 2026-09-06T01:49:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/205 (base main): Trial conclusion now dispatches a real automated review round for the winner's PR (mirroring the normal work-run push path) instead of treating the model comparison as a stand-in for review, and the Inbox card reads 'review queued' instead of 'no review yet' while that round is in flight. cost=$4.12
 - 2026-09-06T01:56:29+00:00 automated review requested changes: The trial-specific review-dispatch fix is correct and well-tested, but the PR ships a leftover debug script and skips two acceptance criteria that the task's 'folded in at approval' section added to CG-236 itself (queue-on-every-runner/resume, and discarding a moved-head verdict or cancelling a terminal task's review). cost=$0.60
+- 2026-09-06T02:05:58+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-236`) or send it back (`garden triage CG-236 --changes "..."`)

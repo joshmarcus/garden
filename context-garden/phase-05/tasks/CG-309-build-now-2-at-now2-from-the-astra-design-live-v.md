@@ -6,7 +6,7 @@ status: draft
 product: context-garden
 phase: phase-05
 depends_on:
-- CG-307
+- CG-314
 priority: 1
 harness: codex
 model: gpt-6-astra
