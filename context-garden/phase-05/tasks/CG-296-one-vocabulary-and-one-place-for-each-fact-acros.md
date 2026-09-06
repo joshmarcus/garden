@@ -1,17 +1,20 @@
 ---
 id: CG-296
 title: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 3
 difficulty: medium
 reading: []
+branch: garden/cg-296-one-vocabulary-and-one-place-for-each-fact-acros
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T13:20:54+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T00:24:04+00:00'
+updated: '2026-09-06T13:20:54+00:00'
 ---
 
 ## Goal
@@ -61,3 +64,4 @@ Each of these persona findings was a draft of its own; they are cancelled with t
 - 2026-09-06T00:20:37+00:00 difficulty easy -> medium
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002113Z-edit) cost=$0.10
 - 2026-09-06T00:24:04+00:00 approved (cli)
+- 2026-09-06T13:20:54+00:00 dispatched work run 20260906T131807Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8662 tokens)

@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
 last_dispatched_at: '2026-09-06T08:47:03+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T09:16:35+00:00'
+updated: '2026-09-06T13:18:49+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,5 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T09:10:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/222: Committed 18a9dd2 to preserve structured results when a detached check job crashes, replacing the opaque no-results error with the exception detail. cost=$0.65
 - 2026-09-06T09:15:29+00:00 automated review requested changes: Pool rotation and attribution are substantially implemented, but valid empty-model members and top-level string mappings route to the wrong model. The PR also includes an unrelated check-runner fix. cost=$0.55
 - 2026-09-06T09:16:35+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-230`) or send it back (`garden triage CG-230 --changes "..."`)
+- 2026-09-06T13:18:42+00:00 triage: changes requested by hand: Owner-authorized additional revision: preserve intentional empty model members such as codex:, honor backward-compatible
+- 2026-09-06T13:18:49+00:00 re-enabled by hand; revise run will follow

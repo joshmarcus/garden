@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,10 +13,13 @@ reading:
 - src/garden/model.py
 - tests/test_planner.py
 - docs/design.md
+branch: garden/cg-294-planning-sequences-dependent-tasks-and-inlines-r
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T13:18:07+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T00:55:55+00:00'
+updated: '2026-09-06T13:18:07+00:00'
 ---
 
 ## Goal
@@ -43,3 +46,4 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-283 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:55:37+00:00 integrated 1 suggestion(s) (run 20260906T005023Z-edit) cost=$0.62
 - 2026-09-06T00:55:55+00:00 approved (cli)
+- 2026-09-06T13:18:07+00:00 dispatched work run 20260906T131632Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~22973 tokens)

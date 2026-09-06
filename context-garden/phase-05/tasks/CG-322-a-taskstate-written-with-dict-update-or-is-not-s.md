@@ -1,32 +1,18 @@
 ---
 id: CG-322
 title: A _TaskState written with dict.update or |= is not saved
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: easy
 reading:
-- context-garden/phase-05/specs/now-page.md
-- context-garden/phase-01-bootstrap/specs/botanical-theme.md
-- src/garden/web/templates/base.html
-- src/garden/web/templates/board.html
-- src/garden/web/templates/costs.html
-- src/garden/web/templates/herbarium.html
-- src/garden/web/templates/runs.html
-- src/garden/web/pages/costs.py
-- src/garden/web/pages/board.py
-- src/garden/web/pages/trellis.py
-- src/garden/charts.py
-- src/garden/events.py
-- src/garden/plants.py
-- src/garden/scheduler/queue.py
-- src/garden/web/app.py
-- src/garden/web/common.py
+- src/garden/scheduler/state.py
+- tests/test_state.py
 discovered_from: CG-308
 created: '2026-09-06T03:36:56+00:00'
-updated: '2026-09-06T03:36:56+00:00'
+updated: '2026-09-06T13:20:31+00:00'
 ---
 
 ## Goal
@@ -44,3 +30,8 @@ Discovered by CG-308 (Build Now 1 at /now1 from the Fable design: live view of w
 ## Log
 
 - 2026-09-06T03:36:56+00:00 discovered by CG-308
+
+## Acceptance criteria
+
+- [ ] All supported dict mutators persist their changes through State.save and retain concurrent disjoint updates; regression tests cover update, |= and deletion via clear. Unsupported mutators fail explicitly rather than silently losing writes.
+- 2026-09-06T13:20:31+00:00 approved (cli)

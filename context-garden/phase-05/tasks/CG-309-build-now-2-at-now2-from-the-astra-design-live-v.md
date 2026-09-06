@@ -33,7 +33,7 @@ model: gpt-6-astra
 attempts: 1
 last_dispatched_at: '2026-09-06T13:04:33+00:00'
 created: '2026-09-06T00:57:47+00:00'
-updated: '2026-09-06T13:13:31+00:00'
+updated: '2026-09-06T13:23:11+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,6 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T13:04:33+00:00 dispatched revise run 20260906T130429Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~27783 tokens)
 - 2026-09-06T13:07:03+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
 - 2026-09-06T13:13:31+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T13:21:29+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-309`) or send it back (`garden triage CG-309 --changes "..."`)
+- 2026-09-06T13:22:57+00:00 triage: changes requested by hand: Owner-authorized continuation after interrupted revise. Rebase this existing PR onto current main; do not restart the im
+- 2026-09-06T13:23:11+00:00 re-enabled by hand; revise run will follow

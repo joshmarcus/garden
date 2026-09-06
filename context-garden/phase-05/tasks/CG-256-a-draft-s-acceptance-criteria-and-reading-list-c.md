@@ -1,17 +1,20 @@
 ---
 id: CG-256
 title: A draft's acceptance criteria and reading list can be edited inline on the task page
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 3
 difficulty: medium
 reading: []
+branch: garden/cg-256-a-draft-s-acceptance-criteria-and-reading-list-c
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T13:16:31+00:00'
 created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-06T00:24:03+00:00'
+updated: '2026-09-06T13:16:31+00:00'
 ---
 
 ## Goal
@@ -43,3 +46,4 @@ A refusal without a repair path sends the owner to a text editor. This adds inli
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-245 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002112Z-edit) cost=$0.10
 - 2026-09-06T00:24:03+00:00 approved (cli)
+- 2026-09-06T13:16:31+00:00 dispatched work run 20260906T131505Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7768 tokens)

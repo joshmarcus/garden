@@ -2,7 +2,7 @@
 id: CG-308
 title: 'Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on:
@@ -33,7 +33,7 @@ model: claude-fable-5-1
 attempts: 2
 last_dispatched_at: '2026-09-06T12:57:14+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T12:57:14+00:00'
+updated: '2026-09-06T13:21:07+00:00'
 ---
 
 ## Goal
@@ -104,3 +104,4 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T12:22:41+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-06T12:40:55+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/_runs.html); a rebase agent will resolve it
 - 2026-09-06T12:57:14+00:00 dispatched rebase run 20260906T125629Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~7205 tokens)
+- 2026-09-06T13:21:07+00:00 Rebase completed and GitHub head is CLEAN with green CI; no live rebase remains. Recover stale running state and request a fresh review. Prior operator-only-period finding is tracked by CG-334.

@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: waiting_human
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/223
 attempts: 1
 last_dispatched_at: '2026-09-06T12:20:27+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T13:15:07+00:00'
+updated: '2026-09-06T13:22:43+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,6 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 - 2026-09-06T12:20:27+00:00 dispatched revise run 20260906T122022Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21382 tokens)
 - 2026-09-06T12:39:46+00:00 worker says nothing to change: No actionable review feedback or CI failure remains on the open PR. cost=$0.62
 - 2026-09-06T13:15:07+00:00 no-change accepted by the person; resuming the round without a new work run
+- 2026-09-06T13:19:33+00:00 Owner-authorized recovery of empty waiting-human card after no-change acceptance (CG-328). Existing pre-PR check is running; preserve it and require a fresh automated review of persona failure recovery before merge.
+- 2026-09-06T13:21:06+00:00 Existing pre-PR check 20260906T131533Z-check is active; reconcile stale waiting-human/in-review task state to its running continuation. The check must finish before review or merge.
+- 2026-09-06T13:22:43+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/223: Re-checked PR #223: there are no public review comments or review verdicts outstanding, and its CI test check is successful. The branch already contains the requested failure handling and description update, so no further change is warranted.
