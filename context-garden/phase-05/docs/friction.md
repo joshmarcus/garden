@@ -82,3 +82,10 @@ The Now page shows hand merges as '— until metrics carries them'; the metrics 
 ### 2026-09-06 · reported by CG-237 (The not-logged-in check reads a worker's prose as an auth failure: match the CLI's own error, not the report text) in run 20260906T033748Z-revise
 
 - The original phase-04 stdout.json files were unavailable because they were truncated; surviving final result texts were used per the human-provided instruction.
+
+### 2026-09-06 · reported by CG-314 (Design Now 2: astra's take on the Now page, information architecture, visual system, motion, and a static mock of every state) in run 20260906T034122Z-revise
+
+- External garden reading files are absent locally; GitHub CLI authentication was unavailable to reread them.
+- Direct WSL launches intermittently failed with UtilAcceptVsock; launching Edge through Windows PowerShell enabled full-page captures.
+- Persona execution is required by acceptance but prohibited by worker operating rules.
+- The supplied aggregate snapshot cannot establish shared metrics computation provenance.
