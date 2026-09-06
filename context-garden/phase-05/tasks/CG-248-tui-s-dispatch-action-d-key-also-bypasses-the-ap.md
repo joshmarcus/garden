@@ -22,7 +22,7 @@ discovered_from: CG-238
 attempts: 1
 last_dispatched_at: '2026-09-06T00:38:17+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T00:46:10+00:00'
+updated: '2026-09-06T00:51:56+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,5 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T00:24:04+00:00 approved (cli)
 - 2026-09-06T00:38:17+00:00 dispatched work run 20260906T003801Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~26695 tokens)
 - 2026-09-06T00:46:10+00:00 opened https://github.com/joshmarcus/context-garden/pull/203 (base main): Added a draft-status and active-run guard to the TUI's action_dispatch, matching the web's dispatch gate, with two new regression tests in tests/test_tui.py. cost=$0.86
+- 2026-09-06T00:51:50+00:00 automated review: approve — Adds the draft-status and active-run guards to the TUI's action_dispatch, matching the web's behavior, with two passing regression tests; a minor theoretical race remains from the lack of an action lock but it mirrors the TUI's existing architecture and isn't introduced by this change. cost=$0.54
+- 2026-09-06T00:51:56+00:00 rebasing before merge; already on main's tip; not rebased or pushed
