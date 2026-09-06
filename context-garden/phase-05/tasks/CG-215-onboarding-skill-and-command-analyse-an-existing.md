@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-215-onboarding-skill-and-command-analyse-an-existing
 pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
-last_dispatched_at: '2026-09-06T05:29:21+00:00'
+last_dispatched_at: '2026-09-06T10:17:35+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T07:04:19+00:00'
+updated: '2026-09-06T11:11:40+00:00'
 ---
 
 ## Goal
@@ -79,3 +79,7 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T07:02:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Verified the existing onboarding implementation without modifying the clean branch. All 14 onboarding tests and the complete lint check pass.
 - 2026-09-06T07:02:52+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-215` for one more round, or review on GitHub
 - 2026-09-06T07:04:19+00:00 automated review requested changes: The core onboarding flow and tests work, but CODEOWNERS team parsing can trust the wrong account and the report is not a complete record of inspected inputs. cost=$0.43
+- 2026-09-06T10:04:59+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T10:17:35+00:00 dispatched revise run 20260906T101732Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~22895 tokens)
+- 2026-09-06T11:11:39+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Completed onboarding provenance and CODEOWNERS safety: team ownership tokens are no longer added as trusted users, and the report records every local source, workflow, documentation, and environment input inspected. The change is committed and all tests and lint pass. cost=$1.46
+- 2026-09-06T11:11:40+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-215` for one more round, or review on GitHub

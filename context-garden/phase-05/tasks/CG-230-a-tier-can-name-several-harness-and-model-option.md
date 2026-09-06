@@ -2,7 +2,7 @@
 id: CG-230
 title: A tier can name several harness and model options, and dispatch spreads runs across them to share
   quotas, skipping a paused or exhausted one
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
 last_dispatched_at: '2026-09-06T08:47:03+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T08:47:03+00:00'
+updated: '2026-09-06T09:16:35+00:00'
 ---
 
 ## Goal
@@ -66,3 +66,6 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T08:18:23+00:00 dispatched rebase run 20260906T081747Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~9469 tokens)
 - 2026-09-06T08:45:49+00:00 pre-PR checks failed (checks); revise run will fix before the PR is updated cost=$0.03
 - 2026-09-06T08:47:03+00:00 dispatched revise run 20260906T084648Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20468 tokens)
+- 2026-09-06T09:10:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/222: Committed 18a9dd2 to preserve structured results when a detached check job crashes, replacing the opaque no-results error with the exception detail. cost=$0.65
+- 2026-09-06T09:15:29+00:00 automated review requested changes: Pool rotation and attribution are substantially implemented, but valid empty-model members and top-level string mappings route to the wrong model. The PR also includes an unrelated check-runner fix. cost=$0.55
+- 2026-09-06T09:16:35+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-230`) or send it back (`garden triage CG-230 --changes "..."`)

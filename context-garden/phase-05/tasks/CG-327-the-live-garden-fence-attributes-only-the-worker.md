@@ -2,7 +2,7 @@
 id: CG-327
 title: 'The live-garden fence attributes only the worker''s own writes: the operator''s and the scheduler''s
   commits during a run''s window are never counted against the run'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,8 +13,11 @@ reading:
 - src/garden/scheduler/reap.py
 - src/garden/runs.py
 - tests/test_fence.py
+branch: garden/cg-327-the-live-garden-fence-attributes-only-the-worker
+attempts: 1
+last_dispatched_at: '2026-09-06T11:04:12+00:00'
 created: '2026-09-06T04:28:19+00:00'
-updated: '2026-09-06T04:28:20+00:00'
+updated: '2026-09-06T11:04:12+00:00'
 ---
 
 ## Goal
@@ -33,3 +36,4 @@ A run is fenced only for writes the run made. The live-garden check attributes a
 
 ## Log
 - 2026-09-06T04:28:20+00:00 approved (cli)
+- 2026-09-06T11:04:12+00:00 dispatched work run 20260906T110121Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11491 tokens)

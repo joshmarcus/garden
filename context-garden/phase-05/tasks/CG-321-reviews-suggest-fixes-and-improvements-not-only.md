@@ -16,10 +16,11 @@ reading:
 - principles/00-index.md
 - tests/test_review.py
 branch: garden/cg-321-reviews-suggest-fixes-and-improvements-not-only
+pr: https://github.com/joshmarcus/context-garden/pull/226
 attempts: 1
-last_dispatched_at: '2026-09-06T08:55:08+00:00'
+last_dispatched_at: '2026-09-06T11:20:43+00:00'
 created: '2026-09-06T03:19:28+00:00'
-updated: '2026-09-06T08:55:08+00:00'
+updated: '2026-09-06T11:20:43+00:00'
 ---
 
 ## Goal
@@ -42,3 +43,8 @@ Owner, 2026-09-06 03:22Z: "reviews can actually suggest fixes and improvements a
 - 2026-09-06T05:55:55+00:00 dispatched work run 20260906T054128Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~15339 tokens)
 - 2026-09-06T06:52:14+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$1.11
 - 2026-09-06T08:55:08+00:00 dispatched revise run 20260906T085506Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~17506 tokens)
+- 2026-09-06T09:17:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/226 (base main): Preserved legacy fix-less review verdicts during restart recovery while retaining the one-time re-ask for freshly reaped blocking findings. cost=$0.48
+- 2026-09-06T09:27:43+00:00 automated review requested changes: The actionable review fields render correctly, but high-priority findings are omitted from revision work. The PR description also needs to describe the complete feature and motivation. cost=$0.92
+- 2026-09-06T10:24:25+00:00 dispatched revise run 20260906T102422Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~17379 tokens)
+- 2026-09-06T11:18:54+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$0.99
+- 2026-09-06T11:20:43+00:00 dispatched revise run 20260906T112039Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~23343 tokens)

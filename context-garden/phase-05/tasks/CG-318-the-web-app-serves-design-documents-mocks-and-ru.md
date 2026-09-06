@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-318-the-web-app-serves-design-documents-mocks-and-ru
 pr: https://github.com/joshmarcus/context-garden/pull/217
 attempts: 1
-last_dispatched_at: '2026-09-06T08:50:48+00:00'
+last_dispatched_at: '2026-09-06T10:13:34+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T08:50:48+00:00'
+updated: '2026-09-06T10:50:44+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,11 @@ Anything a worker renders for a person to look at is one click away in the web a
 - 2026-09-06T07:47:02+00:00 dispatched revise run 20260906T074700Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, rebase round 3 (not counted), ~15618 tokens)
 - 2026-09-06T08:39:13+00:00 pre-PR checks failed (checks); revise run will fix before the PR is updated cost=$0.16
 - 2026-09-06T08:50:48+00:00 dispatched revise run 20260906T085047Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~15043 tokens)
+- 2026-09-06T09:33:00+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.19
+- 2026-09-06T09:34:18+00:00 dispatched revise run 20260906T093400Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, rebase round 4 (not counted), ~16024 tokens)
+- 2026-09-06T10:12:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/217: The existing revision is verified clean; the reported QA failure is not reproducible. cost=$0.07
+- 2026-09-06T10:12:47+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/pages/task.py); a rebase agent will resolve it
+- 2026-09-06T10:13:34+00:00 dispatched rebase run 20260906T101329Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~4029 tokens)
+- 2026-09-06T10:35:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/217: Rebased CG-318 onto origin/main and resolved the task.py conflict while preserving both sides. cost=$0.01
+- 2026-09-06T10:49:26+00:00 automated review requested changes: The core single-product surfaces work, but multi-product design links resolve against the wrong checkout, snapshots omit real queue state, and required visual verification is incomplete. cost=$1.00
+- 2026-09-06T10:50:44+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-318`) or send it back (`garden triage CG-318 --changes "..."`)

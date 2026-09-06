@@ -2,7 +2,7 @@
 id: CG-308
 title: 'Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on:
@@ -31,9 +31,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/218
 harness: claude
 model: claude-fable-5-1
 attempts: 2
-last_dispatched_at: '2026-09-06T07:44:45+00:00'
+last_dispatched_at: '2026-09-06T09:39:37+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T09:08:48+00:00'
+updated: '2026-09-06T11:26:55+00:00'
 ---
 
 ## Goal
@@ -93,3 +93,10 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T07:44:45+00:00 dispatched revise run 20260906T074443Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~13824 tokens)
 - 2026-09-06T08:52:43+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
 - 2026-09-06T09:08:48+00:00 operator: the revise committed the aligned build and its captures (91 commits after a rebase) but ended waiting on a background test run; pushed by hand with a lease
+- 2026-09-06T09:15:31+00:00 automated review requested changes: Now 1 satisfies most criteria, including live updates, clocks, text output, heat maps, and responsive captures. It cannot merge because operator spend and annotations disappear in windows without runs or merges. cost=$1.04
+- 2026-09-06T09:16:35+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-308`) or send it back (`garden triage CG-308 --changes "..."`)
+- 2026-09-06T09:36:24+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T09:39:37+00:00 dispatched revise run 20260906T093935Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~14320 tokens)
+- 2026-09-06T10:55:51+00:00 parent CG-307 merged; rebased onto main and retargeted the PR
+- 2026-09-06T11:23:02+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round cost=$3.79
+- 2026-09-06T11:26:55+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow

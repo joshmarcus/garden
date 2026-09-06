@@ -27,12 +27,13 @@ reading:
 - src/garden/web/app.py
 - src/garden/web/common.py
 branch: garden/cg-309-build-now-2-at-now2-from-the-astra-design-live-v
+pr: https://github.com/joshmarcus/context-garden/pull/227
 harness: codex
 model: gpt-6-astra
 attempts: 1
-last_dispatched_at: '2026-09-06T08:57:52+00:00'
+last_dispatched_at: '2026-09-06T11:12:44+00:00'
 created: '2026-09-06T00:57:47+00:00'
-updated: '2026-09-06T08:57:52+00:00'
+updated: '2026-09-06T11:12:44+00:00'
 ---
 
 ## Goal
@@ -73,3 +74,10 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T08:56:52+00:00 parent  merged; rebase onto main conflicts; the next run must resolve it
 - 2026-09-06T08:56:52+00:00 parent  merged; rebase conflicts; a rebase agent will resolve it cost=$16.72
 - 2026-09-06T08:57:52+00:00 dispatched rebase run 20260906T085750Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~9707 tokens)
+- 2026-09-06T09:38:47+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); no PR opened yet; revise run will fix cost=$0.02
+- 2026-09-06T09:50:45+00:00 dispatched revise run 20260906T095043Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~9800 tokens)
+- 2026-09-06T10:49:24+00:00 worker blocked: Committed fcc5880 to restore the existing model-metrics API while retaining Now 2's windowed computation, with a CLI regression test. Now tests and lint pass, but full-suite verification remains blocked by intermittent QA request timeouts during filesystem operations. cost=$23.12
+- 2026-09-06T10:59:45+00:00 operator: astra committed the Now 2 build (fcc5880) and blocked only on running the full suite under load; pushed by hand, review to judge
+- 2026-09-06T11:01:47+00:00 PR attached: https://github.com/joshmarcus/context-garden/pull/227 (pr_number none -> 227)
+- 2026-09-06T11:10:02+00:00 automated review requested changes: Now 2 is broadly implemented and its focused tests pass, but the required per-goal phase status is missing. The PR description also contains process narration and does not summarize verification cleanly. cost=$0.67
+- 2026-09-06T11:12:44+00:00 dispatched revise run 20260906T111240Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~27709 tokens)

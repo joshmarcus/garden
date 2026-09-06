@@ -2,7 +2,7 @@
 id: CG-320
 title: 'Reviews by the model one step above the writer: a review ladder across harnesses picks the reviewer
   from the PR''s last work or revise model'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-320-reviews-by-the-model-one-step-above-the-writer-a
 pr: https://github.com/joshmarcus/context-garden/pull/224
 attempts: 1
-last_dispatched_at: '2026-09-06T08:08:56+00:00'
+last_dispatched_at: '2026-09-06T09:18:35+00:00'
 created: '2026-09-06T03:18:47+00:00'
-updated: '2026-09-06T09:00:11+00:00'
+updated: '2026-09-06T10:23:35+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,6 @@ Owner, 2026-09-06 03:20Z: "let's do all reviews by an agent that's one step up f
 - 2026-09-06T08:40:34+00:00 operator: no-change accepted after a load-killed pre-PR check (no PR yet); back to ready so the loop re-runs checks and opens the PR (CG-328)
 - 2026-09-06T08:56:54+00:00 opened https://github.com/joshmarcus/context-garden/pull/224 (base main): The existing ladder implementation passes its focused test module (20 passed). The pre-PR timeout is consistent with shared-machine filesystem contention from concurrent full suites, not a reproducible code failure.
 - 2026-09-06T09:00:11+00:00 automated review requested changes: Review-ladder routing is implemented and all 20 focused tests pass. The Config-page change lacks the required desktop/mobile light/dark captures, and the PR description does not explain the feature or phase goal. cost=$0.54
+- 2026-09-06T09:18:35+00:00 dispatched revise run 20260906T091830Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~22333 tokens)
+- 2026-09-06T10:16:39+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/224: PR reviews route through the live cross-harness model ladder, with the writer and selected reviewer recorded and shown on the task page. Added visual evidence and a rendering test for the rung label. cost=$2.18
+- 2026-09-06T10:23:35+00:00 automated review: approve — The live review ladder correctly routes reviews one rung above the last writer across harnesses, records and displays the relationship, and preserves tier fallback behavior. Focused review/web tests pass (98 passed), and the description and visual evidence meet the task requirements. cost=$0.33
