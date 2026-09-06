@@ -2,7 +2,7 @@
 id: CG-330
 title: 'A failed rebase or check run never restarts a task''s work from scratch: the PR stays, the rebase
   or check is retried, and only a failed work or revise run counts as an attempt'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,8 +14,11 @@ reading:
 - src/garden/scheduler/checkruns.py
 - src/garden/scheduler/dispatch.py
 - tests/scheduler/test_reap.py
+branch: garden/cg-330-a-failed-rebase-or-check-run-never-restarts-a-ta
+attempts: 1
+last_dispatched_at: '2026-09-06T11:36:45+00:00'
 created: '2026-09-06T06:24:13+00:00'
-updated: '2026-09-06T06:24:16+00:00'
+updated: '2026-09-06T11:36:45+00:00'
 ---
 
 ## Goal
@@ -32,7 +35,6 @@ Auxiliary runs fail on their own terms. When a rebase run, a check run or an edi
 - [ ] A check run that ends without any check result (killed, timeout, no output) is recorded as "check did not run" with the cause and retried once; it never counts as a failed check against the revision cap; a test covers a killed check.
 - [ ] `attempt N failed ... will retry` and the fresh-work-run path fire only for work and revise runs; a source-level test asserts the reap path for rebase, check and edit modes never calls the work dispatcher.
 
-- [ ] A base probe that could not run (its worktree has no venv, exit 127; killed by a signal; timed out) reports 'probe did not run' with the cause and is retried once; it never marks the base branch broken and never parks other tasks (2026-09-06 11:00–11:23Z: two false base-broken verdicts, one exit 127 in 86 s, one SIGTERM at 12 min, while main was green).
-
 ## Log
 - 2026-09-06T06:24:16+00:00 approved (cli)
+- 2026-09-06T11:36:45+00:00 dispatched work run 20260906T112700Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~25030 tokens)

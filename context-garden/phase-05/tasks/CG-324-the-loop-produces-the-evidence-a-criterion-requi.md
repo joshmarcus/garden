@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: running
+status: waiting_human
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-324-the-loop-produces-the-evidence-a-criterion-requi
 pr: https://github.com/joshmarcus/context-garden/pull/223
 attempts: 1
-last_dispatched_at: '2026-09-06T10:50:23+00:00'
+last_dispatched_at: '2026-09-06T12:20:27+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T10:50:23+00:00'
+updated: '2026-09-06T12:39:46+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,7 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 - 2026-09-06T09:26:14+00:00 dispatched revise run 20260906T092606Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20470 tokens)
 - 2026-09-06T10:23:35+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$1.45
 - 2026-09-06T10:50:23+00:00 dispatched revise run 20260906T105016Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21928 tokens)
+- 2026-09-06T11:46:19+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round cost=$1.97
+- 2026-09-06T11:53:26+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T12:20:27+00:00 dispatched revise run 20260906T122022Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21382 tokens)
+- 2026-09-06T12:39:46+00:00 worker says nothing to change: No actionable review feedback or CI failure remains on the open PR. cost=$0.62

@@ -33,7 +33,7 @@ model: claude-fable-5-1
 attempts: 2
 last_dispatched_at: '2026-09-06T09:39:37+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T11:26:55+00:00'
+updated: '2026-09-06T12:40:55+00:00'
 ---
 
 ## Goal
@@ -100,3 +100,6 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T10:55:51+00:00 parent CG-307 merged; rebased onto main and retargeted the PR
 - 2026-09-06T11:23:02+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round cost=$3.79
 - 2026-09-06T11:26:55+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T12:15:26+00:00 pre-PR check did not finish (); no output to revise against; needs a human
+- 2026-09-06T12:22:41+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-06T12:40:55+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/_runs.html); a rebase agent will resolve it

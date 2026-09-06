@@ -2,7 +2,7 @@
 id: CG-320
 title: 'Reviews by the model one step above the writer: a review ladder across harnesses picks the reviewer
   from the PR''s last work or revise model'
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/224
 attempts: 1
 last_dispatched_at: '2026-09-06T09:18:35+00:00'
 created: '2026-09-06T03:18:47+00:00'
-updated: '2026-09-06T10:23:35+00:00'
+updated: '2026-09-06T11:57:36+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,4 @@ Owner, 2026-09-06 03:20Z: "let's do all reviews by an agent that's one step up f
 - 2026-09-06T09:18:35+00:00 dispatched revise run 20260906T091830Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~22333 tokens)
 - 2026-09-06T10:16:39+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/224: PR reviews route through the live cross-harness model ladder, with the writer and selected reviewer recorded and shown on the task page. Added visual evidence and a rendering test for the rung label. cost=$2.18
 - 2026-09-06T10:23:35+00:00 automated review: approve — The live review ladder correctly routes reviews one rung above the last writer across harnesses, records and displays the relationship, and preserves tier fallback behavior. Focused review/web tests pass (98 passed), and the description and visual evidence meet the task requirements. cost=$0.33
+- 2026-09-06T11:57:36+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/224

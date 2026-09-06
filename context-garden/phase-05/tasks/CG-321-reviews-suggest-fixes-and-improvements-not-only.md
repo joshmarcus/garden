@@ -2,7 +2,7 @@
 id: CG-321
 title: 'Reviews suggest fixes and improvements, not only a verdict: each finding carries a concrete fix,
   a separate improvements list goes beyond the criteria, and the revise brief carries both to the worker'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/226
 attempts: 1
 last_dispatched_at: '2026-09-06T11:20:43+00:00'
 created: '2026-09-06T03:19:28+00:00'
-updated: '2026-09-06T11:20:43+00:00'
+updated: '2026-09-06T12:41:03+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,8 @@ Owner, 2026-09-06 03:22Z: "reviews can actually suggest fixes and improvements a
 - 2026-09-06T10:24:25+00:00 dispatched revise run 20260906T102422Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~17379 tokens)
 - 2026-09-06T11:18:54+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$0.99
 - 2026-09-06T11:20:43+00:00 dispatched revise run 20260906T112039Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~23343 tokens)
+- 2026-09-06T11:57:24+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 56af81dfcba5, not because of this branch; waiting for the base to go green, no revise round cost=$0.47
+- 2026-09-06T12:15:26+00:00 base branch `main` recovered (moved to 40fc26107ed2); rebased onto it and the pre-PR checks pass now — continuing without a worker run
+- 2026-09-06T12:15:28+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/226: Automated reviews now provide concrete fixes and optional improvements, carry all findings into revision briefs, render them on PRs and task pages, and retain declined improvements as retro-visible friction.
+- 2026-09-06T12:39:11+00:00 automated review: approve — Automated reviews now carry actionable fixes and optional improvements through comments, task pages, revision briefs, and retro-visible friction. The focused parser, scheduler, brief, friction, and web tests passed. cost=$0.72
+- 2026-09-06T12:41:03+00:00 rebasing before merge; already on main's tip; not rebased or pushed
