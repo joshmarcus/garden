@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-215-onboarding-skill-and-command-analyse-an-existing
 pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
-last_dispatched_at: '2026-09-06T04:37:11+00:00'
+last_dispatched_at: '2026-09-06T05:29:21+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T05:25:16+00:00'
+updated: '2026-09-06T06:22:51+00:00'
 ---
 
 ## Goal
@@ -71,3 +71,7 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T04:37:11+00:00 dispatched revise run 20260906T043710Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~22266 tokens)
 - 2026-09-06T05:06:08+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human cost=$1.63
 - 2026-09-06T05:25:16+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-06T05:29:21+00:00 dispatched revise run 20260906T052917Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~22231 tokens)
+- 2026-09-06T05:58:06+00:00 worker says nothing to change: The reported pre-PR failure was a SIGTERM rather than a code assertion failure. A rerun passed the entire onboarding suite; the full suite advanced beyond the prior termination point but later stalled under severe concurrent test/process contention on the host, so there is no branch defect to fix from the supplied feedback. cost=$1.28
+- 2026-09-06T06:22:42+00:00 no-change accepted by the person; resuming the round without a new work run
+- 2026-09-06T06:22:51+00:00 operator: no-change accepted (the check was killed by the 05:25 service restart); back to review (CG-328)

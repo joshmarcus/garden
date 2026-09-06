@@ -2,7 +2,7 @@
 id: CG-230
 title: A tier can name several harness and model options, and dispatch spreads runs across them to share
   quotas, skipping a paused or exhausted one
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-230-a-tier-can-name-several-harness-and-model-option
 pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
-last_dispatched_at: '2026-09-06T04:31:53+00:00'
+last_dispatched_at: '2026-09-06T05:29:23+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T05:25:20+00:00'
+updated: '2026-09-06T05:29:23+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,4 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T05:20:38+00:00 pre-PR check(s) test failed at the stale base db1fe0678dce; the base branch `main` had moved, so rebased onto it and the checks pass now — no revise round
 - 2026-09-06T05:20:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/222 (base main): Tier and review pools now distribute work across harness/model members, skip paused harnesses, and preserve member attribution through runs, costs, and metrics. Trial contenders can expand a configured tier pool. cost=$1.69
 - 2026-09-06T05:25:20+00:00 automated review requested changes: Core pool rotation works, but required near-limit quota weighting, retro/PR attribution, and reliable review-member selection are incomplete. The branch also contains unrelated CG-317 UI changes. cost=$0.46
+- 2026-09-06T05:29:23+00:00 dispatched revise run 20260906T052921Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~26202 tokens)

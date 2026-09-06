@@ -30,10 +30,10 @@ branch: garden/cg-308-build-now-1-at-now1-from-the-fable-design-live-v
 pr: https://github.com/joshmarcus/context-garden/pull/218
 harness: claude
 model: claude-fable-5-1
-attempts: 1
-last_dispatched_at: '2026-09-06T04:45:49+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-06T06:17:04+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T04:45:49+00:00'
+updated: '2026-09-06T06:17:04+00:00'
 ---
 
 ## Goal
@@ -76,3 +76,8 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T04:28:42+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/218: The runs-by-harness-and-model table is now a per-row heat-map table computed in the now module and rendered by the same macro as the difficulty tables; the four captures of the live page at 1280 and 390, light and dark, were taken, read back, iterated on (a phone overflow and a too-narrow column fixed) and filed under docs/screenshots; the merge queue's round limit reads the scheduler's default. cost=$9.81
 - 2026-09-06T04:34:42+00:00 automated review requested changes: The Now 1 implementation is otherwise broad and well tested, including live updates, clocks, shaded tables, text output, and responsive captures. It cannot merge because the last-period region omits required hand-merge, rebase-round, and operator-spend metrics. cost=$1.11
 - 2026-09-06T04:45:49+00:00 dispatched revise run 20260906T044547Z-revise via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, ~27583 tokens)
+- 2026-09-06T05:37:05+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/218: The last-period region now shows hand merges, rebase rounds per merge split into mechanical and agent, and the operator's spend and share, computed in the now1 module from the window's events and the operator ledger, worded once for the page and garden now, tested, and recaptured at both widths in both themes. cost=$7.29
+- 2026-09-06T05:37:58+00:00 PR conflicts with garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1; rebase onto garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1 conflicts (src/garden/events.py); a rebase agent will resolve it
+- 2026-09-06T05:41:25+00:00 dispatched rebase run 20260906T054112Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, conflict only; easy tier, ~11182 tokens)
+- 2026-09-06T06:16:05+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
+- 2026-09-06T06:17:04+00:00 dispatched work run 20260906T061702Z-work via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1 stacked on CG-307, ~28340 tokens)

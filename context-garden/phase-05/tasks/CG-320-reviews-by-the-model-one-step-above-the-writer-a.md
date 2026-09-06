@@ -17,9 +17,9 @@ reading:
 - tests/scheduler/test_dispatch.py
 branch: garden/cg-320-reviews-by-the-model-one-step-above-the-writer-a
 attempts: 1
-last_dispatched_at: '2026-09-06T05:24:07+00:00'
+last_dispatched_at: '2026-09-06T06:17:02+00:00'
 created: '2026-09-06T03:18:47+00:00'
-updated: '2026-09-06T05:24:07+00:00'
+updated: '2026-09-06T06:17:02+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,5 @@ Owner, 2026-09-06 03:20Z: "let's do all reviews by an agent that's one step up f
 ## Log
 - 2026-09-06T03:18:48+00:00 approved (cli)
 - 2026-09-06T05:24:07+00:00 dispatched work run 20260906T052209Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21312 tokens)
+- 2026-09-06T06:16:10+00:00 pre-PR checks failed (checks); no PR opened yet; revise run will fix cost=$0.92
+- 2026-09-06T06:17:02+00:00 dispatched revise run 20260906T061658Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~21599 tokens)

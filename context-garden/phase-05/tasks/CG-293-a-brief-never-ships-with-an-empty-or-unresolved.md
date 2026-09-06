@@ -13,9 +13,9 @@ branch: garden/cg-293-a-brief-never-ships-with-an-empty-or-unresolved
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T05:22:09+00:00'
+last_dispatched_at: '2026-09-06T06:16:57+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T05:22:09+00:00'
+updated: '2026-09-06T06:16:57+00:00'
 ---
 
 ## Goal
@@ -53,3 +53,5 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T04:33:38+00:00 dispatched work run 20260906T043153Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8069 tokens)
 - 2026-09-06T05:20:50+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$2.97
 - 2026-09-06T05:22:09+00:00 dispatched revise run 20260906T052157Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9023 tokens)
+- 2026-09-06T06:16:05+00:00 pre-PR checks failed (checks); no PR opened yet; revise run will fix cost=$0.79
+- 2026-09-06T06:16:57+00:00 dispatched revise run 20260906T061656Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8361 tokens)

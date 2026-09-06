@@ -2,7 +2,7 @@
 id: CG-321
 title: 'Reviews suggest fixes and improvements, not only a verdict: each finding carries a concrete fix,
   a separate improvements list goes beyond the criteria, and the revise brief carries both to the worker'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,8 +15,11 @@ reading:
 - src/garden/web/templates/task.html
 - principles/00-index.md
 - tests/test_review.py
+branch: garden/cg-321-reviews-suggest-fixes-and-improvements-not-only
+attempts: 1
+last_dispatched_at: '2026-09-06T05:55:55+00:00'
 created: '2026-09-06T03:19:28+00:00'
-updated: '2026-09-06T03:19:29+00:00'
+updated: '2026-09-06T05:55:55+00:00'
 ---
 
 ## Goal
@@ -36,3 +39,4 @@ Owner, 2026-09-06 03:22Z: "reviews can actually suggest fixes and improvements a
 
 ## Log
 - 2026-09-06T03:19:29+00:00 approved (cli)
+- 2026-09-06T05:55:55+00:00 dispatched work run 20260906T054128Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~15339 tokens)

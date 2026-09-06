@@ -21,9 +21,9 @@ reading:
 branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
 pr: https://github.com/joshmarcus/context-garden/pull/221
 attempts: 1
-last_dispatched_at: '2026-09-06T05:07:42+00:00'
+last_dispatched_at: '2026-09-06T06:08:31+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T05:07:42+00:00'
+updated: '2026-09-06T06:08:31+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,6 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - 2026-09-06T04:54:48+00:00 opened https://github.com/joshmarcus/context-garden/pull/221 (base main): Added bearer-authenticated, lease-based remote run claiming plus the `garden worker` agent, independent clone execution, branch pushing, transcript/result reporting, and scheduler integration for work, review, and check runs. Added end-to-end coverage and updated the worker protocol and architecture documentation. cost=$4.22
 - 2026-09-06T04:59:44+00:00 automated review requested changes: The pull-based work path is present, but remote checks lose required context, leases do not fence stale workers, and the worker does not upload its transcript. The tests also do not exercise a completed remote review or check run. cost=$0.76
 - 2026-09-06T05:07:42+00:00 dispatched revise run 20260906T050735Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~27819 tokens)
+- 2026-09-06T05:39:32+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/221: Remote leases now fence stale workers, checks retain portable scheduler context, transcripts return to the garden, and integration coverage completes remote work, check, and review runs. All changes are committed and the full test and lint suites pass. cost=$2.36
+- 2026-09-06T05:59:00+00:00 automated review requested changes: Remote execution is substantially implemented, but expired workers can still push after lease loss, and claim payloads can expose credentials embedded in repository URLs or harness arguments. cost=$0.48
+- 2026-09-06T06:08:31+00:00 dispatched revise run 20260906T060704Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~28189 tokens)

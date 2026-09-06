@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,8 +16,11 @@ reading:
 - src/garden/web/pages/task.py
 - docs/worker-protocol.md
 - tests/scheduler/test_poll.py
+branch: garden/cg-324-the-loop-produces-the-evidence-a-criterion-requi
+attempts: 1
+last_dispatched_at: '2026-09-06T06:23:05+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T03:59:39+00:00'
+updated: '2026-09-06T06:23:05+00:00'
 ---
 
 ## Goal
@@ -37,3 +40,4 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 
 ## Log
 - 2026-09-06T03:59:39+00:00 approved (cli)
+- 2026-09-06T06:23:05+00:00 dispatched work run 20260906T061704Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~19289 tokens)
