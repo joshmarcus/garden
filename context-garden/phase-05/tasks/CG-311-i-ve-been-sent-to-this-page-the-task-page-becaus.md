@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
 last_dispatched_at: '2026-09-06T03:02:48+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T03:15:44+00:00'
+updated: '2026-09-06T03:30:06+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,6 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 - 2026-09-06T03:01:58+00:00 automated review requested changes: The shared card is correctly placed and focused web tests pass, but the new shared Inbox card breaks Discuss when more than one attention item is present. The PR description also needs phase context and verification results. cost=$0.23
 - 2026-09-06T03:02:48+00:00 dispatched revise run 20260906T030243Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~19351 tokens)
 - 2026-09-06T03:15:44+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/208: Task pages retain the shared pending-decision card, and shared Inbox attention cards now use task-specific Discuss panel and copy targets so multiple stopped tasks remain independently actionable. cost=$0.39
+- 2026-09-06T03:21:35+00:00 automated review: approve — The shared decision-card fragment is rendered directly below the task title and reused by the Inbox; focused web tests pass. cost=$0.28
+- 2026-09-06T03:22:12+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T03:30:06+00:00 rebased; patch id unchanged; verdict kept

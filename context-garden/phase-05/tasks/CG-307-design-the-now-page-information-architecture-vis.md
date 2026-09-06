@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T02:28:45+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T03:04:18+00:00'
+updated: '2026-09-06T03:30:06+00:00'
 ---
 
 ## Goal
@@ -71,3 +71,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T02:55:05+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-307` for one more round, or review on GitHub
 - 2026-09-06T03:01:55+00:00 persona usability-expert review: score 6/10, 3 finding(s)
 - 2026-09-06T03:04:18+00:00 persona designer review: score 6/10, 3 finding(s)
+- 2026-09-06T03:20:54+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T03:30:06+00:00 automated review: request_changes — The design is substantial and the focused checks pass, but required row-relative table shading/marks are missing, the model tables do not yet use the garden metrics computation, and the real-state mock contains a contradictory review-capacity explanation. Visual verification at the required viewport/theme combinations is also not evidenced. cost=$0.50

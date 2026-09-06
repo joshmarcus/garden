@@ -2,7 +2,7 @@
 id: CG-312
 title: 'Inbox decision cards lay out at full width: the text column no longer collapses to one word per
   line and the action buttons no longer overlap the evidence list'
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/211
 attempts: 1
 last_dispatched_at: '2026-09-06T03:08:43+00:00'
 created: '2026-09-06T02:03:53+00:00'
-updated: '2026-09-06T03:08:43+00:00'
+updated: '2026-09-06T03:30:21+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,5 @@ Seen by the owner on 2026-09-06 01:58Z on the live Inbox (CG-242's failed-worker
 - 2026-09-06T03:05:49+00:00 opened https://github.com/joshmarcus/context-garden/pull/211 (base main): Decision cards now keep text, evidence, and actions in separate responsive rows on the Inbox and task page. Long run IDs wrap safely, and the walkthrough capture includes a failed-worker decision card. cost=$1.06
 - 2026-09-06T03:07:57+00:00 automated review requested changes: The action-column overlap is removed, but the Inbox text track still has a zero minimum width, so the stated minimum-width guarantee is not implemented. Focused regression tests and Ruff pass. cost=$0.15
 - 2026-09-06T03:08:43+00:00 dispatched revise run 20260906T030840Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11834 tokens)
+- 2026-09-06T03:30:08+00:00 branch pushed but PR failed (pull request create failed: GraphQL: No commits between main and garden/cg-312-inbox-decision-cards-lay-out-at-full-width-the-t (createPullRequest)); open it by hand and run `garden pr CG-312 <url>` cost=$0.69
+- 2026-09-06T03:30:21+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/211
