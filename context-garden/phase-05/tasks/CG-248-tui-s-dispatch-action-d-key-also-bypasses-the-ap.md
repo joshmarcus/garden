@@ -1,7 +1,7 @@
 ---
 id: CG-248
 title: TUI's dispatch action ('d' key) also bypasses the approve gate on a draft
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -22,7 +22,7 @@ discovered_from: CG-238
 attempts: 1
 last_dispatched_at: '2026-09-06T00:38:17+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T00:51:56+00:00'
+updated: '2026-09-06T00:55:41+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,4 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T00:46:10+00:00 opened https://github.com/joshmarcus/context-garden/pull/203 (base main): Added a draft-status and active-run guard to the TUI's action_dispatch, matching the web's dispatch gate, with two new regression tests in tests/test_tui.py. cost=$0.86
 - 2026-09-06T00:51:50+00:00 automated review: approve — Adds the draft-status and active-run guards to the TUI's action_dispatch, matching the web's behavior, with two passing regression tests; a minor theoretical race remains from the lack of an action lock but it mirrors the TUI's existing architecture and isn't introduced by this change. cost=$0.54
 - 2026-09-06T00:51:56+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-06T00:55:41+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/203

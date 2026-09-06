@@ -2,7 +2,7 @@
 id: CG-250
 title: 'A reopen verdict is a working process: blocking tasks arrive with a complete brief, are approved
   through the gate, and the phase reopens and closes on them without hand steps'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ harness: codex
 attempts: 1
 last_dispatched_at: '2026-09-06T00:43:29+00:00'
 created: '2026-09-05T23:41:22+00:00'
-updated: '2026-09-06T00:43:29+00:00'
+updated: '2026-09-06T00:55:33+00:00'
 ---
 
 ## Goal
@@ -46,3 +46,4 @@ Phase 04's retro (2026-09-05 23:05Z, fable) returned `reopen` with two blocking 
 - 2026-09-06T00:35:47+00:00 opened https://github.com/joshmarcus/context-garden/pull/197 (base main): Reopen verdicts now file complete blocker briefs, pass through the normal approval gate, retain incomplete blockers as visible pending work, and automatically close the phase after all blockers become terminal. cost=$0.76
 - 2026-09-06T00:41:31+00:00 automated review requested changes: Approval-gate delegation, freeze handling, and self-closing all work and are tested, but the decision card only reveals which blockers need a brief after a failed decide attempt, not proactively as the criterion requires. cost=$0.66
 - 2026-09-06T00:43:29+00:00 dispatched revise run 20260906T004328Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7424 tokens)
+- 2026-09-06T00:55:33+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/197: Reopen verdict records now retain blocker brief gaps when the retro files them, so the Inbox decision card identifies incomplete blockers before a decision attempt. cost=$0.52

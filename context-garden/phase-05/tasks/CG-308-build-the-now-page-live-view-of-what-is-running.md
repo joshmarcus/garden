@@ -26,8 +26,8 @@ reading:
 - src/garden/scheduler/queue.py
 - src/garden/web/app.py
 - src/garden/web/common.py
-harness: claude
-model: claude-fable-5-1
+harness: codex
+model: gpt-6-astra
 created: '2026-09-06T00:53:25+00:00'
 updated: '2026-09-06T00:53:26+00:00'
 ---
