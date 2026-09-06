@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: failed
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -25,7 +25,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T01:51:53+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T01:57:49+00:00'
+updated: '2026-09-06T02:04:20+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T01:46:22+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T01:51:53+00:00 dispatched revise run 20260906T015152Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~15662 tokens)
 - 2026-09-06T01:57:49+00:00 revision failed: no GARDEN_RESULT in worker output (see final.md)
+- 2026-09-06T02:04:20+00:00 re-enabled by hand; revise run will follow
