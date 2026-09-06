@@ -2,7 +2,7 @@
 id: CG-237
 title: 'The not-logged-in check reads a worker''s prose as an auth failure: match the CLI''s own error,
   not the report text'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,11 +12,11 @@ reading:
 - src/garden/harness.py
 - tests/test_harness.py
 branch: garden/cg-237-the-not-logged-in-check-reads-a-worker-s-prose-a
-pr: https://github.com/joshmarcus/context-garden/pull/207
+pr: https://github.com/joshmarcus/context-garden/pull/214
 attempts: 1
 last_dispatched_at: '2026-09-06T03:15:11+00:00'
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-06T03:15:11+00:00'
+updated: '2026-09-06T03:34:40+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ A worker whose report talks about a login outage is a finished run, not a login 
 - 2026-09-06T03:10:08+00:00 worker asks: Please provide the four discarded persona stdout artifacts so I can add exact replay fixtures. cost=$0.05
 - 2026-09-06T03:15:10+00:00 kept 1 local-only commit(s) on `backup/20260906T031510Z-resume` before syncing to origin/garden/cg-237-the-not-logged-in-check-reads-a-worker-s-prose-a's head: da020b9 Fix Codex auth error precedence
 - 2026-09-06T03:15:11+00:00 dispatched resume run 20260906T031510Z-resume via local [codex model=gpt-5.6-luna] (fresh session, base main, ~12588 tokens)
+- 2026-09-06T03:34:40+00:00 opened https://github.com/joshmarcus/context-garden/pull/214 (base main): Auth detection now distinguishes CLI failures from worker prose, including Codex error precedence. Exact surviving persona replays retain done status, cost, and persona payloads. cost=$0.06

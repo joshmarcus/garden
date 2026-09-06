@@ -2,7 +2,7 @@
 id: CG-314
 title: 'Design Now 2: astra''s take on the Now page, information architecture, visual system, motion,
   and a static mock of every state'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -26,12 +26,13 @@ reading:
 - src/garden/web/app.py
 - src/garden/web/common.py
 branch: garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform
+pr: https://github.com/joshmarcus/context-garden/pull/215
 harness: codex
 model: gpt-6-astra
 attempts: 1
 last_dispatched_at: '2026-09-06T03:15:07+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T03:15:07+00:00'
+updated: '2026-09-06T03:35:11+00:00'
 ---
 
 ## Goal
@@ -58,6 +59,8 @@ The owner asked for an operational dashboard that is the gem of the experience a
 
 - [ ] Every table of numbers shades its cells within each row from a light green ground for the best value to a light red for the worst (direction per metric: lower is better for cost, revise rounds and lead time; higher for first-pass approval), cells with n under three shaded faintly and marked, legible in light and dark, with a small mark on best and worst so colour is never the only signal (owner, 2026-09-06 02:45Z).
 
+- [ ] The worker looked at its own page: captures at 1280 and 390, light and dark, taken with the Edge recipe in the product overview, read back and iterated on, and listed in the PR; the design departs from the spec's layout wherever it has a better idea and says why (owner, 2026-09-06 03:40Z: new and beautiful ideas, not the prescription followed precisely).
+
 ## Log
 
 - 2026-09-06T02:08:00+00:00 filed by the operator: the astra contender of the CG-307 trial died in the /tmp outage and the trial relaunch only re-dispatched the fable side; astra designs Now 2 as its own task
@@ -65,3 +68,5 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T02:46:57+00:00 dispatched work run 20260906T024636Z-work via local [codex model=gpt-6-astra] (fresh session, base main, ~7470 tokens)
 - 2026-09-06T03:10:10+00:00 worker asks: Can the runner return 1280px and 390px light/dark browser captures, designer and usability-expert persona reports, and confirmation of the supplied snapshot's metric computation provenance? cost=$9.91
 - 2026-09-06T03:15:07+00:00 dispatched resume run 20260906T031506Z-resume via local [codex model=gpt-6-astra] (fresh session, base main, ~7975 tokens)
+- 2026-09-06T03:34:42+00:00 opened https://github.com/joshmarcus/context-garden/pull/215 (base main): Preserved the snapshot-rendered Now 2 design and mock, added inspected Edge captures with explicit visual limitations, and updated validation evidence. Delivered for runner review; outstanding acceptance evidence is listed below. cost=$4.22
+- 2026-09-06T03:35:11+00:00 triage: changes requested by hand: The owner grants the data: a real, sanitized snapshot of this garden (the same one Fable's Now 1 mock was rendered from,

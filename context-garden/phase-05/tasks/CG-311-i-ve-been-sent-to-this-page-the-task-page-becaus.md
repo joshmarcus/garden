@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: in_review
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-311-the-task-page-shows-the-decision-a-worker-s-no-c
 pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
-last_dispatched_at: '2026-09-06T03:02:48+00:00'
+last_dispatched_at: '2026-09-06T03:35:32+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T03:30:06+00:00'
+updated: '2026-09-06T03:35:32+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,5 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 - 2026-09-06T03:21:35+00:00 automated review: approve — The shared decision-card fragment is rendered directly below the task title and reused by the Inbox; focused web tests pass. cost=$0.28
 - 2026-09-06T03:22:12+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-06T03:30:06+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-06T03:33:19+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/task.html); a rebase agent will resolve it
+- 2026-09-06T03:35:32+00:00 dispatched rebase run 20260906T033526Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~7574 tokens)

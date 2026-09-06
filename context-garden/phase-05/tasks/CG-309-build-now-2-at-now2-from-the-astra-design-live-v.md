@@ -55,6 +55,8 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 
 - [ ] Every table of numbers shades its cells within each row from a light green ground for the best value to a light red for the worst (direction per metric: lower is better for cost, revise rounds and lead time; higher for first-pass approval), cells with n under three shaded faintly and marked, legible in light and dark, with a small mark on best and worst so colour is never the only signal (owner, 2026-09-06 02:45Z).
 
+- [ ] The worker looked at its own page: captures at 1280 and 390, light and dark, taken with the Edge recipe in the product overview, read back and iterated on, and listed in the PR; the design departs from the spec's layout wherever it has a better idea and says why (owner, 2026-09-06 03:40Z: new and beautiful ideas, not the prescription followed precisely).
+
 ## Log
 
 - 2026-09-06T01:02:00+00:00 filed by the operator: the owner asked for both trial designs to ship as Now 1 and Now 2

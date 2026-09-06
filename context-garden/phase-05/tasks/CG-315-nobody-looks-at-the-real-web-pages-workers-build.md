@@ -42,6 +42,8 @@ Owner's friction, 2026-09-06 02:10Z: "we're not actually looking at the real web
 - [ ] The product setup installs the browser without hand steps and `garden doctor` reports whether it is present; a machine without it degrades to HTML-only capture with a warning, never a silent skip.
 - [ ] Tests: a template change triggers the `ui` check and produces the expected files; a non-UI change does not; the review brief builder includes the capture paths.
 
+- [ ] The brief of any task that touches a template, a style or a design file carries the capture recipe and the rule that captures at both widths, light and dark, must be read back before the result is written; a result without captures for a UI change is a mechanical changes_requested (owner, 2026-09-06: 'be sure it can see what it's building').
+
 ## Log
 - 2026-09-06T02:10:34+00:00 approved (cli)
 - 2026-09-06T02:47:20+00:00 dispatched work run 20260906T024657Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~19890 tokens)
