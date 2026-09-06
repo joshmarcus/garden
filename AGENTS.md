@@ -102,3 +102,15 @@ First priority: honest no_change/decision handling (CG-337), resource admission 
 Apply actual-application review policy to relevant pending PRs and track failures; screenshots alone do not prove an interaction. Record all findings but defer unrelated scope rather than automatically expanding the milestone. Do not claim automatic code enforcement until CG-339/341 are installed and verified.
 
 Dispatch resumption on this pinned version uses POST http://127.0.0.1:8765/resume with a loopback Origin header; `garden resume` requires a task id and is NOT the global resume command. Keep max_parallel=2 and the runtime CPU cap during stabilization.
+
+## Latest concurrency decision
+
+Josh explicitly raised max_parallel to 3 in the operator session on 2026-09-06. This supersedes the earlier two-worker recovery limit. Retain runtime CPUQuota=200% and CPUWeight=20; observe resource pressure and do not restore five workers.
+
+## Memory incident recovery — supersedes earlier concurrency settings
+
+Josh rebooted after host lockup on 2026-09-06. Operator restarted the server with no live workers/checks and persistent systemd limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. These survive reboot (previous CPU limits were runtime-only). garden.yaml and the live override now have max_parallel=1; review_parallel=1. Do not return to three workers until measurements support it or Josh explicitly requests it again. MemoryMax is a last-resort hard bound and may terminate a process if exceeded; classify that as an environment failure and preserve its work.
+
+Until 2026-09-06 16:01 UTC, garden-resource-watch.service samples every 15 seconds and pauses dispatch on pressure. The operator heartbeat is every five minutes during this hour, then restore 25 minutes. Read /home/joshua/.local/state/garden-operator/resource-watch.jsonl for anon/file/shmem/swap, temp headroom and top processes. The persistent guard script lives under ~/.local/lib/garden-operator/resource_watch.py; this particular observation service exits after one hour.
+
+Measured contributors: several simultaneous full pytest suites, RAM-backed /tmp files, and a 102MiB state.json containing 91.1MiB of duplicated fence manifests. Pre-reboot cgroup peak was 6.5GiB. No retained kernel OOM event establishes the exact final cause. CG-344 covers bounded fence bookkeeping; CG-338 covers resource admission. Do not clear caches or delete state/manifests blindly, and never delete active-run temp directories.
