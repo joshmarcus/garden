@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-230-a-tier-can-name-several-harness-and-model-option
 pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
-last_dispatched_at: '2026-09-06T07:41:10+00:00'
+last_dispatched_at: '2026-09-06T08:47:03+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T07:41:10+00:00'
+updated: '2026-09-06T08:47:03+00:00'
 ---
 
 ## Goal
@@ -61,3 +61,8 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T07:05:15+00:00 dispatched revise run 20260906T070511Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20295 tokens)
 - 2026-09-06T07:40:14+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$1.43
 - 2026-09-06T07:41:10+00:00 dispatched revise run 20260906T074108Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, rebase round 2 (not counted), ~20854 tokens)
+- 2026-09-06T08:15:49+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/222: Completed quota-aware tier and review pools, including member attribution and review routing. Restored an unrelated active-trial task-page regression accidentally removed by the prior revision. cost=$1.29
+- 2026-09-06T08:16:51+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/events.py); a rebase agent will resolve it
+- 2026-09-06T08:18:23+00:00 dispatched rebase run 20260906T081747Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~9469 tokens)
+- 2026-09-06T08:45:49+00:00 pre-PR checks failed (checks); revise run will fix before the PR is updated cost=$0.03
+- 2026-09-06T08:47:03+00:00 dispatched revise run 20260906T084648Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20468 tokens)

@@ -2,7 +2,7 @@
 id: CG-216
 title: 'Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP,
   works in its own clone, pushes the branch and posts the result and transcript back'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/221
 attempts: 1
 last_dispatched_at: '2026-09-06T07:41:08+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T08:07:58+00:00'
+updated: '2026-09-06T08:14:42+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,5 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - 2026-09-06T07:40:13+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$4.73
 - 2026-09-06T07:41:08+00:00 dispatched revise run 20260906T074100Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~29318 tokens)
 - 2026-09-06T08:07:58+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/221: Stabilized the scripted canary by aligning HTTP request timeouts with the configured flow deadline. The previously failing canary and the complete test and lint suites pass. cost=$1.27
+- 2026-09-06T08:12:10+00:00 automated review requested changes: Remote work, review, check, lease reclaim, and staged-push fencing are well covered, but persona runs remain local-only and setup commands can leak scheduler credentials in claim payloads. cost=$0.74
+- 2026-09-06T08:14:42+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-216`) or send it back (`garden triage CG-216 --changes "..."`)

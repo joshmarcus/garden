@@ -2,7 +2,7 @@
 id: CG-311
 title: 'The task page shows the decision a worker''s no-change or question report needs: the same card
   and actions as the Inbox, right where the notification sends you'
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/208
 attempts: 1
 last_dispatched_at: '2026-09-06T07:11:09+00:00'
 created: '2026-09-06T01:58:42+00:00'
-updated: '2026-09-06T07:46:16+00:00'
+updated: '2026-09-06T08:20:52+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,6 @@ Reported by the owner from /tasks/CG-245 on 2026-09-06 01:58Z: "I've been sent t
 - 2026-09-06T07:46:11+00:00 pre-PR check(s) test failed at the stale base 508a28c4fe30; the base branch `main` had moved, so rebased onto it and the checks pass now — no revise round
 - 2026-09-06T07:46:16+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/208: Added and inspected four task-page captures documenting the shared pending-decision card at desktop and phone widths in light and dark modes. The existing UI implementation remains unchanged; full tests and lint pass. cost=$1.01
 - 2026-09-06T07:46:16+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-311` for one more round, or review on GitHub
+- 2026-09-06T08:16:15+00:00 automated review: approve — The shared decision card is correctly rendered immediately below the task header and reused by the Inbox, with task-specific actions intact. Focused tests and Ruff pass, and the four committed captures provide the required visual evidence. cost=$0.53
+- 2026-09-06T08:16:58+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-06T08:20:52+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/208

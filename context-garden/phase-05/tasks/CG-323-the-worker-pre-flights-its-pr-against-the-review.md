@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,9 +20,9 @@ reading:
 - tests/test_review.py
 branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
 attempts: 1
-last_dispatched_at: '2026-09-06T05:25:22+00:00'
+last_dispatched_at: '2026-09-06T08:57:54+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-06T07:18:11+00:00'
+updated: '2026-09-06T08:57:54+00:00'
 ---
 
 ## Goal
@@ -41,8 +41,11 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - [ ] Tests: the pre-flight section renders; each mechanical check fails on its shape and passes on a clean diff; a criteria change after dispatch shows up as a note in the next revise brief
 - [ ] Measured after a week in the retro: send-backs on findings-only PRs per merged task, before and after (the number this task exists to move)
 
+- [ ] The work and revise briefs state that the run ends when the worker stops: long commands run in the foreground, nothing is backgrounded to await a notification, and the result is written only after the checks have returned (five Fable runs on 2026-09-06 ended 'waiting for the monitor' with their work committed and no result).
+
 ## Log
 - 2026-09-06T03:59:39+00:00 approved (cli)
 - 2026-09-06T05:25:22+00:00 dispatched work run 20260906T052256Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~28859 tokens)
 - 2026-09-06T06:42:21+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 508a28c4fe30, not because of this branch; waiting for the base to go green, no revise round cost=$1.36
 - 2026-09-06T07:18:11+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T08:57:54+00:00 dispatched revise run 20260906T085752Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~29428 tokens)
