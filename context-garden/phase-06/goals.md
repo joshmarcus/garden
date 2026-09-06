@@ -2,6 +2,7 @@
 plant: peony
 latin: Paeonia mascula
 plate: VI
+frozen: '2026-09-06'
 ---
 
 # phase-06 goals
@@ -22,3 +23,7 @@ Some proposals are worth keeping and not worth building yet. They live here with
 ## Non-goals
 
 - Anything a user needs in phase 05.
+
+## Deferred feature expansion, owner decision 2026-09-06
+
+This phase is frozen until all required phase-05 stabilization evidence passes. Preserve existing PRs and branches but do not dispatch, revise or merge them during the hold. Deferred work includes OpenRouter and its adapter spike, remote workers, model pools, operating presets, and consolidation of the two Now pages. Reprioritize based on the adoption demonstration after the gate; do not auto-unfreeze at a calendar time or merely because phase-05 tasks merged.

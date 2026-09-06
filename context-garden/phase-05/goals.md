@@ -10,6 +10,10 @@ _Stub written by the operator on 2026-09-05; rewritten by the phase-04 retro (jo
 
 **In one sentence: the garden runs in someone else's environment, not only in this one, and it can say what a merged task costs.** Phase 03 made the loop leaveable and phase 04 gave it its features and made the leaveability mechanism true; phase 05 is about adoption: a team points it at a project they already have, on models and machines they already pay for, and the tier map is set from cost per accepted task rather than from a price list.
 
+## Current priority: stabilization before expansion
+
+Owner decision, 2026-09-06: complete and demonstrate the dependable core loop before starting additional features. [The stabilization gate](specs/stabilization.md) is mandatory for phase closure and phase-06 unfreezing. Onboarding remains the adoption demonstration. OpenRouter, remote workers, model pools, operating presets and Now consolidation are deferred; existing branches and PRs are retained. The earlier expansion goals below are historical intent, not permission to dispatch deferred work.
+
 ## Why this phase
 
 A second team cannot use the garden today: setting it up means writing product.md, principles and the setup block by hand, its workers only run on the scheduler's own machine or over ssh from it, and every model call goes through two vendor accounts that both hit their quota on 2026-09-05. Phase 04 also left three numbers pointing the wrong way (hand merges 16 of 57, cost per easy task $5.04, first-pass approval 71 to 79%) and no metric that would tell a routing experiment apart from noise: sonnet halved the run price and did not lower the bill per task. And the security review of the phase-04 build found three new highs and three mediums in the worker fence, two of which block phase 04's close and the rest of which land here first.
@@ -17,9 +21,9 @@ A second team cannot use the garden today: setting it up means writing product.m
 ## Goals
 
 1. **Onboarding.** `garden onboard` and the `garden-onboard` skill read an existing project and its environment and draft the garden for it (CG-215). Its output passes `garden doctor` on a non-Python fixture with no hand edits, its planner runs in the scrubbed environment, and every draft it writes passes the approve gate.
-2. **Any model, at the right price.** An OpenRouter harness with per-tier models and cost from the response (CG-213), as an adapter around an existing OpenAI-compatible CLI rather than a garden-owned tool-calling loop, routed by difficulty with failure-driven escalation and measured by cost per accepted task, per `specs/cost-aware-model-routing.md`. It dispatches only after the measurement in goal 5 has merged.
-3. **Shared quotas.** A tier can name several harness and model options and dispatch spreads runs across them, skipping a paused or exhausted account and recording the member on each run (CG-230).
-4. **Any machine.** Workers on independent remote hosts that claim runs over HTTP and push results back (CG-216); last in dispatch order, and its acceptance test is a named second team's machine if one exists, a throwaway host otherwise.
+2. **Deferred to phase 06 — any model, at the right price.** An OpenRouter harness with per-tier models and cost from the response (CG-213), as an adapter around an existing OpenAI-compatible CLI rather than a garden-owned tool-calling loop, routed by difficulty with failure-driven escalation and measured by cost per accepted task, per `specs/cost-aware-model-routing.md`. It dispatches only after the measurement in goal 5 has merged.
+3. **Deferred to phase 06 — shared quotas.** A tier can name several harness and model options and dispatch spreads runs across them, skipping a paused or exhausted account and recording the member on each run (CG-230).
+4. **Deferred to phase 06 — any machine.** Workers on independent remote hosts that claim runs over HTTP and push results back (CG-216); last in dispatch order, and its acceptance test is a named second team's machine if one exists, a throwaway host otherwise.
 5. **What the phase-04 retro adds.**
    - *The numbers exist before the experiments.* Cost per accepted task and first-pass approval per model, tier and harness in `garden metrics`, the Costs page and the retro's Numbers; hand merges and tick duration in metrics and the rail; the retro captures its own walkthrough before the personas run and its Numbers section reads the operator ledger at `context-garden/docs/operator-spend.jsonl`.
    - *Trust, round three.* The planner and the synchronous kickoff run in the worker environment; a worker cannot rewrite state.json, a task file or the harness config dir without it being restored and attributed; notify.command runs scrubbed. These follow CG-239 and CG-242 from the reopen.
@@ -39,10 +43,12 @@ A second team cannot use the garden today: setting it up means writing product.m
 
 ## Definition of done
 
+The required application journey, independent-project demonstration, eight-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
+
 Measured with `garden metrics` against phase 04, by the tool, not by hand.
 
 - A non-Python fixture project is onboarded to a passing `garden validate` and `garden doctor` with no hand-written files.
-- One task each completes through OpenRouter and through a remote worker on a throwaway host, reviewed and merged by the loop.
+- Deferred to phase 06: one task each completes through OpenRouter and a remote worker. Phase 05 instead requires the independent-project and sustained-operation evidence in specs/stabilization.md.
 - Cost per accepted easy task at or under $4 (phase 04: $5.04) and first-pass approval at or above 90% (phase 04: 79% easy, 71% medium), both reported per model, tier and harness; the sonnet-era figures from the phase-04 operator retro are the baseline.
 - Hand merges zero on every tier and runner (phase 04: 16 of 57); agent rebase rounds per merge under 0.3 (phase 04: 0.55, with 1.02 mechanical by design).
 - A phase-05 walkthrough committed by the retro before the personas run; tick duration and hand merges visible in the rail and in metrics.
