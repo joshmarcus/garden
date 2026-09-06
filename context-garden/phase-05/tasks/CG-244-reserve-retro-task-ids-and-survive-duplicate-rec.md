@@ -1,7 +1,7 @@
 ---
 id: CG-244
 title: Reserve retro task IDs and survive duplicate records
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,7 +18,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T01:58:54+00:00'
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-06T02:05:31+00:00'
+updated: '2026-09-06T02:07:00+00:00'
 ---
 
 ## Goal
@@ -41,3 +41,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T01:58:54+00:00 dispatched rebase run 20260906T015853Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~6810 tokens)
 - 2026-09-06T02:03:52+00:00 push failed: lease rejected on garden/cg-244-reserve-retro-task-ids-and-survive-duplicate-rec: expected origin at 163d31e2ab66, now at 99b4779f7fd8 cost=$0.47
 - 2026-09-06T02:05:31+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T02:07:00+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/196

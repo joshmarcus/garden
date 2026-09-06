@@ -1,7 +1,7 @@
 ---
 id: CG-249
 title: '`garden dispatch <id>` (CLI) allows dispatching a draft directly'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ discovered_from: CG-238
 attempts: 1
 last_dispatched_at: '2026-09-06T00:40:28+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T01:46:23+00:00'
+updated: '2026-09-06T02:08:38+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,4 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T01:00:31+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
 - 2026-09-06T01:05:18+00:00 dispatch failed: [Errno 28] No space left on device: '/tmp/garden-empty-hooks-aqv7z4mk'
 - 2026-09-06T01:46:23+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T02:08:38+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/204
