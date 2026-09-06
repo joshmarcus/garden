@@ -302,3 +302,7 @@ docs/design.md still lists automatic merging under Non-goals while the opt-in me
 
 - The fence manifest (fence_guard.json) stores file hashes, not parsed executable-field values, so the acceptance criterion's literal phrasing ("compare with the fence manifest") wasn't directly implementable; I compared against the scheduler's currently-applied config instead, which is provably equivalent since a reload never advances past a fenced run in flight — worth calling out in case a future reader expects a literal manifest read.
 - The reading list didn't flag that several long-lived processes (web Hub, TUI, garden trial --wait) call Store.invalidate() outside of Scheduler.tick(), which would have silently defeated the whole hold from any of those paths; finding and fixing that took more exploration than the brief's file list suggested.
+
+### 2026-09-06 · reported by CG-242 (Hold untrusted config changes before live reload) in run 20260906T021458Z-revise
+
+- GitHub CLI is unauthenticated in this worktree, so live PR comments and CI could not be queried directly.
