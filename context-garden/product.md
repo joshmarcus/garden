@@ -70,3 +70,20 @@ Layout:
 - No network calls in `model`, `store`, `graph`, `brief`; those must stay testable offline.
 - Task files are the source of truth; `.garden/` holds only run records and PR bookkeeping.
 - Keep the CLI, web and TUI thin: all logic lives in `scheduler`, `graph`, `brief`, `store`.
+
+## Looking at pages: screenshots from a WSL worker
+
+Workers on this machine have no browser inside WSL, but Windows Edge is reachable and renders both files and the running app. Use it to see what a person would see before you call a UI change done, and read the PNGs back with the Read tool.
+
+```bash
+EDGE="/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+OUT=/mnt/c/Users/joshm/AppData/Local/Temp/captures          # Edge reads Windows paths only
+mkdir -p "$OUT" && cp -r docs/design "$OUT/"                  # for a static mock; skip for a live page
+"$EDGE" --headless=new --disable-gpu --hide-scrollbars --window-size=1280,2400 \
+  --screenshot="C:\\Users\\joshm\\AppData\\Local\\Temp\\captures\\inbox-1280.png" "http://localhost:8765/inbox"
+"$EDGE" --headless=new --disable-gpu --hide-scrollbars --window-size=390,2400 --force-dark-mode \
+  --screenshot="C:\\Users\\joshm\\AppData\\Local\\Temp\\captures\\mock-390-dark.png" \
+  "file:///C:/Users/joshm/AppData/Local/Temp/captures/design/now-1.html"
+```
+
+Windows sees WSL's localhost, so a page served by `garden serve` (or a test server you start on another port against a fake garden) captures directly. Take 1280 and 390 wide, light and dark, for every page a change touches, and say in the PR which captures you looked at. Fable's Now 1 design run found this route on 2026-09-06; CG-315 turns it into a check the garden runs itself.
