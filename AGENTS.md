@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current handoff, consolidated 2026-09-06 ~17:14 UTC. Replace obsolete state here instead of appending contradictory updates. Verify live state before acting. Historical handoffs are archived in `context-garden/docs/operator-history/`; do not read them as current instructions.
+Current handoff, consolidated 2026-09-06 19:01 UTC. Replace obsolete state here instead of appending contradictory updates. Verify live state before acting. Historical handoffs are archived in `context-garden/docs/operator-history/`; do not read them as current instructions.
 
 ## Start here
 
@@ -34,28 +34,16 @@ The host previously locked up: overlapping test suites, RAM-backed temp and a 10
 
 ## Installed build
 
-Installed pin is 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa as of 2026-09-06 17:40 UTC (verified main CI). It includes memory/lifecycle/operating UI repairs; onboarding's merge had main CI in progress at install time and is not yet installed. Existing server runs normal watch; /, /now1 and /now2 returned HTTP 200 after restart, and global resume returned 200. Verify current state before future pin movement; prefer drained installation/restart; incident exceptions require the preservation and verification procedure. Retain caps and phase holds. Global resume is POST http://127.0.0.1:8765/resume with matching loopback Origin; CLI resume requires a task id.
+Installed pin8842552190ef675dd0af281ea23a82f15cdb1963 (CG-357 PR234) at18:59 UTC after current-head CI and merge. Existing service restarted with no active workers/checks, caps and admission pause preserved. New server PID2315784. This also includes earlier onboarding/evidence/UI repairs. No temporary runtime patches remain. No production history moved or deleted. Verify current state before further pin changes.
 
 Read git log before pushing and commit only intended files. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
 
-## Active web responsiveness incident
+## Web incident: observing recovery from 19:00 UTC
 
-Incident protocol is ACTIVE. Current incident record: `context-garden/docs/incidents/2026-09-06-web-responsiveness.md`. Recovery is not verified; preserve admission pause.
+Follow `context-garden/docs/incident-protocol.md`; current record `context-garden/docs/incidents/2026-09-06-web-responsiveness.md`. CG-357 merged and task done. Operator served benchmarks under caps passed (p95 .213s/ .570s at1546/6000 records with three executing local CPU/metadata workers); Windows browser journeys passed. Actual production Inbox, Board, Now1/Now2 all returned200 after installation and Windows browser navigation succeeded at19:00. WSL Now2 was .55s; Windows PowerShell localhost requests took2.5–2.8s (client-path overhead remains to distinguish). This is initial recovery, not incident closure.
 
-Last verified process/resource details at 18:04 UTC
+Ordinary admission remains paused. One controlled CG-329 revision was dispatched through capped server at19:01 (HTTP303); verify actual PID/output. Observe three successful representative journey checks over at least ten minutes from19:00, including resumed workload, with no renewed pressure. If healthy at/after19:10, resume ordinary operation conservatively up to owner's3 workers/review1. If symptoms recur contain immediately. Do not duplicate CG-357 work or its old dispatches. Keep five-minute monitoring through observation and retrospective.
 
-At 18:21 UTC CG-357 worker finished and check 20260906T182127Z-check (PID2114402) is active. No duplicate worker dispatch needed. Worker reports1172 tests/3 skips and fixture performance improvements; installed/live recovery remains unverified. Scheduler salvage commit7b818c4 accidentally included unrelated snapshot.json; remove its diff after check drains, preserving it, before merging. See incident record for review/evidence details. CG-329 review requested changes; keep it subordinate to recovery. Keep admission paused; full web recovery is not established.
+CG-294 preemption: worktree head f129ed553e6fcc7733be06d87628166ebbe0d454, dirty snapshot/transcript preserved; extra patch /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. Four escaped tests stopped. Resume its preserved work after recovery. CG-337 needs later normal reconciliation. Frozen phase06 and PR221/222 remain held.
 
-Root-cause evidence: py-spy showed repeated full-history scans in concurrent dynamic request threads (RunStore, phase spending, Inbox, Now snapshots and scheduler construction); roughly 1,550 durable run records. CG-357 covers bounded read models and safe archival; no history moved/deleted. Process-local Run.load cache experiment did not fix access and disappeared at the owner-authorized restart around 17:57 UTC. Current server PID 1690856; do not reapply the experiment. Windows/WSL clock endpoint returned 200 after restart, but full Now requests still fail.
-
-CG-294 was preempted via Run.stop and task returned ready through CLI. Its branch head f129ed553e6fcc7733be06d87628166ebbe0d454, dirty snapshot and transcript remain preserved; extra patch /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. Four escaped pytest processes verified in its worktree were terminated. Resume preserved work after urgent repair. CG-357 original startup 20260906T175413Z-work was interrupted before worker launch and superseded; replacement above is live.
-
-18:04 resource sample: service memory 2.66 GiB, swap 380 MiB; memory.high throttling has occurred (11830 cumulative events), no max/OOM kills. VM available 4.8 GiB, /tmp 41% used. Do not increase concurrency; inspect trends and actual tests, preserve active work. This is supervised recovery, not unattended stabilization.
-
-## Required follow-up after this incident
-
-Josh explicitly requests a retrospective after verified recovery and filed tasks that would have prevented the incident. Follow the required retro section in the incident protocol, link existing related work instead of duplicating it, and keep the reminder active until the retrospective and concrete prevention tasks are recorded.
-
-18:30 update: CG-357 PR#234 needs substantive revision; snapshot diff cleaned/preserved in a7bab24, stale-base 89-commit review claim corrected. Revision 20260906T183056Z-revise dispatched through capped server (303), PID 2178766. Verify progress, do not duplicate. Incident active; post-recovery retro remains required.
-
-18:54 UTC: CG-357 PR#234 head a804c04 contains final snapshot cleanup and operator served-load/browser validation. Both controlled workload sizes passed <.6s p95 under caps; see incident record/PR evidence. Current-head CI pending; no need another worker revision for already-addressed findings. After green CI verify current base/head, merge, reconcile, install safely, then live recovery observation and required retro/tasks. No production archive was moved.
+After verified recovery, run the owner-requested retrospective and file/link prevention tasks with counterfactuals and measurable criteria. Record task IDs and retro beside the incident before restoring ordinary25-minute follow-ups. Restoration/merged tasks do not establish unattended phase05 stabilization.

@@ -1,6 +1,6 @@
 # Web responsiveness incident — 2026-09-06
 
-Status: ACTIVE. Lead: current garden operator. Impact began around 17:43 UTC: dynamic pages unavailable or timing out for the owner and browser-dependent work. Static/clock success does not establish recovery.
+Status: OBSERVING RECOVERY since19:00 UTC. Lead: current garden operator. Impact began around 17:43 UTC: dynamic pages unavailable or timing out for the owner and browser-dependent work. Static/clock success does not establish recovery.
 
 ## Current containment and recovery
 
@@ -35,3 +35,7 @@ Owner explicitly requested a retrospective and prevention tasks after recovery. 
 18:30 UTC: CG-357 PR #234 received changes requested for repeated full-history rebuilds, archive integrity/cost correction handling and insufficient realistic performance evidence. Operator removed the unrelated snapshot diff in a7bab24, preserving /home/joshua/work/operator-test-tmp/CG357-snapshot-salvage.json. Reviewer's 89-commit claim was disproven by refreshed origin/main comparison (four scoped original commits); recorded correction in brief. Sent one capped server revision dispatch, HTTP303. Latest run 20260906T183056Z-revise; PID 2178766. Keep incident active and admission paused; repair is not installed.
 
 18:54 UTC operator validation: PR#234 code findings resolved; removed reintroduced unrelated snapshot again and added actual served workload evidence in a804c04. Three independent local CPU/metadata worker processes plus uvicorn shared CPU200%, MemoryHigh3G/Max4G/Swap512M. 60 HTTP requests each:1546 history p95 .213s/max .320s (1576 reads/10 refreshes);6000 p95 .570s/max .695s (6054 reads/19 refreshes). Windows browser verified live Now updates, Open run, Board and Inbox with workers executing. These are controlled workload processes, not model harness sessions. Production still unverified. Current-head CI pending; merge/install after it passes and live work drains, then perform recovery observation and owner-required retro. Evidence in PR docs/design/cg357-validation.
+
+18:59 UTC: PR234 merged8842552190ef675dd0af281ea23a82f15cdb1963 after current-head CI passed and GitHub CLEAN. CG-357 reconciled done. Confirmed no active run records or live worker/test processes; installed that merged build in bounded service (138MiB peak). Restart requested with admission still paused and caps retained. Live verification and10-minute observation are next; incident not closed.
+
+19:00 initial production verification: Windows HTTP Inbox/Board/Now1/Now2 all200 (2.825/2.510/2.637/2.599s including Windows client path); WSL Now2 .547s. Windows browser opened live Now2 and navigated Board→Inbox→Now1 successfully. Server PID2315784; caps retained. Observation begins19:00, needs two further samples through at least19:10 including controlled workload. At19:01 one CG-329 revision dispatched through server,303; ordinary admission remains paused. Verify worker PID/progress and page/resource health on next checks.
