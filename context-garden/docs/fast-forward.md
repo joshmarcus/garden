@@ -35,3 +35,5 @@ Owner scope clarification: leave frozen PRs #221 and #222 open. Fast-forward com
 ## PR resolution ledger
 
 2026-09-06 16:58 UTC — #232 / CG-344: directly repaired and pushed f7b2646 (base merged from current main). Removed unrelated design snapshot, eliminated untrusted manifest fallback, preserved trusted references through manual runs and interrupted finalization, and made integrity failure an honest inspection stop. Added corruption/deletion/reference and concurrent-writer regression coverage. Operator self-review and finding dispositions are in the PR body. 182 targeted tests plus full lint passed; bounded test peak 376 MiB, zero swap. New-head GitHub CI pending; PR not yet merged. This was supervised repair, not unattended stabilization.
+
+2026-09-06 17:02 UTC — #232 merged as bda4911f5a9854212298294ef957813f5b1c016d after full new-head CI passed and GitHub reported CLEAN. CG-344 reconciled to done through the CLI. Four eligible PRs remain (#229, #228, #223, #216); #221/#222 remain held. #229 has a local cleanup/merge commit 35bce9d removing unrelated snapshot and preserving main Now behavior; not yet validated or pushed. Fast-forward remains active.
