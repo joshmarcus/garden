@@ -2,7 +2,7 @@
 id: CG-309
 title: 'Build Now 2 at /now2 from the astra design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: running
+status: ready
 product: context-garden
 phase: phase-05
 depends_on:
@@ -29,10 +29,9 @@ reading:
 branch: garden/cg-309-build-now-2-at-now2-from-the-astra-design-live-v
 harness: codex
 model: gpt-6-astra
-attempts: 1
 last_dispatched_at: '2026-09-06T05:17:35+00:00'
 created: '2026-09-06T00:57:47+00:00'
-updated: '2026-09-06T05:19:02+00:00'
+updated: '2026-09-06T06:48:59+00:00'
 ---
 
 ## Goal
@@ -68,3 +67,4 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T02:14:26+00:00 approved (cli)
 - 2026-09-06T05:17:35+00:00 dispatched work run 20260906T051502Z-work via local [codex model=gpt-6-astra] (fresh session, base garden/cg-314-design-now-2-astra-s-take-on-the-now-page-inform stacked on CG-314, ~8629 tokens)
 - 2026-09-06T05:19:02+00:00 parent CG-314 merged; will rebase onto main when the current run finishes
+- 2026-09-06T06:48:59+00:00 environment stop (auth): auth limit hit on codex; not counted as an attempt; dispatch paused for codex until a probe succeeds

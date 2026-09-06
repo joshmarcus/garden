@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T04:29:47+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T06:16:05+00:00'
+updated: '2026-09-06T07:19:24+00:00'
 ---
 
 ## Goal
@@ -89,3 +89,7 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T05:34:36+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-06T05:35:34+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-06T06:16:05+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
+- 2026-09-06T06:52:50+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-06T06:54:21+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T07:09:42+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
+- 2026-09-06T07:19:24+00:00 nothing to fix; resumed to in review by hand

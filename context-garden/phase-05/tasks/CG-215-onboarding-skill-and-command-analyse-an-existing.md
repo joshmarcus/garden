@@ -2,7 +2,7 @@
 id: CG-215
 title: 'Onboarding skill and command: analyse an existing project and its environment to create a garden
   product, principles, setup config and a first phase'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/216
 attempts: 1
 last_dispatched_at: '2026-09-06T05:29:21+00:00'
 created: '2026-09-05T16:09:07+00:00'
-updated: '2026-09-06T06:22:51+00:00'
+updated: '2026-09-06T07:04:19+00:00'
 ---
 
 ## Goal
@@ -75,3 +75,7 @@ Requested by the user on 2026-09-05 for enterprise use: "analyzing an existing p
 - 2026-09-06T05:58:06+00:00 worker says nothing to change: The reported pre-PR failure was a SIGTERM rather than a code assertion failure. A rerun passed the entire onboarding suite; the full suite advanced beyond the prior termination point but later stalled under severe concurrent test/process contention on the host, so there is no branch defect to fix from the supplied feedback. cost=$1.28
 - 2026-09-06T06:22:42+00:00 no-change accepted by the person; resuming the round without a new work run
 - 2026-09-06T06:22:51+00:00 operator: no-change accepted (the check was killed by the 05:25 service restart); back to review (CG-328)
+- 2026-09-06T07:02:48+00:00 pre-PR check(s) test failed at the stale base 58184073c06b; the base branch `main` had moved, so rebased onto it and the checks pass now — no revise round
+- 2026-09-06T07:02:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/216: Verified the existing onboarding implementation without modifying the clean branch. All 14 onboarding tests and the complete lint check pass.
+- 2026-09-06T07:02:52+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-215` for one more round, or review on GitHub
+- 2026-09-06T07:04:19+00:00 automated review requested changes: The core onboarding flow and tests work, but CODEOWNERS team parsing can trust the wrong account and the report is not a complete record of inspected inputs. cost=$0.43

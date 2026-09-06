@@ -2,7 +2,7 @@
 id: CG-308
 title: 'Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where
   the phase is, and the last period'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on:
@@ -33,7 +33,7 @@ model: claude-fable-5-1
 attempts: 2
 last_dispatched_at: '2026-09-06T06:17:04+00:00'
 created: '2026-09-06T00:53:25+00:00'
-updated: '2026-09-06T06:17:04+00:00'
+updated: '2026-09-06T07:19:24+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,5 @@ The owner's request of 2026-09-06: a 'what's happening now' operational dashboar
 - 2026-09-06T05:41:25+00:00 dispatched rebase run 20260906T054112Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1, conflict only; easy tier, ~11182 tokens)
 - 2026-09-06T06:16:05+00:00 attempt 1 failed: no GARDEN_RESULT in worker output (see final.md); will retry
 - 2026-09-06T06:17:04+00:00 dispatched work run 20260906T061702Z-work via local [claude model=claude-fable-5-1] (fresh session, base garden/cg-307-design-the-now-page-information-architecture-vis-trial-claude-claude-fable-5-1 stacked on CG-307, ~28340 tokens)
+- 2026-09-06T06:57:29+00:00 attempt 2 failed: no GARDEN_RESULT in worker output (see final.md); giving up
+- 2026-09-06T07:19:24+00:00 operator: the fresh work run was a load casualty; PR #218 carries the build; back to review so the queue rebases it once the design merges

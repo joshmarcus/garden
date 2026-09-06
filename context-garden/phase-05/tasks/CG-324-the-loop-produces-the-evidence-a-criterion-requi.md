@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -17,10 +17,11 @@ reading:
 - docs/worker-protocol.md
 - tests/scheduler/test_poll.py
 branch: garden/cg-324-the-loop-produces-the-evidence-a-criterion-requi
+pr: https://github.com/joshmarcus/context-garden/pull/223
 attempts: 1
 last_dispatched_at: '2026-09-06T06:23:05+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T06:23:05+00:00'
+updated: '2026-09-06T07:12:33+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,5 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 ## Log
 - 2026-09-06T03:59:39+00:00 approved (cli)
 - 2026-09-06T06:23:05+00:00 dispatched work run 20260906T061704Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~19289 tokens)
+- 2026-09-06T07:04:21+00:00 opened https://github.com/joshmarcus/context-garden/pull/223 (base main): The scheduler now produces criterion-required PR evidence, waits for required persona comments before automated review, and displays evidence state on task pages. cost=$1.46
+- 2026-09-06T07:12:33+00:00 automated review requested changes: Required checks, captures, persona ordering, UI state, and documentation are implemented, but failed persona production can strand the automated review indefinitely. The PR description also needs phase motivation and verification details. cost=$0.89

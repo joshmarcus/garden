@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-230-a-tier-can-name-several-harness-and-model-option
 pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
-last_dispatched_at: '2026-09-06T05:29:23+00:00'
+last_dispatched_at: '2026-09-06T07:05:15+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T05:29:23+00:00'
+updated: '2026-09-06T07:05:15+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,6 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T05:20:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/222 (base main): Tier and review pools now distribute work across harness/model members, skip paused harnesses, and preserve member attribution through runs, costs, and metrics. Trial contenders can expand a configured tier pool. cost=$1.69
 - 2026-09-06T05:25:20+00:00 automated review requested changes: Core pool rotation works, but required near-limit quota weighting, retro/PR attribution, and reliable review-member selection are incomplete. The branch also contains unrelated CG-317 UI changes. cost=$0.46
 - 2026-09-06T05:29:23+00:00 dispatched revise run 20260906T052921Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~26202 tokens)
+- 2026-09-06T06:40:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/222: Completes quota-aware pool weighting, fixes review-pool model attribution, adds pool-member retro outcomes, and removes unrelated CG-317 trial UI work. Committed as 6a46e63 and d238276. cost=$2.22
+- 2026-09-06T06:45:46+00:00 automated review requested changes: Tier dispatch, quota handling, trials, costs, metrics, retro reporting, and documentation are substantially implemented. Review-pool routing and PR attribution remain incomplete, so the PR should not merge yet. cost=$0.40
+- 2026-09-06T07:05:15+00:00 dispatched revise run 20260906T070511Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~20295 tokens)
