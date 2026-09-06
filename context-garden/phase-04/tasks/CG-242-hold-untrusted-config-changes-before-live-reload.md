@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: running
+status: in_review
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -16,15 +16,16 @@ reading:
 - tests/scheduler/test_reap.py
 - tests/test_store.py
 branch: garden/cg-242-hold-untrusted-config-changes-before-live-reload
+pr: https://github.com/joshmarcus/context-garden/pull/199
 discovered_from: retro:context-garden/phase-04
 freeze_exception: true
 freeze_exception_reason: Live reload currently activates a worker's configuration write before the fence
   can reject it, creating a newly introduced privileged execution path.
 retro_blocking: true
 attempts: 1
-last_dispatched_at: '2026-09-06T00:00:58+00:00'
+last_dispatched_at: '2026-09-06T00:40:12+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T00:00:58+00:00'
+updated: '2026-09-06T00:48:07+00:00'
 ---
 
 ## Goal
@@ -47,3 +48,7 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-05T23:15:09+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
 - 2026-09-05T23:59:06+00:00 approved (cli)
 - 2026-09-06T00:00:58+00:00 dispatched work run 20260906T000043Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~17423 tokens)
+- 2026-09-06T00:39:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/199 (base main): Implemented a live-reload gate that holds an executable-field garden.yaml change against any in-flight fenced run's config until the run is reaped or an operator confirms it, with CLI/web surfaces and tests proving a worker's notify.command write never runs early. cost=$11.15
+- 2026-09-06T00:39:41+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/fence.py, tests/test_fence.py); a rebase agent will resolve it
+- 2026-09-06T00:40:12+00:00 dispatched rebase run 20260906T004011Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~12254 tokens)
+- 2026-09-06T00:48:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Rebased onto origin/main, resolving two textual conflicts in src/garden/scheduler/fence.py (module docstring) and tests/test_fence.py (import block) by combining both sides' content rather than choosing one; no logic changed. Full test suite (985 passed, 3 skipped) and tests/test_fence.py (20 passed) verified green after rebase. cost=$0.26

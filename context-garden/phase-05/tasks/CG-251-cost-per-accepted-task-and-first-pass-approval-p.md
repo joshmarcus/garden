@@ -2,17 +2,21 @@
 id: CG-251
 title: Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs
   page and the retro
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
 reading: []
+branch: garden/cg-251-cost-per-accepted-task-and-first-pass-approval-p
+pr: https://github.com/joshmarcus/context-garden/pull/198
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T00:45:08+00:00'
 created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-06T00:24:02+00:00'
+updated: '2026-09-06T00:45:08+00:00'
 ---
 
 ## Goal
@@ -44,3 +48,7 @@ Every routing decision in phase 05 is a guess until the garden reports this numb
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-240 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002108Z-edit) cost=$0.10
 - 2026-09-06T00:24:02+00:00 approved (cli)
+- 2026-09-06T00:25:21+00:00 dispatched work run 20260906T002504Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~6698 tokens)
+- 2026-09-06T00:37:25+00:00 opened https://github.com/joshmarcus/context-garden/pull/198 (base main): Adds accepted-task cost and first-pass approval outcomes by tier, model, and harness across metrics, Costs, and retro reporting. cost=$0.85
+- 2026-09-06T00:42:52+00:00 automated review requested changes: Feature is wired through CLI, Costs page and retro correctly, but the per-model/per-harness cost-per-accepted-task figure silently excludes review and edit run costs (no model/harness tag on those events), understating exactly the routing-comparison finding this task is meant to surface. cost=$0.83
+- 2026-09-06T00:45:08+00:00 dispatched revise run 20260906T004507Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7178 tokens)

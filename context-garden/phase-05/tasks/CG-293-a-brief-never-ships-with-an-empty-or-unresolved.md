@@ -9,9 +9,10 @@ depends_on: []
 priority: 2
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-05T23:58:18+00:00'
+harness: codex
 discovered_from: retro:context-garden/phase-04
+created: '2026-09-05T23:58:18+00:00'
+updated: '2026-09-06T00:50:21+00:00'
 ---
 
 ## Goal
@@ -21,6 +22,10 @@ The brief builder refuses an empty reading list, drops entries that do not resol
 ## Context
 
 A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
+
+## Suggestions
+
+- [ ] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; write paths from the repository root such as src/garden/..., never invent one); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
 
 ## Log
 

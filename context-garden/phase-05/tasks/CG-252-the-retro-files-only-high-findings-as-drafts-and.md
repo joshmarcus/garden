@@ -2,16 +2,16 @@
 id: CG-252
 title: The retro files only high findings as drafts and keeps the rest on the retro page with a one-press
   file-as-task
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 2
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-05T23:58:09+00:00'
 discovered_from: retro:context-garden/phase-04
+created: '2026-09-05T23:58:09+00:00'
+updated: '2026-09-06T00:50:03+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,4 @@ Proposed at the context-garden/phase-04 retro. Prevents the drafts-only Inbox th
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-241 (renumbered by the operator: two reconcile runs drew ids from one counter)
+- 2026-09-06T00:50:03+00:00 pruned at approval (operator, 2026-09-06): the owner decided every persona finding is filed as a draft at its severity, no cap; pruning happens at approval with a reason (retro q3 / astra q2)

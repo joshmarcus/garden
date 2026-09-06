@@ -2,7 +2,7 @@
 id: CG-237
 title: 'The not-logged-in check reads a worker''s prose as an auth failure: match the CLI''s own error,
   not the report text'
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/harness.py
 - tests/test_harness.py
 created: '2026-09-05T22:48:41+00:00'
-updated: '2026-09-05T22:48:41+00:00'
+updated: '2026-09-06T00:50:16+00:00'
 ---
 
 ## Goal
@@ -30,3 +30,6 @@ A worker whose report talks about a login outage is a finished run, not a login 
 - [ ] `garden doctor` and the login probe still report a real logged-out harness.
 - [ ] Tests for each shape; the four discarded phase-04 persona runs' stdout, replayed through parse, come back `done` with their cost.
 
+## Log
+
+- 2026-09-06T00:50:16+00:00 approved (cli)

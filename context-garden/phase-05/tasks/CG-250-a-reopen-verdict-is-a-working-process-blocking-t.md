@@ -2,7 +2,7 @@
 id: CG-250
 title: 'A reopen verdict is a working process: blocking tasks arrive with a complete brief, are approved
   through the gate, and the phase reopens and closes on them without hand steps'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,9 +14,13 @@ reading:
 - src/garden/scheduler/human.py
 - src/garden/brief.py
 - tests/test_retro.py
+branch: garden/cg-250-a-reopen-verdict-is-a-working-process-blocking-t
+pr: https://github.com/joshmarcus/context-garden/pull/197
 harness: codex
+attempts: 1
+last_dispatched_at: '2026-09-06T00:43:29+00:00'
 created: '2026-09-05T23:41:22+00:00'
-updated: '2026-09-06T00:24:05+00:00'
+updated: '2026-09-06T00:43:29+00:00'
 ---
 
 ## Goal
@@ -38,3 +42,7 @@ Phase 04's retro (2026-09-05 23:05Z, fable) returned `reopen` with two blocking 
 ## Log
 
 - 2026-09-06T00:24:05+00:00 approved (cli)
+- 2026-09-06T00:25:04+00:00 dispatched work run 20260906T002447Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~6949 tokens)
+- 2026-09-06T00:35:47+00:00 opened https://github.com/joshmarcus/context-garden/pull/197 (base main): Reopen verdicts now file complete blocker briefs, pass through the normal approval gate, retain incomplete blockers as visible pending work, and automatically close the phase after all blockers become terminal. cost=$0.76
+- 2026-09-06T00:41:31+00:00 automated review requested changes: Approval-gate delegation, freeze handling, and self-closing all work and are tested, but the decision card only reveals which blockers need a brief after a failed decide attempt, not proactively as the criterion requires. cost=$0.66
+- 2026-09-06T00:43:29+00:00 dispatched revise run 20260906T004328Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7424 tokens)

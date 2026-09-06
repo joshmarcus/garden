@@ -45,4 +45,4 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - [ ] A remote review run and a remote check run complete the same way; a lapsed lease returns the run to the queue and the task is not failed.
 - [ ] `docs/worker-protocol.md` and `docs/architecture.md` describe the remote flow; `garden doctor` on the worker host checks git access, the harness and the token.
 - [ ] No scheduler credential reaches the worker host; a test asserts the claim payload carries only the allowlisted names.
-
+- 2026-09-06T00:55:00+00:00 deferred by the operator: last in dispatch order (joined phase-05 goals, goal 4); approve once the onboarding and routing work is in

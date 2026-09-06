@@ -1,7 +1,7 @@
 ---
 id: CG-248
 title: TUI's dispatch action ('d' key) also bypasses the approve gate on a draft
-status: ready
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,9 +16,13 @@ reading:
 - src/garden/cli/state.py
 - tests/test_web.py
 - tests/test_tui.py
+branch: garden/cg-248-tui-s-dispatch-action-d-key-also-bypasses-the-ap
+pr: https://github.com/joshmarcus/context-garden/pull/203
 discovered_from: CG-238
+attempts: 1
+last_dispatched_at: '2026-09-06T00:38:17+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T00:24:04+00:00'
+updated: '2026-09-06T00:46:10+00:00'
 ---
 
 ## Goal
@@ -46,3 +50,5 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T00:18:31+00:00 moved from context-garden/phase-04 to context-garden/phase-05
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002114Z-edit) cost=$0.10
 - 2026-09-06T00:24:04+00:00 approved (cli)
+- 2026-09-06T00:38:17+00:00 dispatched work run 20260906T003801Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~26695 tokens)
+- 2026-09-06T00:46:10+00:00 opened https://github.com/joshmarcus/context-garden/pull/203 (base main): Added a draft-status and active-run guard to the TUI's action_dispatch, matching the web's dispatch gate, with two new regression tests in tests/test_tui.py. cost=$0.86

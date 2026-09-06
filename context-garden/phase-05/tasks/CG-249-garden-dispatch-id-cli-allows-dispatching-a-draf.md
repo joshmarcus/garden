@@ -1,7 +1,7 @@
 ---
 id: CG-249
 title: '`garden dispatch <id>` (CLI) allows dispatching a draft directly'
-status: ready
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,9 +15,13 @@ reading:
 - src/garden/cli/state.py
 - tests/test_web.py
 - tests/test_cli.py
+branch: garden/cg-249-garden-dispatch-id-cli-allows-dispatching-a-draf
+pr: https://github.com/joshmarcus/context-garden/pull/204
 discovered_from: CG-238
+attempts: 1
+last_dispatched_at: '2026-09-06T00:40:28+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T00:24:04+00:00'
+updated: '2026-09-06T00:50:04+00:00'
 ---
 
 ## Goal
@@ -53,3 +57,5 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T00:18:31+00:00 moved from context-garden/phase-04 to context-garden/phase-05
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002115Z-edit) cost=$0.07
 - 2026-09-06T00:24:04+00:00 approved (cli)
+- 2026-09-06T00:40:28+00:00 dispatched work run 20260906T004012Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~18750 tokens)
+- 2026-09-06T00:50:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/204 (base main): garden dispatch now routes a DRAFT task through Scheduler.approve (the same brief_gaps/phase_refusal gate used by garden take and the web) before allowing mode=work, refusing an incomplete brief unless --force is passed. cost=$0.84

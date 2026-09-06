@@ -43,3 +43,4 @@ Backlog item from the user on 2026-09-05 ("support for open router"), the day th
 ## Log
 
 - 2026-09-05T16:11:16+00:00 moved from context-garden/phase-04 to context-garden/phase-05
+- 2026-09-06T00:55:00+00:00 deferred by the operator: dispatches after the OpenRouter shape spike (CG-302) and the cost-per-accepted-task measurement (CG-251) merge (joined phase-05 goals, goal 2)

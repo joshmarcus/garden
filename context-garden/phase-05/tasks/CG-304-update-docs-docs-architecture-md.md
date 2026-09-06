@@ -1,7 +1,7 @@
 ---
 id: CG-304
 title: 'Update docs: docs/architecture.md'
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,15 +9,15 @@ priority: 3
 difficulty: easy
 reading:
 - docs/architecture.md
-- kickoff.py
-- scheduler/kickoff.py
-- profiles.py
-- runner/ssh.py
-- runner/manual.py
-- web/pages/api.py
+- src/garden/kickoff.py
+- src/garden/scheduler/kickoff.py
+- src/garden/profiles.py
+- src/garden/runner/ssh.py
+- src/garden/runner/manual.py
+- src/garden/web/pages/api.py
 discovered_from: kickoff:context-garden/phase-05
 created: '2026-09-06T00:07:47+00:00'
-updated: '2026-09-06T00:22:40+00:00'
+updated: '2026-09-06T00:25:04+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,4 @@ Raised at the context-garden/phase-05 kickoff; needed by CG-216, CG-295, CG-275.
 ## Log
 
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002116Z-edit) cost=$0.06
+- 2026-09-06T00:25:04+00:00 approved (cli)

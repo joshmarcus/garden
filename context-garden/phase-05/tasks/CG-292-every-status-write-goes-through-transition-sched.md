@@ -2,17 +2,21 @@
 id: CG-292
 title: 'Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep
   test'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-292-every-status-write-goes-through-transition-sched
+pr: https://github.com/joshmarcus/context-garden/pull/201
 harness: codex
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-06T00:50:48+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T00:24:02+00:00'
+updated: '2026-09-06T00:50:48+00:00'
 ---
 
 ## Goal
@@ -44,3 +48,7 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict. 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-281 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002111Z-edit) cost=$0.10
 - 2026-09-06T00:24:02+00:00 approved (cli)
+- 2026-09-06T00:27:49+00:00 dispatched work run 20260906T002733Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~6863 tokens)
+- 2026-09-06T00:42:54+00:00 opened https://github.com/joshmarcus/context-garden/pull/201 (base main): Routes task status mutations through Scheduler._transition, adds a base-branch guard to mark_done, and makes the web escape hatch explicit and confirmed. Commit: 6088bd7. cost=$1.09
+- 2026-09-06T00:48:10+00:00 automated review requested changes: Status-write centralization is correct and well-tested, but the web review card's 'Mark done without merging' relocation criterion isn't actually met: the button was deleted from the Inbox review card entirely rather than relabeled/confirmed/demoted in place, and its new home on the task page sits in the same undivided actions row as primary buttons. cost=$0.85
+- 2026-09-06T00:50:48+00:00 dispatched revise run 20260906T005047Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7325 tokens)

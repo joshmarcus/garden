@@ -1,16 +1,16 @@
 ---
 id: CG-274
 title: Hand merges, rebase rounds per merge, cost per easy task and the operator's shar
-status: draft
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 2
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:14+00:00'
-updated: '2026-09-05T23:58:14+00:00'
 discovered_from: persona:project-manager:context-garden/phase-04
+created: '2026-09-05T23:58:14+00:00'
+updated: '2026-09-06T00:50:06+00:00'
 ---
 
 ## Goal
@@ -24,3 +24,4 @@ Raised by the project-manager persona review (definition of done). persona:proje
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-263 (renumbered by the operator: two reconcile runs drew ids from one counter)
+- 2026-09-06T00:50:06+00:00 pruned at approval: owned by CG-251 (cost per accepted task, first-pass approval per model/tier/harness) and CG-253 (hand merges, rebase rounds mechanical vs agent, operator share in metrics), appended there

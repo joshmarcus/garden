@@ -42,4 +42,4 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - [ ] Task-level `harness:` and `model:` overrides still pin a run; `garden trial -c tier:medium` expands to the pool.
 - [ ] `review.pool` (a list of harness:model members with weights) spreads reviews across harnesses; a test with two members sees alternating review harnesses and the skip of a paused one.
 - [ ] Docs: `docs/architecture.md` describes pools and the spread policies; the example configs show a claude-and-codex medium tier.
-
+- 2026-09-06T00:55:00+00:00 deferred by the operator: after the measurement (CG-251) merges, so each pool member can be compared

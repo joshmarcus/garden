@@ -1,7 +1,7 @@
 ---
 id: CG-236
 title: A trial winner's PR enters the review queue on its own, like any pushed revision
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,8 +11,11 @@ reading:
 - src/garden/scheduler/trials.py
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/review.py
+branch: garden/cg-236-a-trial-winner-s-pr-enters-the-review-queue-on-i
+attempts: 1
+last_dispatched_at: '2026-09-06T00:47:05+00:00'
 created: '2026-09-05T20:56:29+00:00'
-updated: '2026-09-06T00:24:03+00:00'
+updated: '2026-09-06T00:47:05+00:00'
 ---
 
 ## Goal
@@ -29,6 +32,12 @@ Observed 2026-09-05: CG-225's winner (codex terra, PR #184) sat in `in_review` f
 - [ ] The card for a fresh trial winner reads "review queued", not "no review yet".
 - [ ] Test: a trial whose comparison names a winner leads to a review dispatch on the following tick; a work-run PR's path is unchanged.
 
+## Folded in at approval (operator, 2026-09-06)
+
+- [ ] Widened by the joined retro: any PR with no review recorded for its head is queued on the next tick on every runner, including the manual runner; `resume` means the same on every runner.
+- [ ] A recorded verdict whose head has moved is discarded, and a review whose task went terminal is cancelled rather than swept by reap_orphaned after it finishes (from CG-278).
+
 ## Log
 
 - 2026-09-06T00:24:03+00:00 approved (cli)
+- 2026-09-06T00:47:05+00:00 dispatched work run 20260906T004649Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~12178 tokens)
