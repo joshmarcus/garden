@@ -5,11 +5,11 @@ status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 2
+priority: 0
 difficulty: medium
 reading: []
 created: '2026-09-06T13:15:20+00:00'
-updated: '2026-09-06T13:15:21+00:00'
+updated: '2026-09-06T13:46:59+00:00'
 ---
 
 ## Goal
@@ -27,3 +27,4 @@ At operator takeover on 2026-09-06 at 13:13Z, /home/joshua/work/tmp pointed to m
 ## Log
 
 - 2026-09-06T13:15:21+00:00 approved (cli)
+- 2026-09-06T13:46:59+00:00 priority 2 -> 0

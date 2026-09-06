@@ -1,7 +1,7 @@
 ---
 id: CG-296
 title: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,12 +9,13 @@ priority: 3
 difficulty: medium
 reading: []
 branch: garden/cg-296-one-vocabulary-and-one-place-for-each-fact-acros
+pr: https://github.com/joshmarcus/context-garden/pull/228
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T13:20:54+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T13:20:54+00:00'
+updated: '2026-09-06T13:45:54+00:00'
 ---
 
 ## Goal
@@ -65,3 +66,5 @@ Each of these persona findings was a draft of its own; they are cancelled with t
 - 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002113Z-edit) cost=$0.10
 - 2026-09-06T00:24:04+00:00 approved (cli)
 - 2026-09-06T13:20:54+00:00 dispatched work run 20260906T131807Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8662 tokens)
+- 2026-09-06T13:44:51+00:00 opened https://github.com/joshmarcus/context-garden/pull/228 (base main): Unified operating controls, Inbox decision presentation, and Costs activity naming across CLI and web surfaces. Committed as e42daf6. cost=$1.35
+- 2026-09-06T13:45:54+00:00 PR conflicts with main; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it

@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,7 +19,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T13:18:07+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T13:18:07+00:00'
+updated: '2026-09-06T13:36:08+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,4 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-06T00:55:37+00:00 integrated 1 suggestion(s) (run 20260906T005023Z-edit) cost=$0.62
 - 2026-09-06T00:55:55+00:00 approved (cli)
 - 2026-09-06T13:18:07+00:00 dispatched work run 20260906T131632Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~22973 tokens)
+- 2026-09-06T13:36:08+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$0.55

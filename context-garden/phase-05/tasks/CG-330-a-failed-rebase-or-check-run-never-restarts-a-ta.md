@@ -6,7 +6,7 @@ status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 1
+priority: 0
 difficulty: medium
 reading:
 - src/garden/scheduler/reap.py
@@ -17,7 +17,7 @@ reading:
 branch: garden/cg-330-a-failed-rebase-or-check-run-never-restarts-a-ta
 last_dispatched_at: '2026-09-06T13:04:41+00:00'
 created: '2026-09-06T06:24:13+00:00'
-updated: '2026-09-06T13:19:31+00:00'
+updated: '2026-09-06T13:46:58+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,4 @@ Auxiliary runs fail on their own terms. When a rebase run, a check run or an edi
 
 The WSL restart interrupted the prior revise. Its unfinished changes are preserved in this task worktree in the stash named `operator-recovery-20260906-CG330` (check `git stash list`; restore by its verified identifier before continuing). It preserves the structured killed-check summary in checkruns.py and its test; also contains the pre-existing design snapshot. Continue the existing implementation, run checks, commit and open its PR. Do not discard the saved work. The previous suite error involved a vanished /tmp fixture; the worker temp target is now restored.
 - 2026-09-06T13:19:31+00:00 reset to ready by hand
+- 2026-09-06T13:46:58+00:00 priority 1 -> 0

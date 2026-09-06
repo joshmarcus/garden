@@ -5,11 +5,11 @@ status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 1
+priority: 0
 difficulty: hard
 reading: []
 created: '2026-09-06T13:20:33+00:00'
-updated: '2026-09-06T13:20:34+00:00'
+updated: '2026-09-06T13:46:58+00:00'
 ---
 
 ## Goal
@@ -32,3 +32,4 @@ Josh, 2026-09-06 operator session: "those decisions are confusing; it's unclear 
 - 2026-09-06T13:20:34+00:00 approved (cli)
 
 Additional takeover evidence: setting CG-324 in_review while its pre-PR check was live exposed a misleading Review and merge card with `garden set-status CG-324 done`. Reconciliation to running removed that false decision. CG-308 displayed a running rebase from 12:56Z despite the rebased branch having green CI and no live run; a fresh review required operator recovery. Derive attention from live run/continuation state, and never recommend marking done as a substitute for verifying checks/review/merge. Coordinate with CG-316 and CG-333 on stale run recovery.
+- 2026-09-06T13:46:58+00:00 priority 1 -> 0

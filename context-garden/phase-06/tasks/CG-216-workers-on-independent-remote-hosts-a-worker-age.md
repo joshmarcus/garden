@@ -2,9 +2,9 @@
 id: CG-216
 title: 'Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP,
   works in its own clone, pushes the branch and posts the result and transcript back'
-status: changes_requested
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 1
 difficulty: hard
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/221
 attempts: 1
 last_dispatched_at: '2026-09-06T07:41:08+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T13:18:26+00:00'
+updated: '2026-09-06T13:45:03+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,5 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - 2026-09-06T13:15:34+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-06T13:18:22+00:00 triage: changes requested by hand: Owner-authorized revision: address the last automated review in full. Enable the promised remote persona flow or explici
 - 2026-09-06T13:18:26+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T13:45:02+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:45:03+00:00 moved from context-garden/phase-05 to context-garden/phase-06

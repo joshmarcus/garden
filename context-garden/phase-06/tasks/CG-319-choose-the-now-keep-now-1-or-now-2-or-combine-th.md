@@ -2,9 +2,9 @@
 id: CG-319
 title: 'Choose the Now: keep Now 1 or Now 2, or combine the best aspects of both into /now, and retire
   the other page'
-status: ready
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on:
 - CG-308
 - CG-309
@@ -16,7 +16,7 @@ reading:
 - src/garden/web/templates/base.html
 - tests/test_web.py
 created: '2026-09-06T02:40:45+00:00'
-updated: '2026-09-06T13:20:32+00:00'
+updated: '2026-09-06T13:45:07+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,5 @@ The owner asked for both designs to ship as Now 1 and Now 2 (2026-09-06 01:00Z) 
 
 ## Log
 - 2026-09-06T13:20:32+00:00 approved (cli)
+- 2026-09-06T13:45:05+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:45:07+00:00 moved from context-garden/phase-05 to context-garden/phase-06

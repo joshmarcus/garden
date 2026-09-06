@@ -2,9 +2,9 @@
 id: CG-230
 title: A tier can name several harness and model options, and dispatch spreads runs across them to share
   quotas, skipping a paused or exhausted one
-status: changes_requested
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 1
 difficulty: medium
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/222
 attempts: 1
 last_dispatched_at: '2026-09-06T08:47:03+00:00'
 created: '2026-09-05T19:22:53+00:00'
-updated: '2026-09-06T13:18:49+00:00'
+updated: '2026-09-06T13:45:05+00:00'
 ---
 
 ## Goal
@@ -71,3 +71,5 @@ Requested by the user on 2026-09-05 after the first medium-tier trial (CG-225) w
 - 2026-09-06T09:16:35+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-230`) or send it back (`garden triage CG-230 --changes "..."`)
 - 2026-09-06T13:18:42+00:00 triage: changes requested by hand: Owner-authorized additional revision: preserve intentional empty model members such as codex:, honor backward-compatible
 - 2026-09-06T13:18:49+00:00 re-enabled by hand; revise run will follow
+- 2026-09-06T13:45:04+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:45:05+00:00 moved from context-garden/phase-05 to context-garden/phase-06

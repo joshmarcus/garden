@@ -2,9 +2,9 @@
 id: CG-213
 title: 'OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a
   harness with per-tier model ids and cost from the response usage'
-status: ready
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 3
 difficulty: hard
@@ -17,7 +17,7 @@ reading:
 - tests/fake_codex.py
 - docs/architecture.md
 created: '2026-09-05T16:00:57+00:00'
-updated: '2026-09-06T13:14:22+00:00'
+updated: '2026-09-06T13:44:57+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Backlog item from the user on 2026-09-05 ("support for open router"), the day th
 - 2026-09-06T03:38:31+00:00 approved (web)
 - 2026-09-06T13:13:27+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:22+00:00 reset to ready by hand
+- 2026-09-06T13:44:56+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:44:57+00:00 moved from context-garden/phase-05 to context-garden/phase-06

@@ -1,9 +1,9 @@
 ---
 id: CG-283
 title: The built-in economy, balanced and fast stops hardcode Claude model ids and mode
-status: ready
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 2
 difficulty: medium
@@ -11,7 +11,7 @@ reading: []
 harness: codex
 discovered_from: persona:user:context-garden/phase-04
 created: '2026-09-05T23:58:16+00:00'
-updated: '2026-09-06T13:14:27+00:00'
+updated: '2026-09-06T13:45:08+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,5 @@ Renaming or restructuring tasks beyond this mechanism; task-id references in use
 - 2026-09-06T00:52:23+00:00 approved (cli)
 - 2026-09-06T13:13:11+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:27+00:00 reset to ready by hand
+- 2026-09-06T13:45:07+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:45:08+00:00 moved from context-garden/phase-05 to context-garden/phase-06

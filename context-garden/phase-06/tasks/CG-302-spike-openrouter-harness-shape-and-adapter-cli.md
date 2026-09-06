@@ -1,9 +1,9 @@
 ---
 id: CG-302
 title: 'Spike: OpenRouter harness shape and adapter CLI'
-status: ready
+status: draft
 product: context-garden
-phase: phase-05
+phase: phase-06
 depends_on: []
 priority: 2
 difficulty: hard
@@ -13,7 +13,7 @@ reading:
 - docs/design.md
 discovered_from: kickoff:context-garden/phase-05
 created: '2026-09-06T00:07:46+00:00'
-updated: '2026-09-06T13:14:34+00:00'
+updated: '2026-09-06T13:44:59+00:00'
 spike: true
 ---
 
@@ -46,3 +46,5 @@ Raised at the context-garden/phase-05 kickoff. Relevant to CG-213, CG-230.
 - 2026-09-06T00:24:07+00:00 approved (cli)
 - 2026-09-06T13:13:18+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:34+00:00 reset to ready by hand
+- 2026-09-06T13:44:58+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
+- 2026-09-06T13:44:59+00:00 moved from context-garden/phase-05 to context-garden/phase-06

@@ -6,7 +6,7 @@ status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 2
+priority: 0
 difficulty: easy
 reading:
 - src/garden/scheduler/dispatch.py
@@ -15,7 +15,7 @@ reading:
 - src/garden/web/templates/base.html
 - tests/scheduler/test_dispatch.py
 created: '2026-09-06T05:26:49+00:00'
-updated: '2026-09-06T13:14:38+00:00'
+updated: '2026-09-06T13:46:59+00:00'
 ---
 
 ## Goal
@@ -35,3 +35,4 @@ One definition of a worker slot. `max_parallel` counts the runs that occupy a sl
 - 2026-09-06T05:26:49+00:00 approved (cli)
 - 2026-09-06T13:13:23+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:38+00:00 reset to ready by hand
+- 2026-09-06T13:46:59+00:00 priority 2 -> 0

@@ -2,7 +2,7 @@
 id: CG-324
 title: 'The loop produces the evidence a criterion requires: persona reviews, captures and checks named
   by a task''s criteria run when its PR opens, before the first review'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,9 +19,9 @@ reading:
 branch: garden/cg-324-the-loop-produces-the-evidence-a-criterion-requi
 pr: https://github.com/joshmarcus/context-garden/pull/223
 attempts: 1
-last_dispatched_at: '2026-09-06T12:20:27+00:00'
+last_dispatched_at: '2026-09-06T13:25:03+00:00'
 created: '2026-09-06T03:59:38+00:00'
-updated: '2026-09-06T13:22:43+00:00'
+updated: '2026-09-06T13:47:49+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,8 @@ Owner, 2026-09-06 04:05Z, on reducing review rounds. Tonight's design tasks requ
 - 2026-09-06T13:19:33+00:00 Owner-authorized recovery of empty waiting-human card after no-change acceptance (CG-328). Existing pre-PR check is running; preserve it and require a fresh automated review of persona failure recovery before merge.
 - 2026-09-06T13:21:06+00:00 Existing pre-PR check 20260906T131533Z-check is active; reconcile stale waiting-human/in-review task state to its running continuation. The check must finish before review or merge.
 - 2026-09-06T13:22:43+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/223: Re-checked PR #223: there are no public review comments or review verdicts outstanding, and its CI test check is successful. The branch already contains the requested failure handling and description update, so no further change is warranted.
+- 2026-09-06T13:23:45+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/review.py, src/garden/scheduler/review.py, tests/test_web.py); a rebase agent will resolve it
+- 2026-09-06T13:25:03+00:00 dispatched rebase run 20260906T132454Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~34510 tokens)
+- 2026-09-06T13:38:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/223: Rebased onto origin/main and resolved all three conflicts while preserving both sides' changes. cost=$0.02
+- 2026-09-06T13:41:34+00:00 CI failure, but 3 revision rounds already used; needs a human
+- 2026-09-06T13:47:49+00:00 automated review: request_changes — The required-evidence behavior is implemented and all 1,108 tests pass, but the PR contains a large unrelated CG-308 feature stack and snapshot rewrite that must be removed. cost=$0.97
