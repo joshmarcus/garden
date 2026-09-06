@@ -16,10 +16,9 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
   `harnesses.claude.retro_model`; flip `review.harness` to `"claude"` for a retro window).
 - Design work is an invitation, not a prescription; acceptance criteria are outcomes with
   evidence, optional, never refused for naming a file (principles/00-index.md).
-- Priority 1 is the Now page: Now 1 (Fable's design, PR #218) and Now 2 (astra's, merged as
-  PR #227 at 12:40Z); then the loop-quality tasks filed last night.
+- Priority 1 is the Now page: Now 1 (Fable's design, PR #218) and Now 2 (astra's, PR #227, see below); then the loop-quality tasks filed last night.
 
-## State at 12:40Z
+## State at 12:45Z
 
 - Phases 01–04 closed. Phase 05 open: ~19 done, 25 ready, several in revise; $340 spent.
 - `garden.yaml`: default harness codex (luna/terra/sol by tier), `review.harness: codex`,
@@ -42,6 +41,7 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
 
 ## Open PRs and what to do with them
 
+- #227 CG-309 Now 2 build: NOT merged after all (conflicts with main after the 12:30Z merges; the `gh` merge printed a checkout hint). Rebase in `/home/joshua/work/worktrees/CG-309` onto origin/main, push with `--force-with-lease`, `garden set-status CG-309 in_review`, merge. Its open finding (goals show 'Progress not mapped') is in CG-334.
 - #218 CG-308 Now 1 build: held on a rebase conflict in `src/garden/web/templates/_runs.html`
   (Now 1's live-clock block vs main's card changes). Resolve in the worktree
   `/home/joshua/work/worktrees/CG-308` (`git rebase origin/main`, keep both), push with
@@ -51,7 +51,7 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
   can fabricate provenance; a revise on sol was in flight at 12:25Z.
 - #221 CG-216 remote workers and #222 CG-230 pools: held, conflicts with main, requested changes.
 - #223 CG-324 required evidence: held; a failed persona run would strand the review forever.
-- Merged by hand 12:30–12:40Z with reviewer findings still open: #226, #212, #214, #217, #227.
+- Merged by hand 12:30–12:40Z with reviewer findings still open: #226, #212, #214, #217.
   CG-334 (p1) closes those findings.
 
 ## Recipes that were needed repeatedly last night
