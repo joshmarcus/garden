@@ -24,6 +24,10 @@ One page a person keeps open on a second screen or shows in a demo. In five seco
 
 Every running card shows exactly how long its run has been going, as a clock that ticks in the browser from the run's start time and the current time, not from a server refresh: seconds under a minute, then m:ss, then h:mm:ss, with the run's typical duration for its mode and tier as a quiet mark beside it (a thin bar filling toward "typical", turning to a plain "longer than usual" past it, never an alarm). The tick is a client-side animation: the digits change in place, the bar eases, and a run that has just started counts up from zero as it slides in. The start time comes from the run record and the page's own clock is offset once against the server's, so the numbers agree with the run page. Nothing about the clock needs the events stream; the events stream only starts, ends or replaces a card. The same clock shows on the Board and the task page for a running task, so "this is running live" reads the same everywhere.
 
+## Heat-map shading on the tables (owner, 2026-09-06 02:45Z)
+
+Every table of numbers on the Now page shades its cells so the eye finds the best and worst without reading: within each row (a difficulty across models) the best value gets a light green ground and the worst a light red, with the cells between on a quiet scale; the direction is per metric (lower is better for cost, revise rounds and lead time; higher is better for first-pass approval). A cell whose n is below three is shaded faintly and marked, so a single lucky task never reads as best of class. The scale keeps the text legible in light and dark and never uses colour alone: the best and worst cells also carry a small mark. The same shading rule applies to the Costs page's tables (CG-251).
+
 ## Data and boundaries
 
 - Read-only. The page reads state, run records, events, `garden metrics` and the phase tree through the existing store and scheduler surfaces; logic goes in a `now` module under `garden/` (or the scheduler's report helpers), the route and template stay thin, per the rules in CLAUDE.md.
