@@ -44,7 +44,7 @@ Incident protocol is ACTIVE. Current incident record: `context-garden/docs/incid
 
 Last verified process/resource details at 18:04 UTC
 
-CG-357 is now genuinely running: replacement run 20260906T175931Z-work, worker PID 1748262 verified alive with transcript output six seconds old. No duplicate dispatch needed. CG-337 (1441776) and CG-329 (1460347) also remain alive. Keep admission paused while the urgent web fix proceeds; phase holds and caps unchanged. Full /now2 still times out; do not report access restored.
+At 18:21 UTC CG-357 worker finished and check 20260906T182127Z-check (PID2114402) is active. No duplicate worker dispatch needed. Worker reports1172 tests/3 skips and fixture performance improvements; installed/live recovery remains unverified. Scheduler salvage commit7b818c4 accidentally included unrelated snapshot.json; remove its diff after check drains, preserving it, before merging. See incident record for review/evidence details. CG-329 review requested changes; keep it subordinate to recovery. Keep admission paused; full web recovery is not established.
 
 Root-cause evidence: py-spy showed repeated full-history scans in concurrent dynamic request threads (RunStore, phase spending, Inbox, Now snapshots and scheduler construction); roughly 1,550 durable run records. CG-357 covers bounded read models and safe archival; no history moved/deleted. Process-local Run.load cache experiment did not fix access and disappeared at the owner-authorized restart around 17:57 UTC. Current server PID 1690856; do not reapply the experiment. Windows/WSL clock endpoint returned 200 after restart, but full Now requests still fail.
 
