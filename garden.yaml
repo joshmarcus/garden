@@ -43,6 +43,16 @@ review:
 # become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
 # brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
 checks:
+  # Full context-garden tests run on GitHub; retain its focused local gate.
+  # The separate garden product contains context documents and has no code suite.
+  pre_pr:
+    - name: lint
+      command: |
+        case "$GARDEN_PRODUCT" in
+          context-garden) .venv/bin/ruff check src tests scripts ;;
+          garden) echo "Context documents: no configured code suite" ;;
+          *) echo "No pre-PR policy for product: $GARDEN_PRODUCT" >&2; exit 1 ;;
+        esac
   ci:                       # analysers for the CI this environment uses; an overlay replaces the list
     - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
       python: "garden.checks:github_actions_failures"
@@ -109,8 +119,11 @@ products:
     id_prefix: CG
     setup:                  # how this product's working environment is prepared, on this machine (no uv here)
       command: "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"   # once per fresh worktree
-      test: ".venv/bin/python -m pytest -q -x"     # back on 2026-09-05 11:50: checks run as records outside the tick (CG-182)
-      lint: ".venv/bin/ruff check src tests"
+      worker_push: true       # owner-authorized assigned-branch CI, CG-363
+      test: "python3 scripts/check_ci.py"
+      lint: ".venv/bin/ruff check src tests scripts"
+      env:
+        GH_CONFIG_DIR: /home/joshua/.config/gh  # explicit GitHub access; HOME stays isolated
       timeout_seconds: 1500
     # runner: ssh           # per-product overrides
     # harness: codex

@@ -1,7 +1,7 @@
 ---
 id: CG-361
 title: Bound test workloads within each run and reserve web capacity
-status: running
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,7 +12,7 @@ branch: garden/cg-361-bound-test-workloads-within-each-run-and-reserve
 attempts: 1
 last_dispatched_at: '2026-09-06T21:40:23+00:00'
 created: '2026-09-06T21:38:26+00:00'
-updated: '2026-09-06T21:40:23+00:00'
+updated: '2026-09-06T22:59:27+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,18 @@ Keep validation serial and resource-bounded while implementing this fix. Do not 
 ## Operator validation intervention, 2026-09-06 22:08 UTC
 
 The full-suite test process1962007 stalled in Git fixture setup after its direct git push child exited128. Orphaned fixture helpers1995748/1995749 kept stderr open; operator verified exact identities and fixture paths and terminated only those helpers, preserving files and evidence in operator-test-tmp/CG361-orphan-git-helpers.json. Pytest then reported425 passed and one fixture error after694.80s. This is partial validation with an operator intervention, not a full-suite pass. CG-354 now includes bounded fixture waits/descendant cleanup. Diagnose the original Git stderr/environment before treating this as a source defect or repeating the full suite.
+- 2026-09-06T22:32:14+00:00 attempt 1 failed: worker idle 24 min (no output or file change); will retry
+- 2026-09-06T22:44:19+00:00 Operator 22:45 UTC: run 20260906T214006Z-work timed out after idle 24m following preserved fixture-helper stall. Changes remain at df9b4e7 and dirty snapshot; no full pass. CG-363 implements owner-requested CI offload; keep this task ready until that workflow is installed, then use focused local checks plus exact-commit GitHub CI after incorporating current main. Do not rerun full suites locally or discard prior work.
+
+## Operator continuation after CI offload
+
+CG-363 is merged and installed at 58e13b99. Keep the existing resource-isolation implementation
+and saved work; incorporate current origin/main (which contains the worker CI helper and
+brief permission changes) before validation. The previous full suite stalled on orphan Git
+fixture helpers and the model then idled out; it did not establish a full pass. Use focused,
+bounded local regressions and the real resource-isolation fixture journey, then commit and
+run `python3 scripts/check_ci.py` to validate the full suite on GitHub before finishing.
+Do not run another full suite locally or modify the production service. Preserve unrelated
+snapshot changes rather than adding them to the PR. Keep the workload/application evidence
+honest: GitHub passing the suite alone does not establish local resource isolation.
+- 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CI offload deployed; eligible for one controlled recovery continuation under unchanged resource caps.

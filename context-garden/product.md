@@ -31,8 +31,9 @@ Keeping that thread cheap is a product goal, on a par with keeping worker runs c
 This repository is both the tool and its own first product. Python 3.11+, packaged with
 `pyproject.toml` (hatchling), managed with `uv`.
 
-- Tests: `.venv/bin/pytest -q`
-- Lint: `.venv/bin/ruff check src tests`
+- Focused tests: `.venv/bin/python -m pytest <affected test files> -q` (serial).
+- Full tests: commit, then `python3 scripts/check_ci.py` to push the assigned branch and await exact-commit GitHub CI in this session. Do not run the full suite locally by default.
+- Lint: `.venv/bin/ruff check src tests scripts`
 - CLI: `.venv/bin/garden --help`
 
 Layout:
@@ -95,3 +96,22 @@ Windows sees WSL's localhost, so a page served by `garden serve` (or a test serv
 ### Verified narrow viewport
 
 Edge on this host has an outer-window minimum around 496px, so `--window-size=390` does not establish a 390px page viewport. Before the narrow command above, create `narrow.html` in the Windows captures directory containing `<html><body style="margin:0"><iframe src="http://localhost:8765/now1" style="width:390px;height:2400px;border:0"></iframe></body></html>` (substitute the page being checked). Capture the wrapper at an outer width of 600. Inspect the embedded page at 390 CSS pixels and check its clientWidth and scrollWidth; the extra outer margin is not part of the page. The finding and measured clientWidth 390 / scrollWidth 390 were recorded by CG-308 in CG-326. A browser API that sets the actual page viewport to 390 is also suitable.
+
+## Full-suite CI offload (owner instruction, 2026-09-06)
+
+This product explicitly enables `setup.worker_push: true`. Run focused local tests and lint,
+self-review and fix findings, commit, then run `python3 scripts/check_ci.py` in the foreground.
+Push only your assigned branch, without force or persistent git-config changes. Read the
+actual CI outcome, fix failures and recheck the final commit before declaring done. Report
+its SHA, run URL and outcome as ordinary acceptance evidence. The scheduler owns PRs and
+merges, and still requires PR CI. A pending, absent, stale, failed or skipped run is not a
+pass. The helper reuses existing runs for unchanged commits. GitHub access is explicitly
+configured while your HOME remains isolated.
+
+Existing work branches must incorporate current origin/main's CI workflow and helper before
+using them. Preserve existing edits and commits; resolve integration conflicts without
+widening the task. If the helper is absent, incorporate current main rather than falling
+back to another local full-suite run. Do not change the live garden or production service.
+See product-repo `docs/worker-ci.md` for the command and protocol. Resource-isolation testing
+that specifically requires local processes remains allowed, serial and bounded, against
+fixtures; it does not authorize a local full suite or fault injection into production.

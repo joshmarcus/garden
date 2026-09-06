@@ -9,7 +9,7 @@ priority: 1
 difficulty: medium
 reading: []
 created: '2026-09-06T22:23:48+00:00'
-updated: '2026-09-06T22:23:48+00:00'
+updated: '2026-09-06T22:59:27+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,4 @@ Source evidence: docs/incidents/CG-360-validation.md, CG-360 task log and manual
 ## Log
 
 - 2026-09-06: Priority1 follow-up filed with owner authority after direct operator implementation exposed manual completion overhead. Ordinary dispatch remains paused.
+- 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CG363 external worktree remained outside scheduler path from the outset. Normal finish_manual API succeeded with review.enabled false scoped to that single call under owner direct-work authority, followed by normal merged-PR reconciliation; no extra model launched and spend stayed unknown. A supported CLI option should avoid needing this scoped API configuration.
