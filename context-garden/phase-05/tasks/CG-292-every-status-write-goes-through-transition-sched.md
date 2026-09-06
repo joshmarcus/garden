@@ -2,7 +2,7 @@
 id: CG-292
 title: 'Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep
   test'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,9 +14,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/201
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T02:04:24+00:00'
+last_dispatched_at: '2026-09-06T02:15:00+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T02:14:22+00:00'
+updated: '2026-09-06T02:15:00+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,4 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict. 
 - 2026-09-06T02:01:13+00:00 automated review: approve — All five acceptance criteria are met and verified against the diff and a full test run; only a harmless unnecessary --force in one CLI test as a nit. cost=$0.68
 - 2026-09-06T02:04:24+00:00 dispatched rebase run 20260906T020423Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~12411 tokens)
 - 2026-09-06T02:14:22+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); revise run will fix before the PR is updated cost=$0.01
+- 2026-09-06T02:15:00+00:00 dispatched revise run 20260906T021459Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8303 tokens)
