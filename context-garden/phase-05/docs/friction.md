@@ -78,3 +78,7 @@ The Now page shows hand merges as '— until metrics carries them'; the metrics 
 - The mock's stage_word_for disagreed with the design prose on the growth-stage bands (0.1 read as seed); the prose was followed
 - Task state written with dict.update on a _TaskState is silently not saved (only __setitem__ is tracked); cost a debugging round in a test
 - The garden fixture's review round cap is 2, not the design's 4, which the first test assumed
+
+### 2026-09-06 · reported by CG-237 (The not-logged-in check reads a worker's prose as an auth failure: match the CLI's own error, not the report text) in run 20260906T033748Z-revise
+
+- The original phase-04 stdout.json files were unavailable because they were truncated; surviving final result texts were used per the human-provided instruction.
