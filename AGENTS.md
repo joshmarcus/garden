@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current state consolidated 2026-09-06 23:04 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
+Current state consolidated 2026-09-06 23:13 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
 
 ## Start here
 
@@ -18,11 +18,11 @@ Phase 05 stabilization remains UNPROVEN: four productive unattended hours, ten r
 
 Web responsiveness incident reopened around 21:04 UTC after Now2 timed out amid overlapping suites and service memory.high pressure. Earlier closure at 19:13 was superseded by recurrence. Incident record: context-garden/docs/incidents/2026-09-06-web-responsiveness.md. Initial retro is complete; recurrence recovery observation and final retro addendum remain due. Follow the incident protocol before closing.
 
-Ordinary admission remains PAUSED. Temporary live worker limit=1, review limit=1; garden.yaml also sets resources.max_parallel=1 across local work/reviews/checks/base probes, min_memory_available_mb=1536 and min_temp_free_mb=1024. These combined limits are now INSTALLED and enabled. Do not restore the owner's earlier three-worker limit without workload evidence. A full shared slot is admission saturation, not evidence of actual memory pressure.
+Ordinary admission remains PAUSED for a controlled two-run trial authorized by the owner after CI offload. Live max_parallel=2 and resources.max_parallel=2 across work/reviews/checks/base probes; review_parallel remains1. garden.yaml keeps conservative defaults1, with persisted live overrides governing admission. min_memory_available_mb1536/min_temp_free_mb1024 and OS caps are unchanged. Live overrides were applied through product actions without restarting or editing executable configuration. Do not raise to3 without further workload evidence. A full shared slot is admission saturation, not evidence of actual memory pressure.
 
 Persistent garden-serve.service caps: CPUQuota=200%, CPUWeight=20, MemoryHigh=3GiB, MemoryMax=4GiB, MemorySwapMax=512MiB. Web and tests still share this resource budget. CLI launches share garden admission now, but OS budget isolation across launch paths is NOT established; prefer capped server POST actions. Manual heavy work uses a bounded systemd user service, disk temp /home/joshua/work/operator-test-tmp, and serial tests. Never start a second garden server.
 
-/tmp is a 3GiB tmpfs; /home/joshua/work/tmp links to /tmp/garden-work, recreated by the worker-temp drop-in. Never delete active temp. The earlier timed two-minute monitor ended; the current five-minute operator heartbeat is active. Inspect actual cgroup/process pressure, not cumulative counters alone.
+/tmp is a 3GiB tmpfs; /home/joshua/work/tmp links to /tmp/garden-work, recreated by the worker-temp drop-in. Never delete active temp. The earlier timed resource sampler ended. The existing operator heartbeat now checks every two minutes during the new concurrency trial until 2026-09-06 23:43 UTC, then returns to five minutes if pressure remains absent. Inspect actual cgroup/process pressure, not cumulative counters alone.
 
 ## Installed build and verification
 
@@ -48,7 +48,7 @@ Owner-requested serial same-suite A/B at c1f75cb: tmpfs163s/969MiB peak; ext4 22
 
 Evidence and scripts: context-garden/docs/incidents/test-temp-ab/README.md and adjacent JSON/source. Raw logs/temp preserved under /home/joshua/work/operator-test-tmp/io-ab-20260906. Ext4 archive round-trip failure reproduced separately; CG-360 tracks it.
 
-The existing operate-context-garden heartbeat runs every five minutes. Next: watch actual CG-361 work and resources; do not duplicate launches or raise concurrency. Verify shared admission and descendant accounting during intended workload; obtain three representative journey checks over ten minutes with loaded evidence before declaring incident recovery. Complete recurrence retro/prevention addendum and maintain CG-360 archive hold. Restore ordinary25-minute cadence only after recovery/follow-up, retaining unresolved safety limits as appropriate.
+The existing operate-context-garden heartbeat runs every two minutes through23:43 UTC for the concurrency trial, then five minutes if pressure is absent. Next: watch both controlled workers and actual resources; do not duplicate launches or raise beyond the two-run trial. Verify shared admission and descendant accounting during intended workload; obtain three representative journey checks over ten minutes with loaded evidence before declaring incident recovery. Complete recurrence retro/prevention addendum; CG360 is installed and its earlier installation hold is cleared. Restore ordinary25-minute cadence only after recovery/follow-up, retaining unresolved safety limits as appropriate.
 
 Owner authorizes useful direct implementation in this operator session alongside the sole scheduled worker; keep changes independent and tests serial, without starting another model agent for the direct work. CG-360 is the first completed direct task.
 
@@ -66,4 +66,12 @@ CG363 is DONE; PR243 merged58e13b99 and is installed. This product enables setup
 
 Final branch run34064850874 passed1224 tests/3skipped at ec0876b4e12984f2f9539d1afb9bcf9ea6d60bc4. Same-commit recheck reused that run; a successful old-head run was correctly rejected after checkout movement. PR and main CI passed.47 focused CI/brief tests and30 merge-gate tests passed under116MiB. Configured pre-PR checks retain local lint without repeating the full suite; the separate docs-product behavior is preserved. Full PR CI remains required, and opted-in products cannot automerge with no CI result.
 
-Installed CG361 brief and real check commands verified. Post-restart /,Now2,Inbox,Config returned200 in1.790/.563/.615/.253s; Windows Now2 returned200/2.044s. Service142MiB,swap0,zero high/max/OOM events. Evidence: context-garden/docs/incidents/CG-363-validation.md. These idle rollout checks do not establish loaded incident recovery or unattended stabilization. Keep ordinary admission paused; one controlled CG361 continuation is authorized. Five-minute monitoring, loaded recovery checks and recurrence retro remain due.
+Installed CG361 brief and real check commands verified. Post-restart /,Now2,Inbox,Config returned200 in1.790/.563/.615/.253s; Windows Now2 returned200/2.044s. Service142MiB,swap0,zero high/max/OOM events. Evidence: context-garden/docs/incidents/CG-363-validation.md. These idle rollout checks do not establish loaded incident recovery or unattended stabilization. Keep ordinary admission paused except for the two explicitly launched recovery/stabilization tasks. Trial monitoring, loaded recovery checks and recurrence retro remain due.
+
+## Controlled two-run trial
+
+Owner asked to increase concurrency after the CI rollout. At23:07, service686MiB/peak807MiB,load.34,memory pressure0,service swap0,Now2 .655s andInbox .692s supported a measured increase to two total local runs. Applied live worker/shared limits2, review limit1, retained all OS caps and normal dispatch pause.
+
+CG354 focused-tests/Git-fixture cleanup dispatched ONCE at23:10:53, run20260906T231053Z-work, supervisorPID2025473, codex/gpt-5.6-terra. HTTP client timed out but PID,112KiB stdout with7-second freshness and the CI brief were verified. Do not duplicate. Scope avoids CG361's active source/tests and focuses on bounded fixture helpers and selection guidance. CG361 run230331/PID2008837 remains active, waiting on exact-head GitHub CI34066025154 at b05c1d21b122; the helper refused unrelated dirty snapshot, which the worker stashed before CI. Preserve that stash and inspect eventual PR scope; do not let automatic leftover commits add the unrelated snapshot.
+
+At23:11 with both runs active, service1.17GiB,memory pressure0,service swap0,no high/max/OOM events,Now2 .667s; host available memory5682MiB,temp free2123MiB. These are initial trial observations, not incident closure. If memory approaches2.5GiB, pressure/high events rise, temp free approaches1GiB or web latency repeatedly exceeds2s/timeouts, reduce live admission back to1 and investigate; preserve and stop the lower-priority run only if pressure does not drain. Do not increase OS limits to mask renewed contention.

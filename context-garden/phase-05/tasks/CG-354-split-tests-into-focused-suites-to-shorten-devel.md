@@ -1,15 +1,18 @@
 ---
 id: CG-354
 title: Split tests into focused suites to shorten development feedback
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
 reading: []
+branch: garden/cg-354-split-tests-into-focused-suites-to-shorten-devel
+attempts: 1
+last_dispatched_at: '2026-09-06T23:11:15+00:00'
 created: '2026-09-06T17:04:04+00:00'
-updated: '2026-09-06T22:59:27+00:00'
+updated: '2026-09-06T23:11:15+00:00'
 ---
 
 ## Goal
@@ -30,7 +33,9 @@ Josh requested this in a side conversation on 2026-09-06: "split up the tests so
 
 ## Scope and scheduling
 
-Phase-05 stabilization/developer-feedback improvement, priority 2; created as a draft for operator triage. No dispatch, scheduler restart or changes to active PR work are authorized by this task creation. Coordinate with resource admission work; do not raise concurrency, add blanket pytest parallelism, or replace full CI with an incomplete suite.
+Approved phase-05 stabilization work, priority1. Owner authorized a monitored two-run concurrency trial on2026-09-06. Keep full suites on GitHub using the configured helper; local checks and comparisons must remain focused, serial and bounded. Preserve coverage and do not weaken CI or actual-application requirements.
+
+CG361 is concurrently finishing resource enforcement. Keep this task independent: focus on bounded Git fixture subprocess/descendant cleanup, tests/conftest.py, dedicated regression tests and a useful subsystem selection guide. Avoid editing CG361's active tests/test_runners.py, tests/test_web.py, tests/inprocess.py, tests/scheduler/test_resources.py, resource/runner modules, src/garden/brief.py, src/garden/cli/loop.py, docs/codex.md and docs/architecture.md until that work merges. Do not mechanically reorganize files merely to show a split; use measured setup costs to choose useful changes. A selection guide can live in a new document linked from AGENTS.md. Record concurrent-host limitations honestly in timing evidence. No extra model agents, production service changes or parallel local suites.
 
 ## Log
 
@@ -45,3 +50,5 @@ During CG-361 validation, a full suite spent 694.80s before reporting 425 passed
 
 Extend the fixture inventory and acceptance evidence to bounded Git subprocess waits and complete helper cleanup, including a child that exits while a descendant holds captured output open. Surface command/stderr/timeouts promptly, preserve useful failed fixtures and avoid declaring unrelated branch code broken. This task should measure useful test execution separately from stuck setup and repeated full-suite retries. The originating git push failure still needs diagnosis; terminating the helpers explains recovery, not the original exit128.
 - 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CG-363 merged and installed: full worker suites now offloaded to GitHub, pre-PR avoids local repetition. Retain this task for focused-test selection and the measured unbounded Git fixture pipe/descendant stall; do not duplicate the CI work.
+- 2026-09-06T23:10:32+00:00 Owner requested concurrency increase after CI offload. Selected as independent second stabilization task for monitored2-run trial; scoped around in-flight CG361 changes, focused local tests and full GitHub CI.
+- 2026-09-06T23:11:15+00:00 dispatched work run 20260906T231053Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~10080 tokens)
