@@ -79,3 +79,7 @@ Blocking the phase-04 close: CG-238 (merged), CG-239 (PR #193, in revise), CG-24
 - CG-230: A tier can name several harness and model options, after the measurement lands
 - CG-213: OpenRouter as an adapter around an existing CLI, after the measurement lands
 - CG-216: Workers on independent remote hosts, last
+
+## Open
+
+- **Goal 2: any model routed by difficulty with failure-driven escalation**: No task owns difficulty routing or the failure-driven escalation policy (retry at a higher tier on failed verification, per the spec's phase-1 acceptance); CG-213 is the harness, CG-230 is pooling, CG-251 is measurement, and no escalation code exists.
