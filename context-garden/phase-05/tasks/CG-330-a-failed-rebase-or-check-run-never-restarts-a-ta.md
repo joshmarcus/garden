@@ -2,7 +2,7 @@
 id: CG-330
 title: 'A failed rebase or check run never restarts a task''s work from scratch: the PR stays, the rebase
   or check is retried, and only a failed work or revise run counts as an attempt'
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/236
 attempts: 1
 last_dispatched_at: '2026-09-06T19:27:57+00:00'
 created: '2026-09-06T06:24:13+00:00'
-updated: '2026-09-06T19:43:12+00:00'
+updated: '2026-09-06T20:10:49+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,4 @@ The WSL restart interrupted the prior revise. Its unfinished changes are preserv
 ## Follow-up acceptance: clean-base environment classification
 
 - [ ] A clean-base probe whose configured interpreter is absent or whose test is terminated is classified as setup/interruption, never as proof that main is source-broken. Preserve work, surface the concrete missing prerequisite, and exercise missing executable and SIGTERM regression cases without rerunning ordinary work from scratch.
+- 2026-09-06T20:10:49+00:00 PR236 merged after current-head CI and removal of unrelated snapshot; auxiliary retry semantics reviewed and passed.

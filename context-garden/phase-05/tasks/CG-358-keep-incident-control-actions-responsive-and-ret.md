@@ -1,15 +1,18 @@
 ---
 id: CG-358
 title: Keep incident control actions responsive and retry-safe during web overload
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
 difficulty: hard
 reading: []
+branch: garden/cg-358-keep-incident-control-actions-responsive-and-ret
+attempts: 1
+last_dispatched_at: '2026-09-06T19:40:17+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-06T19:13:47+00:00'
+updated: '2026-09-06T19:40:17+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,9 @@ Keep recovery controls usable during overloaded page rendering and make timed-ou
 ## Counterfactual
 
 A responsive, durable recovery action would have started CG-357 promptly and avoided manual stack inspection and ambiguous restart/retry handling, shortening the outage even before a full history-index fix existed.
+
+## Log
+
+- 2026-09-06T19:40:17+00:00 dispatched work run 20260906T193955Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~8672 tokens)
+
+20:13 operator-race evidence: between observation and retry, automatic dispatch started CG-338 revision201038; retry cancelled the just-started worker. Preserve expected-run identity on control actions (optimistic precondition / compare-and-act); reject a stale retry rather than silently cancelling a newer run. This counterfactual prevents observation/action races even when the HTTP response is healthy. Dirty work was preserved in operator-test-tmp/CG338-retry-race-2013.patch and task requeued.

@@ -1,15 +1,20 @@
 ---
 id: CG-337
 title: Attention cards ask for product decisions, while no-change reports reconcile automatically
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
+order: 0
 difficulty: hard
 reading: []
+branch: garden/cg-337-attention-cards-ask-for-product-decisions-while
+pr: https://github.com/joshmarcus/context-garden/pull/235
+attempts: 1
+last_dispatched_at: '2026-09-06T20:11:48+00:00'
 created: '2026-09-06T13:20:33+00:00'
-updated: '2026-09-06T13:46:58+00:00'
+updated: '2026-09-06T20:11:48+00:00'
 ---
 
 ## Goal
@@ -33,3 +38,15 @@ Josh, 2026-09-06 operator session: "those decisions are confusing; it's unclear 
 
 Additional takeover evidence: setting CG-324 in_review while its pre-PR check was live exposed a misleading Review and merge card with `garden set-status CG-324 done`. Reconciliation to running removed that false decision. CG-308 displayed a running rebase from 12:56Z despite the rebased branch having green CI and no live run; a fresh review required operator recovery. Derive attention from live run/continuation state, and never recommend marking done as a substitute for verifying checks/review/merge. Coordinate with CG-316 and CG-333 on stale run recovery.
 - 2026-09-06T13:46:58+00:00 priority 1 -> 0
+- 2026-09-06T17:41:58+00:00 reordered in context-garden/phase-05 (order 3 -> 0) (web)
+- 2026-09-06T17:42:43+00:00 dispatched work run 20260906T174219Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~8786 tokens)
+- 2026-09-06T18:18:59+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$3.85
+- 2026-09-06T19:14:18+00:00 dispatched revise run 20260906T191417Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9678 tokens)
+- 2026-09-06T19:21:53+00:00 opened https://github.com/joshmarcus/context-garden/pull/235 (base main): Updated the discovered-decision test to require outcome-oriented labels, restoring the full pre-PR suite. No-change reconciliation, explicit product decisions, and empty-card recovery remain covered by the completed implementation. cost=$0.41
+- 2026-09-06T19:25:42+00:00 automated review requested changes: The no-change and empty-card recovery paths can discard scheduler evidence or cancel live work instead of reconciling it. Required rendered-card evidence is also absent, and an unrelated generated snapshot rewrite remains in the branch. cost=$0.48
+- 2026-09-06T19:34:26+00:00 dispatched revise run 20260906T193424Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10009 tokens)
+- 2026-09-06T19:47:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/235: No-change reconciliation now preserves internal finding identities and reaches the bounded stall path when findings persist. Empty-question cards use dedicated recovery that retains live checks, reaps finished checks, and clears only stale metadata; representative decision cards were captured and inspected across widths and themes. cost=$1.84
+- 2026-09-06T19:55:10+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, inbox, n; run `garden triage CG-337 --changes "<feedback>" to unblock`
+- 2026-09-06T20:11:34+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-06T20:11:45+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/checkruns.py); a rebase agent will resolve it
+- 2026-09-06T20:11:48+00:00 dispatched rebase run 20260906T201146Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8517 tokens)

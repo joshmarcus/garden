@@ -1,7 +1,7 @@
 ---
 id: CG-338
 title: Keep the operator machine responsive under concurrent workers and test suites
-status: running
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -10,10 +10,10 @@ order: 3
 difficulty: hard
 reading: []
 branch: garden/cg-338-keep-the-operator-machine-responsive-under-concu
-attempts: 1
-last_dispatched_at: '2026-09-06T19:14:37+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/238
+last_dispatched_at: '2026-09-06T20:10:40+00:00'
 created: '2026-09-06T13:27:34+00:00'
-updated: '2026-09-06T19:14:37+00:00'
+updated: '2026-09-06T20:12:22+00:00'
 ---
 
 ## Goal
@@ -48,3 +48,11 @@ Recovery measurement 2026-09-06 16:15:56Z: ordinary dispatch paused and max_para
 ## Web-incident retro extension, 2026-09-06
 
 CG-294 had four simultaneous pytest processes that survived stopping its harness/process group; each was verified in its worktree and terminated manually. Add acceptance coverage for per-run descendant ownership across detached sessions, duplicate overlapping full-suite admission and stop/drain verification. Preserve recovery artifacts, respect caps across all launch paths and distinguish environment interruption from code failure. Counterfactual: bounded per-run tests and complete descendant cleanup would have reduced contention and freed recovery capacity promptly. Provenance: docs/incidents/2026-09-06-web-responsiveness-retro.md.
+- 2026-09-06T19:38:40+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$3.67
+- 2026-09-06T19:38:44+00:00 dispatched revise run 20260906T193843Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9637 tokens)
+- 2026-09-06T19:47:50+00:00 opened https://github.com/joshmarcus/context-garden/pull/238 (base main): Removed the generated snapshot changes from the final diff and confirmed the resource-pressure implementation passes both focused and full regression suites. The host-wide admission gate, safe temp cleanup, operator pressure reporting, and documented local profile remain intact. cost=$0.65
+- 2026-09-06T20:03:44+00:00 automated review requested changes: The UI and environment-error classification are sound, but concurrent launchers can exceed the host limit and detached descendants can outlive cleanup/accounting. The PR description and commit story also contain process narration. cost=$0.33
+- 2026-09-06T20:10:40+00:00 dispatched revise run 20260906T201038Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10327 tokens)
+- 2026-09-06T20:11:34+00:00 reset to ready by hand
+- 2026-09-06T20:11:54+00:00 Reconciled to existing active revision; automatic dispatch had started before operator retry. Preserve existing run, do not duplicate.
+- 2026-09-06T20:12:22+00:00 Operator retry raced automatic revision startup and cancelled run201038. Verified cancelled PID20418 absent; no live replacement yet. Return ready for exactly one replacement; preserve worktree/transcript. Previous running reconciliation was incorrect and is superseded.
