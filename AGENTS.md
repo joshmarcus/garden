@@ -130,3 +130,5 @@ The timed two-minute resource monitor completed; restore operator heartbeat to 2
 ## Fast-forward active, owner authorized 2026-09-06 ~16:44 UTC
 
 Follow context-garden/docs/fast-forward.md. The existing service now uses serve --no-watch via fast-forward.conf after live work drained; UI and resource caps remain. Do not resume, tick or launch automated writers/reviewers from a heartbeat while active. Operator may directly repair eligible open PRs, assess and disposition findings, self-review and merge with current-head validation. No further automated review round is required in this mode. Preserve phase-06 holds unless owner explicitly lifts them. Record actions and restore ordinary scheduling only through the documented exit.
+
+Owner scope clarification: leave frozen PRs #221 and #222 open. Fast-forward completes when #232, #229, #228, #223 and #216 are merged or closed with justified dispositions; reconcile their task states and exit maintenance at that point. The five-minute operator reminder drives this work until completion, then returns to ordinary 25-minute duties.

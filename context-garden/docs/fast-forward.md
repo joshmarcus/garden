@@ -29,3 +29,9 @@ Report merged/closed PRs, explicitly deferred PRs and remaining blockers. Instal
 ## Activation record
 
 2026-09-06 ~16:44 UTC: dispatch paused; no live worker/reviewer/check found in the garden cgroup or matching external worktrees. Existing garden-serve.service restarted with `~/.config/systemd/user/garden-serve.service.d/fast-forward.conf`, using `serve --no-watch`. UI remains available and resource caps remain. Fast-forward mode is active; open PR resolution and its ledger follow this protocol.
+
+Owner scope clarification: leave frozen PRs #221 and #222 open. Fast-forward completes when #232, #229, #228, #223 and #216 are merged or closed with justified dispositions; reconcile their task states and exit maintenance at that point. The five-minute operator reminder drives this work until completion, then returns to ordinary 25-minute duties.
+
+## PR resolution ledger
+
+2026-09-06 16:58 UTC — #232 / CG-344: directly repaired and pushed f7b2646 (base merged from current main). Removed unrelated design snapshot, eliminated untrusted manifest fallback, preserved trusted references through manual runs and interrupted finalization, and made integrity failure an honest inspection stop. Added corruption/deletion/reference and concurrent-writer regression coverage. Operator self-review and finding dispositions are in the PR body. 182 targeted tests plus full lint passed; bounded test peak 376 MiB, zero swap. New-head GitHub CI pending; PR not yet merged. This was supervised repair, not unattended stabilization.
