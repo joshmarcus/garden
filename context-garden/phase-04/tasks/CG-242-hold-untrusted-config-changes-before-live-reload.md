@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: draft
+status: ready
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -13,15 +13,15 @@ reading:
 - src/garden/scheduler/fence.py
 - src/garden/scheduler/reap.py
 - src/garden/scheduler/__init__.py
-- tests/test_config.py
 - tests/scheduler/test_reap.py
+- tests/test_store.py
 discovered_from: retro:context-garden/phase-04
 freeze_exception: true
 freeze_exception_reason: Live reload currently activates a worker's configuration write before the fence
   can reject it, creating a newly introduced privileged execution path.
 retro_blocking: true
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-05T23:15:09+00:00'
+updated: '2026-09-05T23:59:06+00:00'
 ---
 
 ## Goal
@@ -42,3 +42,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 ## Log
 
 - 2026-09-05T23:15:09+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
+- 2026-09-05T23:59:06+00:00 approved (cli)

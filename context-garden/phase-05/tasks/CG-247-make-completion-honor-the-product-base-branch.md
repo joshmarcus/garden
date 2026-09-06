@@ -1,7 +1,7 @@
 ---
 id: CG-247
 title: Make completion honor the product base branch
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,7 +14,7 @@ freeze_exception_reason: The current Mark done action contradicts CG-228's deliv
   and can tell the owner that unshipped work is finished.
 retro_blocking: true
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-05T23:58:01+00:00'
+updated: '2026-09-05T23:59:48+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 
 - 2026-09-05T23:15:10+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
 - 2026-09-05T23:58:01+00:00 moved from context-garden/phase-04 to context-garden/phase-05
+- 2026-09-05T23:59:48+00:00 approved by the retro reopen verdict
