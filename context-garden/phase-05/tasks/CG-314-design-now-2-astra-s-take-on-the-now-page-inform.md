@@ -2,7 +2,7 @@
 id: CG-314
 title: 'Design Now 2: astra''s take on the Now page, information architecture, visual system, motion,
   and a static mock of every state'
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -32,7 +32,7 @@ model: gpt-6-astra
 attempts: 1
 last_dispatched_at: '2026-09-06T03:41:24+00:00'
 created: '2026-09-06T02:06:03+00:00'
-updated: '2026-09-06T03:41:24+00:00'
+updated: '2026-09-06T03:53:03+00:00'
 ---
 
 ## Goal
@@ -72,3 +72,4 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T03:35:11+00:00 triage: changes requested by hand: The owner grants the data: a real, sanitized snapshot of this garden (the same one Fable's Now 1 mock was rendered from,
 - 2026-09-06T03:37:00+00:00 automated review: request_changes — Request changes: the branch explicitly lacks required phone/dark visual validation, both persona reviews, and proof that the displayed matrices use the same computation as garden metrics. Focused tests pass, but these are acceptance blockers. cost=$0.29
 - 2026-09-06T03:41:24+00:00 dispatched revise run 20260906T034122Z-revise via local [codex model=gpt-6-astra] (fresh session, base main, ~9124 tokens)
+- 2026-09-06T03:53:03+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/215: Clarified the real-snapshot field handoff while preserving the existing design. Added and inspected full-page Edge captures at 1280 and 390 in light and dark; persona verdicts and shared-metrics provenance remain outstanding. cost=$4.95

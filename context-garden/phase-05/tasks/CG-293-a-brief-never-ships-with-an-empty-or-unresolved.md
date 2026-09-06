@@ -12,12 +12,12 @@ reading: []
 harness: codex
 discovered_from: retro:context-garden/phase-04
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T03:49:25+00:00'
+updated: '2026-09-06T03:51:40+00:00'
 ---
 
 ## Goal
 
-The brief builder refuses an empty reading list, drops entries that do not resolve and reports the drop as a gap, and builds inlined files from the task's base commit rather than a dirty worktree. A revise brief restates the acceptance criteria, inlines the actual review comments and the failing check's stack trace, and when GitHub has nothing to address, names the rebase conflict as the concrete blocker.
+The brief builder refuses an empty reading list, drops entries that do not resolve and reports the drop as a gap, and builds inlined files from the task's base commit rather than a dirty worktree. A revise brief restates the acceptance criteria, inlines the actual review comments and the failing check's stack trace, and when GitHub has nothing to address, names the rebase conflict as the concrete blocker. A per-task `true` escape supports the rare mechanical task, and amended criteria flow through results, reap, and review.
 
 ## Context
 
@@ -30,15 +30,15 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - [ ] Inlined file contents in a brief are read from the task's base commit, not from an uncommitted or dirty worktree, even when the worktree has local changes.
 - [ ] A revise brief restates the task's acceptance criteria verbatim and inlines the actual GitHub review comments and the failing check's stack trace, rather than a summary.
 - [ ] When a revise brief finds nothing on GitHub to address, it names the rebase conflict as the blocker instead of leaving the field empty or generic; covered by a test asserting the revise-brief path sets this blocker when there are no open review comments.
+- [ ] A per-task `true` escape is available for the rare mechanical task.
+- [ ] The result block carries `criteria_amended: [{index, text, reason}]`; on reap, the task file is updated and the reason is recorded in the log; the review brief marks the amended line as amended; and the reviewer judges that line. Tests cover the full round trip.
 
 ## Suggestions
 
 - [x] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; write paths from the repository root such as src/garden/..., never invent one); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
-
-- [ ] A criterion that names a file, a function or a field is accepted as written; the work and review briefs say such names are guidance and the outcome is what is judged (owner, 2026-09-06 04:00Z: no refusal on names).
-- [ ] A worker may amend a criterion: the result block carries `criteria_amended: [{index, text, reason}]`, the task file is updated on reap with the reason in the log, the review brief shows the amended line marked as amended, and the reviewer judges that line; tests cover the round trip.
-
-- [ ] Criteria are optional: `brief_gaps` and the approve gate accept a task with no `## Acceptance criteria` section (a placeholder checklist such as 'TODO' or '...' is still refused); the work brief then says the Goal is the contract and asks the worker to state what it verified and how; the review brief asks the reviewer to judge the goal on that evidence and return `criteria: []`; tests cover approve, brief and review for a criteria-less task (owner, 2026-09-06 03:55Z: 'also allow tasks without acceptance criteria').
+- [x] A criterion that names a file, a function or a field is accepted as written; the work and review briefs say such names are guidance and the outcome is what is judged (owner, 2026-09-06 04:00Z: no refusal on names).
+- [x] A worker may amend a criterion: the result block carries `criteria_amended: [{index, text, reason}]`, the task file is updated on reap with the reason in the log, the review brief shows the amended line marked as amended, and the reviewer judges that line; tests cover the round trip.
+- [x] Criteria are optional: `brief_gaps` and the approve gate accept a task with no `## Acceptance criteria` section (a placeholder checklist such as 'TODO' or '...' is still refused); the work brief then says the Goal is the contract and asks the worker to state what it verified and how; the review brief asks the reviewer to judge the goal on that evidence and return `criteria: []`; tests cover approve, brief and review for a criteria-less task (owner, 2026-09-06 03:55Z: 'also allow tasks without acceptance criteria').
 
 ## Log
 
@@ -46,3 +46,4 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T00:51:50+00:00 integrated 1 suggestion(s) (run 20260906T005022Z-edit) cost=$0.11
 - 2026-09-06T00:52:23+00:00 approved (cli)
 - 2026-09-06T03:49:25+00:00 difficulty medium -> medium
+- 2026-09-06T03:51:40+00:00 integrated 3 suggestion(s) (run 20260906T034959Z-edit) cost=$0.03
