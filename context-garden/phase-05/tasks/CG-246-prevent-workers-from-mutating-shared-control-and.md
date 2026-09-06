@@ -1,7 +1,7 @@
 ---
 id: CG-246
 title: Prevent workers from mutating shared control and harness state
-status: ready
+status: draft
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,7 +14,7 @@ freeze_exception_reason: The reported remaining write paths can forge approval e
   in later operator sessions, undermining the phase's trust guarantees even after git and reload fixes.
 retro_blocking: true
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-05T23:59:48+00:00'
+updated: '2026-09-06T00:00:52+00:00'
 ---
 
 ## Goal
@@ -30,3 +30,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-05T23:15:10+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
 - 2026-09-05T23:58:00+00:00 moved from context-garden/phase-04 to context-garden/phase-05
 - 2026-09-05T23:59:48+00:00 approved by the retro reopen verdict
+- 2026-09-06T00:00:52+00:00 operator: back to draft; approved by retro-decide without a brief (no acceptance criteria, empty reading list, the CG-250 gap); phase 05's kickoff completes the brief before approval

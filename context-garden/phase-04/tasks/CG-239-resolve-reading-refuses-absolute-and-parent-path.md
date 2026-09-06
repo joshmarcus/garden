@@ -28,7 +28,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-05T23:45:29+00:00'
 created: '2026-09-05T23:05:56+00:00'
-updated: '2026-09-05T23:54:09+00:00'
+updated: '2026-09-06T00:00:19+00:00'
 ---
 
 ## Goal
@@ -55,3 +55,5 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-05T23:45:10+00:00 automated review requested changes: The reading-path fix and git-guard scaffolding work and are tested, but the hooksPath mitigation uses a shared, predictable, worker-writable temp directory that reopens the same hook-planting attack the task exists to close, and a fourth raw git subprocess call (path_at) bypasses both the block and the forced env. cost=$0.71
 - 2026-09-05T23:45:29+00:00 dispatched revise run 20260905T234529Z-revise via local [claude model=claude-sonnet-5] (fresh session, base main, ~23897 tokens)
 - 2026-09-05T23:54:09+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/193: Fixed both blocking review findings: core.hooksPath now points at a freshly created, unpredictable directory that is torn down immediately after each git call instead of a shared, worker-writable path, and path_at() now runs through the git() wrapper so it respects a blocked clone and the forced hooksPath/fsmonitor env like every other call site. cost=$0.86
+- 2026-09-06T00:00:14+00:00 automated review: approve — All four acceptance criteria are met and verified by passing tests; the previous review's two blocking findings (predictable hooksPath dir, unguarded path_at) are fixed, and the diff is scoped and clean. cost=$0.67
+- 2026-09-06T00:00:19+00:00 rebasing before merge; rebased onto main mechanically and force-pushed

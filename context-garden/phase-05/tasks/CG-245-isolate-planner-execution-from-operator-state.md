@@ -1,20 +1,23 @@
 ---
 id: CG-245
 title: Isolate planner execution from operator state
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
 reading: []
+branch: garden/cg-245-isolate-planner-execution-from-operator-state
 discovered_from: retro:context-garden/phase-04
 freeze_exception: true
 freeze_exception_reason: A stated phase trust goal remains unshipped, and model-written documents currently
   drive an edit-capable process in the live garden with operator credentials.
 retro_blocking: true
+attempts: 1
+last_dispatched_at: '2026-09-06T00:01:43+00:00'
 created: '2026-09-05T23:15:10+00:00'
-updated: '2026-09-05T23:59:48+00:00'
+updated: '2026-09-06T00:01:43+00:00'
 ---
 
 ## Goal
@@ -30,3 +33,4 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-05T23:15:10+00:00 filed by the context-garden/phase-04 retro reopen verdict (blocking)
 - 2026-09-05T23:58:00+00:00 moved from context-garden/phase-04 to context-garden/phase-05
 - 2026-09-05T23:59:48+00:00 approved by the retro reopen verdict
+- 2026-09-06T00:01:43+00:00 dispatched work run 20260906T000127Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~5776 tokens)
