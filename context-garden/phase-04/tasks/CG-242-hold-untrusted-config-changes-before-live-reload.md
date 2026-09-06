@@ -1,7 +1,7 @@
 ---
 id: CG-242
 title: Hold untrusted config changes before live reload
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-04
 depends_on: []
@@ -25,7 +25,7 @@ retro_blocking: true
 attempts: 1
 last_dispatched_at: '2026-09-06T00:40:12+00:00'
 created: '2026-09-05T23:15:09+00:00'
-updated: '2026-09-06T00:48:07+00:00'
+updated: '2026-09-06T01:46:22+00:00'
 ---
 
 ## Goal
@@ -52,3 +52,6 @@ Filed by the context-garden/phase-04 retro `reopen` verdict: it must land before
 - 2026-09-06T00:39:41+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/fence.py, tests/test_fence.py); a rebase agent will resolve it
 - 2026-09-06T00:40:12+00:00 dispatched rebase run 20260906T004011Z-rebase via local [claude model=claude-sonnet-5] (fresh session, base main, conflict only; easy tier, ~12254 tokens)
 - 2026-09-06T00:48:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/199: Rebased onto origin/main, resolving two textual conflicts in src/garden/scheduler/fence.py (module docstring) and tests/test_fence.py (import block) by combining both sides' content rather than choosing one; no logic changed. Full test suite (985 passed, 3 skipped) and tests/test_fence.py (20 passed) verified green after rebase. cost=$0.26
+- 2026-09-06T00:59:10+00:00 automated review requested changes: The hold/accept mechanism, tests, and docs are solid, but the fix is incomplete: garden canary's _drive() loop still calls the unconditional store.invalidate() after every tick, leaving one live route around the new gate that the PR's own docs claim doesn't exist. cost=$1.31
+- 2026-09-06T01:01:02+00:00 dispatch failed: [Errno 28] No space left on device: '/tmp/garden-empty-hooks-vbiklx7n'
+- 2026-09-06T01:46:22+00:00 re-enabled by hand; revise run will follow

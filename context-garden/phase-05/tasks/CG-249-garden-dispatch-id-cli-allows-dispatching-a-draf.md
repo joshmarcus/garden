@@ -1,7 +1,7 @@
 ---
 id: CG-249
 title: '`garden dispatch <id>` (CLI) allows dispatching a draft directly'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,7 +21,7 @@ discovered_from: CG-238
 attempts: 1
 last_dispatched_at: '2026-09-06T00:40:28+00:00'
 created: '2026-09-05T23:28:25+00:00'
-updated: '2026-09-06T00:50:04+00:00'
+updated: '2026-09-06T01:46:23+00:00'
 ---
 
 ## Goal
@@ -59,3 +59,8 @@ Discovered by CG-238 (Every path to ready or to a run goes through the approve g
 - 2026-09-06T00:24:04+00:00 approved (cli)
 - 2026-09-06T00:40:28+00:00 dispatched work run 20260906T004012Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~18750 tokens)
 - 2026-09-06T00:50:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/204 (base main): garden dispatch now routes a DRAFT task through Scheduler.approve (the same brief_gaps/phase_refusal gate used by garden take and the web) before allowing mode=work, refusing an incomplete brief unless --force is passed. cost=$0.84
+- 2026-09-06T00:57:54+00:00 automated review: approve — garden dispatch now routes a DRAFT work-mode dispatch through Scheduler.approve, mirroring garden take exactly; all new tests pass along with the full suite (981 passed) and ruff. cost=$0.37
+- 2026-09-06T00:58:08+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T01:00:31+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated
+- 2026-09-06T01:05:18+00:00 dispatch failed: [Errno 28] No space left on device: '/tmp/garden-empty-hooks-aqv7z4mk'
+- 2026-09-06T01:46:23+00:00 re-enabled by hand; revise run will follow
