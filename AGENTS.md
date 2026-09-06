@@ -18,7 +18,7 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
   evidence, optional, never refused for naming a file (principles/00-index.md).
 - Priority 1 is the Now page: Now 1 (Fable's design, PR #218) and Now 2 (astra's, PR #227, see below); then the loop-quality tasks filed last night.
 
-## State at 12:45Z
+## State at 12:58Z (after the tmpfs restart)
 
 - Phases 01–04 closed. Phase 05 open: ~19 done, 25 ready, several in revise; $340 spent.
 - `garden.yaml`: default harness codex (luna/terra/sol by tier), `review.harness: codex`,
@@ -27,17 +27,14 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
   11-minute suite; checks and reviews take dispatcher slots, CG-329), check timeouts 1500 s.
 - Service: `systemctl --user` unit `garden-serve.service` (linger on). Restarting it kills
   in-flight checks, which then read as failed checks: restart only when no check is running,
-  then `garden resume <id>` any task that lost one. Pin: 51f9928 (see CLAUDE.md); main is far
-  ahead (ghost-record fix, task-page card, Inbox layout, UI captures check, review ladder,
-  worker temp on disk, design serving). Move the pin at a quiet moment:
+  then `garden resume <id>` any task that lost one. Pin: b72dbcc since 12:55Z (ghost-record fix, task-page card, Inbox layout, UI captures
+  check, review ladder, worker temp under the work root, design serving are live). To move it again:
   `chmod -R u+w .venv/bin .venv/lib && .venv/bin/pip install --force-reinstall --no-deps
   "context-garden[dev,plates] @ git+https://github.com/joshmarcus/context-garden@<sha>" &&
   chmod -R a-w .venv/bin .venv/lib`, then restart, then update the sha in CLAUDE.md.
-- Dispatch is PAUSED (`garden pause`, 12:25Z) for the owner's /tmp remount. `garden unpause`
-  once the remount is done and `df -h /tmp` shows tmpfs.
-- /tmp: was moved to disk at 01:49Z (tmp.mount masked); that made the suite 2.6x slower and
-  is being reverted to a 3 GB tmpfs by the owner. CG-310 (merged) points worker TMPDIR under
-  the work root on disk; amend it to `/tmp/garden/<run>` with the same per-run cleanup.
+- /tmp is a 3 GB tmpfs again (WSL restarted ~12:52Z); dispatch was unpaused at 12:58Z; the five runs in flight at the restart died and were reaped by the new build.
+- Worker temp: CG-310 points TMPDIR under `/home/joshua/work/tmp`, which is now a symlink to
+  `/tmp/garden-work` on the tmpfs (fast, cleaned per run). Keep it that way or amend CG-310.
 
 ## Open PRs and what to do with them
 
