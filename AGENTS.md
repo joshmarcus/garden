@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current state consolidated 2026-09-06 23:02 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
+Current state consolidated 2026-09-06 23:04 UTC. Replace obsolete claims rather than appending contradictory overrides. Verify live state before acting. Historical handoffs in context-garden/docs/operator-history are evidence, not current instructions.
 
 ## Start here
 
@@ -32,7 +32,7 @@ Effective resource_status initially active0/limit1, available memory5987MiB/temp
 
 ## Active recovery work and remaining gap
 
-CG361 priority0: Bound test workloads within each run and reserve web capacity. Prior run20260906T214006Z-work timed out22:32 after24 minutes idle following the preserved Git fixture stall. Task is READY for one controlled continuation; verify live state before dispatch. Branch/worktree and latest observed commitdf9b4e7 are preserved, with unrelated snapshot dirt to exclude from the PR. Updated task body instructs incorporation of current main, focused local resource fixtures and GitHub full-suite validation; no repeated local full suite or production fault injection.
+CG361 priority0: Bound test workloads within each run and reserve web capacity. One controlled continuation dispatched through capped server at23:03:31, run20260906T230331Z-work, supervisorPID2008837, codex/gpt-5.6-sol. PID and52KiB stdout with one-second freshness verified; generated brief contains assigned-branch CI permission and python3 scripts/check_ci.py. It has incorporated current main's CI workflow/helper. Do not duplicate dispatch. Prior run214006 timed out22:32 after24 minutes idle following the preserved Git fixture stall; old work/commits remain. Ordinary admission stays paused. At23:03 validation, Now2 returned200/.636s with service486MiB and no high/max/OOM events.
 
 CG-338 caps parent run records and owns descendants; it DOES NOT cap several pytest suites started inside one worker or reserve CPU/memory for the web service. CG-361 is implementing this enforcement gap, including effective cgroup sensing and actual loaded web/control journeys. Run admission lock is garden-scoped, not automatically every garden on the host. Keep ordinary dispatch paused while this controlled repair runs. Workers must not alter production services or run parallel full suites during implementation.
 
