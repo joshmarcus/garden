@@ -44,8 +44,7 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
   `/home/joshua/work/worktrees/CG-308` (`git rebase origin/main`, keep both), push with
   `--force-with-lease`, `garden set-status CG-308 in_review`, `garden review CG-308`, merge.
   Its one open finding (operator-only periods render empty) is in CG-334.
-- #216 CG-215 onboarding: HOLD (owner). Sol's last review: it does not derive conventions and
-  can fabricate provenance; a revise on sol was in flight at 12:25Z.
+- #216 CG-215 onboarding: HOLD LIFTED by Josh in the Codex operator session on 2026-09-06. Actively revise, review and land it. Address the findings about deriving conventions and provenance; do not reinstate the old hold.
 - #221 CG-216 remote workers and #222 CG-230 pools: held, conflicts with main, requested changes.
 - #223 CG-324 required evidence: held; a failed persona run would strand the review forever.
 - Merged by hand 12:30–12:40Z with reviewer findings still open: #226, #212, #214, #217.
@@ -79,3 +78,11 @@ decisions, restarts, cost). This file is the live handoff: what is true right no
 - Mocks served locally: http://localhost:8766/now-1/now-1.html and /now-2-mock/now-2.html
   (a `python3 -m http.server 8766` over `/home/joshua/work/design-mocks`; `fuser -k 8766/tcp` to stop).
 - The Claude operator's memory (for a Claude session): `~/.claude/projects/-home-joshua-context-garden/memory/`.
+
+## Codex operator update, 2026-09-06 13:21Z
+
+Josh explicitly authorized resolving all attention cards and improving broken process by manual fixes or filed tasks. Do not ask him to interpret routine scheduler states. CG-337 changes no_change into evidence reconciliation and makes true decision cards explain outcomes and consequences. CG-335 covers temp-symlink recovery; CG-336 covers Codex spend attribution (usage unavailable until supported; never substitute Claude usage).
+
+The server remains the existing systemd garden-serve.service. The Codex heartbeat `operate-context-garden` runs in the operator task every 25 minutes; no second server. A service drop-in `~/.config/systemd/user/garden-serve.service.d/worker-temp.conf` creates `/tmp/garden-work` at startup. The missing tmpfs target was restored and its 17 failed dispatches requeued.
+
+All eight initial attention cards were acted on: CG-216/230 returned for substantive revisions; CG-293 resumed after vanished temp fixtures; CG-330 requeued with its interrupted edits preserved in the named worktree stash `operator-recovery-20260906-CG330` and restoration instructions in the task; CG-322/326 approved with clarified briefs; CG-319 approved for evidence-based combination after both builds merge under delegated authority. CG-324's empty question was stale state while pre-PR check 20260906T131533Z-check was running; reconciled to running, preserving the check. Now 1 CG-308 had no live rebase despite a running label; recovered to in_review and started review 20260906T132111Z-review. Neither Now PR was merged at that point. Verify all of this against live state at the next check-in.

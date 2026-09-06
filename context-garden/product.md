@@ -85,9 +85,13 @@ OUT=/mnt/c/Users/joshm/AppData/Local/Temp/captures          # Edge reads Windows
 mkdir -p "$OUT" && cp -r docs/design "$OUT/"                  # for a static mock; skip for a live page
 "$EDGE" --headless=new --disable-gpu --hide-scrollbars --window-size=1280,2400 \
   --screenshot="C:\\Users\\joshm\\AppData\\Local\\Temp\\captures\\inbox-1280.png" "http://localhost:8765/inbox"
-"$EDGE" --headless=new --disable-gpu --hide-scrollbars --window-size=390,2400 --force-dark-mode \
+"$EDGE" --headless=new --disable-gpu --hide-scrollbars --window-size=600,2400 --force-dark-mode \
   --screenshot="C:\\Users\\joshm\\AppData\\Local\\Temp\\captures\\mock-390-dark.png" \
-  "file:///C:/Users/joshm/AppData/Local/Temp/captures/design/now-1.html"
+  "file:///C:/Users/joshm/AppData/Local/Temp/captures/narrow.html"
 ```
 
 Windows sees WSL's localhost, so a page served by `garden serve` (or a test server you start on another port against a fake garden) captures directly. Edge writes only to Windows paths, so capture into the Windows temp folder and then copy the PNGs into your worktree (`cp /mnt/c/Users/joshm/AppData/Local/Temp/captures/*.png docs/design/captures/` or under the run's captures directory) so they travel with the PR and stay inside the fence. Take 1280 and 390 wide, light and dark, for every page a change touches, and say in the PR which captures you looked at. Fable's Now 1 design run found this route on 2026-09-06; CG-315 turns it into a check the garden runs itself.
+
+### Verified narrow viewport
+
+Edge on this host has an outer-window minimum around 496px, so `--window-size=390` does not establish a 390px page viewport. Before the narrow command above, create `narrow.html` in the Windows captures directory containing `<html><body style="margin:0"><iframe src="http://localhost:8765/now1" style="width:390px;height:2400px;border:0"></iframe></body></html>` (substitute the page being checked). Capture the wrapper at an outer width of 600. Inspect the embedded page at 390 CSS pixels and check its clientWidth and scrollWidth; the extra outer margin is not part of the page. The finding and measured clientWidth 390 / scrollWidth 390 were recorded by CG-308 in CG-326. A browser API that sets the actual page viewport to 390 is also suitable.
