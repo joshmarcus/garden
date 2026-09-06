@@ -111,6 +111,22 @@ Josh explicitly raised max_parallel to 3 in the operator session on 2026-09-06. 
 
 Josh rebooted after host lockup on 2026-09-06. Operator restarted the server with no live workers/checks and persistent systemd limits: CPUQuota=200%, CPUWeight=20, MemoryHigh=3G, MemoryMax=4G, MemorySwapMax=512M. These survive reboot (previous CPU limits were runtime-only). garden.yaml and the live override now have max_parallel=1; review_parallel=1. Do not return to three workers until measurements support it or Josh explicitly requests it again. MemoryMax is a last-resort hard bound and may terminate a process if exceeded; classify that as an environment failure and preserve its work.
 
-Until 2026-09-06 16:01 UTC, garden-resource-watch.service samples every 15 seconds and pauses dispatch on pressure. The operator heartbeat is every five minutes during this hour, then restore 25 minutes. Read /home/joshua/.local/state/garden-operator/resource-watch.jsonl for anon/file/shmem/swap, temp headroom and top processes. The persistent guard script lives under ~/.local/lib/garden-operator/resource_watch.py; this particular observation service exits after one hour.
+Until 2026-09-06 16:28 UTC, garden-resource-watch.service samples every two minutes and pauses dispatch on pressure. The operator heartbeat is every five minutes during this hour, then restore 25 minutes. Read /home/joshua/.local/state/garden-operator/resource-watch.jsonl for anon/file/shmem/swap, temp headroom and top processes. The persistent guard script lives under ~/.local/lib/garden-operator/resource_watch.py; this particular observation service exits after one hour.
 
 Measured contributors: several simultaneous full pytest suites, RAM-backed /tmp files, and a 102MiB state.json containing 91.1MiB of duplicated fence manifests. Pre-reboot cgroup peak was 6.5GiB. No retained kernel OOM event establishes the exact final cause. CG-344 covers bounded fence bookkeeping; CG-338 covers resource admission. Do not clear caches or delete state/manifests blindly, and never delete active-run temp directories.
+
+## Resource-limit coverage correction, 15:12Z
+
+CLI-dispatched workers/reviews inherit /init.scope and bypass garden-serve.service CPU/memory limits. CG-344 was discovered there and its verified process tree moved into the garden service cgroup without termination. Launch work/reviews through the server POST actions from now on so they inherit its limits; CLI commands that only update task state remain usable. CG-338 must address all launch paths. Resource samples before this correction did not include CLI-spawned worker RSS in the service-only top list; VM available memory/temp metrics remained global.
+
+## Main repair queue, 2026-09-06 15:34 UTC
+
+Dispatch paused after CG-344 clean-base probe confirmed the Now page-1 CLI regression (710 passed, one failed; real code failure). CG-342 moved to the top of ready work. Let the active CG-254 check drain, then explicitly dispatch CG-342 through the server endpoint so resource caps apply. Keep total execution at one; pause does not stop reviews/revisions in this installed build, so count actual live processes. Resume ordinary dispatch only after main repair lands. CG-215 and CG-344 remain preserved on their base-broken stops. This operator intervention interrupts any claim of unattended stabilization.
+
+## Recovery-hour conclusion, 2026-09-06 16:35 UTC
+
+The timed two-minute resource monitor completed; restore operator heartbeat to 25 minutes. Persistent resource limits and one-worker/review limits remain. CG-342 main repair merged and base-broken tasks recovered. Explicitly started CG-344 review through the server; retain ordinary dispatch pause while prioritizing memory fix review, then resume conservatively after collecting it and checking live headroom. CG-215 also needs current review. The monitor is no longer an active automatic pause guard; inspect current cgroup and /proc on future check-ins, not only its historical log. EC2 specs/tasks CG-345–348 remain deferred in frozen phase 06.
+
+## Fast-forward active, owner authorized 2026-09-06 ~16:44 UTC
+
+Follow context-garden/docs/fast-forward.md. The existing service now uses serve --no-watch via fast-forward.conf after live work drained; UI and resource caps remain. Do not resume, tick or launch automated writers/reviewers from a heartbeat while active. Operator may directly repair eligible open PRs, assess and disposition findings, self-review and merge with current-head validation. No further automated review round is required in this mode. Preserve phase-06 holds unless owner explicitly lifts them. Record actions and restore ordinary scheduling only through the documented exit.

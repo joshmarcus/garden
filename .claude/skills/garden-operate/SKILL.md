@@ -184,3 +184,7 @@ tokens each was roughly 60% of what all the workers cost that day. Rules:
 - Merge or mark PRs ready unless the person delegated it (they can; check).
 - Stop the serve task with the harness's task-stop.
 - Restart mid-tick, or reinstall the pin without restarting right after.
+
+## Fast-forward maintenance mode
+
+When the owner invokes fast-forward, follow `context-garden/docs/fast-forward.md`. It authorizes direct operator repairs and self-review in place of further automated review rounds, with validated serial merges and honest finding dispositions. Fully quiesce scheduling, not just dispatch. Preserve explicit phase holds and record supervised interventions.
