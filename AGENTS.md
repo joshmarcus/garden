@@ -37,3 +37,7 @@ The host previously locked up: overlapping test suites, RAM-backed temp and a 10
 Installed pin is 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa as of 2026-09-06 17:40 UTC (verified main CI). It includes memory/lifecycle/operating UI repairs; onboarding's merge had main CI in progress at install time and is not yet installed. Existing server runs normal watch; /, /now1 and /now2 returned HTTP 200 after restart, and global resume returned 200. Verify current state before future pin movement; only install/restart when workers/checks drain. Retain caps and phase holds. Global resume is POST http://127.0.0.1:8765/resume with matching loopback Origin; CLI resume requires a task id.
 
 Read git log before pushing and commit only intended files. Codex operator spend remains unavailable until CG-336; never substitute Claude spend.
+
+## Active web responsiveness incident, 17:43–17:49 UTC
+
+Owner reported web timeouts. Service alive; static requests fast, dynamic pages repeatedly scan roughly 1,546 run records in concurrent threads (py-spy verified). CG-357 is priority 0, ready, covering bounded read models and safe archival. No history moved/deleted. A process-local Run.load parse cache experiment at /home/joshua/work/operator-test-tmp/web-run-read-mitigation.py was applied to PID 1440205 using Python remote_exec without restart; it did NOT restore reliable access and must not be called a fix. It disappears at restart; record removal/supersession. No scan-method experiment was applied. Keep active work intact and investigate before restarting.
