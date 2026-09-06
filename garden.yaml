@@ -6,7 +6,7 @@ name: context-garden
 runner: local               # default runner: local | ssh | manual
 work_dir: /home/joshua/work   # product clones and task worktrees, outside the garden (CG-085)
 harness: codex             # default harness for work, revise, rebase and edit runs: codex since 2026-09-06 01:55Z (user: Claude at 76% of its usage; workers on OpenAI models)
-max_parallel: 6   # 2026-09-06 06:25Z: ten thrashed a 7 GB box (checks and rebases ended without results); six until CG-329 separates aux runs from worker slots
+max_parallel: 4   # 2026-09-06 06:52Z: memory-bound (7 GB); four until CG-329/CG-330 land
 review_parallel: 3          # concurrent review, persona and comparison runs (CG-074)
 max_attempts: 2             # work runs before a task is marked failed
 max_revisions: 3            # auto revise rounds per PR before a human must step in
