@@ -22,11 +22,11 @@ Owner scope: leave frozen #221 (CG-216 remote workers) and #222 (CG-230 model po
 
 - #232 / CG-344 memory-bounded fence bookkeeping: MERGED at bda4911f5a9854212298294ef957813f5b1c016d; task done. Direct integrity/recovery repair, 182 targeted tests, lint and full CI passed. Installed in d5825a3.
 - #229 / CG-254 lifecycle commands: MERGED at d5825a3feb93f2ea1869ae09753eb3cb944ba4a6 after 64 targeted tests, lint and full CI passed. Task reconciled to done; Installed in d5825a3.
-- #228 / CG-296 operating controls/Inbox: worktree refreshed with main in 0e00a06. Uncommitted fixes address duplicated taskless questions, feed wording, repeated rail spend and the Costs fallback button. Needs tests, disposable-app journeys/captures, current main after #229, push and CI. Original dirty generated snapshot preserved at `/home/joshua/work/operator-test-tmp/CG296-snapshot-recovery.patch`; base snapshot restored.
-- #223 / CG-324 required evidence: still open; inspect latest findings, including failed persona runs stranding review.
-- #216 / CG-215 onboarding: still open and explicitly authorized to land; inspect convention derivation and provenance findings. Do not reinstate the old hold.
+- #228 / CG-296 operating UI: MERGED at 14676f50bf6e68fb0c5111c7c8a0c96d66cfc8aa; task done. 169 targeted tests, full CI and disposable browser journeys passed. Not yet installed.
+- #223 / CG-324 required evidence: conflicts resolved and pushed at 8135d50055d8e8db0fc3eaddb0725a3b8d595e20, including current main/#228. 125 targeted tests, lint and evidence-state UI captures passed; current-head CI pending.
+- #216 / CG-215 onboarding: pushed a5c12d6 after main/#228 integration, runtime snapshot cleanup and preserving existing trusted authors. Latest worker commits already fix documented-convention/provenance findings; 18 tests and lint pass. Current CI pending. CG-356 tracks partial-draft recovery after rejected planner output.
 
-The existing Codex heartbeat `operate-context-garden` runs every five minutes to continue direct PR resolution. A timer is a reminder, not evidence that work is happening: perform repairs instead of ending after status narration. When these three remaining PRs are handled, follow the safe exit, update this handoff, and restore ordinary 25-minute duties. Notify only meaningful changes.
+The existing Codex heartbeat `operate-context-garden` runs every five minutes to continue direct PR resolution. A timer is a reminder, not evidence that work is happening: perform repairs instead of ending after status narration. When these two remaining PRs are handled, follow the safe exit, update this handoff, and restore ordinary 25-minute duties. Notify only meaningful changes.
 
 ## Resource limits and services
 

@@ -1,7 +1,7 @@
 ---
 id: CG-296
 title: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,7 +15,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T13:51:20+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T13:53:09+00:00'
+updated: '2026-09-06T17:32:55+00:00'
 ---
 
 ## Goal
@@ -70,3 +70,6 @@ Each of these persona findings was a draft of its own; they are cancelled with t
 - 2026-09-06T13:45:54+00:00 PR conflicts with main; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
 - 2026-09-06T13:51:20+00:00 dispatched rebase run 20260906T135114Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~399467 tokens)
 - 2026-09-06T13:53:09+00:00 attempt 1 failed: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1597868}; will retry
+- 2026-09-06T15:12:38+00:00 Recover completed review 20260906T134945Z-review from stale ready state. Result and exit code are present; collect once and validate head freshness before applying. Do not spawn a duplicate review.
+- 2026-09-06T15:13:12+00:00 automated review requested changes: Core Config, kickoff, help-panel, Inbox-grouping, and Costs activity changes are present, but the vocabulary and folded requirements remain incomplete, question cards duplicate content, and an operational snapshot accidentally widens the PR. cost=$0.29
+- 2026-09-06T17:32:55+00:00 Owner fast-forward: PR 228 verified merged at 14676f5; 169 targeted tests, full CI and actual UI repair journeys passed.
