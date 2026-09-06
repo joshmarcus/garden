@@ -2,7 +2,7 @@
 id: CG-293
 title: A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria
   and the concrete blocker
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,7 +15,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-06T07:11:04+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-06T07:11:04+00:00'
+updated: '2026-09-06T07:40:14+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,5 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T06:16:57+00:00 dispatched revise run 20260906T061656Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~8361 tokens)
 - 2026-09-06T06:51:56+00:00 pre-PR checks failed (test) (still failing after a rebase onto `main`); no PR opened yet; revise run will fix cost=$0.85
 - 2026-09-06T07:11:04+00:00 dispatched revise run 20260906T071103Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9104 tokens)
+- 2026-09-06T07:27:30+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 508a28c4fe30, not because of this branch; waiting for the base to go green, no revise round cost=$0.37
+- 2026-09-06T07:40:14+00:00 base branch `main` is itself broken — pre-PR check(s) test fail at its own commit 67134b3102cb, not because of this branch; waiting for the base to go green, no revise round

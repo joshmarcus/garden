@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -31,7 +31,7 @@ harness: claude
 model: claude-fable-5-1
 last_dispatched_at: '2026-09-06T04:29:47+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T07:19:24+00:00'
+updated: '2026-09-06T07:34:13+00:00'
 ---
 
 ## Goal
@@ -93,3 +93,6 @@ The owner asked for an operational dashboard that is the gem of the experience a
 - 2026-09-06T06:54:21+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
 - 2026-09-06T07:09:42+00:00 pre-PR checks failed (test) and 3 revision rounds already used; needs a human
 - 2026-09-06T07:19:24+00:00 nothing to fix; resumed to in review by hand
+- 2026-09-06T07:20:12+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T07:31:47+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-06T07:34:13+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/206

@@ -2,7 +2,7 @@
 id: CG-318
 title: 'The web app serves design documents, mocks and run captures: /design/<file> for the product''s
   docs/design and a run page link to each capture'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-318-the-web-app-serves-design-documents-mocks-and-ru
 pr: https://github.com/joshmarcus/context-garden/pull/217
 attempts: 1
-last_dispatched_at: '2026-09-06T06:10:12+00:00'
+last_dispatched_at: '2026-09-06T07:47:02+00:00'
 created: '2026-09-06T02:15:43+00:00'
-updated: '2026-09-06T06:44:09+00:00'
+updated: '2026-09-06T07:47:02+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,4 @@ Anything a worker renders for a person to look at is one click away in the web a
 - 2026-09-06T06:02:38+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.08
 - 2026-09-06T06:10:12+00:00 dispatched revise run 20260906T060835Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, rebase round 2 (not counted), ~15501 tokens)
 - 2026-09-06T06:44:09+00:00 pre-PR checks failed (test); revise run will fix before the PR is updated cost=$0.13
+- 2026-09-06T07:47:02+00:00 dispatched revise run 20260906T074700Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, rebase round 3 (not counted), ~15618 tokens)
