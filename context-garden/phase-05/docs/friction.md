@@ -27,3 +27,15 @@ _No friction reported yet._
 ### 2026-09-06 · reported by CG-249 (`garden dispatch <id>` (CLI) allows dispatching a draft directly) in run 20260906T004012Z-work
 
 - Acceptance criterion 4 names src/garden/web/actions/control.py as holding draft-gate logic to mirror, but that file only has tick/pause/resume/upgrade/config actions — the actual shared gate is Scheduler.approve in scheduler/human.py, called by web/actions/tasks.py's approve action and garden take. Fixed by calling the same Scheduler.approve, but the file reference in the brief was off.
+
+### 2026-09-06 · reported by CG-236 (A trial winner's PR enters the review queue on its own, like any pushed revision) in run 20260906T004649Z-work
+
+- Near the end of this session the shared sandbox's /tmp filled up (ENOSPC) from concurrent activity on other worktrees/sessions on the same host, blocking every shell command including trivial ones (confirmed via a fresh subagent hitting the same failure); I could not run a final full-suite pass after adding the last test or clean up a scratch file (cg236_wait.sh, untracked, left in the repo root) created while diagnosing it. All verification reported above (978 passed/3 skipped full suite, the 3 new tests individually, ruff clean) was captured before the outage.
+
+### 2026-09-06 · reported by CG-291 (Each worker gets a private harness config dir holding only credentials, and the fence covers state.json and task files) in run 20260906T004845Z-revise
+
+- Default pytest temporary retention exhausted /tmp during the first full-suite attempt; reran successfully with an isolated basetemp and retention disabled.
+
+### 2026-09-05 · /tasks/CG-245 (CG-245)
+
+I've been sent to this page (the task page) because the worker reported there was nothing to be done.  But now that I'm on the page, there's no decision to be made (no decision card shown) or way to move forward.
