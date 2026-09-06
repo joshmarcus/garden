@@ -1,7 +1,7 @@
 ---
 id: CG-236
 title: A trial winner's PR enters the review queue on its own, like any pushed revision
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,10 +12,11 @@ reading:
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/review.py
 branch: garden/cg-236-a-trial-winner-s-pr-enters-the-review-queue-on-i
+pr: https://github.com/joshmarcus/context-garden/pull/205
 attempts: 1
 last_dispatched_at: '2026-09-06T00:47:05+00:00'
 created: '2026-09-05T20:56:29+00:00'
-updated: '2026-09-06T00:47:05+00:00'
+updated: '2026-09-06T01:49:05+00:00'
 ---
 
 ## Goal
@@ -41,3 +42,4 @@ Observed 2026-09-05: CG-225's winner (codex terra, PR #184) sat in `in_review` f
 
 - 2026-09-06T00:24:03+00:00 approved (cli)
 - 2026-09-06T00:47:05+00:00 dispatched work run 20260906T004649Z-work via local [claude model=claude-sonnet-5] (fresh session, base main, ~12178 tokens)
+- 2026-09-06T01:49:05+00:00 opened https://github.com/joshmarcus/context-garden/pull/205 (base main): Trial conclusion now dispatches a real automated review round for the winner's PR (mirroring the normal work-run push path) instead of treating the model comparison as a stand-in for review, and the Inbox card reads 'review queued' instead of 'no review yet' while that round is in flight. cost=$4.12

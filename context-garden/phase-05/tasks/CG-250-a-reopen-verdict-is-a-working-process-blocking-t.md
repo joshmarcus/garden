@@ -20,7 +20,7 @@ harness: codex
 attempts: 1
 last_dispatched_at: '2026-09-06T00:43:29+00:00'
 created: '2026-09-05T23:41:22+00:00'
-updated: '2026-09-06T00:55:33+00:00'
+updated: '2026-09-06T01:49:07+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,5 @@ Phase 04's retro (2026-09-05 23:05Z, fable) returned `reopen` with two blocking 
 - 2026-09-06T00:41:31+00:00 automated review requested changes: Approval-gate delegation, freeze handling, and self-closing all work and are tested, but the decision card only reveals which blockers need a brief after a failed decide attempt, not proactively as the criterion requires. cost=$0.66
 - 2026-09-06T00:43:29+00:00 dispatched revise run 20260906T004328Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~7424 tokens)
 - 2026-09-06T00:55:33+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/197: Reopen verdict records now retain blocker brief gaps when the retro files them, so the Inbox decision card identifies incomplete blockers before a decision attempt. cost=$0.52
+- 2026-09-06T01:46:24+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-06T01:49:07+00:00 rebased; patch id unchanged; verdict kept
