@@ -2,7 +2,7 @@
 id: CG-300
 title: The retro's Numbers section reads the operator ledger where the owner keeps it, and reports spend
   and share
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,10 +13,9 @@ reading:
 - src/garden/scheduler/retro.py
 - src/garden/operator_spend.py
 - tests/test_retro.py
-created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-06T00:00:00+00:00'
 discovered_from: retro-editor:context-garden/phase-04
-
+created: '2026-09-06T00:00:00+00:00'
+updated: '2026-09-06T00:24:05+00:00'
 ---
 
 ## Goal
@@ -33,3 +32,6 @@ Both phase-04 reconcile runs printed operator: $0.00, 0% of total, because the s
 - [ ] The Numbers section shows operator spend, turns and share when the ledger exists, and says the ledger was not found otherwise
 - [ ] A retro test with a ledger at the configured path renders the figures
 
+## Log
+
+- 2026-09-06T00:24:05+00:00 approved (cli)

@@ -9,9 +9,9 @@ depends_on: []
 priority: 3
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-05T23:58:10+00:00'
 discovered_from: retro:context-garden/phase-04
+created: '2026-09-05T23:58:10+00:00'
+updated: '2026-09-06T00:21:09+00:00'
 ---
 
 ## Goal
@@ -25,6 +25,10 @@ discovered_from: retro:context-garden/phase-04
 ## Context
 
 Proposed at the context-garden/phase-04 retro. Operator hand steps are the operator-spend goal in another form.
+
+## Suggestions
+
+- [ ] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; never invent a path); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
 
 ## Log
 

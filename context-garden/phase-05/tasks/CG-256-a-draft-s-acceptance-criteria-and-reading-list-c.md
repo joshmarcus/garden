@@ -1,16 +1,17 @@
 ---
 id: CG-256
 title: A draft's acceptance criteria and reading list can be edited inline on the task page
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 3
 difficulty: medium
 reading: []
-created: '2026-09-05T23:58:10+00:00'
-updated: '2026-09-05T23:58:10+00:00'
+harness: codex
 discovered_from: retro:context-garden/phase-04
+created: '2026-09-05T23:58:10+00:00'
+updated: '2026-09-06T00:24:03+00:00'
 ---
 
 ## Goal
@@ -23,8 +24,22 @@ discovered_from: retro:context-garden/phase-04
 
 ## Context
 
-Proposed at the context-garden/phase-04 retro. A refusal without a repair path sends the owner to a text editor.
+A refusal without a repair path sends the owner to a text editor. This adds inline editing of acceptance criteria and reading list on the task page, gated by the same brief_gaps check used on approve.
+
+## Acceptance criteria
+
+- [ ] When brief_gaps flags missing or short acceptance criteria or reading list, the approve card on the task page shows an inline editor instead of only the refusal message.
+- [ ] The inline editor lets the owner add or edit '## Acceptance criteria' checkboxes and reading-list paths directly on the task page.
+- [ ] Saving the inline edit re-runs the same brief_gaps check CG-193 uses on approve, and the approve card reflects the new pass/fail state without a page reload.
+- [ ] A reading-list path that doesn't exist in the product checkout is rejected on save with an inline error, matching brief_gaps' existing path check.
+- [ ] A test (e.g. test_inline_edit_clears_brief_gate) covers: a draft that fails brief_gaps on acceptance criteria, the owner editing inline and saving, and the approve card unblocking.
+
+## Suggestions
+
+- [x] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; never invent a path); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
 
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-245 (renumbered by the operator: two reconcile runs drew ids from one counter)
+- 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002112Z-edit) cost=$0.10
+- 2026-09-06T00:24:03+00:00 approved (cli)

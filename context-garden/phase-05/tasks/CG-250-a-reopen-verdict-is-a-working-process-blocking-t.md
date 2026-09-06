@@ -2,7 +2,7 @@
 id: CG-250
 title: 'A reopen verdict is a working process: blocking tasks arrive with a complete brief, are approved
   through the gate, and the phase reopens and closes on them without hand steps'
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,8 +14,9 @@ reading:
 - src/garden/scheduler/human.py
 - src/garden/brief.py
 - tests/test_retro.py
+harness: codex
 created: '2026-09-05T23:41:22+00:00'
-updated: '2026-09-05T23:41:22+00:00'
+updated: '2026-09-06T00:24:05+00:00'
 ---
 
 ## Goal
@@ -34,3 +35,6 @@ Phase 04's retro (2026-09-05 23:05Z, fable) returned `reopen` with two blocking 
 - [ ] Tests with the fake harness: a reopen verdict with one complete and one incomplete item; the complete one is approved on decide, the incomplete one is refused and named; closing follows the last blocking merge.
 - [ ] `docs/design.md` describes the reopen path in one paragraph.
 
+## Log
+
+- 2026-09-06T00:24:05+00:00 approved (cli)

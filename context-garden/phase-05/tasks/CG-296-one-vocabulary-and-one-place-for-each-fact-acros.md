@@ -1,16 +1,17 @@
 ---
 id: CG-296
 title: One vocabulary and one place for each fact across rail, Config, CLI and Inbox
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 3
 difficulty: medium
 reading: []
+harness: codex
 discovered_from: retro:context-garden/phase-04
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T00:20:37+00:00'
+updated: '2026-09-06T00:24:04+00:00'
 ---
 
 ## Goal
@@ -42,7 +43,21 @@ Each of these persona findings was a draft of its own; they are cancelled with t
 - [ ] CG-286: The Costs page files a resume round as 'other', and garden observe's digest repo — Give resume its own activity name and make the digest's failed count read the same terminal statuses the Board does.
 - [ ] CG-287: With every phase closed, garden status prints an empty table and its legend befo — Skip the table and legend when there are no open phases and lead with the closed-phase line.
 
+## Acceptance criteria
+
+- [ ] The rail, Config page, CLI output and status line all use one shared term for the operating point and 'feed' for the observe level, with no task ids left in headings or help text.
+- [ ] tick_interval appears in exactly one Config list — the restart-required list — and not under live re-read values.
+- [ ] move, retro-decide and canary each surface in a named help panel, verified by a test asserting every command names one panel.
+- [ ] The Kickoff panel shows above the fold only while a phase has no approved tasks and moves below the task table once it does; the approve button is disabled or demoted while brief gaps exist, with fixing the brief as the primary action.
+- [ ] Question cards get their own Inbox group (or a labeled spot in the worker-question group), and resume appears as its own named activity on the Costs page rather than folding into 'other'.
+
+## Suggestions
+
+- [x] 2026-09-05 cli: Complete this brief so it passes the approve gate: add a '## Acceptance criteria' section with three to five '- [ ] ...' lines, each verifiable from the code or a page and one naming the test that proves it; add a reading list of four to eight paths that exist in the product checkout (check each with ls; never invent a path); keep the Goal and Context as written, tighten them if they narrate history; set difficulty if the current one is wrong. Do not change the title.
+
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-285 (renumbered by the operator: two reconcile runs drew ids from one counter)
 - 2026-09-06T00:20:37+00:00 difficulty easy -> medium
+- 2026-09-06T00:22:40+00:00 integrated 1 suggestion(s) (run 20260906T002113Z-edit) cost=$0.10
+- 2026-09-06T00:24:04+00:00 approved (cli)

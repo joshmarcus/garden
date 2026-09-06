@@ -1,7 +1,7 @@
 ---
 id: CG-236
 title: A trial winner's PR enters the review queue on its own, like any pushed revision
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/review.py
 created: '2026-09-05T20:56:29+00:00'
-updated: '2026-09-05T20:56:29+00:00'
+updated: '2026-09-06T00:24:03+00:00'
 ---
 
 ## Goal
@@ -29,3 +29,6 @@ Observed 2026-09-05: CG-225's winner (codex terra, PR #184) sat in `in_review` f
 - [ ] The card for a fresh trial winner reads "review queued", not "no review yet".
 - [ ] Test: a trial whose comparison names a winner leads to a review dispatch on the following tick; a work-run PR's path is unchanged.
 
+## Log
+
+- 2026-09-06T00:24:03+00:00 approved (cli)

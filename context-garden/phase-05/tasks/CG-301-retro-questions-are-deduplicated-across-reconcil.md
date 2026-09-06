@@ -2,7 +2,7 @@
 id: CG-301
 title: Retro questions are deduplicated across reconcile runs, and a second judge can run with task filing
   off
-status: draft
+status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,10 +13,9 @@ reading:
 - src/garden/scheduler/retro.py
 - src/garden/operator_spend.py
 - tests/test_retro.py
-created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-06T00:00:00+00:00'
 discovered_from: retro-editor:context-garden/phase-04
-
+created: '2026-09-06T00:00:00+00:00'
+updated: '2026-09-06T00:24:05+00:00'
 ---
 
 ## Goal
@@ -33,3 +32,6 @@ The phase-04 retro ran twice (fable, then astra with --skip-personas). Each aske
 - [ ] garden retro --no-file writes retro.md and the goals draft and opens the PR without filing features, follow-ups, blocking tasks or persona-finding drafts, and says so in the document header
 - [ ] Tests: two runs with paraphrased questions yield one card each; --no-file leaves the task tree untouched
 
+## Log
+
+- 2026-09-06T00:24:05+00:00 approved (cli)
