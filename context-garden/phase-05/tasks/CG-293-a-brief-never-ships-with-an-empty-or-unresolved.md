@@ -38,6 +38,8 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - [ ] `brief_gaps` (and so the approve gate and the New task form) refuses a criterion that names a path under src/ or tests/, a function or method (`name()`), a config key or a field name, with the message that criteria state outcomes and evidence and the detail belongs in the context or reading list; the check is a small, documented heuristic with a test per shape and an `allow_implementation_criteria: true` escape per task for the rare mechanical task (owner, 2026-09-06 03:50Z).
 - [ ] A worker may amend a criterion: the result block carries `criteria_amended: [{index, text, reason}]`, the task file is updated on reap with the reason in the log, the review brief shows the amended line marked as amended, and the reviewer judges that line; tests cover the round trip.
 
+- [ ] Criteria are optional: `brief_gaps` and the approve gate accept a task with no `## Acceptance criteria` section (a placeholder checklist such as 'TODO' or '...' is still refused); the work brief then says the Goal is the contract and asks the worker to state what it verified and how; the review brief asks the reviewer to judge the goal on that evidence and return `criteria: []`; tests cover approve, brief and review for a criteria-less task (owner, 2026-09-06 03:55Z: 'also allow tasks without acceptance criteria').
+
 ## Log
 
 - 2026-09-05T23:59:00+00:00 refiled from the phase-04 retro branch, where it was CG-282 (renumbered by the operator: two reconcile runs drew ids from one counter)
