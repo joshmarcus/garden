@@ -20,6 +20,10 @@ One page a person keeps open on a second screen or shows in a demo. In five seco
 - Works at 1280 wide on a projector and on a phone in a column; dark mode follows the app.
 - Empty and quiet states are designed: a garden with nothing running shows what it is waiting for and when the next tick is.
 
+## Live clocks (owner, 2026-09-06 02:35Z)
+
+Every running card shows exactly how long its run has been going, as a clock that ticks in the browser from the run's start time and the current time, not from a server refresh: seconds under a minute, then m:ss, then h:mm:ss, with the run's typical duration for its mode and tier as a quiet mark beside it (a thin bar filling toward "typical", turning to a plain "longer than usual" past it, never an alarm). The tick is a client-side animation: the digits change in place, the bar eases, and a run that has just started counts up from zero as it slides in. The start time comes from the run record and the page's own clock is offset once against the server's, so the numbers agree with the run page. Nothing about the clock needs the events stream; the events stream only starts, ends or replaces a card. The same clock shows on the Board and the task page for a running task, so "this is running live" reads the same everywhere.
+
 ## Data and boundaries
 
 - Read-only. The page reads state, run records, events, `garden metrics` and the phase tree through the existing store and scheduler surfaces; logic goes in a `now` module under `garden/` (or the scheduler's report helpers), the route and template stay thin, per the rules in CLAUDE.md.
