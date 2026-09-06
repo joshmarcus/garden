@@ -39,3 +39,7 @@ _No friction reported yet._
 ### 2026-09-05 · /tasks/CG-245 (CG-245)
 
 I've been sent to this page (the task page) because the worker reported there was nothing to be done.  But now that I'm on the page, there's no decision to be made (no decision card shown) or way to move forward.
+
+### 2026-09-05 · cli
+
+Nobody looks at the real web pages. Workers build UI changes, reviewers approve them and personas review the phase without rendering a page: the Inbox card layout shipped collapsed to one word per line and buttons over text (CG-312), the task page a notification sends you to shows no decision (CG-311), and the phase-04 walkthrough was never captured. UI PRs must be reviewed against rendered pages, and the walkthrough must be part of every review that touches a template. Reported by the owner, 2026-09-06 02:10Z.
