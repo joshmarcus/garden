@@ -8,6 +8,11 @@ work_dir: /home/joshua/work   # product clones and task worktrees, outside the g
 harness: codex             # default harness for work, revise, rebase and edit runs: codex since 2026-09-06 01:55Z (user: Claude at 76% of its usage; workers on OpenAI models)
 max_parallel: 1   # owner memory-lockup recovery; increase only after measured stability
 review_parallel: 1   # bound review/test overlap during memory recovery
+# Combined local run admission; includes workers, reviews, checks and base probes.
+resources:
+  max_parallel: 1
+  min_memory_available_mb: 1536
+  min_temp_free_mb: 1024
 max_attempts: 2             # work runs before a task is marked failed
 max_revisions: 3            # auto revise rounds per PR before a human must step in
 timeout_minutes: 90         # per run; the process is killed after this
