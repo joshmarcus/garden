@@ -31,3 +31,5 @@ This phase is frozen until all required phase-05 stabilization evidence passes. 
 ## EC2 worker automation proposal
 
 Owner-requested specification: [EC2 worker pools](specs/ec2-workers.md). CG-345, CG-346, CG-347, CG-348 cover on-demand provisioning, portable execution, Spot recovery and cost/teardown evidence. These remain drafts under the existing freeze.
+
+Owner clarification: EC2 automation must be a pluggable remote-host lifecycle reusable for workplace development hosts. Garden workers and standalone persistent dev hosts are separate consumers/profiles of the same provider contracts.

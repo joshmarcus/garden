@@ -22,3 +22,7 @@ Evidence should cover duplicate provisioning requests, delayed AWS responses, co
 ## Provenance and scheduling
 
 Requested by Josh on 2026-09-06: automate EC2 instances for remote workers. See the shared spec for outcomes and design guidance. Draft in frozen phase 06; do not approve, dispatch or provision cloud resources until the stabilization gate passes or Josh grants an explicit exception.
+
+## Pluggability requirement (owner clarification)
+
+Implement an independently usable host lifecycle with versioned provider and environment-profile contracts. EC2 is an adapter, not the core data model. Expose plan/provision/reconcile/inspect/stop/start/destroy capabilities and lifecycle events without garden task IDs or scheduler imports. Support injected workplace policy/credential resolution and validated namespaced provider options. Supply a fake provider and a minimal extension example proving a second provider can be added without modifying core or garden scheduling. The same lifecycle must support both disposable worker hosts and persistent development hosts; do not assume every termination deletes workspace storage.

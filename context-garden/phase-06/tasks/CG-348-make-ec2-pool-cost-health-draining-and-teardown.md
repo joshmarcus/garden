@@ -25,3 +25,7 @@ Run an independently repeatable budgeted AWS acceptance exercise covering provis
 ## Provenance and scheduling
 
 Requested by Josh on 2026-09-06: automate EC2 instances for remote workers. See the shared spec for outcomes and design guidance. Draft in frozen phase 06; do not approve, dispatch or provision cloud resources until the stabilization gate passes or Josh grants an explicit exception.
+
+## Pluggability requirement (owner clarification)
+
+Provide common host inventory, lifecycle and cost controls independently of garden, then garden-specific task views as an integration. Include a standalone remote-dev workflow using the same EC2 provider and lifecycle: create from a dev profile, obtain approved SSH/editor connection information, preserve edits through stop/start, and release with an explicit workspace retention/deletion choice. Respect active sessions and workplace-supplied access policies. Demonstrate no dependency on a garden daemon or model account. Document how a work platform supplies its own identity, network, images and secrets. Real workplace acceptance remains separate from the example canary.

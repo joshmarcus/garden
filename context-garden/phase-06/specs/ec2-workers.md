@@ -1,4 +1,4 @@
-# Automated EC2 worker pools
+# Pluggable remote host provisioning, starting with EC2
 
 Status: proposed; frozen with phase 06. Requested by Josh on 2026-09-06 after discussing EC2, Lightsail and Spot costs. This authorizes specification and task creation, not cloud provisioning or lifting the stabilization gate.
 
@@ -11,6 +11,22 @@ Start with one on-demand Ubuntu x86-64 worker with 4 vCPUs, 16 GiB RAM and disk-
 ## Relationship to existing work
 
 CG-216 owns the portable claim/lease/result/transcript protocol. Use that protocol for managed EC2 workers, including checks and reviews; do not introduce an AWS-specific execution protocol. Existing SSH support remains useful for a manual experiment, but is not proof that replaceable EC2 workers recover correctly. CG-338 owns admission across all execution paths. Integrate it rather than counting only writer processes. Model-provider routing and quotas remain separate concerns from machine capacity.
+
+## Reusable host lifecycle and adapters
+
+Owner clarification, 2026-09-06: the same model must support provisioning remote development hosts at work, not only garden workers. EC2 is the first infrastructure provider, and garden execution is the first workload integration. Keep the shared lifecycle independently usable without a garden scheduler, task IDs, model credentials or worker protocol.
+
+Separate three responsibilities with versioned, documented contracts:
+
+- Infrastructure provider: plan, provision, discover/reconcile, inspect, stop/start where supported, and destroy hosts and attached resources. Advertise capabilities such as Spot, persistent disks and stop/start rather than pretending all providers implement them. EC2 owns AWS-specific IAM, image, subnet, instance and pricing details. Support another implementation without editing the shared lifecycle or garden scheduler.
+- Environment profile: declare image/bootstrap, CPU/memory/disk needs, secret references, health checks and connection information. A garden-worker profile installs and enrolls the portable worker. A remote-dev profile installs the chosen development tools and repositories and exposes approved SSH/editor connection details; it does not require a garden worker daemon or model account.
+- Consumer integration: garden reconciles queue demand into worker capacity and attaches task/result metadata; an independent CLI/API lets a person or a work platform request, inspect, connect to, suspend/resume and release a development host. The shared layer reports host facts and lifecycle events, not task decisions. Give policy and credential resolvers replaceable interfaces so a workplace can use its account boundaries, images, network rules, SSO and secret store without embedding company-specific behavior in the core.
+
+Use stable host IDs, owner/purpose labels and an extensible provider reference for durable reconciliation. Keep the core declarative schema portable while validating namespaced provider options explicitly; reject unsupported requested capabilities before provisioning. A small local fake provider and contract tests establish the extension seam; do not build another paid-cloud backend just to demonstrate abstraction.
+
+Remote development differs from disposable workers: default to on-demand hosts and persistent workspaces, detect active sessions before idle shutdown, distinguish stopping compute from deleting disks, and require an explicit destructive release choice to remove unsaved workspace storage. Explain storage costs while stopped. Spot development hosts are opt-in only with verified workspace recovery. Connection/authentication policy belongs to the workplace integration; normal garden workers still need only outbound HTTPS. Never infer a public SSH rule from selecting the dev profile.
+
+Acceptance must demonstrate two consumers of the same lifecycle: one garden worker and one standalone dev host created without importing or booting garden scheduling. Document a minimal custom provider/profile example, contract compatibility/versioning, and how a work deployment injects its policies and credentials. A disposable fixture project proves the example works; a real workplace integration requires its own named environment and acceptance, never implied by this prototype.
 
 ## Pool declaration and lifecycle
 
@@ -38,10 +54,10 @@ Show pool health, ready/busy capacity, executing tasks, resource pressure, inter
 
 ## Delivery and evidence
 
-1. Declarative lifecycle, safe bootstrap and one on-demand instance.
+1. Provider/profile contracts and independently usable host lifecycle, with EC2 as the first adapter and one on-demand instance.
 2. End-to-end execution through CG-216 with aggregate admission and durable recovery artifacts.
 3. Spot replacement and abrupt-loss exercises, with fencing and bounded fallback.
-4. Operator controls, cost attribution, teardown and an independently repeatable live acceptance run.
+4. Operator controls, cost attribution, teardown, a standalone remote-dev consumer and independently repeatable acceptance runs for both uses.
 
 Use provider fakes for deterministic lifecycle/error coverage, then a separately enabled, budgeted AWS canary. Evidence includes one work-to-review/check-to-result cycle on an independent host, intentional interruption during work and check, controller restart mid-provision, unavailable Spot capacity, and teardown inventory showing no unexplained billed resources. Record actual cost, retry/model cost, elapsed time and peak memory. A simulated AWS API proves simulation behavior only. Missing live evidence is UNPROVEN. Feature completion does not itself pass phase-05 stabilization or unfreeze phase 06.
 

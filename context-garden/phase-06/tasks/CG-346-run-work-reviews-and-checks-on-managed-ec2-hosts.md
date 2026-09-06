@@ -25,3 +25,7 @@ Evidence should complete a work/review/check cycle on an independent host, demon
 ## Provenance and scheduling
 
 Requested by Josh on 2026-09-06: automate EC2 instances for remote workers. See the shared spec for outcomes and design guidance. Draft in frozen phase 06; do not approve, dispatch or provision cloud resources until the stabilization gate passes or Josh grants an explicit exception.
+
+## Pluggability requirement (owner clarification)
+
+Garden is a consumer adapter of the shared host lifecycle. Keep task admission, CG-216 enrollment and results within that adapter; generic provisioning must function without garden scheduling or model credentials. Implement the garden-worker environment profile through the documented profile contract. Do not hard-code worker-only semantics into EC2 host lifecycle or credentials.

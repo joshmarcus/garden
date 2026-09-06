@@ -24,3 +24,7 @@ Exercise interruption during work, checks and result upload; stale-worker return
 ## Provenance and scheduling
 
 Requested by Josh on 2026-09-06: automate EC2 instances for remote workers. See the shared spec for outcomes and design guidance. Draft in frozen phase 06; do not approve, dispatch or provision cloud resources until the stabilization gate passes or Josh grants an explicit exception.
+
+## Pluggability requirement (owner clarification)
+
+Expose generic interruption/drain/replacement events from the EC2 provider, with task checkpoint/retry behavior implemented by the garden consumer. Capability-check Spot requests. Remote-dev profiles default to on-demand and persistent storage; never apply disposable-worker destruction or replacement policies to a person's development workspace. A dev profile may opt into Spot only with an explicit recoverable-workspace policy.
