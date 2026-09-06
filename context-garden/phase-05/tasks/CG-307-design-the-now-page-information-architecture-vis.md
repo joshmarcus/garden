@@ -2,7 +2,7 @@
 id: CG-307
 title: 'Design the Now page: information architecture, visual system, motion, and a static mock of every
   state'
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -25,10 +25,12 @@ reading:
 - src/garden/scheduler/queue.py
 - src/garden/web/app.py
 - src/garden/web/common.py
+branch: garden/cg-307-design-the-now-page-information-architecture-vis
 harness: claude
 model: claude-fable-5-1
+last_dispatched_at: '2026-09-06T00:56:13+00:00'
 created: '2026-09-06T00:53:24+00:00'
-updated: '2026-09-06T00:53:25+00:00'
+updated: '2026-09-06T00:56:13+00:00'
 ---
 
 ## Goal
@@ -50,3 +52,6 @@ The owner asked for an operational dashboard that is the gem of the experience a
 ## Log
 
 - 2026-09-06T00:53:25+00:00 approved (cli)
+- 2026-09-06T00:55:57+00:00 dispatched trial run 20260906T005540Z-trial via local [claude model=claude-fable-5-1] (fresh session, base main, ~27815 tokens)
+- 2026-09-06T00:56:13+00:00 dispatched trial run 20260906T005557Z-trial via local [codex model=gpt-6-astra] (fresh session, base main, ~27853 tokens)
+- 2026-09-06T00:56:13+00:00 trial started with claude:claude-fable-5-1, codex:gpt-6-astra
