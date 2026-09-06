@@ -192,3 +192,5 @@ When the owner invokes fast-forward, follow `context-garden/docs/fast-forward.md
 ## Interrupted basic operation
 
 When basic web, dispatch, state, main-branch or host operation fails, follow `context-garden/docs/incident-protocol.md`. Contain ordinary admission, give priority recovery a real slot, preserve preempted work, and verify the actual failing journey before resuming. Use its deliberate restart procedure during an incident; routine restarts still use the drained-boundary recipe above. This does not activate fast-forward.
+
+After verified incident recovery, run the required retrospective in the incident protocol and file/link prioritized prevention tasks with measurable criteria. Preserve this follow-up in the operator reminder until complete; restoration alone does not complete incident follow-up.

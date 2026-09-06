@@ -51,3 +51,7 @@ Root-cause evidence: py-spy showed repeated full-history scans in concurrent dyn
 CG-294 was preempted via Run.stop and task returned ready through CLI. Its branch head f129ed553e6fcc7733be06d87628166ebbe0d454, dirty snapshot and transcript remain preserved; extra patch /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. Four escaped pytest processes verified in its worktree were terminated. Resume preserved work after urgent repair. CG-357 original startup 20260906T175413Z-work was interrupted before worker launch and superseded; replacement above is live.
 
 18:04 resource sample: service memory 2.66 GiB, swap 380 MiB; memory.high throttling has occurred (11830 cumulative events), no max/OOM kills. VM available 4.8 GiB, /tmp 41% used. Do not increase concurrency; inspect trends and actual tests, preserve active work. This is supervised recovery, not unattended stabilization.
+
+## Required follow-up after this incident
+
+Josh explicitly requests a retrospective after verified recovery and filed tasks that would have prevented the incident. Follow the required retro section in the incident protocol, link existing related work instead of duplicating it, and keep the reminder active until the retrospective and concrete prevention tasks are recorded.

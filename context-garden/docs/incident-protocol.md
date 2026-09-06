@@ -47,3 +47,13 @@ Maintain one current incident record under `context-garden/docs/incidents/` and 
 During an incident, use five-minute operator follow-ups by default; increase lightweight resource sampling if pressure warrants it. Do useful recovery work at each check, not repeated status narration. Notify on impact/containment changes, a real recovery worker starting, failed recovery, verified restoration or a required owner decision. Keep unchanged progress quiet. Distinguish "requested", "starting", "running", "merged", "installed" and "verified working".
 
 After recovery, record cause versus hypothesis, why existing checks missed the failure, and prevention tasks. Preserve evidence, report unknowns honestly, and count operator intervention against unattended stabilization. This protocol supplements normal operation and does not activate fast-forward PR clearance.
+
+## Required post-incident retrospective
+
+Owner instruction, 2026-09-06: after the incident, run a retrospective and file tasks that would have prevented it. Once recovery is verified, the operator performs this follow-up before treating incident work as complete or clearing its reminder. Restoring service takes precedence; do not delay restoration for the retrospective.
+
+Write a retrospective alongside the incident record. Reconstruct the timeline from recorded events, distinguish confirmed causes from hypotheses, and explain both why the incident occurred and why detection, containment, review, tests and recovery did not prevent or shorten it. Evaluate the actual application and realistic history/concurrency, not only isolated unit tests. Include avoidable operator interventions and ineffective experiments without assigning blame.
+
+File concrete, prioritized tasks with provenance and measurable acceptance criteria for mechanisms that would have prevented the failure, detected it sooner, or made recovery safer/faster. For each, state the counterfactual: how that change would have altered this incident. Search existing tasks first, update/link matching work and avoid duplicates. Separate prevention from speculative redesign; respect phase holds. Creating a task does not establish that prevention is implemented.
+
+Link the resulting task IDs, evidence, remaining uncertainties and validation plan from the retrospective and incident record. A retrospective with commentary alone is incomplete. The operator reminder must retain this obligation until the retrospective and task filing are complete, then return to ordinary duties.
