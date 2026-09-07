@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,12 +14,13 @@ reading:
 - tests/test_planner.py
 - docs/design.md
 branch: garden/cg-294-planning-sequences-dependent-tasks-and-inlines-r
+pr: https://github.com/joshmarcus/context-garden/pull/275
 harness: codex
 discovered_from: retro:context-garden/phase-04
-attempts: 1
-last_dispatched_at: '2026-09-06T17:42:17+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-07T07:38:57+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T17:51:56+00:00'
+updated: '2026-09-07T09:14:10+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,18 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-06T13:36:08+00:00 pre-PR checks failed (test); no PR opened yet; revise run will fix cost=$0.55
 - 2026-09-06T17:42:17+00:00 dispatched revise run 20260906T174213Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, rebase round 1 (not counted), ~25854 tokens)
 - 2026-09-06T17:51:56+00:00 Operator preempted revise run for priority-0 web outage CG-357. Worktree and transcript preserved; extra patch at /home/joshua/work/operator-test-tmp/CG294-web-outage-recovery.patch. Resume preserved work after web repair; interrupted tests are not code failures.
+- 2026-09-07T07:10:59+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply 221a16806917265cee675037b74f55ed83e49cca` in /home/joshua/work/worktrees/CG-294 to recover them (garden:CG-294:20260907T071059Z-work:pre-dispatch, run 20260907T071059Z-work)
+- 2026-09-07T07:11:01+00:00 dispatched work run 20260907T071059Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~25782 tokens)
+- 2026-09-07T07:20:00+00:00 preserved uncommitted worktree changes from run 20260907T071059Z-work outside the PR: `git stash apply 7b78ccaabe739bc7fc33be04bb9c7eba55b11202` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T071059Z-work:reap)
+- 2026-09-07T07:21:22+00:00 opened https://github.com/joshmarcus/context-garden/pull/275 (base main): Planner instructions now sequence design assumptions as dependencies, and cited retro/friction evidence is inlined into planning prompts and created task bodies. Regression coverage proves both behaviors. cost=$0.55
+- 2026-09-07T07:22:45+00:00 description rewritten by the reviewer cost=$0.35
+- 2026-09-07T07:34:25+00:00 rebasing before merge; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
+- 2026-09-07T07:37:18+00:00 dispatched rebase run 20260907T073717Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~398628 tokens)
+- 2026-09-07T07:38:42+00:00 preserved uncommitted worktree changes from run 20260907T073717Z-rebase outside the PR: `git stash apply 7d42a968cba1af67a0ca8079ac976c0e75f9fc25` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T073717Z-rebase:reap)
+- 2026-09-07T07:38:42+00:00 rebase run 20260907T073717Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1594512}; will retry
+- 2026-09-07T07:38:42+00:00 rebase run 20260907T073717Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1594512}; will retry
+- 2026-09-07T07:38:57+00:00 dispatched rebase run 20260907T073856Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~398890 tokens)
+- 2026-09-07T07:40:00+00:00 preserved uncommitted worktree changes from run 20260907T073856Z-rebase outside the PR: `git stash apply 396fb4648bcb1b410484117dbffd90e528e8c96d` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T073856Z-rebase:reap)
+- 2026-09-07T07:40:00+00:00 rebase run 20260907T073856Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1595560}; retry also failed; needs human to resolve docs/design/snapshot.json
+- 2026-09-07T09:14:08+00:00 triage: changes requested by hand: Recover via a normal bounded revision, not the oversized conflict-only prompt. Preserve planner implementation and snaps
+- 2026-09-07T09:14:10+00:00 re-enabled by hand; revise run will follow

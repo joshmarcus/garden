@@ -1,5 +1,10 @@
 # Context-garden operator handoff
 
+## Latest owner concurrency change
+
+Owner requested FIVE slots after discussing review throughput. Worker/shared overrides5/5 applied via supported controls. Reviewer limit remains1 (two was recommended, not yet applied). This supersedes older four-slot entries. Preserve OS resource caps, four-second page tolerance, five-minute monitoring and phase holds.
+
+
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
 ## CG329 hold released

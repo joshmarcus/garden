@@ -17,9 +17,11 @@ reading:
 - src/garden/scheduler/kickoff.py
 - src/garden/profiles.py
 - src/garden/inbox.py
+branch: garden/cg-295-docs-match-the-mechanism-the-scaffolded-operate
 discovered_from: retro:context-garden/phase-04
+last_dispatched_at: '2026-09-07T06:06:12+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-06T13:14:31+00:00'
+updated: '2026-09-07T09:14:05+00:00'
 ---
 
 ## Goal
@@ -36,7 +38,7 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
 - [ ] design.md and roadmap.md no longer list automatic merging under non-goals (docs/design.md, docs/roadmap.md)
 - [ ] The architecture module map lists kickoff.py, scheduler/kickoff.py, profiles.py, inbox.py and web/pages/costs, and includes the CG-198 restart-recovery timing note (docs/architecture.md)
 - [ ] A test fails if any module is missing from the architecture map (tests/test_architecture.py)
-- [ ] The live garden.yaml no longer contains the 'once CG-207 lands' comment (garden.yaml)
+- [x] Operator verified live garden.yaml on 2026-09-07: it no longer contains the 'once CG-207 lands' comment (garden.yaml)
 
 ## Out of scope
 
@@ -53,3 +55,12 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
 - 2026-09-06T00:52:24+00:00 approved (cli)
 - 2026-09-06T13:13:13+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:31+00:00 reset to ready by hand
+- 2026-09-07T06:05:55+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply e9fc940ac9bb37a54de90f83dbfc4fc2aab1fd74` in /home/joshua/work/worktrees/CG-295 to recover them (garden:CG-295:20260907T060555Z-work:pre-dispatch, run 20260907T060555Z-work)
+- 2026-09-07T06:06:12+00:00 dispatched work run 20260907T060555Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~19395 tokens)
+- 2026-09-07T06:24:06+00:00 preserved uncommitted worktree changes from run 20260907T060555Z-work outside the PR: `git stash apply d0c0ffe02920b7e6ff4c9f8df896f85fe639489c` in /home/joshua/work/worktrees/CG-295 (garden:CG-295:20260907T060555Z-work:reap)
+- 2026-09-07T06:24:06+00:00 worker asks: Please provide the live garden.yaml within this checkout or authorize the correct path to edit it. cost=$0.20
+
+## Operator answer
+The live garden.yaml comment is already absent (verified directly). That criterion is fulfilled by the operator. Work only inside the product checkout on remaining documentation and tests; do not request or edit live garden configuration. Preserve existing implementation.
+- 2026-09-07T09:14:05+00:00 Owner-delegated answer: live config cleanup already satisfied; resume product-only work via admission queue.
+- 2026-09-07T09:14:05+00:00 reset to ready by hand

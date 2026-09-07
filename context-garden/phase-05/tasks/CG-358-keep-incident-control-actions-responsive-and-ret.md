@@ -11,9 +11,9 @@ reading: []
 branch: garden/cg-358-keep-incident-control-actions-responsive-and-ret
 pr: https://github.com/joshmarcus/context-garden/pull/239
 attempts: 1
-last_dispatched_at: '2026-09-07T01:22:51+00:00'
+last_dispatched_at: '2026-09-07T03:40:33+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-07T02:25:06+00:00'
+updated: '2026-09-07T09:13:19+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,9 @@ A responsive, durable recovery action would have started CG-357 promptly and avo
 - 2026-09-07T02:19:38+00:00 triage: changes requested by hand: PR239 exact-head CI34073026576 failed two concrete cases: tests/scheduler/test_restart.py::test_restart_reconciles_a_no_
 - 2026-09-07T02:20:16+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-358`) or send it back (`garden triage CG-358 --changes "..."`)
 - 2026-09-07T02:25:06+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T03:40:33+00:00 dispatched revise run 20260907T034031Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10472 tokens)
+- 2026-09-07T03:50:35+00:00 preserved uncommitted worktree changes from run 20260907T034031Z-revise outside the PR: `git stash apply a12fff38e9dda706e8a246c029cb8c5391dea1ec` in /home/joshua/work/worktrees/CG-358 (garden:CG-358:20260907T034031Z-revise:reap)
+- 2026-09-07T04:00:23+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/239: Reconciled interrupted preparation by indexing requested and preparing runs as active reservations, while retaining the idempotency-key distinction that preserves replayable recovery work. The disposable served-app integration now uses the active Python interpreter and exact-head CI passes. cost=$1.10
+- 2026-09-07T04:07:19+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, inbox, n; run `garden triage CG-358 --changes "<feedback>" to unblock`
+- 2026-09-07T09:13:18+00:00 triage: changes requested by hand: All functional criteria were accepted; the remaining blanket missing-images stop was environmental. CG326/370 capture fi
+- 2026-09-07T09:13:19+00:00 re-enabled by hand; revise run will follow

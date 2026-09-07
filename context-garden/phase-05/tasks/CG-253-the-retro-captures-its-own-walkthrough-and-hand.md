@@ -2,16 +2,20 @@
 id: CG-253
 title: The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics
   and the rail
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 2
 difficulty: easy
 reading: []
+branch: garden/cg-253-the-retro-captures-its-own-walkthrough-and-hand
+pr: https://github.com/joshmarcus/context-garden/pull/265
 discovered_from: retro:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-07T09:13:45+00:00'
 created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-06T13:14:24+00:00'
+updated: '2026-09-07T09:13:45+00:00'
 ---
 
 ## Goal
@@ -49,3 +53,24 @@ Proposed at the context-garden/phase-04 retro. Three definition-of-done lines we
 - 2026-09-06T00:24:03+00:00 approved (cli)
 - 2026-09-06T13:13:08+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:24+00:00 reset to ready by hand
+- 2026-09-07T05:35:42+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply 3f4cd41eea528f7b82404405b9976a33a9c11cc4` in /home/joshua/work/worktrees/CG-253 to recover them (garden:CG-253:20260907T053542Z-work:pre-dispatch, run 20260907T053542Z-work)
+- 2026-09-07T05:36:22+00:00 dispatched work run 20260907T053542Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~9408 tokens)
+- 2026-09-07T05:50:29+00:00 preserved uncommitted worktree changes from run 20260907T053542Z-work outside the PR: `git stash apply 38a48e921e2ca8ecbcdbd12083ff09cd8acb988a` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T053542Z-work:reap)
+- 2026-09-07T05:52:00+00:00 opened https://github.com/joshmarcus/context-garden/pull/265 (base main): Added retro walkthrough capture ordering, Costs/backlog/retro walkthrough pages, hand-merge metrics, and mean/max tick duration in CLI, rail, and retro Numbers. cost=$0.26
+- 2026-09-07T05:55:07+00:00 automated review requested changes: The walkthrough ordering and duration plumbing are present, but merge attribution counts non-merges and misclassifies windowed automerges. The required decision-card capture and operator-share/rebase rail reporting are also missing. cost=$0.76
+- 2026-09-07T05:55:31+00:00 dispatched revise run 20260907T055530Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~10497 tokens)
+- 2026-09-07T06:09:26+00:00 preserved uncommitted worktree changes from run 20260907T055530Z-revise outside the PR: `git stash apply 29db52f23e6974c6e316428d416bc8bbb15b91bc` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T055530Z-revise:reap)
+- 2026-09-07T06:11:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Fixed merge attribution, decision-card walkthrough selection, operator-share metrics, and rail rebase/timing reporting. Focused tests and exact-commit CI pass. cost=$0.31
+- 2026-09-07T06:14:26+00:00 automated review requested changes: Walkthrough ordering, expanded page coverage, tick timing, rebase metrics, and operator spend are implemented, but hand-merge attribution still treats forced completions with custom notes as merged PRs. The narrow backlog capture also exposes severe title wrapping. cost=$1.04
+- 2026-09-07T06:17:24+00:00 dispatched revise run 20260907T061723Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~10412 tokens)
+- 2026-09-07T06:34:20+00:00 preserved uncommitted worktree changes from run 20260907T061723Z-revise outside the PR: `git stash apply 4acbcd16fb9d9241f4428774cf163a8a15c93ffe` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T061723Z-revise:reap)
+- 2026-09-07T06:35:59+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Added explicit merge provenance so forced completions cannot count as hand merges, while preserving legacy merge-event compatibility. Fixed narrow backlog title wrapping and added regressions. cost=$0.13
+- 2026-09-07T06:39:08+00:00 automated review requested changes: Most metrics, rail, and walkthrough ordering work is correct and focused tests pass, but the required task decision-card capture is conditional and absent from the supplied walkthrough evidence. cost=$0.82
+- 2026-09-07T06:39:28+00:00 dispatched revise run 20260907T063927Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~10657 tokens)
+- 2026-09-07T06:55:13+00:00 preserved uncommitted worktree changes from run 20260907T063927Z-revise outside the PR: `git stash apply 03c2857ca7b20061e03985eea87edb8e4e583e3d` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T063927Z-revise:reap)
+- 2026-09-07T06:57:49+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Walkthrough captures now guarantee a representative decision-card page, with end-to-end assertions for the slug and rendered card. Full lint, focused tests, and exact-commit CI pass. cost=$0.11
+- 2026-09-07T07:58:02+00:00 automated review requested changes: Most walkthrough, metrics, retro-ordering, and rail work is correct, and all 89 focused tests pass. The production walkthrough still omits the required decision-card page whenever the phase has no currently actionable decision; only the QA fixture guarantees one. cost=$0.80
+- 2026-09-07T07:58:53+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-253`) or send it back (`garden triage CG-253 --changes "..."`)
+- 2026-09-07T09:13:04+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
+- 2026-09-07T09:13:05+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:13:45+00:00 dispatched revise run 20260907T091343Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~11093 tokens)

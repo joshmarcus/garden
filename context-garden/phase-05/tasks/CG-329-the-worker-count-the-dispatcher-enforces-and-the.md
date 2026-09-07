@@ -2,7 +2,7 @@
 id: CG-329
 title: 'The worker count the dispatcher enforces and the count the rail shows are the same number: checks,
   reviews and edit runs either take a slot visibly or not at all'
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-329-the-worker-count-the-dispatcher-enforces-and-the
 pr: https://github.com/joshmarcus/context-garden/pull/233
 attempts: 1
-last_dispatched_at: '2026-09-06T19:00:53+00:00'
+last_dispatched_at: '2026-09-07T09:13:52+00:00'
 created: '2026-09-06T05:26:49+00:00'
-updated: '2026-09-07T04:22:06+00:00'
+updated: '2026-09-07T09:13:52+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,9 @@ One definition of a worker slot. `max_parallel` counts the runs that occupy a sl
 - 2026-09-07T04:13:54+00:00 triage: changes requested by hand: Owner released safety hold. Preserve PR233 implementation; reconcile with current main and shared resource admission now
 - 2026-09-07T04:14:39+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-329`) or send it back (`garden triage CG-329 --changes "..."`)
 - 2026-09-07T04:22:06+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T04:41:43+00:00 dispatched revise run 20260907T044141Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~19670 tokens)
+- 2026-09-07T04:50:48+00:00 preserved uncommitted worktree changes from run 20260907T044141Z-revise outside the PR: `git stash apply 9bd0cbfaeb125a671f361b927e1b707501f9068b` in /home/joshua/work/worktrees/CG-329 (garden:CG-329:20260907T044141Z-revise:reap)
+- 2026-09-07T04:50:48+00:00 worker blocked: Worker-slot accounting and shared resource admission are covered and pushed. Exact-head CI did not register a run, so completion cannot be claimed. cost=$0.11
+- 2026-09-07T09:13:15+00:00 triage: changes requested by hand: Owner hold is released. Preserve implemented slot accounting and shared-resource admission. Integrate current main (old
+- 2026-09-07T09:13:16+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:13:52+00:00 dispatched revise run 20260907T091349Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~19858 tokens)

@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,9 +21,9 @@ reading:
 branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
 pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
-last_dispatched_at: '2026-09-07T03:00:29+00:00'
+last_dispatched_at: '2026-09-07T09:13:43+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T04:22:09+00:00'
+updated: '2026-09-07T09:13:43+00:00'
 ---
 
 ## Goal
@@ -90,3 +90,20 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T03:26:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
 - 2026-09-07T03:29:13+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/brief.py, src/garden/review.py, tests/fake_claude.py); a rebase agent will resolve it
 - 2026-09-07T04:22:09+00:00 triage: changes requested by hand: Current a7cf4ae exact CI passed but PR241 now has merge conflicts with current main. Preserve completed fail-closed fixe
+- 2026-09-07T04:34:26+00:00 dispatched rebase run 20260907T043425Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~23905 tokens)
+- 2026-09-07T04:38:17+00:00 preserved uncommitted worktree changes from run 20260907T043425Z-rebase outside the PR: `git stash apply d8e30deb364527c7067469dcc34a30828af2b4f6` in /home/joshua/work/worktrees/CG-323 (garden:CG-323:20260907T043425Z-rebase:reap)
+- 2026-09-07T04:42:43+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 3043e3025794, not because of this branch; waiting for the base to go green, no revise round cost=$0.02
+- 2026-09-07T04:57:36+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 03845f27cdbd, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-07T05:53:32+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 242f51d2785a, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-07T06:02:53+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 6795a178483d, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-07T06:17:04+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit bc7a1fd65f11, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-07T06:26:47+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 77169d72cadb, not because of this branch; waiting for the base to go green, no revise round
+- 2026-09-07T06:31:19+00:00 pre-PR checks failed (lint) (rebase onto `main` did not apply cleanly); revise run will fix before the PR is updated
+- 2026-09-07T06:31:40+00:00 dispatched revise run 20260907T063139Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~25215 tokens)
+- 2026-09-07T06:40:32+00:00 preserved uncommitted worktree changes from run 20260907T063139Z-revise outside the PR: `git stash apply 5fdb418b311016c20ec0d7c996e7c19f577ecec5` in /home/joshua/work/worktrees/CG-323 (garden:CG-323:20260907T063139Z-revise:reap)
+- 2026-09-07T06:41:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Fixed the reported import-order lint failure. Focused checks and exact-head GitHub CI pass on c9850e0aa1f7f332adf2d3472bdef7d35f2ff674. cost=$0.56
+- 2026-09-07T06:41:52+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
+- 2026-09-07T06:42:02+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/review.py); a rebase agent will resolve it
+- 2026-09-07T09:13:10+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
+- 2026-09-07T09:13:11+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:13:43+00:00 dispatched rebase run 20260907T091341Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8245 tokens)
