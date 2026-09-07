@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Versioned GitHub releases adopted
+
+Owner authorized releases. Published v0.1.0 as preview at installed899b2c0 with exactCI34112718574 and known limitations; no deployment change. Follow context-garden/docs/release-protocol.md and releases/deployed.json. Future candidates need matching package version, new immutable-by-policy tag, exact-head CI, included approval lineage and explicit deployment gate. CG373 branch9db48a7 remains unversioned candidate; do not publish another0.1.0. CG-384 owns product release visibility and mechanical validation workflow.
+
 ## Narrow CG373 rollout prepared 13:32Z
 
 No running records at13:30. Latest main83d93d9 CI34124979397 passes, but CG297 last recorded review request_changes and CG334/379 have no recorded approval; do not describe all main changes as approved. Prepared isolated release codex/cg373-release-20260907 at9db48a7 in /home/joshua/work/operator-test-tmp/rollout-cg373: installed899b2c0 plus exactly three approvedCG373 commits, clean cherry-picks4004dc8/204c820/9db48a7. Pushed for exact-release CI; next verify CI and source lineage, then bounded drained install and release CG294 manual hold. No installation/pause this turn. Other merged work needs review/validation before inclusion; do not strand this prepared release while repeating status.

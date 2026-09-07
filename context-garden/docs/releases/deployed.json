@@ -1,0 +1,8 @@
+{
+  "release": "v0.1.0",
+  "commit": "899b2c0cda5a311f6e498b75929ca6b58a524eab",
+  "channel": "preview",
+  "deployed_at": "2026-09-07T11:46:00Z",
+  "previous_pin": "5cff609b3ef355154cd4eb987133c6961ae12f5c",
+  "note": "Release label added retrospectively to verified installed build; no reinstall performed."
+}
