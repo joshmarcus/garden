@@ -1,0 +1,76 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____________________ test_normal_tick_reaches_cache_reclaim ____________________
+
+sched = <garden.scheduler.Scheduler object at 0x7b4307e35e80>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b4307e41e00>
+tmp_path = PosixPath('/home/joshua/work/operator-test-tmp/cg385-operator-review/pytest-of-joshua/pytest-1/test_normal_tick_reaches_cache0')
+
+    def test_normal_tick_reaches_cache_reclaim(sched, monkeypatch, tmp_path):
+        _cache_limited(sched, monkeypatch, tmp_path)
+        attempts = []
+        monkeypatch.setattr(sched, "_start_reclaim_if_eligible", lambda status: attempts.append(status) or False)
+        sched.tick()
+>       assert attempts, "Normal tick remains blocked without attempting eligible reclaim"
+E       AssertionError: Normal tick remains blocked without attempting eligible reclaim
+E       assert []
+
+../../operator-test-tmp/cg385-operator-review/test_operator_review.py:9: AssertionError
+----------------------------- Captured stdout call -----------------------------
+resource pressure: execution cgroup available memory 900 MiB is below 1500 MiB; new local launches deferred while active work drains
+__________________ test_concurrent_state_publication_is_safe ___________________
+
+sched = <garden.scheduler.Scheduler object at 0x7b4307e46fd0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b4307e42780>
+tmp_path = PosixPath('/home/joshua/work/operator-test-tmp/cg385-operator-review/pytest-of-joshua/pytest-1/test_concurrent_state_publicat0')
+
+    def test_concurrent_state_publication_is_safe(sched, monkeypatch, tmp_path):
+        import os
+        import threading
+        from concurrent.futures import ThreadPoolExecutor
+        from garden.scheduler import resources
+        target = tmp_path / "reclaim.json"
+        temporary = target.with_suffix(f".{os.getpid()}.tmp")
+        barrier = threading.Barrier(2)
+        original = resources.os.replace
+        def replace(src, dst):
+            if src == temporary:
+                barrier.wait(timeout=3)
+            return original(src, dst)
+        monkeypatch.setattr(resources.os, "replace", replace)
+        def publish(i):
+            try:
+                sched._write_reclaim_state(target, {"running": False, "result": i})
+            except Exception as error:
+                return type(error).__name__
+            return None
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            errors = list(pool.map(publish, [1, 2]))
+>       assert errors == [None, None], errors
+E       AssertionError: ['FileNotFoundError', None]
+E       assert ['FileNotFoundError', None] == [None, None]
+E         
+E         At index 0 diff: 'FileNotFoundError' != None
+E         Use -v to get more diff
+
+../../operator-test-tmp/cg385-operator-review/test_operator_review.py:33: AssertionError
+=============================== warnings summary ===============================
+../../../garden/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /home/joshua/garden/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+../../../garden/.venv/lib/python3.14/site-packages/starlette/testclient.py:53
+  /home/joshua/garden/.venv/lib/python3.14/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../operator-test-tmp/cg385-operator-review/test_operator_review.py::test_normal_tick_reaches_cache_reclaim
+FAILED ../../operator-test-tmp/cg385-operator-review/test_operator_review.py::test_concurrent_state_publication_is_safe
+2 failed, 2 warnings in 0.33s
+Running as unit: operator-cg385-review-race.service; invocation ID: d4ed2af39fc7455aae89522aa81ec624
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 604ms
+             CPU time consumed: 572ms
+                   Memory peak: 61.7M (swap: 0B)
