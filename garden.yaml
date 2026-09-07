@@ -33,7 +33,7 @@ budgets:                    # usd cap per phase; see also products.*.budget_usd
 
 review:
   enabled: true             # automated first review of every PR round (acceptance criteria,
-  max_rounds: 4             # correctness, scope, PR description quality / no scar tissue)   # raised 2026-09-05 17:10: reviews are on sonnet now and every third round was a hand press
+  max_rounds: 5             # correctness, scope, PR description quality / no scar tissue)   # raised 2026-09-05 17:10: reviews are on sonnet now and every third round was a hand press
   max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
   harness: "codex"          # reviews on codex terra too, to keep the Claude quota for the judges (retro/persona on fable) and the Now 1 build (user, 2026-09-06 01:55Z)
   difficulty: "hard"   # interim "one step up" (user, 2026-09-06 03:20Z): every review on the hard tier (codex sol) until review.ladder lands
@@ -124,6 +124,7 @@ products:
       lint: ".venv/bin/ruff check src tests scripts"
       env:
         GH_CONFIG_DIR: /home/joshua/.config/gh  # explicit GitHub access; HOME stays isolated
+        PLAYWRIGHT_BROWSERS_PATH: /home/joshua/.cache/ms-playwright
       timeout_seconds: 1500
     # runner: ssh           # per-product overrides
     # harness: codex

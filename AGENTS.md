@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Browser configuration applied 13:11Z
+
+Set products.context-garden.setup.env.PLAYWRIGHT_BROWSERS_PATH=/home/joshua/.cache/ms-playwright in garden.yaml, preserving GH_CONFIG_DIR and LD_LIBRARY_PATH. Restarted existing service at tick-lock boundary with only CG216 revision accounted active and KillMode=process; its output remained fresh12seconds afterward. New serverPID121862 active, installed899b2c0 unchanged; Now1/Inbox200 at1.029/1.278s after startup. Initial immediate connection refusal was startup, subsequent routes passed. Old persisted browser-readiness signature still visible pending scheduler refresh; verify new ready result on next tick, do not claim capture recovery yet. Limits5/3 and memory4.5GiB/5GiB remain. CG379 maintenance pause has merged, not deployed.
+
 ## Scoped AWS login now verified
 
 Owner completed non-root login. aws sts get-caller-identity --profile garden-provisioner succeeded and returned assumed-role/ContextGardenProvisioner on2026-09-07. Use this explicit profile for provisioning work; do not fall back to the root default profile. This supersedes the pending login setup below. No cloud resources launched.
