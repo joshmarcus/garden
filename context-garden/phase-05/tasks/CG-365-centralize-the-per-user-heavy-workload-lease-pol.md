@@ -13,7 +13,7 @@ discovered_from: CG-361
 attempts: 1
 last_dispatched_at: '2026-09-07T01:12:31+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T01:12:31+00:00'
+updated: '2026-09-07T01:21:04+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T01:11:52+00:00 Operator01:12 UTC expanded existing draft with four verified remaining CG361 review findings after its merge; keep production pinnedfc658809 until repaired deployment is ready.
 - 2026-09-07T01:11:53+00:00 approved (cli)
 - 2026-09-07T01:12:31+00:00 dispatched work run 20260907T011212Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9886 tokens)
+- 2026-09-07T01:21:04+00:00 Operator01:21 UTC inspected active work atd1f1c23/faadd08 without changing the worker tree. Enforcement fixes and new artifact exist, but tests/test_web.py::test_retained_history_journey_stays_responsive_with_running_and_waiting_pytest still generates only time.sleep(0.75). report.json labels supervisor PIDs as live_supervisor_descendants and omits execution cgroup CPU/memory PSI and aggregate CPU usage; memory sample12MiB and supervisor ticks do not establish representative running pytest load. The isolated finite cgroup is a useful improvement, but criterion4 remains UNPROVEN until a bounded nontrivial workload is synchronized as actually running and its real descendants/aggregate pressure are recorded. Reuse this finding in the next review/continuation, not a duplicate task. No local full suite, production changes, or extra agent needed.
