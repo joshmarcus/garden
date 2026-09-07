@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
 last_dispatched_at: '2026-09-07T02:19:05+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T02:19:05+00:00'
+updated: '2026-09-07T02:37:54+00:00'
 ---
 
 ## Goal
@@ -78,3 +78,6 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T02:08:18+00:00 worker asks: Should missing-result recovery from current main continue directly to review, or should CG-323 require it to enter an automatic revise round for the missing pre-flight? cost=$1.04
 - 2026-09-07T02:19:00+00:00 kept 4 local-only commit(s) on `backup/20260907T021858Z-resume` before syncing to origin/garden/cg-323-the-worker-pre-flights-its-pr-against-the-review's head: 7d20ecc Merge remote-tracking branch 'origin/main' into garden/cg-323-the-worker-pre-flights-its-pr-against-the-review; b84d521 fix: route mechanical pre-flight failures to revise; 061e71f Merge pull request #253 from joshmarcus/garden/cg-333-a-run-that-ends-without-a-result-but-with-new-co; b705093 Reap committed runs missing results
 - 2026-09-07T02:19:05+00:00 dispatched resume run 20260907T021858Z-resume via local [codex model=gpt-5.6-terra] (fresh session, base main, ~22917 tokens)
+- 2026-09-07T02:32:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Workers now receive, report, and are mechanically gated by the review pre-flight; dispatched criteria remain frozen. Missing results under the new contract preserve committed work and enter an automatic revise round with the required reason and frozen criteria. cost=$1.17
+- 2026-09-07T02:32:53+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
+- 2026-09-07T02:37:54+00:00 triage: marked ready for review

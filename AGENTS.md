@@ -73,3 +73,9 @@ Owner explicitly increased concurrency to FIVE at 2026-09-07T02:09:55Z. Applied 
 ## Human queue disposition 2026-09-07
 
 See context-garden/docs/human-queue-2026-09-07.md. CG327/332/365 are supported READY with manual runner holds and dependencies; they need operator evidence/integration actions, not blind redispatch. Resolve as soon as prerequisites pass. CG323 question answered and resume worker verified; CG322/326/358 concrete feedback restored. CG319 owner chose Now1 exclusively as Now immediately after Inbox, deferred phase06. Frozen draft inbox cards are intentional deferrals, not unanswered owner decisions.
+
+## Integrity recovery check 2026-09-07T02:32Z
+
+CG366/PR256 head3941b5a passed CI but review correctly blocked shell attribution: cat SOURCE > OUT and cp SOURCE DEST still falsely treat SOURCE as written. Non-destructive sibling log preservation passed review. Sent one supported capped /dispatch for revision with persisted exact feedback; response200. Verify latest run before repeating. General admission remains paused. Only CG323 resume was active before this repair revision. Now2/Inbox200 at .676/.688s; service2.66GB, memoryPSIavg10 zero,max/OOM0,totalmemory stalls126937us. No incident closure; operator-owned CG327/332/365 prerequisite holds still apply.
+
+02:38 check: CG366 revise20260907T023123Z/PID2465782 remains live; no duplicate repair. CG323 answered-contract implementation completed at edd7807cd9042f47d7d5643b716fef7739d4cfa8 with exact-head CI34076191368/34076193723 passed and PR241 OPEN CLEAN. Cleared four-round review cap through triage-ready and started one current-head review20260907T023755Z-review/PID2476216, verified live; reviewer slot was free, only CG366 revision active beforehand. Resource2.666GB mostlyfile2.066GB/anon432MB/shmem66MB; memory high12435 unchanged, zero PSIavg10/max/OOM, temp2099MiB available, Now2/Inbox.675/.696s. Ordinary pause and manual prerequisite holds retained.
