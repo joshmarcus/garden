@@ -1,7 +1,7 @@
 ---
 id: CG-376
 title: Make review caps optional and report excessive review loops as friction
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,9 +15,9 @@ reading:
 branch: garden/cg-376-make-review-caps-optional-and-report-excessive-r
 pr: https://github.com/joshmarcus/context-garden/pull/286
 attempts: 1
-last_dispatched_at: '2026-09-07T10:21:10+00:00'
+last_dispatched_at: '2026-09-07T11:59:51+00:00'
 created: '2026-09-07T09:29:27+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T14:39:28+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,7 @@ CG300/323 stopped at four reviews despite concrete actionable findings. CG297 re
 - 2026-09-07T10:50:39+00:00 preserved uncommitted worktree changes from run 20260907T102043Z-work outside the PR: `git stash apply fc7d5cb9523f3b67adf24f8fba5bac8417d86d61` in /home/joshua/work/worktrees/CG-376 (garden:CG-376:20260907T102043Z-work:reap)
 - 2026-09-07T11:40:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/286 (base main): Added explicit null/unlimited review-cap semantics, a separate soft loop-friction threshold, UI/CLI/Now support, regression tests, and a retrospective of the representative review loops. Final CI passed on ab256d7d6e393998d9ea91beee6eadf61eb05d8e. cost=$1.83
 - 2026-09-07T11:44:09+00:00 automated review requested changes: Unlimited-cap behavior is implemented coherently and the UI captures are clean, but the required end-to-end regression coverage for continued review and stale-cap recovery is missing. cost=$0.75
+- 2026-09-07T11:59:51+00:00 dispatched revise run 20260907T115949Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~17461 tokens)
+- 2026-09-07T12:11:49+00:00 preserved uncommitted worktree changes from run 20260907T115949Z-revise outside the PR: `git stash apply 523d7ca079351834f2a06ffb605ec04fa38791b1` in /home/joshua/work/worktrees/CG-376 (garden:CG-376:20260907T115949Z-revise:reap)
+- 2026-09-07T12:21:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/286: Added end-to-end review lifecycle regression coverage beyond the former cap and across capped-review recovery. CI passed for 2855f3d. cost=$0.88
+- 2026-09-07T14:39:28+00:00 Fast-forward: verified GitHub merge 879cd608bf13672510d15d240db353f5acda7469 after exact-head CI and operator self-review. Not yet deployed; apply unlimited cap after rollout.

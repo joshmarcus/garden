@@ -1,7 +1,7 @@
 ---
 id: CG-383
 title: Calibrate reclaimable file cache for admission headroom
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -10,10 +10,11 @@ difficulty: medium
 reading:
 - src/garden/config.py
 branch: garden/cg-383-calibrate-reclaimable-file-cache-for-admission-h
+pr: https://github.com/joshmarcus/context-garden/pull/293
 discovered_from: CG-380
 last_dispatched_at: '2026-09-07T13:41:13+00:00'
 created: '2026-09-07T13:02:16+00:00'
-updated: '2026-09-07T14:02:44+00:00'
+updated: '2026-09-07T14:27:17+00:00'
 file: src/garden/scheduler/resources.py
 error: The admission sensor counts all memory.current against memory.high; the operator sample had about
   2,198MiB file cache, 5,621MiB host MemAvailable and zero pressure/events but reported only 550MiB cgroup
@@ -70,3 +71,5 @@ Discovered by CG-380 (Attribute controller, scheduler, and worker performance un
 
 Owner delegates routine preservation. Yes: temporarily stash the unrelated docs/design/snapshot.json solely for exact-head CI validation, keep its named stash/hash, and restore it unchanged afterward. Scheduler already salvaged the dirty snapshot as a7be75584c06626c6a01459ceab816debea5f690; inspect current state before stashing again. Preserve implementation commit4c5a956 and continue validation/review, not a fresh implementation. Do not discard or commit the snapshot to this PR, alter production cache/caps, or repeat already-passing validation without cause.
 - 2026-09-07T14:02:44+00:00 reset to ready by hand
+- 2026-09-07T14:27:15+00:00 Operator fast-forward: calibration PR293 merged d14afc5 after exact CI and self-review; production admission policy remains a follow-up.
+- 2026-09-07T14:27:17+00:00 Operator fast-forward: GitHub merge verified d14afc5310bf426af4d283ca8174c21219c58260; exact-head CI and operator self-review passed. Not yet deployed.

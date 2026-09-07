@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
 last_dispatched_at: '2026-09-07T10:02:21+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T14:27:18+00:00'
 ---
 
 ## Goal
@@ -120,3 +120,4 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T10:11:30+00:00 stalled: revise run 20260907T100219Z-revise produced no change to the diff or PR description; run `garden triage CG-323 --changes "<feedback>" to unblock`
 - 2026-09-07T10:15:53+00:00 automated review: request_changes — The pre-flight and frozen-criteria flows are largely implemented and 107 focused tests pass, but the conflict-marker check rejects valid clean diffs containing an added Setext heading underline. cost=$0.96
 - 2026-09-07T10:17:09+00:00 triage: marked ready for review
+- 2026-09-07T14:27:18+00:00 Operator fast-forward: GitHub merge verified 8998db4310f69a4194179d5960a77ada2e002a92; exact-head CI and operator self-review passed. Not yet deployed.
