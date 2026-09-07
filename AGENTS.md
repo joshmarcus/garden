@@ -1,5 +1,25 @@
 # Context-garden operator handoff
 
+## DEPLOYED899b2c0 2026-09-07T11:46Z
+
+Owner requested deployment. Installed899b2c0cda5a311f6e498b75929ca6b58a524eab at fully drained tick-lock boundary; exact mainCI34112718574 and38 capped resource/restart/setup tests passed. Installer180.1MiB/noSwap; venv read-only restored, source bytes verified for supervisor/resource/Inbox/control modules. ServicePID4193997 active normal-watch; CPU200%/MemoryMax4GiB retained. Now2/Inbox/Config200 at.742/.684/.303s. POST/resume succeeded; ordinary scheduling unpaused with temporary worker/shared1, reviewer ceiling3 pending loaded recovery observation. Owner target5 remains. Older installed5cff609 statements superseded. No active worker or saved result discarded. This is deployment/initial smoke success, not completed incident journeys or phase gate.
+
+
+## Rollout candidate verified 2026-09-07T11:17Z
+
+Candidate899b2c0cda5a311f6e498b75929ca6b58a524eab (main CI34112718574 success) contains merged CG365899b2c0, CG367427c1d3, CG3584730542 and CG3293accef5. Compared actual git trees (GitHub compare used merge-base and overstated differences): resource supervisor unchanged from reviewed010fd03; remaining delta is independently reviewed incident-controls/slot changes. CG358 post-review delta is reviewed Inbox optimization/docs. Capped candidate tests resource/restart/setup38passed3.51s,133.8MiB peak/noSwap. Detached candidate at /home/joshua/work/operator-test-tmp/rollout-899b2c0. Rollout scripts prepared at operator-test-tmp/install-rollout-899b2c0.py and deploy-rollout-899b2c0.py (requires zero running records under tick lock). At11:22 ordinary admission paused to drain liveCG377 revision/PID4136847; preserve it, verify checks/reviews too. Resume after verified rollout at contained1 before resource ramp. Next: drained rollout using bounded installer; installed still5cff609 until verification. Temporary worker/shared1 persists.
+
+
+## Active latency containment 2026-09-07T10:44Z
+
+Repeated Now2/Inbox responses5.769/7.459/4.889/5.408seconds breach owner4second tolerance. Temporarily worker/shared1, reviewer ceiling3; active runs preserved to drain. Owner target5 remains, restore after diagnosed recovery. MemoryPSI0/noOOM; no proven memory cause. Existing incident follow-up remains open.
+
+
+## Owner priority: reduce review churn
+
+Owner requested top priority for CG323 shared preflight/frozen criteria, CG339 real proportional interaction evidence, CG377 scoped validation, CG376 optional caps/friction and CG372 review fairness. Set unfinished tasks P0. Prefer shared criteria/validation first; respect CG377 dependency on CG339 and reviewer3/shared5 admission. Preserve active work and all evidence gates. Priority alone may not order queued reviews until CG372 lands; advance these when capacity opens.
+
+
 ## Owner clarification of unattended gate
 
 Four productive hours require no action from Josh, the human owner. Delegated agent-operator interventions ARE allowed and do not reset/disqualify the window. Supersedes every historical no-agent-repair statement. Record owner versus operator actions separately; preserve ten representative completions, pinned-build/resource/cost/journey/recovery requirements. Status questions are not owner repair actions. Reassess historical evidence under this definition; do not assume full phase pass.

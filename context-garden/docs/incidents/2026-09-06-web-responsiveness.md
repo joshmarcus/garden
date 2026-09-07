@@ -66,3 +66,11 @@ Owner requested restart of normal dispatch. Resumed through POST /resume (200), 
 ## Five-slot trial recurrence 2026-09-07T03:08Z
 
 After narrow fence repair rollout/resume, five actual workers produced repeated Now2/Inbox2.46–3.08s latency. Memory2.01GB,PSI0,high/max/OOM0,temp1889MiB; no demonstrated memory pressure. Supported worker/shared reduced1/1, existing work preserved to drain, OS caps unchanged. Later repeats1.035/1.018s. Continue observation and diagnose under workload before raising; no incident closure.
+
+
+### Recurrence2026-09-07T10:44Z
+Repeated Now2/Inbox probes5.769/7.459/4.889/5.408seconds exceeded owner4second tolerance under five shared runs. Supported worker/shared1 containment applied and verified by10:51; existing work preserved to drain, reviewer ceiling3 retained. At10:51 three workers remain live, routes1.939/1.946seconds, memory2.896GB, current CPU/memory/IO PSIavg10 all0, max/OOM0. Cumulative throttling is not evidence of contemporaneous cause. No restart/deployment/temp deletion. Earlier contention cause remains unproven; collect representative loaded request profile before restoring full admission. Recovery journeys and retrospective remain open.
+
+
+### Validated rollout2026-09-07T11:46Z
+Installed899b2c0 at drained tick lock, exactCI34112718574 and38 focused tests passed. Bounded installer180.1MiB/noSwap. Source bytes verified, service4193997 active; Now2/Inbox/Config.742/.684/.303seconds. Resumed ordinary admission at temporary worker/shared1 with reviewer ceiling3 and all OS caps. Observe real loaded journeys before restoring target5; no incident-closure claim.
