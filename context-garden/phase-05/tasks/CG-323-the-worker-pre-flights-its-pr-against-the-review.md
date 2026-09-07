@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
 last_dispatched_at: '2026-09-07T03:00:29+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T03:00:29+00:00'
+updated: '2026-09-07T04:22:09+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,8 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T02:40:09+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-323`) or send it back (`garden triage CG-323 --changes "..."`)
 - 2026-09-07T02:44:13+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
 - 2026-09-07T03:00:29+00:00 dispatched revise run 20260907T030027Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~23654 tokens)
+- 2026-09-07T03:11:00+00:00 preserved uncommitted worktree changes from run 20260907T030027Z-revise outside the PR: `git stash apply d2fc7e540ede8cc38e7b28181cee72d75250f16d` in /home/joshua/work/worktrees/CG-323 (garden:CG-323:20260907T030027Z-revise:reap)
+- 2026-09-07T03:26:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Pre-PR changed-file inspection now fails closed into an automatic revise brief instead of aborting a scheduler tick. The guarded mechanical pre-flight remains the sole post-check diff inspector, with lifecycle coverage for the Git-error path. cost=$0.78
+- 2026-09-07T03:26:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
+- 2026-09-07T03:29:13+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/brief.py, src/garden/review.py, tests/fake_claude.py); a rebase agent will resolve it
+- 2026-09-07T04:22:09+00:00 triage: changes requested by hand: Current a7cf4ae exact CI passed but PR241 now has merge conflicts with current main. Preserve completed fail-closed fixe

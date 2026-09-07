@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/233
 attempts: 1
 last_dispatched_at: '2026-09-06T19:00:53+00:00'
 created: '2026-09-06T05:26:49+00:00'
-updated: '2026-09-07T04:13:54+00:00'
+updated: '2026-09-07T04:22:06+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,5 @@ One definition of a worker slot. `max_parallel` counts the runs that occupy a sl
 - 2026-09-07T04:13:52+00:00 Owner explicitly released the operator safety hold. Resume normal validation of preserved PR233. Current shared cap4/reviewer1 and OS resource limits remain in force; do not confuse worker-mode display exclusions with bypassing shared resource admission.
 - 2026-09-07T04:13:52+00:00 approved (web)
 - 2026-09-07T04:13:54+00:00 triage: changes requested by hand: Owner released safety hold. Preserve PR233 implementation; reconcile with current main and shared resource admission now
+- 2026-09-07T04:14:39+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-329`) or send it back (`garden triage CG-329 --changes "..."`)
+- 2026-09-07T04:22:06+00:00 re-enabled by hand; revise run will follow

@@ -129,3 +129,7 @@ products:
     # harness: codex
     # budget_usd: 100       # per-product default budget for every phase
     # github: owner/name    # only needed when the origin remote is not a github.com URL
+
+# Browser checks use the same explicit, private runtime library path as the service.
+worker_env:
+  pass: [LD_LIBRARY_PATH]
