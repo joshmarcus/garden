@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Tailscale Serve verified
+
+Owner enabled Serve. Windows background proxy reports https://babel.taild4d2ae.ts.net (tailnet only) -> http://localhost:8765. HTTPS Now1 and Inbox returned200 from Windows. Trusted origin already validated. No public Funnel. Phone must keep Tailscale connected; actual phone interaction remains for owner to confirm. This supersedes pending Serve activation below.
+
 ## Tailscale phone access setup
 
 Windows Tailscale1.102.3 connected as Babel, with owner iPhone online in same tailnet. Target HTTPS origin https://babel.taild4d2ae.ts.net added to web.trusted_origins; tick-lock restart with only CG382/381/383 work runs preserved, fresh output8/20/6seconds afterward. Non-mutating nonexistent-route POST accepted trusted origin through middleware404 and rejected unrelated origin403. Tailscale Serve command is waiting for owner to enable Serve at https://login.tailscale.com/f/serve?node=nzMgoKiSbH11CNTRL (Windows exec session97883); no public Funnel enabled. After enable, verify serve status and HTTPS route before claiming phone access complete. Tailnet currently shows only same-owner Babel/iPhone; no claim of custom ACL enforcement.
