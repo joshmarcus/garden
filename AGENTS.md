@@ -1,18 +1,18 @@
-## Fast-forward direct-work checkpoint
-
-ACTIVE, no-watch server and pause maintained. CG383/293,CG323/241,CG376/286 merged and tasksDONE; none deployed. Current workCG372head6b67cec,CG339head86151b0,CG377headcb38bd3. Detailed concrete fixes/tests/next integration hazards are at the top of context-garden/docs/fast-forward.md. CG339 now uses supervised detached replay; when integratingCG372, its check-priority drain must exclude interaction_replay to prevent recursion. CG385P0 owns the actual cache-admission fix following calibration; no production cache policy changed. Continue useful branch work while CI runs; do not yield solely to wait for CI. No extra model agents. Restore normal5/3 only at verified exit; temporarydrain1/0 stillpersists.
-
-## Fast-forward fully quiesced 2026-09-07 14:17Z
-
-Owner-authorized focused fast-forward ACTIVE. All garden runs drained; under tick lock verified service cgroup contained only server, then installed fast-forward.conf and restarted existing service with serve --no-watch (PID225493). Now1/Inbox200 at.880/.689s. Installed899b unchanged; caps4.5/5GiB andCPU200% unchanged. Ordinarypause persists. Temporary drain overrides review_parallel0/resources.max_parallel1; restore original worker/shared5 andreview3 only on verified exit. Heartbeat must not tick/dispatch/review/resume during maintenance.
-
-Direct work: CG383 PR293 headc7b8eb5 corrects tmpfs/disk calibration,12 bounded resource tests pass, matched disk/tmpfs evidence committed. ExactCI34131766485 pending. No production policy change; bounded reclaim plus fresh headroom check still requires implementation. CG323 PR241 heada992f6d fixes blocking Setext false-positive;16 bounded preflight tests/full lint pass, exactCIpending. Preserve original CG383 snapshotstash. Next verify CI, self-review full scoped PRs/current GitHub threads, merge serially and continue CG339/377/376/372, then verified versioned rollout. AWS/unrelated PRs preserved. Two operator CI waiter sessions49973/63647 may still be active; these are not garden workers. This entry supersedes activation drain observations below.
-
 # Context-garden operator handoff
 
-## FAST-FORWARD ACTIVE: focused resource/review repair
+## Current checkpoint: fast-forward complete, 2026-09-07 15:20Z
 
-Owner activated now. Read current top of context-garden/docs/fast-forward.md. Scope CG383 then CG323/339/377/376/372, validated versioned rollout and exit. Other AWS/features excluded from this pass, preserved. Ordinary dispatch paused; two unrelated workersCG382/381 draining before UI-only mode. Heartbeat updated not to tick/dispatch/review/resume. Operator has begunCG383 calibration correction: disk-backed72MiB file reclaimed64MiB cleanly, unlike original tmpfs-like evidence. Preserve original artifact and follow current ledger. Older INACTIVE instructions are superseded.
+Fast-forward INACTIVE. All six scoped PRs merged: CG383/293, CG323/241, CG376/286, CG372/266, CG339/254 and CG377/284. Supported task states DONE. See context-garden/docs/fast-forward.md for findings and evidence; historical pending heads are superseded.
+
+Published and installed v0.2.0rc1 at d24e6778be03a85a62abb4aac664943606c15c70. Exact releaseCI34136366921/34136368566 passed; all189installedsourcefiles/version/direct_url verified. 202candidatefocusedtests passed/1browser-dependent skip and exact-source nine-flow HTTP journey passed. Bounded installer193.7MiB/noSwap. Postinstall Now1/Inbox/Config/task339/task377 respond200 under1s; actual in-app Config displays unlimited review rounds and frictionthreshold4.
+
+Removed only fast-forward.conf; normal watchPID290033 and global resume200 verified. Owner worker/shared5 and reviewer3 restored through supported overrides; no persisted pause. review.max_rounds:null applied. CPU200%, MemoryHigh4.5GiB/Max5GiB/Swap512MiB unchanged; reserve1536MiB/temp1024MiB/four-second page tolerance preserved. No extra model agents. Existing five-minute heartbeat now normal duties plus incident follow-up.
+
+CG385 P0 actual bounded cache-admission implementation received a protected slot: run20260907T151701Z-work/PID290228 live with output0.1secondsold at resume. Service1.07GiB then. Track it and preserve real recovery capacity; do not duplicate. CG383 is calibration only, not a production policy repair. Incident recovery journeys/retro and phase gate remain unproven. CG294 temporary manualrunnerhold removed after CG373 deployment; preserve PR275 and existing revision/stashes/feedback.
+
+Release includes installed899b plus approvedCG373 and six scoped fixes, excluding unapprovedCG297/334/379 and unrelatedAWS. Follow release protocol/deployed.json; do not install arbitrary main or republish0.1.0. Previous rollback pin899b2c0cda5a311f6e498b75929ca6b58a524eab. Ordinary automated review applies again; operator self-review substitution was only for the completed fast-forward pass. No owner PR action before current-head automated approval.
+
+The dated entries below are historical where contradicted by this checkpoint. Preserve their salvage references and standing policies; do not repeat old deployments or queues.
 
 ## Tailscale Serve verified
 

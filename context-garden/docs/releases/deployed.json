@@ -1,8 +1,23 @@
 {
-  "release": "v0.1.0",
-  "commit": "899b2c0cda5a311f6e498b75929ca6b58a524eab",
+  "version": "0.2.0rc1",
+  "tag": "v0.2.0rc1",
+  "sha": "d24e6778be03a85a62abb4aac664943606c15c70",
+  "release_url": "https://github.com/joshmarcus/context-garden/releases/tag/v0.2.0rc1",
+  "deployed_at": "2026-09-07T15:16:39.859652+00:00",
+  "prior_pin": "899b2c0cda5a311f6e498b75929ca6b58a524eab",
+  "verification": [
+    "Exact release CI34136366921/34136368566 passed",
+    "Installed version/direct_url and all189package sourcefiles verified",
+    "Bounded installer193.7MiB/noSwap; venvwriteprotections restored",
+    "202candidatefocusedtests pass/1browserdependentskip; nine-flow exactsourceHTTPjourney passes",
+    "Postinstall Now1/Inbox/Config/task339/task377 HTTP200 under1s",
+    "Actual in-app Config shows unlimited maxrounds and frictionthreshold4",
+    "Normal watch and global resume verified; owner5shared/3reviewers restored, CG385 live in priority recovery slot"
+  ],
+  "phase05_gate": "UNPROVEN",
+  "rollback": "v0.1.0 /899b2c0 at accounted runtime boundary; preserve state and run evidence",
+  "release": "v0.2.0rc1",
+  "commit": "d24e6778be03a85a62abb4aac664943606c15c70",
   "channel": "preview",
-  "deployed_at": "2026-09-07T11:46:00Z",
-  "previous_pin": "5cff609b3ef355154cd4eb987133c6961ae12f5c",
-  "note": "Release label added retrospectively to verified installed build; no reinstall performed."
+  "previous_pin": "899b2c0cda5a311f6e498b75929ca6b58a524eab"
 }

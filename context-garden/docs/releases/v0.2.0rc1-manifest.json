@@ -1,0 +1,95 @@
+{
+  "version": "0.2.0rc1",
+  "tag": "v0.2.0rc1",
+  "sha": "d24e6778be03a85a62abb4aac664943606c15c70",
+  "channel": "preview",
+  "prepared_at": "2026-09-07T15:13:40.380236+00:00",
+  "previous_pin": "899b2c0cda5a311f6e498b75929ca6b58a524eab",
+  "base_lineage": {
+    "source": "9db48a7adc5bc6609a36e9bfbdb04881fbd17138",
+    "includes": "installed899b plus CG373 approved commits",
+    "cg373_reviewed_head": "90eede937ef4d1503305539cd6fbdf52f06bbf40",
+    "automated_review_run": "20260907T115931Z-review",
+    "verdict": "approve"
+  },
+  "included": [
+    {
+      "task": "CG-383",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/293",
+      "reviewed_head": "c7b8eb597407b2385d3de916fb20184bef33881b",
+      "merge_commit": "d14afc5310bf426af4d283ca8174c21219c58260",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34131766485"
+    },
+    {
+      "task": "CG-323",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/241",
+      "reviewed_head": "a992f6d9d5b44bb9a664aaf32e9d716855623ca5",
+      "merge_commit": "8998db4310f69a4194179d5960a77ada2e002a92",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34132026774"
+    },
+    {
+      "task": "CG-376",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/286",
+      "reviewed_head": "7f5a4f81deac459046e8c5e7b7eaf115446f013a",
+      "merge_commit": "879cd608bf13672510d15d240db353f5acda7469",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34133392583"
+    },
+    {
+      "task": "CG-372",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/266",
+      "reviewed_head": "6b67cec76c07655d10ad1d7acc248f7c2cbb89df",
+      "merge_commit": "933912ec5132299a71432b1ba01e45f1b60b1e6a",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34134172023"
+    },
+    {
+      "task": "CG-339",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/254",
+      "reviewed_head": "1e915667ff3b01f9605f8a49b037ac66ca06c4f5",
+      "merge_commit": "ae8656b51b78f4ff1db65d4c21518147dcb144a8",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34136226565"
+    },
+    {
+      "task": "CG-377",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/284",
+      "reviewed_head": "ec9811fc3ea597a5478fe63bdd4b3dccb5a31fef",
+      "merge_commit": "40373fe99397c5d86f888bafa8dd99e333690db4",
+      "approval": "Owner-authorized fast-forward operator repair and self-review; no new automated approval asserted",
+      "exact_head_ci": "https://github.com/joshmarcus/context-garden/actions/runs/34136229231"
+    }
+  ],
+  "release_ci": [
+    "https://github.com/joshmarcus/context-garden/actions/runs/34136366921",
+    "https://github.com/joshmarcus/context-garden/actions/runs/34136368566"
+  ],
+  "selection_adaptation": "CG372 omitted context-only require_maintenance_running from excludedCG379. CG339/377 final-head patches applied cleanly; new package version matches tag.",
+  "excluded": [
+    "CG297 walkthrough renderer: no approved inclusion",
+    "CG334 missed-finding feedback: no approved inclusion",
+    "CG379 maintenance pause: no approved inclusion",
+    "AWS and model-pool features: outside focused pass"
+  ],
+  "verification": {
+    "focused": "202 passed, 1 browser-dependent skip; 363.3MiB peak, zero swap",
+    "served_http": "9 flows passed on exact release source, 4.999 seconds, 90.2MiB peak, zero swap",
+    "interaction_manifest_sha256": "35d2ddcbfdaad63904352adc85609696720fe032246e917b66e440e7f0b3d943",
+    "full_ci": "passed exact release commit"
+  },
+  "known_limitations": [
+    "CG385 actual cache-limited admission repair remains pending; CG383 is calibration only.",
+    "Production review-round/cost improvement and phase05 stabilization remain unproven.",
+    "Controlled HTTP fixture is not visual-layout verification or real-model workload proof.",
+    "No live cloud-resource evidence."
+  ],
+  "compatibility": [
+    "review.max_rounds:null means unlimited; finite default2 preserved; zero invalid.",
+    "Additive head-bound validation and detached replay state; no destructive migration."
+  ],
+  "installation": "At an accounted drained boundary install exact source SHA, restore read-only venv, restart existing service, verify version/source and affected journeys before resume. Publication alone does not deploy.",
+  "rollback": "Reinstall prior v0.1.0/899b pin at an accounted boundary; preserve task/run state and any new replay results. Do not rewind state or delete evidence.",
+  "distribution": "GitHub source archives plus this manifest; no wheel or PyPI artifact."
+}

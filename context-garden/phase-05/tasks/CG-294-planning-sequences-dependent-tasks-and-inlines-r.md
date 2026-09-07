@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,8 +20,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 2
 last_dispatched_at: '2026-09-07T10:37:17+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T12:54:17+00:00'
-runner: manual
+updated: '2026-09-07T15:15:11+00:00'
 ---
 
 ## Goal
@@ -88,3 +87,6 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-07T10:38:18+00:00 rebase run 20260907T103715Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1600443}; retry also failed; needs human to resolve docs/design/snapshot.json
 - 2026-09-07T12:54:17+00:00 triage: marked ready for review
 - 2026-09-07T12:54:17+00:00 Operator owns deployment prerequisite: CG373/PR283 is merged but not installed. Temporary manual hold prevents oversized rebase retry; restore ordinary runner and continue preserved PR275 after verified deployment. No owner decision remains.
+- 2026-09-07T12:54:42+00:00 rebasing before merge; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
+
+- 2026-09-07T15:15:11.940429+00:00 Operator released temporary manual-runner hold after verified CG373 inclusion in installed0.2.0rc1. Preserve PR275, branch, feedback and salvage artifacts; continue its existing revision.

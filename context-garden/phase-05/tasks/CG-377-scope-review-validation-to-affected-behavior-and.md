@@ -12,9 +12,9 @@ reading: []
 branch: garden/cg-377-scope-review-validation-to-affected-behavior-and
 pr: https://github.com/joshmarcus/context-garden/pull/284
 attempts: 1
-last_dispatched_at: '2026-09-07T11:10:22+00:00'
+last_dispatched_at: '2026-09-07T13:38:39+00:00'
 created: '2026-09-07T09:31:44+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T15:20:39+00:00'
 ---
 
 ## Goal
@@ -73,3 +73,30 @@ Owner requested fixing overly broad validation demands on2026-09-07. CG358 had a
 - 2026-09-07T11:52:14+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
 - 2026-09-07T11:53:26+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
 - 2026-09-07T11:54:38+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:55:51+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:57:03+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:58:15+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:59:32+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:00:55+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:02:08+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:03:29+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:04:42+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:05:53+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:07:03+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:08:14+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:09:24+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:10:38+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:11:50+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T12:23:41+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T13:38:39+00:00 dispatched revise run 20260907T133837Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base garden/cg-339-review-affected-behavior-through-the-running-app, ~11889 tokens)
+- 2026-09-07T13:51:25+00:00 preserved uncommitted worktree changes from run 20260907T133837Z-revise outside the PR: `git stash apply f7d0741d0033b1794b76cdb6a3b5f6e18fd1c9dd` in /home/joshua/work/worktrees/CG-377 (garden:CG-377:20260907T133837Z-revise:reap)
+- 2026-09-07T14:12:05+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T14:13:24+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T14:14:42+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T14:15:57+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:12:03+00:00 Owner-authorized fast-forward operator repair/self-review; expected head ec9811fc3ea597a5478fe63bdd4b3dccb5a31fef, exact full CI34136229231/34136233940 success, GitHub CLEAN, retargeted-main merge tree equals tested head. Verified PR284 merged 40373fe99397c5d86f888bafa8dd99e333690db4. Not yet deployed.
+- 2026-09-07T15:16:38+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:16:41+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:17:56+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:19:16+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:20:39+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human

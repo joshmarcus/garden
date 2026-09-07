@@ -1,16 +1,24 @@
 ---
 id: CG-385
 title: Recover cache-limited admission through bounded reclaim and a fresh headroom check
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on:
 - CG-383
 priority: 0
 difficulty: hard
-reading: []
+reading:
+- src/garden/scheduler/resources.py
+- src/garden/scheduler/dispatch.py
+- src/garden/scheduler/checkruns.py
+- tests/scheduler/test_resources.py
+- docs/validation/cg383/README.md
+branch: garden/cg-385-recover-cache-limited-admission-through-bounded
+attempts: 1
+last_dispatched_at: '2026-09-07T15:17:03+00:00'
 created: '2026-09-07T14:44:22+00:00'
-updated: '2026-09-07T14:44:23+00:00'
+updated: '2026-09-07T15:17:03+00:00'
 ---
 
 ## Goal
@@ -36,3 +44,4 @@ CG380 profiles broader controller cost; CG382 addresses repeated request scans. 
 ## Log
 
 - 2026-09-07T14:44:23+00:00 Operator fast-forward follow-up: evidence-supported implementation remains necessary after CG383 calibration. No worker dispatched during maintenance.
+- 2026-09-07T15:17:03+00:00 dispatched work run 20260907T151701Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~16086 tokens)

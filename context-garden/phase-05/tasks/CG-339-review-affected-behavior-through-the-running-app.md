@@ -1,7 +1,7 @@
 ---
 id: CG-339
 title: Review affected behavior through the running application before accepting interaction claims
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/254
 attempts: 1
 last_dispatched_at: '2026-09-07T10:31:07+00:00'
 created: '2026-09-06T13:46:32+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -80,3 +80,6 @@ CG-357 initially claimed performance evidence using inert worker records and ten
 - 2026-09-07T10:53:18+00:00 preserved uncommitted worktree changes from run 20260907T103105Z-revise outside the PR: `git stash apply 8279bccd70cb96f23e64eda6b0435f2f13ff14d7` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T103105Z-revise:reap)
 - 2026-09-07T11:31:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/254: Review dispatch now independently runs a disposable served-application replay and pins its nonce, reviewed SHA, and manifest digest, preventing reviewer-authored JSON or screenshots from serving as execution proof. Lifecycle applicability includes model transitions and check execution/recovery, and durable replay evidence records nine successful flows, 100 HTTP requests, explicit affected/failure/recovery/empty outcomes, and Inbox zero. cost=$2.83
 - 2026-09-07T11:31:28+00:00 5 automated review round(s) used; this PR is yours — run `garden review CG-339` for one more round, or review on GitHub
+- 2026-09-07T12:23:40+00:00 triage: marked ready for review
+- 2026-09-07T15:11:16+00:00 Owner-authorized fast-forward operator repair/self-review; expected head 1e915667ff3b01f9605f8a49b037ac66ca06c4f5, exact full CI34136226565/34136230133 success and GitHub CLEAN. Verified PR254 merged ae8656b51b78f4ff1db65d4c21518147dcb144a8. Not yet deployed.
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-339 is done: #254 was merged at 15:11:16

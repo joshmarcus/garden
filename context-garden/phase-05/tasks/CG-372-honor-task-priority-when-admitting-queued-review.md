@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/266
 attempts: 1
 last_dispatched_at: '2026-09-07T05:34:25+00:00'
 created: '2026-09-07T05:24:29+00:00'
-updated: '2026-09-07T14:47:19+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,4 @@ What the agent needs to know that is not in the reading list.
 - 2026-09-07T05:52:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/266 (base main): Queued reviews now drain in strict task-priority order before ready workers claim shared local capacity. Equal-priority queued reviews retain their turn over newly requested rounds, and wait text identifies a preceding queue entry. cost=$1.78
 - 2026-09-07T09:40:02+00:00 priority 1 -> 0 (web)
 - 2026-09-07T14:47:19+00:00 Fast-forward: verified GitHub merge 933912ec5132299a71432b1ba01e45f1b60b1e6a after exact-head CI and operator self-review. Not yet deployed.
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-372 is done: Fast-forward: verified GitHub merge 933912ec5132299a71432b1ba01e45f1b60b1e6a after exact-head CI and operator self-review. Not yet deployed. at 14:47:19
