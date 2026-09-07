@@ -1,5 +1,12 @@
 # Context-garden operator handoff
 
+## Drained cache recovery restart, 2026-09-07 16:06Z
+
+No active/requested/preparing run records remained; service cgroup contained only oldserver. CG385work,CG216revise andCG295revise all had DONE run records with uncollected continuations. Under ticklock preserved state and run/final/transcript hashes at operator-test-tmp/restart-cache-20260907T1606/before.json, restarted existingservice, verified every saved hash unchanged. NewPID365710; service94MB initially versus4.37GB before; pages1.300/1.042s, caps/build unchanged. Normal watch/unpaused, temporaryshared/worker1 andreviewerceiling3 remain; ownertarget5 not restored yet. No production cache deletion or cap bypass.
+
+Scheduler resumed result collection: CG295 pre-PR check published, CG216 UI-check feedback returned to its existing revision. CG385 completed work still awaits its pre-PR continuation; keep advancing this actual repair through normal current-head validation/review, do not rerun implementation or let ordinary work starve it. Restart restores temporary headroom, not permanent admission repair. Existing follow-up remains; do not repeat restart while runtime users are active.
+
+
 ## Cache-headroom containment, 2026-09-07 15:47Z
 
 New actual memory-admission stop, superseding the earlier full-slot-only banner observation. Service4.21GiB with3.59GiB file cache, ~475MiB anon and33MiB shmem; effective headroom reported241MiB below1536MiB reserve. MemoryPSIavg10 zero and high/max/OOM zero; Now/Inbox/Config2.013/2.538/2.178s. Applied supported temporary worker/shared1, preserving activeCG385work,CG295revision,CG216revision and reviewerceiling3. Owner target5 remains; caps unchanged, normal watch/unpaused remains. No cache deletion or reclaim bypass.
