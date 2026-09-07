@@ -2,6 +2,10 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## Owner-requested normal activity restored 2026-09-07T03:40:24.713488+00:00
+
+Owner requested normal activity. Restored supported worker/shared5/5, reviewer1, ordinary dispatch enabled. This supersedes temporary1/1 below. Pre-change pages.637/.638/.543s, service430MB, CPU/memoryPSI0, IOavg10=0,high/max/OOM0,temp2158MiB. CG322 active, preserved. Existing OS caps and five-minute monitoring unchanged. Browser dependencies remain staged awaiting safe integration/drained restart; do not forget that separate recovery step.
+
 ## Latest monitored operation 2026-09-07T03:08Z
 
 Five-slot resumed workload caused repeated Now2/Inbox latency2.883/1.997 then3.083/2.461/2.971s. Applied supported live worker/shared reduction to1/1 per incident rule; owner target remains5, reviewer1 and OS caps unchanged. Existing five workers preserved to drain, no broad pause or kill. Later route repeat1.035/1.018s; keep monitoring before raising again. Memory2.01–2.22GB mostlyfile1.28GB/anon550MB/shmem284MB, newcgroupPSI0/high/max/OOM0, temp1889MiB: this is latency containment, not established memory pressure/OOM. Prior five-slot live-limit statements are superseded by temporary1/1.
