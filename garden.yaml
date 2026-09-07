@@ -134,3 +134,7 @@ products:
 # Browser checks use the same explicit, private runtime library path as the service.
 worker_env:
   pass: [LD_LIBRARY_PATH]
+
+web:
+  trusted_origins:
+    - https://babel.taild4d2ae.ts.net

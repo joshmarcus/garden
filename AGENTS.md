@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Tailscale phone access setup
+
+Windows Tailscale1.102.3 connected as Babel, with owner iPhone online in same tailnet. Target HTTPS origin https://babel.taild4d2ae.ts.net added to web.trusted_origins; tick-lock restart with only CG382/381/383 work runs preserved, fresh output8/20/6seconds afterward. Non-mutating nonexistent-route POST accepted trusted origin through middleware404 and rejected unrelated origin403. Tailscale Serve command is waiting for owner to enable Serve at https://login.tailscale.com/f/serve?node=nzMgoKiSbH11CNTRL (Windows exec session97883); no public Funnel enabled. After enable, verify serve status and HTTPS route before claiming phone access complete. Tailnet currently shows only same-owner Babel/iPhone; no claim of custom ACL enforcement.
+
 ## Versioned GitHub releases adopted
 
 Owner authorized releases. Published v0.1.0 as preview at installed899b2c0 with exactCI34112718574 and known limitations; no deployment change. Follow context-garden/docs/release-protocol.md and releases/deployed.json. Future candidates need matching package version, new immutable-by-policy tag, exact-head CI, included approval lineage and explicit deployment gate. CG373 branch9db48a7 remains unversioned candidate; do not publish another0.1.0. CG-384 owns product release visibility and mechanical validation workflow.
