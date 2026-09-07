@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Current concurrency: four-slot trial
+
+Owner requested return to 4–5 slots. Set worker/shared limits to FOUR through supported Scheduler overrides under tick lock; reviewer ceiling remains THREE within shared four. Scheduling remains unpaused. This supersedes earlier temporary one-slot rollout containment. Initial pages 0.3–0.8s, host available 5.6GiB, service 290MiB, memory high/max/OOM zero. Verify loaded behavior on existing five-minute monitor before raising to five; keep CPU/memory caps and four-second page tolerance. Initial idle probes do not close the incident.
+
 ## Grouping correction
 
 Owner says not to include in-flight tasks. The four completion tracks are withdrawn and their task annotations removed. Only consider unstarted work for grouping; a ready label does not erase prior implementation or dispatch. CG295 has prior work and is excluded. CG378 README and CG379 maintenance pause remain separate. See context-garden/phase-05/completion-tracks.md.
