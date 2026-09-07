@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Memory trial follow-up 12:38Z
+
+New cap admitted CG362 revision, CG374 work and CG380 performance investigation alongside CG253 revision, all with fresh output. Service then grew to3.74GiB and admission again stopped at781MiB headroom below1536MiB; host available5247MiB, high/max/OOM zero, memory PSIavg10 zero, Now1/Inbox1.816/1.760s. Retain5GiB hard/4.5GiB soft caps; no further expansion. CG380 now actively investigates; do not change its scope mid-run. Browser readiness also reports scrubbed capture child missing Chromium while service environment can launch it; investigate consistent browser path/pass-through before UI work, preserve existing worker environment and avoid restart during active checks.
+
 ## Owner-authorized memory trial, 2026-09-07 12:33Z
 
 Owner proposed hard limit5GiB after cache-heavy admission stalled. Applied live persistent systemctl set-property MemoryMax=5G and MemoryHigh=4608M (4.5GiB); this supersedes older 3GiB/4GiB caps. CPU200%, swap512MiB, worker/shared5, reviewer3 and admission reserve1536MiB remain. No restart or active-work interruption. Host available5630MiB before change. Monitor five-minute deltas and loaded journeys; CG380 cache-accounting investigation remains necessary. Do not mistake temporary extra headroom for a resolved admission policy or incident closure.
