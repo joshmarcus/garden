@@ -1,0 +1,81 @@
+{
+  "at": "2026-09-07T12:02:14.451262+00:00",
+  "server_pid": 4193997,
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/garden-serve.service",
+  "clock_ticks_per_second": 100,
+  "no_operator_probe_start": {
+    "monotonic": 75930.649418975,
+    "server_cpu_ticks": 4866,
+    "cpu": {
+      "usage_usec": 136922803,
+      "user_usec": 93119978,
+      "system_usec": 43802824,
+      "nr_periods": 7616,
+      "nr_throttled": 21,
+      "throttled_usec": 758599,
+      "nr_bursts": 0,
+      "burst_usec": 0
+    },
+    "memory_bytes": 1436372992,
+    "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "io_pressure": "some avg10=0.00 avg60=0.11 avg300=0.24 total=3337608\nfull avg10=0.00 avg60=0.11 avg300=0.24 total=3334347\n",
+    "memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "state_mtime": 1788782466.2761214
+  },
+  "no_operator_probe_end": {
+    "monotonic": 75942.650136528,
+    "server_cpu_ticks": 5146,
+    "cpu": {
+      "usage_usec": 141006027,
+      "user_usec": 96215636,
+      "system_usec": 44790391,
+      "nr_periods": 7734,
+      "nr_throttled": 21,
+      "throttled_usec": 758599,
+      "nr_bursts": 0,
+      "burst_usec": 0
+    },
+    "memory_bytes": 1413545984,
+    "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "io_pressure": "some avg10=0.06 avg60=0.11 avg300=0.23 total=3341461\nfull avg10=0.06 avg60=0.11 avg300=0.23 total=3338200\n",
+    "memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "state_mtime": 1788782530.0721073
+  },
+  "serial_probe_end": {
+    "monotonic": 75944.432790255,
+    "server_cpu_ticks": 5323,
+    "cpu": {
+      "usage_usec": 143084874,
+      "user_usec": 98120381,
+      "system_usec": 44964492,
+      "nr_periods": 7752,
+      "nr_throttled": 21,
+      "throttled_usec": 758599,
+      "nr_bursts": 0,
+      "burst_usec": 0
+    },
+    "memory_bytes": 1406357504,
+    "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "io_pressure": "some avg10=0.05 avg60=0.11 avg300=0.23 total=3341844\nfull avg10=0.05 avg60=0.11 avg300=0.23 total=3338583\n",
+    "memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=0\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+    "state_mtime": 1788782530.0721073
+  },
+  "requests": [
+    {
+      "route": "/now1",
+      "status": 200,
+      "seconds": 0.7598453999962658
+    },
+    {
+      "route": "/inbox",
+      "status": 200,
+      "seconds": 0.6775958539947169
+    },
+    {
+      "route": "/config",
+      "status": 200,
+      "seconds": 0.3445536409999477
+    }
+  ],
+  "limitations": "Observational sample, not controlled isolation. Other clients and scheduler may run; cgroup includes workers and short-lived children. No-probe means no requests from this measurement only."
+}
