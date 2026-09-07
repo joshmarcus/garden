@@ -9,7 +9,7 @@ priority: 1
 difficulty: hard
 reading: []
 created: '2026-09-07T03:58:51+00:00'
-updated: '2026-09-07T04:22:52+00:00'
+updated: '2026-09-07T04:48:46+00:00'
 ---
 
 ## Goal
@@ -31,3 +31,4 @@ CG326 repeatedly produced HTML/text and no PNGs because Chromium lacked libnspr4
 ## Log
 - 2026-09-07T03:59:41+00:00 Owner-requested optimization prioritization: phase05 stabilization improvement, priority1; preserve phase06 feature freeze and current4slot/4second policy.
 - 2026-09-07T04:22:52+00:00 Additional root-cause evidence04:20: service-only LD_LIBRARY_PATH was insufficient because launch of python checks itself uses scrubbed_env. Installed allowlist excludes LD_LIBRARY_PATH by default. Added explicit worker_env.pass=[LD_LIBRARY_PATH] to operator garden.yaml, accounted restart preserved4active workers; verified actual service path survives scrubbed_env with current config. Readiness must test the final child environment, not just service or direct browser probe. Earlier activation claim was incomplete.
+- 2026-09-07T04:48:46+00:00 04:49 executable-config hold kept effective worker_env.pass empty despite disk config/restart; accepted exact operator allowlist via supported /config/accept-reload. Readiness must inspect effective scheduler/check payload and identify held configuration. Also CG323 baseprobe lint127 missing .venv/bin/ruff despite green exact-main CI shows setup readiness must be distinguished from source failure.
