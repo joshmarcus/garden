@@ -1,7 +1,7 @@
 ---
 id: CG-361
 title: Bound test workloads within each run and reserve web capacity
-status: changes_requested
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,9 +11,9 @@ reading: []
 branch: garden/cg-361-bound-test-workloads-within-each-run-and-reserve
 pr: https://github.com/joshmarcus/context-garden/pull/244
 attempts: 2
-last_dispatched_at: '2026-09-06T23:55:31+00:00'
+last_dispatched_at: '2026-09-07T00:50:37+00:00'
 created: '2026-09-06T21:38:26+00:00'
-updated: '2026-09-07T00:23:47+00:00'
+updated: '2026-09-07T00:50:37+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,14 @@ The latest review verified the cross-run lease and cgroup work but found the cen
 - 2026-09-07T00:07:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/244: Supported heavy validations launched within one worker now serialize through an owner-scoped lease while the parent retains its host-wide lease. Nested validations use the existing subreaper lifecycle so cancellation, detached descendants, and lock recovery remain bounded; exact-commit CI passed. cost=$1.38
 - 2026-09-07T00:23:45+00:00 automated review requested changes: Within-run supported validations now serialize and focused tests pass, but the claimed per-user heavy-test budget can be exceeded when gardens use different configured limits. The shared host boundary therefore remains incomplete. cost=$1.15
 - 2026-09-07T00:23:47+00:00 Latest revision finished atb398cee125859026ff6c7df443688ed9fd5f987a; exact-head branchCI34068412398 and PRCI34068414119 passed. Explicit owner-authorized next review started20260907T002007Z-review/PID2126137 after verifying reviewer slot and task had no active run. Fresh output/PID verified; do not redispatch the worker while review is active.
+
+
+## Current continuation: preserve useful agent concurrency
+
+Operator 2026-09-07 00:50 UTC: CG359 is now installed at fc658809, with current-main CI passed. Incorporate current main and address the actual latest review finding: gardens sharing one per-user heavy-validation semaphore need one authoritative capacity with visible conflict handling; add the limit-1/limit-2 shared-runtime regression. CG365 already records this issue; do not create another duplicate or leave the blocking guarantee deferred.
+
+The owner's approved worker concurrency is FOUR while the heavy-validation budget is initially ONE. Code inspection found the existing outer supervisor holds the heavy lease for the entire model session, including thinking and remote CI waits (docs/codex.md describes only one local run executing at once). That would silently serialize useful agent work. Apply the heavy budget to supported expensive local setup/validation/check/probe execution, while allowing multiple model sessions and remote CI waits within the separate aggregate execution cgroup/run limits. Do not solve this by allowing concurrent unbounded local suites. Preserve honest unsupported-command boundaries, descendant ownership, cancellation, resource deferral semantics and nested-lock deadlock avoidance. Add focused evidence that two model sessions may proceed while two heavy validations contend and never exceed the authoritative budget.
+
+Keep local checks serial/bounded, complete full tests on exact-head GitHub CI, preserve recovery artifacts, and do not change production service configuration or launch extra model agents. Existing passing evidence may be reused only for unchanged behavior; refresh affected concurrency and journey evidence.
+- 2026-09-07T00:50:07+00:00 Operator continuation after verified CG359 deployment: repair authoritative host validation capacity and avoid holding a heavy-validation lease during the whole model/remote-CI session.
+- 2026-09-07T00:50:37+00:00 dispatched revise run 20260907T005035Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~12639 tokens)
