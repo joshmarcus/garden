@@ -139,3 +139,7 @@ CG323 base_broken is environmental: baseprobe044105 lint exits127, .venv/bin/ruf
 ## Actual browser evidence 2026-09-07T04:57Z
 
 Executable config acceptance applied: no config_hold, config_accept_signature.worker_env.pass=[LD_LIBRARY_PATH]. Operator bounded real Chromium run on CG326 actualPR head1b4c4c9 produced50PNG files at operator-test-tmp/cg326-effective-runtime-20260907T0455/ui (648MiBpeak,67s). Full checkFAILS honestly: Now2 narrowframe load missing both themes; Phase390/898 and Runs390/646 overflow, six missingnarrowPNGs. Most other pages actual390/390. This resolves browser-library execution, NOT all capture/layout acceptance. Current-head CI34081675401/34081678179 passed. CG326 stalecheck recovered/retriaged with actual artifact findings; CG370P1 handles measured Phase/ Runs layout separately. CG332/365 need valid relevant fresh evidence, no fabricatedallpagesapproval.
+
+## CG364 review priority gap 2026-09-07T05:24Z
+
+CG364P0/PR260 head21036d54 exactCIpassed andCLEAN, pending_reviews correctlyqueued, nohumanstop/zero reviews since04:41. Lowerpriority starts repeatedly take sharedslots before operator can safelystartreview. _drain_pending_reviews iterates tasks.values() unsorted, confirmed source; CG372P1 files priority/fairness/shared-admission regression. Do not invent missingfeedback or exceed4/reviewer1. Give CG364 first safely available review opportunity.
