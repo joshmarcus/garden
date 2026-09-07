@@ -1,5 +1,15 @@
 # Context-garden operator handoff
 
+## Owner clarification of unattended gate
+
+Four productive hours require no action from Josh, the human owner. Delegated agent-operator interventions ARE allowed and do not reset/disqualify the window. Supersedes every historical no-agent-repair statement. Record owner versus operator actions separately; preserve ten representative completions, pinned-build/resource/cost/journey/recovery requirements. Status questions are not owner repair actions. Reassess historical evidence under this definition; do not assume full phase pass.
+
+
+## Latest reviewer limit
+
+Owner explicitly requested THREE concurrent reviewers within FIVE total shared slots. Applied review_parallel3 live override. This supersedes all older one-reviewer guidance. Keep worker/shared5 and existing resource caps, four-second page tolerance and five-minute monitoring.
+
+
 ## Latest owner concurrency change
 
 Owner requested FIVE slots after discussing review throughput. Worker/shared overrides5/5 applied via supported controls. Reviewer limit remains1 (two was recommended, not yet applied). This supersedes older four-slot entries. Preserve OS resource caps, four-second page tolerance, five-minute monitoring and phase holds.

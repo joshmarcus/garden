@@ -45,7 +45,7 @@ A second team cannot use the garden today: setting it up means writing product.m
 
 Owner decision, 2026-09-07: named external-project adoption and external maintainer acceptance are removed from phase-05 requirements. The repeatable onboarding/useful-change fixture remains required; all other stabilization, recovery, cost and quality gates remain unchanged.
 
-The required application journey, repeatable non-Python onboarding/accepted-change demonstration, four-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
+The required application journey, repeatable non-Python onboarding/accepted-change demonstration, four-hour productive run without required human-owner action (delegated operator actions allowed), resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
 
 Measured with `garden metrics` against phase 04, by the tool, not by hand.
 
