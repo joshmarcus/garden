@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## AWS authentication verified
+
+Owner configured AWS authentication in the WSL account profile. aws sts get-caller-identity succeeded on2026-09-07; identity is the account root principal. AWS CLI2.36.40 is on /home/joshua/.local/bin/aws. Do not copy operator credentials into worker briefs, images, claim payloads or worker hosts. Use a scoped provisioning identity and instance roles for managed hosts; preserve concrete bounded resource-plan/enable boundary. Verification was read-only and no cloud resources were created. Do not assume interactive session credentials remain valid indefinitely.
+
 ## Inbox audit disposition
 
 See context-garden/docs/inbox-disposition-2026-09-07.md. Thirteen review cards already queued; ten phase06 drafts deliberately deferred. CG294 owner stop cleared with temporary manual runner hold pending deployment of mergedCG373; restore normal runner after verified rollout and preserve PR275. CG-381 records misleading ownership/counts and unsafe done advice; active CG374/362 scopes unchanged. No owner question remains from this audit, but deployment/reviews and UI correction are unfinished.
