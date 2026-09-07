@@ -8,6 +8,15 @@ Entry inventory and control snapshot: /home/joshua/work/operator-test-tmp/fast-f
 
 ### Current action ledger
 
+Continuous operator work after owner asked why other branches were idle: CG383/PR293 MERGED d14afc5310bf426af4d283ca8174c21219c58260; CG323/PR241 MERGED8998db4310f69a4194179d5960a77ada2e002a92; CG376/PR286 MERGED879cd608bf13672510d15d240db353f5acda7469. All exact-head CI/self-review verified, supported tasks DONE. Not deployed. CG376 unlimited cap must be applied after rollout. CG385 approvedP0 owns actual bounded cache-reclaim admission implementation; CG383 was calibration only.
+
+CG372/PR266: 6b67cec76c07655d10ad1d7acc248f7c2cbb89df incorporates latest main/CG376. Fixed equal-priority queue explanation and check-start starvation.72 initial focused tests and subsequent preflight integration passed; exact CI pending. For integration with CG339 detached replay, exempt stage=interaction_replay from its check-time review drain to avoid recursively draining a review that is itself preparing replay. Make/test this change when combining branches, before deployment.
+
+CG339/PR254: 86151b006a550d3002ac67839db872cb67c696f7 passes exact CI. Operator repaired sync 180second replay under scheduler and os.environ copy: now ordinary supervised detached check, later collection hashes manifest before model-review launch; actual checkout SHA checked.94 focused tests passed; restart collection regression passed. Sourceb77f4b9 real9-flow/102-request HTTP replay4.995s/116MiB/noSwap. Need current-main reconciliation with CG376/372 and final self-review/body/merge. Scope expansion/proportionality supplied by dependentCG377 before rollout.
+
+CG377/PR284: cb38bd31532b59c8b8b4a29519c891e70a621d49 integrates CG339+CG323. Fixed preflight ignoring no-capture plan, missing shared-UI check falsely accepted, selection of replay after current-head plan, and initial diff-inspection exception.134 tests passed/1skip/1failure then failed case and six boundary regressions7passed afterfix. Actualcb38bd3 served9flows/102requests4.884s/102.8MiB/noSwap at fast-forward-20260907/cg377-replay. ExactCIpending. Before finalization, record this journey and CG376 friction via product mechanism, integrate finalized parent, retarget main only afterCG339merge, self-review and merge. Existing original evidence preserved. Still no deployment or normal dispatch.
+
+
 14:17Z: tick-lock inventory empty, service cgroup only server; restarted existing service with reversible fast-forward.conf / serve --no-watch. Now1/Inbox200 at.880/.689s. Temporary drain overrides reviewer0/shared1 must restore original5/3 on exit. No run lost; installed899b and OS caps unchanged.
 
 CG383 PR293/c7b8eb5: fixed experiment provenance and added matched ext4/tmpfs plus real12-test fixture; full fixture peak275.7MiB/noSwap/no pressure events. Exact-head CI34131766485 pending. Calibration supports bounded reclaim and fresh ordinary admission recheck, not file-memory subtraction. Product policy implementation remains unfinished.

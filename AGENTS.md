@@ -1,3 +1,7 @@
+## Fast-forward direct-work checkpoint
+
+ACTIVE, no-watch server and pause maintained. CG383/293,CG323/241,CG376/286 merged and tasksDONE; none deployed. Current workCG372head6b67cec,CG339head86151b0,CG377headcb38bd3. Detailed concrete fixes/tests/next integration hazards are at the top of context-garden/docs/fast-forward.md. CG339 now uses supervised detached replay; when integratingCG372, its check-priority drain must exclude interaction_replay to prevent recursion. CG385P0 owns the actual cache-admission fix following calibration; no production cache policy changed. Continue useful branch work while CI runs; do not yield solely to wait for CI. No extra model agents. Restore normal5/3 only at verified exit; temporarydrain1/0 stillpersists.
+
 ## Fast-forward fully quiesced 2026-09-07 14:17Z
 
 Owner-authorized focused fast-forward ACTIVE. All garden runs drained; under tick lock verified service cgroup contained only server, then installed fast-forward.conf and restarted existing service with serve --no-watch (PID225493). Now1/Inbox200 at.880/.689s. Installed899b unchanged; caps4.5/5GiB andCPU200% unchanged. Ordinarypause persists. Temporary drain overrides review_parallel0/resources.max_parallel1; restore original worker/shared5 andreview3 only on verified exit. Heartbeat must not tick/dispatch/review/resume during maintenance.
