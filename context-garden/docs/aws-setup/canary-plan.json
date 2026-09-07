@@ -1,0 +1,42 @@
+{
+  "enabled": false,
+  "desired": 0,
+  "maximum_hosts": 1,
+  "region": "us-east-1",
+  "profile": "garden-provisioner",
+  "instance_type": "t3.xlarge",
+  "cpu_credits": "standard",
+  "ami": "ami-025d99823a4caad37",
+  "ami_owner": "099720109477",
+  "root_device": "/dev/sda1",
+  "root_disk_gib": 40,
+  "root_volume_type": "gp3",
+  "root_encrypted": true,
+  "delete_root_on_termination": true,
+  "maximum_runtime_seconds": 1800,
+  "spend_ceiling_usd": 2.0,
+  "budget_status": "proposed; no launch until prerequisites and actual plan validated",
+  "endpoint": "https://babel.taild4d2ae.ts.net",
+  "network_model": "public IPv4 for outbound HTTPS, zero inbound SG rules; garden endpoint accessed privately through Tailscale",
+  "compute_estimate_usd_per_hour": 0.1664,
+  "ipv4_estimate_usd_per_hour": 0.005,
+  "gp3_example_usd_per_gb_month": 0.08,
+  "estimated_half_hour_compute_ipv4_disk_usd": 0.0879,
+  "additional_costs": "Secret storage/API requests, transfer, taxes and failed-cleanup retention; $2 is admission budget, not AWS hard billing cap. No model use in fake-harness canary.",
+  "required_tags": {
+    "ManagedBy": "context-garden",
+    "Pool": "phase05"
+  },
+  "blocked_by": [
+    "non-root infrastructure admin profile",
+    "CG216 reviewed deployment and true HTTP test",
+    "CG345 provider tags, volume/ENI tag-on-create, real pinned worker bootstrap and canary cleanup implementation",
+    "tailnet scoped ephemeral enrollment and secret population",
+    "independent deadline/cleanup monitor"
+  ],
+  "sources": [
+    "https://docs.aws.amazon.com/prescriptive-guidance/latest/optimize-costs-microsoft-workloads/right-size-selection.html",
+    "https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/",
+    "https://aws.amazon.com/ebs/pricing/"
+  ]
+}

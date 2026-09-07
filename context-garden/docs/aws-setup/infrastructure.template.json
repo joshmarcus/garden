@@ -1,0 +1,249 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Context garden phase05 infrastructure only. No EC2 instances, inbound access, NAT gateway or broad provisioning permissions. Requires non-root infrastructure administrator.",
+  "Resources": {
+    "WorkerVpc": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.86.0.0/24",
+        "EnableDnsSupport": true,
+        "EnableDnsHostnames": true,
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "InternetGateway": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "GatewayAttachment": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "WorkerVpc"
+        },
+        "InternetGatewayId": {
+          "Ref": "InternetGateway"
+        }
+      }
+    },
+    "WorkerSubnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "WorkerVpc"
+        },
+        "CidrBlock": "10.86.0.0/26",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "WorkerRouteTable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "WorkerVpc"
+        },
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "InternetRoute": {
+      "Type": "AWS::EC2::Route",
+      "DependsOn": "GatewayAttachment",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "WorkerRouteTable"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "InternetGateway"
+        }
+      }
+    },
+    "SubnetRouteAssociation": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "SubnetId": {
+          "Ref": "WorkerSubnet"
+        },
+        "RouteTableId": {
+          "Ref": "WorkerRouteTable"
+        }
+      }
+    },
+    "WorkerSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Garden worker: no inbound; outbound HTTPS for bootstrap and Tailscale relay",
+        "VpcId": {
+          "Ref": "WorkerVpc"
+        },
+        "SecurityGroupIngress": [],
+        "SecurityGroupEgress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "CidrIp": "0.0.0.0/0",
+            "Description": "HTTPS package sources, AWS APIs, GitHub and Tailscale relay"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "BootstrapSecret": {
+      "Type": "AWS::SecretsManager::Secret",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "Name": "context-garden/phase05/bootstrap",
+        "Description": "Populate securely with canary enrollment material only after code review and tailnet policy verification. No controller credentials.",
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "WorkerRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "ContextGardenWorker",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "ReadOnlyOwnBootstrapSecret",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "secretsmanager:GetSecretValue",
+                  "Resource": {
+                    "Ref": "BootstrapSecret"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "ManagedBy",
+            "Value": "context-garden"
+          },
+          {
+            "Key": "Pool",
+            "Value": "phase05"
+          }
+        ]
+      }
+    },
+    "WorkerInstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "InstanceProfileName": "ContextGardenWorker",
+        "Roles": [
+          {
+            "Ref": "WorkerRole"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "VpcId": {
+      "Value": {
+        "Ref": "WorkerVpc"
+      }
+    },
+    "SubnetId": {
+      "Value": {
+        "Ref": "WorkerSubnet"
+      }
+    },
+    "SecurityGroupId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "WorkerSecurityGroup",
+          "GroupId"
+        ]
+      }
+    },
+    "InstanceProfileArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "WorkerInstanceProfile",
+          "Arn"
+        ]
+      }
+    },
+    "BootstrapSecretArn": {
+      "Value": {
+        "Ref": "BootstrapSecret"
+      }
+    }
+  }
+}
