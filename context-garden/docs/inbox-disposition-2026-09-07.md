@@ -17,3 +17,7 @@ CG294/PR275 has an oversized rebase input stop; fixCG373/PR283 merged but is not
 ## Presentation defects
 
 CG-381 logs queued reviews counted as human work, prior verdicts called no review yet, unsafe set-status done advice, and deferred drafts counted as unanswered decisions. Existing active CG374/362 briefs were not altered. Inbox cards may remain visible until that fix lands; a disposition is not a UI implementation.
+
+## Follow-up: CG383 routine preservation question
+
+Worker asked permission to stash unrelated snapshot solely for validation; persisted question was empty despite WAITING_HUMAN. Operator answered in the durable brief and used supported retry to make priority0 continuation eligible without immediate admission bypass. Existing commit4c5a956 and salvage stash preserved. This is another routine technical prompt/empty-question case relevant to CG381 and CG374, not a product decision.

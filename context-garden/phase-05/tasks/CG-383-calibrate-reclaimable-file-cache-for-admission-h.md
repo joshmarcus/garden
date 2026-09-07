@@ -9,9 +9,11 @@ priority: 0
 difficulty: medium
 reading:
 - src/garden/config.py
+branch: garden/cg-383-calibrate-reclaimable-file-cache-for-admission-h
 discovered_from: CG-380
+last_dispatched_at: '2026-09-07T13:41:13+00:00'
 created: '2026-09-07T13:02:16+00:00'
-updated: '2026-09-07T13:19:25+00:00'
+updated: '2026-09-07T14:02:44+00:00'
 file: src/garden/scheduler/resources.py
 error: The admission sensor counts all memory.current against memory.high; the operator sample had about
   2,198MiB file cache, 5,621MiB host MemAvailable and zero pressure/events but reported only 550MiB cgroup
@@ -46,3 +48,25 @@ Discovered by CG-380 (Attribute controller, scheduler, and worker performance un
 - [ ] Preserve hard caps, pressure safeguards and data freshness; no production cache deletion or fault injection.
 - [ ] Report justified fix or evidence-backed disposition, with focused regression checks and exact-head CI for code changes. Self-review and fix findings.
 - 2026-09-07T13:19:25+00:00 approved (operator-incident-followup)
+- 2026-09-07T13:19:45+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:21:10+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:22:36+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:24:01+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:25:27+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:26:42+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:27:57+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:29:10+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:30:25+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:31:40+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:32:56+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:34:12+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:35:29+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:36:59+00:00 also found by CG-380 (Attribute controller, scheduler, and worker performance under load) during run `20260907T123241Z-work`
+- 2026-09-07T13:41:13+00:00 dispatched work run 20260907T134111Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~16441 tokens)
+- 2026-09-07T13:56:40+00:00 preserved uncommitted worktree changes from run 20260907T134111Z-work outside the PR: `git stash apply a7be75584c06626c6a01459ceab816debea5f690` in /home/joshua/work/worktrees/CG-383 (garden:CG-383:20260907T134111Z-work:reap)
+- 2026-09-07T13:56:40+00:00 worker asks: May I temporarily stash the pre-existing unrelated docs/design/snapshot.json modification solely to run scripts/check_ci.py on commit 4c5a956, then restore it unchanged? cost=$1.15
+
+## Operator answer and continuation
+
+Owner delegates routine preservation. Yes: temporarily stash the unrelated docs/design/snapshot.json solely for exact-head CI validation, keep its named stash/hash, and restore it unchanged afterward. Scheduler already salvaged the dirty snapshot as a7be75584c06626c6a01459ceab816debea5f690; inspect current state before stashing again. Preserve implementation commit4c5a956 and continue validation/review, not a fresh implementation. Do not discard or commit the snapshot to this PR, alter production cache/caps, or repeat already-passing validation without cause.
+- 2026-09-07T14:02:44+00:00 reset to ready by hand
