@@ -1,7 +1,7 @@
 ---
 id: CG-354
 title: Split tests into focused suites to shorten development feedback
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/245
 attempts: 1
 last_dispatched_at: '2026-09-06T23:36:59+00:00'
 created: '2026-09-06T17:04:04+00:00'
-updated: '2026-09-07T00:23:47+00:00'
+updated: '2026-09-07T01:04:02+00:00'
 ---
 
 ## Goal
@@ -64,3 +64,8 @@ The scheduler automatically committed the deliberately excluded snapshot in dd7f
 - 2026-09-06T23:47:10+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/245: Focused retro-document testing, bounded fixture Git cleanup, selection guidance, and reproducible serial benchmark evidence are complete. The unrelated generated snapshot is absent from the PR diff; exact-head GitHub CI passed. cost=$0.54
 - 2026-09-06T23:48:55+00:00 automated review requested changes: Focused test organization, timeout handling, guidance, and exact-head CI are verified. The benchmark must be rerun because it uses a post-split baseline and compares an archived checkout's size against a pytest-only temp directory. cost=$0.35
 - 2026-09-07T00:23:47+00:00 Operator corrected the benchmark directly on2026-09-07: actual pre-split58e13b99 (parent4cfcc8c) mixed suite34passed/6.29s/67084KiB RSS/14112KiB pytest temp versus current six pure document tests6passed/.27s/54060KiB RSS/0 pytest temp. Both ran serially inside one CPU200%,MemoryHigh512MiB/Max1GiB,no-swap systemd service; peak153.8MiB. All34 original retro test function names remain across split files. Original collector failed only after both tests passed because the focused suite created no basetemp; recovered logs/report honestly record this, reusable collector fixes absent-dir handling. Evidence, source hashes and reproduction are committed under docs/validation/cg354. Lint/help checks pass. Committed d196b58 then integrated current mainf41b414 with unchanged relevant test implementation; pushed finala981f0858f9d96917bb3bfb25a6fe86c1986a472. New-head CI pending; PR body replaces invalid benchmark claims. No extra model worker or local full suite used. Raw source/output retained under operator-test-tmp/cg354-benchmark-20260907.
+- 2026-09-07T00:50:56+00:00 triage: marked ready for review
+- 2026-09-07T00:53:26+00:00 description rewritten by the reviewer cost=$0.40
+- 2026-09-07T00:53:36+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-354`) or send it back (`garden triage CG-354 --changes "..."`)
+- 2026-09-07T01:02:05+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/245
+- 2026-09-07T01:04:02+00:00 2026-09-07 01:01:52 UTC: current-head review005059 approved all criteria at f729f350 and supplied permanent description rewrite, verified applied. Exact branch/PR CI passed and GitHub CLEAN. Owner-authorized merge completed as332ee916c22fd7e0929bd1f36207d3e95351c2b0; obsolete pending feedback was not allowed to trigger another worker. Normal poll reconciles DONE. Not installed yet; include with next drained resource-repair rollout.
