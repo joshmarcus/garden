@@ -10,7 +10,7 @@ difficulty: medium
 reading: []
 discovered_from: CG-337
 created: '2026-09-07T12:54:17+00:00'
-updated: '2026-09-07T12:54:17+00:00'
+updated: '2026-09-07T12:59:56+00:00'
 ---
 
 ## Goal
@@ -28,3 +28,7 @@ Owner-requested Inbox audit on 2026-09-07 found 24 "need you" items: 13 PRs alre
 - [ ] An operator-owned deployment/recovery prerequisite has a concrete reason and next action and is not described as an unanswered owner question. Do not hide genuinely required authority or product choices.
 - [ ] CLI and web agree on representative queued-review, prior-request-changes, deferred-draft, and deployment-wait fixtures. Focused tests verify displayed count, wording and actions; actual small Inbox journey verifies rendering. No broad unrelated page checklist, fabricated approval, state rewrite, or auto-merge bypass.
 - [ ] Self-review and fix findings; focused bounded validation and exact-head CI for implementation.
+
+## Owner clarification: PR actions require automated approval
+
+Do not ask the human to act on a PR until an automated reviewer has approved its current head. Pending/queued reviews, missing verdicts, and request_changes are automated workflow states, not owner PR-action cards. Prior-head approval is stale after substantive code changes. Approved PRs still require normal exact-head CI/mergeability checks; approval does not itself authorize unsafe completion. Preserve technical recovery visibility as operator-owned and distinguish independent product questions from PR action requests. Cover pending, request_changes, approved-current-head and stale-approved-head cases in CLI/web count and action tests.

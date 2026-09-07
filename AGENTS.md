@@ -1,5 +1,13 @@
 # Context-garden operator handoff
 
+## Owner PR-action gate
+
+Do not ask Josh to act on PRs until automated review approves the current head. Queued/missing reviews and request_changes remain automated/operator work. CG381 contains this explicit requirement; exact-head CI and mergeability checks still apply after approval.
+
+## Scoped AWS provisioning IAM created
+
+Created ContextGardenProvisioner role and context-garden-operator IAM user (no password/access keys generated). Trust permits only this user; its permissions are assume-role plus AWS browser-login policy. Role is us-east-1 EC2, two instance types t3.xlarge/m7i.xlarge, ManagedBy=context-garden and Pool=phase05 tags, IMDSv2, Canonical Ubuntu images, preapproved tagged network, and PassRole only ContextGardenWorker to EC2. No IAM administration or general S3 access. Policy validation passed; simulated owned termination allowed, untagged termination and IAM administration denied. Named CLI profile garden-provisioner uses source_profile garden-login, which still needs non-root browser authentication after owner enables console access for the new user. Root default profile is unchanged. No networking or instances created; required tagged subnet/security group and worker role are not yet provisioned. Policy files in operator-test-tmp/aws-provisioner-iam.
+
 ## AWS authentication verified
 
 Owner configured AWS authentication in the WSL account profile. aws sts get-caller-identity succeeded on2026-09-07; identity is the account root principal. AWS CLI2.36.40 is on /home/joshua/.local/bin/aws. Do not copy operator credentials into worker briefs, images, claim payloads or worker hosts. Use a scoped provisioning identity and instance roles for managed hosts; preserve concrete bounded resource-plan/enable boundary. Verification was read-only and no cloud resources were created. Do not assume interactive session credentials remain valid indefinitely.
