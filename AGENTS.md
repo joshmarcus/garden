@@ -1,8 +1,8 @@
 # Context-garden operator handoff
 
-## Current concurrency: four-slot trial
+## Current concurrency: five-slot trial
 
-Owner requested return to 4–5 slots. Set worker/shared limits to FOUR through supported Scheduler overrides under tick lock; reviewer ceiling remains THREE within shared four. Scheduling remains unpaused. This supersedes earlier temporary one-slot rollout containment. Initial pages 0.3–0.8s, host available 5.6GiB, service 290MiB, memory high/max/OOM zero. Verify loaded behavior on existing five-minute monitor before raising to five; keep CPU/memory caps and four-second page tolerance. Initial idle probes do not close the incident.
+Owner requested five slots after the four-slot trial. Worker/shared FIVE applied through supported Scheduler overrides under tick lock; reviewer ceiling THREE within shared five. Scheduling remains unpaused. At the change, four runs were recorded active, pages .747/.716/.334s, host available5565MiB, temp free1951MiB, service1351MiB, high/max/OOM zero and all current PSIavg10 zero. Continue existing five-minute monitoring at five; keep CPU/memory caps and four-second page tolerance. This does not close the incident or prove the phase gate.
 
 ## Grouping correction
 
