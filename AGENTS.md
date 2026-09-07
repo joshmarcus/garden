@@ -1,5 +1,13 @@
 # Context-garden operator handoff
 
+## AWS workers promoted to phase05 by owner
+
+Owner explicitly says bring them in now (2026-09-07), superseding conditional fallback and remote-worker freeze. CG216/PR221 and CG345–348 moved to phase05 through Scheduler.move; continue existing work and dependencies, preserve pluggable lifecycle. PR222/model pools and other phase06 work stay frozen. No cloud instances provisioned by this scope change; use concrete bounded deployment plan. Old blanket PR221 freeze notes below are superseded.
+
+## Browser recovery prepared 12:44Z
+
+Confirmed shared Chromium1234 exists at /home/joshua/.cache/ms-playwright. Disposable scrubbed-env probe PASSED with setup.env PLAYWRIGHT_BROWSERS_PATH pointing there and existing LD_LIBRARY_PATH pass-through. Missing browser is private-HOME path lookup, not missing installed binary. Next: apply supported product setup.env configuration and validate browser readiness/signature safely; no production config or restart performed by this probe. Do not pass the whole operator HOME.
+
 ## Memory trial follow-up 12:38Z
 
 New cap admitted CG362 revision, CG374 work and CG380 performance investigation alongside CG253 revision, all with fresh output. Service then grew to3.74GiB and admission again stopped at781MiB headroom below1536MiB; host available5247MiB, high/max/OOM zero, memory PSIavg10 zero, Now1/Inbox1.816/1.760s. Retain5GiB hard/4.5GiB soft caps; no further expansion. CG380 now actively investigates; do not change its scope mid-run. Browser readiness also reports scrubbed capture child missing Chromium while service environment can launch it; investigate consistent browser path/pass-through before UI work, preserve existing worker environment and avoid restart during active checks.

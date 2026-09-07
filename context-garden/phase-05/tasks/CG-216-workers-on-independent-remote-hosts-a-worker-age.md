@@ -2,11 +2,12 @@
 id: CG-216
 title: 'Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP,
   works in its own clone, pushes the branch and posts the result and transcript back'
-status: draft
+status: changes_requested
 product: context-garden
-phase: phase-06
+phase: phase-05
 depends_on: []
 priority: 1
+order: 0
 difficulty: hard
 reading:
 - src/garden/runner/base.py
@@ -20,10 +21,9 @@ reading:
 - docs/architecture.md
 branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
 pr: https://github.com/joshmarcus/context-garden/pull/221
-attempts: 1
 last_dispatched_at: '2026-09-06T07:41:08+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-06T13:45:03+00:00'
+updated: '2026-09-07T12:47:53+00:00'
 ---
 
 ## Goal
@@ -71,3 +71,12 @@ Asked by the user on 2026-09-05 for phase 05: "supporting workers that run on in
 - 2026-09-06T13:18:26+00:00 re-enabled by hand; revise run will follow
 - 2026-09-06T13:45:02+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
 - 2026-09-06T13:45:03+00:00 moved from context-garden/phase-05 to context-garden/phase-06
+- 2026-09-07T12:47:30+00:00 moved from context-garden/phase-06 to context-garden/phase-05
+
+## Owner scope update, 2026-09-07
+
+Remote AWS workers are now phase-05 work, without waiting for local stabilization failure. Preserve existing PRs, branches, evidence and dependency order. The reusable host lifecycle must still support non-garden remote development hosts. This supersedes earlier feature-deferral notes; it does not approve an old PR verdict or waive validation.
+- 2026-09-07T12:47:30+00:00 approved (owner-phase05-promotion)
+- 2026-09-07T12:47:30+00:00 reset to ready by hand
+- 2026-09-07T12:47:52+00:00 triage: changes requested by hand: - **triage** (human): Owner-authorized revision: address the last automated review in full. Enable the promised remote p
+- 2026-09-07T12:47:53+00:00 re-enabled by hand; revise run will follow

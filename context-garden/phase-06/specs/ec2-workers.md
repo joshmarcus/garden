@@ -1,6 +1,6 @@
 # Pluggable remote host provisioning, starting with EC2
 
-Status: proposed; frozen with phase 06. Requested by Josh on 2026-09-06 after discussing EC2, Lightsail and Spot costs. This authorizes specification and task creation, not cloud provisioning or lifting the stabilization gate.
+Status: active phase-05 implementation, explicitly promoted by Josh on 2026-09-07. Spec retained at this stable path to preserve reading links. CG216 and CG345–348 are now phase05 tasks. Preserve the bounded plan/enable boundary for live provisioning and all validation requirements.
 
 ## Outcome
 

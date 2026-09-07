@@ -10,6 +10,10 @@ _Stub written by the operator on 2026-09-05; rewritten by the phase-04 retro (jo
 
 **In one sentence: the garden runs in someone else's environment, not only in this one, and it can say what a merged task costs.** Phase 03 made the loop leaveable and phase 04 gave it its features and made the leaveability mechanism true; phase 05 is about adoption: a team points it at a project they already have, on models and machines they already pay for, and the tier map is set from cost per accepted task rather than from a price list.
 
+## Owner scope update: AWS remote workers
+
+2026-09-07: Bring remote AWS workers into phase05 now, without waiting for a failed local stabilization attempt. CG216 portable protocol and CG345–348 provisioning, execution, Spot recovery, cost/control work are included. Preserve the pluggable host lifecycle for non-garden dev hosts and existing PR221. Model pools/PR222 and other phase06 features remain deferred. The existing stabilization evidence remains required; remote execution can contribute to proving it. See [EC2 spec](../phase-06/specs/ec2-workers.md). This supersedes remote-worker deferral below.
+
 ## Current priority: stabilization before expansion
 
 Owner decision, 2026-09-06: complete and demonstrate the dependable core loop before starting additional features. [The stabilization gate](specs/stabilization.md) is mandatory for phase closure and phase-06 unfreezing. Onboarding remains the adoption demonstration. OpenRouter, remote workers, model pools, operating presets and Now consolidation are deferred; existing branches and PRs are retained. The earlier expansion goals below are historical intent, not permission to dispatch deferred work.
