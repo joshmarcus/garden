@@ -10,7 +10,7 @@ difficulty: hard
 reading: []
 discovered_from: CG-367
 created: '2026-09-07T12:03:08+00:00'
-updated: '2026-09-07T12:03:08+00:00'
+updated: '2026-09-07T12:29:53+00:00'
 ---
 
 ## Goal
@@ -34,3 +34,7 @@ Operator evidence is preserved in context-garden/docs/incidents/performance-attr
 ## Boundaries
 
 This is a new independent investigation. Do not regroup, rewrite, or widen in-flight task briefs. Reuse deployed work and its artifacts. Operator owns live monitoring and any eventual production changes.
+
+## Additional operator observation: cache-heavy admission stop
+
+At 2026-09-07T12:29Z, shared limit was five but only CG253 had a recorded running run. Scheduler resource_pressure reported available memory550MiB below1536MiB. Host MemAvailable was5621MiB, service memory.current about2501MiB, earlier breakdown anon251MiB/file2198MiB/shmem58MiB; memory high/max/OOM all zero and memory PSI zero. Now1/Inbox .715/.602s. The current sensor takes the minimum of host and cgroup headroom, so this is not host exhaustion. Inspect the cgroup admission calculation and reclaimable file-cache treatment as a concrete attribution hypothesis. Preserve hard memory caps and pressure safeguards; do not bypass the admission stop or assume all file cache is reclaimable. Report whether conservative soft-limit headroom is intentionally preventing progress and propose a measured safe policy if warranted.

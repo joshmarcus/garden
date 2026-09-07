@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Admission bottleneck observed 12:29Z
+
+Five-slot target remains, but admission is currently blocked by controller cgroup headroom: scheduler reports550MiB below1536MiB, despite host available5621MiB and zero memory pressure/events. Service about2.5GiB is predominantly file cache; sensor subtracts all current usage from min(memory.high,memory.max), here3GiB. Only CG253 recorded running at observation. Pages .715/.602s. Added evidence to CG380; inspect safe cache-aware admission policy without bypassing caps. A Scheduler.resource_status invoked from an external operator process observes that process cgroup, not the server: do not substitute its healthy result. No cache deleted, no override relaxed.
+
 ## Current concurrency: five-slot trial
 
 Owner requested five slots after the four-slot trial. Worker/shared FIVE applied through supported Scheduler overrides under tick lock; reviewer ceiling THREE within shared five. Scheduling remains unpaused. At the change, four runs were recorded active, pages .747/.716/.334s, host available5565MiB, temp free1951MiB, service1351MiB, high/max/OOM zero and all current PSIavg10 zero. Continue existing five-minute monitoring at five; keep CPU/memory caps and four-second page tolerance. This does not close the incident or prove the phase gate.
