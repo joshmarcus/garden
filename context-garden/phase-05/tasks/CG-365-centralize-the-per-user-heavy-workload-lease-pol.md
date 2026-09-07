@@ -1,7 +1,7 @@
 ---
 id: CG-365
 title: Complete resource isolation enforcement and evidence after CG-361
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,11 +9,12 @@ priority: 0
 difficulty: medium
 reading: []
 branch: garden/cg-365-complete-resource-isolation-enforcement-and-evid
+pr: https://github.com/joshmarcus/context-garden/pull/249
 discovered_from: CG-361
 attempts: 1
 last_dispatched_at: '2026-09-07T01:12:31+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T01:21:04+00:00'
+updated: '2026-09-07T01:36:35+00:00'
 ---
 
 ## Goal
@@ -50,3 +51,8 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T01:11:53+00:00 approved (cli)
 - 2026-09-07T01:12:31+00:00 dispatched work run 20260907T011212Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9886 tokens)
 - 2026-09-07T01:21:04+00:00 Operator01:21 UTC inspected active work atd1f1c23/faadd08 without changing the worker tree. Enforcement fixes and new artifact exist, but tests/test_web.py::test_retained_history_journey_stays_responsive_with_running_and_waiting_pytest still generates only time.sleep(0.75). report.json labels supervisor PIDs as live_supervisor_descendants and omits execution cgroup CPU/memory PSI and aggregate CPU usage; memory sample12MiB and supervisor ticks do not establish representative running pytest load. The isolated finite cgroup is a useful improvement, but criterion4 remains UNPROVEN until a bounded nontrivial workload is synchronized as actually running and its real descendants/aggregate pressure are recorded. Reuse this finding in the next review/continuation, not a duplicate task. No local full suite, production changes, or extra agent needed.
+- 2026-09-07T01:26:34+00:00 preserved uncommitted worktree changes from run 20260907T011212Z-work outside the PR: `git stash apply bfbbac6a1222a8aecc2d1341fb47935664eb083d` in /home/joshua/work/worktrees/CG-365 (garden:CG-365:20260907T011212Z-work:reap)
+- 2026-09-07T01:27:45+00:00 opened https://github.com/joshmarcus/context-garden/pull/249 (base main): Configured execution cgroups now constrain admission using their actual headroom and events, authoritative heavy capacity is visible across operator status, and shared lease files are hardened against hostile runtime paths. Added a real bounded cgroup workload artifact; exact-commit GitHub CI passed. cost=$1.56
+- 2026-09-07T01:35:37+00:00 triage: changes requested by hand: Operator current-head inspection confirms criterion4 remains unfulfilled: the retained-history workload still generates
+- 2026-09-07T01:35:38+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-365`) or send it back (`garden triage CG-365 --changes "..."`)
+- 2026-09-07T01:36:35+00:00 Operator01:35 UTC verified PR249 currentheadd1f1c235 with both CI passes but unchanged sleeping-only workload. No CG365 run active; sent supported triage-changes with a focused criterion4 correction, avoiding a paid review merely rediscovering the known gap. Ordinary dispatch remains enabled; priority0 revision should take the next available shared slot, not bypass four-run/one-review limits.
