@@ -14,7 +14,7 @@ resources:
   min_memory_available_mb: 1536
   min_temp_free_mb: 1024
 max_attempts: 2             # work runs before a task is marked failed
-max_revisions: 3            # auto revise rounds per PR before a human must step in
+max_revisions: 6            # owner raised revision allowance from3 to6 on2026-09-07
 timeout_minutes: 90         # per run; the process is killed after this
 tick_interval: 60           # seconds between scheduler passes in `garden watch` / `garden serve`
 auto_dispatch: true         # tick starts workers for ready tasks
