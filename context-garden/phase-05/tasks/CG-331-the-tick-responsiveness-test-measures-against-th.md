@@ -6,14 +6,14 @@ status: ready
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 2
+priority: 1
 difficulty: easy
 reading:
 - tests/test_web.py
 - src/garden/web/app.py
 - src/garden/scheduler/checkruns.py
 created: '2026-09-06T07:19:24+00:00'
-updated: '2026-09-06T13:14:39+00:00'
+updated: '2026-09-07T03:59:41+00:00'
 ---
 
 ## Goal
@@ -27,7 +27,7 @@ updated: '2026-09-06T13:14:39+00:00'
 ## Acceptance criteria
 
 - [ ] The test fails when the action is served only after the tick releases its lock (a regression of CG-182) and passes on a loaded machine where everything is merely slow; a test of the test demonstrates both with a fake slow check.
-- [ ] No other test in the suite asserts an absolute wall-clock bound under one second; a grep-based test enforces it.
+- [ ] Audit related responsiveness assertions for load-sensitive false positives and use deterministic ordering/barriers for synchronization contracts. Preserve separately identified measured performance budgets and benchmarks; do not add a global grep ban on timeouts or weaken actual responsiveness regression coverage. Operational page tolerance is currently4s, not a reason to replace every test deadline with4s.
 
 ## Log
 - 2026-09-06T07:19:25+00:00 approved (cli)
@@ -37,3 +37,5 @@ updated: '2026-09-06T13:14:39+00:00'
 ## Web-incident retro clarification, 2026-09-06
 
 Keep the deterministic lock-order regression objective, but do not suppress evidence of real overloaded application latency. Pair the unit check with CG-339's separate controlled served-performance workload; a loaded host can reveal an actual availability failure even when the tick lock is correct. Counterfactual: separate architectural correctness from service performance instead of dismissing slow pages as merely environmental.
+- 2026-09-07T03:59:41+00:00 Prioritize as throughput fix: false timing failures waste CI/revision rounds. Remove proposed blanket grep policy; retain causal synchronization regression and separately measured performance checks.
+- 2026-09-07T03:59:41+00:00 priority 2 -> 1 (web)
