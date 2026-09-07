@@ -43,12 +43,14 @@ A second team cannot use the garden today: setting it up means writing product.m
 
 ## Definition of done
 
-The required application journey, independent-project demonstration, four-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
+Owner decision, 2026-09-07: named external-project adoption and external maintainer acceptance are removed from phase-05 requirements. The repeatable onboarding/useful-change fixture remains required; all other stabilization, recovery, cost and quality gates remain unchanged.
+
+The required application journey, repeatable non-Python onboarding/accepted-change demonstration, four-hour productive unattended run, resource evidence and intervention accounting in `specs/stabilization.md` must pass. Neither merged task count nor unit-test success can substitute.
 
 Measured with `garden metrics` against phase 04, by the tool, not by hand.
 
 - A non-Python fixture project is onboarded to a passing `garden validate` and `garden doctor` with no hand-written files.
-- Deferred to phase 06: one task each completes through OpenRouter and a remote worker. Phase 05 instead requires the independent-project and sustained-operation evidence in specs/stabilization.md.
+- Deferred to phase 06: one task each completes through OpenRouter and a remote worker. Phase 05 instead requires the repeatable onboarding and sustained-operation evidence in specs/stabilization.md.
 - Cost per accepted easy task at or under $4 (phase 04: $5.04) and first-pass approval at or above 90% (phase 04: 79% easy, 71% medium), both reported per model, tier and harness; the sonnet-era figures from the phase-04 operator retro are the baseline.
 - Hand merges zero on every tier and runner (phase 04: 16 of 57); agent rebase rounds per merge under 0.3 (phase 04: 0.55, with 1.02 mechanical by design).
 - A phase-05 walkthrough committed by the retro before the personas run; tick duration and hand merges visible in the rail and in metrics.
@@ -67,7 +69,7 @@ Measured with `garden metrics` against phase 04, by the tool, not by hand.
 - **Decisions made in the owner's name in phase 04** — answered: ratified: automerge by merge commit, review.max_rounds 4, reviews on the easy tier, the codex tier map luna/terra/sol. The eight queue-rotation hand merges were a bug (CG-176), not a policy. (2026-09-05T23:45Z)
 - **Where the operator ledger lives** — answered: one ledger at `context-garden/docs/operator-spend.jsonl`, product and phase attribution welcome. The tool's default path must follow. (2026-09-05T23:45Z)
 - **CG-206** — answered: cancelled; browser notifications first, unattended delivery to a phone parked. (2026-09-05T23:45Z)
-- **Open:** whether codex stays in bypass-permissions mode once CG-239 and CG-242 land; whether a named second team and repository exist for CG-215 and CG-216, or fixtures are the acceptance claim; whether a self product's second approving round should be a persona or a person rather than the same reviewer twice.
+- **Open:** whether codex stays in bypass-permissions mode once CG-239 and CG-242 land; whether a self product's second approving round should be a persona or a person rather than the same reviewer twice.
 
 ## Carried over from phase 04
 
