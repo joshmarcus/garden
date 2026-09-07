@@ -1,7 +1,7 @@
 ---
 id: CG-364
 title: Remove redundant tests and unnecessary fixture work
-status: ready
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on:
@@ -10,8 +10,12 @@ depends_on:
 priority: 0
 difficulty: medium
 reading: []
+branch: garden/cg-364-remove-redundant-tests-and-unnecessary-fixture-w
+pr: https://github.com/joshmarcus/context-garden/pull/260
+attempts: 1
+last_dispatched_at: '2026-09-07T04:12:46+00:00'
 created: '2026-09-06T23:32:08+00:00'
-updated: '2026-09-07T04:08:50+00:00'
+updated: '2026-09-07T04:35:34+00:00'
 ---
 
 ## Goal
@@ -51,3 +55,6 @@ Owner question: Are there tests we could remove for being redundant or not usefu
 - 2026-09-07T04:08:24+00:00 priority 1 -> 0 (web)
 - 2026-09-07T04:08:24+00:00 Owner explicitly prioritized CG364: raised toP0 for next available normal worker admission; preserve four shared slots and existing active work. Focus on measured fixture/setup cost and justified redundant-test removal, retain meaningful regressions.
 - 2026-09-07T04:08:50+00:00 priority 0 -> 0 (web)
+- 2026-09-07T04:12:46+00:00 dispatched work run 20260907T041221Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~10104 tokens)
+- 2026-09-07T04:32:56+00:00 preserved uncommitted worktree changes from run 20260907T041221Z-work outside the PR: `git stash apply 02334c179b616cf58dbd3494d53c8cf6dbd18f4c` in /home/joshua/work/worktrees/CG-364 (garden:CG-364:20260907T041221Z-work:reap)
+- 2026-09-07T04:35:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/260 (base main): Removed duplicated and ineffective assertions, made index expiry deterministic, and made the remote SSH clone opt-in for tests that genuinely use it. GitHub Actions passed on final commit 21036d54e882d2784415406d1a25a0281f8862ff. cost=$1.58

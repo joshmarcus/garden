@@ -143,3 +143,5 @@ Executable config acceptance applied: no config_hold, config_accept_signature.wo
 ## CG364 review priority gap 2026-09-07T05:24Z
 
 CG364P0/PR260 head21036d54 exactCIpassed andCLEAN, pending_reviews correctlyqueued, nohumanstop/zero reviews since04:41. Lowerpriority starts repeatedly take sharedslots before operator can safelystartreview. _drain_pending_reviews iterates tasks.values() unsorted, confirmed source; CG372P1 files priority/fairness/shared-admission regression. Do not invent missingfeedback or exceed4/reviewer1. Give CG364 first safely available review opportunity.
+
+CG364 owner-priority review finally dispatched through supported/review when shared slot and reviewer were free: 20260907T054201Z-review, PID3135634, verified live. Other live workers CG372/253/370. Respect4/1; do not duplicate review. Initial loaded pages2.666/2.357s remainwithin owner4s. MemoryPSIavg10zero,max/OOM0; high23992 cumulative, totalstalls7.4s after recentstartup but no currentpressure.
