@@ -9,7 +9,7 @@ priority: 1
 difficulty: medium
 reading: []
 created: '2026-09-06T22:23:48+00:00'
-updated: '2026-09-07T01:43:27+00:00'
+updated: '2026-09-07T02:13:54+00:00'
 ---
 
 ## Goal
@@ -38,3 +38,4 @@ Source evidence: docs/incidents/CG-360-validation.md, CG-360 task log and manual
 - 2026-09-07T00:50:07+00:00 Operator 2026-09-07 00:50 UTC: idle recovery gap after CG359 main CI passed. Paused admission was retained while no workers/reviewers were active; operator failed to immediately consume satisfied deployment/review gates. Add actionable paused-and-idle recovery detection/next-action ownership, not another uninformative needs-human card. Main repair now installed and controlled work restarting.
 - 2026-09-07T01:13:09+00:00 2026-09-07 01:13 UTC: CG361/PR244 merged01:06:18 before reviewer010546 finished01:09:01 with blocking findings. DONE is correct for GitHub state but late review findings need preserved, actionable follow-up without reopening a merged task or treating it as deployment-approved. CG365 reused for actual fixes; earlier reviewers also accepted workload evidence later rejected. Preserve review evidence lineage and flag changes in criterion conclusions.
 - 2026-09-07T01:43:27+00:00 2026-09-07 01:43 UTC: CG365 triage-changes wrote a complete pending_feedback but simultaneously produced needs_human="stuck: no feedback recorded to revise against"; task sat changes_requested while ordinary slots advanced other work. Verified persisted state contains the complete correction, no active CG365 run and PR OPEN; supported /retry cleared needs_human while retaining feedback, no immediate dispatch/bypass. Add regression for state visibility/order during triage transition and stuck reconciliation.
+- 2026-09-07T02:13:54+00:00 CG293 owner inquiry02:12 UTC exposed another lost-feedback case: last_review.request_changes with three findings survived, pending_feedback was empty, needs_human claimed no feedback. Restored from actual stored verdict through triage/retry. Regression should preserve/reconstruct actionable review feedback across failed checks/base-broken and rebase transitions without making owner interpret this internal inconsistency.
