@@ -14,6 +14,8 @@ Owner approved on 2026-09-06: defer additional features until the core loop is d
 
 For a PR affecting UI, decisions, scheduler state, or lifecycle behavior, exercise the affected flow in a disposable running application, plus an empty state and a relevant failure/recovery state. Review evidence is tied to the actual PR head/build. A screenshot or a unit test assertion alone is insufficient for an interaction claim. Pure non-UI changes retain proportionate focused validation. A fresh code review and behavior evaluation are complementary; additional identical review rounds are not a replacement for behavior evidence.
 
+Owner clarification, 2026-09-07: each PR validation demand must identify the affected behavior, acceptance claim or shared dependency that makes it relevant. Available capture inventory does not imply every page must be reviewed. Pure non-UI changes do not require generic screenshots or unrelated empty/failure journeys. Shared UI/lifecycle changes still require evidence for affected consumers; phase-level whole-application journeys remain required.
+
 Until automatic enforcement lands, the operator applies this policy to applicable pending PRs. A failing journey blocks the relevant PR or milestone. Existing merged work is evaluated in the milestone run; do not retroactively claim it passed.
 
 ## Admission and completion
