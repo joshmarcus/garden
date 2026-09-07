@@ -62,3 +62,7 @@ CG363 worker CI offload is now deployed at58e13b99 after branch,PR and main CI s
 ### Owner-directed resumption 2026-09-07T01:22:41Z
 
 Owner requested restart of normal dispatch. Resumed through POST /resume (200), verified persisted pause removed, worker/shared4 and reviewer1 retained. CG365 remains the active resource-isolation follow-up; installedfc658809 and OS caps unchanged. Service591663104bytes, PSIavg10 zero, no high/max/OOM events, available memory5892488KiB and temp2133MiB; Now2 .668s and Inbox .697s. Five-minute resource/journey monitoring continues. This resumption is not incident closure or proof of the still-unfinished isolated-workload evidence; recurrence retro and deployment verification remain due.
+
+## Five-slot trial recurrence 2026-09-07T03:08Z
+
+After narrow fence repair rollout/resume, five actual workers produced repeated Now2/Inbox2.46–3.08s latency. Memory2.01GB,PSI0,high/max/OOM0,temp1889MiB; no demonstrated memory pressure. Supported worker/shared reduced1/1, existing work preserved to drain, OS caps unchanged. Later repeats1.035/1.018s. Continue observation and diagnose under workload before raising; no incident closure.

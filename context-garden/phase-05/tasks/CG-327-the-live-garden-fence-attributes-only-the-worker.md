@@ -2,7 +2,7 @@
 id: CG-327
 title: 'The live-garden fence attributes only the worker''s own writes: the operator''s and the scheduler''s
   commits during a run''s window are never counted against the run'
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on:
@@ -16,11 +16,10 @@ reading:
 - tests/test_fence.py
 branch: garden/cg-327-the-live-garden-fence-attributes-only-the-worker
 pr: https://github.com/joshmarcus/context-garden/pull/251
-runner: manual
 attempts: 1
 last_dispatched_at: '2026-09-07T01:27:58+00:00'
 created: '2026-09-06T04:28:19+00:00'
-updated: '2026-09-07T02:23:48+00:00'
+updated: '2026-09-07T03:08:06+00:00'
 ---
 
 ## Goal
@@ -37,6 +36,10 @@ A run is fenced only for writes the run made. The live-garden check attributes a
 - [ ] A real worker write under the garden root (a shell redirect in the transcript) is still fenced, and the log line names the transcript evidence.
 - [ ] A fenced run's own worktree writes are kept, not reverted, when the fence fires for a live-garden write; only the out-of-worktree writes are reverted, and the log line says which.
 
+## Integration decision after CG366
+
+CG366 is merged and installed, superseding the attribution implementation in PR251. Preserve unique value: structured per-path violation evidence and explicit worktree-kept reporting/deduplication. Rebase onto current main, retain CG366 destination-specific attribution and non-destructive mutable-log handling unchanged, and adapt only the remaining diagnostic/reporting behavior and its regressions. Do not reintroduce substring/whole-command attribution or sibling snapshot restoration. Focused fence regressions and exact-head CI required. No production edits.
+
 ## Log
 - 2026-09-06T04:28:20+00:00 approved (cli)
 - 2026-09-06T11:04:12+00:00 dispatched work run 20260906T110121Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11491 tokens)
@@ -51,3 +54,5 @@ A run is fenced only for writes the run made. The live-garden check attributes a
 - 2026-09-07T01:39:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/251 (base main): The fence now requires structured worker transcript evidence, including Codex command events, before attributing live-garden changes. Operator commits are left intact, while proven worker escapes are reverted without discarding worktree output. cost=$0.78
 - 2026-09-07T02:23:35+00:00 Owner-delegated queue disposition: Preserve PR251. Partial overlap with incident repair CG366: structured tool parsing helps but command pathname presence still does not establish a write and mutable sibling audit restoration remains unsafe. Operator-owned integration hold: compare CG366 final patch, retain unique regression coverage, and decide incremental integration or evidenced supersession before review/merge.
 - 2026-09-07T02:23:48+00:00 Preserve PR251. Partial overlap with incident repair CG366: structured tool parsing helps but command pathname presence still does not establish a write and mutable sibling audit restoration remains unsafe. Operator-owned integration hold: compare CG366 final patch, retain unique regression coverage, and decide incremental integration or evidenced supersession before review/merge.
+- 2026-09-07T03:08:06+00:00 Operator resolved overlap: retain only incremental diagnostics/reporting; restore normal runner for scoped revision.
+- 2026-09-07T03:08:06+00:00 triage: changes requested by hand: CG366 is merged and installed, superseding the attribution implementation in PR251. Preserve unique value: structured pe

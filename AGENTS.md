@@ -2,6 +2,12 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## Latest monitored operation 2026-09-07T03:08Z
+
+Five-slot resumed workload caused repeated Now2/Inbox latency2.883/1.997 then3.083/2.461/2.971s. Applied supported live worker/shared reduction to1/1 per incident rule; owner target remains5, reviewer1 and OS caps unchanged. Existing five workers preserved to drain, no broad pause or kill. Later route repeat1.035/1.018s; keep monitoring before raising again. Memory2.01–2.22GB mostlyfile1.28GB/anon550MB/shmem284MB, newcgroupPSI0/high/max/OOM0, temp1889MiB: this is latency containment, not established memory pressure/OOM. Prior five-slot live-limit statements are superseded by temporary1/1.
+
+CG365 current-head review accepts real workload evidence, finds broken root-owned /tmp fallback and missing active-state rail/observe/config agreement. Normal runner restored and supported retry clears obsolete manual stop while retaining concrete feedback. No blind rerun; real fixes now warranted. CG327 overlap resolved: retain only unique per-path violation evidence and worktree-kept/deduplicated reporting, rebase on CG366 while preserving destination attribution/non-destructive sibling semantics. Normal runner restored, triage-changes issued, next admitted revision. CG332 remains manual for actual capture evidence afterCG326. Installed5cff609 and incident followups unchanged.
+
 ## Start here and authority
 
 Read .claude/skills/garden-operate/SKILL.md and context-garden/docs/incident-protocol.md. Garden: /home/joshua/garden; product worktrees: /home/joshua/work/worktrees/CG-NNN; shared product clone: /home/joshua/work/repos/context-garden. Use installed .venv/bin/garden for state-only actions. Never hand-edit task status or race the scheduler state writer.

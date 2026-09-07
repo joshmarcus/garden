@@ -1,7 +1,7 @@
 ---
 id: CG-365
 title: Complete resource isolation enforcement and evidence after CG-361
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on:
@@ -11,12 +11,11 @@ difficulty: medium
 reading: []
 branch: garden/cg-365-complete-resource-isolation-enforcement-and-evid
 pr: https://github.com/joshmarcus/context-garden/pull/249
-runner: manual
 discovered_from: CG-361
 attempts: 1
 last_dispatched_at: '2026-09-07T01:50:08+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T03:00:06+00:00'
+updated: '2026-09-07T03:07:45+00:00'
 ---
 
 ## Goal
@@ -66,3 +65,7 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T02:23:52+00:00 nothing to fix; needs-human stop cleared by hand
 - 2026-09-07T02:24:00+00:00 False-positive fence failure established by preserved attribution evidence; completed PR249 and exact-head CI remain intact. Preserve FAILED run history. Operator owns recovery review after CG366 safe fence repair is installed and verified; inspect current real workload artifacts, no blind implementation retry.
 - 2026-09-07T03:00:06+00:00 triage: marked ready for review
+- 2026-09-07T03:04:25+00:00 automated review requested changes: The real bounded workload evidence now addresses the prior sleeping-test blocker. Two acceptance gaps remain: the documented no-XDG fallback fails on normal systems, and the claimed cross-surface capacity agreement lacks the required active-state fixture evidence. cost=$0.26
+- 2026-09-07T03:05:26+00:00 stuck: manual task has a revise round waiting; take it with `garden take`; take it (`garden take CG-365`) or send it back (`garden triage CG-365 --changes "..."`)
+- 2026-09-07T03:07:45+00:00 Recovery review validates real workload evidence but finds actionable /tmp fallback and capacity-surface regression gaps. Restore normal runner for actual implementation revision; preserve reviewer feedback. Screenshot dependency remains CG326, no fabricated PNG evidence.
+- 2026-09-07T03:07:45+00:00 re-enabled by hand; revise run will follow
