@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Owner-authorized memory trial, 2026-09-07 12:33Z
+
+Owner proposed hard limit5GiB after cache-heavy admission stalled. Applied live persistent systemctl set-property MemoryMax=5G and MemoryHigh=4608M (4.5GiB); this supersedes older 3GiB/4GiB caps. CPU200%, swap512MiB, worker/shared5, reviewer3 and admission reserve1536MiB remain. No restart or active-work interruption. Host available5630MiB before change. Monitor five-minute deltas and loaded journeys; CG380 cache-accounting investigation remains necessary. Do not mistake temporary extra headroom for a resolved admission policy or incident closure.
+
 ## Admission bottleneck observed 12:29Z
 
 Five-slot target remains, but admission is currently blocked by controller cgroup headroom: scheduler reports550MiB below1536MiB, despite host available5621MiB and zero memory pressure/events. Service about2.5GiB is predominantly file cache; sensor subtracts all current usage from min(memory.high,memory.max), here3GiB. Only CG253 recorded running at observation. Pages .715/.602s. Added evidence to CG380; inspect safe cache-aware admission policy without bypassing caps. A Scheduler.resource_status invoked from an external operator process observes that process cgroup, not the server: do not substitute its healthy result. No cache deleted, no override relaxed.
