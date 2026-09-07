@@ -1,5 +1,15 @@
 # Operator fast-forward protocol
 
+## Current activation: focused pass, 2026-09-07
+
+ACTIVE by explicit owner instruction. Scope is CG383 resource admission, then CG323/339/377/376/372 review-churn fixes, followed by validated versioned deployment and normal-mode restoration. AWS and other unrelated PRs are outside this pass and preserved. This supersedes historical activation/scope below. Ordinary dispatch paused; CG382/381 workers are draining before UI-only transition. Existing heartbeat now drives this goal and must not dispatch/review/resume during maintenance.
+
+Entry inventory and control snapshot: /home/joshua/work/operator-test-tmp/fast-forward-20260907. No extra model agents; CPU200% and memory4.5GiB/5GiB caps preserved. Operator self-review replaces further automated review only within this owner-authorized pass.
+
+### Current action ledger
+
+CG383: inspected existing4c5a956 and found original calibration used unspecified tempfile storage while /tmp is tmpfs; file accounting omitted shmem. Separate corrected disk-backed probe recorded72MiB inactive_file, zero shmem and successful64MiB reclaim (~66MiB current reduction), with no pressure/high/max/OOM events and peak87.7MiB. Original evidence retained. Fix experiment provenance and validation before designing the admission change; this small sample does not prove universal reclaimability. Artifact fast-forward-20260907/disk-report.json.
+
 Owner-authorized 2026-09-06. Purpose: finish open PRs through direct operator work when the automated review/revise loop is consuming time and cost without proportionate progress. Fast-forward is a maintenance mode, not a Git merge strategy; retain the repository's configured merge method.
 
 ## Enter and establish scope

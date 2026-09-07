@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## FAST-FORWARD ACTIVE: focused resource/review repair
+
+Owner activated now. Read current top of context-garden/docs/fast-forward.md. Scope CG383 then CG323/339/377/376/372, validated versioned rollout and exit. Other AWS/features excluded from this pass, preserved. Ordinary dispatch paused; two unrelated workersCG382/381 draining before UI-only mode. Heartbeat updated not to tick/dispatch/review/resume. Operator has begunCG383 calibration correction: disk-backed72MiB file reclaimed64MiB cleanly, unlike original tmpfs-like evidence. Preserve original artifact and follow current ledger. Older INACTIVE instructions are superseded.
+
 ## Tailscale Serve verified
 
 Owner enabled Serve. Windows background proxy reports https://babel.taild4d2ae.ts.net (tailnet only) -> http://localhost:8765. HTTPS Now1 and Inbox returned200 from Windows. Trusted origin already validated. No public Funnel. Phone must keep Tailscale connected; actual phone interaction remains for owner to confirm. This supersedes pending Serve activation below.
