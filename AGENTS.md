@@ -1,5 +1,12 @@
 # Context-garden operator handoff
 
+## Cache-headroom containment, 2026-09-07 15:47Z
+
+New actual memory-admission stop, superseding the earlier full-slot-only banner observation. Service4.21GiB with3.59GiB file cache, ~475MiB anon and33MiB shmem; effective headroom reported241MiB below1536MiB reserve. MemoryPSIavg10 zero and high/max/OOM zero; Now/Inbox/Config2.013/2.538/2.178s. Applied supported temporary worker/shared1, preserving activeCG385work,CG295revision,CG216revision and reviewerceiling3. Owner target5 remains; caps unchanged, normal watch/unpaused remains. No cache deletion or reclaim bypass.
+
+CG385 implementation/evidence committed, initial headCI passed; worker integrated newer main and is waiting on exact-current-head CI. Preserve its active run; no extra model agent. Watch actual processes/drain and results. If cache-limited admission remains once all active runtime users are accounted/drained, use the existing safe restart protocol to regain a usable review slot while preserving saved results; do not let the repair remain indefinitely blocked behind its own resource gate. No restart was performed at this check. CG253/300 got one further concrete revision allowance, queued under containment. Resource incident and recovery acceptance remain open.
+
+
 ## Current checkpoint: fast-forward complete, 2026-09-07 15:20Z
 
 Fast-forward INACTIVE. All six scoped PRs merged: CG383/293, CG323/241, CG376/286, CG372/266, CG339/254 and CG377/284. Supported task states DONE. See context-garden/docs/fast-forward.md for findings and evidence; historical pending heads are superseded.

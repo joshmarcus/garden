@@ -2,7 +2,7 @@
 id: CG-300
 title: The retro's Numbers section reads the operator ledger where the owner keeps it, and reports spend
   and share
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -19,7 +19,7 @@ discovered_from: retro-editor:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-07T09:03:31+00:00'
 created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T15:47:38+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,6 @@ Both phase-04 reconcile runs printed operator: $0.00, 0% of total, because the s
 - 2026-09-07T09:14:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/269: Operator spend now consistently resolves to the tool-owning product's docs ledger by default, with configured paths still supported. Retro, Costs, Now, and the operator CLI share this behavior. cost=$0.08
 - 2026-09-07T09:14:57+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-300` for one more round, or review on GitHub
 - 2026-09-07T09:35:02+00:00 triage: marked ready for review
+- 2026-09-07T15:37:16+00:00 automated review requested changes: Ledger resolution and retro reporting are correct and the focused suite passes. Required 1280px and 390px captures for the changed Costs and Now 2 pages were not reported or supplied. cost=$0.85
+- 2026-09-07T15:37:54+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-300`) or send it back (`garden triage CG-300 --changes "..."`)
+- 2026-09-07T15:47:38+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
