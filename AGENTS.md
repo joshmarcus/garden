@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Browser readiness verified 13:18Z
+
+Supported Scheduler.browser_ready_for with live service PATH/library environment and configured setup.env successfully launched Chromium and persisted ready=true. CG383 cache-headroom calibration approvedP0; CG382 request scan profiling approved. Disposable bounded experiments only; no production cache deletion or cap bypass.
+
 ## Browser configuration applied 13:11Z
 
 Set products.context-garden.setup.env.PLAYWRIGHT_BROWSERS_PATH=/home/joshua/.cache/ms-playwright in garden.yaml, preserving GH_CONFIG_DIR and LD_LIBRARY_PATH. Restarted existing service at tick-lock boundary with only CG216 revision accounted active and KillMode=process; its output remained fresh12seconds afterward. New serverPID121862 active, installed899b2c0 unchanged; Now1/Inbox200 at1.029/1.278s after startup. Initial immediate connection refusal was startup, subsequent routes passed. Old persisted browser-readiness signature still visible pending scheduler refresh; verify new ready result on next tick, do not claim capture recovery yet. Limits5/3 and memory4.5GiB/5GiB remain. CG379 maintenance pause has merged, not deployed.
