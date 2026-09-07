@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/248
 attempts: 1
 last_dispatched_at: '2026-09-06T23:37:35+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-06T23:59:15+00:00'
+updated: '2026-09-07T00:23:47+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,8 @@ This root cause has now blocked CG354/PR245 (scheduler leftover commit dd7ff9222
 - 2026-09-06T23:50:11+00:00 opened https://github.com/joshmarcus/context-garden/pull/248 (base main): Recovery now preserves uncommitted worktree artifacts as run-scoped named stashes instead of committing them into task branches. Committed worker work continues through normal salvage and PR creation. cost=$1.03
 - 2026-09-06T23:52:37+00:00 triage: changes requested by hand: Operator removing only the installed old scheduler's unrelated snapshot salvage before first review; preserve original d
 - 2026-09-06T23:59:15+00:00 Operator held first review and preserved the installed old scheduler's own snapshot salvage54e4f3c in operator-test-tmp/snapshot-salvage-20260906T2343Z with hashed metadata. Pushed cleanup2c889374a81d956b61971b496a149995c657a41f; complete tree equals intended4a3565b. New branch/PR CI34068102211/34068103543 pending at23:55; prioritize review and verified deployment once passed. No data discarded, no model revision/local full suite used for cleanup.
+- 2026-09-07T00:07:20+00:00 triage: marked ready for review
+- 2026-09-07T00:10:16+00:00 description rewritten by the reviewer cost=$0.53
+- 2026-09-07T00:10:22+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-359`) or send it back (`garden triage CG-359 --changes "..."`)
+- 2026-09-07T00:19:38+00:00 triage: changes requested by hand: Review approved the implementation. Integrating the subsequently merged onboarding main before final CI/re-review and de
+- 2026-09-07T00:23:47+00:00 Review20260907T000722Z-review approved all four implementation criteria with no code findings, requesting only permanent phase-goal framing. After the earlier onboarding merge, operator integrated current mainf41b414 into reviewed2c88937, verified the branch-specific diff is byte-for-byte unchanged, and pushed35d15ef08ef8bb314bf1def4245e3ff769dda24c. PR body has phase-goal framing and accurately says new integration CI is pending. Held changes_requested to prevent stale approval/CI merging; after current-head CI passes, request a fresh review with the single reviewer slot, then merge/deploy at accounted drain. No extra implementation worker is needed.

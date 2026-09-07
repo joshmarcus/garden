@@ -1,7 +1,7 @@
 ---
 id: CG-361
 title: Bound test workloads within each run and reserve web capacity
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/244
 attempts: 2
 last_dispatched_at: '2026-09-06T23:55:31+00:00'
 created: '2026-09-06T21:38:26+00:00'
-updated: '2026-09-06T23:55:31+00:00'
+updated: '2026-09-07T00:23:47+00:00'
 ---
 
 ## Goal
@@ -78,3 +78,6 @@ honest: GitHub passing the suite alone does not establish local resource isolati
 
 The latest review verified the cross-run lease and cgroup work but found the central remaining defect: inherited leases bypass admission for concurrent nested heavy validations within one worker. Implement separate, enforceable admission for supported nested validation launches while preserving parent/child deadlock avoidance. Demonstrate two competing validations from one worker with at most one heavy suite active, using focused bounded workloads. Preserve existing passing behavior and address the actual enforcement gap; do not replace it with a prompt or a claimed guarantee for unsupported arbitrary commands. Keep unrelated snapshots in named recovery stashes and leave them out of the dirty worktree at completion; CG359 fixes the installed scheduler's salvage bug but is not yet deployed. Full suites stay on GitHub, no additional model agents or production service changes.
 - 2026-09-06T23:55:31+00:00 dispatched revise run 20260906T235529Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~11882 tokens)
+- 2026-09-07T00:07:54+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/244: Supported heavy validations launched within one worker now serialize through an owner-scoped lease while the parent retains its host-wide lease. Nested validations use the existing subreaper lifecycle so cancellation, detached descendants, and lock recovery remain bounded; exact-commit CI passed. cost=$1.38
+- 2026-09-07T00:23:45+00:00 automated review requested changes: Within-run supported validations now serialize and focused tests pass, but the claimed per-user heavy-test budget can be exceeded when gardens use different configured limits. The shared host boundary therefore remains incomplete. cost=$1.15
+- 2026-09-07T00:23:47+00:00 Latest revision finished atb398cee125859026ff6c7df443688ed9fd5f987a; exact-head branchCI34068412398 and PRCI34068414119 passed. Explicit owner-authorized next review started20260907T002007Z-review/PID2126137 after verifying reviewer slot and task had no active run. Fresh output/PID verified; do not redispatch the worker while review is active.
