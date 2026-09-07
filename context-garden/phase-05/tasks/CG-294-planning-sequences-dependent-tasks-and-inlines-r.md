@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,10 @@ pr: https://github.com/joshmarcus/context-garden/pull/275
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 2
-last_dispatched_at: '2026-09-07T07:38:57+00:00'
+last_dispatched_at: '2026-09-07T10:37:17+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T09:14:10+00:00'
+updated: '2026-09-07T12:54:17+00:00'
+runner: manual
 ---
 
 ## Goal
@@ -66,3 +67,24 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-07T07:40:00+00:00 rebase run 20260907T073856Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1595560}; retry also failed; needs human to resolve docs/design/snapshot.json
 - 2026-09-07T09:14:08+00:00 triage: changes requested by hand: Recover via a normal bounded revision, not the oversized conflict-only prompt. Preserve planner implementation and snaps
 - 2026-09-07T09:14:10+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:28:21+00:00 dispatched revise run 20260907T092819Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~26996 tokens)
+- 2026-09-07T09:39:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/275: Merged current main without rewriting the PR branch, retained the canonical generated snapshot, and preserved snapshot salvage in a named stash. Planner dependency sequencing and retro-evidence inlining remain covered by focused tests; exact-head CI passed. cost=$0.58
+- 2026-09-07T09:42:39+00:00 automated review requested changes: Dependency sequencing is correctly instructed and covered, but retro evidence inlining fails for backtick- or quote-delimited paths—the repository’s own standard citation format. This leaves two acceptance criteria unmet. cost=$0.44
+- 2026-09-07T09:59:37+00:00 dispatched revise run 20260907T095935Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~28590 tokens)
+- 2026-09-07T10:09:42+00:00 preserved uncommitted worktree changes from run 20260907T095935Z-revise outside the PR: `git stash apply f80997aa5f50fb174ba43f737717a00dcb73247b` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T095935Z-revise:reap)
+- 2026-09-07T10:11:22+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/275: Planner retro-evidence recognition now accepts backtick- and quote-delimited paths, including canonical garden-relative paths. Regression coverage and exact-head GitHub CI pass. cost=$0.61
+- 2026-09-07T10:12:59+00:00 automated review requested changes: The acceptance criteria are implemented and the focused planner suite passes, but retro-evidence resolution can inline the wrong document when a short path is cited more than once. Fix the fallback/deduplication ordering before merge. cost=$0.26
+- 2026-09-07T10:16:16+00:00 dispatched revise run 20260907T101614Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~28908 tokens)
+- 2026-09-07T10:26:36+00:00 preserved uncommitted worktree changes from run 20260907T101614Z-revise outside the PR: `git stash apply 3f91c710aa65fa012258c132b5d5c30cd628d6fa` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T101614Z-revise:reap)
+- 2026-09-07T10:29:21+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/275: Fixed repeated short retro citations so phase-local evidence is resolved once without falling through to an unrelated root document. Added regression coverage; focused tests, lint, and exact-head CI pass. cost=$0.30
+- 2026-09-07T10:32:10+00:00 description rewritten by the reviewer cost=$0.27
+- 2026-09-07T10:33:32+00:00 rebasing before merge; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
+- 2026-09-07T10:33:35+00:00 dispatched rebase run 20260907T103332Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~399848 tokens)
+- 2026-09-07T10:34:36+00:00 preserved uncommitted worktree changes from run 20260907T103332Z-rebase outside the PR: `git stash apply 9336c1d617aaa240fbd7447d4d7170b7ee55106b` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T103332Z-rebase:reap)
+- 2026-09-07T10:34:36+00:00 rebase run 20260907T103332Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1599395}; will retry
+- 2026-09-07T10:34:36+00:00 rebase run 20260907T103332Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1599395}; will retry
+- 2026-09-07T10:37:17+00:00 dispatched rebase run 20260907T103715Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~400110 tokens)
+- 2026-09-07T10:38:18+00:00 preserved uncommitted worktree changes from run 20260907T103715Z-rebase outside the PR: `git stash apply 1987955b3e2f6441559a4558a83febf7bb5f5651` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T103715Z-rebase:reap)
+- 2026-09-07T10:38:18+00:00 rebase run 20260907T103715Z-rebase did not finish: worker exited 1: Error: turn/start: turn/start failed: Input exceeds the maximum length of 1048576 characters. (code -32602), data: {"input_error_code":"input_too_large","max_chars":1048576,"actual_chars":1600443}; retry also failed; needs human to resolve docs/design/snapshot.json
+- 2026-09-07T12:54:17+00:00 triage: marked ready for review
+- 2026-09-07T12:54:17+00:00 Operator owns deployment prerequisite: CG373/PR283 is merged but not installed. Temporary manual hold prevents oversized rebase retry; restore ordinary runner and continue preserved PR275 after verified deployment. No owner decision remains.

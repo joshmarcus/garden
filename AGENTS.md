@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Inbox audit disposition
+
+See context-garden/docs/inbox-disposition-2026-09-07.md. Thirteen review cards already queued; ten phase06 drafts deliberately deferred. CG294 owner stop cleared with temporary manual runner hold pending deployment of mergedCG373; restore normal runner after verified rollout and preserve PR275. CG-381 records misleading ownership/counts and unsafe done advice; active CG374/362 scopes unchanged. No owner question remains from this audit, but deployment/reviews and UI correction are unfinished.
+
 ## AWS workers promoted to phase05 by owner
 
 Owner explicitly says bring them in now (2026-09-07), superseding conditional fallback and remote-worker freeze. CG216/PR221 and CG345–348 moved to phase05 through Scheduler.move; continue existing work and dependencies, preserve pluggable lifecycle. PR222/model pools and other phase06 work stay frozen. No cloud instances provisioned by this scope change; use concrete bounded deployment plan. Old blanket PR221 freeze notes below are superseded.
