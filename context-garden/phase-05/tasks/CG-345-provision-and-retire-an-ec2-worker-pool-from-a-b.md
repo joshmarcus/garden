@@ -14,7 +14,7 @@ branch: garden/cg-345-provision-and-retire-an-ec2-worker-pool-from-a-b
 attempts: 1
 last_dispatched_at: '2026-09-07T17:33:14+00:00'
 created: '2026-09-06T16:27:49+00:00'
-updated: '2026-09-07T18:42:10+00:00'
+updated: '2026-09-07T18:44:06+00:00'
 ---
 
 ## Goal and evidence
@@ -55,3 +55,7 @@ Source audit of afadab3 found additional launch blockers that must be repaired a
 - Isolate task execution from IMDS, bootstrap enrollment material, and controller/provisioner credentials. First live canary uses an independently scoped disposable repository/fake harness; do not copy model credentials or production repo write credentials.
 Preserve completed generic lifecycle implementation and tests; these are concrete integration repairs within the original usable EC2 worker outcome. Keep live readiness explicitly unproven until infrastructure/endpoint are ready. The operator will supply real resource identifiers and secret references securely, not fabricate them.
 - 2026-09-07T18:42:10+00:00 Owner requested AWS setup; operator prepared disabled infrastructure/canary artifacts and identified concrete IAM-tag/bootstrap integration blockers. Non-root admin profile requested; no instances launched.
+
+
+Owner budget update: $80 total AWS setup and worker-trial allocation authorized2026-09-07; not per-instance or a recurring monthly allowance. First canary remains one instance/30minutes/$2 admission ceiling. Account for retained disks/IPs/secrets and cleanup. No live enable until actual infrastructure, scoped private enrollment and reviewed worker implementation are ready.
+- 2026-09-07T18:44:06+00:00 Owner authorized $80 aggregate AWS budget; initial canary limit and infrastructure prerequisites unchanged.

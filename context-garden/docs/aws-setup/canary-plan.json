@@ -15,7 +15,7 @@
   "delete_root_on_termination": true,
   "maximum_runtime_seconds": 1800,
   "spend_ceiling_usd": 2.0,
-  "budget_status": "proposed; no launch until prerequisites and actual plan validated",
+  "budget_status": "Owner authorized total AWS budget of80 USD on2026-09-07. First canary remains at2 USD admission ceiling, one host and30minutes; infrastructure/access and code-review prerequisites remain.",
   "endpoint": "https://babel.taild4d2ae.ts.net",
   "network_model": "public IPv4 for outbound HTTPS, zero inbound SG rules; garden endpoint accessed privately through Tailscale",
   "compute_estimate_usd_per_hour": 0.1664,
@@ -38,5 +38,8 @@
     "https://docs.aws.amazon.com/prescriptive-guidance/latest/optimize-costs-microsoft-workloads/right-size-selection.html",
     "https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/",
     "https://aws.amazon.com/ebs/pricing/"
-  ]
+  ],
+  "aws_total_budget_usd": 80.0,
+  "budget_scope": "Total AWS setup and worker trial allocation until owner changes it; not a monthly recurring allowance.",
+  "budget_enforcement": "Local plan only until administrator access exists. Track aggregate actual+estimated committed AWS spend, including retained resources. Stop new provisioning before remaining allocation cannot cover planned work and cleanup. AWS Budgets alerting is not a hard billing cap."
 }
