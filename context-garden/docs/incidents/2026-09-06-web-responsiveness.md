@@ -57,3 +57,8 @@ Source inspection confirms CG-338 does not bound multiple tests inside one run o
 
 
 CG363 worker CI offload is now deployed at58e13b99 after branch,PR and main CI success. Full suites run remotely; focused local validation and PR CI remain required. CG360 archive consistency fix is included; no production history moved/deleted. CG361's old run timed out22:32 and is ready for controlled continuation. Existing caps/shared limit1 and ordinary pause remain. Rollout evidence and1224-test result: CG-363-validation.md. Idle post-restart checks passed; loaded recurrence recovery and retrospective are still due.
+
+
+### Owner-directed resumption 2026-09-07T01:22:41Z
+
+Owner requested restart of normal dispatch. Resumed through POST /resume (200), verified persisted pause removed, worker/shared4 and reviewer1 retained. CG365 remains the active resource-isolation follow-up; installedfc658809 and OS caps unchanged. Service591663104bytes, PSIavg10 zero, no high/max/OOM events, available memory5892488KiB and temp2133MiB; Now2 .668s and Inbox .697s. Five-minute resource/journey monitoring continues. This resumption is not incident closure or proof of the still-unfinished isolated-workload evidence; recurrence retro and deployment verification remain due.
