@@ -1,7 +1,7 @@
 ---
 id: CG-365
 title: Complete resource isolation enforcement and evidence after CG-361
-status: changes_requested
+status: failed
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,9 +12,9 @@ branch: garden/cg-365-complete-resource-isolation-enforcement-and-evid
 pr: https://github.com/joshmarcus/context-garden/pull/249
 discovered_from: CG-361
 attempts: 1
-last_dispatched_at: '2026-09-07T01:12:31+00:00'
+last_dispatched_at: '2026-09-07T01:50:08+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T01:36:35+00:00'
+updated: '2026-09-07T02:05:56+00:00'
 ---
 
 ## Goal
@@ -56,3 +56,7 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T01:35:37+00:00 triage: changes requested by hand: Operator current-head inspection confirms criterion4 remains unfulfilled: the retained-history workload still generates
 - 2026-09-07T01:35:38+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-365`) or send it back (`garden triage CG-365 --changes "..."`)
 - 2026-09-07T01:36:35+00:00 Operator01:35 UTC verified PR249 currentheadd1f1c235 with both CI passes but unchanged sleeping-only workload. No CG365 run active; sent supported triage-changes with a focused criterion4 correction, avoiding a paid review merely rediscovering the known gap. Ordinary dispatch remains enabled; priority0 revision should take the next available shared slot, not bypass four-run/one-review limits.
+- 2026-09-07T01:42:56+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T01:50:08+00:00 dispatched revise run 20260907T015006Z-revise-2 via local [codex model=gpt-5.6-terra] (fresh session, base main, ~10988 tokens)
+- 2026-09-07T02:00:16+00:00 fenced: worker wrote outside its worktree; the writes it made were reverted. Touched the live garden: wrote .garden/runs/CG-323/20260907T014143Z-revise/stdout.json (/home/joshua/garden/.garden/runs/CG-323/20260907T014143Z-revise/stdout.json) | the live garden: wrote .garden/runs/CG-332/20260907T015006Z-revise/stdout.json (/home/joshua/garden/.garden/runs/CG-332/20260907T015006Z-revise/stdout.json)
+- 2026-09-07T02:05:56+00:00 Operator02:07 UTC: completed scoped revisionaf21cb846357197f856954befdeaa53c42e9cb05 passed CI34074486007 but was falsely fenced for sibling stdout paths appearing in observation output. Available sibling/run/manifests preserved at operator-test-tmp/fence-concurrency-20260907T0203 with attribution-evidence.json. CG366 owns unsafe transcript attribution/rewind repair; preserve this completed branch and final evidence, do not blindly rerun its implementation. Fence failure remains honest run history pending operator review recovery.
