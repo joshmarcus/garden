@@ -91,3 +91,7 @@ Blocking the phase-04 close: CG-238 (merged), CG-239 (PR #193, in revise), CG-24
 ## Open
 
 - **Goal 2: any model routed by difficulty with failure-driven escalation**: No task owns difficulty routing or the failure-driven escalation policy (retry at a higher tier on failed verification, per the spec's phase-1 acceptance); CG-213 is the harness, CG-230 is pooling, CG-251 is measurement, and no escalation code exists.
+
+## Completion organization
+
+Owner-grouped remaining delivery work into four [completion tracks](completion-tracks.md): review contract, review progress, walkthrough/costs, and documentation. Use their combined acceptance and integration order while preserving existing task/PR identities.

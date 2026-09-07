@@ -2,7 +2,7 @@
 id: CG-297
 title: The walkthrough renderer skips hidden elements and attributes, and check runs retry once on a signal
   exit
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,7 +15,8 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-07T09:13:48+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T09:13:48+00:00'
+updated: '2026-09-07T11:50:52+00:00'
+completion_track: walkthrough-costs
 ---
 
 ## Goal
@@ -63,3 +64,15 @@ Carried into phase-05 from the phase-04 retro verdict.
 - 2026-09-07T09:13:07+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
 - 2026-09-07T09:13:08+00:00 re-enabled by hand; revise run will follow
 - 2026-09-07T09:13:48+00:00 dispatched revise run 20260907T091345Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~10893 tokens)
+- 2026-09-07T09:25:59+00:00 preserved uncommitted worktree changes from run 20260907T091345Z-revise outside the PR: `git stash apply d28224a353d31b5e1225390ad3ee0ecba0ff45de` in /home/joshua/work/worktrees/CG-297 (garden:CG-297:20260907T091345Z-revise:reap)
+- 2026-09-07T09:27:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/277: Fixed CSS child-combinator matching in walkthrough rendering and added cascade coverage. CI passed on the exact final commit. cost=$0.09
+- 2026-09-07T09:27:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-297` for one more round, or review on GitHub
+- 2026-09-07T09:34:59+00:00 triage: marked ready for review
+
+## Completion track
+
+Reliable walkthrough and cost reporting (`walkthrough-costs`), grouped by owner request. Members: CG-253, CG-297, CG-300, CG-336.
+
+Integrate renderer correctness and Codex usage capture before final walkthrough/retro reporting integration. Validate a representative walkthrough plus one matched time-window cost calculation across ledger, retro and displayed metrics; retain unavailable-price labels.
+
+This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

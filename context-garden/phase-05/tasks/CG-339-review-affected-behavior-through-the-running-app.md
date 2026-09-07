@@ -1,20 +1,21 @@
 ---
 id: CG-339
 title: Review affected behavior through the running application before accepting interaction claims
-status: changes_requested
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 1
+priority: 0
 difficulty: hard
 reading:
 - context-garden/phase-05/specs/stabilization.md
 branch: garden/cg-339-review-affected-behavior-through-the-running-app
 pr: https://github.com/joshmarcus/context-garden/pull/254
 attempts: 1
-last_dispatched_at: '2026-09-07T06:03:41+00:00'
+last_dispatched_at: '2026-09-07T10:31:07+00:00'
 created: '2026-09-06T13:46:32+00:00'
-updated: '2026-09-07T09:13:14+00:00'
+updated: '2026-09-07T11:50:52+00:00'
+completion_track: review-contract
 ---
 
 ## Goal
@@ -60,3 +61,31 @@ CG-357 initially claimed performance evidence using inert worker records and ten
 - 2026-09-07T06:19:03+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-339`) or send it back (`garden triage CG-339 --changes "..."`)
 - 2026-09-07T09:13:13+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
 - 2026-09-07T09:13:14+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:28:23+00:00 dispatched revise run 20260907T092821Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~12505 tokens)
+- 2026-09-07T09:39:52+00:00 priority 1 -> 0 (web)
+- 2026-09-07T09:42:40+00:00 preserved uncommitted worktree changes from run 20260907T092821Z-revise outside the PR: `git stash apply 14872914a1df81cc5bf37a61763d656bb4dff6bb` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T092821Z-revise:reap)
+- 2026-09-07T09:45:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/254: Interaction evidence now requires an explicit empty-state observation and a genuine failure followed chronologically by successful recovery. Applicability now targets behavior-owning UI and lifecycle surfaces while pure offline/parser/formatting changes retain proportionate validation. cost=$1.31
+- 2026-09-07T09:47:18+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/review.py, tests/test_review.py); a rebase agent will resolve it
+- 2026-09-07T09:48:26+00:00 automated review: request_changes — Focused tests pass, but the gate still trusts self-authored event JSON as proof of performed interaction and omits lifecycle-bearing modules such as model/check execution. The PR description’s verification is also stale relative to HEAD. cost=$0.46
+- 2026-09-07T09:50:05+00:00 dispatched rebase run 20260907T095003Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~16192 tokens)
+- 2026-09-07T09:54:46+00:00 preserved uncommitted worktree changes from run 20260907T095003Z-rebase outside the PR: `git stash apply 6a0ab39fc46987baf3ba392570abdef10a447f49` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T095003Z-rebase:reap)
+- 2026-09-07T10:00:40+00:00 pre-PR checks failed (lint) and 3 revision rounds already used; needs a human cost=$0.05
+- 2026-09-07T10:05:26+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T10:08:40+00:00 dispatched revise run 20260907T100838Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~13036 tokens)
+- 2026-09-07T10:20:22+00:00 preserved uncommitted worktree changes from run 20260907T100838Z-revise outside the PR: `git stash apply 1b18132ceb21823dadd12614e4c545b448aa8148` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T100838Z-revise:reap)
+- 2026-09-07T10:22:14+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/254: Fixed the review-test import ordering and refreshed exact-head validation. The disposable served application completed all nine interaction flows, focused tests and lint passed, and exact-commit GitHub CI succeeded. cost=$1.09
+- 2026-09-07T10:22:15+00:00 5 automated review round(s) used; this PR is yours — run `garden review CG-339` for one more round, or review on GitHub
+- 2026-09-07T10:28:58+00:00 triage: changes requested by hand: Owner-authorized continuation beyond review cap. Current review found evidence provenance, lifecycle coverage and stale
+- 2026-09-07T10:28:59+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T10:31:07+00:00 dispatched revise run 20260907T103105Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~13605 tokens)
+- 2026-09-07T10:53:18+00:00 preserved uncommitted worktree changes from run 20260907T103105Z-revise outside the PR: `git stash apply 8279bccd70cb96f23e64eda6b0435f2f13ff14d7` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T103105Z-revise:reap)
+- 2026-09-07T11:31:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/254: Review dispatch now independently runs a disposable served-application replay and pins its nonce, reviewed SHA, and manifest digest, preventing reviewer-authored JSON or screenshots from serving as execution proof. Lifecycle applicability includes model transitions and check execution/recovery, and durable replay evidence records nine successful flows, 100 HTTP requests, explicit affected/failure/recovery/empty outcomes, and Inbox zero. cost=$2.83
+- 2026-09-07T11:31:28+00:00 5 automated review round(s) used; this PR is yours — run `garden review CG-339` for one more round, or review on GitHub
+
+## Completion track
+
+Clear, proportionate review contract (`review-contract`), grouped by owner request. Members: CG-323, CG-339, CG-377.
+
+Integrate preflight/frozen criteria, interaction evidence, then scoped validation. Validate one shared head-bound plan from worker brief through reviewer verdict, with relevant failure cases and no unrelated page demands.
+
+This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

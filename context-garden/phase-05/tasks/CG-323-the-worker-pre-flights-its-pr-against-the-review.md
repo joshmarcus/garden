@@ -2,11 +2,11 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: running
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 1
+priority: 0
 difficulty: medium
 reading:
 - src/garden/brief.py
@@ -21,9 +21,10 @@ reading:
 branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
 pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
-last_dispatched_at: '2026-09-07T09:13:43+00:00'
+last_dispatched_at: '2026-09-07T10:02:21+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T09:13:43+00:00'
+updated: '2026-09-07T11:50:52+00:00'
+completion_track: review-contract
 ---
 
 ## Goal
@@ -107,3 +108,24 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T09:13:10+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
 - 2026-09-07T09:13:11+00:00 re-enabled by hand; revise run will follow
 - 2026-09-07T09:13:43+00:00 dispatched rebase run 20260907T091341Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8245 tokens)
+- 2026-09-07T09:16:16+00:00 preserved uncommitted worktree changes from run 20260907T091341Z-rebase outside the PR: `git stash apply 9bb8abf6c6c7e979d22ea360262f269692ea1c2a` in /home/joshua/work/worktrees/CG-323 (garden:CG-323:20260907T091341Z-rebase:reap)
+- 2026-09-07T09:18:33+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Rebased onto origin/main and resolved all conflicts without altering unrelated work. cost=$0.02
+- 2026-09-07T09:18:33+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
+- 2026-09-07T09:35:05+00:00 triage: marked ready for review
+- 2026-09-07T09:38:20+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-323`) or send it back (`garden triage CG-323 --changes "..."`)
+- 2026-09-07T09:39:48+00:00 priority 1 -> 0 (web)
+- 2026-09-07T09:48:22+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T10:02:21+00:00 dispatched revise run 20260907T100219Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~26016 tokens)
+- 2026-09-07T10:11:25+00:00 preserved uncommitted worktree changes from run 20260907T100219Z-revise outside the PR: `git stash apply da3f4aa3e09fba519ee3a79742fabf3d9c258bbd` in /home/joshua/work/worktrees/CG-323 (garden:CG-323:20260907T100219Z-revise:reap)
+- 2026-09-07T10:11:29+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Pre-PR diff-inspection errors are retained as mechanical failures and routed into actionable revise feedback instead of aborting a tick. Current main is integrated and exact-head CI passed. cost=$0.68
+- 2026-09-07T10:11:30+00:00 stalled: revise run 20260907T100219Z-revise produced no change to the diff or PR description; run `garden triage CG-323 --changes "<feedback>" to unblock`
+- 2026-09-07T10:15:53+00:00 automated review: request_changes — The pre-flight and frozen-criteria flows are largely implemented and 107 focused tests pass, but the conflict-marker check rejects valid clean diffs containing an added Setext heading underline. cost=$0.96
+- 2026-09-07T10:17:09+00:00 triage: marked ready for review
+
+## Completion track
+
+Clear, proportionate review contract (`review-contract`), grouped by owner request. Members: CG-323, CG-339, CG-377.
+
+Integrate preflight/frozen criteria, interaction evidence, then scoped validation. Validate one shared head-bound plan from worker brief through reviewer verdict, with relevant failure cases and no unrelated page demands.
+
+This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

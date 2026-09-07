@@ -21,7 +21,8 @@ branch: garden/cg-295-docs-match-the-mechanism-the-scaffolded-operate
 discovered_from: retro:context-garden/phase-04
 last_dispatched_at: '2026-09-07T06:06:12+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T09:14:05+00:00'
+updated: '2026-09-07T11:50:52+00:00'
+completion_track: documentation
 ---
 
 ## Goal
@@ -64,3 +65,11 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict.
 The live garden.yaml comment is already absent (verified directly). That criterion is fulfilled by the operator. Work only inside the product checkout on remaining documentation and tests; do not request or edit live garden configuration. Preserve existing implementation.
 - 2026-09-07T09:14:05+00:00 Owner-delegated answer: live config cleanup already satisfied; resume product-only work via admission queue.
 - 2026-09-07T09:14:05+00:00 reset to ready by hand
+
+## Completion track
+
+Current, usable documentation (`documentation`), grouped by owner request. Members: CG-295, CG-378.
+
+Integrate detailed documentation corrections first, then the Astra README synthesis. Validate quickstart commands, links and supported-versus-deferred behavior against the resulting build; reuse factual evidence instead of duplicating implementation.
+
+This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

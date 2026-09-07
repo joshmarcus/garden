@@ -1,5 +1,10 @@
 # Context-garden operator handoff
 
+## Owner-grouped completion tracks
+
+Read context-garden/phase-05/completion-tracks.md. Review contract: CG323/339/377; review progress: CG372/374/376; walkthrough/costs: CG253/297/300/336; documentation: CG295/378. Shared integration/acceptance tracks preserve existing PRs/statuses; no duplicate workers or blanket new dependencies. CG373/375/379 stay separate.
+
+
 ## DEPLOYED899b2c0 2026-09-07T11:46Z
 
 Owner requested deployment. Installed899b2c0cda5a311f6e498b75929ca6b58a524eab at fully drained tick-lock boundary; exact mainCI34112718574 and38 capped resource/restart/setup tests passed. Installer180.1MiB/noSwap; venv read-only restored, source bytes verified for supervisor/resource/Inbox/control modules. ServicePID4193997 active normal-watch; CPU200%/MemoryMax4GiB retained. Now2/Inbox/Config200 at.742/.684/.303s. POST/resume succeeded; ordinary scheduling unpaused with temporary worker/shared1, reviewer ceiling3 pending loaded recovery observation. Owner target5 remains. Older installed5cff609 statements superseded. No active worker or saved result discarded. This is deployment/initial smoke success, not completed incident journeys or phase gate.

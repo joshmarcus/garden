@@ -2,7 +2,7 @@
 id: CG-253
 title: The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics
   and the rail
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,9 +13,10 @@ branch: garden/cg-253-the-retro-captures-its-own-walkthrough-and-hand
 pr: https://github.com/joshmarcus/context-garden/pull/265
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-07T09:13:45+00:00'
+last_dispatched_at: '2026-09-07T09:47:24+00:00'
 created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-07T09:13:45+00:00'
+updated: '2026-09-07T11:50:52+00:00'
+completion_track: walkthrough-costs
 ---
 
 ## Goal
@@ -74,3 +75,20 @@ Proposed at the context-garden/phase-04 retro. Three definition-of-done lines we
 - 2026-09-07T09:13:04+00:00 triage: changes requested by hand: Owner delegates this routine recovery. Address the concrete preserved review findings below; self-review and repair befo
 - 2026-09-07T09:13:05+00:00 re-enabled by hand; revise run will follow
 - 2026-09-07T09:13:45+00:00 dispatched revise run 20260907T091343Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~11093 tokens)
+- 2026-09-07T09:25:58+00:00 preserved uncommitted worktree changes from run 20260907T091343Z-revise outside the PR: `git stash apply 5a4742a3f4125e23095fed7ab1ebc95cb65bbe2d` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T091343Z-revise:reap)
+- 2026-09-07T09:27:45+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Production walkthroughs now always include a representative decision-card task page, including phases with no live decision facts. The regression is covered and exact-head CI passed. cost=$0.11
+- 2026-09-07T09:27:46+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-253` for one more round, or review on GitHub
+- 2026-09-07T09:28:04+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/walkthrough.py, tests/test_walkthrough.py); a rebase agent will resolve it
+- 2026-09-07T09:34:56+00:00 triage: marked ready for review
+- 2026-09-07T09:35:30+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/walkthrough.py, tests/test_walkthrough.py); a rebase agent will resolve it
+- 2026-09-07T09:47:24+00:00 dispatched rebase run 20260907T094723Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~15511 tokens)
+- 2026-09-07T09:51:06+00:00 preserved uncommitted worktree changes from run 20260907T094723Z-rebase outside the PR: `git stash apply 54491ccfca458d447c27b786306b1be9b0749025` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T094723Z-rebase:reap)
+- 2026-09-07T09:57:47+00:00 pre-PR checks failed (lint) and 3 revision rounds already used; needs a human cost=$0.03
+
+## Completion track
+
+Reliable walkthrough and cost reporting (`walkthrough-costs`), grouped by owner request. Members: CG-253, CG-297, CG-300, CG-336.
+
+Integrate renderer correctness and Codex usage capture before final walkthrough/retro reporting integration. Validate a representative walkthrough plus one matched time-window cost calculation across ledger, retro and displayed metrics; retain unavailable-price labels.
+
+This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.
