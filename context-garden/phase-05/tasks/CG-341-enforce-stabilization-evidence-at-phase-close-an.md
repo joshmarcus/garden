@@ -1,7 +1,7 @@
 ---
 id: CG-341
 title: Enforce stabilization evidence at phase close and record unattended operation mechanically
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/247
 attempts: 1
 last_dispatched_at: '2026-09-06T23:23:20+00:00'
 created: '2026-09-06T13:46:36+00:00'
-updated: '2026-09-07T01:04:02+00:00'
+updated: '2026-09-07T01:13:09+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,5 @@ The owner raised the worker/shared local-run limit to four after GitHub CI offlo
 - 2026-09-06T23:48:45+00:00 triage: changes requested by hand: Operator will preserve and remove only the scheduler-added unrelated snapshot before the first review; no task run is ac
 - 2026-09-06T23:59:15+00:00 Operator held first review and preserved scheduler-added snapshot1c18bfd under operator-test-tmp/snapshot-salvage-20260906T2343Z with hashed recovery metadata. Pushed cleanup426e0c82429a422c46a884a2389659ea31677768; complete Git tree equals intended9122d7f. Exact branch CI34067953339 and PR CI34067955193 SUCCESS at23:54. Update permanent PR description and review after current-main reconciliation; real soak remains UNPROVEN. No model revision/local full suite used for cleanup.
 - 2026-09-07T01:04:02+00:00 2026-09-07 01:02 UTC: after CG354 merged, incorporated current main332ee916 and pushed1b0894c11de51982eb654eea18d4e23aad5bd457. Branch-specific diff byte-identical before/after integration. Previous6132f888 head CI passed; new head CI pending. PR description updated; first review after current-head CI and free reviewer slot.
+- 2026-09-07T01:09:04+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/247
+- 2026-09-07T01:13:09+00:00 Operator01:13 UTC verified GitHub merged_by joshmarcus and normal DONE reconciliation. CG361 review010546 completed after merge with four blocking resource findings; existing CG365 expanded/approved and dispatched as priority follow-up. Do not redispatch merged tasks or claim unresolved review criteria passed. Installed build remainsfc658809 until follow-up deployment is validated.

@@ -1,7 +1,7 @@
 ---
 id: CG-361
 title: Bound test workloads within each run and reserve web capacity
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/244
 attempts: 2
 last_dispatched_at: '2026-09-07T00:50:37+00:00'
 created: '2026-09-06T21:38:26+00:00'
-updated: '2026-09-07T00:50:37+00:00'
+updated: '2026-09-07T01:13:09+00:00'
 ---
 
 ## Goal
@@ -92,3 +92,6 @@ The owner's approved worker concurrency is FOUR while the heavy-validation budge
 Keep local checks serial/bounded, complete full tests on exact-head GitHub CI, preserve recovery artifacts, and do not change production service configuration or launch extra model agents. Existing passing evidence may be reused only for unchanged behavior; refresh affected concurrency and journey evidence.
 - 2026-09-07T00:50:07+00:00 Operator continuation after verified CG359 deployment: repair authoritative host validation capacity and avoid holding a heavy-validation lease during the whole model/remote-CI session.
 - 2026-09-07T00:50:37+00:00 dispatched revise run 20260907T005035Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~12639 tokens)
+- 2026-09-07T01:05:45+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/244: Heavy local setup, checks, probes, and supported worker validations now share one authoritative per-user capacity, while model sessions and remote-CI waits remain concurrent under the aggregate execution boundary. Conflicting garden limits use the established capacity and record the conflict; focused regressions, lint, and exact-head GitHub CI pass. cost=$1.87
+- 2026-09-07T01:06:57+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/244
+- 2026-09-07T01:13:09+00:00 Operator01:13 UTC verified GitHub merged_by joshmarcus and normal DONE reconciliation. CG361 review010546 completed after merge with four blocking resource findings; existing CG365 expanded/approved and dispatched as priority follow-up. Do not redispatch merged tasks or claim unresolved review criteria passed. Installed build remainsfc658809 until follow-up deployment is validated.
