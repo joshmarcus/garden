@@ -2,6 +2,10 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## Owner-requested four-slot trial 2026-09-07T03:56:48.988610+00:00
+
+Owner requested increase to FOUR. Applied supported worker/shared4/4; reviewer1, ordinary dispatch enabled, OS caps unchanged. This supersedes temporary1 and prior target5 for current operation. Monitor five-minute workload/latency; diagnose and contain sustained recurrence, not merely historical observations. Browser runtime already activated, installed5cff609 unchanged.
+
 ## Latest browser runtime and latency containment 2026-09-07T03:50Z
 
 Browser runtime environment activated through ~/.config/systemd/user/garden-serve.service.d/browser-runtime.conf. Tick-lock accounted restart verified only five work/revise processes and KillMode=process; all five PIDs survived (CG3392632631,CG3652633990,CG3222677698,CG3582633237,CG3272632301). NewserverPID2687086 and LD_LIBRARY_PATH verified. Installed code remains5cff609. CG326 stale empty baseprobe recovered; concrete evidence continuation queued with explicit local library path for scrubbed worker commands, preserve implementation and generate actual new PNGs/390px measurements. No fabricated screenshot approval.
