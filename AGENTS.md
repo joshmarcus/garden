@@ -1,5 +1,9 @@
 # Context-garden operator handoff
 
+## Scoped AWS login now verified
+
+Owner completed non-root login. aws sts get-caller-identity --profile garden-provisioner succeeded and returned assumed-role/ContextGardenProvisioner on2026-09-07. Use this explicit profile for provisioning work; do not fall back to the root default profile. This supersedes the pending login setup below. No cloud resources launched.
+
 ## Owner PR-action gate
 
 Do not ask Josh to act on PRs until automated review approves the current head. Queued/missing reviews and request_changes remain automated/operator work. CG381 contains this explicit requirement; exact-head CI and mergeability checks still apply after approval.
