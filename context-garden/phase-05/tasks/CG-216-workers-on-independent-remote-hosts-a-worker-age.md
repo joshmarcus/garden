@@ -21,9 +21,9 @@ reading:
 - docs/architecture.md
 branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
 pr: https://github.com/joshmarcus/context-garden/pull/221
-last_dispatched_at: '2026-09-06T07:41:08+00:00'
+last_dispatched_at: '2026-09-07T13:03:43+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-07T12:47:53+00:00'
+updated: '2026-09-07T15:29:52+00:00'
 ---
 
 ## Goal
@@ -80,3 +80,9 @@ Remote AWS workers are now phase-05 work, without waiting for local stabilizatio
 - 2026-09-07T12:47:30+00:00 reset to ready by hand
 - 2026-09-07T12:47:52+00:00 triage: changes requested by hand: - **triage** (human): Owner-authorized revision: address the last automated review in full. Enable the promised remote p
 - 2026-09-07T12:47:53+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T13:03:43+00:00 dispatched revise run 20260907T130341Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~22894 tokens)
+- 2026-09-07T13:25:23+00:00 preserved uncommitted worktree changes from run 20260907T130341Z-revise outside the PR: `git stash apply 1343bf9e336991b5728f142b28b7078bc581681a` in /home/joshua/work/worktrees/CG-216 (garden:CG-216:20260907T130341Z-revise:reap)
+- 2026-09-07T13:35:26+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/221: Completed pull-based remote execution for work, review, check, and persona runs. Setup commands are now host-owned so embedded scheduler credentials never cross the claim API, and worker-push documentation consistently describes lease-specific staging refs. cost=$4.33
+- 2026-09-07T13:40:58+00:00 automated review requested changes: Remote execution is substantially implemented, but leases are not renewed during several potentially long stages and credential stripping misses SCP-style repository URLs. These defects violate the lease and credential-isolation criteria. cost=$1.26
+- 2026-09-07T13:41:15+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-216`) or send it back (`garden triage CG-216 --changes "..."`)
+- 2026-09-07T15:29:52+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow

@@ -14,6 +14,10 @@ Release includes installed899b plus approvedCG373 and six scoped fixes, excludin
 
 The dated entries below are historical where contradicted by this checkpoint. Preserve their salvage references and standing policies; do not repeat old deployments or queues.
 
+## Post-release check reconciliation, 2026-09-07 15:30Z
+
+Found CG377 repeatedly resurrected by collected empty base_probe20260907T141044Z-check after verified merge/deployment. Preserved state at operator-test-tmp/cg377-stale-check-20260907T1530.json, restoredDONE via Scheduler.mark_done and retired only stale continuation through locked State API. Original run evidence preserved. CG386 P1 owns terminal/parked-check idempotency; no new implementation run forCG377. CG216 andCG362 concrete outstanding feedback got one further authorized revision via retry; they remain normal queued work under5/3. CG385 still live and protected. Loaded route observations .827/.749/.400s, service1.98GiB mostlyfilecache, memoryPSI0/high/max/OOM0; no containment change. Incident acceptance remains open.
+
 ## Tailscale Serve verified
 
 Owner enabled Serve. Windows background proxy reports https://babel.taild4d2ae.ts.net (tailnet only) -> http://localhost:8765. HTTPS Now1 and Inbox returned200 from Windows. Trusted origin already validated. No public Funnel. Phone must keep Tailscale connected; actual phone interaction remains for owner to confirm. This supersedes pending Serve activation below.

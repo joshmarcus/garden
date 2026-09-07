@@ -1,7 +1,7 @@
 ---
 id: CG-377
 title: Scope review validation to affected behavior and acceptance claims
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on:
@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/284
 attempts: 1
 last_dispatched_at: '2026-09-07T13:38:39+00:00'
 created: '2026-09-07T09:31:44+00:00'
-updated: '2026-09-07T15:20:39+00:00'
+updated: '2026-09-07T15:29:52+00:00'
 ---
 
 ## Goal
@@ -100,3 +100,10 @@ Owner requested fixing overly broad validation demands on2026-09-07. CG358 had a
 - 2026-09-07T15:17:56+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
 - 2026-09-07T15:19:16+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
 - 2026-09-07T15:20:39+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:22:06+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:23:46+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:25:05+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:26:34+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:28:00+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:29:24+00:00 check did not run (20260907T141044Z-check): no check result; retry also failed; needs human
+- 2026-09-07T15:29:52+00:00 Verified PR284 merged40373fe9 and deployed0.2.0rc1. Retired already-collected empty base-probe continuation from14:10; it incorrectly resurrected the terminal task every tick. Original run/state preserved in operator-test-tmp/cg377-stale-check-20260907T1530.json; no implementation rerun.
