@@ -14,8 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/254
 attempts: 1
 last_dispatched_at: '2026-09-07T10:31:07+00:00'
 created: '2026-09-06T13:46:32+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: review-contract
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -81,11 +80,3 @@ CG-357 initially claimed performance evidence using inert worker records and ten
 - 2026-09-07T10:53:18+00:00 preserved uncommitted worktree changes from run 20260907T103105Z-revise outside the PR: `git stash apply 8279bccd70cb96f23e64eda6b0435f2f13ff14d7` in /home/joshua/work/worktrees/CG-339 (garden:CG-339:20260907T103105Z-revise:reap)
 - 2026-09-07T11:31:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/254: Review dispatch now independently runs a disposable served-application replay and pins its nonce, reviewed SHA, and manifest digest, preventing reviewer-authored JSON or screenshots from serving as execution proof. Lifecycle applicability includes model transitions and check execution/recovery, and durable replay evidence records nine successful flows, 100 HTTP requests, explicit affected/failure/recovery/empty outcomes, and Inbox zero. cost=$2.83
 - 2026-09-07T11:31:28+00:00 5 automated review round(s) used; this PR is yours — run `garden review CG-339` for one more round, or review on GitHub
-
-## Completion track
-
-Clear, proportionate review contract (`review-contract`), grouped by owner request. Members: CG-323, CG-339, CG-377.
-
-Integrate preflight/frozen criteria, interaction evidence, then scoped validation. Validate one shared head-bound plan from worker brief through reviewer verdict, with relevant failure cases and no unrelated page demands.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

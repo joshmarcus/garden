@@ -15,8 +15,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-07T09:47:24+00:00'
 created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: walkthrough-costs
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -84,11 +83,3 @@ Proposed at the context-garden/phase-04 retro. Three definition-of-done lines we
 - 2026-09-07T09:47:24+00:00 dispatched rebase run 20260907T094723Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~15511 tokens)
 - 2026-09-07T09:51:06+00:00 preserved uncommitted worktree changes from run 20260907T094723Z-rebase outside the PR: `git stash apply 54491ccfca458d447c27b786306b1be9b0749025` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T094723Z-rebase:reap)
 - 2026-09-07T09:57:47+00:00 pre-PR checks failed (lint) and 3 revision rounds already used; needs a human cost=$0.03
-
-## Completion track
-
-Reliable walkthrough and cost reporting (`walkthrough-costs`), grouped by owner request. Members: CG-253, CG-297, CG-300, CG-336.
-
-Integrate renderer correctness and Codex usage capture before final walkthrough/retro reporting integration. Validate a representative walkthrough plus one matched time-window cost calculation across ledger, retro and displayed metrics; retain unavailable-price labels.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

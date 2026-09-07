@@ -19,8 +19,7 @@ discovered_from: retro-editor:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-07T09:03:31+00:00'
 created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: walkthrough-costs
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -59,11 +58,3 @@ Both phase-04 reconcile runs printed operator: $0.00, 0% of total, because the s
 - 2026-09-07T09:14:56+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/269: Operator spend now consistently resolves to the tool-owning product's docs ledger by default, with configured paths still supported. Retro, Costs, Now, and the operator CLI share this behavior. cost=$0.08
 - 2026-09-07T09:14:57+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-300` for one more round, or review on GitHub
 - 2026-09-07T09:35:02+00:00 triage: marked ready for review
-
-## Completion track
-
-Reliable walkthrough and cost reporting (`walkthrough-costs`), grouped by owner request. Members: CG-253, CG-297, CG-300, CG-336.
-
-Integrate renderer correctness and Codex usage capture before final walkthrough/retro reporting integration. Validate a representative walkthrough plus one matched time-window cost calculation across ledger, retro and displayed metrics; retain unavailable-price labels.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

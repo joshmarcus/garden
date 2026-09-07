@@ -13,8 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/266
 attempts: 1
 last_dispatched_at: '2026-09-07T05:34:25+00:00'
 created: '2026-09-07T05:24:29+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: review-progress
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -51,11 +50,3 @@ What the agent needs to know that is not in the reading list.
 - 2026-09-07T05:34:25+00:00 dispatched work run 20260907T053359Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9160 tokens)
 - 2026-09-07T05:52:04+00:00 opened https://github.com/joshmarcus/context-garden/pull/266 (base main): Queued reviews now drain in strict task-priority order before ready workers claim shared local capacity. Equal-priority queued reviews retain their turn over newly requested rounds, and wait text identifies a preceding queue entry. cost=$1.78
 - 2026-09-07T09:40:02+00:00 priority 1 -> 0 (web)
-
-## Completion track
-
-Reviews progress without unnecessary human stops (`review-progress`), grouped by owner request. Members: CG-372, CG-374, CG-376.
-
-Integrate review admission fairness, routine recovery routing, then optional caps/friction. Validate a queued PR progressing through repeated feedback under shared/reviewer limits without an unnecessary owner decision, while unchanged failures remain actionable.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

@@ -23,8 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
 last_dispatched_at: '2026-09-07T10:02:21+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: review-contract
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -121,11 +120,3 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T10:11:30+00:00 stalled: revise run 20260907T100219Z-revise produced no change to the diff or PR description; run `garden triage CG-323 --changes "<feedback>" to unblock`
 - 2026-09-07T10:15:53+00:00 automated review: request_changes — The pre-flight and frozen-criteria flows are largely implemented and 107 focused tests pass, but the conflict-marker check rejects valid clean diffs containing an added Setext heading underline. cost=$0.96
 - 2026-09-07T10:17:09+00:00 triage: marked ready for review
-
-## Completion track
-
-Clear, proportionate review contract (`review-contract`), grouped by owner request. Members: CG-323, CG-339, CG-377.
-
-Integrate preflight/frozen criteria, interaction evidence, then scoped validation. Validate one shared head-bound plan from worker brief through reviewer verdict, with relevant failure cases and no unrelated page demands.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

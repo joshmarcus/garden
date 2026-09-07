@@ -1,8 +1,8 @@
 # Context-garden operator handoff
 
-## Owner-grouped completion tracks
+## Grouping correction
 
-Read context-garden/phase-05/completion-tracks.md. Review contract: CG323/339/377; review progress: CG372/374/376; walkthrough/costs: CG253/297/300/336; documentation: CG295/378. Shared integration/acceptance tracks preserve existing PRs/statuses; no duplicate workers or blanket new dependencies. CG373/375/379 stay separate.
+Owner says not to include in-flight tasks. The four completion tracks are withdrawn and their task annotations removed. Only consider unstarted work for grouping; a ready label does not erase prior implementation or dispatch. CG295 has prior work and is excluded. CG378 README and CG379 maintenance pause remain separate. See context-garden/phase-05/completion-tracks.md.
 
 
 ## DEPLOYED899b2c0 2026-09-07T11:46Z

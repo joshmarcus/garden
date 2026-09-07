@@ -94,4 +94,4 @@ Blocking the phase-04 close: CG-238 (merged), CG-239 (PR #193, in revise), CG-24
 
 ## Completion organization
 
-Owner-grouped remaining delivery work into four [completion tracks](completion-tracks.md): review contract, review progress, walkthrough/costs, and documentation. Use their combined acceptance and integration order while preserving existing task/PR identities.
+[Grouping policy](completion-tracks.md): group only unstarted work with a coherent shared deliverable. In-flight implementation, PRs, reviews, revisions, and recovery work are excluded. The previously proposed four tracks are withdrawn.

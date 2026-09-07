@@ -17,8 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/286
 attempts: 1
 last_dispatched_at: '2026-09-07T10:21:10+00:00'
 created: '2026-09-07T09:29:27+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: review-progress
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -46,11 +45,3 @@ CG300/323 stopped at four reviews despite concrete actionable findings. CG297 re
 - 2026-09-07T10:50:39+00:00 preserved uncommitted worktree changes from run 20260907T102043Z-work outside the PR: `git stash apply fc7d5cb9523f3b67adf24f8fba5bac8417d86d61` in /home/joshua/work/worktrees/CG-376 (garden:CG-376:20260907T102043Z-work:reap)
 - 2026-09-07T11:40:14+00:00 opened https://github.com/joshmarcus/context-garden/pull/286 (base main): Added explicit null/unlimited review-cap semantics, a separate soft loop-friction threshold, UI/CLI/Now support, regression tests, and a retrospective of the representative review loops. Final CI passed on ab256d7d6e393998d9ea91beee6eadf61eb05d8e. cost=$1.83
 - 2026-09-07T11:44:09+00:00 automated review requested changes: Unlimited-cap behavior is implemented coherently and the UI captures are clean, but the required end-to-end regression coverage for continued review and stale-cap recovery is missing. cost=$0.75
-
-## Completion track
-
-Reviews progress without unnecessary human stops (`review-progress`), grouped by owner request. Members: CG-372, CG-374, CG-376.
-
-Integrate review admission fairness, routine recovery routing, then optional caps/friction. Validate a queued PR progressing through repeated feedback under shared/reviewer limits without an unnecessary owner decision, while unchanged failures remain actionable.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.

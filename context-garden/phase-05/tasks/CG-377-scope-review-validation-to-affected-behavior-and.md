@@ -14,8 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/284
 attempts: 1
 last_dispatched_at: '2026-09-07T11:10:22+00:00'
 created: '2026-09-07T09:31:44+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: review-contract
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -70,10 +69,7 @@ Owner requested fixing overly broad validation demands on2026-09-07. CG358 had a
 - 2026-09-07T11:48:39+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
 - 2026-09-07T11:49:50+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
 
-## Completion track
-
-Clear, proportionate review contract (`review-contract`), grouped by owner request. Members: CG-323, CG-339, CG-377.
-
-Integrate preflight/frozen criteria, interaction evidence, then scoped validation. Validate one shared head-bound plan from worker brief through reviewer verdict, with relevant failure cases and no unrelated page demands.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.
+- 2026-09-07T11:51:02+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:52:14+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:53:26+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human
+- 2026-09-07T11:54:38+00:00 check did not run (20260907T112749Z-check): no check result; retry also failed; needs human

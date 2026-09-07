@@ -16,8 +16,7 @@ reading:
 harness: codex
 model: gpt-6-astra
 created: '2026-09-07T09:36:56+00:00'
-updated: '2026-09-07T11:50:52+00:00'
-completion_track: documentation
+updated: '2026-09-07T11:55:09+00:00'
 ---
 
 ## Goal
@@ -39,11 +38,3 @@ CG234 updated an earlier README; this is a new accuracy/usability pass against c
 ## Log
 
 - 2026-09-07T09:36:57+00:00 approved (web)
-
-## Completion track
-
-Current, usable documentation (`documentation`), grouped by owner request. Members: CG-295, CG-378.
-
-Integrate detailed documentation corrections first, then the Astra README synthesis. Validate quickstart commands, links and supported-versus-deferred behavior against the resulting build; reuse factual evidence instead of duplicating implementation.
-
-This is shared integration guidance, not additional implementation scope or a replacement for this task’s acceptance criteria. Preserve existing work and current-run criteria; the operator owns combined validation. Garden plan: context-garden/phase-05/completion-tracks.md.
