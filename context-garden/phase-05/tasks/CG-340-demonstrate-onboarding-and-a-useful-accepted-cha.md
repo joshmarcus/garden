@@ -1,7 +1,7 @@
 ---
 id: CG-340
 title: Demonstrate onboarding and a useful accepted change on an independent project
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on:
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/246
 attempts: 1
 last_dispatched_at: '2026-09-06T23:25:37+00:00'
 created: '2026-09-06T13:46:35+00:00'
-updated: '2026-09-06T23:44:24+00:00'
+updated: '2026-09-06T23:59:15+00:00'
 ---
 
 ## Goal
@@ -47,3 +47,10 @@ The owner raised the worker/shared local-run limit to four after GitHub CI offlo
 ## Operator mechanical snapshot cleanup, 2026-09-06 23:43 UTC
 
 With no active task run and a clean worktree, preserved scheduler-added snapshot6dc8fb0 as /home/joshua/work/operator-test-tmp/snapshot-salvage-20260906T2343Z/CG-340-6dc8fb0-snapshot.json with SHA256/recovery metadata. Restored only that file from base58e13b99 and pushed cleanup0484952b76a9fa0144ed08868e944dfa8d27b4eb without rewriting history. Verified the complete resulting Git tree equals the intended worker tree7df508f2f1706b6a2511389c74d5553f0e1b0fd3. New-head CI is pending; PR description records that accurately. No local full suite or extra model revision was used. Re-review only after new-head CI and updated evidence; do not redispatch a worker merely to remove the now-cleaned snapshot. Real-project adoption remains UNPROVEN.
+- 2026-09-06T23:51:24+00:00 triage: marked ready for review
+- 2026-09-06T23:51:25+00:00 Operator verified exact cleaned head0484952 branch CI34067694587 and PR CI34067695597 SUCCESS, replaced stale PR evidence and marked eligible for re-review. Respect one-review cap; request review once no other reviewer is live. No worker revision needed for the removed snapshot.
+- 2026-09-06T23:51:27+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-340`) or send it back (`garden triage CG-340 --changes "..."`)
+- 2026-09-06T23:54:42+00:00 description rewritten by the reviewer cost=$0.19
+- 2026-09-06T23:54:49+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-340`) or send it back (`garden triage CG-340 --changes "..."`)
+- 2026-09-06T23:58:07+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/246
+- 2026-09-06T23:59:15+00:00 Exact-head review235318 approved the fixture implementation and supplied a permanent PR-description rewrite. Applied that rewrite, verified head0484952 and both CI successes plus GitHub CLEAN, then owner-authorized merge atf41b414ccf816a56d2c7dc17b85e300f4d13cb2d,23:57:34 UTC. Normal poll should reconcile DONE. Real-user adoption remains UNPROVEN. A stale pending-feedback/needs-human flag survived the description-only approve path; merge approval was based on actual current review/CI, not a fabricated scheduler verdict.

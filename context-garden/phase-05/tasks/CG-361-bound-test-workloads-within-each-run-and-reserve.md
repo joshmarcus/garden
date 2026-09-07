@@ -1,7 +1,7 @@
 ---
 id: CG-361
 title: Bound test workloads within each run and reserve web capacity
-status: ready
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,10 +9,11 @@ priority: 0
 difficulty: hard
 reading: []
 branch: garden/cg-361-bound-test-workloads-within-each-run-and-reserve
-attempts: 1
-last_dispatched_at: '2026-09-06T21:40:23+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/244
+attempts: 2
+last_dispatched_at: '2026-09-06T23:55:31+00:00'
 created: '2026-09-06T21:38:26+00:00'
-updated: '2026-09-06T22:59:27+00:00'
+updated: '2026-09-06T23:55:31+00:00'
 ---
 
 ## Goal
@@ -64,3 +65,16 @@ Do not run another full suite locally or modify the production service. Preserve
 snapshot changes rather than adding them to the PR. Keep the workload/application evidence
 honest: GitHub passing the suite alone does not establish local resource isolation.
 - 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CI offload deployed; eligible for one controlled recovery continuation under unchanged resource caps.
+- 2026-09-06T23:03:31+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply fad1a65f4861637f96afc93356b4f503f1a4bc9f` in /home/joshua/work/worktrees/CG-361 to recover them (garden:CG-361:2026-09-06T23:03:31+00:00)
+- 2026-09-06T23:03:33+00:00 dispatched work run 20260906T230331Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10560 tokens)
+- 2026-09-06T23:15:58+00:00 opened https://github.com/joshmarcus/context-garden/pull/244 (base main): Local execution now shares a configurable per-user heavy-workload lease and an optional delegated cgroup, keeping descendants within an aggregate CPU/memory boundary while preserving explicit waiting, cancellation, recovery, and operator visibility. Setup commands, checks, probes, workers, reviewers, and supported CLI checks execute inside that boundary; exact-commit GitHub CI passed. cost=$1.56
+- 2026-09-06T23:21:07+00:00 automated review requested changes: The lease mechanism is promising, but required workload and journey evidence is absent, isolation can be reported as enforced without any CPU or memory cap, and the focused regression suite fails in a finite-cgroup environment. The PR also includes a large unrelated generated snapshot rewrite. cost=$0.25
+- 2026-09-06T23:25:03+00:00 dispatched revise run 20260906T232501Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~12174 tokens)
+- 2026-09-06T23:49:00+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/244: Bounded local validation now uses shared execution leases and only reports cgroup isolation after finite CPU/memory controls and process migration are verified. Added real-workload concurrency and retained-history responsiveness evidence, restored the unrelated snapshot, captured every affected operator page, and passed exact-commit CI. cost=$3.28
+- 2026-09-06T23:51:22+00:00 automated review requested changes: The cross-run lease and optional cgroup boundary are well documented and tested, but a worker holding one lease can still start multiple heavy suites concurrently. This misses the task’s central within-run enforcement and demonstration requirements. cost=$0.99
+
+
+## Focused second-review continuation, 2026-09-06 23:55 UTC
+
+The latest review verified the cross-run lease and cgroup work but found the central remaining defect: inherited leases bypass admission for concurrent nested heavy validations within one worker. Implement separate, enforceable admission for supported nested validation launches while preserving parent/child deadlock avoidance. Demonstrate two competing validations from one worker with at most one heavy suite active, using focused bounded workloads. Preserve existing passing behavior and address the actual enforcement gap; do not replace it with a prompt or a claimed guarantee for unsupported arbitrary commands. Keep unrelated snapshots in named recovery stashes and leave them out of the dirty worktree at completion; CG359 fixes the installed scheduler's salvage bug but is not yet deployed. Full suites stay on GitHub, no additional model agents or production service changes.
+- 2026-09-06T23:55:31+00:00 dispatched revise run 20260906T235529Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~11882 tokens)

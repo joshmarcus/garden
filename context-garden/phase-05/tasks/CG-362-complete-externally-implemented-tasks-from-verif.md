@@ -9,7 +9,7 @@ priority: 1
 difficulty: medium
 reading: []
 created: '2026-09-06T22:23:48+00:00'
-updated: '2026-09-06T22:59:27+00:00'
+updated: '2026-09-06T23:59:15+00:00'
 ---
 
 ## Goal
@@ -34,3 +34,4 @@ Source evidence: docs/incidents/CG-360-validation.md, CG-360 task log and manual
 
 - 2026-09-06: Priority1 follow-up filed with owner authority after direct operator implementation exposed manual completion overhead. Ordinary dispatch remains paused.
 - 2026-09-06T22:59:27+00:00 2026-09-06T22:59:27+00:00: CG363 external worktree remained outside scheduler path from the outset. Normal finish_manual API succeeded with review.enabled false scoped to that single call under owner direct-work authority, followed by normal merged-PR reconciliation; no extra model launched and spend stayed unknown. A supported CLI option should avoid needing this scoped API configuration.
+- 2026-09-06T23:59:15+00:00 Operator review workflow friction23:53-23:57: triage-ready retained CG340 old pending_feedback; reconcile set needs_human="stuck: pending feedback recorded but the task is in_review, not changes_requested". Explicit review_again clears needs_human at dispatch but an approve verdict with description_rewrite returned early and left old feedback/stop intact. Actual reviewed head and CI were valid; operator applied permanent rewrite and merged. A supported manual-repair -> queued re-review path should respect review_parallel, preserve findings for review, then clear only obsolete feedback/stops on approval. Include this boundary in external/manual completion design or file a separate fix if scope warrants; never hand-edit state as the workaround.
