@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/239
 attempts: 1
 last_dispatched_at: '2026-09-07T01:22:51+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-07T02:20:16+00:00'
+updated: '2026-09-07T02:25:06+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,4 @@ A responsive, durable recovery action would have started CG-357 promptly and avo
 - 2026-09-07T01:27:43+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/239: Rebased CG-358 onto origin/main and resolved all rebase conflicts while preserving both sides and the pre-existing snapshot change cost=$0.04
 - 2026-09-07T02:19:38+00:00 triage: changes requested by hand: PR239 exact-head CI34073026576 failed two concrete cases: tests/scheduler/test_restart.py::test_restart_reconciles_a_no_
 - 2026-09-07T02:20:16+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-358`) or send it back (`garden triage CG-358 --changes "..."`)
+- 2026-09-07T02:25:06+00:00 re-enabled by hand; revise run will follow
