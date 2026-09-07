@@ -2,6 +2,12 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## Latest browser runtime and latency containment 2026-09-07T03:50Z
+
+Browser runtime environment activated through ~/.config/systemd/user/garden-serve.service.d/browser-runtime.conf. Tick-lock accounted restart verified only five work/revise processes and KillMode=process; all five PIDs survived (CG3392632631,CG3652633990,CG3222677698,CG3582633237,CG3272632301). NewserverPID2687086 and LD_LIBRARY_PATH verified. Installed code remains5cff609. CG326 stale empty baseprobe recovered; concrete evidence continuation queued with explicit local library path for scrubbed worker commands, preserve implementation and generate actual new PNGs/390px measurements. No fabricated screenshot approval.
+
+Initial pages2.245/2.054s then repeat2.709/2.695s after restart under5worker workload. Per incident rule temporary worker/shared1/1 restored through supported actions; existing workers preserved to drain, no blanket pause or raised caps. Owner target5 remains; this supersedes previous restored5 entries. Diagnose repeated latency before another increase. Earlier03:45 pre-restart readings .782/.733s at1.79GB, memoryPSI0/high/max/OOM0; do not claim proven memory cause. Browser activation is verified environment, not completed screenshot acceptance.
+
 ## Owner-requested normal activity restored 2026-09-07T03:40:24.713488+00:00
 
 Owner requested normal activity. Restored supported worker/shared5/5, reviewer1, ordinary dispatch enabled. This supersedes temporary1/1 below. Pre-change pages.637/.638/.543s, service430MB, CPU/memoryPSI0, IOavg10=0,high/max/OOM0,temp2158MiB. CG322 active, preserved. Existing OS caps and five-minute monitoring unchanged. Browser dependencies remain staged awaiting safe integration/drained restart; do not forget that separate recovery step.

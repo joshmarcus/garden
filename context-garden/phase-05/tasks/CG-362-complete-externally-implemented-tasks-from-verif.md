@@ -9,7 +9,7 @@ priority: 1
 difficulty: medium
 reading: []
 created: '2026-09-06T22:23:48+00:00'
-updated: '2026-09-07T02:24:00+00:00'
+updated: '2026-09-07T03:49:33+00:00'
 ---
 
 ## Goal
@@ -40,3 +40,4 @@ Source evidence: docs/incidents/CG-360-validation.md, CG-360 task log and manual
 - 2026-09-07T01:43:27+00:00 2026-09-07 01:43 UTC: CG365 triage-changes wrote a complete pending_feedback but simultaneously produced needs_human="stuck: no feedback recorded to revise against"; task sat changes_requested while ordinary slots advanced other work. Verified persisted state contains the complete correction, no active CG365 run and PR OPEN; supported /retry cleared needs_human while retaining feedback, no immediate dispatch/bypass. Add regression for state visibility/order during triage transition and stuck reconciliation.
 - 2026-09-07T02:13:54+00:00 CG293 owner inquiry02:12 UTC exposed another lost-feedback case: last_review.request_changes with three findings survived, pending_feedback was empty, needs_human claimed no feedback. Restored from actual stored verdict through triage/retry. Regression should preserve/reconstruct actionable review feedback across failed checks/base-broken and rebase transitions without making owner interpret this internal inconsistency.
 - 2026-09-07T02:24:00+00:00 Human-queue audit: CG322/293 lost revision feedback, CG326 stale base probe, CG332 zero actual PNGs causing repeated broad screenshot findings, and frozen drafts appearing as current human decisions. Recovery must distinguish actionable decisions from deferred/operator-owned prerequisite holds and route missing capture infrastructure to its repair rather than paid unrelated revisions. See docs/human-queue-2026-09-07.md.
+- 2026-09-07T03:49:33+00:00 Browser capture infrastructure root cause confirmed: host lacks libnspr4/libnss3; empty base-probe recovery was repeatedly retried despite checks=[]. User-local Ubuntu libraries now activated for service, worker continuation explicitly receives library path. Prevent repeated empty probes and classify missing browser runtime as infrastructure readiness rather than unrelated revisions.

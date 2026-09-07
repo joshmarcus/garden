@@ -1,7 +1,7 @@
 ---
 id: CG-326
 title: 'Fix the Edge capture recipe for 390-wide captures: frame the page in a 390 px iframe'
-status: in_review
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -16,7 +16,7 @@ discovered_from: CG-308
 attempts: 2
 last_dispatched_at: '2026-09-07T03:00:32+00:00'
 created: '2026-09-06T04:18:52+00:00'
-updated: '2026-09-07T03:35:22+00:00'
+updated: '2026-09-07T03:48:12+00:00'
 ---
 
 Edge headless on this machine has a window floor of about 496 px, so the product overview's `--window-size=390` recipe lays the page out at 496 and every phone capture looks cut off at the right (measured from the page: clientWidth 496). A local HTML file with a `<iframe src="http://localhost:PORT/page" style="width:390px;height:5400px;border:0">` captured at a 600-wide window gives a true 390 viewport (clientWidth 390, scrollWidth 390). Update the recipe in the product overview and have CG-315's check use the wrapper for its narrow captures.
@@ -70,3 +70,14 @@ The operator is correcting the garden-local product overview separately. Keep wo
 - 2026-09-07T03:33:45+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
 - 2026-09-07T03:34:51+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
 - 2026-09-07T03:35:22+00:00 Operator confirmed host capture blocker: Playwright Chromium lacks libnspr4/libnss3/libnssutil3/libsmime3; latest base probe checks=[] is not a code verdict. Official Ubuntu libnspr4/libnss3 packages extracted to ~/.local/share/garden/browser-runtime. Bounded probe with LD_LIBRARY_PATH=/home/joshua/.local/share/garden/browser-runtime/usr/lib/x86_64-linux-gnu successfully launches Chromium and measures390px (382MiB peak). Not yet configured in service; apply at next safe drained boundary, then supported check recovery and actual capture validation. Do not revise working capture code merely to bypass missing host libraries.
+- 2026-09-07T03:35:57+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:37:03+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:38:10+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:39:16+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:40:22+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:41:40+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:42:50+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:44:27+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:46:21+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:47:27+00:00 check did not run (20260907T032801Z-check): no check result; retry also failed; needs human
+- 2026-09-07T03:48:12+00:00 triage: changes requested by hand: Host browser libraries are now supplied to service by browser-runtime.conf after accounted restart, all five existing wo
