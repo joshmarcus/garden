@@ -2,6 +2,10 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## CG329 hold released
+
+Owner explicitly released CG329/PR233 safety hold. Supported approve then triage-changes queued preserved implementation for current-main/shared-cap reconciliation and fresh UI/CI evidence. GitHub actual headfa1ad237 at release differs from old cached8874a88; verify new head before review/merge. Current worker/shared4 and reviewer1 remain. Historical safety-hold references below are superseded; phase06 freeze unchanged.
+
 ## Current adoption gate policy
 
 Owner removed named external-project adoption/maintainer acceptance from phase05 closure and phase06 release requirements. Repeatable non-Python onboarding and useful accepted-change demonstration remains required and must be labeled fixture evidence. No need to wait for a named maintainer. Other stabilization/cost/quality/recovery gates remain unchanged. Historical UNPROVEN real-user labels below are evidence history, not a current phase blocker.
@@ -36,7 +40,7 @@ Read .claude/skills/garden-operate/SKILL.md and context-garden/docs/incident-pro
 
 Josh delegates routine decisions, approvals, direct fixes, PR merges and process-gap filing. Preserve unfinished work and distinguish live processes from labels. No extra model agents without explicit authorization. Scheduled workers have owner-authorized concurrency FIVE. Workers self-review internally, repair findings and recheck before completion; report normal acceptance evidence. Reviewers directly fixing code remains deferred.
 
-Fast-forward is INACTIVE. Its historical ledger is context-garden/docs/fast-forward.md, not an active maintenance queue. Phase06 and PR221/222 remain frozen; new features belong there as drafts. CG329/PR233 retains its operator safety hold; its non-draft GitHub state is not permission to merge. Phase05 remains UNPROVEN: four productive unattended hours, ten representative completions, recovery exercises, actual application journeys and the repeatable onboarding/useful-change demonstration. Named external-project adoption is no longer a phase requirement (owner decision2026-09-07). Operator interventions do not count as unattended progress. Both Now pages and main Now CLI repair merged; do not resurrect old queues.
+Fast-forward is INACTIVE. Its historical ledger is context-garden/docs/fast-forward.md, not an active maintenance queue. Phase06 and PR221/222 remain frozen; new features belong there as drafts. Owner released CG329/PR233 operator safety hold; it is back in normal revision/review with current-head evidence and shared resource caps required. Phase05 remains UNPROVEN: four productive unattended hours, ten representative completions, recovery exercises, actual application journeys and the repeatable onboarding/useful-change demonstration. Named external-project adoption is no longer a phase requirement (owner decision2026-09-07). Operator interventions do not count as unattended progress. Both Now pages and main Now CLI repair merged; do not resurrect old queues.
 
 ## Resource containment and current build
 

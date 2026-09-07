@@ -2,7 +2,7 @@
 id: CG-329
 title: 'The worker count the dispatcher enforces and the count the rail shows are the same number: checks,
   reviews and edit runs either take a slot visibly or not at all'
-status: draft
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -20,7 +20,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/233
 attempts: 1
 last_dispatched_at: '2026-09-06T19:00:53+00:00'
 created: '2026-09-06T05:26:49+00:00'
-updated: '2026-09-06T20:11:35+00:00'
+updated: '2026-09-07T04:13:54+00:00'
 ---
 
 ## Goal
@@ -51,3 +51,6 @@ One definition of a worker slot. `max_parallel` counts the runs that occupy a sl
 - 2026-09-06T19:13:15+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, inbox, n; run `garden triage CG-329 --changes "<feedback>" to unblock`
 - 2026-09-06T19:43:11+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-06T20:11:35+00:00 Operator safety hold until CG-338 shared admission and descendant ownership land: removing check/edit slot gates without their own bound risks the observed suite contention. Preserve PR233, revisit when CG-338 is verified. Correctness tests approved; not a request to redo worker-slot implementation.
+- 2026-09-07T04:13:52+00:00 Owner explicitly released the operator safety hold. Resume normal validation of preserved PR233. Current shared cap4/reviewer1 and OS resource limits remain in force; do not confuse worker-mode display exclusions with bypassing shared resource admission.
+- 2026-09-07T04:13:52+00:00 approved (web)
+- 2026-09-07T04:13:54+00:00 triage: changes requested by hand: Owner released safety hold. Preserve PR233 implementation; reconcile with current main and shared resource admission now
