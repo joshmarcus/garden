@@ -11,7 +11,7 @@ priority: 0
 difficulty: medium
 reading: []
 created: '2026-09-06T23:32:08+00:00'
-updated: '2026-09-07T04:08:24+00:00'
+updated: '2026-09-07T04:08:50+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,4 @@ Owner question: Are there tests we could remove for being redundant or not usefu
 - 2026-09-07T02:33:08+00:00 priority 2 -> 1 (web)
 - 2026-09-07T04:08:24+00:00 priority 1 -> 0 (web)
 - 2026-09-07T04:08:24+00:00 Owner explicitly prioritized CG364: raised toP0 for next available normal worker admission; preserve four shared slots and existing active work. Focus on measured fixture/setup cost and justified redundant-test removal, retain meaningful regressions.
+- 2026-09-07T04:08:50+00:00 priority 0 -> 0 (web)
