@@ -2,11 +2,17 @@
 
 ## Current activation: focused pass, 2026-09-07
 
-ACTIVE by explicit owner instruction. Scope is CG383 resource admission, then CG323/339/377/376/372 review-churn fixes, followed by validated versioned deployment and normal-mode restoration. AWS and other unrelated PRs are outside this pass and preserved. This supersedes historical activation/scope below. Ordinary dispatch paused; CG382/381 workers are draining before UI-only transition. Existing heartbeat now drives this goal and must not dispatch/review/resume during maintenance.
+ACTIVE by explicit owner instruction. Scope is CG383 resource admission, then CG323/339/377/376/372 review-churn fixes, followed by validated versioned deployment and normal-mode restoration. AWS and other unrelated PRs are outside this pass and preserved. This supersedes historical activation/scope below. Ordinary dispatch paused; all garden runs drained and UI-only mode was verified at14:17Z. Existing heartbeat now drives this goal and must not dispatch/review/resume during maintenance.
 
 Entry inventory and control snapshot: /home/joshua/work/operator-test-tmp/fast-forward-20260907. No extra model agents; CPU200% and memory4.5GiB/5GiB caps preserved. Operator self-review replaces further automated review only within this owner-authorized pass.
 
 ### Current action ledger
+
+14:17Z: tick-lock inventory empty, service cgroup only server; restarted existing service with reversible fast-forward.conf / serve --no-watch. Now1/Inbox200 at.880/.689s. Temporary drain overrides reviewer0/shared1 must restore original5/3 on exit. No run lost; installed899b and OS caps unchanged.
+
+CG383 PR293/c7b8eb5: fixed experiment provenance and added matched ext4/tmpfs plus real12-test fixture; full fixture peak275.7MiB/noSwap/no pressure events. Exact-head CI34131766485 pending. Calibration supports bounded reclaim and fresh ordinary admission recheck, not file-memory subtraction. Product policy implementation remains unfinished.
+
+CG323 PR241/a992f6d: fixed the current blocking review finding (Setext headings falsely treated as conflict separators), added regression including removed markers.16 preflight tests and full source/test lint pass; unit71.8MiB/noSwap. Exact-head CI pending; full final operator review/GitHub-thread disposition required before merge.
 
 CG383: inspected existing4c5a956 and found original calibration used unspecified tempfile storage while /tmp is tmpfs; file accounting omitted shmem. Separate corrected disk-backed probe recorded72MiB inactive_file, zero shmem and successful64MiB reclaim (~66MiB current reduction), with no pressure/high/max/OOM events and peak87.7MiB. Original evidence retained. Fix experiment provenance and validation before designing the admission change; this small sample does not prove universal reclaimability. Artifact fast-forward-20260907/disk-report.json.
 

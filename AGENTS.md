@@ -1,3 +1,9 @@
+## Fast-forward fully quiesced 2026-09-07 14:17Z
+
+Owner-authorized focused fast-forward ACTIVE. All garden runs drained; under tick lock verified service cgroup contained only server, then installed fast-forward.conf and restarted existing service with serve --no-watch (PID225493). Now1/Inbox200 at.880/.689s. Installed899b unchanged; caps4.5/5GiB andCPU200% unchanged. Ordinarypause persists. Temporary drain overrides review_parallel0/resources.max_parallel1; restore original worker/shared5 andreview3 only on verified exit. Heartbeat must not tick/dispatch/review/resume during maintenance.
+
+Direct work: CG383 PR293 headc7b8eb5 corrects tmpfs/disk calibration,12 bounded resource tests pass, matched disk/tmpfs evidence committed. ExactCI34131766485 pending. No production policy change; bounded reclaim plus fresh headroom check still requires implementation. CG323 PR241 heada992f6d fixes blocking Setext false-positive;16 bounded preflight tests/full lint pass, exactCIpending. Preserve original CG383 snapshotstash. Next verify CI, self-review full scoped PRs/current GitHub threads, merge serially and continue CG339/377/376/372, then verified versioned rollout. AWS/unrelated PRs preserved. Two operator CI waiter sessions49973/63647 may still be active; these are not garden workers. This entry supersedes activation drain observations below.
+
 # Context-garden operator handoff
 
 ## FAST-FORWARD ACTIVE: focused resource/review repair
