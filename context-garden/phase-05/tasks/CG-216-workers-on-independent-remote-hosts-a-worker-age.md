@@ -21,9 +21,9 @@ reading:
 - docs/architecture.md
 branch: garden/cg-216-workers-on-independent-remote-hosts-a-worker-age
 pr: https://github.com/joshmarcus/context-garden/pull/221
-last_dispatched_at: '2026-09-07T13:03:43+00:00'
+last_dispatched_at: '2026-09-07T16:36:44+00:00'
 created: '2026-09-05T16:12:08+00:00'
-updated: '2026-09-07T15:29:52+00:00'
+updated: '2026-09-07T18:04:43+00:00'
 ---
 
 ## Goal
@@ -86,3 +86,22 @@ Remote AWS workers are now phase-05 work, without waiting for local stabilizatio
 - 2026-09-07T13:40:58+00:00 automated review requested changes: Remote execution is substantially implemented, but leases are not renewed during several potentially long stages and credential stripping misses SCP-style repository URLs. These defects violate the lease and credential-isolation criteria. cost=$1.26
 - 2026-09-07T13:41:15+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-216`) or send it back (`garden triage CG-216 --changes "..."`)
 - 2026-09-07T15:29:52+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T15:37:54+00:00 dispatched revise run 20260907T153748Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24363 tokens)
+- 2026-09-07T16:01:05+00:00 preserved uncommitted worktree changes from run 20260907T153748Z-revise outside the PR: `git stash apply a798d5ca3dc357382b54a3816df205b4448cd917` in /home/joshua/work/worktrees/CG-216 (garden:CG-216:20260907T153748Z-revise:reap)
+- 2026-09-07T16:06:13+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$2.75
+- 2026-09-07T16:20:00+00:00 dispatched revise run 20260907T161958Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24067 tokens)
+- 2026-09-07T16:26:57+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$0.82
+- 2026-09-07T16:27:13+00:00 dispatched revise run 20260907T162711Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24136 tokens)
+- 2026-09-07T16:36:32+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$1.34
+- 2026-09-07T16:36:44+00:00 dispatched revise run 20260907T163643Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~24205 tokens)
+- 2026-09-07T16:37:24+00:00 Operator incident containment: temporary manual admission hold after the current active revision drains, so P0 CG385 repair gets the sole recovery slot. Preserve current worker, PR, edits and feedback. Restore normal runner after CG385 is actually admitted; no owner action required.
+- 2026-09-07T17:01:21+00:00 pre-PR checks failed (ui, UI captures) and 6 revision rounds already used; needs a human cost=$2.83
+- 2026-09-07T17:01:39+00:00 Operator restored original runner after CG385 recovery repair acquired actual execution slot. Shared cap remains1.
+
+
+## Operator recovery evidence, 2026-09-07
+Controller/branch capture CLI incompatibility repaired in4a1371f8e77bf01c1ea1175871aca97649ccf438. Installed controller passed argv4 (JSON pages), branch accepted only argv3 and silently exited2. Both forms now accepted; legacy engine safely renders all pages. Focused regression passes. Actual installed-interpreter invocation with the new fourth argument produced56PNGs across14pages at1280/390 light/dark, all narrow clientWidth/scrollWidth390. Runtime69.2seconds,691MiB,noSwap. Source changes after this capture only add a blank line between test imports; production source identical to committed head. Evidence and JSON result: /home/joshua/work/operator-test-tmp/cg216-capture-compat/stdout.json; PNGs at sibling captures directory. Prior failed check run is honest history, superseded by this actual recovery capture, not grounds for another blind implementation revision. Exact-head CI34149879293 must pass before merge. CG389 records cross-version protocol diagnostics/prevention. Operator requests current-head automated review of remaining lease/credential and acceptance criteria; preserve all prior commits.
+- 2026-09-07T18:04:27+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T18:04:28+00:00 triage: marked ready for review
+- 2026-09-07T18:04:41+00:00 converted back to draft on GitHub
+- 2026-09-07T18:04:43+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/cli/diagnostics.py, src/garden/scheduler/checkruns.py, src/garden/scheduler/review.py, src/garden/web/pages/api.py); a rebase agent will resolve it
