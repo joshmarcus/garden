@@ -2,7 +2,7 @@
 id: CG-323
 title: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR
   checks, and criteria are frozen at dispatch
-status: in_review
+status: running
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -21,9 +21,9 @@ reading:
 branch: garden/cg-323-the-worker-pre-flights-its-pr-against-the-review
 pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
-last_dispatched_at: '2026-09-07T02:19:05+00:00'
+last_dispatched_at: '2026-09-07T03:00:29+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T02:37:54+00:00'
+updated: '2026-09-07T03:00:29+00:00'
 ---
 
 ## Goal
@@ -81,3 +81,7 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T02:32:52+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/241: Workers now receive, report, and are mechanically gated by the review pre-flight; dispatched criteria remain frozen. Missing results under the new contract preserve committed work and enter an automatic revise round with the required reason and frozen criteria. cost=$1.17
 - 2026-09-07T02:32:53+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-323` for one more round, or review on GitHub
 - 2026-09-07T02:37:54+00:00 triage: marked ready for review
+- 2026-09-07T02:39:41+00:00 automated review requested changes: The rubric, result gate, frozen criteria, revise delta, and focused coverage are implemented. However, changed-file inspection can still raise outside the fail-closed mechanical checker, so a Git error may abort the tick instead of producing revise feedback. cost=$0.43
+- 2026-09-07T02:40:09+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-323`) or send it back (`garden triage CG-323 --changes "..."`)
+- 2026-09-07T02:44:13+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T03:00:29+00:00 dispatched revise run 20260907T030027Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~23654 tokens)

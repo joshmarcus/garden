@@ -1,7 +1,7 @@
 ---
 id: CG-365
 title: Complete resource isolation enforcement and evidence after CG-361
-status: ready
+status: in_review
 product: context-garden
 phase: phase-05
 depends_on:
@@ -16,7 +16,7 @@ discovered_from: CG-361
 attempts: 1
 last_dispatched_at: '2026-09-07T01:50:08+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T02:24:00+00:00'
+updated: '2026-09-07T03:00:06+00:00'
 ---
 
 ## Goal
@@ -65,3 +65,4 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T02:23:48+00:00 Owner-delegated queue disposition: False-positive fence failure established by preserved attribution evidence; completed PR249 and exact-head CI remain intact. Preserve FAILED run history. Operator owns recovery review after CG366 safe fence repair is installed and verified; inspect current real workload artifacts, no blind implementation retry.
 - 2026-09-07T02:23:52+00:00 nothing to fix; needs-human stop cleared by hand
 - 2026-09-07T02:24:00+00:00 False-positive fence failure established by preserved attribution evidence; completed PR249 and exact-head CI remain intact. Preserve FAILED run history. Operator owns recovery review after CG366 safe fence repair is installed and verified; inspect current real workload artifacts, no blind implementation retry.
+- 2026-09-07T03:00:06+00:00 triage: marked ready for review

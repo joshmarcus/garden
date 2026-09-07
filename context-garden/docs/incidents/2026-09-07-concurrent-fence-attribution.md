@@ -17,3 +17,9 @@ CG365 remains failed as honest run history pending recovery; do not repeat its c
 ## Recovery and retrospective due
 
 Verify new and old in-flight manifests preserve concurrent log updates; actual prohibited writes remain detected and no stale snapshot rollback erases legitimate state. Audit affected transcripts against native session records without overwriting active logs. Deploy narrowly validated repair at an accounted boundary; resume owner-approved ordinary4/1 when integrity is verified. Preserve prior resource monitoring, actual loaded application journeys and recurrence retro requirements; this incident requires its own causal review and prevention tasks. No unattended stabilization claim.
+
+## Verified narrow deployment and admission restoration (2026-09-07T03:00:54.402267+00:00)
+
+PR256 merged8c919160 after current-head approval and exact CI. Installed narrow release5cff609b3ef355154cd4eb987133c6961ae12f5c, based on previousfc658809 plus approved fence commits only, avoiding deployment of unresolved resource code onmain. Exact releaseCI34077778247 passed. Source/tests/docs byte-identical to approvedd954961. Drained tick lock, no active runs, existing service restartPID2493826; bounded install169.6MiB peak. Installed54 fence regressions pass including concurrentappend/non-destructive evidence and realwrite protections (4.49s,141.1MiB peak). Routes200 with subsecond initial probes. POST/resume200 restored owner5/5/1 and unchanged OS caps.
+
+Integrity repair is installed and admission restored. Incident remains in observation/follow-up: audit missing transcript tails, realistic subsequent run evidence, retro/prevention tasks. Separate web/resource journey and phase gates remain unproven. CG365 current-head recovery review dispatched without redoing implementation after this prerequisite passed.

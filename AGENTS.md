@@ -1,6 +1,6 @@
 # Context-garden operator handoff
 
-Current state consolidated 2026-09-07T02:08:31Z. Verify live state before acting; dated older observations are history.
+Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
 ## Start here and authority
 
@@ -12,11 +12,15 @@ Fast-forward is INACTIVE. Its historical ledger is context-garden/docs/fast-forw
 
 ## Resource containment and current build
 
-NEW INTEGRITY INCIDENT: ordinary admission temporarily PAUSED via POST/pause around02:04 after the fence falsely attributed and rewound concurrently written sibling logs. Prior owner-requested normal resume was honored; this is a distinct observed destructive failure, not reinstating the old blanket resource hold. Existing workers preserved. CG366 priority0 repair is taking the next free capped shared slot; verify actual run below. Retain worker/shared5,reviewer1, memory threshold1536MiB/temp1024MiB and CPUQuota200%,CPUWeight20,MemoryHigh3GiB/Max4GiB/Swap512MiB. No broad fence bypass/runtime patch applied. Incident record: context-garden/docs/incidents/2026-09-07-concurrent-fence-attribution.md.
+LIVE UPDATE 2026-09-07T03:01Z: CG366/PR256 merged8c919160 after exact-head review approved d954961, GitHub CI and scratch-merge lint passed. Deployed narrow release5cff609b3ef355154cd4eb987133c6961ae12f5c (codex/fence-release-20260907): installedfc658809 plus only the three approved fence commits. Exact release CI34077778247 passed. Fence source/tests/docs identical to approved PR; clean cherry-picks. Main includes resource changes awaiting CG365 acceptance, so do not replace this release with arbitrary main.
 
-Installed pin fc65880957788c5240abd8ef69281a639d4a876c includes CG359 snapshot salvage and CG340 onboarding fixture, plus earlier CG363 CI offload, CG360 archive consistency and CG337 attention repairs. Exact main CI34070336947 passed. Deployed at a verified drained fresh-tick boundary 00:48:50–00:48:55 UTC using bounded CPU200%/MemoryMax1GiB/no-swap installer (159MiB peak). Read-only venv permissions restored. Existing normal-watch garden-serve.service restarted as PID2146567; pause, limits and phase holds preserved. No active work was interrupted. Now2/Inbox/Config returned200 in .715/.718/.285s after deployment. This is initial rollout verification, not incident closure.
+Installed5cff609 verified by direct_url SHA, exact source bytes and import. Drained tick-lock boundary03:00:57–03:01:05, no active runs; stopped/started existing garden-serve.service, newPID2493826. Bounded installer CPU200%/MemoryMax1GiB/no-swap peaked169.6MiB; venv read-only permissions restored. Installed-build54 fence regressions passed in4.49s, separate capped unit141.1MiB peak. Concurrent append preservation and real prohibited-write protections passed. No runtime bypass.
 
-/tmp is3GiB tmpfs; /home/joshua/work/tmp links to /tmp/garden-work, recreated by the worker-temp drop-in. Never delete active temp/history/caches. Manual heavy work must use a separate bounded systemd user unit and disk temp /home/joshua/work/operator-test-tmp. Local tests stay focused, serial and bounded; full suites run on exact-final-commit GitHub CI using python3 scripts/check_ci.py. setup.worker_push=true permits assigned-branch normal pushes only; scheduler owns PR creation/merging. Never reuse old-head CI after branch changes.
+Ordinary dispatch RESUMED via POST/resume200 after deployment verification. Persisted no pause; owner worker/shared5,reviewer1, CPU200%,CPUWeight20,MemoryHigh3GiB/Max4GiB/Swap512MiB and host1536MiB/temp1024MiB thresholds retained. Initial Now1/Now2/Inbox/Config200 at .717/.587/.679/.257s. This is recovery verification, not four-hour stabilization or incident-retro completion. Continue five-minute monitoring and followups below.
+
+CG365 recovery review requested via triage-ready then review after verifying empty active inventory, actual GitHub af21cb846357197f856954befdeaa53c42e9cb05 OPEN CLEAN, exact CI34074486007/34074487860 passed. Inspect actual new run/PID; do not duplicate. Reviewer must inspect current real workload artifacts and prior blocking findings, not stale d1f1c23 scheduler head or earlier sleep-only artifacts. No completed implementation rerun. CG327 integration hold andCG332 capture hold remain manual; docs/human-queue-2026-09-07.md. Older observations below are history if conflicting.
+
+/tmp remains3GiB tmpfs; /home/joshua/work/tmp links to /tmp/garden-work. Never delete active temp/history/caches. Manual heavy work uses separate bounded user unit and disk temp /home/joshua/work/operator-test-tmp. Local tests focused/serial/bounded; full suites exact-final-commit GitHubCI via scripts/check_ci.py. No extra model agents.
 
 ## Actual active work and next actions
 
