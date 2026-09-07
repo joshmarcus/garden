@@ -15,7 +15,7 @@ discovered_from: CG-308
 attempts: 1
 last_dispatched_at: '2026-09-06T20:29:27+00:00'
 created: '2026-09-06T03:36:56+00:00'
-updated: '2026-09-06T20:40:08+00:00'
+updated: '2026-09-07T02:18:48+00:00'
 ---
 
 ## Goal
@@ -43,3 +43,11 @@ Discovered by CG-308 (Build Now 1 at /now1 from the Fable design: live view of w
 
 20:40 operator diagnosis: the original base probe was terminated(SIGTERM), so it did not prove main broken. A fresh detached checkout of c1f75cb08e47 at /home/joshua/work/operator-test-tmp/base-check-2039 passed exactly tests/scheduler/test_reap.py::test_failed_rebase_retries_then_parks_without_restarting_work (1 passed, .88s, bounded CPU100%/512MiB). The same test failed on this branch after106 passes. Investigate branch State mutator effects on retry state; do not restart implementation from scratch or blame main on the interrupted probe. Full base suite not rerun; claim only the specific reproduced comparison.
 - 2026-09-06T20:40:08+00:00 nothing to fix; needs-human stop cleared by hand
+- 2026-09-06T20:40:31+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-322`) or send it back (`garden triage CG-322 --changes "..."`)
+
+
+## Operator continuation decision
+
+Preserve the existing dirty-tracking implementation/worktree; this is a pre-PR repair, not work to restart. Refresh against current main. The recorded branch regression was tests/scheduler/test_reap.py::test_failed_rebase_retries_then_parks_without_restarting_work: the stop reason lost the original rebase-conflict context when a runner lacked GARDEN_RESULT. A bounded same-base comparison passed on clean c1f75cb and failed on this branch; the killed full base probe did not prove broken main. Determine whether the new state mutator semantics expose stale update ordering and fix the actual behavior or stale assertion using current code evidence. Keep update/ior/clear/del/popitem and concurrent disjoint-key persistence coverage. No open PR exists yet. Focused local checks only; exact-head full CI on GitHub once committed/pushed.
+- 2026-09-07T02:18:45+00:00 Owner delegated human-queue resolution: retain implementation and queue targeted pre-PR regression repair; clear lost-feedback stall through supported retry.
+- 2026-09-07T02:18:48+00:00 re-enabled by hand; revise run will follow

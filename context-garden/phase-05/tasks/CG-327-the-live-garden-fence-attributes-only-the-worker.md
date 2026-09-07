@@ -5,7 +5,8 @@ title: 'The live-garden fence attributes only the worker''s own writes: the oper
 status: ready
 product: context-garden
 phase: phase-05
-depends_on: []
+depends_on:
+- CG-366
 priority: 1
 difficulty: medium
 reading:
@@ -14,9 +15,12 @@ reading:
 - src/garden/runs.py
 - tests/test_fence.py
 branch: garden/cg-327-the-live-garden-fence-attributes-only-the-worker
-last_dispatched_at: '2026-09-06T13:04:44+00:00'
+pr: https://github.com/joshmarcus/context-garden/pull/251
+runner: manual
+attempts: 1
+last_dispatched_at: '2026-09-07T01:27:58+00:00'
 created: '2026-09-06T04:28:19+00:00'
-updated: '2026-09-06T13:13:32+00:00'
+updated: '2026-09-07T02:23:48+00:00'
 ---
 
 ## Goal
@@ -42,3 +46,8 @@ A run is fenced only for writes the run made. The live-garden check attributes a
 - 2026-09-06T13:04:44+00:00 dispatched work run 20260906T130442Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11698 tokens)
 - 2026-09-06T13:07:04+00:00 attempt 2 failed: no GARDEN_RESULT in worker output (see final.md); giving up
 - 2026-09-06T13:13:32+00:00 reset to ready by hand
+- 2026-09-07T01:27:57+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply dc87e84e24bb6b4aaa814dc8b1596df481be56ad` in /home/joshua/work/worktrees/CG-327 to recover them (garden:CG-327:20260907T012757Z-work:pre-dispatch, run 20260907T012757Z-work)
+- 2026-09-07T01:27:58+00:00 dispatched work run 20260907T012757Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~13288 tokens)
+- 2026-09-07T01:39:41+00:00 opened https://github.com/joshmarcus/context-garden/pull/251 (base main): The fence now requires structured worker transcript evidence, including Codex command events, before attributing live-garden changes. Operator commits are left intact, while proven worker escapes are reverted without discarding worktree output. cost=$0.78
+- 2026-09-07T02:23:35+00:00 Owner-delegated queue disposition: Preserve PR251. Partial overlap with incident repair CG366: structured tool parsing helps but command pathname presence still does not establish a write and mutable sibling audit restoration remains unsafe. Operator-owned integration hold: compare CG366 final patch, retain unique regression coverage, and decide incremental integration or evidenced supersession before review/merge.
+- 2026-09-07T02:23:48+00:00 Preserve PR251. Partial overlap with incident repair CG366: structured tool parsing helps but command pathname presence still does not establish a write and mutable sibling audit restoration remains unsafe. Operator-owned integration hold: compare CG366 final patch, retain unique regression coverage, and decide incremental integration or evidenced supersession before review/merge.

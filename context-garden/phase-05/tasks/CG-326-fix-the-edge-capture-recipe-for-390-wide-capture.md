@@ -1,7 +1,7 @@
 ---
 id: CG-326
 title: 'Fix the Edge capture recipe for 390-wide captures: frame the page in a 390 px iframe'
-status: ready
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,11 +11,12 @@ reading:
 - src/garden/walkthrough.py
 - tests/test_walkthrough.py
 branch: garden/cg-326-fix-the-edge-capture-recipe-for-390-wide-capture
+pr: https://github.com/joshmarcus/context-garden/pull/250
 discovered_from: CG-308
-attempts: 1
-last_dispatched_at: '2026-09-06T20:56:08+00:00'
+attempts: 2
+last_dispatched_at: '2026-09-07T01:37:13+00:00'
 created: '2026-09-06T04:18:52+00:00'
-updated: '2026-09-06T21:05:14+00:00'
+updated: '2026-09-07T02:19:27+00:00'
 ---
 
 Edge headless on this machine has a window floor of about 496 px, so the product overview's `--window-size=390` recipe lays the page out at 496 and every phone capture looks cut off at the right (measured from the page: clientWidth 496). A local HTML file with a `<iframe src="http://localhost:PORT/page" style="width:390px;height:5400px;border:0">` captured at a 600-wide window gives a true 390 viewport (clientWidth 390, scrollWidth 390). Update the recipe in the product overview and have CG-315's check use the wrapper for its narrow captures.
@@ -38,3 +39,25 @@ The operator is correcting the garden-local product overview separately. Keep wo
 - 2026-09-06T13:20:33+00:00 approved (cli)
 - 2026-09-06T20:56:08+00:00 dispatched work run 20260906T205542Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~17341 tokens)
 - 2026-09-06T21:05:14+00:00 Incident preemption; worktree/transcript and operator-test-tmp/CG326-recurrence.patch preserved. Escaped tests stopped; not a code failure.
+- 2026-09-07T01:22:52+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply 6172db52bbafd37b49c27af81cd61e8f074dc435` in /home/joshua/work/worktrees/CG-326 to recover them (garden:CG-326:20260907T012252Z-work:pre-dispatch, run 20260907T012252Z-work)
+- 2026-09-07T01:22:54+00:00 dispatched work run 20260907T012252Z-work via local [codex model=gpt-5.6-luna] (fresh session, base main, ~12694 tokens)
+- 2026-09-07T01:33:26+00:00 opened https://github.com/joshmarcus/context-garden/pull/250 (base main): Narrow captures now use and verify a true 390px content viewport via iframe framing, with light/dark documentation preserved. Exact-commit CI passed. cost=$0.07
+- 2026-09-07T01:36:40+00:00 automated review requested changes: The browser-dependent acceptance criterion remains unproven because the UI check passes when Chromium cannot launch, and the unit test does not execute the measurement JavaScript. cost=$0.21
+- 2026-09-07T01:37:13+00:00 dispatched revise run 20260907T013711Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~13285 tokens)
+- 2026-09-07T01:46:15+00:00 preserved uncommitted worktree changes from run 20260907T013711Z-revise outside the PR: `git stash apply acf82f1e38d847a2bca3b279486a2d1b59e4a346` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T013711Z-revise:reap)
+- 2026-09-07T01:49:49+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T01:51:09+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T01:52:50+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T01:54:57+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T01:56:45+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T01:58:20+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:00:15+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:02:10+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:04:03+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:06:14+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:08:18+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:10:12+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:13:34+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:16:04+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:18:33+00:00 check did not run (20260907T014802Z-check): no check result; retry also failed; needs human
+- 2026-09-07T02:19:27+00:00 triage: changes requested by hand: Preserve PR250 and its current fixes. Verify browser-backed 390px light/dark captures actually exist and are read; brows

@@ -1,7 +1,6 @@
 ---
 id: CG-319
-title: 'Choose the Now: keep Now 1 or Now 2, or combine the best aspects of both into /now, and retire
-  the other page'
+title: Keep Now 1 as Now, retire Now 2, and place Now after Inbox
 status: draft
 product: context-garden
 phase: phase-06
@@ -9,6 +8,7 @@ depends_on:
 - CG-308
 - CG-309
 priority: 2
+order: 2
 difficulty: medium
 reading:
 - context-garden/phase-05/specs/now-page.md
@@ -16,24 +16,27 @@ reading:
 - src/garden/web/templates/base.html
 - tests/test_web.py
 created: '2026-09-06T02:40:45+00:00'
-updated: '2026-09-06T13:45:07+00:00'
+updated: '2026-09-07T02:16:25+00:00'
 ---
 
 ## Goal
 
-One Now page at `/now`, chosen after the owner has lived with Now 1 (Fable's design) and Now 2 (astra's): either one of them as it stands, or a combination that takes the best aspects of each (a region, the motion, the tables, the empty states) into one page. The other page is retired: its route redirects to `/now`, its templates and helpers are removed, the nav shows one "Now", and the walkthrough captures it. The design document for the chosen page records what came from where.
+Keep the existing Now 1 design as the single Now page at `/now`. Drop Now 2 entirely as an application implementation; do not combine its design into the retained page. Rename visible Now 1 labels to Now and place Now immediately after Inbox in the top navigation bar.
 
 ## Context
 
-The owner asked for both designs to ship as Now 1 and Now 2 (2026-09-06 01:00Z) and then said "we can also choose to combine aspects from both designs if they're good" (02:40Z). Josh delegated resolution of all attention cards to the operator on 2026-09-06. Operator decision: combine the strongest aspects of the two pages, with the selection supported by side-by-side live captures and usability evidence after both builds land. Record the chosen regions and their origins before implementation; retain both routes until that comparison is complete.
+Explicit owner decision on2026-09-07 supersedes the previous operator-proposed combination and the requirement for a side-by-side selection study. The design choice is settled: retain Now 1. This is deferred implementation in frozen phase06, not permission to release the phase or change the incident recovery plan.
 
 ## Acceptance criteria
 
-- [ ] The delegated choice is a combination grounded in a comparison of both landed pages. Before implementing, record the selected regions, their origins and the usability evidence supporting them; do not claim an unobserved owner preference.
-- [ ] `/now` serves the chosen page; `/now1` and `/now2` redirect to it; one nav entry; the retired page's templates, routes and helpers are gone and no test references them.
-- [ ] The design document at docs/design/now.md names the origin of each region and interaction; the walkthrough captures /now.
+- [ ] `/now` serves the existing Now 1 design and interactions under the visible name Now. No user-facing navigation, heading or selector labels it Now 1 or offers Now 2.
+- [ ] The top navigation order places Now immediately after Inbox. Any other navigation consistently links to the one canonical `/now` page without duplicate variants.
+- [ ] Retire the Now 2 application templates, exclusive helpers and serving implementation. Redirect legacy `/now1` and `/now2` bookmarks to `/now`; redirects do not retain a second page implementation. Preserve shared production metrics, necessary coverage and historical incident/review evidence rather than deleting them solely because filenames mention a variant.
+- [ ] Update applicable design documentation, walkthrough/capture targets, links and tests for the retained Now page and legacy redirects. Verify the actual Inbox -> Now navigation, core Now 1 interactions and responsive behavior in the running app; focused checks and exact-head CI pass without unrelated redesign.
 
 ## Log
+
 - 2026-09-06T13:20:32+00:00 approved (cli)
 - 2026-09-06T13:45:05+00:00 Owner-directed feature deferral until phase-05 stabilization is demonstrated. Preserve existing branch and PR; no further implementation or merge before the gate passes.
 - 2026-09-06T13:45:07+00:00 moved from context-garden/phase-05 to context-garden/phase-06
+- 2026-09-07T02:16:25+00:00 Owner chose Now1 exclusively: remove Now2, rename Now1 to Now, and place it after Inbox in the top navigation. Replaces prior operator combination decision. Remains phase06 draft under freeze.

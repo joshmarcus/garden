@@ -1,7 +1,7 @@
 ---
 id: CG-358
 title: Keep incident control actions responsive and retry-safe during web overload
-status: running
+status: changes_requested
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -9,10 +9,11 @@ priority: 0
 difficulty: hard
 reading: []
 branch: garden/cg-358-keep-incident-control-actions-responsive-and-ret
+pr: https://github.com/joshmarcus/context-garden/pull/239
 attempts: 1
-last_dispatched_at: '2026-09-06T19:40:17+00:00'
+last_dispatched_at: '2026-09-07T01:22:51+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-06T19:40:17+00:00'
+updated: '2026-09-07T02:20:16+00:00'
 ---
 
 ## Goal
@@ -39,3 +40,13 @@ A responsive, durable recovery action would have started CG-357 promptly and avo
 - 2026-09-06T19:40:17+00:00 dispatched work run 20260906T193955Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~8672 tokens)
 
 20:13 operator-race evidence: between observation and retry, automatic dispatch started CG-338 revision201038; retry cancelled the just-started worker. Preserve expected-run identity on control actions (optimistic precondition / compare-and-act); reject a stale retry rather than silently cancelling a newer run. This counterfactual prevents observation/action races even when the HTTP response is healthy. Dirty work was preserved in operator-test-tmp/CG338-retry-race-2013.patch and task requeued.
+- 2026-09-06T20:28:59+00:00 opened https://github.com/joshmarcus/context-garden/pull/239 (base main): Incident controls now remain responsive independently of expensive task/history reads, while recovery launches expose durable lifecycle identity and deduplicate retries. Interrupted preparation is reconciled once, including setup children that survive a server restart. cost=$7.00
+- 2026-09-06T20:37:21+00:00 automated review requested changes: Health and pause use a bounded read path, and preparation records improve restart reconciliation. However, recovery dispatch remains synchronous without a client-visible idempotency identity, the claimed integration scenario is only an in-process unit simulation, and the PR includes an unrelated runtime snapshot. cost=$0.45
+- 2026-09-06T20:47:05+00:00 dispatched revise run 20260906T204704Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9881 tokens)
+- 2026-09-06T21:15:13+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/239: Incident controls now remain responsive when ordinary ASGI request workers are exhausted. Recovery launches return a durable identity before preparation, safely replay client keys, reject stale observations, and resume the same preparation record after server restart without duplicating setup or workers. cost=$5.41
+- 2026-09-06T21:15:18+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py); a rebase agent will resolve it
+- 2026-09-07T01:22:51+00:00 dispatched rebase run 20260907T012250Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8318 tokens)
+- 2026-09-07T01:26:32+00:00 preserved uncommitted worktree changes from run 20260907T012250Z-rebase outside the PR: `git stash apply 10ae391b5581c804d5983439206a2678dcdb71c9` in /home/joshua/work/worktrees/CG-358 (garden:CG-358:20260907T012250Z-rebase:reap)
+- 2026-09-07T01:27:43+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/239: Rebased CG-358 onto origin/main and resolved all rebase conflicts while preserving both sides and the pre-existing snapshot change cost=$0.04
+- 2026-09-07T02:19:38+00:00 triage: changes requested by hand: PR239 exact-head CI34073026576 failed two concrete cases: tests/scheduler/test_restart.py::test_restart_reconciles_a_no_
+- 2026-09-07T02:20:16+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-358`) or send it back (`garden triage CG-358 --changes "..."`)
