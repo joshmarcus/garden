@@ -2,6 +2,10 @@
 
 Current deployment state consolidated 2026-09-07T03:01Z. Verify live state before acting; dated older observations are history.
 
+## Current page-latency policy
+
+Owner accepts page load times up to and including FOUR seconds. Use repeated >4s responses or timeouts as the latency trigger for diagnosis/containment; do not reduce concurrency for 2–4s responses alone. This supersedes the previous two-second threshold, while preserving historical measurements below. Worker/shared4, reviewer1 and all CPU/memory/temp safety limits remain unchanged.
+
 ## Owner-requested four-slot trial 2026-09-07T03:56:48.988610+00:00
 
 Owner requested increase to FOUR. Applied supported worker/shared4/4; reviewer1, ordinary dispatch enabled, OS caps unchanged. This supersedes temporary1 and prior target5 for current operation. Monitor five-minute workload/latency; diagnose and contain sustained recurrence, not merely historical observations. Browser runtime already activated, installed5cff609 unchanged.
@@ -68,7 +72,7 @@ Snapshot backups with hashes remain at /home/joshua/work/operator-test-tmp/snaps
 
 ## Monitoring and incident completion
 
-Existing operate-context-garden heartbeat every FIVE minutes, no extra monitor. Resource trial showed startup charge mostly file cache, brief I/O pressure and cumulative memory.high3589, with only44ms cumulative memory stalls, zero max/OOM and later PSI0. Before latest restart, available memory5.8GiB/load.08/service274MiB. Counters reset with new service cgroup: compare deltas, not old totals. Above2.5GiB or high crossings inspect anon/file/shmem, reclaimability, actual descendants and latency. Persistent/rising pressure, exhausted headroom, temp near1GiB or repeated pages>2seconds/timeouts requires supported live worker/shared reduction to1, preserve/preempt only if it does not drain. Do not relax caps.
+Existing operate-context-garden heartbeat every FIVE minutes, no extra monitor. Resource trial showed startup charge mostly file cache, brief I/O pressure and cumulative memory.high3589, with only44ms cumulative memory stalls, zero max/OOM and later PSI0. Before latest restart, available memory5.8GiB/load.08/service274MiB. Counters reset with new service cgroup: compare deltas, not old totals. Above2.5GiB or high crossings inspect anon/file/shmem, reclaimability, actual descendants and latency. Persistent/rising pressure, exhausted headroom, temp near1GiB or repeated pages>4seconds/timeouts requires supported live worker/shared reduction to1, preserve/preempt only if it does not drain. Do not relax caps.
 
 Incident context-garden/docs/incidents/2026-09-06-web-responsiveness.md remains open. Required recovery: three actual Now/Inbox/control journeys over at least ten minutes, including intended workload, resource evidence, recurrence retro and prevention follow-up. Initial green route probes are not closure. After the new fence-integrity incident is repaired and verified, restore owner-approved ordinary dispatch5/1; retain five-minute monitoring and both incident follow-ups before normal25-minute duties. Keep follow-up in automation until complete.
 

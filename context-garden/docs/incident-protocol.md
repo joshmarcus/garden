@@ -13,6 +13,8 @@ Enter an incident for an unavailable or repeatedly timing-out application, unsaf
 
 ## Diagnose with a small evidence budget
 
+Owner-configured latency tolerance (2026-09-07): page loads up to and including four seconds are acceptable. Investigate and contain repeated responses exceeding four seconds or timeouts; 2–4 second responses alone do not justify reducing admission. Resource pressure, exhausted headroom and integrity failures remain independent triggers.
+
 Check service health, a cheap endpoint and the actual failing journey from the user's access path (Windows as well as WSL here). Record response time and result, not just HTTP status. Inspect current CPU/memory/swap/temp, cgroup events, process identity and recent logs. Sample a stack/profile when the service is alive but unresponsive. Compare a few time-separated measurements; cumulative memory.high events are not proof of a current OOM.
 
 Avoid repeated expensive probes, full suites and polling storms. A timeout does not cancel server-side work. Before retrying any dispatch or other mutation, inspect run IDs, process identity and server progress. Do not duplicate an action merely because its HTTP client timed out. A running label without a worker PID/output is startup, not active repair.
