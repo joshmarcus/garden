@@ -14,9 +14,9 @@ branch: garden/cg-326-fix-the-edge-capture-recipe-for-390-wide-capture
 pr: https://github.com/joshmarcus/context-garden/pull/250
 discovered_from: CG-308
 attempts: 2
-last_dispatched_at: '2026-09-07T03:59:19+00:00'
+last_dispatched_at: '2026-09-07T04:37:16+00:00'
 created: '2026-09-06T04:18:52+00:00'
-updated: '2026-09-07T04:22:15+00:00'
+updated: '2026-09-07T04:57:39+00:00'
 ---
 
 Edge headless on this machine has a window floor of about 496 px, so the product overview's `--window-size=390` recipe lays the page out at 496 and every phone capture looks cut off at the right (measured from the page: clientWidth 496). A local HTML file with a `<iframe src="http://localhost:PORT/page" style="width:390px;height:5400px;border:0">` captured at a 600-wide window gives a true 390 viewport (clientWidth 390, scrollWidth 390). Update the recipe in the product overview and have CG-315's check use the wrapper for its narrow captures.
@@ -90,3 +90,14 @@ The operator is correcting the garden-local product overview separately. Keep wo
 - 2026-09-07T04:19:35+00:00 check did not run (20260907T041036Z-check): no check result; retry also failed; needs human
 - 2026-09-07T04:21:42+00:00 check did not run (20260907T041036Z-check): no check result; retry also failed; needs human
 - 2026-09-07T04:22:15+00:00 triage: changes requested by hand: Host browser readiness correction is now propagated through the actual scrubbed launch environment: worker_env.pass=[LD_
+- 2026-09-07T04:37:16+00:00 dispatched revise run 20260907T043714Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~15509 tokens)
+- 2026-09-07T04:41:05+00:00 preserved uncommitted worktree changes from run 20260907T043714Z-revise outside the PR: `git stash apply 2ca258ca0742e345ac86a79f2d6e7e54b77c144d` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T043714Z-revise:reap)
+- 2026-09-07T04:43:55+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:45:47+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:47:13+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:48:37+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:50:48+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:53:04+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:55:46+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:57:36+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
+- 2026-09-07T04:57:39+00:00 triage: changes requested by hand: Effective config hold is now cleared and accepted signature includes LD_LIBRARY_PATH. Operator executed current PR head1
