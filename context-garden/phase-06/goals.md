@@ -1,51 +1,47 @@
-# phase-06 goals (draft)
+---
+plant: peony
+latin: Paeonia mascula
+plate: VI
+---
 
-_Drafted by `garden retro` from context-garden/phase-05; edit before planning._
+## Current owner authorization, 2026-09-07
 
-# Phase06 goals
+Phase06 is unfrozen and all ten tasks are approved for normal scheduling. This supersedes all historical freeze/defer statements below. Preserve existing branches and PRs; CG213 follows the CG302 adapter decision. Normal resource limits and current-head automated review remain required. Phase07 evidence holds on CG402/403/407/408 remain in force.
 
-Make the accepted development loop understandable, measurably economical and safe to adopt in another environment.
 
-## Entry and scope
+# phase-06 goals
 
-Phase05 remains reopened for its identified closing obligations. Preserve its accepted stabilization evidence; do not demand another soak, named external maintainer or optional live canary. Keep CG-347/348 in Phase07 and preserve all explicit holds. Existing CG-515 through CG-520 and other active work retain their identities and dependencies; this draft does not authorize extra fleet spending, release publication or duplicate implementation.
+_Stub written by the operator on 2026-09-05; a holding pen for speculative designs the user wants kept but not scheduled. Rewritten when phase 05 closes._
+
+**In one sentence: ideas that need a design before they need a task.**
+
+## Why this phase
+
+Some proposals are worth keeping and not worth building yet. They live here with a design sketch and open questions, so the planner and the retros can see them without a phase committing to them.
 
 ## Goals
 
-1. Explain outcomes: completed tasks lead with acceptance provenance, check runs show commands and results, and historical findings remain intact and clearly dated.
-2. Make attention truthful: reconcile deferral observations against current source, align shared ownership counts and actions, and preserve independent holds. Finish existing policy-continuity work through CG-514 rather than adding another review-count mechanism.
-3. Measure the whole cost of accepted work: build on the Phase05 canonical cohort repair and show delegated interventions, recovery causes, lead time and partial pricing. Establish comparable baselines before claiming savings or expanding routing experiments.
-4. Improve the first-change journey through existing CG-504/505: preserve discovered project checks and the selected harness, document resumable recovery, and learn from a voluntary new-user attempt without turning adoption into a renewed Phase05 gate.
-5. Reduce recurring workflow friction: truthful context paths and validation scope, readable controller-owned failure diagnostics, responsive bounded validation, stable preservation identities and coherent shared-host capacity policy.
-6. Keep remote polling bounded as history grows: index durable request identities without weakening replay rejection, lease fencing or preservation of prior results. Coordinate existing recovery and transcript work in CG-501/506.
+1. A collective, searchable context written by runs and read by briefs (CG-222), after a design document argues it is worth a prototype.
+2. Whatever the phase-04 and phase-05 retros defer here.
 
-## Verification and sequencing
+## Non-goals
 
-Prioritize completion and check-result clarity, then attention consistency and economic measurement. Use focused functional verification and honest agent attestations appropriate to each change. Keep ordinary tests bounded and stress experiments explicitly opt-in. Preserve current-head review, applicable CI and atomic merge guards; do not require a rebase solely because main advanced. Do not recreate existing documentation, provider, policy, duplicate-CI or cleanup tasks. Track the still-open issues and retire each with source-specific evidence rather than interpreting task completion as universal production recovery.
+- Anything a user needs in phase 05.
 
-## Completion evidence
+## Deferred feature expansion, owner decision 2026-09-06
 
-A reader can explain what was accepted, what each check established, who acts next and what the reported cost includes from the relevant page. Recorded comparisons use one cohort and preserve unknown values. A bounded non-Python first-change journey retains project configuration. Remote claim regressions establish bounded history access. Report actual improvements and limitations against the corrected baseline; do not prescribe unsupported savings targets or manufacture historical measurements.
+This phase is frozen until all required phase-05 stabilization evidence passes. Preserve existing PRs and branches but do not dispatch, revise or merge them during the hold. Deferred work includes OpenRouter and its adapter spike, remote workers, model pools, operating presets, and consolidation of the two Now pages. Reprioritize based on the adoption demonstration after the gate; do not auto-unfreeze at a calendar time or merely because phase-05 tasks merged.
 
-## Features for the next phase
+## EC2 worker automation proposal
 
-- CG-538: Explain accepted completion before historical reviews
-- CG-539: Show check commands and outcomes on run pages
-- CG-540: Reconcile deferred notices and attention ownership
-- CG-541: Measure delegated effort per accepted change
-- CG-542: Index durable remote claim request identities
-- CG-543: Make brief paths and validation scope truthful
+Owner-requested specification: [EC2 worker pools](specs/ec2-workers.md). CG-345, CG-346, CG-347, CG-348 cover on-demand provisioning, portable execution, Spot recovery and cost/teardown evidence. These remain drafts under the existing freeze.
 
-## Follow-ups carried from the retro verdict
-
-- CG-576: Deliver controller-owned CI diagnostics to isolated workers
-- CG-577: Keep short validation checks responsive under shared admission
-- CG-578: Use stable identities for preserved worktree changes
-- CG-579: Define shared-host validation lease policy
-- CG-580: Align QA request timeouts with advertised deadlines
-- CG-581: Prevent folded rail stretching on short pages
-- CG-582: Separate expected SSE shutdown from application errors
+Owner clarification: EC2 automation must be a pluggable remote-host lifecycle reusable for workplace development hosts. Garden workers and standalone persistent dev hosts are separate consumers/profiles of the same provider contracts.
 
 ## Decisions
 
 - **Should the recorded first-pass, hand-merge and agent-rebase target misses be accepted as explicit Phase05 exceptions with accountable follow-ups once substantive closing defects are resolved?** — answered: Given that we are re-opening, let's watch for real stabilization evidence now (by web at 2026-09-10T13:16:29+00:00)
+
+## Phase05 retrospective proposal, September10
+
+The [proposed next goals](docs/phase05-retro-proposed-goals-2026-09-10.md) are retained for planning review. Existing Phase06 authorization and active task ownership remain in force; the proposal does not refreeze the phase or replace explicit owner decisions.

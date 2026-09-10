@@ -285,15 +285,72 @@ The designer focuses on whether filters and labels make truthful promises; the p
 
 ## Persona reports
 
-- [designer](context-garden/phase-05/docs/reviews/designer-2026-09-10.md)
-- [product-manager](context-garden/phase-05/docs/reviews/product-manager-2026-09-10.md)
-- [project-manager](context-garden/phase-05/docs/reviews/project-manager-2026-09-10.md)
-- [security](context-garden/phase-05/docs/reviews/security-2026-09-10.md)
-- [staff-engineer](context-garden/phase-05/docs/reviews/staff-engineer-2026-09-10.md)
-- [usability-expert](context-garden/phase-05/docs/reviews/usability-expert-2026-09-10.md)
-- [user](context-garden/phase-05/docs/reviews/user-2026-09-10.md)
-- [phase05-closing-editor](context-garden/phase-05/docs/reviews/phase05-closing-editor-2026-09-10.md)
+- [designer](reviews/designer-2026-09-10.md)
+- [product-manager](reviews/product-manager-2026-09-10.md)
+- [project-manager](reviews/project-manager-2026-09-10.md)
+- [security](reviews/security-2026-09-10.md)
+- [staff-engineer](reviews/staff-engineer-2026-09-10.md)
+- [usability-expert](reviews/usability-expert-2026-09-10.md)
+- [user](reviews/user-2026-09-10.md)
+- [phase05-closing-editor](reviews/phase05-closing-editor-2026-09-10.md)
 
 ## Answers
 
 - **Should the recorded first-pass, hand-merge and agent-rebase target misses be accepted as explicit Phase05 exceptions with accountable follow-ups once substantive closing defects are resolved?** — answered: Given that we are re-opening, let's watch for real stabilization evidence now (by web at 2026-09-10T13:16:29+00:00)
+
+
+## Operator reconciliation of generated drafts, 2026-09-10T13:28:27.335304+00:00
+
+The reopen verdict remains in force. CG-533 through CG-537 are its five required blockers. The owner answered on the web at 2026-09-10T13:16:29+00:00: “Given that we are re-opening, let's watch for real stabilization evidence now”. This is not a recorded waiver of missed targets. Observe actual ordinary work and preserve failures while the phase is reopened; record the resulting evidence and any later explicit disposition in CG-537. Earlier accepted stabilization remains historical evidence, and live canaries remain optional.
+
+The [seven first-person narratives](retro/narratives.md) and all original [persona reports](reviews/) are preserved byte-for-byte. The historical `retro-editor-2026-09-10.md` reviewed Phase04 and is retained only as excluded provenance; the scoped `phase05-closing-editor-2026-09-10.md` is the closing editor used here.
+
+All 45 generated follow-up IDs have been reviewed. Thirteen unique briefs remain drafts for normal approval after this PR is accepted; 32 duplicates are cancelled with their original findings retained. Cancellation consolidates ownership and does not claim the defect is fixed.
+
+| Generated task | Disposition | Canonical owner |
+| --- | --- | --- |
+| CG-538 | Unique; brief completed | CG-538 |
+| CG-539 | Unique; brief completed | CG-539 |
+| CG-540 | Unique; brief completed | CG-540 |
+| CG-541 | Unique; brief completed | CG-541 |
+| CG-542 | Unique; brief completed | CG-542 |
+| CG-543 | Unique; brief completed | CG-543 |
+| CG-544 | Duplicate cancelled | CG-536 |
+| CG-545 | Duplicate cancelled | CG-536 |
+| CG-546 | Duplicate cancelled | CG-540 |
+| CG-547 | Duplicate cancelled | CG-538 |
+| CG-548 | Duplicate cancelled | CG-539 |
+| CG-549 | Duplicate cancelled | CG-536 |
+| CG-550 | Duplicate cancelled | CG-540 |
+| CG-551 | Duplicate cancelled | CG-538 |
+| CG-552 | Duplicate cancelled | CG-540 |
+| CG-553 | Duplicate cancelled | CG-541 |
+| CG-554 | Duplicate cancelled | CG-537 |
+| CG-555 | Duplicate cancelled | CG-537 |
+| CG-556 | Duplicate cancelled | CG-536 |
+| CG-557 | Duplicate cancelled | CG-537 |
+| CG-558 | Duplicate cancelled | CG-533 |
+| CG-559 | Duplicate cancelled | CG-533 |
+| CG-560 | Duplicate cancelled | CG-533 |
+| CG-561 | Duplicate cancelled | CG-534 |
+| CG-562 | Duplicate cancelled | CG-535 |
+| CG-563 | Duplicate cancelled | CG-536 |
+| CG-564 | Duplicate cancelled | CG-542 |
+| CG-565 | Duplicate cancelled | CG-533 |
+| CG-566 | Duplicate cancelled | CG-538 |
+| CG-567 | Duplicate cancelled | CG-539 |
+| CG-568 | Duplicate cancelled | CG-536 |
+| CG-569 | Duplicate cancelled | CG-536 |
+| CG-570 | Duplicate cancelled | CG-538 |
+| CG-571 | Duplicate cancelled | CG-539 |
+| CG-572 | Duplicate cancelled | CG-537 |
+| CG-573 | Duplicate cancelled | CG-537 |
+| CG-574 | Duplicate cancelled | CG-537 |
+| CG-575 | Duplicate cancelled | CG-537 |
+| CG-576 | Unique; brief completed | CG-576 |
+| CG-577 | Unique; brief completed | CG-577 |
+| CG-578 | Unique; brief completed | CG-578 |
+| CG-579 | Unique; brief completed | CG-579 |
+| CG-580 | Unique; brief completed | CG-580 |
+| CG-581 | Unique; brief completed | CG-581 |
+| CG-582 | Unique; brief completed | CG-582 |
