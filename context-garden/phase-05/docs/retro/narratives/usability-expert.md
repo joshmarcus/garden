@@ -1,0 +1,43 @@
+# usability-expert — Phase 05 narrative reflection
+
+**Persona:** usability-expert · **Score:** 7/10 · 2026-09-10T11:47:20+00:00
+
+Phase 05 substantially improves operational clarity through explicit deferred-work notices, readable live progress and more concrete recovery ownership. The remaining usability gaps are concentrated at adoption and completion: the README's first-run configuration can override a non-Python project's checks and introduce an unintended second harness, while completed tasks and check runs do not clearly explain the accepted result. This assessment uses supplied recorded pages and current source, not a fresh live interaction test.
+
+## Reaction
+
+What matters to me in this later reflection is whether a person can carry a sensible understanding of their work from setup through completion. The original report gives me reasons to value Phase 05: explicit deferred-work notices, readable live progress and clearer recovery ownership all help someone decide whether to wait or intervene. But its remaining findings sit at two particularly consequential moments: accepting the tool's initial instructions and accepting its eventual result. I am reflecting on that supplied report, not conducting another review. I could not read the referenced walkthrough because access was denied, so I cannot add page quotations or claim fresh observations. The user journeys below are predictions grounded in the recorded findings.
+
+I would start with someone bringing an existing non-Python project to context-garden. Their immediate task is modest: get one piece of work running under conditions they understand. They follow the README, choose a harness, and copy the recommended first-run configuration. At this point, I expect the example to carry more authority than surrounding explanations. Copying it is an act of following instructions, and a new user has little reason to suspect that it will replace discovered project checks with pytest or introduce a second harness after their earlier choice.
+
+That is why I still consider the setup finding high severity. The problem is not simply an unsuitable sample command. It is a break between the decision the person thinks they made and the behavior they have configured. If checks subsequently fail, they may investigate their project before questioning the starter YAML. If work reaches an unexpected harness, they may wonder whether their original selection was ignored. Those are predicted consequences, not observed sessions, but they follow directly from the discrepancy documented in the report. The practical recovery should begin before the discrepancy happens: keep the starter settings to approval, capacity and merge policy, preserve the project's test and lint fallback, and offer mixed-harness configuration as an explicit later choice.
+
+I do see a real tradeoff here. A richer example makes the system's capabilities visible, and leaving configuration implicit can itself be confusing. I would resolve that tension by teaching the first successful task before teaching the broader configuration space. A short explanation of which project checks will be used would earn more trust at this stage than an example demonstrating every available control. Discoverability should give people useful choices when they are ready to make them; it should not quietly make additional choices on their behalf.
+
+The second journey is returning to work that the application says is complete. The supplied report describes a completed onboarding task that still presents unmet criteria and a request-changes review, without prominently explaining the later owner merge and historical context. I can imagine a careful reader stopping there. Their task was to learn what happened and decide whether anything still needs attention. Instead, they now need to reconstruct how the status, assessment and owner action fit together. The interface has preserved evidence, which I value, but preservation alone has not made that evidence understandable.
+
+I would not repair this by hiding the earlier assessment or making its language more positive. A later owner decision does not erase what the review found. I want completion provenance beside the status, with earlier assessments identified by date, source and recorded disposition. That gives the reader a sequence they can understand without requiring them to infer agreement where there may have been an accepted exception or unresolved concern. The current owner context matters for the same reason: stabilization evidence was accepted, while original missed targets and failures remain factual. Phase 05 is not closed and no release has been published. Those statements can coexist, and the interface should help people understand how.
+
+The third journey follows naturally from the second: the person opens the latest onboarding check to look for supporting evidence. According to the original report, they reach a done run with generic model-transcript wording and no final message. I find this especially frustrating because the person has taken the sensible next step. They have sought detail, yet the destination still does not explain the checks. An absent final message gives them little basis for deciding whether the check completed normally, produced no explanation, or requires further investigation. I cannot determine which interpretation a particular user would choose, but the recorded presentation leaves that interpretive work with them.
+
+For that destination, I would put commands, outcomes, diagnostics and pipeline consequences first. The reader needs to know what ran, what it established and what followed. Transcript access can remain useful, but a check run should explain itself in terms of the task it performed. Empty-state wording also needs to identify what is actually absent. This is the completion counterpart to readable live progress: progress helps me understand what is happening; a result helps me decide what I can rely on afterward.
+
+My considered reaction is therefore appreciative without becoming an approval. Phase 05's operational clarity addresses real uncertainty during work, while adoption and completion still need the same care. I would preserve the original severities and closure requirements, keep CG347/348 in Phase07, and treat live canaries as optional under the supplied owner context. The next usability improvement I value most is continuity: instructions that preserve the user's choices, status that explains its provenance, and results that make the next decision possible.
+
+## Provenance
+
+Later narrative reflection grounded in the original report [usability-expert](../../reviews/usability-expert-2026-09-10.md), run 20260910T062420Z-persona. Original report SHA256: 19e6e34093a1dd2dda3f99e195ac02b8638549ace3cbb40db671d251cc724bd4. The original assessment and findings are preserved verbatim; this is not a new approval. Reflection source checkout: 582c6e716bc84a7760f41ac0f1557de1a16b568a.
+
+## High
+
+- **First-project setup** — The recommended first-run YAML overrides discovered project checks with pytest and introduces a mixed-harness pool despite the earlier single-harness choice.
+  - suggestion: Limit the starter settings to approval, capacity and merge policy; preserve product-specific test/lint fallback and move mixed-harness pools into a separate optional example.
+
+## Medium
+
+- **Completion clarity** — The completed onboarding task presents unmet criteria and a request-changes review without prominently explaining the later owner merge and historical assessment context.
+  - suggestion: Show completion provenance near the status and label earlier assessments with their date, source and recorded disposition while preserving the original findings.
+- **Check-run results** — Opening the latest onboarding check leads to a done run with generic model-transcript wording and no final message rather than an explanation of its checks.
+  - suggestion: Render check commands, outcomes, diagnostics and pipeline consequences as the primary check-run content, with accurate empty-state wording.
+
+_garden persona run 20260910T113435Z-persona_

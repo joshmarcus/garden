@@ -1,0 +1,45 @@
+# designer — Phase 05 narrative reflection
+
+**Persona:** designer · **Score:** 6/10 · 2026-09-10T11:31:40+00:00
+
+Phase 05 establishes a more coherent operational product through a single Now page, stronger hierarchy, inline brief repair and clearer recovery ownership. Remaining problems undermine confidence in displayed state: accepted-task outcomes ignore filters and conceal incomplete pricing, deferred decisions remain attention demands, completed tasks show unqualified historical rejection, and check runs lack meaningful result presentation. These findings come from the supplied walkthroughs and current-source inspection, not a fresh runtime validation.
+
+## Reaction
+
+Returning to my original Phase 05 report, I am struck by how much the remaining design work concerns the meaning of ordinary states. A filter, a price, a deferral, a completed task: each makes a small promise about what the product knows and what the person should do next. My assessment credits the single Now page, stronger hierarchy, inline brief repair and clearer recovery ownership. Those changes matter to me because they give the product a more coherent place to begin. They also raise the standard for everything shown there. A central operational page earns its place when I can act on its distinctions without reconstructing the underlying history.
+
+This is a reflection on the supplied report, rather than another inspection. I could not access the referenced walkthrough in this environment, so I cannot add fresh page quotations or claim to have repeated the earlier observations. Within that limit, the progress described in the report still feels substantial. Inline brief repair places a remedy near the problem that calls for it. Clearer recovery ownership helps answer who is expected to act. Together, these are signs that the product is beginning to account for the person carrying responsibility across an autonomous process. I value that more than surface consistency alone.
+
+The Costs filter finding remains the sharpest breach of coherence for me. Selecting a window or filter establishes the subject of the page. When accepted-task outcome tables silently use a different population, the interface makes the reader responsible for discovering a boundary it has not expressed. The practical consequence is that someone could compare numbers that look related but answer different questions. My concern is not that every table must always share one scope; different scopes can be useful. But the original finding describes no explanation for that difference. I would retain the recommendation to apply the selected cohort consistently and name its scope beside the outcomes. A person should be able to explain what a number covers without investigating how it was assembled.
+
+Pricing completeness complicates that same promise. A total that includes unknown prices as zero can look easier to understand precisely because it has removed information the reader needs. I am wary of that kind of apparent simplicity. In Costs and Now, a visible indication of partial pricing would make the display slightly less tidy while making it more dependable. I would accept that tradeoff readily. Withholding a complete-looking average when relevant inputs are unknown also protects the meaning of the metric. Otherwise, the product invites a confident comparison before it has the evidence to support one. This is a design responsibility even when the underlying cause sits in computation.
+
+The deferral finding bothers me in a different, more personal way: it describes a product failing to acknowledge a decision someone has already made. If I defer a troubled task and it remains counted as an unresolved human decision, the action has not produced the expected relief in the attention hierarchy. The execution hold may be correct, yet the presentation still asks me to revisit the matter. I would want the saved reason to remain visible as a notice, with a clear reconsider action. That gives the choice a durable place in the interface. It also preserves the distinction between work that cannot proceed and work that requires another decision now. A Now page depends on that distinction to stay useful.
+
+Completed tasks expose another boundary that needs deliberate design: the boundary between current outcome and historical evidence. I want earlier rejected criteria and review findings preserved. They can explain why work changed and how acceptance was reached. But when the page presents them without qualifying their relationship to completion, it leaves the reader to reconcile apparently conflicting claims. Leading with completion provenance, then dating and identifying the source reviewed by earlier assessments, would let the history remain candid. I would judge the success of that hierarchy by whether someone can first understand the accepted result and then investigate how it came about. Retaining evidence and establishing its relevance belong together.
+
+Check runs make me think about how far shared interface conventions should extend. A common run page can make navigation easier, but model-transcript fallback copy does not answer the questions a verification run creates. I would want to know which commands ran, which outcomes they produced, what diagnostics matter and what follows. Execution completion and check success need separate expression because they support different decisions. This is a case where giving one run type its own result presentation would make the whole product feel more coherent. Consistency should help people interpret the work, and the work here has a specific shape.
+
+The current owner context affects how I read this assessment without erasing it. Existing stabilization evidence was accepted; the original missed targets and failures remain factual. I would respect that evidence decision rather than make optional live canaries a new condition of this reflection. CG347 and CG348 belong to Phase07. The phase remains open and the release unpublished. My practical priority is therefore to make the existing distinctions trustworthy: selected scope, incomplete knowledge, saved decisions, accepted outcomes and verification results. Those are bounded changes with consequences across the product. I still see the basis for a more coherent operational tool, and I still think the original severity and closure requirements should stand.
+
+## Provenance
+
+Later narrative reflection grounded in the original report [designer](../../reviews/designer-2026-09-10.md), run 20260910T042537Z-persona. Original report SHA256: 63214ff6d3d3506367ce0fed090c2f23a04d73d86db2c78dd3b438dfe6e08f0b. The original assessment and findings are preserved verbatim; this is not a new approval. Reflection source checkout: 582c6e716bc84a7760f41ac0f1557de1a16b568a.
+
+## High
+
+- **Costs filters** — Accepted-task outcome tables ignore the page's selected window and filters without explaining their different scope.
+  - suggestion: Apply the selected cohort consistently to accepted-task outcomes and label its window and scope beside the tables.
+
+## Medium
+
+- **Cost completeness** — Accepted-task prices appear definitive even though their computation treats missing run prices as zero.
+  - suggestion: Propagate pricing completeness into Costs and Now, marking partial totals and withholding complete-looking averages when relevant prices are unknown.
+- **Deferred decisions** — Deferring a troubled task leaves it counted and presented as an unresolved human decision.
+  - suggestion: Render the saved deferral as a non-actionable notice with its reason and an explicit reconsider action, preserving the execution hold.
+- **Task completion** — Completed task pages display historical rejected criteria and review findings without distinguishing them from the accepted result.
+  - suggestion: Lead with completion provenance and label earlier reviews with their date and reviewed source, retaining full findings as history.
+- **Check run details** — Check runs use model-transcript fallback copy instead of explaining which commands ran and whether verification passed.
+  - suggestion: Give check runs a result summary with commands, individual outcomes, diagnostics and continuation, separating execution completion from check success.
+
+_garden persona run 20260910T112755Z-persona_

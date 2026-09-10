@@ -2,8 +2,12 @@
 plant: peony
 latin: Paeonia mascula
 plate: VI
-frozen: '2026-09-06'
 ---
+
+## Current owner authorization, 2026-09-07
+
+Phase06 is unfrozen and all ten tasks are approved for normal scheduling. This supersedes all historical freeze/defer statements below. Preserve existing branches and PRs; CG213 follows the CG302 adapter decision. Normal resource limits and current-head automated review remain required. Phase07 evidence holds on CG402/403/407/408 remain in force.
+
 
 # phase-06 goals
 
@@ -33,3 +37,11 @@ This phase is frozen until all required phase-05 stabilization evidence passes. 
 Owner-requested specification: [EC2 worker pools](specs/ec2-workers.md). CG-345, CG-346, CG-347, CG-348 cover on-demand provisioning, portable execution, Spot recovery and cost/teardown evidence. These remain drafts under the existing freeze.
 
 Owner clarification: EC2 automation must be a pluggable remote-host lifecycle reusable for workplace development hosts. Garden workers and standalone persistent dev hosts are separate consumers/profiles of the same provider contracts.
+
+## Decisions
+
+- **Should the recorded first-pass, hand-merge and agent-rebase target misses be accepted as explicit Phase05 exceptions with accountable follow-ups once substantive closing defects are resolved?** — answered: Given that we are re-opening, let's watch for real stabilization evidence now (by web at 2026-09-10T13:16:29+00:00)
+
+## Phase05 retrospective proposal, September10
+
+The [proposed next goals](docs/phase05-retro-proposed-goals-2026-09-10.md) are retained for planning review. Existing Phase06 authorization and active task ownership remain in force; the proposal does not refreeze the phase or replace explicit owner decisions.
