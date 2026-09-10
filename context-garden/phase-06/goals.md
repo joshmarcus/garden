@@ -45,3 +45,7 @@ A reader can explain what was accepted, what each check established, who acts ne
 - CG-580: Align QA request timeouts with advertised deadlines
 - CG-581: Prevent folded rail stretching on short pages
 - CG-582: Separate expected SSE shutdown from application errors
+
+## Decisions
+
+- **Should the recorded first-pass, hand-merge and agent-rebase target misses be accepted as explicit Phase05 exceptions with accountable follow-ups once substantive closing defects are resolved?** — answered: Given that we are re-opening, let's watch for real stabilization evidence now (by web at 2026-09-10T13:16:29+00:00)

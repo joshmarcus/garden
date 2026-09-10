@@ -293,3 +293,7 @@ The designer focuses on whether filters and labels make truthful promises; the p
 - [usability-expert](context-garden/phase-05/docs/reviews/usability-expert-2026-09-10.md)
 - [user](context-garden/phase-05/docs/reviews/user-2026-09-10.md)
 - [phase05-closing-editor](context-garden/phase-05/docs/reviews/phase05-closing-editor-2026-09-10.md)
+
+## Answers
+
+- **Should the recorded first-pass, hand-merge and agent-rebase target misses be accepted as explicit Phase05 exceptions with accountable follow-ups once substantive closing defects are resolved?** — answered: Given that we are re-opening, let's watch for real stabilization evidence now (by web at 2026-09-10T13:16:29+00:00)
