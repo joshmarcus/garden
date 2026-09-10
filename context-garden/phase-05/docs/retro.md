@@ -301,7 +301,7 @@ The designer focuses on whether filters and labels make truthful promises; the p
 
 ## Operator reconciliation of generated drafts, 2026-09-10T13:28:27.335304+00:00
 
-The reopen verdict remains in force. CG-533 through CG-537 are its five required blockers. The owner answered on the web at 2026-09-10T13:16:29+00:00: “Given that we are re-opening, let's watch for real stabilization evidence now”. This is not a recorded waiver of missed targets. Observe actual ordinary work and preserve failures while the phase is reopened; record the resulting evidence and any later explicit disposition in CG-537. Earlier accepted stabilization remains historical evidence, and live canaries remain optional.
+The reopen verdict remains in force. The original verdict filed CG-533 through CG-537. The owner cancelled CG-533 on the web at 2026-09-10T13:28:05+00:00; that cancellation is preserved. The remaining closing tasks are CG-534/535/536/537. CG-537 now depends directly on existing CG-504/517/518/519 repairs as well as CG-534/535/536 and owns the final accepted-source verification. No duplicate verifier is restarted. The owner answered on the web at 2026-09-10T13:16:29+00:00: “Given that we are re-opening, let's watch for real stabilization evidence now”. This is not a recorded waiver of missed targets. Observe actual ordinary work and preserve failures while the phase is reopened; record the resulting evidence and any later explicit disposition in CG-537. Earlier accepted stabilization remains historical evidence, and live canaries remain optional.
 
 The [seven first-person narratives](retro/narratives.md) and all original [persona reports](reviews/) are preserved byte-for-byte. The historical `retro-editor-2026-09-10.md` reviewed Phase04 and is retained only as excluded provenance; the scoped `phase05-closing-editor-2026-09-10.md` is the closing editor used here.
 
@@ -329,14 +329,14 @@ All 45 generated follow-up IDs have been reviewed. Thirteen unique briefs remain
 | CG-555 | Duplicate cancelled | CG-537 |
 | CG-556 | Duplicate cancelled | CG-536 |
 | CG-557 | Duplicate cancelled | CG-537 |
-| CG-558 | Duplicate cancelled | CG-533 |
-| CG-559 | Duplicate cancelled | CG-533 |
-| CG-560 | Duplicate cancelled | CG-533 |
+| CG-558 | Duplicate cancelled | CG-517; verified by CG-537 |
+| CG-559 | Duplicate cancelled | CG-519; verified by CG-537 |
+| CG-560 | Duplicate cancelled | CG-518; verified by CG-537 |
 | CG-561 | Duplicate cancelled | CG-534 |
 | CG-562 | Duplicate cancelled | CG-535 |
 | CG-563 | Duplicate cancelled | CG-536 |
 | CG-564 | Duplicate cancelled | CG-542 |
-| CG-565 | Duplicate cancelled | CG-533 |
+| CG-565 | Duplicate cancelled | CG-504; verified by CG-537 |
 | CG-566 | Duplicate cancelled | CG-538 |
 | CG-567 | Duplicate cancelled | CG-539 |
 | CG-568 | Duplicate cancelled | CG-536 |

@@ -10,8 +10,8 @@ difficulty: medium
 reading: []
 discovered_from: persona:security:context-garden/phase-05
 created: '2026-09-10T13:10:37+00:00'
-updated: '2026-09-10T13:28:27.335304+00:00'
-duplicate_of: CG-533
+updated: '2026-09-10T13:37:40.049556+00:00'
+duplicate_of: CG-519
 ---
 
 ## Goal
@@ -30,3 +30,5 @@ Consolidated into CG-533 by the delegated operator after independent retro revie
 ## Log
 
 - 2026-09-10T13:28:27.335304+00:00 cancelled as duplicate of CG-533; original finding retained.
+
+- 2026-09-10T13:37:40.049556+00:00 owner cancelled CG-533 on the web; canonical implementation ownership now points directly to CG-519, with final accepted-source verification in CG-537. Preserve both cancellations and all original findings.
