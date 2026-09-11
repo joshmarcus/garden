@@ -1,0 +1,81 @@
+{
+  "at": "2026-09-11T07:55:12.811743+00:00",
+  "head": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+  "phase05_closed": false,
+  "reports_preserved": 24,
+  "files": [
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/release-manifest.json",
+      "sha256": "8b6631de8dae17008fe9c377a126cc244a7717b61998b5e60c2e594f65c818cd"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/independent-release-review.json",
+      "sha256": "23608b733ad230193cde648244c82fe47cc15de7660d1249377bf2c7a77b5387"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/protocol-receipt.json",
+      "sha256": "976295761652de3cd15879fdbc8b608d2138f7669baad6e382820463dab8db9b"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/focused-selection-correction.json",
+      "sha256": "56889270da19fe5b71883d59dd33c35af6fa164099ecbc5c567c840237bf0972"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/release-candidate-pages.json",
+      "sha256": "fc1a333341c105931a62f2e2bd994093c19f151c104380bcc6134cf2a31a57bb"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-20260911/release-candidate-quiet-pages.json",
+      "sha256": "c232e018353ef71c665826c4228fdf5f7464e89dde6d400d1759bd294453dc63"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/workers-reconciliation-approved.json",
+      "sha256": "85d375d5396df156f8122ea668979ce92c6afcc23bb3278bde5d2e51bd062e2f"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/worker-restart-journals-0731.json",
+      "sha256": "c6d30b84523e4582f6afe728bcffb5508834f2e760b0b57e0210842ed3dd510a"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/restart-package-events-0735.json",
+      "sha256": "54296f37cbc94ed72c0162f5eba57616a90d0793d1f6a30cc4dee7d1eb58e401"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/controller-switched.json",
+      "sha256": "b7dd6004d32e7352838ba0413f09e4415a3ed815cb084f59a869cabcec7e4935"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/cleanup-limit-restored.json",
+      "sha256": "33766bc0a3a07a8817ed2b8bb13f69e16906e27de9fdf559774b9188a7ae3639"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/maintenance-resumed.json",
+      "sha256": "f51f9132f5f82410179f04f3f5e31b9ecf3329480b9390b3348e331cbefd228c"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/postactivation-audit.json",
+      "sha256": "4c34520d67995dfee82794c1bc872088ea202fe0395f0d71f5686747f877d25d"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/ordinary-operation-0753.json",
+      "sha256": "6e6b249e2e34b0d1806c991efbfae094d4a57b359eb74005dea824533ae30ec9"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc21-deploy-20260911/windows-live-http-0750.json",
+      "sha256": "9f3830392a8ee3dd72a92093f25cca42de58ddbae6fde46d9038825e05322f30"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc16-deploy-20260909/final-independent-review.json",
+      "sha256": "2137ca9a3acba3649104f086def3ac2ecf98bda768c9c40904c6529f78883d3b"
+    }
+  ],
+  "source_or_receipt_rewritten": false,
+  "ordinary_observation": {
+    "completed_at": "2026-09-11T07:51:10+00:00",
+    "duration_seconds": 109.1,
+    "audit_seconds": 101.5,
+    "branches_removed": 20,
+    "warning_budget_seconds": 10
+  },
+  "remaining": "Independent closing-account accuracy review and explicit owner target/security/latency disposition"
+}

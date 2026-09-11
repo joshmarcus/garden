@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-10T21:51:32.342195+00:00",
+  "status": "passed",
+  "source_head": "70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "public_projection_sha256": "d4647eb68606359e71d0231632bb18d8b794a210b7dcd8fa7464ac4a47ea2041",
+  "sections": [
+    {
+      "section": "phase04_lifetime",
+      "metrics_exact": true,
+      "accepted": 62,
+      "known_cost_usd": 504.8745,
+      "complete": false,
+      "average": null
+    },
+    {
+      "section": "phase05_lifetime",
+      "metrics_exact": true,
+      "accepted": 134,
+      "known_cost_usd": 857.8216,
+      "complete": false,
+      "average": null
+    },
+    {
+      "section": "phase05_since_reopening",
+      "metrics_exact": true,
+      "accepted": 9,
+      "known_cost_usd": 36.2682,
+      "complete": true,
+      "average": 4.0298
+    }
+  ],
+  "native_state_mutations": false
+}

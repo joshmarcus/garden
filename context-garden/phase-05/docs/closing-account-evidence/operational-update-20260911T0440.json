@@ -1,0 +1,49 @@
+{
+  "at": "2026-09-11T04:41:04.525179+00:00",
+  "status": "draft; RC20 rollout guard review, actual deployment, final metrics, independent account review and owner disposition remain",
+  "live_source": "RC19/70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "account_sha256": "4cbe9522c1c00d0b3759452e367f8ddd182bfc1adb6a71ca72e89d5b470a2da9",
+  "preserved_original_reports": 24,
+  "evidence": [
+    {
+      "path": "/home/joshua/work/operator-test-tmp/cg620-merge-0438.json",
+      "sha256": "56fb18019a502494495d572c81154fce3b2ae0e814fadff20b99a3411d34c68d"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/native-collection-20260911T0433.json",
+      "sha256": "13767e85a6ebc2a01f553caafacbb3ad954abd53dc00b08708c108a7943faaba"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/input-sweep-20260911T0417-final.json",
+      "sha256": "191809e69b9c69f5786c1a5139e25916ae9d88537396e5267ca0e7f2a720f445"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/cg617-merge-and-ci-dispositions-0336.json",
+      "sha256": "cbe0ce3752d734b4ba4c3e79c0e3519f8e5391d9be89b7549e8b7769d67bd85c"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc20-final-20260911/independent-release-review-042029-adverse.json",
+      "sha256": "74f3237dafedac25bdd619ecbe4378778380a85365e78074fb823af70a986d29"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc20-final-20260911/windows-backing-path-saved-0414.json",
+      "sha256": "92b84a31b30c1fee6a7f8357574774d2b7f7c1f752de9a80d3158875fa2f4db2"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc20-final-20260911/review-prelaunch-retry-receipt.json",
+      "sha256": "782f625b7232260bc892fbfdf90fec39aa1129fcd9685af146b1aa9af82dcc43"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc20-final-deploy-20260911/all-six-current-preflight-0430.json",
+      "sha256": "a44605b1e91bcb5fdafe5e0e9480c48954fba3840653c8f3a4b40976599d0038"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc20-final-deploy-20260911/review-correction-tests.log",
+      "sha256": "3c89030db70ac76e095dad58799d88b10534d8e931d267487122ae25a21be370"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc19-deploy-20260910/cleanup-watch-interrupt-47.json",
+      "sha256": "e8a98fcdb6235cfe66c2bedba75e7c9a2e027c8957b20241cd18dc4577620185"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-11T03:07:02.469969+00:00",
+  "status": "draft; finalRC20source/acceptance/activation, refreshedmetrics, independentreview and owner disposition remain",
+  "metrics_cutoff_unchanged": "2026-09-10T21:50:09.002606+00:00",
+  "account_sha256": "7f24abb64f7d7ec0c30314eb3e5bb2832b3b15e577a23418d60252f2412262de",
+  "preserved_original_reports": 24,
+  "canonical_sweep": "/home/joshua/work/operator-test-tmp/input-sweep-20260911T0304-final.json",
+  "canonical_sweep_sha256": "9e49c16614303286f767c6b1449583023eabe762f1c8f0c0ed2dc05c9f62bef9"
+}

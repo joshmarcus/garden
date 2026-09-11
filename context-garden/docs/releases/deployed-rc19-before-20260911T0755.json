@@ -1,0 +1,49 @@
+{
+  "version": "0.3.0rc19",
+  "tag": "v0.3.0rc19",
+  "release": "v0.3.0rc19",
+  "sha": "70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "commit": "70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "channel": "preview",
+  "release_url": "https://github.com/joshmarcus/context-garden/releases/tag/v0.3.0rc19",
+  "deployed_at": "2026-09-10T21:21:00.633936+00:00",
+  "verified_at": "2026-09-10T21:46:16.290566+00:00",
+  "status": "deployed_with_open_scheduler_regression",
+  "prior_pin": "671633857c8ac253d9238196a684d58838d7fa34",
+  "previous_pin": "671633857c8ac253d9238196a684d58838d7fa34",
+  "phase05_gate": "OPEN: CG-599 cleanup repair and explicit target disposition remain",
+  "verification": [
+    "Actual accepted-main CI34527242028 and exact release CI34527319596 succeeded before publication",
+    "Native independent release review20260910T203719Z-release_review approved source and deployment helpers",
+    "69 focused tests passed, including actual RC16-client protocol compatibility and two-process stale Run-save regression",
+    "All227installedsourcefiles/package/direct_url, runtime, identity, resource limits and unchanged deadlines verified on controller and allsixworkers",
+    "Both rollout pauses resumed21:26:26/21:26:53; worker-only ingress and tunnel verified21:45:49",
+    "Actual WindowsEdge Now/Inbox/Now navigation2.936/2.784/3.070seconds; firstcoldliveNow4.564seconds; no universal subsecond claim",
+    "Five workers claimed ordinary jobs; four authenticated results21:28:45\u201321:30:35 were preserved and later collected during accounted scheduler recovery"
+  ],
+  "fleet": {
+    "workers": 6,
+    "version": "0.3.0rc19",
+    "source_head": "70ae9179ae6e2af865aef5a8cecca90460328c4d",
+    "absolute_deadline": "2026-09-10T23:36:42Z",
+    "aggregate_budget_usd": 80,
+    "deadline_extended": false
+  },
+  "open_regression": {
+    "owner": "CG-599",
+    "effect": "Repeated historical-branch cleanup scans delay scheduler collection, later scheduling and operator actions; worker claims and authenticated result delivery continued",
+    "recovery": "Two accounted graceful watch-only SIGINT interruptions preserved state/results; no worker or installed source was changed",
+    "closed": false
+  },
+  "rollback": "Immutable RC16 runtime and unit backups are preserved; any rollback requires an accounted compatible boundary preserving active work and results",
+  "historical_record": "deployed-v0.2.0rc1-historical.json",
+  "evidence_sha256": {
+    "controller-switched.json": "33d525ca996dc20794c43543aae540dfe7fd8b481afc2c3e58721bfe38b2940d",
+    "maintenance-resumed.json": "49e87d5d7d30df52e49df81675078000f24d7c98033074d99c798e9647e5cb37",
+    "postactivation-latest.json": "e09b830a7fb6fd7768f37a5a5b40638b7999201bfa8947556105a1ab59a81a0c",
+    "ingress-installed.json": "1c30bcc811a461f575a9604799e51adc00b7d8a60c59be77bcb5905258a6901f",
+    "tunnel-switched.json": "99f9ba3670a9dcd76664de5732227e4ca02c8cc7f14021be3110d1bcf92c762b",
+    "cleanup-watch-interrupt-1.json": "80e1dadd0399171e443c4aeb2d941b9d7bd21bd757463078fb1e48deef58e048",
+    "cleanup-watch-interrupt-2.json": "acbb44e11ef4008bbb81a4fb72468ec36be59c8eb0eefdedba1ebdb59137cfd2"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-10T22:06:38.931357+00:00",
+  "source_head": "70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "scope": "direct source inspection and non-executing policy/response construction; no model, OS sandbox or malicious payload executed",
+  "planner": {
+    "current_policy_required": false,
+    "current_wrapper_configured": false,
+    "current_codex_bypass_argv": true,
+    "required_policy_rejects_bypass": true,
+    "disposition": "CG518 implements an opt-in capability; current deployment does not establish enforced planner isolation"
+  },
+  "artifacts": {
+    "svg_csp_sandbox": true,
+    "svg_nosniff": true,
+    "unknown_attachment": true,
+    "unknown_nosniff": true
+  },
+  "onboarding": {
+    "inspected": "onboard writes discovered commands into products.<product>.setup; scaffold selects claude and starts with empty pre_pr/ci checks",
+    "documentation": "getting-started explicitly instructs Codex-only users to select their harness before onboarding, verify discovered setup/test/lint commands in a disposable clone, and review the configuration before approval",
+    "scope_limit": "This is a documented manual-configuration workflow, not proof of automatic harness selection or discovered-check activation"
+  },
+  "files": {
+    "src/garden/sandbox.py": "1457cb77ab6a65f71f5b82e58745ab7f7a750e6d0e60603f3ac6676b2d0b81a4",
+    "src/garden/planner.py": "2c58c5bf6759ff2fe493ad45b3ae3267aa263c880a3cf7944791bedefaa66dd5",
+    "src/garden/harness.py": "acd8e956ad2f333339ea259ed6788d97268708cceb1dfcbd2b529113c131a577",
+    "src/garden/web/artifacts.py": "bdd447dc7b9a54a5084365f472952b7e8a850d614c474d1894446ac1db307eef",
+    "src/garden/web/pages/design.py": "56146e5d82f6c53146dba84aa1f3f93be33d8fb22c5635b9c5729a899ed6ab58",
+    "src/garden/web/pages/runs.py": "50a1e28a71fac4046dcde95763b32f17c9654fd0ee8b57a8c3af214c07e9f6c6",
+    "src/garden/onboard.py": "a6ad6b7eed5d622ead98fb355e92f68ee3e620b30b96b772252c9121e3c431c4",
+    "src/garden/scaffold.py": "b3ecfda77cce98c088cb3155e69c73df5c79a35b6d430fd0bac1afafe533d72d",
+    "docs/getting-started.md": "00997c69b441b16fedaf38d141f5198ae580daf131663dcd8c3c7643acb242a1"
+  },
+  "live_state_or_credentials_changed": false
+}
