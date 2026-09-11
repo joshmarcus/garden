@@ -1,0 +1,294 @@
+{
+  "at": "2026-09-10T18:59:46.666078+00:00",
+  "context_base": "f5a29634feadabf1e68ed8084e39f018437e7445",
+  "dependencies": [
+    {
+      "task": "CG-504",
+      "title": "Write and update user operator and contributor documentation",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/423",
+      "head": "c9ff23791cf1a6a4e5904501a77c611fe55d4f8b",
+      "merge": "f27112428b572a5c497197cbab05b749bd54646c",
+      "merged_at": "2026-09-10T13:41:20Z",
+      "review_run": "20260910T113821Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T11:47:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34472336879/job/102854906023",
+          "name": "test",
+          "startedAt": "2026-09-10T11:38:12Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T11:44:41Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34472226525/job/102854549066",
+          "name": "test",
+          "startedAt": "2026-09-10T11:36:56Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-517",
+      "title": "Separate authenticated worker ingress from operator control access",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/430",
+      "head": "843051cbc305f7510d96415a2093535d1b3aef77",
+      "merge": "a7bae7f6b97decb2543ede1018edc95ae9a42a87",
+      "merged_at": "2026-09-10T14:00:37Z",
+      "review_run": "20260910T135132Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:58:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34485106511/job/102897287369",
+          "name": "test",
+          "startedAt": "2026-09-10T13:49:56Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:58:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34485101067/job/102897268680",
+          "name": "test",
+          "startedAt": "2026-09-10T13:49:54Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-518",
+      "title": "Enforce filesystem and network sandboxes for planning and approved tools",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/428",
+      "head": "9c308aae51522d919d8ede1bcf56fad5ec7f1c72",
+      "merge": "d640f92d41aaf5133254ddf927b8a473ce380740",
+      "merged_at": "2026-09-10T17:09:09Z",
+      "review_run": "20260910T165834Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T17:06:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34505214069/job/102965603624",
+          "name": "test",
+          "startedAt": "2026-09-10T16:57:08Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T17:06:45Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34505208862/job/102965585845",
+          "name": "test",
+          "startedAt": "2026-09-10T16:57:07Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-519",
+      "title": "Serve every active design and run artifact through an inert preview boundary",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/426",
+      "head": "e79d011949d754e905ef1c9af1ac05741674cf19",
+      "merge": "5d1bb57dbfc927148e1b5443df71da8700ebf9cd",
+      "merged_at": "2026-09-10T11:58:42Z",
+      "review_run": "20260910T114820Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T11:57:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34473220625/job/102857762463",
+          "name": "test",
+          "startedAt": "2026-09-10T11:48:16Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T11:55:36Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34473098429/job/102857365570",
+          "name": "test",
+          "startedAt": "2026-09-10T11:46:52Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-534",
+      "title": "Refuse destructive recovery from corrupt scheduler state",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/442",
+      "head": "5e19691631360cb88cec7d002664af8ad12aa64f",
+      "merge": "ea016f47e173a3803617d99584fb9eb1fc7feda7",
+      "merged_at": "2026-09-10T13:57:43Z",
+      "review_run": "20260910T132651Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:36:50Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34482683560/job/102889115946",
+          "name": "test",
+          "startedAt": "2026-09-10T13:26:50Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:34:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34482527205/job/102888589886",
+          "name": "test",
+          "startedAt": "2026-09-10T13:25:19Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-535",
+      "title": "Preserve maintenance requests across stale scheduler reads",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/441",
+      "head": "7db2a96098fbc46e0e50e10a770cf1b96e25bd8b",
+      "merge": "8861a6b84225734544c65402ea67a0a9730c465b",
+      "merged_at": "2026-09-10T13:38:41Z",
+      "review_run": "20260910T132538Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:33:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34482539445/job/102888629102",
+          "name": "test",
+          "startedAt": "2026-09-10T13:25:26Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T13:32:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34482372811/job/102888081995",
+          "name": "test",
+          "startedAt": "2026-09-10T13:23:52Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-536",
+      "title": "Make accepted-task costs and phase comparisons trustworthy",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/446",
+      "head": "52d581bd94ac81a64435ae5a14ec749aa4a7e398",
+      "merge": "5b481b7c01c91762df4f20c91d9010e87d0eede0",
+      "merged_at": "2026-09-10T17:07:54Z",
+      "review_run": "20260910T165704Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T17:04:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34505073197/job/102965123668",
+          "name": "test",
+          "startedAt": "2026-09-10T16:55:43Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T17:04:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34505068599/job/102965106386",
+          "name": "test",
+          "startedAt": "2026-09-10T16:55:39Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-584",
+      "title": "Preserve worker completion across standalone scheduler writes",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/443",
+      "head": "e82422e680c18093ca2b1c596ace1821e8f9bc42",
+      "merge": "9565228279b58d754efd026d32be51bd2da368d9",
+      "merged_at": "2026-09-10T14:26:26Z",
+      "review_run": "20260910T141658Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T14:24:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34487864943/job/102906667120",
+          "name": "test",
+          "startedAt": "2026-09-10T14:15:36Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T14:24:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34487858427/job/102906645347",
+          "name": "test",
+          "startedAt": "2026-09-10T14:15:32Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    },
+    {
+      "task": "CG-585",
+      "title": "Repair the RunStore import cycle on merged main",
+      "pr": "https://github.com/joshmarcus/context-garden/pull/449",
+      "head": "6ea7dd8ca15e843dea574222d760af23164e2010",
+      "merge": "51241517dbccc79a3bd3a69effbcfb1485bd133d",
+      "merged_at": "2026-09-10T15:43:31Z",
+      "review_run": "20260910T153316Z-review",
+      "review_verdict": "approve",
+      "ci": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T15:40:50Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34496376734/job/102935765515",
+          "name": "test",
+          "startedAt": "2026-09-10T15:33:10Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-10T15:40:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/joshmarcus/context-garden/actions/runs/34496222923/job/102935242180",
+          "name": "test",
+          "startedAt": "2026-09-10T15:31:46Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        }
+      ]
+    }
+  ]
+}

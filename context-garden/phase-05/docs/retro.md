@@ -1,3 +1,25 @@
+# Phase 05 closing status
+
+**September 11, 2026 at 10:11 UTC: the delegated closing disposition is close with follow-ups.** Under the owner's instruction to review all human actions, the operator accepted the documented target misses, unknown coverage, residual cleanup latency and current opt-in isolation limits as explicit exceptions. The [closing account](closing-account.md) records the exact authority, rationale, accountable follow-through and preserved evidence. Final context-PR acceptance, CG537 manual completion and native phase closure remain required; this editorial disposition is not a phase-close or stable-release event. RC21 remains live on the controller and all six workers. The original retrospective below remains unchanged, including its historical Reopen verdict and numbers.
+
+The following index links every original persona report, reaction supplement and narrative. These are dated dispositions of the closing evidence, not replacement persona opinions. All original files remain byte-identical under the [preservation manifest](closing-account-evidence/preserved-reports.json). The [narrative renderer](retro/narratives.md) is retained.
+
+| Contributor | Original report | Reaction | Narrative | Closing disposition at September 11,10:11 UTC |
+|---|---|---|---|---|
+| User | [Report](reviews/user-2026-09-10.md) | [Supplement](reviews/user-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/user.md) | Documentation and the documented manual onboarding workflow are accounted; this does not establish automatic harness/check activation. |
+| Staff engineer | [Report](reviews/staff-engineer-2026-09-10.md) | [Supplement](reviews/staff-engineer-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/staff-engineer.md) | Accepted preservation, scheduling and recovery repairs are accounted by exact source; the actual RC21 activation and its remaining cleanup latency are distinguished. |
+| Product manager | [Report](reviews/product-manager-2026-09-10.md) | [Supplement](reviews/product-manager-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/product-manager.md) | Current accepted-cohort metrics replace the old snapshot for closing decisions; target misses and unknown coverage remain explicit. |
+| Project manager | [Report](reviews/project-manager-2026-09-10.md) | [Supplement](reviews/project-manager-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/project-manager.md) | Original source/release provenance and delegated interventions are retained; the delegated disposition records accepted exceptions with accountable follow-through. |
+| Usability expert | [Report](reviews/usability-expert-2026-09-10.md) | [Supplement](reviews/usability-expert-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/usability-expert.md) | Accepted interface repairs and actual latency observations are accounted with their limits; old failures remain preserved. |
+| Designer | [Report](reviews/designer-2026-09-10.md) | [Supplement](reviews/designer-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/designer.md) | Original design findings and later accepted work remain linked; no new persona verdict is inferred. |
+| Security | [Report](reviews/security-2026-09-10.md) | [Supplement](reviews/security-reaction-supplement-2026-09-10.md) | [Narrative](retro/narratives/security.md) | CG518 opt-in isolation and CG519 inert artifact handling are inspected directly; current enforced isolation is not established, and cancelled533 remains cancelled with its blocked report intact. |
+
+The [original retro editor report](reviews/retro-editor-2026-09-10.md) and [closing editor report](reviews/phase05-closing-editor-2026-09-10.md) are also preserved. The current account addresses their provenance and accounting requirements; their original Reopen conclusion is retained as historical evidence, while the current delegated disposition is close with follow-ups after actual CG537 acceptance. Existing accepted source for CG517/518 and merged CG519 is identified directly in the account, together with actual manual onboarding and isolation limits.
+
+## Original retrospective, preserved
+
+> Historical review snapshot: the original Reopen verdict and numbers below are preserved. See [the current closing account](closing-account.md) for later accepted source, deployment failures, metric coverage and the recorded delegated disposition.
+
 # Retrospective: context-garden/phase-05
 
 _2026-09-10T13:10:37+00:00 · hard tier (gpt-6-astra)_

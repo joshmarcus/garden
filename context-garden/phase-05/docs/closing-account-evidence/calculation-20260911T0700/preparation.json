@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-11T06:57:49.795334+00:00",
+  "source_head": "5d88157d1fd5d9a15fcd746a888d05e179c75543",
+  "scope": "fresh read-only accounting snapshot from accepted merged source; independent of pending release/main CI",
+  "original_calculation_preserved": true,
+  "prior_verified_source_head": "d640f92d41aaf5133254ddf927b8a473ce380740",
+  "historical_prose_correction": "Earlier account called the old metrics implementation RC19; the original result and actual checkout correctly identify d640f92d. Original calculations, inputs and hashes are unchanged.",
+  "paths": {
+    "new_directory": "/home/joshua/work/operator-test-tmp/phase05-closing-account-20260910/calculation-20260911T0656",
+    "original_directory": "/home/joshua/work/operator-test-tmp/phase05-closing-account-20260910"
+  }
+}
