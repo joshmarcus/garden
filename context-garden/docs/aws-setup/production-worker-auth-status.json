@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-08T04:43:24.395714+00:00",
+  "status": "Dedicated Codex ChatGPT sign-in succeeded; no production EC2 host launched",
+  "profile": "/home/joshua/.config/context-garden/production-worker-codex",
+  "cli_version": "0.153.4",
+  "credential_policy": "Dedicated worker session; no operator auth copied",
+  "next": "Check existing login process/status before attempting another sign-in; do not reuse an expired code",
+  "production_host": "Not launched"
+}

@@ -1,0 +1,66 @@
+{
+  "at": "2026-09-11T07:38:51.419179+00:00",
+  "head": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+  "base": "5d88157d1fd5d9a15fcd746a888d05e179c75543",
+  "manifest_sha256": "8b6631de8dae17008fe9c377a126cc244a7717b61998b5e60c2e594f65c818cd",
+  "publication": {
+    "status": "published",
+    "url": "https://github.com/joshmarcus/context-garden/releases/tag/v0.3.0rc21",
+    "publishedAt": "2026-09-11T07:27:25Z",
+    "tag_object": "8fc7f1a2d9b756fd188962a4e99cb914ce3d9752",
+    "artifact_sha256": "dbf81b8823dbaa95b9a46d5b1ccfde589c4256cb902dea1104b09f0e339af524"
+  },
+  "repairs": [
+    {
+      "task": "CG-616",
+      "number": 481,
+      "url": "https://github.com/joshmarcus/context-garden/pull/481",
+      "headRefOid": "cedee2730d588cf8b4b552e0d7c407beae50e65c",
+      "mergeCommit": {
+        "oid": "ad708237f3db8b3204a0b5f35ac616a5be685c70"
+      },
+      "mergedAt": "2026-09-11T04:57:11Z"
+    },
+    {
+      "task": "CG-620",
+      "number": 486,
+      "url": "https://github.com/joshmarcus/context-garden/pull/486",
+      "headRefOid": "250e098d0bfd91c44fd392d659e867352803891d",
+      "mergeCommit": {
+        "oid": "b4f8c19132b6e545ea4857a84e94be1104e5aa0c"
+      },
+      "mergedAt": "2026-09-11T04:35:45Z"
+    },
+    {
+      "task": "CG-601",
+      "number": 484,
+      "url": "https://github.com/joshmarcus/context-garden/pull/484",
+      "headRefOid": "250a5b3b416cdda679dc86ee53c2aa5b3215a73b",
+      "mergeCommit": {
+        "oid": "cbe7874c0bb7ee6422d9536bcfe07e77b15d6f29"
+      },
+      "mergedAt": "2026-09-11T06:02:28Z"
+    },
+    {
+      "task": "CG-621",
+      "number": 487,
+      "url": "https://github.com/joshmarcus/context-garden/pull/487",
+      "headRefOid": "5f33ffb74800bda194e96eefdd53118ef877d434",
+      "mergeCommit": {
+        "oid": "0af5eb7db1a5dd93d013c0a79da450655b9b987e"
+      },
+      "mergedAt": "2026-09-11T06:24:59Z"
+    },
+    {
+      "task": "CG-622",
+      "number": 488,
+      "url": "https://github.com/joshmarcus/context-garden/pull/488",
+      "headRefOid": "9e2b01c8aab29e0a69a5d0463f2629a31d6e6eca",
+      "mergeCommit": {
+        "oid": "5d88157d1fd5d9a15fcd746a888d05e179c75543"
+      },
+      "mergedAt": "2026-09-11T06:47:13Z"
+    }
+  ],
+  "scope": "projection of actual accepted-source identities; original reviews and source receipts remain unchanged"
+}

@@ -1,0 +1,51 @@
+{
+  "SecurityGroups": [
+    {
+      "GroupId": "sg-042e4fd7d39c06857",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 443,
+          "ToPort": 443,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "HTTPS package sources, AWS APIs, GitHub and Tailscale relay",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "context-garden"
+        },
+        {
+          "Key": "aws:cloudformation:stack-name",
+          "Value": "context-garden-phase05-infrastructure"
+        },
+        {
+          "Key": "Pool",
+          "Value": "phase05"
+        },
+        {
+          "Key": "aws:cloudformation:logical-id",
+          "Value": "WorkerSecurityGroup"
+        },
+        {
+          "Key": "aws:cloudformation:stack-id",
+          "Value": "arn:aws:cloudformation:us-east-1:350111791226:stack/context-garden-phase05-infrastructure/6294d1c0-aaec-11f1-8ebc-128124cdfbfb"
+        }
+      ],
+      "VpcId": "vpc-0b3a690d87cdb3e64",
+      "SecurityGroupArn": "arn:aws:ec2:us-east-1:350111791226:security-group/sg-042e4fd7d39c06857",
+      "OwnerId": "350111791226",
+      "GroupName": "context-garden-phase05-infrastructure-WorkerSecurityGroup-fLFaotOBRbX6",
+      "Description": "Garden worker: no inbound; outbound HTTPS for bootstrap and Tailscale relay",
+      "IpPermissions": []
+    }
+  ]
+}

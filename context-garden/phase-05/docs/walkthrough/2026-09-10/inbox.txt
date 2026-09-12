@@ -1,0 +1,951 @@
+Inbox · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+  What needs you
+Decision cards need your judgment; operator cards name a bounded repair. Beyond that, the garden grows.
+
+  Deep dive…BoardTimeline
+
+  19
+need you
+
+  7/7
+workers running
+
+  2/3
+reviews running
+
+  20
+PRs open
+
+  $338.90
+spent in 24h
+
+  Merge queue
+
+    No PR is in flight right now.
+
+    Last drop: CG-455 left the queue — the PR checks rollup is failure
+
+My workFilter
+
+  reviewReview and merge
+Ready for review on GitHub. Comments you leave become a revise run; merging unblocks dependents.
+
+    in flower
+
+    CG-302in reviewin flower · hard · owner unassigned · 1h
+
+      Spike: OpenRouter harness shape and adapter CLI
+
+      automated review approved this PR head · CI success · automerge held: only 1 review round(s) so far, need 2
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-348in reviewin flower · medium · owner unassigned · 1h
+
+      Make EC2 pool cost health draining and teardown understandable and verifiable
+
+      automated review approved this PR head · CI failure · automerge held: stacked on CG-347; waits for the restack
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-503in reviewin flower · hard · owner unassigned · 1h
+
+      Find removable and overengineered code to simplify and optimize
+
+      automated review approved this PR head · CI success · automerge held: only 1 review round(s) so far, need 2
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-504in reviewin flower · hard · owner unassigned · 1h
+
+      Write and update user operator and contributor documentation
+
+      automated review approved this PR head · CI success · automerge held: only 1 review round(s) so far, need 2
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-505in reviewin flower · hard · owner unassigned · 0m
+
+      Audit and update all Garden specifications
+
+      automated review approved this PR head · CI pending · automerge held: the PR checks rollup is pending
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-514in reviewin flower · hard · owner unassigned · 57m
+
+      Never require a second review solely by count
+
+      automated review approved this PR head · CI failure · automerge held: the PR checks rollup is failure
+
+        Review on GitHub ↗
+
+    in flower
+
+    CG-517in reviewin flower · hard · owner unassigned · 1h
+
+      Separate authenticated worker ingress from operator control access
+
+      automated review approved this PR head · CI failure · automerge held: only 1 review round(s) so far, need 2
+
+        Review on GitHub ↗
+
+  automated_reviewAutomated review · 2, no action needed
+The scheduler owns this review state. It records the queue, resource wait, and most recent verdict without asking a person to clear it.
+
+    in flower
+
+    CG-213in reviewin flower · hard · owner unassigned · 58m
+
+      OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usage
+
+      automated review running
+
+    in flower
+
+    CG-512in reviewin flower · easy · owner unassigned · 2m
+
+      Narrow retro reservation orchestration setup
+
+      automated review running
+
+  deferredDeferred work · 1, no action needed
+This draft is intentionally frozen by phase policy. Move it deliberately when the policy changes; it never needs approval or cancellation merely to clear a badge.
+
+    seed
+
+    CG-402draftseed · hard · owner unassigned · 23h
+
+      Export immutable run evaluation evidence into context under an approved policy
+
+      deferred by the phase freeze · policy: owner moved deferred work from context-garden/phase-07 to context-garden/phase-08; destination remains frozen, status/history/dependencies preserved
+
+        View freeze policy
+
+  attentionNeeds a decision
+The loop stopped on purpose: a stall, a cap, a closed PR, a failed worker.
+
+    pruned
+
+    CG-347changes requestedpruned · hard · owner unassigned · 1h
+
+      Recover EC2 Spot interruptions without losing accepted work or exceeding pool limits
+
+  Needs a decision: Troubled task
+
+  the granted revision allowance is exhausted after 4 substantive revisions
+
+  Substantive revisions are not converging. New implementation dispatch is paused for an explicit bounded decision.
+
+  run 20260910T114927Z-check (check): done
+run 20260910T115105Z-review (review): done — Spot interruption recovery and fencing are well covered, but Spot launches without an explicit maximum price can still exceed the pool's adm
+last automated review: request changes — Spot interruption recovery and fencing are well covered, but Spot launches without an explicit maximum price can still exceed the pool's admitted cost estimate.
+PR: open · CI success
+4 revision round(s) used
+6 automated review round(s) used
+cost so far: $10.29
+current owner: product owner
+
+      Continue one revision
+
+      grants one bounded revision under normal capacity; lifetime counts, feedback, branch and PR remain
+
+      Operator investigatesRequest investigation agentPause for investigation
+
+      records a bounded read-only diagnosis request; active work drains safely and no implementation restarts
+
+      Change approach
+
+      adds the owner's new approach to preserved feedback and queues one bounded revision
+
+      Defer
+
+      keeps all work and leaves implementation paused until an explicit later decision
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      requires a reason and closes only after the writer drains; branch, PR, runs and artifacts stay preserved
+
+      Open PR ↗
+      the pull request on GitHub
+
+    pruned
+
+    CG-396changes requestedpruned · hard · owner unassigned · 10h
+
+      Use pluggable exact-head CI status for review and merge eligibility
+
+  Needs a decision: Troubled task
+
+  deferred: Overlaps CG-434's current worker-check receipt implementation. Preserve PR343/head e0bdd64 and all findings; resume after CG-434 lands, then rebase and retain only the distinct pluggable-provider delta.
+
+  Substantive revisions are not converging. New implementation dispatch is paused for an explicit bounded decision.
+
+  run 20260909T185505Z-check (check): done
+run 20260909T185619Z-check (check): done
+last automated review: request changes — Focused tests pass, but malformed newest worker-check evidence can either fall back to an older green receipt or raise an exception instead of failing closed.
+PR: open · CI failure
+7 revision round(s) used
+8 automated review round(s) used
+cost so far: $34.18
+current owner: product owner
+
+      Continue one revision
+
+      grants one bounded revision under normal capacity; lifetime counts, feedback, branch and PR remain
+
+      Operator investigatesRequest investigation agentPause for investigation
+
+      records a bounded read-only diagnosis request; active work drains safely and no implementation restarts
+
+      Change approach
+
+      adds the owner's new approach to preserved feedback and queues one bounded revision
+
+      Defer
+
+      keeps all work and leaves implementation paused until an explicit later decision
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      requires a reason and closes only after the writer drains; branch, PR, runs and artifacts stay preserved
+
+      Open PR ↗
+      the pull request on GitHub
+
+    pruned
+
+    CG-501changes requestedpruned · hard · owner unassigned · 1h
+
+      Diagnose worker disconnects and resets and make recovery resilient
+
+  Needs a decision: Troubled task
+
+  the granted revision allowance is exhausted after 5 substantive revisions
+
+  Substantive revisions are not converging. New implementation dispatch is paused for an explicit bounded decision.
+
+  run 20260910T115523Z-check (check): done
+run 20260910T115654Z-review (review): done — Recovery and diagnostics are substantially covered, but stale active-claim state can mistake a reused PID for the original supervisor and te
+last automated review: request changes — Recovery and diagnostics are substantially covered, but stale active-claim state can mistake a reused PID for the original supervisor and terminate an unrelated
+PR: open · CI failure
+5 revision round(s) used
+6 automated review round(s) used
+cost so far: $14.35
+current owner: product owner
+
+      Continue one revision
+
+      grants one bounded revision under normal capacity; lifetime counts, feedback, branch and PR remain
+
+      Operator investigatesRequest investigation agentPause for investigation
+
+      records a bounded read-only diagnosis request; active work drains safely and no implementation restarts
+
+      Change approach
+
+      adds the owner's new approach to preserved feedback and queues one bounded revision
+
+      Defer
+
+      keeps all work and leaves implementation paused until an explicit later decision
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      requires a reason and closes only after the writer drains; branch, PR, runs and artifacts stay preserved
+
+      Open PR ↗
+      the pull request on GitHub
+
+    pruned
+
+    CG-506changes requestedpruned · hard · owner unassigned · 1h
+
+      Return complete worker transcripts for server-side storage and analysis
+
+  Needs a decision: Troubled task
+
+  the granted revision allowance is exhausted after 4 substantive revisions
+
+  Substantive revisions are not converging. New implementation dispatch is paused for an explicit bounded decision.
+
+  run 20260910T112204Z-check (check): done
+run 20260910T112328Z-review (review): done — Transcript storage and attempt-aware retrieval are substantially implemented, but worker restart recovery still fails after transcript final
+last automated review: request changes — Transcript storage and attempt-aware retrieval are substantially implemented, but worker restart recovery still fails after transcript finalization and before o
+PR: open · CI success
+4 revision round(s) used
+5 automated review round(s) used
+cost so far: $10.20
+current owner: product owner
+
+      Continue one revision
+
+      grants one bounded revision under normal capacity; lifetime counts, feedback, branch and PR remain
+
+      Operator investigatesRequest investigation agentPause for investigation
+
+      records a bounded read-only diagnosis request; active work drains safely and no implementation restarts
+
+      Change approach
+
+      adds the owner's new approach to preserved feedback and queues one bounded revision
+
+      Defer
+
+      keeps all work and leaves implementation paused until an explicit later decision
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      requires a reason and closes only after the writer drains; branch, PR, runs and artifacts stay preserved
+
+      Open PR ↗
+      the pull request on GitHub
+
+    pruned
+
+    CG-513changes requestedpruned · medium · owner unassigned · 55m
+
+      Show only relevant unique design files for each pull request
+
+  Needs a decision: The loop stalled
+
+  review finding repeated after a revise round: acceptance criterion is explicitly unmet: show each changed design once with wor
+
+  A revise round changed nothing (or a review finding came back unchanged), so the garden stopped instead of spending more rounds.
+
+  run 20260910T115351Z-check (check): done
+run 20260910T120006Z-review (review): done — Current PR/base scoping and deletion handling work, but pure design-file renames are omitted from the panel.
+last automated review: request changes — Current PR/base scoping and deletion handling work, but pure design-file renames are omitted from the panel.
+PR: open · CI success
+1 revision round(s) used
+2 automated review round(s) used
+cost so far: $1.98
+
+      Nothing to fix, resume
+
+      clears the stop and returns the task to in review; no run starts
+
+      Continue the loop
+
+      keeps the PR and queues a revise run on this branch to address what is outstanding; it does not start the work over
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      kills any running worker and closes the task as cancelled; the PR stays open on GitHub
+
+      Open PR ↗
+      the pull request on GitHub
+
+    pruned
+
+    CG-518changes requestedpruned · hard · owner unassigned · 5m
+
+      Enforce filesystem and network sandboxes for planning and approved tools
+
+  Needs a decision: The loop stalled
+
+  review finding repeated after a revise round: acceptance criterion is explicitly unmet: define a capability-checked sandbox co
+
+  A revise round changed nothing (or a review finding came back unchanged), so the garden stopped instead of spending more rounds.
+
+  run 20260910T120535Z-check (check): done
+run 20260910T125144Z-review (review): done — The sandbox remains self-attested rather than enforced, and copied harness credentials are explicitly placed inside writable roots.
+last automated review: request changes — The sandbox remains self-attested rather than enforced, and copied harness credentials are explicitly placed inside writable roots.
+PR: open · CI success
+1 revision round(s) used
+2 automated review round(s) used
+cost so far: $5.53
+
+      Nothing to fix, resume
+
+      clears the stop and returns the task to in review; no run starts
+
+      Continue the loop
+
+      keeps the PR and queues a revise run on this branch to address what is outstanding; it does not start the work over
+
+      Discuss…
+
+      a ready-made prompt with the task, the reason and the evidence, for a chat session or `garden take`
+
+      Cancel
+
+      kills any running worker and closes the task as cancelled; the PR stays open on GitHub
+
+      Open PR ↗
+      the pull request on GitHub
+
+  approveApprove planned or discovered work
+Draft tasks waiting for a go.
+
+    seed
+
+    CG-525draftseed · easy · owner unassigned · 1h
+
+      Repair manual PR refresh fake mutation regression
+
+      discovered by CG-515 · discovered by CG-515
+
+          Approve into phase-06
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+    seed
+
+    CG-526draftseed · hard · owner unassigned · 1h
+
+      Complete objective failure-trigger model escalation
+
+      discovered by CG-505 · discovered by CG-505
+
+          Approve into phase-07
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+    seed
+
+    CG-527draftseed · hard · owner unassigned · 10m
+
+      Clean up abandoned worker branches, worktrees and temporary files
+
+      planned, not yet approved
+
+          Approve into phase-07
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+    seed
+
+    CG-528draftseed · hard · owner unassigned · 10m
+
+      Enforce a 20 GiB physical-disk reserve before local work and staging
+
+      planned, not yet approved
+
+          Approve into phase-07
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+    seed
+
+    CG-529draftseed · hard · owner unassigned · 3m
+
+      Automatically start the phase closing review when prerequisites are met
+
+      planned, not yet approved
+
+          Approve into phase-07
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+    seed
+
+    CG-530draftseed · medium · owner unassigned · 3m
+
+      Add Last week to Now and share its cost graphs on Costs
+
+      planned, not yet approved
+
+          Approve into phase-06
+
+            phase-05phase-06phase-07phase-08 (frozen)
+
+        Drop
+
+  Progress
+Merged work against scope, all phases
+
+0
+
+221
+
+443
+
+443 in scope
+
+382 merged
+382 merged
+2026-09-04T17:02: 1 merged
+2026-09-04T17:18: 2 merged
+2026-09-04T17:24: 3 merged
+2026-09-04T17:32: 4 merged
+2026-09-04T17:40: 5 merged
+2026-09-04T17:42: 6 merged
+2026-09-04T17:42: 7 merged
+2026-09-04T17:45: 8 merged
+2026-09-04T17:49: 9 merged
+2026-09-04T18:05: 10 merged
+2026-09-04T18:06: 11 merged
+2026-09-04T18:06: 12 merged
+2026-09-04T18:09: 13 merged
+2026-09-04T18:25: 14 merged
+2026-09-04T18:28: 15 merged
+2026-09-04T18:29: 16 merged
+2026-09-04T18:33: 17 merged
+2026-09-04T18:54: 18 merged
+2026-09-04T18:55: 19 merged
+2026-09-04T18:59: 20 merged
+2026-09-04T18:59: 21 merged
+2026-09-04T19:05: 22 merged
+2026-09-04T19:09: 23 merged
+2026-09-04T19:11: 24 merged
+2026-09-04T19:18: 25 merged
+2026-09-04T19:34: 26 merged
+2026-09-04T19:34: 27 merged
+2026-09-04T19:36: 28 merged
+2026-09-04T19:38: 29 merged
+2026-09-04T19:44: 30 merged
+2026-09-04T20:14: 31 merged
+2026-09-04T20:15: 32 merged
+2026-09-04T21:18: 33 merged
+2026-09-04T21:18: 34 merged
+2026-09-04T21:20: 35 merged
+2026-09-04T21:21: 36 merged
+2026-09-04T21:26: 37 merged
+2026-09-04T21:26: 38 merged
+2026-09-04T21:27: 39 merged
+2026-09-04T22:02: 40 merged
+2026-09-04T22:02: 41 merged
+2026-09-04T22:03: 42 merged
+2026-09-04T22:04: 43 merged
+2026-09-04T22:06: 44 merged
+2026-09-04T22:09: 45 merged
+2026-09-04T23:57: 46 merged
+2026-09-04T23:58: 47 merged
+2026-09-04T23:58: 48 merged
+2026-09-04T23:58: 49 merged
+2026-09-04T23:58: 50 merged
+2026-09-04T23:58: 51 merged
+2026-09-04T23:58: 52 merged
+2026-09-04T23:59: 53 merged
+2026-09-04T23:59: 54 merged
+2026-09-04T23:59: 55 merged
+2026-09-04T23:59: 56 merged
+2026-09-05T00:00: 57 merged
+2026-09-05T00:01: 58 merged
+2026-09-05T00:01: 59 merged
+2026-09-05T00:05: 60 merged
+2026-09-05T00:06: 61 merged
+2026-09-05T00:07: 62 merged
+2026-09-05T00:17: 63 merged
+2026-09-05T00:26: 64 merged
+2026-09-05T00:28: 65 merged
+2026-09-05T00:29: 66 merged
+2026-09-05T00:41: 67 merged
+2026-09-05T00:49: 68 merged
+2026-09-05T00:57: 69 merged
+2026-09-05T01:10: 70 merged
+2026-09-05T01:13: 71 merged
+2026-09-05T01:14: 72 merged
+2026-09-05T01:18: 73 merged
+2026-09-05T01:24: 74 merged
+2026-09-05T01:45: 75 merged
+2026-09-05T01:53: 76 merged
+2026-09-05T01:54: 77 merged
+2026-09-05T01:58: 78 merged
+2026-09-05T02:07: 79 merged
+2026-09-05T02:10: 80 merged
+2026-09-05T02:12: 81 merged
+2026-09-05T02:13: 82 merged
+2026-09-05T02:17: 83 merged
+2026-09-05T02:30: 84 merged
+2026-09-05T03:42: 85 merged
+2026-09-05T03:50: 86 merged
+2026-09-05T03:59: 87 merged
+2026-09-05T04:02: 88 merged
+2026-09-05T04:24: 89 merged
+2026-09-05T04:29: 90 merged
+2026-09-05T04:30: 91 merged
+2026-09-05T04:34: 92 merged
+2026-09-05T04:36: 93 merged
+2026-09-05T04:38: 94 merged
+2026-09-05T04:47: 95 merged
+2026-09-05T04:50: 96 merged
+2026-09-05T04:52: 97 merged
+2026-09-05T04:54: 98 merged
+2026-09-05T04:57: 99 merged
+2026-09-05T05:00: 100 merged
+2026-09-05T05:03: 101 merged
+2026-09-05T05:13: 102 merged
+2026-09-05T05:21: 103 merged
+2026-09-05T05:37: 104 merged
+2026-09-05T05:47: 105 merged
+2026-09-05T05:48: 106 merged
+2026-09-05T05:49: 107 merged
+2026-09-05T05:50: 108 merged
+2026-09-05T05:52: 109 merged
+2026-09-05T05:53: 110 merged
+2026-09-05T05:53: 111 merged
+2026-09-05T09:35: 112 merged
+2026-09-05T09:52: 113 merged
+2026-09-05T10:10: 114 merged
+2026-09-05T10:10: 115 merged
+2026-09-05T11:43: 116 merged
+2026-09-05T11:55: 117 merged
+2026-09-05T12:05: 118 merged
+2026-09-05T12:12: 119 merged
+2026-09-05T12:19: 120 merged
+2026-09-05T12:28: 121 merged
+2026-09-05T12:36: 122 merged
+2026-09-05T12:51: 123 merged
+2026-09-05T13:02: 124 merged
+2026-09-05T13:03: 125 merged
+2026-09-05T13:05: 126 merged
+2026-09-05T13:06: 127 merged
+2026-09-05T13:08: 128 merged
+2026-09-05T13:09: 129 merged
+2026-09-05T13:11: 130 merged
+2026-09-05T13:14: 131 merged
+2026-09-05T13:14: 132 merged
+2026-09-05T13:16: 133 merged
+2026-09-05T13:27: 134 merged
+2026-09-05T13:33: 135 merged
+2026-09-05T13:37: 136 merged
+2026-09-05T13:38: 137 merged
+2026-09-05T13:38: 138 merged
+2026-09-05T13:38: 139 merged
+2026-09-05T14:01: 140 merged
+2026-09-05T15:10: 141 merged
+2026-09-05T15:15: 142 merged
+2026-09-05T15:23: 143 merged
+2026-09-05T15:30: 144 merged
+2026-09-05T15:36: 145 merged
+2026-09-05T15:44: 146 merged
+2026-09-05T15:57: 147 merged
+2026-09-05T16:03: 148 merged
+2026-09-05T16:35: 149 merged
+2026-09-05T16:41: 150 merged
+2026-09-05T17:01: 151 merged
+2026-09-05T17:22: 152 merged
+2026-09-05T17:28: 153 merged
+2026-09-05T17:35: 154 merged
+2026-09-05T17:42: 155 merged
+2026-09-05T17:52: 156 merged
+2026-09-05T17:57: 157 merged
+2026-09-05T18:06: 158 merged
+2026-09-05T18:14: 159 merged
+2026-09-05T18:24: 160 merged
+2026-09-05T18:31: 161 merged
+2026-09-05T19:10: 162 merged
+2026-09-05T19:16: 163 merged
+2026-09-05T19:40: 164 merged
+2026-09-05T20:24: 165 merged
+2026-09-05T20:36: 166 merged
+2026-09-05T21:13: 167 merged
+2026-09-05T21:28: 168 merged
+2026-09-05T21:36: 169 merged
+2026-09-05T21:45: 170 merged
+2026-09-05T21:52: 171 merged
+2026-09-05T22:01: 172 merged
+2026-09-05T22:30: 173 merged
+2026-09-05T23:39: 174 merged
+2026-09-06T00:06: 175 merged
+2026-09-06T00:55: 176 merged
+2026-09-06T01:51: 177 merged
+2026-09-06T01:54: 178 merged
+2026-09-06T01:56: 179 merged
+2026-09-06T01:57: 180 merged
+2026-09-06T02:07: 181 merged
+2026-09-06T02:07: 182 merged
+2026-09-06T02:08: 183 merged
+2026-09-06T02:33: 184 merged
+2026-09-06T03:08: 185 merged
+2026-09-06T03:30: 186 merged
+2026-09-06T03:30: 187 merged
+2026-09-06T03:31: 188 merged
+2026-09-06T04:52: 189 merged
+2026-09-06T05:19: 190 merged
+2026-09-06T07:34: 191 merged
+2026-09-06T08:20: 192 merged
+2026-09-06T11:57: 193 merged
+2026-09-06T12:44: 194 merged
+2026-09-06T12:44: 195 merged
+2026-09-06T12:44: 196 merged
+2026-09-06T12:44: 197 merged
+2026-09-06T13:23: 198 merged
+2026-09-06T13:27: 199 merged
+2026-09-06T16:13: 200 merged
+2026-09-06T16:30: 201 merged
+2026-09-06T17:02: 202 merged
+2026-09-06T17:13: 203 merged
+2026-09-06T17:32: 204 merged
+2026-09-06T17:39: 205 merged
+2026-09-06T17:40: 206 merged
+2026-09-06T18:59: 207 merged
+2026-09-06T20:10: 208 merged
+2026-09-06T20:29: 209 merged
+2026-09-06T21:12: 210 merged
+2026-09-06T22:02: 211 merged
+2026-09-06T22:23: 212 merged
+2026-09-06T22:57: 213 merged
+2026-09-06T23:58: 214 merged
+2026-09-07T00:37: 215 merged
+2026-09-07T01:02: 216 merged
+2026-09-07T01:06: 217 merged
+2026-09-07T01:09: 218 merged
+2026-09-07T01:59: 219 merged
+2026-09-07T02:51: 220 merged
+2026-09-07T03:28: 221 merged
+2026-09-07T04:09: 222 merged
+2026-09-07T04:47: 223 merged
+2026-09-07T05:37: 224 merged
+2026-09-07T05:50: 225 merged
+2026-09-07T05:59: 226 merged
+2026-09-07T06:10: 227 merged
+2026-09-07T06:20: 228 merged
+2026-09-07T06:30: 229 merged
+2026-09-07T07:12: 230 merged
+2026-09-07T07:33: 231 merged
+2026-09-07T08:14: 232 merged
+2026-09-07T08:27: 233 merged
+2026-09-07T08:39: 234 merged
+2026-09-07T09:03: 235 merged
+2026-09-07T09:13: 236 merged
+2026-09-07T09:24: 237 merged
+2026-09-07T09:41: 238 merged
+2026-09-07T09:56: 239 merged
+2026-09-07T10:10: 240 merged
+2026-09-07T10:20: 241 merged
+2026-09-07T10:45: 242 merged
+2026-09-07T12:03: 243 merged
+2026-09-07T12:58: 244 merged
+2026-09-07T13:01: 245 merged
+2026-09-07T13:01: 246 merged
+2026-09-07T14:27: 247 merged
+2026-09-07T14:27: 248 merged
+2026-09-07T14:39: 249 merged
+2026-09-07T14:47: 250 merged
+2026-09-07T15:11: 251 merged
+2026-09-07T15:29: 252 merged
+2026-09-07T15:37: 253 merged
+2026-09-07T16:28: 254 merged
+2026-09-07T20:27: 255 merged
+2026-09-07T21:42: 256 merged
+2026-09-07T21:51: 257 merged
+2026-09-07T22:44: 258 merged
+2026-09-08T03:48: 259 merged
+2026-09-08T08:55: 260 merged
+2026-09-08T09:45: 261 merged
+2026-09-08T10:50: 262 merged
+2026-09-08T10:55: 263 merged
+2026-09-08T10:57: 264 merged
+2026-09-08T10:59: 265 merged
+2026-09-08T11:02: 266 merged
+2026-09-08T11:33: 267 merged
+2026-09-08T12:01: 268 merged
+2026-09-08T12:19: 269 merged
+2026-09-08T12:35: 270 merged
+2026-09-08T12:40: 271 merged
+2026-09-08T12:42: 272 merged
+2026-09-08T13:47: 273 merged
+2026-09-08T14:06: 274 merged
+2026-09-08T14:53: 275 merged
+2026-09-08T16:03: 276 merged
+2026-09-08T17:20: 277 merged
+2026-09-08T17:22: 278 merged
+2026-09-08T17:22: 279 merged
+2026-09-08T17:24: 280 merged
+2026-09-08T17:25: 281 merged
+2026-09-08T17:27: 282 merged
+2026-09-08T17:30: 283 merged
+2026-09-08T17:30: 284 merged
+2026-09-08T17:31: 285 merged
+2026-09-08T17:32: 286 merged
+2026-09-08T18:21: 287 merged
+2026-09-08T19:11: 288 merged
+2026-09-08T21:23: 289 merged
+2026-09-08T22:56: 290 merged
+2026-09-08T23:41: 291 merged
+2026-09-09T00:27: 292 merged
+2026-09-09T00:32: 293 merged
+2026-09-09T00:32: 294 merged
+2026-09-09T00:32: 295 merged
+2026-09-09T00:32: 296 merged
+2026-09-09T00:36: 297 merged
+2026-09-09T00:42: 298 merged
+2026-09-09T00:43: 299 merged
+2026-09-09T00:45: 300 merged
+2026-09-09T00:45: 301 merged
+2026-09-09T00:46: 302 merged
+2026-09-09T00:47: 303 merged
+2026-09-09T01:00: 304 merged
+2026-09-09T01:08: 305 merged
+2026-09-09T01:10: 306 merged
+2026-09-09T01:26: 307 merged
+2026-09-09T01:31: 308 merged
+2026-09-09T01:45: 309 merged
+2026-09-09T02:35: 310 merged
+2026-09-09T02:41: 311 merged
+2026-09-09T02:46: 312 merged
+2026-09-09T02:57: 313 merged
+2026-09-09T03:41: 314 merged
+2026-09-09T04:11: 315 merged
+2026-09-09T04:21: 316 merged
+2026-09-09T04:31: 317 merged
+2026-09-09T04:59: 318 merged
+2026-09-09T05:09: 319 merged
+2026-09-09T10:02: 320 merged
+2026-09-09T10:37: 321 merged
+2026-09-09T11:20: 322 merged
+2026-09-09T11:32: 323 merged
+2026-09-09T11:46: 324 merged
+2026-09-09T12:08: 325 merged
+2026-09-09T12:13: 326 merged
+2026-09-09T13:22: 327 merged
+2026-09-09T13:24: 328 merged
+2026-09-09T13:38: 329 merged
+2026-09-09T14:02: 330 merged
+2026-09-09T14:14: 331 merged
+2026-09-09T14:26: 332 merged
+2026-09-09T14:30: 333 merged
+2026-09-09T14:32: 334 merged
+2026-09-09T14:57: 335 merged
+2026-09-09T15:05: 336 merged
+2026-09-09T15:08: 337 merged
+2026-09-09T15:17: 338 merged
+2026-09-09T15:21: 339 merged
+2026-09-09T15:26: 340 merged
+2026-09-09T15:41: 341 merged
+2026-09-09T15:47: 342 merged
+2026-09-09T15:52: 343 merged
+2026-09-09T15:55: 344 merged
+2026-09-09T16:01: 345 merged
+2026-09-09T16:30: 346 merged
+2026-09-09T16:41: 347 merged
+2026-09-09T16:55: 348 merged
+2026-09-09T17:06: 349 merged
+2026-09-09T18:01: 350 merged
+2026-09-09T18:53: 351 merged
+2026-09-09T19:43: 352 merged
+2026-09-09T21:37: 353 merged
+2026-09-09T21:42: 354 merged
+2026-09-09T21:52: 355 merged
+2026-09-09T23:32: 356 merged
+2026-09-10T01:12: 357 merged
+2026-09-10T01:18: 358 merged
+2026-09-10T01:32: 359 merged
+2026-09-10T01:34: 360 merged
+2026-09-10T01:37: 361 merged
+2026-09-10T01:49: 362 merged
+2026-09-10T01:58: 363 merged
+2026-09-10T01:59: 364 merged
+2026-09-10T02:00: 365 merged
+2026-09-10T02:05: 366 merged
+2026-09-10T02:13: 367 merged
+2026-09-10T03:27: 368 merged
+2026-09-10T03:42: 369 merged
+2026-09-10T04:15: 370 merged
+2026-09-10T04:18: 371 merged
+2026-09-10T05:00: 372 merged
+2026-09-10T05:02: 373 merged
+2026-09-10T05:11: 374 merged
+2026-09-10T05:25: 375 merged
+2026-09-10T06:14: 376 merged
+2026-09-10T11:07: 377 merged
+2026-09-10T11:08: 378 merged
+2026-09-10T11:22: 379 merged
+2026-09-10T12:00: 380 merged
+2026-09-10T12:56: 381 merged
+2026-09-10T12:59: 382 merged
+Sep 04
+Sep 10 13:00
+merged (382)PRs opened (375)
+
+  Spend
+Cost by difficulty tier
+
+easy
+easy: $533.72 over 127 task(s)
+$533.72 · 127 tasks
+medium
+medium: $1050.07 over 180 task(s)
+$1050.07 · 180 tasks
+hard
+hard: $1127.73 over 106 task(s)
+$1127.73 · 106 tasks
+If a tier's revisions climb, its model is too cheap for the work; see metrics.
+
+  Report friction…

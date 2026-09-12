@@ -1,7 +1,7 @@
 ---
 id: CG-364
 title: Remove redundant tests and unnecessary fixture work
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on:
@@ -15,7 +15,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/260
 attempts: 1
 last_dispatched_at: '2026-09-07T04:12:46+00:00'
 created: '2026-09-06T23:32:08+00:00'
-updated: '2026-09-07T04:35:34+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -58,3 +58,9 @@ Owner question: Are there tests we could remove for being redundant or not usefu
 - 2026-09-07T04:12:46+00:00 dispatched work run 20260907T041221Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~10104 tokens)
 - 2026-09-07T04:32:56+00:00 preserved uncommitted worktree changes from run 20260907T041221Z-work outside the PR: `git stash apply 02334c179b616cf58dbd3494d53c8cf6dbd18f4c` in /home/joshua/work/worktrees/CG-364 (garden:CG-364:20260907T041221Z-work:reap)
 - 2026-09-07T04:35:34+00:00 opened https://github.com/joshmarcus/context-garden/pull/260 (base main): Removed duplicated and ineffective assertions, made index expiry deterministic, and made the remote SSH clone opt-in for tests that genuinely use it. GitHub Actions passed on final commit 21036d54e882d2784415406d1a25a0281f8862ff. cost=$1.58
+- 2026-09-07T05:44:13+00:00 automated review: approve — The PR removes only redundant or ineffective assertions, preserves stronger behavioral and edge-case coverage, and makes the expensive remote clone opt-in without breaking its consumers. Focused retained tests and exact-commit GitHub CI pass. cost=$0.35
+- 2026-09-07T05:46:15+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T06:01:52+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T06:02:53+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-07T06:10:00+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/260
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-364 is done: #260 was merged at 06:10:00

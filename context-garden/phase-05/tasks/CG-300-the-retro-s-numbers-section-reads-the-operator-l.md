@@ -2,7 +2,7 @@
 id: CG-300
 title: The retro's Numbers section reads the operator ledger where the owner keeps it, and reports spend
   and share
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -17,9 +17,9 @@ branch: garden/cg-300-the-retro-s-numbers-section-reads-the-operator-l
 pr: https://github.com/joshmarcus/context-garden/pull/269
 discovered_from: retro-editor:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-07T09:03:31+00:00'
+last_dispatched_at: '2026-09-07T20:32:32+00:00'
 created: '2026-09-06T00:00:00+00:00'
-updated: '2026-09-07T15:47:38+00:00'
+updated: '2026-09-08T10:55:58+00:00'
 ---
 
 ## Goal
@@ -61,3 +61,19 @@ Both phase-04 reconcile runs printed operator: $0.00, 0% of total, because the s
 - 2026-09-07T15:37:16+00:00 automated review requested changes: Ledger resolution and retro reporting are correct and the focused suite passes. Required 1280px and 390px captures for the changed Costs and Now 2 pages were not reported or supplied. cost=$0.85
 - 2026-09-07T15:37:54+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-300`) or send it back (`garden triage CG-300 --changes "..."`)
 - 2026-09-07T15:47:38+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T16:37:55+00:00 Temporary operator incident admission hold to reserve next drained slot for P0 CG385 recovery; preserve all work. Restore original runner from docs/incidents/cg385-recovery-admission-holds.json after CG385 starts.
+- 2026-09-07T16:39:06+00:00 stuck: manual task has a revise round waiting; take it with `garden take`; take it (`garden take CG-300`) or send it back (`garden triage CG-300 --changes "..."`)
+- 2026-09-07T17:01:39+00:00 Operator restored original runner after CG385 recovery repair acquired actual execution slot. Shared cap remains1.
+- 2026-09-07T18:59:47+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T18:59:47+00:00 Delegated operator Inbox audit: cleared stale manual-hold stop after verified normal runner restoration; existing implementation, PR and pending review feedback retained. No owner decision required.
+- 2026-09-07T19:04:17+00:00 dispatched revise run 20260907T190409Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14181 tokens)
+- 2026-09-07T19:14:21+00:00 preserved uncommitted worktree changes from run 20260907T190409Z-revise outside the PR: `git stash apply c8de11a709465cd5accf96ff6f8d36464f11e2a7` in /home/joshua/work/worktrees/CG-300 (garden:CG-300:20260907T190409Z-revise:reap)
+- 2026-09-07T19:47:16+00:00 check did not run (20260907T194558Z-check): idle 33 min (no output or file change); will retry
+- 2026-09-07T19:48:36+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$0.08
+- 2026-09-07T19:53:28+00:00 dispatched revise run 20260907T195326Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14161 tokens)
+- 2026-09-07T20:00:45+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$0.05
+- 2026-09-07T20:01:06+00:00 dispatched revise run 20260907T200103Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14230 tokens)
+- 2026-09-07T20:29:05+00:00 pre-PR checks failed (ui, UI captures); revise run will fix before the PR is updated cost=$0.07
+- 2026-09-07T20:32:32+00:00 dispatched revise run 20260907T203230Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~14300 tokens)
+- 2026-09-07T20:51:49+00:00 pre-PR checks failed (ui, UI captures) and 6 revision rounds already used; needs a human cost=$0.06
+- 2026-09-08T10:55:58+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/269

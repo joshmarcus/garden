@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Context garden phase05 infrastructure only. No EC2 instances, inbound access, NAT gateway or broad provisioning permissions. Requires non-root infrastructure administrator.",
+  "Description": "Context garden phase05 infrastructure only. No EC2 instances, inbound access, NAT gateway or broad provisioning permissions. Owner-authorized one-time administrator bootstrap.",
   "Resources": {
     "WorkerVpc": {
       "Type": "AWS::EC2::VPC",

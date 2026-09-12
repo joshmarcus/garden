@@ -1,0 +1,31 @@
+{
+  "at": "2026-09-08T03:29:30.213064+00:00",
+  "owner_authorization": "Explicit resume; top priority AWS because local machine lacks sufficient resources.",
+  "service": "active normal watch, dispatch resumed; WSL and Windows tailnet Inbox HTTP200",
+  "installed": "d24e6778be03a85a62abb4aac664943606c15c70",
+  "local_limits": {
+    "workers": 1,
+    "shared": 1,
+    "review_ceiling": 3,
+    "memory_admission_mb": 0
+  },
+  "limits_reason": "Temporary AWS-first local resource containment; prior four-slot target retained historically, not restored now.",
+  "aws": {
+    "identity": "garden-provisioner verified account350111791226",
+    "active_tagged_instances": [],
+    "budget_total_usd": 80,
+    "reported_actual_usd": 0.158,
+    "billing_caveat": "Delayed AWS budget data; not final actual cost or a hard cap.",
+    "production_worker_auth": "Separate Codex profile not logged in; previous device login expired.",
+    "production_status": "Not deployed"
+  },
+  "priority_run": {
+    "task": "CG-346",
+    "run": "20260908T032745Z-revise",
+    "initial_pid": 87508,
+    "pr": 300,
+    "scope": "Fix setup transport/execution and prove affected remote HTTP lifecycle per current automated review."
+  },
+  "heartbeat": "operate-context-garden ACTIVE every5minutes, attached to resumed operator task",
+  "pending": "Exact-head repair CI/review, versioned controller rollout, separate production auth and fresh bounded host bootstrap; CG347/348 thereafter. Preserve shutdown-interrupted work and incident recovery/retro. Phase05 gate unproven."
+}

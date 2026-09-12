@@ -1,17 +1,21 @@
 ---
 id: CG-273
 title: CG-217 merged with a criterion marked 'no evidence given' and CG-158 with a plac
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 2
 difficulty: medium
 reading: []
+branch: garden/cg-273-cg-217-merged-with-a-criterion-marked-no-evidenc
+pr: https://github.com/joshmarcus/context-garden/pull/268
 harness: codex
 discovered_from: persona:project-manager:context-garden/phase-04
+attempts: 1
+last_dispatched_at: '2026-09-07T06:04:04+00:00'
 created: '2026-09-05T23:58:14+00:00'
-updated: '2026-09-06T13:14:25+00:00'
+updated: '2026-09-07T06:30:07+00:00'
 ---
 
 ## Goal
@@ -42,3 +46,9 @@ Raised by the project-manager persona review (acceptance criteria). persona:proj
 - 2026-09-06T03:51:39+00:00 integrated 1 suggestion(s) (run 20260906T035012Z-edit) cost=$0.03
 - 2026-09-06T13:13:10+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:25+00:00 reset to ready by hand
+- 2026-09-07T06:04:04+00:00 dispatched work run 20260907T060341Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9244 tokens)
+- 2026-09-07T06:15:48+00:00 opened https://github.com/joshmarcus/context-garden/pull/268 (base main): Automated review verdicts now mechanically request changes when any criterion is unmet or lacks reviewer evidence, with blocking feedback naming the criterion. The review contract and worker protocol now require criterion evidence. cost=$0.98
+- 2026-09-07T06:17:04+00:00 description rewritten by the reviewer cost=$0.30
+- 2026-09-07T06:21:44+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T06:28:51+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T06:30:07+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/268

@@ -1,27 +1,28 @@
 ---
 id: CG-345
 title: Provision and retire an EC2 worker pool from a bounded declarative configuration
-status: waiting_human
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
-order: 3
+order: 1
 difficulty: hard
 reading:
 - context-garden/phase-06/specs/ec2-workers.md
 branch: garden/cg-345-provision-and-retire-an-ec2-worker-pool-from-a-b
+pr: https://github.com/joshmarcus/context-garden/pull/295
 attempts: 1
-last_dispatched_at: '2026-09-07T17:33:14+00:00'
+last_dispatched_at: '2026-09-07T21:11:42+00:00'
 created: '2026-09-06T16:27:49+00:00'
-updated: '2026-09-07T18:44:06+00:00'
+updated: '2026-09-07T21:43:07+00:00'
 ---
 
 ## Goal and evidence
 
 Implement the on-demand lifecycle and bootstrap portion of specs/ec2-workers.md. Provide a plan/enable boundary, idempotent reconciliation with ownership tags, scoped credential delivery, reachable HTTPS enrollment, pinned versions and explicit failure states. Default to zero idle instances and a one-instance maximum.
 
-Evidence should cover duplicate provisioning requests, delayed AWS responses, controller restart, bootstrap failure and cleanup without touching unrelated resources. A separately enabled bounded AWS canary must register a real worker and retire it with an inventory of any retained billed resources. Fake-provider tests alone do not establish live readiness.
+Evidence should cover duplicate provisioning requests, delayed AWS responses, controller restart, bootstrap failure and cleanup without touching unrelated resources. Integrated live-worker acceptance belongs to CG-346, which consumes this lifecycle. CG-345 acceptance is the provider contract, scoped plan/enable boundary, reconciliation and observed cleanup with deterministic provider tests. Fake-provider tests do not establish live readiness; CG-346 must run the separately enabled bounded AWS canary before AWS-worker support is declared operational.
 
 ## Provenance and scheduling
 
@@ -59,3 +60,20 @@ Preserve completed generic lifecycle implementation and tests; these are concret
 
 Owner budget update: $80 total AWS setup and worker-trial allocation authorized2026-09-07; not per-instance or a recurring monthly allowance. First canary remains one instance/30minutes/$2 admission ceiling. Account for retained disks/IPs/secrets and cleanup. No live enable until actual infrastructure, scoped private enrollment and reviewed worker implementation are ready.
 - 2026-09-07T18:44:06+00:00 Owner authorized $80 aggregate AWS budget; initial canary limit and infrastructure prerequisites unchanged.
+
+
+AWS infrastructure now exists under explicit owner root-bootstrap authorization: {"VpcId": "vpc-0b3a690d87cdb3e64", "SecurityGroupId": "sg-042e4fd7d39c06857", "SubnetId": "subnet-0158ea83a40af1cbc", "InstanceProfileArn": "arn:aws:iam::350111791226:instance-profile/ContextGardenWorker", "BootstrapSecretArn": "arn:aws:secretsmanager:us-east-1:350111791226:secret:context-garden/phase05/bootstrap-pbTY7e"}. Routine garden-provisioner dry-run launch succeeded using required ManagedBy=context-garden/Pool=phase05 tags on instance/volume/ENI and pinned Canonical ami-025d99823a4caad37. AWS$80 CUSTOM budget created, scoped read works. No instances launched. Root credentials remain operator-only; do not copy. Tailscale enrollment and reviewed CG216 deployment remain pending. Fix concrete bootstrap/tagging/cleanup issues above before canary enable.
+- 2026-09-07T18:51:54+00:00 Infrastructure created and verified; scoped dry-run succeeds; $80 AWS budget created. Tailnet/login and reviewed worker/bootstrap integration remain pending.
+- 2026-09-07T19:07:55+00:00 Tailscale policy verified: tag:garden-worker to Babel100.92.173.44 TCP443 only; auth key securely staged operator-side and unconsumed. No further owner configuration decision needed for implementation. Operator retains secret population/live enable; worker must complete previously listed tag/bootstrap/cleanup corrections without live provisioning.
+- 2026-09-07T19:08:30+00:00 Owner requested direct operator takeover. Branch reserved from scheduler implementation dispatch; preserve all feedback and prior work. Restore normal runner when operator repair is committed and ready for automated validation/review.
+- 2026-09-07T19:25:09+00:00 Direct operator repair committed3636277; draftPR295.11 focused lifecycle tests and lint passed. Actual launch tags, standard credits, observed termination/resource inventory and fail-closed prebuilt bootstrap contract repaired. Full CI pending. No live canary or worker image claimed.
+- 2026-09-07T19:25:09+00:00 triage: marked ready for review (Operator implementation repair ready for CI and automated review; live integration remains unproven.)
+- 2026-09-07T19:26:18+00:00 converted back to draft on GitHub
+- 2026-09-07T19:52:00+00:00 Operator repair validated by exact-head GitHub CI; temporary manual reservation released for automated review. Cloud image and live canary remain unproven; do not assume them from unit/HTTP tests.
+- 2026-09-07T19:52:01+00:00 triage: marked ready for review (Operator direct repair complete; exact-head CI passes; assess real evidence and remaining cloud acce)
+- 2026-09-07T19:55:52+00:00 automated review requested changes: The provider-neutral lifecycle is well tested locally, but the required real AWS worker registration/retirement canary remains unproven. Reconciliation also derives new slot IDs from active count, which can leave a multi-host pool below desired capacity. cost=$0.32
+- 2026-09-07T21:11:42+00:00 dispatched revise run 20260907T211141Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~15948 tokens)
+- 2026-09-07T21:28:44+00:00 preserved uncommitted worktree changes from run 20260907T211141Z-revise outside the PR: `git stash apply 47d33a109ee648f0b80e83b2fc57408ea1fced5b` in /home/joshua/work/worktrees/CG-345 (garden:CG-345:20260907T211141Z-revise:reap)
+- 2026-09-07T21:28:44+00:00 worker blocked: Fixed stable host-slot reconciliation, merged current main, and passed focused tests, lint, and exact-head GitHub CI. The required live AWS worker registration and retirement canary remains blocked because the configured AMI is explicitly not a prepared worker image and live enable remains operator-owned. cost=$1.06
+- 2026-09-07T21:40:36+00:00 Owner requested direct operator resolution and merge of PR221/295; reserve branch from competing revisions during this bounded pass. Operator assesses remaining findings, exact-head CI and mergeability; no fabricated automated verdict.
+- 2026-09-07T21:42:54+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/295

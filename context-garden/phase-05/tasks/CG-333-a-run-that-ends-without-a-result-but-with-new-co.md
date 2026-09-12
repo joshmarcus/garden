@@ -2,7 +2,7 @@
 id: CG-333
 title: A run that ends without a result but with new commits in its worktree is reaped as a pushed revision,
   not a failed attempt
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,8 +13,12 @@ reading:
 - src/garden/runner/local.py
 - src/garden/gitops.py
 - tests/scheduler/test_reap.py
+branch: garden/cg-333-a-run-that-ends-without-a-result-but-with-new-co
+pr: https://github.com/joshmarcus/context-garden/pull/253
+attempts: 1
+last_dispatched_at: '2026-09-07T01:40:23+00:00'
 created: '2026-09-06T09:09:18+00:00'
-updated: '2026-09-06T13:14:45+00:00'
+updated: '2026-09-07T01:59:12+00:00'
 ---
 
 ## Goal
@@ -39,3 +43,10 @@ The reaper reads the worktree before it reads the transcript. When a work or rev
 ## Related web-incident prevention
 
 CG-359 owns provenance-safe handling of unrelated dirty files during leftover recovery. Coordinate: salvage intended existing commits here, but do not infer permission to commit all dirty artifacts. CG-357's excluded snapshot was reintroduced twice by scheduler salvage during outage recovery.
+- 2026-09-07T01:40:03+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply d87f7b4fd345580a97676b347b2d088886eadb42` in /home/joshua/work/worktrees/CG-333 to recover them (garden:CG-333:20260907T014003Z-work:pre-dispatch, run 20260907T014003Z-work)
+- 2026-09-07T01:40:23+00:00 dispatched work run 20260907T014003Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11991 tokens)
+- 2026-09-07T01:49:50+00:00 preserved uncommitted worktree changes from run 20260907T014003Z-work outside the PR: `git stash apply 93bdf05829f5c6d0da7c4d44ec771a0def067dd1` in /home/joshua/work/worktrees/CG-333 (garden:CG-333:20260907T014003Z-work:reap)
+- 2026-09-07T01:51:11+00:00 opened https://github.com/joshmarcus/context-garden/pull/253 (base main): Salvages committed work or revise runs that end without a result status, preserving the final worker message for reviewers while retaining failure handling for runs without commits. cost=$0.84
+- 2026-09-07T01:52:53+00:00 description rewritten by the reviewer cost=$0.26
+- 2026-09-07T01:57:11+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T01:59:12+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/253

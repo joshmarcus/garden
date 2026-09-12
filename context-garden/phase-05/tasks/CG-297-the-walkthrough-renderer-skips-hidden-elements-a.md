@@ -2,7 +2,7 @@
 id: CG-297
 title: The walkthrough renderer skips hidden elements and attributes, and check runs retry once on a signal
   exit
-status: in_review
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,7 +15,7 @@ discovered_from: retro:context-garden/phase-04
 attempts: 1
 last_dispatched_at: '2026-09-07T09:13:48+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T11:55:09+00:00'
+updated: '2026-09-07T15:40:43+00:00'
 ---
 
 ## Goal
@@ -67,3 +67,5 @@ Carried into phase-05 from the phase-04 retro verdict.
 - 2026-09-07T09:27:50+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/277: Fixed CSS child-combinator matching in walkthrough rendering and added cascade coverage. CI passed on the exact final commit. cost=$0.09
 - 2026-09-07T09:27:51+00:00 4 automated review round(s) used; this PR is yours — run `garden review CG-297` for one more round, or review on GitHub
 - 2026-09-07T09:34:59+00:00 triage: marked ready for review
+- 2026-09-07T12:58:28+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/277
+- 2026-09-07T15:40:43+00:00 automated review could not start: CG-297 is done: #277 was merged at 12:58:28

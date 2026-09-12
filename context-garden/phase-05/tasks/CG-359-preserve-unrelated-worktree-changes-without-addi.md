@@ -1,7 +1,7 @@
 ---
 id: CG-359
 title: Preserve unrelated worktree changes without adding them to recovered PRs
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,7 +13,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/248
 attempts: 1
 last_dispatched_at: '2026-09-06T23:37:35+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-07T00:23:47+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -54,3 +54,8 @@ This root cause has now blocked CG354/PR245 (scheduler leftover commit dd7ff9222
 - 2026-09-07T00:10:22+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-359`) or send it back (`garden triage CG-359 --changes "..."`)
 - 2026-09-07T00:19:38+00:00 triage: changes requested by hand: Review approved the implementation. Integrating the subsequently merged onboarding main before final CI/re-review and de
 - 2026-09-07T00:23:47+00:00 Review20260907T000722Z-review approved all four implementation criteria with no code findings, requesting only permanent phase-goal framing. After the earlier onboarding merge, operator integrated current mainf41b414 into reviewed2c88937, verified the branch-specific diff is byte-for-byte unchanged, and pushed35d15ef08ef8bb314bf1def4245e3ff769dda24c. PR body has phase-goal framing and accurately says new integration CI is pending. Held changes_requested to prevent stale approval/CI merging; after current-head CI passes, request a fresh review with the single reviewer slot, then merge/deploy at accounted drain. No extra implementation worker is needed.
+- 2026-09-07T00:31:38+00:00 triage: marked ready for review
+- 2026-09-07T00:33:39+00:00 automated review: approve — Recovery now preserves dirty artifacts with provenance outside task branches while retaining committed worker progress. Focused tests and lint pass, and both CI runs succeeded at the exact PR head. cost=$0.36
+- 2026-09-07T00:33:45+00:00 stuck: pending feedback recorded but the task is in_review, not changes_requested; resume with one more round (`garden retry CG-359`) or send it back (`garden triage CG-359 --changes "..."`)
+- 2026-09-07T00:37:00+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/248
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-359 is done: #248 was merged at 00:37:00

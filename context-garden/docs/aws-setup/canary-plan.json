@@ -15,7 +15,7 @@
   "delete_root_on_termination": true,
   "maximum_runtime_seconds": 1800,
   "spend_ceiling_usd": 2.0,
-  "budget_status": "Owner authorized total AWS budget of80 USD on2026-09-07. First canary remains at2 USD admission ceiling, one host and30minutes; infrastructure/access and code-review prerequisites remain.",
+  "budget_status": "Owner authorized80USD aggregate; AWS CUSTOM budget created, account-wide from2026-09-07 to2027-09-07 without monthly reset. Scoped read works. First canary remains2USD admission ceiling; budget reporting is delayed and not a hard billing cap.",
   "endpoint": "https://babel.taild4d2ae.ts.net",
   "network_model": "public IPv4 for outbound HTTPS, zero inbound SG rules; garden endpoint accessed privately through Tailscale",
   "compute_estimate_usd_per_hour": 0.1664,
@@ -28,7 +28,6 @@
     "Pool": "phase05"
   },
   "blocked_by": [
-    "non-root infrastructure admin profile",
     "CG216 reviewed deployment and true HTTP test",
     "CG345 provider tags, volume/ENI tag-on-create, real pinned worker bootstrap and canary cleanup implementation",
     "tailnet scoped ephemeral enrollment and secret population",
@@ -41,5 +40,12 @@
   ],
   "aws_total_budget_usd": 80.0,
   "budget_scope": "Total AWS setup and worker trial allocation until owner changes it; not a monthly recurring allowance.",
-  "budget_enforcement": "Local plan only until administrator access exists. Track aggregate actual+estimated committed AWS spend, including retained resources. Stop new provisioning before remaining allocation cannot cover planned work and cleanup. AWS Budgets alerting is not a hard billing cap."
+  "budget_enforcement": "Local plan only until administrator access exists. Track aggregate actual+estimated committed AWS spend, including retained resources. Stop new provisioning before remaining allocation cannot cover planned work and cleanup. AWS Budgets alerting is not a hard billing cap.",
+  "infrastructure": {
+    "VpcId": "vpc-0b3a690d87cdb3e64",
+    "SecurityGroupId": "sg-042e4fd7d39c06857",
+    "SubnetId": "subnet-0158ea83a40af1cbc",
+    "InstanceProfileArn": "arn:aws:iam::350111791226:instance-profile/ContextGardenWorker",
+    "BootstrapSecretArn": "arn:aws:secretsmanager:us-east-1:350111791226:secret:context-garden/phase05/bootstrap-pbTY7e"
+  }
 }

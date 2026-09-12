@@ -17,7 +17,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/286
 attempts: 1
 last_dispatched_at: '2026-09-07T11:59:51+00:00'
 created: '2026-09-07T09:29:27+00:00'
-updated: '2026-09-07T14:39:28+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -49,3 +49,4 @@ CG300/323 stopped at four reviews despite concrete actionable findings. CG297 re
 - 2026-09-07T12:11:49+00:00 preserved uncommitted worktree changes from run 20260907T115949Z-revise outside the PR: `git stash apply 523d7ca079351834f2a06ffb605ec04fa38791b1` in /home/joshua/work/worktrees/CG-376 (garden:CG-376:20260907T115949Z-revise:reap)
 - 2026-09-07T12:21:48+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/286: Added end-to-end review lifecycle regression coverage beyond the former cap and across capped-review recovery. CI passed for 2855f3d. cost=$0.88
 - 2026-09-07T14:39:28+00:00 Fast-forward: verified GitHub merge 879cd608bf13672510d15d240db353f5acda7469 after exact-head CI and operator self-review. Not yet deployed; apply unlimited cap after rollout.
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-376 is done: Fast-forward: verified GitHub merge 879cd608bf13672510d15d240db353f5acda7469 after exact-head CI and operator self-review. Not yet deployed; apply unlimited cap after rollout. at 14:39:28

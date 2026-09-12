@@ -1,0 +1,495 @@
+Board · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+  Board
+Every task by state. The backlog stacks a product's open phases as sections you can reorder and drag between.
+
+    columns
+    list
+    backlog
+    PRs
+
+  all
+
+    context-garden
+
+  include closed
+
+      context-garden/phase-05
+
+      0
+
+    no open tasks — drag one here to move it into this phase
+
+      context-garden/phase-06
+
+      7
+
+          CG-517
+          Separate authenticated worker ingress from operator control access
+
+        in review
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-518
+          Enforce filesystem and network sandboxes for planning and approved toolsneeds you
+
+        changes requested
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-515
+          Support provider-neutral source control with scoped certificate and proxy policy
+
+        running
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-516
+          Resolve scoped workload identities and secret references at the execution boundary
+
+        running
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-525
+          Repair manual PR refresh fake mutation regression
+
+        draft
+        next · 1 · easy
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-530
+          Add Last week to Now and share its cost graphs on Costs
+
+        draft
+        next · 1 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-520
+          Deliver typed notifications through approved destination adapters
+
+        running
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+      context-garden/phase-07
+
+      22
+
+          CG-396
+          Use pluggable exact-head CI status for review and merge eligibilityneeds you
+
+        changes requested
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-514
+          Never require a second review solely by count
+
+        in review
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-527
+          Clean up abandoned worker branches, worktrees and temporary files
+
+        draft
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-528
+          Enforce a 20 GiB physical-disk reserve before local work and staging
+
+        draft
+        first · 0 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-405
+          Apply host-local resource admission and capability routing to command-backed hosts
+
+        merged into parent
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-452
+          Keep GitHub Actions analyzers scoped to the configured repository host
+
+        merged into parent
+        next · 1 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-501
+          Diagnose worker disconnects and resets and make recovery resilientneeds you
+
+        changes requested
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-506
+          Return complete worker transcripts for server-side storage and analysisneeds you
+
+        changes requested
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-513
+          Show only relevant unique design files for each pull requestneeds you
+
+        changes requested
+        next · 1 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-529
+          Automatically start the phase closing review when prerequisites are met
+
+        draft
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-347
+          Recover EC2 Spot interruptions without losing accepted work or exceeding pool limitsneeds you
+
+        changes requested
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-348
+          Make EC2 pool cost health draining and teardown understandable and verifiable
+
+        in review
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-503
+          Find removable and overengineered code to simplify and optimize
+
+        in review
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-504
+          Write and update user operator and contributor documentation
+
+        in review
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-505
+          Audit and update all Garden specifications
+
+        in review
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-509
+          Avoid duplicate same-SHA GitHub test jobs
+
+        running
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-512
+          Narrow retro reservation orchestration setup
+
+        in review
+        normal · 2 · easy
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-521
+          Make GitHub feedback polling incremental and identity-safe
+
+        running
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-522
+          Use copy-on-write web discovery snapshots
+
+        running
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-523
+          Make web benchmark size controls internally consistent
+
+        running
+        normal · 2 · easy
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-524
+          Consolidate historical interaction capture harnesses
+
+        running
+        normal · 2 · medium
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-526
+          Complete objective failure-trigger model escalation
+
+        draft
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+      context-garden/phase-08
+      frozen
+      6
+
+          CG-402
+          Export immutable run evaluation evidence into context under an approved policy
+
+        draft
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-403
+          Validate a manual-run enterprise PR and exact-head CI journey
+
+        blocked
+        next · 1 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-302
+          Spike: OpenRouter harness shape and adapter CLI
+
+        in review
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-408
+          Demonstrate the constrained remote environment with recovery and human gates
+
+        blocked
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-492
+          Automate safe live rollout of published versions to the worker fleet
+
+        ready
+        normal · 2 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move
+
+          CG-213
+          OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usage
+
+        in review
+        later · 3 · hard
+
+          ↑
+
+          ↓
+
+          phasephase-05phase-06phase-07phase-08Move

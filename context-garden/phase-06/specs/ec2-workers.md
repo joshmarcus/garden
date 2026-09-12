@@ -1,3 +1,7 @@
+## Owner validation policy, 2026-09-10
+
+Live canaries are optional and cannot be required for task acceptance, review, merge, release or phase closure. Proportionate deterministic tests, provider fakes, protocol integration and disposable offline bootstrap/lifecycle exercises establish the required behavior. Report live-cloud coverage as untested when absent; that absence alone is not a blocker. Preserve genuine correctness, security, recovery, deadline and resource requirements. Any optional live exercise still requires its own applicable resource/spending authorization. This supersedes older live-canary or paid clean-image rollout requirements, including historical operator dispositions below.
+
 # Pluggable remote host provisioning, starting with EC2
 
 Status: active phase-05 implementation, explicitly promoted by Josh on 2026-09-07. Spec retained at this stable path to preserve reading links. CG216 and CG345–348 are now phase05 tasks. Preserve the bounded plan/enable boundary for live provisioning and all validation requirements.
@@ -59,7 +63,7 @@ Show pool health, ready/busy capacity, executing tasks, resource pressure, inter
 3. Spot replacement and abrupt-loss exercises, with fencing and bounded fallback.
 4. Operator controls, cost attribution, teardown, a standalone remote-dev consumer and independently repeatable acceptance runs for both uses.
 
-Use provider fakes for deterministic lifecycle/error coverage, then a separately enabled, budgeted AWS canary. Evidence includes one work-to-review/check-to-result cycle on an independent host, intentional interruption during work and check, controller restart mid-provision, unavailable Spot capacity, and teardown inventory showing no unexplained billed resources. Record actual cost, retry/model cost, elapsed time and peak memory. A simulated AWS API proves simulation behavior only. Missing live evidence is UNPROVEN. Feature completion does not itself pass phase-05 stabilization or unfreeze phase 06.
+Use provider fakes, deterministic fault injection and disposable offline protocol/bootstrap integration for lifecycle and error coverage. Verify work-to-review/check-to-result delivery, interruption during work/check, controller restart mid-provision, unavailable Spot capacity and teardown inventory with no unexplained modeled resources. Verify cost accounting with declared synthetic inputs, and record measured runtime/resource usage where relevant. A separately authorized, budgeted live AWS canary is optional and never a task, review, merge, release or phase-closure gate. Describe simulated versus live evidence honestly; absence of live evidence alone is not a blocker. Preserve the owner acceptance of Phase-05 stabilization and its remaining closing-review requirement.
 
 ## References
 

@@ -1,0 +1,1053 @@
+Board · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+  Board
+Every task by state. The backlog stacks a product's open phases as sections you can reorder and drag between.
+
+    columns
+    list
+    backlog
+    PRs
+
+  all
+
+    context-garden/phase-05
+
+    context-garden/phase-06
+
+    context-garden/phase-07
+
+    context-garden/phase-08
+
+  include closed
+
+    seeddraft7
+
+        CG-527p0 · hard
+        Clean up abandoned worker branches, worktrees and temporary files
+        phase-07
+
+        CG-528p0 · hard
+        Enforce a 20 GiB physical-disk reserve before local work and staging
+        phase-07
+
+        CG-402p1 · hard
+        Export immutable run evaluation evidence into context under an approved policy
+        phase-08
+
+        CG-525p1 · easy
+        Repair manual PR refresh fake mutation regressionfound
+        phase-06
+
+        CG-529p1 · hard
+        Automatically start the phase closing review when prerequisites are met
+        phase-07
+
+        CG-530p1 · medium
+        Add Last week to Now and share its cost graphs on Costs
+        phase-06
+
+        CG-526p2 · hard
+        Complete objective failure-trigger model escalationfound
+        phase-07
+
+    seed, waitingblocked2
+
+        CG-403p1 · hard
+        Validate a manual-run enterprise PR and exact-head CI journey
+        phase-08 · waits on CG-402
+
+        CG-408p2 · hard
+        Demonstrate the constrained remote environment with recovery and human gates
+        phase-08 · waits on CG-407, CG-412
+
+    sproutready1
+
+        CG-492p2 · hard
+        Automate safe live rollout of published versions to the worker fleet
+        phase-08
+
+    in leafrunning8
+
+        CG-515p1 · hard
+        Support provider-neutral source control with scoped certificate and proxy policystack
+        phase-06 · queued; waiting for a remote worker to claim it · 1:41 queued · PR
+
+        CG-516p1 · hard
+        Resolve scoped workload identities and secret references at the execution boundary
+        phase-06 · remote claim recorded; lease deadline 2026-09-10T13:01:39.768220+00:00; worker liveness is not known · 8:01 since claim · PR
+
+        CG-509p2 · medium
+        Avoid duplicate same-SHA GitHub test jobsfound
+        phase-07 · queued; waiting for a remote worker to claim it · 2:06 queued · PR
+
+        CG-520p2 · medium
+        Deliver typed notifications through approved destination adapters
+        phase-06 · remote claim recorded; lease deadline 2026-09-10T13:01:57.383814+00:00; worker liveness is not known · 6:30 since claim
+
+        CG-521p2 · medium
+        Make GitHub feedback polling incremental and identity-safefound
+        phase-07 · remote claim recorded; lease deadline 2026-09-10T13:02:02.363526+00:00; worker liveness is not known · 5:39 since claim
+
+        CG-522p2 · medium
+        Use copy-on-write web discovery snapshotsfound
+        phase-07 · remote claim recorded; lease deadline 2026-09-10T13:01:59.908487+00:00; worker liveness is not known · 5:35 since claim
+
+        CG-523p2 · easy
+        Make web benchmark size controls internally consistentfound
+        phase-07 · remote claim recorded; lease deadline 2026-09-10T13:02:02.113718+00:00; worker liveness is not known · 2:40 since claim
+
+        CG-524p2 · medium
+        Consolidate historical interaction capture harnessesfound
+        phase-07 · remote claim recorded; lease deadline 2026-09-10T13:02:01.830681+00:00; worker liveness is not known · 36 s since claim
+
+    bud, taggedwaiting human0
+
+    in budawaiting triage0
+
+    in flowerin review11
+
+        CG-514p0 · hard
+        Never require a second review solely by count
+        phase-07 · PR
+
+        CG-517p0 · hard
+        Separate authenticated worker ingress from operator control access
+        phase-06 · PR
+
+        CG-405p1 · hard
+        Apply host-local resource admission and capability routing to command-backed hostsmerged→parent
+        phase-07 · PR
+
+        CG-452p1 · medium
+        Keep GitHub Actions analyzers scoped to the configured repository hostfoundmerged→parent
+        phase-07 · PR
+
+        CG-302p2 · hard
+        Spike: OpenRouter harness shape and adapter CLIfound
+        phase-08 · PR
+
+        CG-348p2 · medium
+        Make EC2 pool cost health draining and teardown understandable and verifiablestack
+        phase-07 · PR
+
+        CG-503p2 · hard
+        Find removable and overengineered code to simplify and optimize
+        phase-07 · PR
+
+        CG-504p2 · hard
+        Write and update user operator and contributor documentation
+        phase-07 · PR
+
+        CG-505p2 · hard
+        Audit and update all Garden specifications
+        phase-07 · PR
+
+        CG-512p2 · easy
+        Narrow retro reservation orchestration setupfound
+        phase-07 · queued; waiting for a remote worker to claim it · 1:41 queued · PR
+
+        CG-213p3 · hard
+        OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usagestack
+        phase-08 · finished; awaiting collection · PR
+
+    prunedchanges requested6
+
+        CG-396p0 · hard
+        Use pluggable exact-head CI status for review and merge eligibilityneeds you
+        phase-07 · PR
+
+        CG-518p0 · hard
+        Enforce filesystem and network sandboxes for planning and approved toolsneeds you
+        phase-06 · PR
+
+        CG-501p1 · hard
+        Diagnose worker disconnects and resets and make recovery resilientneeds you
+        phase-07 · PR
+
+        CG-506p1 · hard
+        Return complete worker transcripts for server-side storage and analysisneeds you
+        phase-07 · PR
+
+        CG-513p1 · medium
+        Show only relevant unique design files for each pull requestfoundneeds you
+        phase-07 · PR
+
+        CG-347p2 · hard
+        Recover EC2 Spot interruptions without losing accepted work or exceeding pool limitsneeds you
+        phase-07 · PR
+
+    in fruitdone207
+
+        CG-253p0 · easy
+        The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the railfound
+        phase-05 · PR
+
+        CG-319p0 · hard
+        Keep Now 1 as Now, retire Now 2, and place Now after Inbox
+        phase-05 · PR
+
+        CG-323p0 · medium
+        The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR checks, and criteria are frozen at dispatch
+        phase-05 · PR
+
+        CG-329p0 · easy
+        The worker count the dispatcher enforces and the count the rail shows are the same number: checks, reviews and edit runs either take a slot visibly or not at all
+        phase-05 · PR
+
+        CG-330p0 · medium
+        A failed rebase or check run never restarts a task's work from scratch: the PR stays, the rebase or check is retried, and only a failed work or revise run counts as an attempt
+        phase-05 · PR
+
+        CG-337p0 · hard
+        Attention cards ask for product decisions, while no-change reports reconcile automatically
+        phase-05 · PR
+
+        CG-338p0 · hard
+        Keep the operator machine responsive under concurrent workers and test suites
+        phase-05 · PR
+
+        CG-339p0 · hard
+        Review affected behavior through the running application before accepting interaction claims
+        phase-05 · PR
+
+        CG-342p0 · easy
+        Reconcile Now CLI tests with the page-2 commandfound
+        phase-05 · PR
+
+        CG-343p0 · medium
+        Finished reviews are reconciled even after their task leaves review states
+        phase-05 · PR
+
+        CG-344p0 · hard
+        Keep fence bookkeeping memory bounded as run history grows
+        phase-05 · PR
+
+        CG-345p0 · hard
+        Provision and retire an EC2 worker pool from a bounded declarative configuration
+        phase-05 · PR
+
+        CG-346p0 · hard
+        Run work reviews and checks on managed EC2 hosts with shared resource admission
+        phase-05 · PR
+
+        CG-357p0 · hard
+        Keep web requests responsive while workers run and run history grows
+        phase-05 · PR
+
+        CG-358p0 · hard
+        Keep incident control actions responsive and retry-safe during web overload
+        phase-05 · PR
+
+        CG-359p0 · medium
+        Preserve unrelated worktree changes without adding them to recovered PRs
+        phase-05 · PR
+
+        CG-360p0 · medium
+        Keep restored archived runs visible when directory fingerprints do not change
+        phase-05 · PR
+
+        CG-361p0 · hard
+        Bound test workloads within each run and reserve web capacity
+        phase-05 · PR
+
+        CG-363p0 · medium
+        Run full worker tests on GitHub CI before completion
+        phase-05 · PR
+
+        CG-364p0 · medium
+        Remove redundant tests and unnecessary fixture work
+        phase-05 · PR
+
+        CG-365p0 · medium
+        Complete resource isolation enforcement and evidence after CG-361found
+        phase-05 · PR
+
+        CG-366p0 · hard
+        Prevent fence attribution from rewinding concurrent worker logs
+        phase-05 · PR
+
+        CG-372p0 · medium
+        Honor task priority when admitting queued reviews and prevent starvation
+        phase-05 · PR
+
+        CG-376p0 · medium
+        Make review caps optional and report excessive review loops as friction
+        phase-05 · PR
+
+        CG-377p0 · medium
+        Scope review validation to affected behavior and acceptance claimsstack
+        phase-05 · PR
+
+        CG-378p0 · hard
+        Refresh README for the current garden and operator workflow
+        phase-05 · PR
+
+        CG-381p0 · medium
+        Make Inbox human-action counts and advice match actual ownershipfound
+        phase-05 · PR
+
+        CG-383p0 · medium
+        Calibrate reclaimable file cache for admission headroomfound
+        phase-05 · PR
+
+        CG-385p0 · hard
+        Recover cache-limited admission through bounded reclaim and a fresh headroom check
+        phase-05 · PR
+
+        CG-390p0 · medium
+        Require screenshots only for materially changed visual behavior
+        phase-05 · PR
+
+        CG-391p0 · medium
+        Recognize CI-helper validation commands during onboarding discoveryfound
+        phase-05 · PR
+
+        CG-392p0 · easy
+        Reconcile remaining architecture and worker-protocol statements with implementationfound
+        phase-05 · PR
+
+        CG-393p0 · medium
+        Distinguish validation-slot waiting from stale-worktree idle timeouts
+        phase-05 · PR
+
+        CG-395p0 · medium
+        Support explicit GitHub Enterprise hosts across all repository operations
+        phase-07 · PR
+
+        CG-397p0 · medium
+        Respect external branch-stack ownership and configurable protected paths
+        phase-07 · PR
+
+        CG-399p0 · medium
+        Keep physical host identities out of committed context and public evidence
+        phase-07 · PR
+
+        CG-406p0 · hard
+        Support fenced in-place canonical checkouts with safe per-run reconciliation
+        phase-07 · PR
+
+        CG-409p0 · hard
+        Finish manual work pushed from another machine without a local authoring checkout
+        phase-07 · PR
+
+        CG-410p0 · medium
+        Show eligible manual work in Inbox with a safe take action
+        phase-07 · PR
+
+        CG-411p0 · hard
+        Adopt an existing PR with its verified branch and revision identity
+        phase-07 · PR
+
+        CG-419p0 · hard
+        Run authenticated production Codex workers on managed EC2
+        phase-05 · PR
+
+        CG-420p0 · hard
+        Repair production remote claims and install the complete Codex runtime
+        phase-05 · PR
+
+        CG-421p0 · medium
+        Verify public GitHub CI from scoped AWS workers without operator credentials
+        phase-05 · PR
+
+        CG-424p0 · hard
+        Make metadata-only review gaps advisory and align worker verification instructions
+        phase-05 · PR
+
+        CG-426p0 · easy
+        Keep stress and load tests out of the default test suite
+        phase-05 · PR
+
+        CG-427p0 · medium
+        Render Codex event streams on run transcript pages
+        phase-05 · PR
+
+        CG-428p0 · hard
+        Keep remote worker runs alive across controller redeploys
+        phase-05 · PR
+
+        CG-429p0 · hard
+        Provide supervised validation to remote model workers
+        phase-05 · PR
+
+        CG-430p0 · hard
+        Reap exited adopted children while supervised workers are still running
+        phase-05 · PR
+
+        CG-431p0 · medium
+        Keep controller-owned replay checks local for remote-authored tasks
+        phase-05 · PR
+
+        CG-433p0 · medium
+        Prevent LocalRunner process_finished from hanging on a completed stdin consumerfound
+        phase-05 · PR
+
+        CG-434p0 · hard
+        Enforce current validation policy on old and stacked worker branches
+        phase-06 · PR
+
+        CG-436p0 · hard
+        Prevent unrelated interaction replays from driving repeated task revisionsfound
+        phase-05 · PR
+
+        CG-437p0 · hard
+        Escalate revision difficulty and surface explicit troubled-task decisions
+        phase-05 · PR
+
+        CG-438p0 · hard
+        Preserve review requests through unclaimed timeout and admission recoveryfound
+        phase-05 · PR
+
+        CG-443p0 · hard
+        Keep out-of-scope review limitations from rejecting satisfied acceptance criteria
+        phase-07 · PR
+
+        CG-446p0 · medium
+        Bound validation and check execution timefound
+        phase-05 · PR
+
+        CG-447p0 · medium
+        Unify scp-form repository classification across config and worker claimsfound
+        phase-07 · PR
+
+        CG-449p0 · hard
+        Make screenshot infrastructure failures advisory without hiding UI defectsfound
+        phase-07 · PR
+
+        CG-453p0 · hard
+        Reduce the ordinary test suite runtime below eight minutes
+        phase-05 · PR
+
+        CG-454p0 · medium
+        Skip destructive pre-merge rebase when the reviewed remote head is already current
+        phase-07 · PR
+
+        CG-456p0 · hard
+        Admit remote reviews independently of occupied local review capacity
+        phase-07 · PR
+
+        CG-457p0 · hard
+        Prevent remote queue-age timeouts from duplicating live work and losing run fencesfound
+        phase-07 · PR
+
+        CG-458p0 · medium
+        Pass option-like replay nonces as argument values
+        phase-07 · PR
+
+        CG-459p0 · medium
+        Pin remote base probes to the advertised base sourcefound
+        phase-05 · PR
+
+        CG-461p0 · medium
+        Prevent nested validation admission from stalling remote lifecycle checksfound
+        phase-05
+
+        CG-462p0 · hard
+        Use agent judgment for proportionate PR verification
+        phase-07 · PR
+
+        CG-463p0 · medium
+        Move the serving build to a quiet nav footer detail
+        phase-05 · PR
+
+        CG-464p0 · hard
+        Merge clean approved heads without redundant latest-base rebuild
+        phase-05 · PR
+
+        CG-465p0 · medium
+        Omit unattached-artifact commentary from automated reviews
+        phase-05 · PR
+
+        CG-466p0 · hard
+        Exclude remote queue time and controller checkouts from idle timeoutsfound
+        phase-07 · PR
+
+        CG-468p0 · medium
+        Avoid nested validation admission deadlock during supervised full suitesfound
+        phase-07 · PR
+
+        CG-469p0 · medium
+        Allow nested served-worker tests under supervised full-suite validationfound
+        phase-07
+
+        CG-471p0 · medium
+        Make stale check recovery one guarded atomic action
+        phase-07 · PR
+
+        CG-474p0 · hard
+        Preserve full review feedback when asynchronous CI finishes
+        phase-07 · PR
+
+        CG-476p0 · hard
+        Complete external manual runs after a verified squash merge
+        phase-07 · PR
+
+        CG-481p0 · medium
+        Persist worker decisions before publishing waiting status
+        phase-05 · PR
+
+        CG-482p0 · medium
+        Persist worker question resume identity before publishing waiting status
+        phase-05 · PR
+
+        CG-483p0 · hard
+        Keep generated worker context out of tracked source files
+        phase-05 · PR
+
+        CG-484p0 · hard
+        Initialize fresh base probes and distinguish unavailable checks from broken source
+        phase-05 · PR
+
+        CG-485p0 · medium
+        Show accurate remote and manual run lifecycle without phantom process slots
+        phase-05 · PR
+
+        CG-486p0 · hard
+        Recover managed workers from failed checkout materialization
+        phase-05 · PR
+
+        CG-487p0 · hard
+        Collect terminal remote results after task completion
+        phase-05 · PR
+
+        CG-488p0 · hard
+        Preserve concurrent harness pauses when stale scheduler reads empty state
+        phase-05 · PR
+
+        CG-489p0 · hard
+        Retain verified release corrections when integrating current main
+        phase-05 · PR
+
+        CG-491p0 · hard
+        Recover idle worker claims after transient or lost claim responses
+        phase-05 · PR
+
+        CG-493p0 · hard
+        Retain RC14 discovery and CI guards
+        phase-05 · PR
+
+        CG-495p0 · hard
+        Integrate bounded active-run claim scans into main
+        phase-05 · PR
+
+        CG-496p0 · hard
+        Integrate the validated RC16 Now refresh into current main
+        phase-05 · PR
+
+        CG-497p0 · medium
+        Serialize worker answers with scheduler ticksfound
+        phase-05 · PR
+
+        CG-500p0 · hard
+        Route approved PRs with failed CI back to revisionfound
+        phase-07 · PR
+
+        CG-507p0 · hard
+        Honor a granted revision before repeating a threshold stopfound
+        phase-07 · PR
+
+        CG-508p0 · hard
+        Invalidate stale setup cache when recreating scratch-merge checkoutsfound
+        phase-07 · PR
+
+        CG-519p0 · medium
+        Serve every active design and run artifact through an inert preview boundary
+        phase-06 · PR
+
+        CG-215p1 · hard
+        Onboarding skill and command: analyse an existing project and its environment to create a garden product, principles, setup config and a first phase
+        phase-05 · PR
+
+        CG-216p1 · hard
+        Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP, works in its own clone, pushes the branch and posts the result and transcript back
+        phase-05 · PR
+
+        CG-230p1 · hard
+        A tier can name several harness and model options, and dispatch spreads runs across them to share quotas, skipping a paused or exhausted one
+        phase-06 · PR
+
+        CG-237p1 · easy
+        The not-logged-in check reads a worker's prose as an auth failure: match the CLI's own error, not the report text
+        phase-05 · PR
+
+        CG-243p1 · hard
+        Preserve task actions across concurrent ticks and movesfound
+        phase-05 · PR
+
+        CG-244p1 · hard
+        Reserve retro task IDs and survive duplicate recordsfound
+        phase-05 · PR
+
+        CG-245p1 · medium
+        Isolate planner execution from operator statefound
+        phase-05 · PR
+
+        CG-248p1 · easy
+        TUI's dispatch action ('d' key) also bypasses the approve gate on a draftfound
+        phase-05 · PR
+
+        CG-249p1 · easy
+        `garden dispatch <id>` (CLI) allows dispatching a draft directlyfound
+        phase-05 · PR
+
+        CG-250p1 · medium
+        A reopen verdict is a working process: blocking tasks arrive with a complete brief, are approved through the gate, and the phase reopens and closes on them without hand steps
+        phase-05 · PR
+
+        CG-251p1 · medium
+        Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs page and the retrofound
+        phase-05 · PR
+
+        CG-293p1 · medium
+        A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria and the concrete blockerfound
+        phase-05 · PR
+
+        CG-307p1 · hard
+        Design the Now page: information architecture, visual system, motion, and a static mock of every state
+        phase-05 · PR
+
+        CG-308p1 · hard
+        Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where the phase is, and the last period
+        phase-05 · PR
+
+        CG-309p1 · hard
+        Build Now 2 at /now2 from the astra design: live view of what is running, what is next, where the phase is, and the last period
+        phase-05 · PR
+
+        CG-310p1 · medium
+        Worker temp files live on disk and are pruned: TMPDIR under the work root, per-run cleanup at reap, and a sweep of finished tasks' worktree venvs and caches
+        phase-05 · PR
+
+        CG-311p1 · medium
+        The task page shows the decision a worker's no-change or question report needs: the same card and actions as the Inbox, right where the notification sends you
+        phase-05 · PR
+
+        CG-312p1 · medium
+        Inbox decision cards lay out at full width: the text column no longer collapses to one word per line and the action buttons no longer overlap the evidence list
+        phase-05 · PR
+
+        CG-314p1 · hard
+        Design Now 2: astra's take on the Now page, information architecture, visual system, motion, and a static mock of every state
+        phase-05 · PR
+
+        CG-315p1 · hard
+        UI changes are reviewed against rendered pages: a template or style change captures the affected pages as screenshots at two widths, the reviewer and the personas read them, and the walkthrough uses the same capture
+        phase-05 · PR
+
+        CG-316p1 · easy
+        A dispatch that fails before its process starts closes the run record at once, and the orphan sweep closes any running record with no live process
+        phase-05 · PR
+
+        CG-317p1 · easy
+        The task page renders a trial in progress: the trial panel treats winner, scores and PRs as optional, and a test renders a task mid-trial with a failed contender
+        phase-05 · PR
+
+        CG-318p1 · easy
+        The web app serves design documents, mocks and run captures: /design/<file> for the product's docs/design and a run page link to each capture
+        phase-05 · PR
+
+        CG-320p1 · medium
+        Reviews by the model one step above the writer: a review ladder across harnesses picks the reviewer from the PR's last work or revise model
+        phase-05 · PR
+
+        CG-321p1 · medium
+        Reviews suggest fixes and improvements, not only a verdict: each finding carries a concrete fix, a separate improvements list goes beyond the criteria, and the revise brief carries both to the worker
+        phase-05 · PR
+
+        CG-322p1 · easy
+        A _TaskState written with dict.update or |= is not savedfound
+        phase-05 · PR
+
+        CG-324p1 · medium
+        The loop produces the evidence a criterion requires: persona reviews, captures and checks named by a task's criteria run when its PR opens, before the first review
+        phase-05 · PR
+
+        CG-326p1 · easy
+        Fix the Edge capture recipe for 390-wide captures: frame the page in a 390 px iframefound
+        phase-05 · PR
+
+        CG-327p1 · medium
+        The live-garden fence attributes only the worker's own writes: the operator's and the scheduler's commits during a run's window are never counted against the run
+        phase-05 · PR
+
+        CG-331p1 · easy
+        The tick-responsiveness test measures against the machine, not the clock: it fails a PR only when a web action waits on the tick, never because the box is busy
+        phase-05 · PR
+
+        CG-332p1 · easy
+        A task parked by a harness environment stop is dispatched again as soon as the harness resumes, without a hand
+        phase-05 · PR
+
+        CG-333p1 · medium
+        A run that ends without a result but with new commits in its worktree is reaped as a pushed revision, not a failed attempt
+        phase-05 · PR
+
+        CG-334p1 · medium
+        Close the review findings left open by the hand merges of 2026-09-06: ghost records with terminal tasks, the persona replay test, design routes per product, the snapshot's queue data, Now 2's per-goal status marks, Now 1's empty-period gate
+        phase-05 · PR
+
+        CG-340p1 · hard
+        Demonstrate onboarding and a useful accepted change on an independent project
+        phase-05 · PR
+
+        CG-341p1 · hard
+        Enforce stabilization evidence at phase close and record unattended operation mechanically
+        phase-05 · PR
+
+        CG-349p1 · hard
+        Centralize editable configuration metadata and enforce project overrides and locks
+        phase-06 · PR
+
+        CG-351p1 · medium
+        Compare total cost with average cost per task and activity counts on the Costs page
+        phase-06 · PR
+
+        CG-352p1 · hard
+        Make the sidebar operating profile a clear Economy-to-Fast slider
+        phase-06 · PR
+
+        CG-354p1 · medium
+        Split tests into focused suites to shorten development feedback
+        phase-05 · PR
+
+        CG-355p1 · hard
+        Restore automatic installation and safe restart after tool updates
+        phase-05 · PR
+
+        CG-362p1 · medium
+        Complete externally implemented tasks from verified PR metadata
+        phase-05 · PR
+
+        CG-367p1 · hard
+        Profile and reduce loaded page request cost before increasing concurrency
+        phase-05 · PR
+
+        CG-368p1 · hard
+        Check browser runtime readiness before admitting capture-dependent work
+        phase-05 · PR
+
+        CG-369p1 · medium
+        Align phase-close gate with fixture-sufficient onboarding requirement
+        phase-05 · PR
+
+        CG-370p1 · medium
+        Fix measured narrow-viewport overflow on Phase and Runs pages
+        phase-05 · PR
+
+        CG-373p1 · medium
+        Bound rebase prompts and recover oversized generated-file conflicts
+        phase-05 · PR
+
+        CG-374p1 · medium
+        Route routine recovery stops to operator actions instead of owner decisions
+        phase-05 · PR
+
+        CG-375p1 · medium
+        Measure unattended stabilization by required human-owner action
+        phase-05 · PR
+
+        CG-379p1 · medium
+        Add a maintenance pause that safely freezes scheduling and collection
+        phase-05 · PR
+
+        CG-380p1 · hard
+        Attribute controller, scheduler, and worker performance under loadfound
+        phase-05 · PR
+
+        CG-382p1 · medium
+        Profile and reduce repeated Store scans per web requestfound
+        phase-05 · PR
+
+        CG-386p1 · hard
+        Prevent stale collected checks from reopening terminal tasks
+        phase-05 · PR
+
+        CG-387p1 · medium
+        Distinguish full execution slots from resource pressure in the status banner
+        phase-05 · PR
+
+        CG-389p1 · medium
+        Negotiate capture CLI compatibility and diagnose renderer exit before requesting revisions
+        phase-05 · PR
+
+        CG-394p1 · medium
+        Release temporary runner holds without leaving stale human stops
+        phase-05 · PR
+
+        CG-398p1 · medium
+        Validate a human-gated enterprise profile with bot feedback and private notifications
+        phase-07 · PR
+
+        CG-401p1 · hard
+        Pass approved tool configuration into scrubbed local and remote workers
+        phase-07 · PR
+
+        CG-404p1 · hard
+        Add command-backed host acquisition readiness and warm reuse to the shared lifecycle
+        phase-07 · PR
+
+        CG-413p1 · hard
+        Use product-specific execution timeouts and weighted resource admission
+        phase-07 · PR
+
+        CG-414p1 · medium
+        Assign owners to tasks and phases and filter work by owner
+        phase-07 · PR
+
+        CG-415p1 · medium
+        Register private runner adapters through trusted configuration
+        phase-07 · PR
+
+        CG-417p1 · hard
+        Reuse a fresh task snapshot within one controller operationfound
+        phase-06 · PR
+
+        CG-422p1 · medium
+        Isolate nested validation lease environment in runner-spawning testsfound
+        phase-05 · PR
+
+        CG-423p1 · hard
+        Scale production AWS workers through one resumable operation
+        phase-05 · PR
+
+        CG-432p1 · easy
+        Make onboarding GitHub metadata detection transport-independentfound
+        phase-07 · PR
+
+        CG-444p1 · medium
+        Support configured SSH ports in canonical enterprise repository identityfound
+        phase-05 · PR
+
+        CG-448p1 · easy
+        Align Now held-card ownership with Inbox review queuesfoundstack
+        phase-05 · PR
+
+        CG-450p1 · medium
+        Preserve complete review findings and criterion reasons through revision handoffsfound
+        phase-07 · PR
+
+        CG-451p1 · medium
+        Reject credential-bearing and ambiguous manually adopted PR URLsfound
+        phase-07 · PR
+
+        CG-455p1 · hard
+        Redesign the Now page top summary as a useful thematic measurement
+        phase-05 · PR
+
+        CG-467p1 · hard
+        Support enterprise validation without GitHub Actions
+        phase-07 · PR
+
+        CG-475p1 · hard
+        Refresh open PR conflicts, checks, and review comments
+        phase-07 · PR
+
+        CG-480p1 · hard
+        Make Inbox recovery prompts actionable and distinguish operator work from user decisions
+        phase-05 · PR
+
+        CG-490p1 · medium
+        Remove redundant two-review-round automerge hold for hard tasks
+        phase-05 · PR
+
+        CG-494p1 · hard
+        Show standalone scheduler health and coordinate manual ticks
+        phase-05 · PR
+
+        CG-499p1 · hard
+        Show worker status and current jobs in a Now tab and API
+        phase-07 · PR
+
+        CG-236p2 · easy
+        A trial winner's PR enters the review queue on its own, like any pushed revision
+        phase-05 · PR
+
+        CG-273p2 · medium
+        CG-217 merged with a criterion marked 'no evidence given' and CG-158 with a placfound
+        phase-05 · PR
+
+        CG-291p2 · medium
+        Each worker gets a private harness config dir holding only credentials, and the fence covers state.json and task filesfound
+        phase-05 · PR
+
+        CG-292p2 · medium
+        Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep testfound
+        phase-05 · PR
+
+        CG-295p2 · hard
+        Docs match the mechanism: the scaffolded operate skill, design.md and roadmap.md non-goals, and the architecture module mapfound
+        phase-05 · PR
+
+        CG-300p2 · easy
+        The retro's Numbers section reads the operator ledger where the owner keeps it, and reports spend and sharefound
+        phase-05 · PR
+
+        CG-301p2 · easy
+        Retro questions are deduplicated across reconcile runs, and a second judge can run with task filing offfound
+        phase-05 · PR
+
+        CG-313p2 · easy
+        parse_result accepts the GARDEN_RESULT marker wrapped in markdown emphasis or code and a JSON payload that spans lines
+        phase-05 · PR
+
+        CG-325p2 · easy
+        A dependency can require the parent to merge, not only to have a PR: depends_on entries take after: merge, the default for a design-to-build pair
+        phase-05 · PR
+
+        CG-328p2 · hard
+        Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question
+        phase-05 · PR
+
+        CG-336p2 · medium
+        Record Codex operator usage in the operator spend ledger
+        phase-05 · PR
+
+        CG-350p2 · hard
+        Edit every Configuration setting in the web app with clear help and project policy feedback
+        phase-06 · PR
+
+        CG-353p2 · medium
+        Open the Inbox PR count as a matching GitHub pull request list
+        phase-06 · PR
+
+        CG-356p2 · medium
+        Recover onboarding cleanly when planner output is rejected
+        phase-05 · PR
+
+        CG-384p2 · medium
+        Show deployed release identity and validate release artifacts
+        phase-05 · PR
+
+        CG-416p2 · medium
+        Aggregate brief size and startup-context regressions in metrics
+        phase-07 · PR
+
+        CG-425p2 · medium
+        Give the Now page beautiful, unmistakable section hierarchy
+        phase-05 · PR
+
+        CG-470p2 · medium
+        Add an origin-aware back control to task detail
+        phase-07 · PR
+
+        CG-472p2 · medium
+        Add an open pull requests tab to the board
+        phase-07 · PR
+
+        CG-473p2 · hard
+        Reserve a task in Manual mode from automatic actions
+        phase-07 · PR
+
+        CG-477p2 · hard
+        Run user-triggered local deep dives with published reports and follow-up fixes
+        phase-07 · PR
+
+        CG-478p2 · medium
+        Allow non-draft tasks to move into frozen phases
+        phase-07 · PR
+
+        CG-479p2 · hard
+        Optimize Garden page load times
+        phase-05 · PR
+
+        CG-498p2 · hard
+        Clean up worker branches when they are no longer needed
+        phase-07 · PR
+
+        CG-502p2 · hard
+        Find redundant or low-value expensive tests
+        phase-07 · PR
+
+        CG-510p2 · easy
+        Consolidate duplicated canary composition testsfound
+        phase-07 · PR
+
+        CG-511p2 · medium
+        Narrow duplicated remote lifecycle variantsfound
+        phase-07 · PR
+
+        CG-254p3 · medium
+        redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a tickfound
+        phase-05 · PR
+
+        CG-256p3 · medium
+        A draft's acceptance criteria and reading list can be edited inline on the task pagefound
+        phase-05 · PR
+
+        CG-294p3 · medium
+        Planning sequences dependent tasks and inlines retro evidence into the brieffound
+        phase-05 · PR
+
+        CG-296p3 · medium
+        One vocabulary and one place for each fact across rail, Config, CLI and Inboxfound
+        phase-05 · PR
+
+        CG-297p3 · easy
+        The walkthrough renderer skips hidden elements and attributes, and check runs retry once on a signal exitfound
+        phase-05 · PR
+
+        CG-304p3 · easy
+        Update docs: docs/architecture.mdfound
+        phase-05 · PR
+
+        CG-305p3 · easy
+        Update docs: docs/worker-protocol.mdfound
+        phase-05 · PR
+
+        CG-306p3 · easy
+        Update docs: docs/design.mdfound
+        phase-05 · PR
+
+        CG-298p4 · medium
+        Persona runs are recorded per phase and the retro validates the run id it readsfound
+        phase-05 · PR
+
+        CG-299p4 · easy
+        Small follow-ups: retro_question kind, backlog noscript, CI flake, ambient config dir in tests, a second opinion for self productsfound
+        phase-05 · PR
+
+    wiltedfailed0
+
+    set asidewont do0

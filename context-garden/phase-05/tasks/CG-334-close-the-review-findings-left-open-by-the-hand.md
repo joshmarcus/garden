@@ -3,7 +3,7 @@ id: CG-334
 title: 'Close the review findings left open by the hand merges of 2026-09-06: ghost records with terminal
   tasks, the persona replay test, design routes per product, the snapshot''s queue data, Now 2''s per-goal
   status marks, Now 1''s empty-period gate'
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -15,8 +15,12 @@ reading:
 - src/garden/web/pages/api.py
 - tests/test_harness.py
 - tests/test_web.py
+branch: garden/cg-334-close-the-review-findings-left-open-by-the-hand
+pr: https://github.com/joshmarcus/context-garden/pull/255
+attempts: 1
+last_dispatched_at: '2026-09-07T01:53:56+00:00'
 created: '2026-09-06T12:43:08+00:00'
-updated: '2026-09-06T13:14:47+00:00'
+updated: '2026-09-07T15:18:12+00:00'
 ---
 
 ## Goal
@@ -42,3 +46,9 @@ The owner: "anything that's not terrible, let's merge" (12:30Z), while draining 
 - 2026-09-06T12:43:09+00:00 approved (cli)
 - 2026-09-06T13:13:03+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:47+00:00 reset to ready by hand
+- 2026-09-07T01:53:36+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply 63bde01317d0105f18b1a39112a08ec4c2ce0e6e` in /home/joshua/work/worktrees/CG-334 to recover them (garden:CG-334:20260907T015336Z-work:pre-dispatch, run 20260907T015336Z-work)
+- 2026-09-07T01:53:56+00:00 dispatched work run 20260907T015336Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~15226 tokens)
+- 2026-09-07T02:16:04+00:00 preserved uncommitted worktree changes from run 20260907T015336Z-work outside the PR: `git stash apply ffe32832348b4e6b76f3c648e0695eabf8da1c00` in /home/joshua/work/worktrees/CG-334 (garden:CG-334:20260907T015336Z-work:reap)
+- 2026-09-07T02:18:35+00:00 opened https://github.com/joshmarcus/context-garden/pull/255 (base main): Closed terminal pid-less launched run records, exposed real queue data in design snapshots, and routed design artifacts by product. The already-integrated persona and Now regressions remain covered by their replay and rendering tests. cost=$2.07
+- 2026-09-07T13:01:04+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/255
+- 2026-09-07T15:18:12+00:00 automated review could not start: CG-334 is done: #255 was merged at 13:01:04

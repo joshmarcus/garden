@@ -1,0 +1,39 @@
+{
+  "Budget": {
+    "BudgetName": "context-garden-80-total-trial",
+    "BudgetLimit": {
+      "Amount": "80.0",
+      "Unit": "USD"
+    },
+    "CostTypes": {
+      "IncludeTax": true,
+      "IncludeSubscription": true,
+      "UseBlended": false,
+      "IncludeRefund": false,
+      "IncludeCredit": false,
+      "IncludeUpfront": true,
+      "IncludeRecurring": true,
+      "IncludeOtherSubscription": true,
+      "IncludeSupport": true,
+      "IncludeDiscount": true,
+      "UseAmortized": false
+    },
+    "TimeUnit": "CUSTOM",
+    "TimePeriod": {
+      "Start": "2026-09-06T20:00:00-04:00",
+      "End": "2027-09-06T20:00:00-04:00"
+    },
+    "CalculatedSpend": {
+      "ActualSpend": {
+        "Amount": "0.0",
+        "Unit": "USD"
+      }
+    },
+    "BudgetType": "COST",
+    "LastUpdatedTime": "2026-09-07T14:46:57.164000-04:00",
+    "HealthStatus": {
+      "Status": "HEALTHY",
+      "LastUpdatedTime": "2026-09-07T14:46:56.948000-04:00"
+    }
+  }
+}

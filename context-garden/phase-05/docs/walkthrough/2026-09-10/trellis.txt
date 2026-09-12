@@ -1,0 +1,1084 @@
+Trellis · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+Trellis
+The structure the work climbs: dependencies left to right, dashed edges for discovered work. A task with one open dependency stacks on its PR instead of waiting.
+
+    hide done (260)
+
+  all
+
+    context-garden/phase-05
+
+    context-garden/phase-06
+
+    context-garden/phase-07
+
+    context-garden/phase-08
+
+  include closed
+
+  ready now: CG-492
+   · longest open chain: CG-302 → CG-213
+
+CG-253: The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail — done (in fruit)CG-253The retro captures its o…done
+CG-323: The worker pre-flights its PR against the review rubric, mechanical review items become pre-PR checks, and criteria are frozen at dispatch — done (in fruit)CG-323The worker pre-flights i…done
+CG-329: The worker count the dispatcher enforces and the count the rail shows are the same number: checks, reviews and edit runs either take a slot visibly or not at all — done (in fruit)CG-329The worker count the dis…done
+CG-330: A failed rebase or check run never restarts a task's work from scratch: the PR stays, the rebase or check is retried, and only a failed work or revise run counts as an attempt — done (in fruit)CG-330A failed rebase or check…done
+CG-335: Worker temp symlinks recover after a tmpfs restart — cancelled (pressed)CG-335Worker temp symlinks rec…cancelled
+CG-337: Attention cards ask for product decisions, while no-change reports reconcile automatically — done (in fruit)CG-337Attention cards ask for …done
+CG-338: Keep the operator machine responsive under concurrent workers and test suites — done (in fruit)CG-338Keep the operator machin…done
+CG-339: Review affected behavior through the running application before accepting interaction claims — done (in fruit)CG-339Review affected behavior…done
+CG-343: Finished reviews are reconciled even after their task leaves review states — done (in fruit)CG-343Finished reviews are rec…done
+CG-344: Keep fence bookkeeping memory bounded as run history grows — done (in fruit)CG-344Keep fence bookkeeping m…done
+CG-345: Provision and retire an EC2 worker pool from a bounded declarative configuration — done (in fruit)CG-345Provision and retire an …done
+CG-357: Keep web requests responsive while workers run and run history grows — done (in fruit)CG-357Keep web requests respon…done
+CG-358: Keep incident control actions responsive and retry-safe during web overload — done (in fruit)CG-358Keep incident control ac…done
+CG-359: Preserve unrelated worktree changes without adding them to recovered PRs — done (in fruit)CG-359Preserve unrelated workt…done
+CG-360: Keep restored archived runs visible when directory fingerprints do not change — done (in fruit)CG-360Keep restored archived r…done
+CG-361: Bound test workloads within each run and reserve web capacity — done (in fruit)CG-361Bound test workloads wit…done
+CG-363: Run full worker tests on GitHub CI before completion — done (in fruit)CG-363Run full worker tests on…done
+CG-366: Prevent fence attribution from rewinding concurrent worker logs — done (in fruit)CG-366Prevent fence attributio…done
+CG-372: Honor task priority when admitting queued reviews and prevent starvation — done (in fruit)CG-372Honor task priority when…done
+CG-376: Make review caps optional and report excessive review loops as friction — done (in fruit)CG-376Make review caps optiona…done
+CG-378: Refresh README for the current garden and operator workflow — done (in fruit)CG-378Refresh README for the c…done
+CG-390: Require screenshots only for materially changed visual behavior — done (in fruit)CG-390Require screenshots only…done
+CG-393: Distinguish validation-slot waiting from stale-worktree idle timeouts — done (in fruit)CG-393Distinguish validation-s…done
+CG-395: Support explicit GitHub Enterprise hosts across all repository operations — done (in fruit)CG-395Support explicit GitHub …done
+CG-397: Respect external branch-stack ownership and configurable protected paths — done (in fruit)CG-397Respect external branch-…done
+CG-399: Keep physical host identities out of committed context and public evidence — done (in fruit)CG-399Keep physical host ident…done
+CG-400: Define the least-privilege worker identity and internal tooling policy — cancelled (pressed)CG-400Define the least-privile…cancelled
+CG-406: Support fenced in-place canonical checkouts with safe per-run reconciliation — done (in fruit)CG-406Support fenced in-place …done
+CG-409: Finish manual work pushed from another machine without a local authoring checkout — done (in fruit)CG-409Finish manual work pushe…done
+CG-410: Show eligible manual work in Inbox with a safe take action — done (in fruit)CG-410Show eligible manual wor…done
+CG-411: Adopt an existing PR with its verified branch and revision identity — done (in fruit)CG-411Adopt an existing PR wit…done
+CG-420: Repair production remote claims and install the complete Codex runtime — done (in fruit)CG-420Repair production remote…done
+CG-421: Verify public GitHub CI from scoped AWS workers without operator credentials — done (in fruit)CG-421Verify public GitHub CI …done
+CG-424: Make metadata-only review gaps advisory and align worker verification instructions — done (in fruit)CG-424Make metadata-only revie…done
+CG-426: Keep stress and load tests out of the default test suite — done (in fruit)CG-426Keep stress and load tes…done
+CG-427: Render Codex event streams on run transcript pages — done (in fruit)CG-427Render Codex event strea…done
+CG-428: Keep remote worker runs alive across controller redeploys — done (in fruit)CG-428Keep remote worker runs …done
+CG-429: Provide supervised validation to remote model workers — done (in fruit)CG-429Provide supervised valid…done
+CG-430: Reap exited adopted children while supervised workers are still running — done (in fruit)CG-430Reap exited adopted chil…done
+CG-431: Keep controller-owned replay checks local for remote-authored tasks — done (in fruit)CG-431Keep controller-owned re…done
+CG-434: Enforce current validation policy on old and stacked worker branches — done (in fruit)CG-434Enforce current validati…done
+CG-436: Prevent unrelated interaction replays from driving repeated task revisions — done (in fruit)CG-436Prevent unrelated intera…done
+CG-437: Escalate revision difficulty and surface explicit troubled-task decisions — done (in fruit)CG-437Escalate revision diffic…done
+CG-449: Make screenshot infrastructure failures advisory without hiding UI defects — done (in fruit)CG-449Make screenshot infrastr…done
+CG-453: Reduce the ordinary test suite runtime below eight minutes — done (in fruit)CG-453Reduce the ordinary test…done
+CG-454: Skip destructive pre-merge rebase when the reviewed remote head is already current — done (in fruit)CG-454Skip destructive pre-mer…done
+CG-456: Admit remote reviews independently of occupied local review capacity — done (in fruit)CG-456Admit remote reviews ind…done
+CG-458: Pass option-like replay nonces as argument values — done (in fruit)CG-458Pass option-like replay …done
+CG-462: Use agent judgment for proportionate PR verification — done (in fruit)CG-462Use agent judgment for p…done
+CG-463: Move the serving build to a quiet nav footer detail — done (in fruit)CG-463Move the serving build t…done
+CG-464: Merge clean approved heads without redundant latest-base rebuild — done (in fruit)CG-464Merge clean approved hea…done
+CG-465: Omit unattached-artifact commentary from automated reviews — done (in fruit)CG-465Omit unattached-artifact…done
+CG-469: Allow nested served-worker tests under supervised full-suite validation — done (in fruit)CG-469Allow nested served-work…done
+CG-471: Make stale check recovery one guarded atomic action — done (in fruit)CG-471Make stale check recover…done
+CG-474: Preserve full review feedback when asynchronous CI finishes — done (in fruit)CG-474Preserve full review fee…done
+CG-476: Complete external manual runs after a verified squash merge — done (in fruit)CG-476Complete external manual…done
+CG-481: Persist worker decisions before publishing waiting status — done (in fruit)CG-481Persist worker decisions…done
+CG-482: Persist worker question resume identity before publishing waiting status — done (in fruit)CG-482Persist worker question …done
+CG-483: Keep generated worker context out of tracked source files — done (in fruit)CG-483Keep generated worker co…done
+CG-484: Initialize fresh base probes and distinguish unavailable checks from broken source — done (in fruit)CG-484Initialize fresh base pr…done
+CG-485: Show accurate remote and manual run lifecycle without phantom process slots — done (in fruit)CG-485Show accurate remote and…done
+CG-486: Recover managed workers from failed checkout materialization — done (in fruit)CG-486Recover managed workers …done
+CG-487: Collect terminal remote results after task completion — done (in fruit)CG-487Collect terminal remote …done
+CG-488: Preserve concurrent harness pauses when stale scheduler reads empty state — done (in fruit)CG-488Preserve concurrent harn…done
+CG-489: Retain verified release corrections when integrating current main — done (in fruit)CG-489Retain verified release …done
+CG-491: Recover idle worker claims after transient or lost claim responses — done (in fruit)CG-491Recover idle worker clai…done
+CG-493: Retain RC14 discovery and CI guards — done (in fruit)CG-493Retain RC14 discovery an…done
+CG-495: Integrate bounded active-run claim scans into main — done (in fruit)CG-495Integrate bounded active…done
+CG-496: Integrate the validated RC16 Now refresh into current main — done (in fruit)CG-496Integrate the validated …done
+CG-528: Enforce a 20 GiB physical-disk reserve before local work and staging — draft (seed)CG-528Enforce a 20 GiB physica…draft
+CG-215: Onboarding skill and command: analyse an existing project and its environment to create a garden product, principles, setup config and a first phase — done (in fruit)CG-215Onboarding skill and com…done
+CG-216: Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP, works in its own clone, pushes the branch and posts the result and transcript back — done (in fruit)CG-216Workers on independent r…done
+CG-230: A tier can name several harness and model options, and dispatch spreads runs across them to share quotas, skipping a paused or exhausted one — done (in fruit)CG-230A tier can name several …done
+CG-237: The not-logged-in check reads a worker's prose as an auth failure: match the CLI's own error, not the report text — done (in fruit)CG-237The not-logged-in check …done
+CG-243: Preserve task actions across concurrent ticks and moves — done (in fruit)CG-243Preserve task actions ac…done
+CG-244: Reserve retro task IDs and survive duplicate records — done (in fruit)CG-244Reserve retro task IDs a…done
+CG-245: Isolate planner execution from operator state — done (in fruit)CG-245Isolate planner executio…done
+CG-246: Prevent workers from mutating shared control and harness state — cancelled (pressed)CG-246Prevent workers from mut…cancelled
+CG-247: Make completion honor the product base branch — cancelled (pressed)CG-247Make completion honor th…cancelled
+CG-248: TUI's dispatch action ('d' key) also bypasses the approve gate on a draft — done (in fruit)CG-248TUI's dispatch action ('…done
+CG-249: `garden dispatch <id>` (CLI) allows dispatching a draft directly — done (in fruit)CG-249`garden dispatch <id&…done
+CG-250: A reopen verdict is a working process: blocking tasks arrive with a complete brief, are approved through the gate, and the phase reopens and closes on them without hand steps — done (in fruit)CG-250A reopen verdict is a wo…done
+CG-251: Cost per accepted task and first-pass approval per model, tier and harness in metrics, the Costs page and the retro — done (in fruit)CG-251Cost per accepted task a…done
+CG-257: The rail, Config page, CLI and status line use 'operating profile', 'stop' and ' — cancelled (pressed)CG-257The rail, Config page, C…cancelled
+CG-258: The Kickoff panel with a primary 'Kick off' button is the first thing on every o — cancelled (pressed)CG-258The Kickoff panel with a…cancelled
+CG-271: run_planner copies os.environ wholesale so the planner still sees the operator's — cancelled (pressed)CG-271run_planner copies os.en…cancelled
+CG-272: garden take flips a draft to ready by hand, bypassing brief_gaps, phase_refusal — cancelled (pressed)CG-272garden take flips a draf…cancelled
+CG-281: Dispatch now on a draft and the New task form's approve-now both skip the approv — cancelled (pressed)CG-281Dispatch now on a draft …cancelled
+CG-282: The Mark done button on every in-review card sets status to done directly in the — cancelled (pressed)CG-282The Mark done button on …cancelled
+CG-288: Live config reload holds while any in-flight worker's fence manifest disagrees with garden.yaml on disk — cancelled (pressed)CG-288Live config reload holds…cancelled
+CG-289: Task files get optimistic concurrency and a duplicate id is a validate problem, not a fatal exception — cancelled (pressed)CG-289Task files get optimisti…cancelled
+CG-293: A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria and the concrete blocker — done (in fruit)CG-293A brief never ships with…done
+CG-307: Design the Now page: information architecture, visual system, motion, and a static mock of every state — done (in fruit)CG-307Design the Now page: inf…done
+CG-310: Worker temp files live on disk and are pruned: TMPDIR under the work root, per-run cleanup at reap, and a sweep of finished tasks' worktree venvs and caches — done (in fruit)CG-310Worker temp files live o…done
+CG-311: The task page shows the decision a worker's no-change or question report needs: the same card and actions as the Inbox, right where the notification sends you — done (in fruit)CG-311The task page shows the …done
+CG-312: Inbox decision cards lay out at full width: the text column no longer collapses to one word per line and the action buttons no longer overlap the evidence list — done (in fruit)CG-312Inbox decision cards lay…done
+CG-314: Design Now 2: astra's take on the Now page, information architecture, visual system, motion, and a static mock of every state — done (in fruit)CG-314Design Now 2: astra's ta…done
+CG-315: UI changes are reviewed against rendered pages: a template or style change captures the affected pages as screenshots at two widths, the reviewer and the personas read them, and the walkthrough uses the same capture — done (in fruit)CG-315UI changes are reviewed …done
+CG-316: A dispatch that fails before its process starts closes the run record at once, and the orphan sweep closes any running record with no live process — done (in fruit)CG-316A dispatch that fails be…done
+CG-317: The task page renders a trial in progress: the trial panel treats winner, scores and PRs as optional, and a test renders a task mid-trial with a failed contender — done (in fruit)CG-317The task page renders a …done
+CG-318: The web app serves design documents, mocks and run captures: /design/<file> for the product's docs/design and a run page link to each capture — done (in fruit)CG-318The web app serves desig…done
+CG-320: Reviews by the model one step above the writer: a review ladder across harnesses picks the reviewer from the PR's last work or revise model — done (in fruit)CG-320Reviews by the model one…done
+CG-321: Reviews suggest fixes and improvements, not only a verdict: each finding carries a concrete fix, a separate improvements list goes beyond the criteria, and the revise brief carries both to the worker — done (in fruit)CG-321Reviews suggest fixes an…done
+CG-322: A _TaskState written with dict.update or |= is not saved — done (in fruit)CG-322A _TaskState written wit…done
+CG-324: The loop produces the evidence a criterion requires: persona reviews, captures and checks named by a task's criteria run when its PR opens, before the first review — done (in fruit)CG-324The loop produces the ev…done
+CG-326: Fix the Edge capture recipe for 390-wide captures: frame the page in a 390 px iframe — done (in fruit)CG-326Fix the Edge capture rec…done
+CG-331: The tick-responsiveness test measures against the machine, not the clock: it fails a PR only when a web action waits on the tick, never because the box is busy — done (in fruit)CG-331The tick-responsiveness …done
+CG-333: A run that ends without a result but with new commits in its worktree is reaped as a pushed revision, not a failed attempt — done (in fruit)CG-333A run that ends without …done
+CG-334: Close the review findings left open by the hand merges of 2026-09-06: ghost records with terminal tasks, the persona replay test, design routes per product, the snapshot's queue data, Now 2's per-goal status marks, Now 1's empty-period gate — done (in fruit)CG-334Close the review finding…done
+CG-341: Enforce stabilization evidence at phase close and record unattended operation mechanically — done (in fruit)CG-341Enforce stabilization ev…done
+CG-349: Centralize editable configuration metadata and enforce project overrides and locks — done (in fruit)CG-349Centralize editable conf…done
+CG-351: Compare total cost with average cost per task and activity counts on the Costs page — done (in fruit)CG-351Compare total cost with …done
+CG-352: Make the sidebar operating profile a clear Economy-to-Fast slider — done (in fruit)CG-352Make the sidebar operati…done
+CG-354: Split tests into focused suites to shorten development feedback — done (in fruit)CG-354Split tests into focused…done
+CG-355: Restore automatic installation and safe restart after tool updates — done (in fruit)CG-355Restore automatic instal…done
+CG-362: Complete externally implemented tasks from verified PR metadata — done (in fruit)CG-362Complete externally impl…done
+CG-367: Profile and reduce loaded page request cost before increasing concurrency — done (in fruit)CG-367Profile and reduce loade…done
+CG-368: Check browser runtime readiness before admitting capture-dependent work — done (in fruit)CG-368Check browser runtime re…done
+CG-369: Align phase-close gate with fixture-sufficient onboarding requirement — done (in fruit)CG-369Align phase-close gate w…done
+CG-370: Fix measured narrow-viewport overflow on Phase and Runs pages — done (in fruit)CG-370Fix measured narrow-view…done
+CG-373: Bound rebase prompts and recover oversized generated-file conflicts — done (in fruit)CG-373Bound rebase prompts and…done
+CG-374: Route routine recovery stops to operator actions instead of owner decisions — done (in fruit)CG-374Route routine recovery s…done
+CG-375: Measure unattended stabilization by required human-owner action — done (in fruit)CG-375Measure unattended stabi…done
+CG-379: Add a maintenance pause that safely freezes scheduling and collection — done (in fruit)CG-379Add a maintenance pause …done
+CG-386: Prevent stale collected checks from reopening terminal tasks — done (in fruit)CG-386Prevent stale collected …done
+CG-387: Distinguish full execution slots from resource pressure in the status banner — done (in fruit)CG-387Distinguish full executi…done
+CG-388: Make revision-limit recovery the primary action and resume work in one click — cancelled (pressed)CG-388Make revision-limit reco…cancelled
+CG-389: Negotiate capture CLI compatibility and diagnose renderer exit before requesting revisions — done (in fruit)CG-389Negotiate capture CLI co…done
+CG-394: Release temporary runner holds without leaving stale human stops — done (in fruit)CG-394Release temporary runner…done
+CG-401: Pass approved tool configuration into scrubbed local and remote workers — done (in fruit)CG-401Pass approved tool confi…done
+CG-402: Export immutable run evaluation evidence into context under an approved policy — draft (seed)CG-402Export immutable run eva…draft
+CG-412: Resolve check commands analyzers and timeouts per product — cancelled (pressed)CG-412Resolve check commands a…cancelled
+CG-413: Use product-specific execution timeouts and weighted resource admission — done (in fruit)CG-413Use product-specific exe…done
+CG-414: Assign owners to tasks and phases and filter work by owner — done (in fruit)CG-414Assign owners to tasks a…done
+CG-415: Register private runner adapters through trusted configuration — done (in fruit)CG-415Register private runner …done
+CG-441: Bound the local runner launch regression test — cancelled (pressed)CG-441Bound the local runner l…cancelled
+CG-450: Preserve complete review findings and criterion reasons through revision handoffs — done (in fruit)CG-450Preserve complete review…done
+CG-467: Support enterprise validation without GitHub Actions — done (in fruit)CG-467Support enterprise valid…done
+CG-480: Make Inbox recovery prompts actionable and distinguish operator work from user decisions — done (in fruit)CG-480Make Inbox recovery prom…done
+CG-490: Remove redundant two-review-round automerge hold for hard tasks — done (in fruit)CG-490Remove redundant two-rev…done
+CG-494: Show standalone scheduler health and coordinate manual ticks — done (in fruit)CG-494Show standalone schedule…done
+CG-499: Show worker status and current jobs in a Now tab and API — done (in fruit)CG-499Show worker status and c…done
+CG-501: Diagnose worker disconnects and resets and make recovery resilient — changes requested (pruned)CG-501Diagnose worker disconne…changes requested
+CG-506: Return complete worker transcripts for server-side storage and analysis — changes requested (pruned)CG-506Return complete worker t…changes requested
+CG-525: Repair manual PR refresh fake mutation regression — draft (seed)CG-525Repair manual PR refresh…draft
+CG-529: Automatically start the phase closing review when prerequisites are met — draft (seed)CG-529Automatically start the …draft
+CG-530: Add Last week to Now and share its cost graphs on Costs — draft (seed)CG-530Add Last week to Now and…draft
+CG-236: A trial winner's PR enters the review queue on its own, like any pushed revision — done (in fruit)CG-236A trial winner's PR ente…done
+CG-252: The retro files only high findings as drafts and keeps the rest on the retro page with a one-press file-as-task — cancelled (pressed)CG-252The retro files only hig…cancelled
+CG-259: A draft with brief gaps shows 'Fix the brief before approving' beside an enabled — cancelled (pressed)CG-259A draft with brief gaps …cancelled
+CG-260: tick_interval is listed both under live re-read values and under 'Needs a restar — cancelled (pressed)CG-260tick_interval is listed …cancelled
+CG-261: move, retro-decide and canary appear in an unlabeled Commands box above the name — cancelled (pressed)CG-261move, retro-decide and c…cancelled
+CG-262: A draft task page shows both 'Approve into [phase]' and a separate move 'phase' — cancelled (pressed)CG-262A draft task page shows …cancelled
+CG-263: Kickoff and retro question cards sit in the 'Needs a decision' group whose descr — cancelled (pressed)CG-263Kickoff and retro questi…cancelled
+CG-264: garden walkthrough still captures the phase-02 page set; Costs, the backlog view — cancelled (pressed)CG-264garden walkthrough still…cancelled
+CG-265: The scaffolded garden-operate skill says any config change needs a restart, and — cancelled (pressed)CG-265The scaffolded garden-op…cancelled
+CG-273: CG-217 merged with a criterion marked 'no evidence given' and CG-158 with a plac — done (in fruit)CG-273CG-217 merged with a cri…done
+CG-274: Hand merges, rebase rounds per merge, cost per easy task and the operator's shar — cancelled (pressed)CG-274Hand merges, rebase roun…cancelled
+CG-275: The generated garden-operate skill still says any config change needs a restart, — cancelled (pressed)CG-275The generated garden-ope…cancelled
+CG-276: Goal 2's 'two tasks serving one goal are sequenced or scoped at planning' and 'r — cancelled (pressed)CG-276Goal 2's 'two tasks serv…cancelled
+CG-283: The built-in economy, balanced and fast stops hardcode Claude model ids and mode — cancelled (pressed)CG-283The built-in economy, ba…cancelled
+CG-284: The approve card says to fix the brief but the task page offers no way to edit c — cancelled (pressed)CG-284The approve card says to…cancelled
+CG-290: The planner and synchronous kickoff run in the worker environment — cancelled (pressed)CG-290The planner and synchron…cancelled
+CG-291: Each worker gets a private harness config dir holding only credentials, and the fence covers state.json and task files — done (in fruit)CG-291Each worker gets a priva…done
+CG-292: Every status write goes through _transition: Scheduler.mark_done and unapprove, and a source-grep test — done (in fruit)CG-292Every status write goes …done
+CG-295: Docs match the mechanism: the scaffolded operate skill, design.md and roadmap.md non-goals, and the architecture module map — done (in fruit)CG-295Docs match the mechanism…done
+CG-300: The retro's Numbers section reads the operator ledger where the owner keeps it, and reports spend and share — done (in fruit)CG-300The retro's Numbers sect…done
+CG-301: Retro questions are deduplicated across reconcile runs, and a second judge can run with task filing off — done (in fruit)CG-301Retro questions are dedu…done
+CG-302: Spike: OpenRouter harness shape and adapter CLI — in review (in flower)CG-302Spike: OpenRouter harnes…in review
+CG-303: Spike: CG-246/CG-247 blocker briefs and overlap with CG-291/CG-292 — cancelled (pressed)CG-303Spike: CG-246/CG-247 blo…cancelled
+CG-313: parse_result accepts the GARDEN_RESULT marker wrapped in markdown emphasis or code and a JSON payload that spans lines — done (in fruit)CG-313parse_result accepts the…done
+CG-325: A dependency can require the parent to merge, not only to have a PR: depends_on entries take after: merge, the default for a design-to-build pair — done (in fruit)CG-325A dependency can require…done
+CG-328: Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question — done (in fruit)CG-328Accepting a worker's no-…done
+CG-336: Record Codex operator usage in the operator spend ledger — done (in fruit)CG-336Record Codex operator us…done
+CG-353: Open the Inbox PR count as a matching GitHub pull request list — done (in fruit)CG-353Open the Inbox PR count …done
+CG-356: Recover onboarding cleanly when planner output is rejected — done (in fruit)CG-356Recover onboarding clean…done
+CG-384: Show deployed release identity and validate release artifacts — done (in fruit)CG-384Show deployed release id…done
+CG-416: Aggregate brief size and startup-context regressions in metrics — done (in fruit)CG-416Aggregate brief size and…done
+CG-425: Give the Now page beautiful, unmistakable section hierarchy — done (in fruit)CG-425Give the Now page beauti…done
+CG-470: Add an origin-aware back control to task detail — done (in fruit)CG-470Add an origin-aware back…done
+CG-472: Add an open pull requests tab to the board — done (in fruit)CG-472Add an open pull request…done
+CG-473: Reserve a task in Manual mode from automatic actions — done (in fruit)CG-473Reserve a task in Manual…done
+CG-477: Run user-triggered local deep dives with published reports and follow-up fixes — done (in fruit)CG-477Run user-triggered local…done
+CG-478: Allow non-draft tasks to move into frozen phases — done (in fruit)CG-478Allow non-draft tasks to…done
+CG-479: Optimize Garden page load times — done (in fruit)CG-479Optimize Garden page loa…done
+CG-492: Automate safe live rollout of published versions to the worker fleet — ready (sprout)CG-492Automate safe live rollo…ready
+CG-498: Clean up worker branches when they are no longer needed — done (in fruit)CG-498Clean up worker branches…done
+CG-502: Find redundant or low-value expensive tests — done (in fruit)CG-502Find redundant or low-va…done
+CG-503: Find removable and overengineered code to simplify and optimize — in review (in flower)CG-503Find removable and overe…in review
+CG-504: Write and update user operator and contributor documentation — in review (in flower)CG-504Write and update user op…in review
+CG-505: Audit and update all Garden specifications — in review (in flower)CG-505Audit and update all Gar…in review
+CG-222: A collective, searchable context: every run leaves structured notes about the codebase, briefs search them, and the retro consolidates them — cancelled (pressed)CG-222A collective, searchable…cancelled
+CG-254: redispatch kills the superseded worker, and pin runs the canary, installs and restarts after a tick — done (in fruit)CG-254redispatch kills the sup…done
+CG-255: Operating-profile stops name a tier per harness, and user-facing copy drops task ids — cancelled (pressed)CG-255Operating-profile stops …cancelled
+CG-256: A draft's acceptance criteria and reading list can be edited inline on the task page — done (in fruit)CG-256A draft's acceptance cri…done
+CG-266: The worker's question is printed twice on its card because the reason line and t — cancelled (pressed)CG-266The worker's question is…cancelled
+CG-267: Resume, trial, compare and edit runs fold into an unnamed 'other' activity that — cancelled (pressed)CG-267Resume, trial, compare a…cancelled
+CG-268: Spend appears three ways in the rail (a whole-dollar Runs figure, a Costs link, — cancelled (pressed)CG-268Spend appears three ways…cancelled
+CG-269: The Costs form submits every select on change yet keeps a visible Filter button, — cancelled (pressed)CG-269The Costs form submits e…cancelled
+CG-270: A cancelled task's only action is 'Continue the loop', the TUI label is 'Continu — cancelled (pressed)CG-270A cancelled task's only …cancelled
+CG-277: CG-206, CG-213, CG-215, CG-216, CG-222 and CG-230 appear in no merged PR and the — cancelled (pressed)CG-277CG-206, CG-213, CG-215, …cancelled
+CG-278: An in-flight review whose PR merges is swept by reap_orphaned after it finishes — cancelled (pressed)CG-278An in-flight review whos…cancelled
+CG-279: Persona findings at every severity, kickoff items and retro follow-ups all file — cancelled (pressed)CG-279Persona findings at ever…cancelled
+CG-280: The backlog phase pulldown needs JavaScript (CG-163) and the notification endpoi — cancelled (pressed)CG-280The backlog phase pulldo…cancelled
+CG-285: tick_interval appears both under live re-read values and under the needs-a-resta — cancelled (pressed)CG-285tick_interval appears bo…cancelled
+CG-286: The Costs page files a resume round as 'other', and garden observe's digest repo — cancelled (pressed)CG-286The Costs page files a r…cancelled
+CG-287: With every phase closed, garden status prints an empty table and its legend befo — cancelled (pressed)CG-287With every phase closed,…cancelled
+CG-294: Planning sequences dependent tasks and inlines retro evidence into the brief — done (in fruit)CG-294Planning sequences depen…done
+CG-296: One vocabulary and one place for each fact across rail, Config, CLI and Inbox — done (in fruit)CG-296One vocabulary and one p…done
+CG-297: The walkthrough renderer skips hidden elements and attributes, and check runs retry once on a signal exit — done (in fruit)CG-297The walkthrough renderer…done
+CG-304: Update docs: docs/architecture.md — done (in fruit)CG-304Update docs: docs/archit…done
+CG-305: Update docs: docs/worker-protocol.md — done (in fruit)CG-305Update docs: docs/worker…done
+CG-306: Update docs: docs/design.md — done (in fruit)CG-306Update docs: docs/design…done
+CG-298: Persona runs are recorded per phase and the retro validates the run id it reads — done (in fruit)CG-298Persona runs are recorde…done
+CG-299: Small follow-ups: retro_question kind, backlog noscript, CI flake, ambient config dir in tests, a second opinion for self products — done (in fruit)CG-299Small follow-ups: retro_…done
+CG-342: Reconcile Now CLI tests with the page-2 command — done (in fruit)CG-342Reconcile Now CLI tests …done
+CG-346: Run work reviews and checks on managed EC2 hosts with shared resource admission — done (in fruit) — after merge: CG-216CG-346Run work reviews and che…done
+CG-364: Remove redundant tests and unnecessary fixture work — done (in fruit)CG-364Remove redundant tests a…done
+CG-365: Complete resource isolation enforcement and evidence after CG-361 — done (in fruit)CG-365Complete resource isolat…done
+CG-377: Scope review validation to affected behavior and acceptance claims — done (in fruit)CG-377Scope review validation …done
+CG-381: Make Inbox human-action counts and advice match actual ownership — done (in fruit)CG-381Make Inbox human-action …done
+CG-391: Recognize CI-helper validation commands during onboarding discovery — done (in fruit)CG-391Recognize CI-helper vali…done
+CG-392: Reconcile remaining architecture and worker-protocol statements with implementation — done (in fruit)CG-392Reconcile remaining arch…done
+CG-396: Use pluggable exact-head CI status for review and merge eligibility — changes requested (pruned)CG-396Use pluggable exact-head…changes requested
+CG-433: Prevent LocalRunner process_finished from hanging on a completed stdin consumer — done (in fruit)CG-433Prevent LocalRunner proc…done
+CG-435: Investigate LocalRunner supervisor completion hang — cancelled (pressed)CG-435Investigate LocalRunner …cancelled
+CG-438: Preserve review requests through unclaimed timeout and admission recovery — done (in fruit)CG-438Preserve review requests…done
+CG-439: Declare controller ownership for pre-PR UI capture checks — cancelled (pressed) — after merge: CG-431CG-439Declare controller owner…cancelled
+CG-440: Stabilize ordinary-suite onboarding and local-runner tests — cancelled (pressed)CG-440Stabilize ordinary-suite…cancelled
+CG-442: Make onboarding report test consistent with absent GitHub metadata — cancelled (pressed)CG-442Make onboarding report t…cancelled
+CG-443: Keep out-of-scope review limitations from rejecting satisfied acceptance criteria — done (in fruit)CG-443Keep out-of-scope review…done
+CG-447: Unify scp-form repository classification across config and worker claims — done (in fruit)CG-447Unify scp-form repositor…done
+CG-457: Prevent remote queue-age timeouts from duplicating live work and losing run fences — done (in fruit)CG-457Prevent remote queue-age…done
+CG-459: Pin remote base probes to the advertised base source — done (in fruit)CG-459Pin remote base probes t…done
+CG-468: Avoid nested validation admission deadlock during supervised full suites — done (in fruit)CG-468Avoid nested validation …done
+CG-497: Serialize worker answers with scheduler ticks — done (in fruit)CG-497Serialize worker answers…done
+CG-500: Route approved PRs with failed CI back to revision — done (in fruit)CG-500Route approved PRs with …done
+CG-507: Honor a granted revision before repeating a threshold stop — done (in fruit)CG-507Honor a granted revision…done
+CG-508: Invalidate stale setup cache when recreating scratch-merge checkouts — done (in fruit)CG-508Invalidate stale setup c…done
+CG-514: Never require a second review solely by count — in review (in flower)CG-514Never require a second r…in review
+CG-518: Enforce filesystem and network sandboxes for planning and approved tools — changes requested (pruned)CG-518Enforce filesystem and n…changes requested
+CG-519: Serve every active design and run artifact through an inert preview boundary — done (in fruit) — after merge: CG-318CG-519Serve every active desig…done
+CG-527: Clean up abandoned worker branches, worktrees and temporary files — draft (seed)CG-527Clean up abandoned worke…draft
+CG-308: Build Now 1 at /now1 from the Fable design: live view of what is running, what is next, where the phase is, and the last period — done (in fruit) — after merge: CG-307CG-308Build Now 1 at /now1 fro…done
+CG-309: Build Now 2 at /now2 from the astra design: live view of what is running, what is next, where the phase is, and the last period — done (in fruit) — after merge: CG-314CG-309Build Now 2 at /now2 fro…done
+CG-327: The live-garden fence attributes only the worker's own writes: the operator's and the scheduler's commits during a run's window are never counted against the run — done (in fruit)CG-327The live-garden fence at…done
+CG-332: A task parked by a harness environment stop is dispatched again as soon as the harness resumes, without a hand — done (in fruit)CG-332A task parked by a harne…done
+CG-340: Demonstrate onboarding and a useful accepted change on an independent project — done (in fruit)CG-340Demonstrate onboarding a…done
+CG-371: Fix phase and runs narrow layout overflow — cancelled (pressed)CG-371Fix phase and runs narro…cancelled
+CG-380: Attribute controller, scheduler, and worker performance under load — done (in fruit)CG-380Attribute controller, sc…done
+CG-398: Validate a human-gated enterprise profile with bot feedback and private notifications — done (in fruit)CG-398Validate a human-gated e…done
+CG-404: Add command-backed host acquisition readiness and warm reuse to the shared lifecycle — done (in fruit)CG-404Add command-backed host …done
+CG-422: Isolate nested validation lease environment in runner-spawning tests — done (in fruit)CG-422Isolate nested validatio…done
+CG-423: Scale production AWS workers through one resumable operation — done (in fruit)CG-423Scale production AWS wor…done
+CG-432: Make onboarding GitHub metadata detection transport-independent — done (in fruit) — after merge: CG-395CG-432Make onboarding GitHub m…done
+CG-451: Reject credential-bearing and ambiguous manually adopted PR URLs — done (in fruit)CG-451Reject credential-bearin…done
+CG-455: Redesign the Now page top summary as a useful thematic measurement — done (in fruit) — after merge: CG-425CG-455Redesign the Now page to…done
+CG-475: Refresh open PR conflicts, checks, and review comments — done (in fruit) — after merge: CG-472CG-475Refresh open PR conflict…done
+CG-513: Show only relevant unique design files for each pull request — changes requested (pruned)CG-513Show only relevant uniqu…changes requested
+CG-516: Resolve scoped workload identities and secret references at the execution boundary — running (in leaf)CG-516Resolve scoped workload …running
+CG-350: Edit every Configuration setting in the web app with clear help and project policy feedback — done (in fruit)CG-350Edit every Configuration…done
+CG-509: Avoid duplicate same-SHA GitHub test jobs — running (in leaf)CG-509Avoid duplicate same-SHA…running
+CG-510: Consolidate duplicated canary composition tests — done (in fruit)CG-510Consolidate duplicated c…done
+CG-511: Narrow duplicated remote lifecycle variants — done (in fruit)CG-511Narrow duplicated remote…done
+CG-512: Narrow retro reservation orchestration setup — in review (in flower)CG-512Narrow retro reservation…in review
+CG-521: Make GitHub feedback polling incremental and identity-safe — running (in leaf)CG-521Make GitHub feedback pol…running
+CG-522: Use copy-on-write web discovery snapshots — running (in leaf)CG-522Use copy-on-write web di…running
+CG-523: Make web benchmark size controls internally consistent — running (in leaf)CG-523Make web benchmark size …running
+CG-524: Consolidate historical interaction capture harnesses — running (in leaf)CG-524Consolidate historical i…running
+CG-526: Complete objective failure-trigger model escalation — draft (seed)CG-526Complete objective failu…draft
+CG-213: OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usage — in review (in flower)CG-213OpenRouter support: run …in review
+CG-319: Keep Now 1 as Now, retire Now 2, and place Now after Inbox — done (in fruit) — after merge: CG-308, CG-309CG-319Keep Now 1 as Now, retir…done
+CG-383: Calibrate reclaimable file cache for admission headroom — done (in fruit)CG-383Calibrate reclaimable fi…done
+CG-419: Run authenticated production Codex workers on managed EC2 — done (in fruit)CG-419Run authenticated produc…done
+CG-445: Make onboarding discovery ignore transient pytest cache — cancelled (pressed)CG-445Make onboarding discover…cancelled
+CG-446: Bound validation and check execution time — done (in fruit)CG-446Bound validation and che…done
+CG-460: Stabilize onboarding metadata fixture on worker checkouts — cancelled (pressed)CG-460Stabilize onboarding met…cancelled
+CG-461: Prevent nested validation admission from stalling remote lifecycle checks — done (in fruit)CG-461Prevent nested validatio…done
+CG-466: Exclude remote queue time and controller checkouts from idle timeouts — done (in fruit)CG-466Exclude remote queue tim…done
+CG-517: Separate authenticated worker ingress from operator control access — in review (in flower) — after merge: CG-216CG-517Separate authenticated w…in review
+CG-382: Profile and reduce repeated Store scans per web request — done (in fruit)CG-382Profile and reduce repea…done
+CG-403: Validate a manual-run enterprise PR and exact-head CI journey — blocked (seed, waiting)CG-403Validate a manual-run en…blocked
+CG-405: Apply host-local resource admission and capability routing to command-backed hosts — merged into parent (in flower, merged upstream)CG-405Apply host-local resourc…merged into parent
+CG-407: Require content and deployment verification before describing a change as shipped — cancelled (pressed)CG-407Require content and depl…cancelled
+CG-417: Reuse a fresh task snapshot within one controller operation — done (in fruit)CG-417Reuse a fresh task snaps…done
+CG-418: Measure safe reclaimable-cache treatment for admission — cancelled (pressed)CG-418Measure safe reclaimable…cancelled
+CG-444: Support configured SSH ports in canonical enterprise repository identity — done (in fruit)CG-444Support configured SSH p…done
+CG-448: Align Now held-card ownership with Inbox review queues — done (in fruit)CG-448Align Now held-card owne…done
+CG-452: Keep GitHub Actions analyzers scoped to the configured repository host — merged into parent (in flower, merged upstream)CG-452Keep GitHub Actions anal…merged into parent
+CG-515: Support provider-neutral source control with scoped certificate and proxy policy — running (in leaf)CG-515Support provider-neutral…running
+CG-347: Recover EC2 Spot interruptions without losing accepted work or exceeding pool limits — changes requested (pruned) — after merge: CG-216CG-347Recover EC2 Spot interru…changes requested
+CG-520: Deliver typed notifications through approved destination adapters — running (in leaf)CG-520Deliver typed notificati…running
+CG-385: Recover cache-limited admission through bounded reclaim and a fresh headroom check — done (in fruit)CG-385Recover cache-limited ad…done
+CG-348: Make EC2 pool cost health draining and teardown understandable and verifiable — in review (in flower)CG-348Make EC2 pool cost healt…in review
+CG-408: Demonstrate the constrained remote environment with recovery and human gates — blocked (seed, waiting)CG-408Demonstrate the constrai…blocked
+
+    seeddraft · seedsproutready · sproutin leafrunning · in leafbud, taggedwaiting human · bud, taggedin budawaiting triage · in budin flowerin review · in flowerprunedchanges requested · prunedin fruitdone · in fruitwiltedfailed · wilted
+
+  mermaid source (paste into docs or PRs)graph LR
+  CG_213["CG-213<br/>OpenRouter support: run workers, revi..."]
+  style CG_213 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_215["CG-215<br/>Onboarding skill and command: analyse..."]
+  style CG_215 fill:#d4edda,stroke:#155724,color:#333
+  CG_216["CG-216<br/>Workers on independent remote hosts: ..."]
+  style CG_216 fill:#d4edda,stroke:#155724,color:#333
+  CG_222["CG-222<br/>A collective, searchable context: eve..."]
+  style CG_222 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_230["CG-230<br/>A tier can name several harness and m..."]
+  style CG_230 fill:#d4edda,stroke:#155724,color:#333
+  CG_236["CG-236<br/>A trial winner's PR enters the review..."]
+  style CG_236 fill:#d4edda,stroke:#155724,color:#333
+  CG_237["CG-237<br/>The not-logged-in check reads a worke..."]
+  style CG_237 fill:#d4edda,stroke:#155724,color:#333
+  CG_243["CG-243<br/>Preserve task actions across concurre..."]
+  style CG_243 fill:#d4edda,stroke:#155724,color:#333
+  CG_244["CG-244<br/>Reserve retro task IDs and survive du..."]
+  style CG_244 fill:#d4edda,stroke:#155724,color:#333
+  CG_245["CG-245<br/>Isolate planner execution from operat..."]
+  style CG_245 fill:#d4edda,stroke:#155724,color:#333
+  CG_246["CG-246<br/>Prevent workers from mutating shared ..."]
+  style CG_246 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_247["CG-247<br/>Make completion honor the product bas..."]
+  style CG_247 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_248["CG-248<br/>TUI's dispatch action ('d' key) also ..."]
+  style CG_248 fill:#d4edda,stroke:#155724,color:#333
+  CG_249["CG-249<br/>`garden dispatch <id>` (CLI) allows d..."]
+  style CG_249 fill:#d4edda,stroke:#155724,color:#333
+  CG_250["CG-250<br/>A reopen verdict is a working process..."]
+  style CG_250 fill:#d4edda,stroke:#155724,color:#333
+  CG_251["CG-251<br/>Cost per accepted task and first-pass..."]
+  style CG_251 fill:#d4edda,stroke:#155724,color:#333
+  CG_252["CG-252<br/>The retro files only high findings as..."]
+  style CG_252 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_253["CG-253<br/>The retro captures its own walkthroug..."]
+  style CG_253 fill:#d4edda,stroke:#155724,color:#333
+  CG_254["CG-254<br/>redispatch kills the superseded worke..."]
+  style CG_254 fill:#d4edda,stroke:#155724,color:#333
+  CG_255["CG-255<br/>Operating-profile stops name a tier p..."]
+  style CG_255 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_256["CG-256<br/>A draft's acceptance criteria and rea..."]
+  style CG_256 fill:#d4edda,stroke:#155724,color:#333
+  CG_257["CG-257<br/>The rail, Config page, CLI and status..."]
+  style CG_257 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_258["CG-258<br/>The Kickoff panel with a primary 'Kic..."]
+  style CG_258 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_259["CG-259<br/>A draft with brief gaps shows 'Fix th..."]
+  style CG_259 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_260["CG-260<br/>tick_interval is listed both under li..."]
+  style CG_260 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_261["CG-261<br/>move, retro-decide and canary appear ..."]
+  style CG_261 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_262["CG-262<br/>A draft task page shows both 'Approve..."]
+  style CG_262 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_263["CG-263<br/>Kickoff and retro question cards sit ..."]
+  style CG_263 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_264["CG-264<br/>garden walkthrough still captures the..."]
+  style CG_264 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_265["CG-265<br/>The scaffolded garden-operate skill s..."]
+  style CG_265 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_266["CG-266<br/>The worker's question is printed twic..."]
+  style CG_266 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_267["CG-267<br/>Resume, trial, compare and edit runs ..."]
+  style CG_267 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_268["CG-268<br/>Spend appears three ways in the rail ..."]
+  style CG_268 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_269["CG-269<br/>The Costs form submits every select o..."]
+  style CG_269 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_270["CG-270<br/>A cancelled task's only action is 'Co..."]
+  style CG_270 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_271["CG-271<br/>run_planner copies os.environ wholesa..."]
+  style CG_271 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_272["CG-272<br/>garden take flips a draft to ready by..."]
+  style CG_272 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_273["CG-273<br/>CG-217 merged with a criterion marked..."]
+  style CG_273 fill:#d4edda,stroke:#155724,color:#333
+  CG_274["CG-274<br/>Hand merges, rebase rounds per merge,..."]
+  style CG_274 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_275["CG-275<br/>The generated garden-operate skill st..."]
+  style CG_275 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_276["CG-276<br/>Goal 2's 'two tasks serving one goal ..."]
+  style CG_276 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_277["CG-277<br/>CG-206, CG-213, CG-215, CG-216, CG-22..."]
+  style CG_277 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_278["CG-278<br/>An in-flight review whose PR merges i..."]
+  style CG_278 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_279["CG-279<br/>Persona findings at every severity, k..."]
+  style CG_279 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_280["CG-280<br/>The backlog phase pulldown needs Java..."]
+  style CG_280 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_281["CG-281<br/>Dispatch now on a draft and the New t..."]
+  style CG_281 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_282["CG-282<br/>The Mark done button on every in-revi..."]
+  style CG_282 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_283["CG-283<br/>The built-in economy, balanced and fa..."]
+  style CG_283 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_284["CG-284<br/>The approve card says to fix the brie..."]
+  style CG_284 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_285["CG-285<br/>tick_interval appears both under live..."]
+  style CG_285 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_286["CG-286<br/>The Costs page files a resume round a..."]
+  style CG_286 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_287["CG-287<br/>With every phase closed, garden statu..."]
+  style CG_287 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_288["CG-288<br/>Live config reload holds while any in..."]
+  style CG_288 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_289["CG-289<br/>Task files get optimistic concurrency..."]
+  style CG_289 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_290["CG-290<br/>The planner and synchronous kickoff r..."]
+  style CG_290 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_291["CG-291<br/>Each worker gets a private harness co..."]
+  style CG_291 fill:#d4edda,stroke:#155724,color:#333
+  CG_292["CG-292<br/>Every status write goes through _tran..."]
+  style CG_292 fill:#d4edda,stroke:#155724,color:#333
+  CG_293["CG-293<br/>A brief never ships with an empty or ..."]
+  style CG_293 fill:#d4edda,stroke:#155724,color:#333
+  CG_294["CG-294<br/>Planning sequences dependent tasks an..."]
+  style CG_294 fill:#d4edda,stroke:#155724,color:#333
+  CG_295["CG-295<br/>Docs match the mechanism: the scaffol..."]
+  style CG_295 fill:#d4edda,stroke:#155724,color:#333
+  CG_296["CG-296<br/>One vocabulary and one place for each..."]
+  style CG_296 fill:#d4edda,stroke:#155724,color:#333
+  CG_297["CG-297<br/>The walkthrough renderer skips hidden..."]
+  style CG_297 fill:#d4edda,stroke:#155724,color:#333
+  CG_298["CG-298<br/>Persona runs are recorded per phase a..."]
+  style CG_298 fill:#d4edda,stroke:#155724,color:#333
+  CG_299["CG-299<br/>Small follow-ups: retro_question kind..."]
+  style CG_299 fill:#d4edda,stroke:#155724,color:#333
+  CG_300["CG-300<br/>The retro's Numbers section reads the..."]
+  style CG_300 fill:#d4edda,stroke:#155724,color:#333
+  CG_301["CG-301<br/>Retro questions are deduplicated acro..."]
+  style CG_301 fill:#d4edda,stroke:#155724,color:#333
+  CG_302["CG-302<br/>Spike: OpenRouter harness shape and a..."]
+  style CG_302 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_303["CG-303<br/>Spike: CG-246/CG-247 blocker briefs a..."]
+  style CG_303 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_304["CG-304<br/>Update docs: docs/architecture.md"]
+  style CG_304 fill:#d4edda,stroke:#155724,color:#333
+  CG_305["CG-305<br/>Update docs: docs/worker-protocol.md"]
+  style CG_305 fill:#d4edda,stroke:#155724,color:#333
+  CG_306["CG-306<br/>Update docs: docs/design.md"]
+  style CG_306 fill:#d4edda,stroke:#155724,color:#333
+  CG_307["CG-307<br/>Design the Now page: information arch..."]
+  style CG_307 fill:#d4edda,stroke:#155724,color:#333
+  CG_308["CG-308<br/>Build Now 1 at /now1 from the Fable d..."]
+  style CG_308 fill:#d4edda,stroke:#155724,color:#333
+  CG_309["CG-309<br/>Build Now 2 at /now2 from the astra d..."]
+  style CG_309 fill:#d4edda,stroke:#155724,color:#333
+  CG_310["CG-310<br/>Worker temp files live on disk and ar..."]
+  style CG_310 fill:#d4edda,stroke:#155724,color:#333
+  CG_311["CG-311<br/>The task page shows the decision a wo..."]
+  style CG_311 fill:#d4edda,stroke:#155724,color:#333
+  CG_312["CG-312<br/>Inbox decision cards lay out at full ..."]
+  style CG_312 fill:#d4edda,stroke:#155724,color:#333
+  CG_313["CG-313<br/>parse_result accepts the GARDEN_RESUL..."]
+  style CG_313 fill:#d4edda,stroke:#155724,color:#333
+  CG_314["CG-314<br/>Design Now 2: astra's take on the Now..."]
+  style CG_314 fill:#d4edda,stroke:#155724,color:#333
+  CG_315["CG-315<br/>UI changes are reviewed against rende..."]
+  style CG_315 fill:#d4edda,stroke:#155724,color:#333
+  CG_316["CG-316<br/>A dispatch that fails before its proc..."]
+  style CG_316 fill:#d4edda,stroke:#155724,color:#333
+  CG_317["CG-317<br/>The task page renders a trial in prog..."]
+  style CG_317 fill:#d4edda,stroke:#155724,color:#333
+  CG_318["CG-318<br/>The web app serves design documents, ..."]
+  style CG_318 fill:#d4edda,stroke:#155724,color:#333
+  CG_319["CG-319<br/>Keep Now 1 as Now, retire Now 2, and ..."]
+  style CG_319 fill:#d4edda,stroke:#155724,color:#333
+  CG_320["CG-320<br/>Reviews by the model one step above t..."]
+  style CG_320 fill:#d4edda,stroke:#155724,color:#333
+  CG_321["CG-321<br/>Reviews suggest fixes and improvement..."]
+  style CG_321 fill:#d4edda,stroke:#155724,color:#333
+  CG_322["CG-322<br/>A _TaskState written with dict.update..."]
+  style CG_322 fill:#d4edda,stroke:#155724,color:#333
+  CG_323["CG-323<br/>The worker pre-flights its PR against..."]
+  style CG_323 fill:#d4edda,stroke:#155724,color:#333
+  CG_324["CG-324<br/>The loop produces the evidence a crit..."]
+  style CG_324 fill:#d4edda,stroke:#155724,color:#333
+  CG_325["CG-325<br/>A dependency can require the parent t..."]
+  style CG_325 fill:#d4edda,stroke:#155724,color:#333
+  CG_326["CG-326<br/>Fix the Edge capture recipe for 390-w..."]
+  style CG_326 fill:#d4edda,stroke:#155724,color:#333
+  CG_327["CG-327<br/>The live-garden fence attributes only..."]
+  style CG_327 fill:#d4edda,stroke:#155724,color:#333
+  CG_328["CG-328<br/>Accepting a worker's no-change call o..."]
+  style CG_328 fill:#d4edda,stroke:#155724,color:#333
+  CG_329["CG-329<br/>The worker count the dispatcher enfor..."]
+  style CG_329 fill:#d4edda,stroke:#155724,color:#333
+  CG_330["CG-330<br/>A failed rebase or check run never re..."]
+  style CG_330 fill:#d4edda,stroke:#155724,color:#333
+  CG_331["CG-331<br/>The tick-responsiveness test measures..."]
+  style CG_331 fill:#d4edda,stroke:#155724,color:#333
+  CG_332["CG-332<br/>A task parked by a harness environmen..."]
+  style CG_332 fill:#d4edda,stroke:#155724,color:#333
+  CG_333["CG-333<br/>A run that ends without a result but ..."]
+  style CG_333 fill:#d4edda,stroke:#155724,color:#333
+  CG_334["CG-334<br/>Close the review findings left open b..."]
+  style CG_334 fill:#d4edda,stroke:#155724,color:#333
+  CG_335["CG-335<br/>Worker temp symlinks recover after a ..."]
+  style CG_335 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_336["CG-336<br/>Record Codex operator usage in the op..."]
+  style CG_336 fill:#d4edda,stroke:#155724,color:#333
+  CG_337["CG-337<br/>Attention cards ask for product decis..."]
+  style CG_337 fill:#d4edda,stroke:#155724,color:#333
+  CG_338["CG-338<br/>Keep the operator machine responsive ..."]
+  style CG_338 fill:#d4edda,stroke:#155724,color:#333
+  CG_339["CG-339<br/>Review affected behavior through the ..."]
+  style CG_339 fill:#d4edda,stroke:#155724,color:#333
+  CG_340["CG-340<br/>Demonstrate onboarding and a useful a..."]
+  style CG_340 fill:#d4edda,stroke:#155724,color:#333
+  CG_341["CG-341<br/>Enforce stabilization evidence at pha..."]
+  style CG_341 fill:#d4edda,stroke:#155724,color:#333
+  CG_342["CG-342<br/>Reconcile Now CLI tests with the page..."]
+  style CG_342 fill:#d4edda,stroke:#155724,color:#333
+  CG_343["CG-343<br/>Finished reviews are reconciled even ..."]
+  style CG_343 fill:#d4edda,stroke:#155724,color:#333
+  CG_344["CG-344<br/>Keep fence bookkeeping memory bounded..."]
+  style CG_344 fill:#d4edda,stroke:#155724,color:#333
+  CG_345["CG-345<br/>Provision and retire an EC2 worker po..."]
+  style CG_345 fill:#d4edda,stroke:#155724,color:#333
+  CG_346["CG-346<br/>Run work reviews and checks on manage..."]
+  style CG_346 fill:#d4edda,stroke:#155724,color:#333
+  CG_347["CG-347<br/>Recover EC2 Spot interruptions withou..."]
+  style CG_347 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_348["CG-348<br/>Make EC2 pool cost health draining an..."]
+  style CG_348 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_349["CG-349<br/>Centralize editable configuration met..."]
+  style CG_349 fill:#d4edda,stroke:#155724,color:#333
+  CG_350["CG-350<br/>Edit every Configuration setting in t..."]
+  style CG_350 fill:#d4edda,stroke:#155724,color:#333
+  CG_351["CG-351<br/>Compare total cost with average cost ..."]
+  style CG_351 fill:#d4edda,stroke:#155724,color:#333
+  CG_352["CG-352<br/>Make the sidebar operating profile a ..."]
+  style CG_352 fill:#d4edda,stroke:#155724,color:#333
+  CG_353["CG-353<br/>Open the Inbox PR count as a matching..."]
+  style CG_353 fill:#d4edda,stroke:#155724,color:#333
+  CG_354["CG-354<br/>Split tests into focused suites to sh..."]
+  style CG_354 fill:#d4edda,stroke:#155724,color:#333
+  CG_355["CG-355<br/>Restore automatic installation and sa..."]
+  style CG_355 fill:#d4edda,stroke:#155724,color:#333
+  CG_356["CG-356<br/>Recover onboarding cleanly when plann..."]
+  style CG_356 fill:#d4edda,stroke:#155724,color:#333
+  CG_357["CG-357<br/>Keep web requests responsive while wo..."]
+  style CG_357 fill:#d4edda,stroke:#155724,color:#333
+  CG_358["CG-358<br/>Keep incident control actions respons..."]
+  style CG_358 fill:#d4edda,stroke:#155724,color:#333
+  CG_359["CG-359<br/>Preserve unrelated worktree changes w..."]
+  style CG_359 fill:#d4edda,stroke:#155724,color:#333
+  CG_360["CG-360<br/>Keep restored archived runs visible w..."]
+  style CG_360 fill:#d4edda,stroke:#155724,color:#333
+  CG_361["CG-361<br/>Bound test workloads within each run ..."]
+  style CG_361 fill:#d4edda,stroke:#155724,color:#333
+  CG_362["CG-362<br/>Complete externally implemented tasks..."]
+  style CG_362 fill:#d4edda,stroke:#155724,color:#333
+  CG_363["CG-363<br/>Run full worker tests on GitHub CI be..."]
+  style CG_363 fill:#d4edda,stroke:#155724,color:#333
+  CG_364["CG-364<br/>Remove redundant tests and unnecessar..."]
+  style CG_364 fill:#d4edda,stroke:#155724,color:#333
+  CG_365["CG-365<br/>Complete resource isolation enforceme..."]
+  style CG_365 fill:#d4edda,stroke:#155724,color:#333
+  CG_366["CG-366<br/>Prevent fence attribution from rewind..."]
+  style CG_366 fill:#d4edda,stroke:#155724,color:#333
+  CG_367["CG-367<br/>Profile and reduce loaded page reques..."]
+  style CG_367 fill:#d4edda,stroke:#155724,color:#333
+  CG_368["CG-368<br/>Check browser runtime readiness befor..."]
+  style CG_368 fill:#d4edda,stroke:#155724,color:#333
+  CG_369["CG-369<br/>Align phase-close gate with fixture-s..."]
+  style CG_369 fill:#d4edda,stroke:#155724,color:#333
+  CG_370["CG-370<br/>Fix measured narrow-viewport overflow..."]
+  style CG_370 fill:#d4edda,stroke:#155724,color:#333
+  CG_371["CG-371<br/>Fix phase and runs narrow layout over..."]
+  style CG_371 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_372["CG-372<br/>Honor task priority when admitting qu..."]
+  style CG_372 fill:#d4edda,stroke:#155724,color:#333
+  CG_373["CG-373<br/>Bound rebase prompts and recover over..."]
+  style CG_373 fill:#d4edda,stroke:#155724,color:#333
+  CG_374["CG-374<br/>Route routine recovery stops to opera..."]
+  style CG_374 fill:#d4edda,stroke:#155724,color:#333
+  CG_375["CG-375<br/>Measure unattended stabilization by r..."]
+  style CG_375 fill:#d4edda,stroke:#155724,color:#333
+  CG_376["CG-376<br/>Make review caps optional and report ..."]
+  style CG_376 fill:#d4edda,stroke:#155724,color:#333
+  CG_377["CG-377<br/>Scope review validation to affected b..."]
+  style CG_377 fill:#d4edda,stroke:#155724,color:#333
+  CG_378["CG-378<br/>Refresh README for the current garden..."]
+  style CG_378 fill:#d4edda,stroke:#155724,color:#333
+  CG_379["CG-379<br/>Add a maintenance pause that safely f..."]
+  style CG_379 fill:#d4edda,stroke:#155724,color:#333
+  CG_380["CG-380<br/>Attribute controller, scheduler, and ..."]
+  style CG_380 fill:#d4edda,stroke:#155724,color:#333
+  CG_381["CG-381<br/>Make Inbox human-action counts and ad..."]
+  style CG_381 fill:#d4edda,stroke:#155724,color:#333
+  CG_382["CG-382<br/>Profile and reduce repeated Store sca..."]
+  style CG_382 fill:#d4edda,stroke:#155724,color:#333
+  CG_383["CG-383<br/>Calibrate reclaimable file cache for ..."]
+  style CG_383 fill:#d4edda,stroke:#155724,color:#333
+  CG_384["CG-384<br/>Show deployed release identity and va..."]
+  style CG_384 fill:#d4edda,stroke:#155724,color:#333
+  CG_385["CG-385<br/>Recover cache-limited admission throu..."]
+  style CG_385 fill:#d4edda,stroke:#155724,color:#333
+  CG_386["CG-386<br/>Prevent stale collected checks from r..."]
+  style CG_386 fill:#d4edda,stroke:#155724,color:#333
+  CG_387["CG-387<br/>Distinguish full execution slots from..."]
+  style CG_387 fill:#d4edda,stroke:#155724,color:#333
+  CG_388["CG-388<br/>Make revision-limit recovery the prim..."]
+  style CG_388 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_389["CG-389<br/>Negotiate capture CLI compatibility a..."]
+  style CG_389 fill:#d4edda,stroke:#155724,color:#333
+  CG_390["CG-390<br/>Require screenshots only for material..."]
+  style CG_390 fill:#d4edda,stroke:#155724,color:#333
+  CG_391["CG-391<br/>Recognize CI-helper validation comman..."]
+  style CG_391 fill:#d4edda,stroke:#155724,color:#333
+  CG_392["CG-392<br/>Reconcile remaining architecture and ..."]
+  style CG_392 fill:#d4edda,stroke:#155724,color:#333
+  CG_393["CG-393<br/>Distinguish validation-slot waiting f..."]
+  style CG_393 fill:#d4edda,stroke:#155724,color:#333
+  CG_394["CG-394<br/>Release temporary runner holds withou..."]
+  style CG_394 fill:#d4edda,stroke:#155724,color:#333
+  CG_395["CG-395<br/>Support explicit GitHub Enterprise ho..."]
+  style CG_395 fill:#d4edda,stroke:#155724,color:#333
+  CG_396["CG-396<br/>Use pluggable exact-head CI status fo..."]
+  style CG_396 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_397["CG-397<br/>Respect external branch-stack ownersh..."]
+  style CG_397 fill:#d4edda,stroke:#155724,color:#333
+  CG_398["CG-398<br/>Validate a human-gated enterprise pro..."]
+  style CG_398 fill:#d4edda,stroke:#155724,color:#333
+  CG_399["CG-399<br/>Keep physical host identities out of ..."]
+  style CG_399 fill:#d4edda,stroke:#155724,color:#333
+  CG_400["CG-400<br/>Define the least-privilege worker ide..."]
+  style CG_400 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_401["CG-401<br/>Pass approved tool configuration into..."]
+  style CG_401 fill:#d4edda,stroke:#155724,color:#333
+  CG_402["CG-402<br/>Export immutable run evaluation evide..."]
+  style CG_402 fill:#eee,stroke:#999,color:#333
+  CG_403["CG-403<br/>Validate a manual-run enterprise PR a..."]
+  style CG_403 fill:#fff3cd,stroke:#c9a300,color:#333
+  CG_404["CG-404<br/>Add command-backed host acquisition r..."]
+  style CG_404 fill:#d4edda,stroke:#155724,color:#333
+  CG_405["CG-405<br/>Apply host-local resource admission a..."]
+  style CG_405 fill:#d9d2f3,stroke:#3f2e83,color:#333
+  CG_406["CG-406<br/>Support fenced in-place canonical che..."]
+  style CG_406 fill:#d4edda,stroke:#155724,color:#333
+  CG_407["CG-407<br/>Require content and deployment verifi..."]
+  style CG_407 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_408["CG-408<br/>Demonstrate the constrained remote en..."]
+  style CG_408 fill:#fff3cd,stroke:#c9a300,color:#333
+  CG_409["CG-409<br/>Finish manual work pushed from anothe..."]
+  style CG_409 fill:#d4edda,stroke:#155724,color:#333
+  CG_410["CG-410<br/>Show eligible manual work in Inbox wi..."]
+  style CG_410 fill:#d4edda,stroke:#155724,color:#333
+  CG_411["CG-411<br/>Adopt an existing PR with its verifie..."]
+  style CG_411 fill:#d4edda,stroke:#155724,color:#333
+  CG_412["CG-412<br/>Resolve check commands analyzers and ..."]
+  style CG_412 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_413["CG-413<br/>Use product-specific execution timeou..."]
+  style CG_413 fill:#d4edda,stroke:#155724,color:#333
+  CG_414["CG-414<br/>Assign owners to tasks and phases and..."]
+  style CG_414 fill:#d4edda,stroke:#155724,color:#333
+  CG_415["CG-415<br/>Register private runner adapters thro..."]
+  style CG_415 fill:#d4edda,stroke:#155724,color:#333
+  CG_416["CG-416<br/>Aggregate brief size and startup-cont..."]
+  style CG_416 fill:#d4edda,stroke:#155724,color:#333
+  CG_417["CG-417<br/>Reuse a fresh task snapshot within on..."]
+  style CG_417 fill:#d4edda,stroke:#155724,color:#333
+  CG_418["CG-418<br/>Measure safe reclaimable-cache treatm..."]
+  style CG_418 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_419["CG-419<br/>Run authenticated production Codex wo..."]
+  style CG_419 fill:#d4edda,stroke:#155724,color:#333
+  CG_420["CG-420<br/>Repair production remote claims and i..."]
+  style CG_420 fill:#d4edda,stroke:#155724,color:#333
+  CG_421["CG-421<br/>Verify public GitHub CI from scoped A..."]
+  style CG_421 fill:#d4edda,stroke:#155724,color:#333
+  CG_422["CG-422<br/>Isolate nested validation lease envir..."]
+  style CG_422 fill:#d4edda,stroke:#155724,color:#333
+  CG_423["CG-423<br/>Scale production AWS workers through ..."]
+  style CG_423 fill:#d4edda,stroke:#155724,color:#333
+  CG_424["CG-424<br/>Make metadata-only review gaps adviso..."]
+  style CG_424 fill:#d4edda,stroke:#155724,color:#333
+  CG_425["CG-425<br/>Give the Now page beautiful, unmistak..."]
+  style CG_425 fill:#d4edda,stroke:#155724,color:#333
+  CG_426["CG-426<br/>Keep stress and load tests out of the..."]
+  style CG_426 fill:#d4edda,stroke:#155724,color:#333
+  CG_427["CG-427<br/>Render Codex event streams on run tra..."]
+  style CG_427 fill:#d4edda,stroke:#155724,color:#333
+  CG_428["CG-428<br/>Keep remote worker runs alive across ..."]
+  style CG_428 fill:#d4edda,stroke:#155724,color:#333
+  CG_429["CG-429<br/>Provide supervised validation to remo..."]
+  style CG_429 fill:#d4edda,stroke:#155724,color:#333
+  CG_430["CG-430<br/>Reap exited adopted children while su..."]
+  style CG_430 fill:#d4edda,stroke:#155724,color:#333
+  CG_431["CG-431<br/>Keep controller-owned replay checks l..."]
+  style CG_431 fill:#d4edda,stroke:#155724,color:#333
+  CG_432["CG-432<br/>Make onboarding GitHub metadata detec..."]
+  style CG_432 fill:#d4edda,stroke:#155724,color:#333
+  CG_433["CG-433<br/>Prevent LocalRunner process_finished ..."]
+  style CG_433 fill:#d4edda,stroke:#155724,color:#333
+  CG_434["CG-434<br/>Enforce current validation policy on ..."]
+  style CG_434 fill:#d4edda,stroke:#155724,color:#333
+  CG_435["CG-435<br/>Investigate LocalRunner supervisor co..."]
+  style CG_435 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_436["CG-436<br/>Prevent unrelated interaction replays..."]
+  style CG_436 fill:#d4edda,stroke:#155724,color:#333
+  CG_437["CG-437<br/>Escalate revision difficulty and surf..."]
+  style CG_437 fill:#d4edda,stroke:#155724,color:#333
+  CG_438["CG-438<br/>Preserve review requests through uncl..."]
+  style CG_438 fill:#d4edda,stroke:#155724,color:#333
+  CG_439["CG-439<br/>Declare controller ownership for pre-..."]
+  style CG_439 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_440["CG-440<br/>Stabilize ordinary-suite onboarding a..."]
+  style CG_440 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_441["CG-441<br/>Bound the local runner launch regress..."]
+  style CG_441 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_442["CG-442<br/>Make onboarding report test consisten..."]
+  style CG_442 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_443["CG-443<br/>Keep out-of-scope review limitations ..."]
+  style CG_443 fill:#d4edda,stroke:#155724,color:#333
+  CG_444["CG-444<br/>Support configured SSH ports in canon..."]
+  style CG_444 fill:#d4edda,stroke:#155724,color:#333
+  CG_445["CG-445<br/>Make onboarding discovery ignore tran..."]
+  style CG_445 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_446["CG-446<br/>Bound validation and check execution ..."]
+  style CG_446 fill:#d4edda,stroke:#155724,color:#333
+  CG_447["CG-447<br/>Unify scp-form repository classificat..."]
+  style CG_447 fill:#d4edda,stroke:#155724,color:#333
+  CG_448["CG-448<br/>Align Now held-card ownership with In..."]
+  style CG_448 fill:#d4edda,stroke:#155724,color:#333
+  CG_449["CG-449<br/>Make screenshot infrastructure failur..."]
+  style CG_449 fill:#d4edda,stroke:#155724,color:#333
+  CG_450["CG-450<br/>Preserve complete review findings and..."]
+  style CG_450 fill:#d4edda,stroke:#155724,color:#333
+  CG_451["CG-451<br/>Reject credential-bearing and ambiguo..."]
+  style CG_451 fill:#d4edda,stroke:#155724,color:#333
+  CG_452["CG-452<br/>Keep GitHub Actions analyzers scoped ..."]
+  style CG_452 fill:#d9d2f3,stroke:#3f2e83,color:#333
+  CG_453["CG-453<br/>Reduce the ordinary test suite runtim..."]
+  style CG_453 fill:#d4edda,stroke:#155724,color:#333
+  CG_454["CG-454<br/>Skip destructive pre-merge rebase whe..."]
+  style CG_454 fill:#d4edda,stroke:#155724,color:#333
+  CG_455["CG-455<br/>Redesign the Now page top summary as ..."]
+  style CG_455 fill:#d4edda,stroke:#155724,color:#333
+  CG_456["CG-456<br/>Admit remote reviews independently of..."]
+  style CG_456 fill:#d4edda,stroke:#155724,color:#333
+  CG_457["CG-457<br/>Prevent remote queue-age timeouts fro..."]
+  style CG_457 fill:#d4edda,stroke:#155724,color:#333
+  CG_458["CG-458<br/>Pass option-like replay nonces as arg..."]
+  style CG_458 fill:#d4edda,stroke:#155724,color:#333
+  CG_459["CG-459<br/>Pin remote base probes to the adverti..."]
+  style CG_459 fill:#d4edda,stroke:#155724,color:#333
+  CG_460["CG-460<br/>Stabilize onboarding metadata fixture..."]
+  style CG_460 fill:#e9ecef,stroke:#6c757d,color:#999
+  CG_461["CG-461<br/>Prevent nested validation admission f..."]
+  style CG_461 fill:#d4edda,stroke:#155724,color:#333
+  CG_462["CG-462<br/>Use agent judgment for proportionate ..."]
+  style CG_462 fill:#d4edda,stroke:#155724,color:#333
+  CG_463["CG-463<br/>Move the serving build to a quiet nav..."]
+  style CG_463 fill:#d4edda,stroke:#155724,color:#333
+  CG_464["CG-464<br/>Merge clean approved heads without re..."]
+  style CG_464 fill:#d4edda,stroke:#155724,color:#333
+  CG_465["CG-465<br/>Omit unattached-artifact commentary f..."]
+  style CG_465 fill:#d4edda,stroke:#155724,color:#333
+  CG_466["CG-466<br/>Exclude remote queue time and control..."]
+  style CG_466 fill:#d4edda,stroke:#155724,color:#333
+  CG_467["CG-467<br/>Support enterprise validation without..."]
+  style CG_467 fill:#d4edda,stroke:#155724,color:#333
+  CG_468["CG-468<br/>Avoid nested validation admission dea..."]
+  style CG_468 fill:#d4edda,stroke:#155724,color:#333
+  CG_469["CG-469<br/>Allow nested served-worker tests unde..."]
+  style CG_469 fill:#d4edda,stroke:#155724,color:#333
+  CG_470["CG-470<br/>Add an origin-aware back control to t..."]
+  style CG_470 fill:#d4edda,stroke:#155724,color:#333
+  CG_471["CG-471<br/>Make stale check recovery one guarded..."]
+  style CG_471 fill:#d4edda,stroke:#155724,color:#333
+  CG_472["CG-472<br/>Add an open pull requests tab to the ..."]
+  style CG_472 fill:#d4edda,stroke:#155724,color:#333
+  CG_473["CG-473<br/>Reserve a task in Manual mode from au..."]
+  style CG_473 fill:#d4edda,stroke:#155724,color:#333
+  CG_474["CG-474<br/>Preserve full review feedback when as..."]
+  style CG_474 fill:#d4edda,stroke:#155724,color:#333
+  CG_475["CG-475<br/>Refresh open PR conflicts, checks, an..."]
+  style CG_475 fill:#d4edda,stroke:#155724,color:#333
+  CG_476["CG-476<br/>Complete external manual runs after a..."]
+  style CG_476 fill:#d4edda,stroke:#155724,color:#333
+  CG_477["CG-477<br/>Run user-triggered local deep dives w..."]
+  style CG_477 fill:#d4edda,stroke:#155724,color:#333
+  CG_478["CG-478<br/>Allow non-draft tasks to move into fr..."]
+  style CG_478 fill:#d4edda,stroke:#155724,color:#333
+  CG_479["CG-479<br/>Optimize Garden page load times"]
+  style CG_479 fill:#d4edda,stroke:#155724,color:#333
+  CG_480["CG-480<br/>Make Inbox recovery prompts actionabl..."]
+  style CG_480 fill:#d4edda,stroke:#155724,color:#333
+  CG_481["CG-481<br/>Persist worker decisions before publi..."]
+  style CG_481 fill:#d4edda,stroke:#155724,color:#333
+  CG_482["CG-482<br/>Persist worker question resume identi..."]
+  style CG_482 fill:#d4edda,stroke:#155724,color:#333
+  CG_483["CG-483<br/>Keep generated worker context out of ..."]
+  style CG_483 fill:#d4edda,stroke:#155724,color:#333
+  CG_484["CG-484<br/>Initialize fresh base probes and dist..."]
+  style CG_484 fill:#d4edda,stroke:#155724,color:#333
+  CG_485["CG-485<br/>Show accurate remote and manual run l..."]
+  style CG_485 fill:#d4edda,stroke:#155724,color:#333
+  CG_486["CG-486<br/>Recover managed workers from failed c..."]
+  style CG_486 fill:#d4edda,stroke:#155724,color:#333
+  CG_487["CG-487<br/>Collect terminal remote results after..."]
+  style CG_487 fill:#d4edda,stroke:#155724,color:#333
+  CG_488["CG-488<br/>Preserve concurrent harness pauses wh..."]
+  style CG_488 fill:#d4edda,stroke:#155724,color:#333
+  CG_489["CG-489<br/>Retain verified release corrections w..."]
+  style CG_489 fill:#d4edda,stroke:#155724,color:#333
+  CG_490["CG-490<br/>Remove redundant two-review-round aut..."]
+  style CG_490 fill:#d4edda,stroke:#155724,color:#333
+  CG_491["CG-491<br/>Recover idle worker claims after tran..."]
+  style CG_491 fill:#d4edda,stroke:#155724,color:#333
+  CG_492["CG-492<br/>Automate safe live rollout of publish..."]
+  style CG_492 fill:#d1ecf1,stroke:#0c5460,color:#333
+  CG_493["CG-493<br/>Retain RC14 discovery and CI guards"]
+  style CG_493 fill:#d4edda,stroke:#155724,color:#333
+  CG_494["CG-494<br/>Show standalone scheduler health and ..."]
+  style CG_494 fill:#d4edda,stroke:#155724,color:#333
+  CG_495["CG-495<br/>Integrate bounded active-run claim sc..."]
+  style CG_495 fill:#d4edda,stroke:#155724,color:#333
+  CG_496["CG-496<br/>Integrate the validated RC16 Now refr..."]
+  style CG_496 fill:#d4edda,stroke:#155724,color:#333
+  CG_497["CG-497<br/>Serialize worker answers with schedul..."]
+  style CG_497 fill:#d4edda,stroke:#155724,color:#333
+  CG_498["CG-498<br/>Clean up worker branches when they ar..."]
+  style CG_498 fill:#d4edda,stroke:#155724,color:#333
+  CG_499["CG-499<br/>Show worker status and current jobs i..."]
+  style CG_499 fill:#d4edda,stroke:#155724,color:#333
+  CG_500["CG-500<br/>Route approved PRs with failed CI bac..."]
+  style CG_500 fill:#d4edda,stroke:#155724,color:#333
+  CG_501["CG-501<br/>Diagnose worker disconnects and reset..."]
+  style CG_501 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_502["CG-502<br/>Find redundant or low-value expensive..."]
+  style CG_502 fill:#d4edda,stroke:#155724,color:#333
+  CG_503["CG-503<br/>Find removable and overengineered cod..."]
+  style CG_503 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_504["CG-504<br/>Write and update user operator and co..."]
+  style CG_504 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_505["CG-505<br/>Audit and update all Garden specifica..."]
+  style CG_505 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_506["CG-506<br/>Return complete worker transcripts fo..."]
+  style CG_506 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_507["CG-507<br/>Honor a granted revision before repea..."]
+  style CG_507 fill:#d4edda,stroke:#155724,color:#333
+  CG_508["CG-508<br/>Invalidate stale setup cache when rec..."]
+  style CG_508 fill:#d4edda,stroke:#155724,color:#333
+  CG_509["CG-509<br/>Avoid duplicate same-SHA GitHub test ..."]
+  style CG_509 fill:#cce5ff,stroke:#004085,color:#333
+  CG_510["CG-510<br/>Consolidate duplicated canary composi..."]
+  style CG_510 fill:#d4edda,stroke:#155724,color:#333
+  CG_511["CG-511<br/>Narrow duplicated remote lifecycle va..."]
+  style CG_511 fill:#d4edda,stroke:#155724,color:#333
+  CG_512["CG-512<br/>Narrow retro reservation orchestratio..."]
+  style CG_512 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_513["CG-513<br/>Show only relevant unique design file..."]
+  style CG_513 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_514["CG-514<br/>Never require a second review solely ..."]
+  style CG_514 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_515["CG-515<br/>Support provider-neutral source contr..."]
+  style CG_515 fill:#cce5ff,stroke:#004085,color:#333
+  CG_516["CG-516<br/>Resolve scoped workload identities an..."]
+  style CG_516 fill:#cce5ff,stroke:#004085,color:#333
+  CG_517["CG-517<br/>Separate authenticated worker ingress..."]
+  style CG_517 fill:#e2d9f3,stroke:#4b2e83,color:#333
+  CG_518["CG-518<br/>Enforce filesystem and network sandbo..."]
+  style CG_518 fill:#ffe5d0,stroke:#b35c00,color:#333
+  CG_519["CG-519<br/>Serve every active design and run art..."]
+  style CG_519 fill:#d4edda,stroke:#155724,color:#333
+  CG_520["CG-520<br/>Deliver typed notifications through a..."]
+  style CG_520 fill:#cce5ff,stroke:#004085,color:#333
+  CG_521["CG-521<br/>Make GitHub feedback polling incremen..."]
+  style CG_521 fill:#cce5ff,stroke:#004085,color:#333
+  CG_522["CG-522<br/>Use copy-on-write web discovery snaps..."]
+  style CG_522 fill:#cce5ff,stroke:#004085,color:#333
+  CG_523["CG-523<br/>Make web benchmark size controls inte..."]
+  style CG_523 fill:#cce5ff,stroke:#004085,color:#333
+  CG_524["CG-524<br/>Consolidate historical interaction ca..."]
+  style CG_524 fill:#cce5ff,stroke:#004085,color:#333
+  CG_525["CG-525<br/>Repair manual PR refresh fake mutatio..."]
+  style CG_525 fill:#eee,stroke:#999,color:#333
+  CG_526["CG-526<br/>Complete objective failure-trigger mo..."]
+  style CG_526 fill:#eee,stroke:#999,color:#333
+  CG_527["CG-527<br/>Clean up abandoned worker branches, w..."]
+  style CG_527 fill:#eee,stroke:#999,color:#333
+  CG_528["CG-528<br/>Enforce a 20 GiB physical-disk reserv..."]
+  style CG_528 fill:#eee,stroke:#999,color:#333
+  CG_529["CG-529<br/>Automatically start the phase closing..."]
+  style CG_529 fill:#eee,stroke:#999,color:#333
+  CG_530["CG-530<br/>Add Last week to Now and share its co..."]
+  style CG_530 fill:#eee,stroke:#999,color:#333
+  CG_307 -->|after merge| CG_308
+  CG_314 -->|after merge| CG_309
+  CG_308 -->|after merge| CG_319
+  CG_309 -->|after merge| CG_319
+  CG_308 -.->|discovered| CG_322
+  CG_308 -.->|discovered| CG_326
+  CG_366 --> CG_327
+  CG_326 --> CG_332
+  CG_215 --> CG_340
+  CG_215 -.->|discovered| CG_342
+  CG_216 -->|after merge| CG_346
+  CG_338 --> CG_346
+  CG_345 --> CG_346
+  CG_354 --> CG_364
+  CG_361 --> CG_364
+  CG_366 --> CG_365
+  CG_361 -.->|discovered| CG_365
+  CG_326 -.->|discovered| CG_371
+  CG_339 --> CG_377
+  CG_367 -.->|discovered| CG_380
+  CG_337 -.->|discovered| CG_381
+  CG_380 -.->|discovered| CG_382
+  CG_380 -.->|discovered| CG_383
+  CG_383 --> CG_385
+  CG_378 -.->|discovered| CG_391
+  CG_378 -.->|discovered| CG_392
+  CG_380 -.->|discovered| CG_418
+  CG_346 --> CG_419
+  CG_375 -.->|discovered| CG_422
+  CG_420 --> CG_423
+  CG_421 --> CG_423
+  CG_328 -.->|discovered| CG_433
+  CG_332 -.->|discovered| CG_436
+  CG_430 -.->|discovered| CG_438
+  CG_431 -->|after merge| CG_439
+  CG_427 -.->|discovered| CG_439
+  CG_428 -.->|discovered| CG_440
+  CG_395 --> CG_444
+  CG_432 --> CG_444
+  CG_447 --> CG_444
+  CG_428 -.->|discovered| CG_444
+  CG_438 -.->|discovered| CG_445
+  CG_438 -.->|discovered| CG_446
+  CG_381 --> CG_448
+  CG_381 -.->|discovered| CG_448
+  CG_425 -->|after merge| CG_455
+  CG_428 -.->|discovered| CG_459
+  CG_438 -.->|discovered| CG_460
+  CG_438 -.->|discovered| CG_461
+  CG_493 -.->|discovered| CG_497
+  CG_349 --> CG_350
+  CG_380 -.->|discovered| CG_417
+  CG_395 --> CG_515
+  CG_396 --> CG_515
+  CG_467 --> CG_515
+  CG_399 --> CG_516
+  CG_401 --> CG_516
+  CG_415 --> CG_516
+  CG_216 -->|after merge| CG_517
+  CG_398 --> CG_517
+  CG_245 --> CG_518
+  CG_401 --> CG_518
+  CG_406 --> CG_518
+  CG_318 -->|after merge| CG_519
+  CG_427 --> CG_519
+  CG_398 --> CG_520
+  CG_480 --> CG_520
+  CG_515 -.->|discovered| CG_525
+  CG_216 -->|after merge| CG_347
+  CG_346 --> CG_347
+  CG_345 --> CG_348
+  CG_346 --> CG_348
+  CG_347 --> CG_348
+  CG_395 --> CG_396
+  CG_395 --> CG_398
+  CG_397 --> CG_398
+  CG_399 --> CG_404
+  CG_345 --> CG_404
+  CG_404 --> CG_405
+  CG_346 --> CG_405
+  CG_396 --> CG_407
+  CG_402 --> CG_407
+  CG_395 -->|after merge| CG_432
+  CG_406 -.->|discovered| CG_432
+  CG_411 -.->|discovered| CG_435
+  CG_404 -.->|discovered| CG_441
+  CG_410 -.->|discovered| CG_442
+  CG_436 --> CG_443
+  CG_395 --> CG_447
+  CG_395 --> CG_451
+  CG_395 --> CG_452
+  CG_396 --> CG_452
+  CG_453 -.->|discovered| CG_457
+  CG_457 -.->|discovered| CG_466
+  CG_411 -.->|discovered| CG_468
+  CG_396 -.->|discovered| CG_469
+  CG_472 -->|after merge| CG_475
+  CG_411 -.->|discovered| CG_500
+  CG_437 -.->|discovered| CG_507
+  CG_484 -.->|discovered| CG_508
+  CG_502 -.->|discovered| CG_509
+  CG_502 -.->|discovered| CG_510
+  CG_502 -.->|discovered| CG_511
+  CG_502 -.->|discovered| CG_512
+  CG_318 -.->|discovered| CG_513
+  CG_490 --> CG_514
+  CG_503 -.->|discovered| CG_521
+  CG_503 -.->|discovered| CG_522
+  CG_503 -.->|discovered| CG_523
+  CG_503 -.->|discovered| CG_524
+  CG_505 -.->|discovered| CG_526
+  CG_310 --> CG_527
+  CG_498 --> CG_527
+  CG_302 --> CG_213
+  CG_395 --> CG_403
+  CG_396 --> CG_403
+  CG_397 --> CG_403
+  CG_398 --> CG_403
+  CG_399 --> CG_403
+  CG_402 --> CG_403
+  CG_409 --> CG_403
+  CG_410 --> CG_403
+  CG_411 --> CG_403
+  CG_406 --> CG_408
+  CG_407 --> CG_408
+  CG_398 --> CG_408
+  CG_412 --> CG_408
+  CG_413 --> CG_408
+  CG_414 --> CG_408
+  CG_415 --> CG_408
+  CG_416 --> CG_408

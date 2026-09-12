@@ -1,0 +1,27 @@
+{
+  "restore_after": "next CG385 actual evidence-revision admission",
+  "runners": {},
+  "prior_completed_hold": {
+    "restore_after": "CG-385 actual repair admission",
+    "runners": {
+      "CG-216": "",
+      "CG-253": "",
+      "CG-300": "",
+      "CG-327": "",
+      "CG-328": "",
+      "CG-332": "",
+      "CG-336": "",
+      "CG-356": "",
+      "CG-362": "",
+      "CG-374": "",
+      "CG-375": "",
+      "CG-380": "",
+      "CG-381": "",
+      "CG-382": ""
+    },
+    "restored_at": "2026-09-07T17:01:39.496720+00:00",
+    "recovery_runs": [
+      "/home/joshua/garden/.garden/runs/CG-385/20260907T170131Z-revise/run.json"
+    ]
+  }
+}

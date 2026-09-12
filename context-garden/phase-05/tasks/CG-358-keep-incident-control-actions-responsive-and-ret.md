@@ -1,7 +1,7 @@
 ---
 id: CG-358
 title: Keep incident control actions responsive and retry-safe during web overload
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,9 +11,9 @@ reading: []
 branch: garden/cg-358-keep-incident-control-actions-responsive-and-ret
 pr: https://github.com/joshmarcus/context-garden/pull/239
 attempts: 1
-last_dispatched_at: '2026-09-07T03:40:33+00:00'
+last_dispatched_at: '2026-09-07T09:29:52+00:00'
 created: '2026-09-06T19:13:47+00:00'
-updated: '2026-09-07T09:13:19+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,12 @@ A responsive, durable recovery action would have started CG-357 promptly and avo
 - 2026-09-07T04:07:19+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, inbox, n; run `garden triage CG-358 --changes "<feedback>" to unblock`
 - 2026-09-07T09:13:18+00:00 triage: changes requested by hand: All functional criteria were accepted; the remaining blanket missing-images stop was environmental. CG326/370 capture fi
 - 2026-09-07T09:13:19+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T09:29:52+00:00 dispatched revise run 20260907T092947Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10806 tokens)
+- 2026-09-07T09:42:41+00:00 preserved uncommitted worktree changes from run 20260907T092947Z-revise outside the PR: `git stash apply f7b9e3a52b0f48aab8f0c813b62b6e1cd1b821e8` in /home/joshua/work/worktrees/CG-358 (garden:CG-358:20260907T092947Z-revise:reap)
+- 2026-09-07T09:45:37+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/239: Integrated current main and its browser-capture fixes without reworking the accepted incident-control implementation. Fresh focused validation, disposable served-app overload/retry/restart coverage, Chromium readiness, lint, and exact-head GitHub CI all pass. cost=$1.40
+- 2026-09-07T09:51:09+00:00 automated review: approve — The overload-safe control path, durable idempotent recovery identity, and restart reconciliation meet all four criteria with focused and served-app coverage. The description is complete and the listed UI captures are clean. cost=$0.79
+- 2026-09-07T09:57:49+00:00 hard-tier scratch-merge check passed; ready to merge once the queue reaches it
+- 2026-09-07T10:02:19+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T10:05:02+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-07T10:10:13+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/239
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-358 is done: #239 was merged at 10:10:13

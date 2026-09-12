@@ -1,0 +1,56 @@
+20260906T161350Z-check · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+    CG-215 · run
+    20260906T161350Z-check
+
+      done
+      check · harness · 4 min · $0.00
+
+  Back to taskgarden/cg-215-onboarding-skill-and-command-analyse-an-existing
+
+    Transcript
+    Brief
+    Final message
+    stderr

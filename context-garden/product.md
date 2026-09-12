@@ -1,3 +1,25 @@
+## Current owner policy: agent judgment and proportionate PR verification, 2026-09-09
+
+Owner merge policy, September 9: merge an approved pull request when its current reviewed commit has passing applicable CI and GitHub reports it mergeable without conflicts. Do not force a rebase or another build solely because main advanced. Preserve current-head identity checks, substantive review rejection, actual failed checks, dependency constraints and atomic merge head guards. Latest-main validation may be an explicit opt-in policy; it is not the owner's default requirement. This is a requested scheduler implementation change; do not claim it is active in an installed immutable release until the new version is deployed.
+
+The owner explicitly requests thoroughly relaxing PR requirements and letting workers and reviewers judge for themselves. Agents choose verification appropriate to the actual change and may supply relevant evidence or a clear, honest attestation of what they tested or inspected and the result. Reuse trustworthy existing checks. Focused tests, CLI checks, code inspection, CI, browser interaction, or a small integration exercise may each be sufficient according to the agent's judgment. Explain material uncertainty briefly; do not invent tests, observations, or success.
+
+When a worker has not attached an artifact, assume the artifact is not included. Do not mention its absence in the review, summary, findings, nits, caveats, or revision feedback. Review the code and checks actually performed. Artifact absence alone is not material uncertainty and does not require an apology, limitation, or follow-up. Discuss a specific observed defect, failed applicable check, contradictory claim, or unmet explicit functional requirement when one exists; do not turn an unavailable optional attachment into such a finding.
+
+Running-app journeys, generic HTTP replays, screenshots at prescribed widths/themes, empty and failure/recovery scenarios, scalability/load measurements, artifact manifests, exact evidence schemas, preflight checklists, and PR-description style are not blanket PR prerequisites. Missing such items alone must not block review or merge or trigger an unchanged implementation revision. File paths and keyword matches do not establish that these forms of evidence are required. A reviewer who needs more verification should identify the concrete changed behavior or unresolved correctness concern and choose a proportionate way to check it; a clear attestation is acceptable without prescribed artifact fields. Historical evidence may remain archived without creating new work.
+
+Actual defects, actual failed applicable checks, contradictory claimed results/source identity, and genuinely unmet functional outcomes remain actionable. Distinguish them from optional presentation or evidence-form suggestions. Preserve full original findings and results, document current judgments separately, and respect current-head CI, versioned release/deployment rules, resource limits, AWS budget/deadlines, and explicit phase holds CG402/403/407/408. No production fault injection is implied. This policy supersedes earlier blanket verification, screenshot, running-app, lifecycle-state, or reporting-checklist language below. Reviewers need no further owner approval to exercise this judgment.
+
+## Current owner policy: bounded validation and capture infrastructure, September8
+
+Owner requests 120 seconds per ordinary test and 900 seconds per validation command. Keep stress/load tests opt-in. Use focused tests first. An AWS full ordinary suite is at most one attempt per unchanged source/environment; if it reveals a shared failure, preserve the exact failing node/log and compare the focused failing test with base in the same environment. Do not repeatedly run the same full suite or repair unrelated implementation inside this PR. Confirmed shared/environment failures go to the matching recovery task; genuine PR regressions still block. Local WSL workers use focused tests only.
+
+Until native supervisor deadline enforcement is deployed, use `timeout --signal=TERM --kill-after=10s 900 "$GARDEN_VALIDATION_RUNNER" -m garden.validation -- .venv/bin/python -m pytest --timeout=120 --timeout-method=thread <affected test files> -q`. The setup installs pinned pytest-timeout. Keep execution in the foreground and report timeout/interruption honestly; never substitute pass or silently deselect a failing test. Queue-wait/environment interruption is not automatically an implementation failure.
+
+Screenshot capture/return infrastructure failures are temporarily advisory. Try scoped captures for material visual changes when the browser/artifact path works; preserve available PNG/HTML/text evidence. Do not add review commentary about artifacts that were not attached. A missing browser, controller-only path or artifact-return failure alone must not force request_changes or another unchanged author revision. Focused behavior tests and actual affected UI/HTTP behavior remain required as appropriate. Observed UI defects, application/render failures, functional test regressions, mismatched source claims and genuinely unverified requested outcomes still block. This supersedes earlier absolute screenshot language; the explicit mechanical advisory switch is being implemented separately and is not yet claimed deployed.
+
+Review feedback must keep the full substantive findings/fixes and criterion-specific reasons alongside any operator recovery summary. A short triage note supplements those findings, rather than silently replacing them. Historical/negated mentions of scalability, stress or performance do not add load criteria to a task that makes no such acceptance claim. Keep the actual frozen functional criteria; reuse equivalent evidence and do not demand diagnosis of an unrelated whole-system incident.
+
 # context-garden
 
 A tool for driving agent development from a repository of context files. Humans write
@@ -32,7 +54,7 @@ This repository is both the tool and its own first product. Python 3.11+, packag
 `pyproject.toml` (hatchling), managed with `uv`.
 
 - Focused tests: `.venv/bin/python -m pytest <affected test files> -q` (serial).
-- Full tests: commit, then `python3 scripts/check_ci.py` to push the assigned branch and await exact-commit GitHub CI in this session. Do not run the full suite locally by default.
+- Full ordinary tests on AWS: commit the final source, then run `"$GARDEN_VALIDATION_RUNNER" -m garden.validation -- .venv/bin/python -m pytest -q` in the foreground. Stress/load tests require separate explicit authorization and remain excluded by default. Local WSL workers use focused tests.
 - Lint: `.venv/bin/ruff check src tests scripts`
 - CLI: `.venv/bin/garden --help`
 
@@ -74,11 +96,11 @@ Layout:
 
 ## The run ends when you stop
 
-A worker runs headless: when you finish your turn, the process exits and nothing wakes it again. Never background the test suite, a build or a capture and wait for a notification; run long commands in the foreground and read their output before you write your result. If the suite takes ten minutes, wait ten minutes. A run that ends without its `GARDEN_RESULT` line is a failed run, however much it committed; five Fable runs were lost this way on 2026-09-06 while "waiting for the monitor to report".
+A worker runs headless: when you finish your turn, the process exits and nothing wakes it again. Never background the test suite, a build or a capture and wait for a notification; run long commands in the foreground and read their output before you write your result. Respect the owner test deadlines above; a timeout is a recorded failed/interrupted validation, not permission to wait indefinitely. A run that ends without its `GARDEN_RESULT` line is a failed run, however much it committed; five Fable runs were lost this way on 2026-09-06 while "waiting for the monitor to report".
 
 ## Looking at pages: screenshots from a WSL worker
 
-Workers on this machine have no browser inside WSL, but Windows Edge is reachable and renders both files and the running app. Use it to see what a person would see before you call a UI change done, and read the PNGs back with the Read tool.
+Local WSL and AWS workers have configured Playwright Chromium. Use the supervised wrapper for browser work and inspect the resulting images. The following Windows Edge route is a historical fallback for local WSL only; it is unavailable on AWS.
 
 ```bash
 EDGE="/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
@@ -97,21 +119,28 @@ Windows sees WSL's localhost, so a page served by `garden serve` (or a test serv
 
 Edge on this host has an outer-window minimum around 496px, so `--window-size=390` does not establish a 390px page viewport. Before the narrow command above, create `narrow.html` in the Windows captures directory containing `<html><body style="margin:0"><iframe src="http://localhost:8765/now1" style="width:390px;height:2400px;border:0"></iframe></body></html>` (substitute the page being checked). Capture the wrapper at an outer width of 600. Inspect the embedded page at 390 CSS pixels and check its clientWidth and scrollWidth; the extra outer margin is not part of the page. The finding and measured clientWidth 390 / scrollWidth 390 were recorded by CG-308 in CG-326. A browser API that sets the actual page viewport to 390 is also suitable.
 
-## Full-suite CI offload (owner instruction, 2026-09-06)
+## AWS full-suite validation (owner instruction, 2026-09-08)
 
-This product explicitly enables `setup.worker_push: true`. Run focused local tests and lint,
-self-review and fix findings, commit, then run `python3 scripts/check_ci.py` in the foreground.
-Push only your assigned branch, without force or persistent git-config changes. Read the
-actual CI outcome, fix failures and recheck the final commit before declaring done. Report
-its SHA, run URL and outcome as ordinary acceptance evidence. The scheduler owns PRs and
-merges, and still requires PR CI. A pending, absent, stale, failed or skipped run is not a
-pass. The helper reuses existing runs for unchanged commits. GitHub access is explicitly
-configured while your HOME remains isolated.
+External AWS workers run the full ordinary suite on their host after focused iteration,
+lint and self-review. Commit the final source, use the supervised validation wrapper and
+wait for its result in the foreground. Report the exact tested commit, command, selection,
+result and a durable log or equivalent receipt. Failed tests, contradictory provenance or
+an unverified result still block; formatting or missing artifact metadata alone do not.
 
-Existing work branches must incorporate current origin/main's CI workflow and helper before
-using them. Preserve existing edits and commits; resolve integration conflicts without
-widening the task. If the helper is absent, incorporate current main rather than falling
-back to another local full-suite run. Do not change the live garden or production service.
-See product-repo `docs/worker-ci.md` for the command and protocol. Resource-isolation testing
-that specifically requires local processes remains allowed, serial and bounded, against
-fixtures; it does not authorize a local full suite or fault injection into production.
+`setup.worker_push` is disabled. Do not run `scripts/check_ci.py` or push solely to trigger
+or poll a full GitHub suite. The remote protocol returns committed work through its
+assigned transport ref; the controller publishes the branch and owns remaining authenticated
+GitHub status reads. CG-396 is implementing the authoritative AWS receipt provider. Until
+that integration is deployed, the controller's existing checks remain in force; workers
+should report an environment blocker rather than repeatedly polling public GitHub APIs.
+This instruction supersedes the older full-suite-offload instructions in existing branches.
+
+AWS hosts have gh, make, Chromium and its Linux dependencies, with task Python 3.12.14 and
+pip25. Their shared browser cache is `/var/lib/garden-worker/browsers`; if a tool needs an
+explicit setting, use `PLAYWRIGHT_BROWSERS_PATH` with that host-local path. Do not copy
+controller credentials or paths. Use actual Playwright viewport dimensions for responsive
+checks; the Windows Edge examples above are legacy local-machine alternatives only.
+
+## Product architecture
+
+See the [product specifications](specs/README.md) for the [overall system design](specs/system-architecture.md), enterprise integration and persona review contracts.

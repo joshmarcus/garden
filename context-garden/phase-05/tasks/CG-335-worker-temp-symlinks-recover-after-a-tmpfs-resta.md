@@ -1,15 +1,16 @@
 ---
 id: CG-335
 title: Worker temp symlinks recover after a tmpfs restart
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 0
+order: 1
 difficulty: medium
 reading: []
 created: '2026-09-06T13:15:20+00:00'
-updated: '2026-09-06T13:46:59+00:00'
+updated: '2026-09-06T17:22:04+00:00'
 ---
 
 ## Goal
@@ -28,3 +29,5 @@ At operator takeover on 2026-09-06 at 13:13Z, /home/joshua/work/tmp pointed to m
 
 - 2026-09-06T13:15:21+00:00 approved (cli)
 - 2026-09-06T13:46:59+00:00 priority 2 -> 0
+- 2026-09-06T17:21:51+00:00 reordered in context-garden/phase-05 (order 2 -> 1) (web)
+- 2026-09-06T17:22:04+00:00 cancelled (web)

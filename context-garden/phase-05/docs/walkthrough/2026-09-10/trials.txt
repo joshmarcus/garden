@@ -1,0 +1,180 @@
+Trials · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+Model trials
+The same task, several models, one comparison. Scores accumulate here so the tier-to-model map is a decision, not a guess.
+
+  Filter by contender
+
+    Filter
+
+  Leaderboard
+
+  contendertrialswinswin rateavg scoreavg cost$ per pointavg tokens in / outfailedenv failed
+
+  codex:gpt-5.6-terra11100%9.0113,739 / 15,25300
+codex2150%8.096,066 / 6,17610
+claude:claude-sonnet-53133%6.5$3.89$0.726129 / 57,50900
+claude:claude-fable-5-1100%$10.68994 / 78,39300
+codex:gpt-6-astra100%$5.98174,346 / 15,01410
+
+  env failed: the contender's own harness or environment stopped it (quota, login, a sandbox denial, a missing setup) — excluded from the comparison, not scored as a loss.
+
+  $ per point is cost divided by the comparison score: the cheapest way to a good PR is the lowest number, not the lowest cost.
+
+CG-307 2026-09-06T02:14🏁 Model trial for CG-307 — inconclusive — kept claude:claude-fable-5-1
+
+contender
+score
+cost
+tokens in / out
+$ per point
+PR
+note
+
+claude:claude-fable-5-1
+–
+$10.68
+994 / 78,393
+–
+https://github.com/joshmarcus/context-garden/pull/206
+pr
+
+codex:gpt-6-astra
+–
+$5.98
+174,346 / 15,014
+–
+–
+Committed the Now page design, attributed partial snapshot, and reproducible static mock with operational state fixtures. Full-state rendering and visual/persona acceptance remain pending.
+
+only one contender produced a PR; the trial is inconclusive, not a win
+
+CG-225 2026-09-05T20:10🏁 Model trial for CG-225 — winner: codex:gpt-5.6-terra
+
+contender
+score
+cost
+tokens in / out
+$ per point
+PR
+note
+
+codex:gpt-5.6-terra
+9
+–
+113,739 / 15,253
+–
+https://github.com/joshmarcus/context-garden/pull/184
+Complete and robust implementation with durable pre-merge answer publishing, though Inbox source wording could be cleaner.
+
+claude:claude-sonnet-5
+7
+$5.03
+142 / 71,890
+$0.718
+https://github.com/joshmarcus/context-garden/pull/185
+Broadly complete implementation with better UI surfacing, but answers are lost when submitted before the retro PR is live.
+
+Codex is the only contender that preserves retro answers made before the retro PR merges by updating and pushing the PR worktree, then handles live documents afterward. Both contenders pass the full suite and lint; Claude has stronger surface polish, but its documented pre-merge no-op loses required answers. Codex also has the smaller focused diff.
+
+CG-225 2026-09-05T19:15🏁 Model trial for CG-225 — winner: codex
+
+contender
+score
+cost
+tokens in / out
+$ per point
+PR
+note
+
+codex
+8
+–
+148,520 / 9,484
+–
+https://github.com/joshmarcus/context-garden/pull/179
+Correctly persists retro question answers whether or not the retro's own PR has merged, with retry-safe failure handling and good test coverage of both cases.
+
+claude:claude-sonnet-5
+6
+$4.41
+136 / 61,153
+$0.735
+https://github.com/joshmarcus/context-garden/pull/181
+Clean, minimal, well-tested implementation that meets the acceptance criteria on the surface but silently discards answers to retro questions resolved before the retro's own PR merges.
+
+comparison run
+
+$0.88
+
+Both meet the acceptance criteria on paper and pass the full test suite and lint, but claude:claude-sonnet-5 has a confirmed correctness gap: answering or dismissing a retro question before the retro's own PR merges is a documented no-op that silently discards the answer while still clearing the blocking-verdict gate, since retro docs (unlike kickoff's) only land live after a PR merges and cards appear in the Inbox immediately. codex explicitly handles this by writing the resolution onto the still-open retro branch (with retry-safe failure handling) when the live docs don't exist yet, which is the more robust and spec-faithful design despite a larger diff.
+
+CG-030 2026-09-05T18:31🏁 Model trial for CG-030 — winner: claude:claude-sonnet-5
+
+contender
+score
+cost
+tokens in / out
+$ per point
+PR
+note
+
+claude:claude-sonnet-5
+–
+$2.23
+108 / 39,483
+–
+https://github.com/joshmarcus/context-garden/pull/177
+pr
+
+codex
+–
+–
+43,611 / 2,868
+–
+–
+Corrected poppy and bramble names, added specimen-specific plate credits including the fern’s illustrator, and pinned the original foxglove scan. Asset replacement, provenance verification, full tests
+
+only one contender produced a PR

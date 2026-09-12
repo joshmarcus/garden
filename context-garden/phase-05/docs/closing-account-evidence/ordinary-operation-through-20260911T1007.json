@@ -1,0 +1,518 @@
+{
+  "scope": "Ordinary controller ticks after RC21 cleanup backlog cleared; all controller work, not a Phase05-only performance benchmark. No required fixed-duration soak is inferred.",
+  "cutoff": "2026-09-11T10:07:52.669171+00:00",
+  "count": 101,
+  "minimum_seconds": 15.340723226996488,
+  "maximum_seconds": 18.286992866007495,
+  "warning_budget_seconds": 10,
+  "ticks": [
+    {
+      "at": "2026-09-11T08:00:35+00:00",
+      "duration_seconds": 16.079273742987425,
+      "summary": "took 16.1s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T08:01:52+00:00",
+      "duration_seconds": 16.630919118004385,
+      "summary": "took 16.6s; slowest: audit 9.8s"
+    },
+    {
+      "at": "2026-09-11T08:03:09+00:00",
+      "duration_seconds": 17.354921436999575,
+      "summary": "took 17.4s; slowest: audit 10.0s"
+    },
+    {
+      "at": "2026-09-11T08:04:26+00:00",
+      "duration_seconds": 17.026076674010255,
+      "summary": "took 17.0s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T08:05:42+00:00",
+      "duration_seconds": 16.002000222011702,
+      "summary": "took 16.0s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T08:06:58+00:00",
+      "duration_seconds": 16.042201336007565,
+      "summary": "took 16.0s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:08:14+00:00",
+      "duration_seconds": 15.66065177800192,
+      "summary": "took 15.7s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T08:09:30+00:00",
+      "duration_seconds": 16.349184419988887,
+      "summary": "took 16.3s; slowest: audit 9.6s"
+    },
+    {
+      "at": "2026-09-11T08:10:47+00:00",
+      "duration_seconds": 17.07593857300526,
+      "summary": "took 17.1s; slowest: audit 10.1s"
+    },
+    {
+      "at": "2026-09-11T08:12:04+00:00",
+      "duration_seconds": 16.43143335999048,
+      "summary": "took 16.4s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T08:13:20+00:00",
+      "duration_seconds": 15.887039945009747,
+      "summary": "took 15.9s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:14:36+00:00",
+      "duration_seconds": 16.116599169996334,
+      "summary": "took 16.1s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T08:15:52+00:00",
+      "duration_seconds": 16.405386521000764,
+      "summary": "took 16.4s; slowest: audit 9.6s"
+    },
+    {
+      "at": "2026-09-11T08:17:08+00:00",
+      "duration_seconds": 15.784372982001514,
+      "summary": "took 15.8s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:18:24+00:00",
+      "duration_seconds": 16.023403657993185,
+      "summary": "took 16.0s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:19:41+00:00",
+      "duration_seconds": 16.405812412995147,
+      "summary": "took 16.4s; slowest: audit 9.6s"
+    },
+    {
+      "at": "2026-09-11T08:20:57+00:00",
+      "duration_seconds": 15.918540672006202,
+      "summary": "took 15.9s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:22:15+00:00",
+      "duration_seconds": 18.11580391600728,
+      "summary": "took 18.1s; slowest: audit 9.9s"
+    },
+    {
+      "at": "2026-09-11T08:23:31+00:00",
+      "duration_seconds": 16.58622954900784,
+      "summary": "took 16.6s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T08:24:47+00:00",
+      "duration_seconds": 16.041930321996915,
+      "summary": "took 16.0s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T08:26:03+00:00",
+      "duration_seconds": 15.826167507009814,
+      "summary": "took 15.8s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T08:27:19+00:00",
+      "duration_seconds": 15.914540245008538,
+      "summary": "took 15.9s; slowest: audit 9.2s"
+    },
+    {
+      "at": "2026-09-11T08:28:34+00:00",
+      "duration_seconds": 15.354494714003522,
+      "summary": "took 15.4s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T08:29:50+00:00",
+      "duration_seconds": 15.340723226996488,
+      "summary": "took 15.3s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T08:31:05+00:00",
+      "duration_seconds": 15.608949447007035,
+      "summary": "took 15.6s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:32:24+00:00",
+      "duration_seconds": 18.286992866007495,
+      "summary": "took 18.3s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T08:33:40+00:00",
+      "duration_seconds": 16.058680800008005,
+      "summary": "took 16.1s; slowest: audit 9.2s"
+    },
+    {
+      "at": "2026-09-11T08:34:56+00:00",
+      "duration_seconds": 16.06723462700029,
+      "summary": "took 16.1s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T08:36:12+00:00",
+      "duration_seconds": 16.24576828100544,
+      "summary": "took 16.2s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T08:37:28+00:00",
+      "duration_seconds": 15.833926895997138,
+      "summary": "took 15.8s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:38:44+00:00",
+      "duration_seconds": 15.671526945996447,
+      "summary": "took 15.7s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:39:59+00:00",
+      "duration_seconds": 15.701596233004238,
+      "summary": "took 15.7s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T08:41:15+00:00",
+      "duration_seconds": 16.04156206600601,
+      "summary": "took 16.0s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T08:42:31+00:00",
+      "duration_seconds": 15.700023846002296,
+      "summary": "took 15.7s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T08:43:47+00:00",
+      "duration_seconds": 16.141966862007394,
+      "summary": "took 16.1s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T08:45:04+00:00",
+      "duration_seconds": 16.56861686000775,
+      "summary": "took 16.6s; slowest: audit 9.8s"
+    },
+    {
+      "at": "2026-09-11T08:46:21+00:00",
+      "duration_seconds": 16.774982699003886,
+      "summary": "took 16.8s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T08:47:36+00:00",
+      "duration_seconds": 15.81780529099342,
+      "summary": "took 15.8s; slowest: audit 9.0s"
+    },
+    {
+      "at": "2026-09-11T08:48:52+00:00",
+      "duration_seconds": 15.455792139997357,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:50:08+00:00",
+      "duration_seconds": 16.38260945098591,
+      "summary": "took 16.4s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T08:51:24+00:00",
+      "duration_seconds": 15.947556533006718,
+      "summary": "took 15.9s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T08:52:40+00:00",
+      "duration_seconds": 15.609900156996446,
+      "summary": "took 15.6s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:53:56+00:00",
+      "duration_seconds": 15.979588670001249,
+      "summary": "took 16.0s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T08:55:11+00:00",
+      "duration_seconds": 15.517581513006007,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:56:27+00:00",
+      "duration_seconds": 15.623305675995653,
+      "summary": "took 15.6s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T08:57:42+00:00",
+      "duration_seconds": 15.406579488000716,
+      "summary": "took 15.4s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T08:58:58+00:00",
+      "duration_seconds": 15.736577532996307,
+      "summary": "took 15.7s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T09:00:14+00:00",
+      "duration_seconds": 16.168194426005357,
+      "summary": "took 16.2s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:01:30+00:00",
+      "duration_seconds": 16.20498902500549,
+      "summary": "took 16.2s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:02:46+00:00",
+      "duration_seconds": 15.978177220997168,
+      "summary": "took 16.0s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:04:02+00:00",
+      "duration_seconds": 15.476720809994731,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:05:18+00:00",
+      "duration_seconds": 16.131560174995684,
+      "summary": "took 16.1s; slowest: audit 9.2s"
+    },
+    {
+      "at": "2026-09-11T09:06:34+00:00",
+      "duration_seconds": 15.53239881299669,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:07:50+00:00",
+      "duration_seconds": 16.679686219998985,
+      "summary": "took 16.7s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T09:09:06+00:00",
+      "duration_seconds": 16.09050509199733,
+      "summary": "took 16.1s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:10:23+00:00",
+      "duration_seconds": 16.33094500299194,
+      "summary": "took 16.3s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:11:39+00:00",
+      "duration_seconds": 16.18091949900554,
+      "summary": "took 16.2s; slowest: audit 9.2s"
+    },
+    {
+      "at": "2026-09-11T09:12:55+00:00",
+      "duration_seconds": 16.075318970993976,
+      "summary": "took 16.1s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:14:11+00:00",
+      "duration_seconds": 16.11330671799078,
+      "summary": "took 16.1s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T09:15:27+00:00",
+      "duration_seconds": 15.482014358000015,
+      "summary": "took 15.5s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T09:16:43+00:00",
+      "duration_seconds": 16.147051194988308,
+      "summary": "took 16.1s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:17:59+00:00",
+      "duration_seconds": 15.98104872800468,
+      "summary": "took 16.0s; slowest: audit 9.2s"
+    },
+    {
+      "at": "2026-09-11T09:19:14+00:00",
+      "duration_seconds": 15.60601434900309,
+      "summary": "took 15.6s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T09:20:30+00:00",
+      "duration_seconds": 15.555777993999072,
+      "summary": "took 15.6s; slowest: audit 8.7s"
+    },
+    {
+      "at": "2026-09-11T09:21:46+00:00",
+      "duration_seconds": 16.141671429999406,
+      "summary": "took 16.1s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:23:02+00:00",
+      "duration_seconds": 16.057617985003162,
+      "summary": "took 16.1s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T09:24:19+00:00",
+      "duration_seconds": 16.25806148099946,
+      "summary": "took 16.3s; slowest: audit 9.5s"
+    },
+    {
+      "at": "2026-09-11T09:25:35+00:00",
+      "duration_seconds": 16.353055896994192,
+      "summary": "took 16.4s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:26:51+00:00",
+      "duration_seconds": 15.952887407998787,
+      "summary": "took 16.0s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:28:07+00:00",
+      "duration_seconds": 16.032656647003023,
+      "summary": "took 16.0s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:29:22+00:00",
+      "duration_seconds": 15.390700336996815,
+      "summary": "took 15.4s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:30:38+00:00",
+      "duration_seconds": 15.887339450011496,
+      "summary": "took 15.9s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T09:31:54+00:00",
+      "duration_seconds": 16.067296909997822,
+      "summary": "took 16.1s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:33:10+00:00",
+      "duration_seconds": 15.511368940991815,
+      "summary": "took 15.5s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T09:34:25+00:00",
+      "duration_seconds": 15.605199954006821,
+      "summary": "took 15.6s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:35:42+00:00",
+      "duration_seconds": 16.18453292599588,
+      "summary": "took 16.2s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T09:36:57+00:00",
+      "duration_seconds": 15.487308351992397,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:38:13+00:00",
+      "duration_seconds": 15.441843013992184,
+      "summary": "took 15.4s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:39:28+00:00",
+      "duration_seconds": 15.647348512997269,
+      "summary": "took 15.6s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T09:40:44+00:00",
+      "duration_seconds": 15.528856482997071,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:42:01+00:00",
+      "duration_seconds": 17.205896942003164,
+      "summary": "took 17.2s; slowest: audit 10.0s"
+    },
+    {
+      "at": "2026-09-11T09:43:17+00:00",
+      "duration_seconds": 15.85698658900219,
+      "summary": "took 15.9s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T09:44:33+00:00",
+      "duration_seconds": 16.130025267993915,
+      "summary": "took 16.1s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:45:49+00:00",
+      "duration_seconds": 16.178938586992444,
+      "summary": "took 16.2s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:47:05+00:00",
+      "duration_seconds": 16.107070433994522,
+      "summary": "took 16.1s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:48:22+00:00",
+      "duration_seconds": 16.785076878994005,
+      "summary": "took 16.8s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T09:49:38+00:00",
+      "duration_seconds": 15.92744223200134,
+      "summary": "took 15.9s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:50:54+00:00",
+      "duration_seconds": 16.32837111799745,
+      "summary": "took 16.3s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:52:10+00:00",
+      "duration_seconds": 16.106098127012956,
+      "summary": "took 16.1s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:53:26+00:00",
+      "duration_seconds": 15.97449571499601,
+      "summary": "took 16.0s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:54:43+00:00",
+      "duration_seconds": 16.66210195599706,
+      "summary": "took 16.7s; slowest: audit 9.7s"
+    },
+    {
+      "at": "2026-09-11T09:55:59+00:00",
+      "duration_seconds": 16.17918704499607,
+      "summary": "took 16.2s; slowest: audit 9.4s"
+    },
+    {
+      "at": "2026-09-11T09:57:15+00:00",
+      "duration_seconds": 15.881342571999994,
+      "summary": "took 15.9s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T09:58:31+00:00",
+      "duration_seconds": 15.469803031999618,
+      "summary": "took 15.5s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T09:59:47+00:00",
+      "duration_seconds": 15.92994288400223,
+      "summary": "took 15.9s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T10:01:02+00:00",
+      "duration_seconds": 15.639505522005493,
+      "summary": "took 15.6s; slowest: audit 8.8s"
+    },
+    {
+      "at": "2026-09-11T10:02:18+00:00",
+      "duration_seconds": 16.227116740992642,
+      "summary": "took 16.2s; slowest: audit 9.3s"
+    },
+    {
+      "at": "2026-09-11T10:03:34+00:00",
+      "duration_seconds": 15.559990341993398,
+      "summary": "took 15.6s; slowest: audit 8.9s"
+    },
+    {
+      "at": "2026-09-11T10:04:51+00:00",
+      "duration_seconds": 16.616058863990474,
+      "summary": "took 16.6s; slowest: audit 9.9s"
+    },
+    {
+      "at": "2026-09-11T10:06:06+00:00",
+      "duration_seconds": 15.93832822299737,
+      "summary": "took 15.9s; slowest: audit 9.1s"
+    },
+    {
+      "at": "2026-09-11T10:07:22+00:00",
+      "duration_seconds": 15.627985126004205,
+      "summary": "took 15.6s; slowest: audit 8.9s"
+    }
+  ],
+  "source_events_snapshot_sha256": "dce3a966bba7c90e68ed4fa1399235761c6b95edebffe22c854379a94de24cb7",
+  "source_runtime": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+  "new_interventions_during_observation": 0
+}

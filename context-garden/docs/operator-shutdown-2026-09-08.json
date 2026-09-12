@@ -1,0 +1,167 @@
+{
+  "at": "2026-09-08T03:06:49.296442+00:00",
+  "operator": "stopped at explicit owner shutdown relayed by other Codex task",
+  "heartbeat": "PAUSED",
+  "aws": "Scoped us-east-1 ManagedBy=context-garden instance query returned []; prior CG346 canary terminated; no new production instance launched by this operator. No cleanup timer required for a live instance observed.",
+  "active_runs_preserved": [
+    {
+      "task_id": "CG-382",
+      "run_id": "20260908T022028Z-revise",
+      "mode": "revise",
+      "pid": 31086,
+      "status": "running"
+    },
+    {
+      "task_id": "CG-380",
+      "run_id": "20260908T025833Z-check",
+      "mode": "check",
+      "pid": 62174,
+      "status": "running"
+    },
+    {
+      "task_id": "CG-328",
+      "run_id": "20260908T030102Z-revise",
+      "mode": "revise",
+      "pid": 62862,
+      "status": "running"
+    },
+    {
+      "task_id": "CG-381",
+      "run_id": "20260908T025723Z-check",
+      "mode": "check",
+      "pid": 61979,
+      "status": "running"
+    }
+  ],
+  "control_observed": {
+    "browser_readiness": {
+      "browser:context-garden": {
+        "checked_at": "2026-09-07T13:18:43+00:00",
+        "diagnostic": "launched /home/joshua/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+        "kind": "ready",
+        "ready": true,
+        "signature": "d3cd4b994ed887519f0b18bf645790b0b5c8f2bdab81560900f592cd6f5bfdfe"
+      }
+    },
+    "config_accept_signature": {
+      "checks": {
+        "ci": [
+          {
+            "flaky_patterns": [
+              "ETIMEDOUT",
+              "ECONNRESET",
+              "rate limit"
+            ],
+            "name": "actions",
+            "python": "garden.checks:github_actions_failures",
+            "rerun": true
+          }
+        ],
+        "pre_pr": [
+          {
+            "command": "case \"$GARDEN_PRODUCT\" in\n  context-garden) .venv/bin/ruff check src tests scripts ;;\n  garden) echo \"Context documents: no configured code suite\" ;;\n  *) echo \"No pre-PR policy for product: $GARDEN_PRODUCT\" >&2; exit 1 ;;\nesac\n",
+            "name": "lint"
+          }
+        ],
+        "timeout_seconds": 1500
+      },
+      "harnesses": {
+        "claude": {
+          "bin": "claude",
+          "command": null
+        },
+        "codex": {
+          "bin": "codex",
+          "command": null
+        }
+      },
+      "notify.command": "",
+      "setup.command": {
+        "context-garden": "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"
+      },
+      "worker_env.pass": [
+        "LD_LIBRARY_PATH"
+      ]
+    },
+    "overrides": {
+      "max_parallel": 4,
+      "resources.max_parallel": 4,
+      "resources.min_memory_available_mb": 0,
+      "review_parallel": 3
+    },
+    "paused_harnesses": {},
+    "resource_pressure": {
+      "at": "2026-09-08T03:02:07+00:00",
+      "reason": "local execution limit reached (4/4)"
+    }
+  },
+  "reservations": "unchanged; no new manual CG346 reservation taken",
+  "outstanding": "PR300 request_changes: setup command not executed, remote HTTP lifecycle evidence needed. Worker device login expired and incomplete. Inbox disposition docs/inbox-disposition-2026-09-08.md records remaining recovery. CG400 cancelled and links removed; CG402 remains held.",
+  "history_warning": "Remote history projection reportedly fails expected ordinal17565 got17564; consult filesystem/live state on explicit resume.",
+  "shutdown_process_inventory": [
+    {
+      "pid": 655,
+      "ppid": 478,
+      "name": "garden",
+      "kind": "garden server"
+    },
+    {
+      "pid": 33689,
+      "ppid": 33688,
+      "name": "codex",
+      "kind": "model process"
+    },
+    {
+      "pid": 63567,
+      "ppid": 63566,
+      "name": "codex",
+      "kind": "model process"
+    }
+  ],
+  "process_inventory_note": "Read-only inventory; command arguments intentionally omitted to avoid credentials. No processes killed. Model processes require correlation with scheduler run PIDs before classifying as orphaned.",
+  "active_records_at_process_inventory": [
+    {
+      "task_id": "CG-382",
+      "run_id": "20260908T022028Z-revise",
+      "mode": "revise",
+      "pid": 31086
+    },
+    {
+      "task_id": "CG-328",
+      "run_id": "20260908T030102Z-revise",
+      "mode": "revise",
+      "pid": 62862
+    }
+  ],
+  "all_workers_shutdown": {
+    "at": "2026-09-08T03:12:05.577290+00:00",
+    "service": "stopped",
+    "dispatch": "paused",
+    "interrupted_runs": [
+      {
+        "task": "CG-382",
+        "run": "20260908T022028Z-revise",
+        "pid": 31086,
+        "mode": "revise"
+      },
+      {
+        "task": "CG-380",
+        "run": "20260908T030858Z-review",
+        "pid": 68156,
+        "mode": "review"
+      },
+      {
+        "task": "CG-328",
+        "run": "20260908T030102Z-revise",
+        "pid": 62862,
+        "mode": "revise"
+      },
+      {
+        "task": "CG-381",
+        "run": "20260908T030855Z-review",
+        "pid": 67668,
+        "mode": "review"
+      }
+    ]
+  }
+}

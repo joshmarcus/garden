@@ -1,0 +1,49 @@
+# product-manager-reaction-supplement review of context-garden/phase-05
+
+**Persona:** product-manager-reaction-supplement · **Score:** 6/10 · 2026-09-10T11:30:39+00:00
+
+Phase 05 substantially improves onboarding, execution containment and recovery, and the owner's stabilization acceptance should stand without another soak. The product still requires too much interpretation of costs, attention ownership and completion state. Fix misleading accepted-task reporting first, finish existing recovery and policy-continuity work, and measure delegated operator effort before expanding model or infrastructure options.
+
+## Reaction
+
+I want context-garden to turn a developer's written intent into reviewed changes while making unattended operation safer and cheaper than continuous supervision. Three phases from now, I would call that promise fulfilled when a small team can resume an interrupted first change, understand who owns every exception, and judge accepted output against both spending and human effort without reconstructing transcripts. That is a demanding destination, but it does not require changing the product's purpose. It requires finishing the operational agreement implicit in leaving the loop running.
+
+Returning to my original report, I still see Phase 05 as meaningful progress toward that agreement. Onboarding, containment and recovery address reasons someone might reasonably refuse to leave an agent working on their machine. The owner's acceptance of the stabilization evidence deserves to stand; the remaining interpretation burden does not erase those gains. Conversely, that acceptance does not erase original missed targets or failures, close the phase, or publish the release. I want those distinctions preserved because moving the definition of success after every review makes planning expensive and trust fragile.
+
+The moment in the supplied report that matters most to me is the mismatch between selected Costs filters and accepted-task outcome tables. A filter is a small but consequential promise: the numbers beneath it describe the population I selected, unless the interface clearly explains otherwise. If that promise fails, a developer can draw the wrong conclusion about whether a phase or approach paid off. Definitive prices built from incomplete pricing compound the problem. I would put this first because it compromises the evidence used to prioritize everything else. I would accept an explicitly partial figure; I would not use an apparently complete figure to justify more automation when its coverage is uncertain.
+
+I also keep returning to the report's account of delegated recovery and deferred work appearing as unresolved owner decisions. These are observations preserved in the original report, not pages I have freshly inspected: the phase walkthrough is not present in this checkout. Their product consequence is nevertheless clear. Every apparent request for attention asks someone to suspend other work and interpret the machine. When the next action already belongs to a recovery process, or the owner has deliberately deferred it, that interruption spends attention without advancing a decision. Repetition could teach a user to discount the Inbox, which would make genuine requests less effective. I would finish shared ownership and deferral handling next, preserving independent blockers and holds rather than treating fewer badges as success by itself.
+
+Completion deserves the same care. The original report describes completed task and check pages leading with historical rejection or generic transcript copy. I value the history: a previous rejection can explain why the accepted change differs from its first attempt. But asking the reader to discover acceptance inside that history makes the product's output harder to trust. I would lead with what was accepted, which source it belongs to, and what verification established, then retain dated reviews underneath. This is a relatively contained improvement with value across the web UI, CLI and TUI wherever they summarize results. It depends on reliable completion provenance, not merely friendlier wording.
+
+Policy continuity belongs beside these changes because a visible hold must be understandable before a user can respond responsibly. I would finish the existing work that connects the effective rule to its configuration and deployed source, while retaining current-head safeguards. The team we hope to serve next will have review rules that cannot be inferred from one developer's memory. Making that relationship legible now serves today's operator and establishes useful structure for team adoption. I would resist adding a separate management layer before the underlying explanation is dependable.
+
+My next investment would be modest measurement of delegated operation: interventions, recovery causes, lead time, and complete or explicitly partial spending beside accepted changes. Recorded throughput and freedom from owner actions are encouraging, but work can move to another operator without becoming cheaper. I do not know from this evidence whether context-garden beats an interactive session economically. I want enough information to answer that honestly, including the cost of getting an initially unsuccessful task accepted. That work follows accounting consistency; otherwise a new dashboard would give unreliable comparisons more authority.
+
+I would then use the existing documentation work to make the current product and its first useful journey understandable. A newcomer needs a path from context files to one reviewed change, including how to resume after an interruption. One voluntary attempt would help reveal where that explanation fails, without becoming another stabilization gate. I would defer broader model choices and infrastructure expansion until these promises are finished, and defer elaborate management reporting until its underlying measures are credible. I would also leave CG347 and CG348 in Phase07, as the owner has decided. Pulling them forward would spend capacity already needed for clearer outcomes and recovery.
+
+The owner decisions I would carry forward concern appetite and success criteria: how much human intervention is acceptable for ordinary delegated work, what economic evidence would justify wider adoption, and when to invite that voluntary newcomer. Those decisions deserve explicit answers; routine reporting repairs do not need to wait for them. My judgment remains that Phase 05 has earned credit for making the loop more viable, while leaving a substantial product obligation unfinished. I would spend the next increment making its costs, requests and completed results trustworthy enough that stepping away becomes a considered choice.
+
+## Provenance
+
+This is a later reflection on the supplied original product-manager report, not a new independent review, approval, source review, or revalidation. Original report: context-garden/phase-05/docs/reviews/product-manager-2026-09-10.md. Original run: 20260910T043638Z-persona. Original report timestamp: 2026-09-10T04:40:09+00:00. Supplied SHA256: 23030c825bb8d3037670bff61837a5faf0c60853cf1656278e28d3345ea58c0c. The original local run has no native source_head field; none is inferred. Repository documentation was consulted read-only for orientation; the original report file and phase walkthrough were not available in this checkout. Application observations in the narrative are attributed to the supplied original report. No live application session, canary, or test was performed, and no files or configuration were changed. Accepted Phase05 stabilization evidence remains accepted, original missed targets and failures remain factual, live canaries remain optional, CG347/348 remain in Phase07, and the phase remains open with the release unpublished. Original severity and closure requirements are unchanged.
+
+## High
+
+- **Cost reporting** — Accepted-task outcome tables ignore selected Costs filters and present definitive prices despite incomplete underlying pricing.
+  - suggestion: Apply explicit cohort semantics and pricing completeness consistently across Costs, Now, CLI and retrospective reporting before using them for routing or phase comparisons.
+
+## Medium
+
+- **Attention ownership** — The captured application presents delegated check recovery and an explicitly deferred task as unresolved owner decisions.
+  - suggestion: Complete shared ownership and deferral handling so badges and actions reflect the actual next actor while preserving holds and independent blockers.
+- **Accepted results** — Completed task and check pages foreground historical rejection or generic transcript copy instead of explaining the accepted result and verification outcome.
+  - suggestion: Lead with completion provenance and check results, and retain dated source-specific reviews as clearly identified history.
+- **Policy continuity** — Queued work exposes policy holds without making their relationship to configured rules and deployed source clear.
+  - suggestion: Finish existing policy-continuity work and show the effective rule and source behind each hold, preserving current-head safeguards.
+- **Operator economics** — Recorded throughput and owner-action freedom do not establish that delegated operation is cheaper than supervising an interactive agent.
+  - suggestion: Report delegated interventions, recovery causes, lead time and complete or explicitly partial end-to-end spending beside accepted changes.
+- **Roadmap and adoption** — Current roadmap and phase goal summaries lag the active product, making the next useful journey difficult for a new user to understand.
+  - suggestion: Use existing documentation tasks to publish current outcomes and a resumable first-change journey, then learn from one voluntary new-user attempt without reopening accepted stabilization.
+
+_garden persona run 20260910T112755Z-persona-2_

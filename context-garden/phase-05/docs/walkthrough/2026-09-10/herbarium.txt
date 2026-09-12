@@ -1,0 +1,100 @@
+Herbarium · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+Herbarium
+Closed phases, pressed and filed. Newest first.
+
+    pressedphase-03
+
+    context-garden · plate III · Digitalis purpurea
+2026-09-05 → closed 2026-09-05
+
+      tasks done30 of 37
+      cost$188.72
+      lead time1.1 h avg
+      first pass97%
+
+    personas: designer 5/10 product-manager 7/10 project-manager 7/10 security 5/10 staff-engineer 7/10 usability-expert 6/10 user 6/10
+
+    phase page · retro · friction
+
+    pressedphase-04
+
+    context-garden · plate IV · Dryopteris filix-mas
+2026-09-05 → closed 2026-09-05
+
+      tasks done62 of 65
+      cost$504.87
+      lead time1.8 h avg
+      first pass74%
+
+    personas: designer 7/10 product-manager 7/10 project-manager 7/10 retro-editor 7/10 security 5/10 staff-engineer 7/10 usability-expert 6/10 user 7/10
+
+    phase page · retro · friction
+
+    pressedphase-01-bootstrap
+
+    context-garden · plate I · Pisum sativum
+closed 2026-09-04
+
+      tasks done19 of 19
+      costno records
+      lead time—
+      first pass—
+
+    phase page
+
+    pressedphase-02-friction
+
+    context-garden · plate II · Rubus fruticosus agg.
+2026-09-04 → closed 2026-09-04
+
+      tasks done90 of 113
+      cost$547.07
+      lead time1.2 h avg
+      first pass86%
+
+    personas: designer 6/10 project-manager 7/10 security 5/10 staff-engineer 6/10 usability-expert 6/10 user 7/10
+
+    phase page · retro · friction

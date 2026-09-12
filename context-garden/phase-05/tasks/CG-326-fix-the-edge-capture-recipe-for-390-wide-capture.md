@@ -1,7 +1,7 @@
 ---
 id: CG-326
 title: 'Fix the Edge capture recipe for 390-wide captures: frame the page in a 390 px iframe'
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,9 +14,9 @@ branch: garden/cg-326-fix-the-edge-capture-recipe-for-390-wide-capture
 pr: https://github.com/joshmarcus/context-garden/pull/250
 discovered_from: CG-308
 attempts: 2
-last_dispatched_at: '2026-09-07T04:37:16+00:00'
+last_dispatched_at: '2026-09-07T06:42:10+00:00'
 created: '2026-09-06T04:18:52+00:00'
-updated: '2026-09-07T04:57:39+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 Edge headless on this machine has a window floor of about 496 px, so the product overview's `--window-size=390` recipe lays the page out at 496 and every phone capture looks cut off at the right (measured from the page: clientWidth 496). A local HTML file with a `<iframe src="http://localhost:PORT/page" style="width:390px;height:5400px;border:0">` captured at a 600-wide window gives a true 390 viewport (clientWidth 390, scrollWidth 390). Update the recipe in the product overview and have CG-315's check use the wrapper for its narrow captures.
@@ -101,3 +101,25 @@ The operator is correcting the garden-local product overview separately. Keep wo
 - 2026-09-07T04:55:46+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
 - 2026-09-07T04:57:36+00:00 check did not run (20260907T044244Z-check): no check result; retry also failed; needs human
 - 2026-09-07T04:57:39+00:00 triage: changes requested by hand: Effective config hold is now cleared and accepted signature includes LD_LIBRARY_PATH. Operator executed current PR head1
+- 2026-09-07T05:02:50+00:00 dispatched revise run 20260907T050248Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~16038 tokens)
+- 2026-09-07T05:14:12+00:00 preserved uncommitted worktree changes from run 20260907T050248Z-revise outside the PR: `git stash apply 1a1bfc730e6b1ffc38ee96104fc9f4c91e6a55d5` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T050248Z-revise:reap)
+- 2026-09-07T05:15:55+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/250: Fixed narrow frame selection and preserved diagnostic captures while retaining strict 390px viewport validation. Exact-commit CI passed. cost=$0.08
+- 2026-09-07T05:39:08+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/walkthrough.py); a rebase agent will resolve it
+- 2026-09-07T05:54:03+00:00 dispatched rebase run 20260907T055401Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~10065 tokens)
+- 2026-09-07T05:57:56+00:00 preserved uncommitted worktree changes from run 20260907T055401Z-rebase outside the PR: `git stash apply 865a17ed5bd9a4e8e75521b721730fceb596be9c` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T055401Z-rebase:reap)
+- 2026-09-07T06:01:06+00:00 pre-PR checks failed (lint, ui) and 3 revision rounds already used; needs a human cost=$0.03
+- 2026-09-07T06:15:58+00:00 triage: changes requested by hand: Operator diagnosis: pre-PR check 20260907T055757Z-check failed after rebase with a real SyntaxError in src/garden/walkth
+- 2026-09-07T06:16:00+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T06:17:26+00:00 dispatched revise run 20260907T061724Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~17093 tokens)
+- 2026-09-07T06:26:47+00:00 preserved uncommitted worktree changes from run 20260907T061724Z-revise outside the PR: `git stash apply d6b3c2d470dfc36aa1b91da07d56c7c4500f36a1` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T061724Z-revise:reap)
+- 2026-09-07T06:29:57+00:00 check did not run (20260907T062830Z-check): no check result; retry also failed; needs human
+- 2026-09-07T06:31:19+00:00 check did not run (20260907T062830Z-check): no check result; retry also failed; needs human
+- 2026-09-07T06:32:41+00:00 check did not run (20260907T062830Z-check): no check result; retry also failed; needs human
+- 2026-09-07T06:34:19+00:00 triage: changes requested by hand: Operator recovery: check20260907T062647Z-check now passes lint and actual Now2 narrow captures; 52/56 executed viewport
+- 2026-09-07T06:34:20+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T06:42:10+00:00 dispatched revise run 20260907T064208Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~17390 tokens)
+- 2026-09-07T06:51:39+00:00 preserved uncommitted worktree changes from run 20260907T064208Z-revise outside the PR: `git stash apply 8a8e6ee5d5b4719bae9ac8f25cb190dbfbfd9535` in /home/joshua/work/worktrees/CG-326 (garden:CG-326:20260907T064208Z-revise:reap)
+- 2026-09-07T06:53:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/250: Narrow captures now use a measured 390px iframe viewport with strict overflow validation. Main was integrated and exact-commit CI passed. cost=$0.06
+- 2026-09-07T08:39:35+00:00 description rewritten by the reviewer cost=$0.80
+- 2026-09-07T08:39:41+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/250
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-326 is done: #250 was merged at 08:39:41

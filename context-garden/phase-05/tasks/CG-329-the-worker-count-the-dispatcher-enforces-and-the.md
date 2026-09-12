@@ -2,7 +2,7 @@
 id: CG-329
 title: 'The worker count the dispatcher enforces and the count the rail shows are the same number: checks,
   reviews and edit runs either take a slot visibly or not at all'
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ reading:
 branch: garden/cg-329-the-worker-count-the-dispatcher-enforces-and-the
 pr: https://github.com/joshmarcus/context-garden/pull/233
 attempts: 1
-last_dispatched_at: '2026-09-07T09:13:52+00:00'
+last_dispatched_at: '2026-09-07T10:10:18+00:00'
 created: '2026-09-06T05:26:49+00:00'
-updated: '2026-09-07T09:13:52+00:00'
+updated: '2026-09-07T10:20:38+00:00'
 ---
 
 ## Goal
@@ -62,3 +62,17 @@ One definition of a worker slot. `max_parallel` counts the runs that occupy a sl
 - 2026-09-07T09:13:15+00:00 triage: changes requested by hand: Owner hold is released. Preserve implemented slot accounting and shared-resource admission. Integrate current main (old
 - 2026-09-07T09:13:16+00:00 re-enabled by hand; revise run will follow
 - 2026-09-07T09:13:52+00:00 dispatched revise run 20260907T091349Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~19858 tokens)
+- 2026-09-07T09:29:26+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/233: Worker occupancy now uses worker modes consistently across dispatch, rail, Config, and garden status. Checks and edits remain outside max_parallel while still participating in shared host admission. cost=$0.15
+- 2026-09-07T09:32:25+00:00 description rewritten by the reviewer cost=$0.81
+- 2026-09-07T09:59:32+00:00 rebasing before merge; rebase onto main conflicts (src/garden/now1.py, src/garden/scheduler/__init__.py); a rebase agent will resolve it
+- 2026-09-07T09:59:35+00:00 dispatched rebase run 20260907T095933Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~21030 tokens)
+- 2026-09-07T10:03:22+00:00 preserved uncommitted worktree changes from run 20260907T095933Z-rebase outside the PR: `git stash apply d8e5eb8dc7144978511d24dc4e0f4f6ac7d887c7` in /home/joshua/work/worktrees/CG-329 (garden:CG-329:20260907T095933Z-rebase:reap)
+- 2026-09-07T10:04:59+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/233: Rebased CG-329 onto origin/main and resolved all conflicts while preserving both sides' intent. cost=$0.02
+- 2026-09-07T10:09:45+00:00 description rewritten by the reviewer cost=$0.96
+- 2026-09-07T10:10:10+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/runs.py); a rebase agent will resolve it
+- 2026-09-07T10:10:18+00:00 dispatched rebase run 20260907T101016Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~10865 tokens)
+- 2026-09-07T10:11:30+00:00 preserved uncommitted worktree changes from run 20260907T101016Z-rebase outside the PR: `git stash apply f3c3c7d791b89e1dd440ed126bb9a1c8f3f3d082` in /home/joshua/work/worktrees/CG-329 (garden:CG-329:20260907T101016Z-rebase:reap)
+- 2026-09-07T10:13:00+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/233: Rebased CG-329 onto origin/main and resolved the runs.py conflict. cost=$0.02
+- 2026-09-07T10:15:55+00:00 automated review: approve — Worker-slot occupancy is consistently defined as worker modes across dispatch, the rail, Config, Now views, and garden status; checks and edits remain subject to separately visible shared host admission. Focused verification passed (55 tests and Ruff), and all listed captures were inspected. cost=$0.72
+- 2026-09-07T10:19:15+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T10:20:38+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/233

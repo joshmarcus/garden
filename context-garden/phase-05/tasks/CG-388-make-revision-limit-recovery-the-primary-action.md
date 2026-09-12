@@ -1,7 +1,7 @@
 ---
 id: CG-388
 title: Make revision-limit recovery the primary action and resume work in one click
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,7 +12,7 @@ reading:
 - src/garden/web/templates/task.html
 - src/garden/scheduler/human.py
 created: '2026-09-07T15:49:16+00:00'
-updated: '2026-09-07T15:49:44+00:00'
+updated: '2026-09-08T16:10:12+00:00'
 ---
 
 ## Goal
@@ -33,3 +33,9 @@ Owner asked to highlight Reset revisions when a stuck-loop todo is caused by rev
 ## Configuration change
 
 max_revisions is now6 in the operating garden at the owner's request. The UI change is queued, not deployed. No resource cap or current temporary admission limit was relaxed.
+
+## Log
+
+- 2026-09-07T18:43:53+00:00 dispatch failed: work deferred by resource pressure: available memory 1527 MiB is below 1536 MiB; pause dispatch or wait for active runs to drain, then retry
+- 2026-09-07T20:06:51+00:00 reset to ready by hand
+- 2026-09-08T16:10:12+00:00 Unstarted cap-recovery scope and all owner requirements consolidated into CG-437 troubled-task/escalation ticket; preserve this history, do not implement a duplicate recovery operation.

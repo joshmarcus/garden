@@ -1,0 +1,66 @@
+{
+  "version": "0.3.0rc1",
+  "tag": "v0.3.0rc1",
+  "sha": "55b31a849c0783ea9ce6f87db965ce7d33b61a58",
+  "channel": "preview",
+  "status": "verified prerelease, deployment separately gated",
+  "prepared_at": "2026-09-08T03:47:13.462914+00:00",
+  "previous_pin": "d24e6778be03a85a62abb4aac664943606c15c70",
+  "included": [
+    {
+      "task": "CG-345",
+      "pr": 295,
+      "source": "8416ed1395704a7a842a628d2ec9567afe863b38",
+      "approval": "Prior owner-directed operator review; merged, evidence in remote-operator-repair-20260907.md"
+    },
+    {
+      "task": "CG-216",
+      "pr": 221,
+      "source": "d501ae76",
+      "approval": "Prior owner-directed operator review; merged, evidence in remote-operator-repair-20260907.md"
+    },
+    {
+      "task": "CG-346",
+      "pr": 300,
+      "source": "ad1ca77c6a9554ef40864f542dcce14b701d84ad",
+      "approval": "Current owner-authorized fast-forward operator repair/self-review; PR body records finding dispositions; no automated approval claimed",
+      "merge_status": "MERGED",
+      "merge_commit": "21e64a3c9e9ff59cbe876a9a14bfc2d7ecea838f",
+      "exact_head_ci": [
+        "https://github.com/joshmarcus/context-garden/actions/runs/34184233177",
+        "https://github.com/joshmarcus/context-garden/actions/runs/34184230793"
+      ]
+    }
+  ],
+  "release_ci": [
+    "https://github.com/joshmarcus/context-garden/actions/runs/34184425532"
+  ],
+  "verification": {
+    "focused": "185 passed,325.3MiB peak,no swap",
+    "affected_http": "Real TCP HTTP plus separate managed-worker processes, setup once under host lock, work/check/review/personas, stale409/reclaim, attribution, empty204 on exact candidate",
+    "application_journey": "9 scripted HTTP flows passed on exact candidate,117MiB peak,no swap",
+    "interaction_manifest_sha256": "56a2e9ebe126d789814c76689d77d8b4f945b2ffb9c1d9f859ebf49638f5561a",
+    "remote_evidence_sha256": "cf9f095182e579898ce1377cc34ed663377ebc9e4b6c9ce0faed88bc53cf2775",
+    "full_ci": "success on exact release commit55b31a849c0783ea9ce6f87db965ce7d33b61a58,run34184425532"
+  },
+  "selection_adaptations": [
+    "Retain installed release behavior where remote patch context refers to excluded maintenance-pause documentation or ghost-record cleanup. Remote lease behavior remains included."
+  ],
+  "excluded": [
+    "Unrelated newer main changes",
+    "Pending Inbox/performance/recovery PRs",
+    "Model pools and enterprise work"
+  ],
+  "known_limitations": [
+    "Production model/Git authentication and fresh scoped tailnet enrollment incomplete",
+    "Historical real EC2 canary used deterministic model/GitHub; completed/terminated and enrollment retired",
+    "Corrected source demonstrated on real local HTTP, not a new clean EC2 image",
+    "Spot recovery and pool controls pending",
+    "Phase05 stabilization and incident follow-up unproven"
+  ],
+  "budget": "$80 aggregate AWS allocation including retained resources; delayed billing is not a hard cap",
+  "installation": "Verify final CI and PR300 merge, publish immutable prerelease at exact SHA, use guarded bounded deployment script with drained tick lock, verify version/source and user journeys; preserve fast-forward pause/no-watch",
+  "rollback": "Install prior verified v0.2.0rc1/d24e677 at an accounted boundary; preserve state/results",
+  "distribution": "GitHub source archives; no wheel or PyPI upload",
+  "verified_at": "2026-09-08T03:50:19.529813+00:00"
+}

@@ -1,7 +1,7 @@
 ---
 id: CG-365
 title: Complete resource isolation enforcement and evidence after CG-361
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on:
@@ -13,9 +13,9 @@ branch: garden/cg-365-complete-resource-isolation-enforcement-and-evid
 pr: https://github.com/joshmarcus/context-garden/pull/249
 discovered_from: CG-361
 attempts: 1
-last_dispatched_at: '2026-09-07T01:50:08+00:00'
+last_dispatched_at: '2026-09-07T10:22:36+00:00'
 created: '2026-09-06T23:47:10+00:00'
-updated: '2026-09-07T03:07:45+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -69,3 +69,33 @@ Discovered originally byCG361 during run20260906T232501Z-revise; expanded from i
 - 2026-09-07T03:05:26+00:00 stuck: manual task has a revise round waiting; take it with `garden take`; take it (`garden take CG-365`) or send it back (`garden triage CG-365 --changes "..."`)
 - 2026-09-07T03:07:45+00:00 Recovery review validates real workload evidence but finds actionable /tmp fallback and capacity-surface regression gaps. Restore normal runner for actual implementation revision; preserve reviewer feedback. Screenshot dependency remains CG326, no fabricated PNG evidence.
 - 2026-09-07T03:07:45+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T03:40:33+00:00 stashed leftover changes from a prior run before redispatch: `git stash apply aac80792a1a447361387f7019897f7dc079e8e5d` in /home/joshua/work/worktrees/CG-365 to recover them (garden:CG-365:20260907T034033Z-revise:pre-dispatch, run 20260907T034033Z-revise)
+- 2026-09-07T03:40:35+00:00 dispatched revise run 20260907T034033Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~11927 tokens)
+- 2026-09-07T04:09:13+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/249: Fixed the usable secure /tmp fallback and made authoritative heavy-capacity conflicts explicit across the rail and observe feed, with active-state surface coverage. Final exact-head GitHub CI passed. cost=$2.58
+- 2026-09-07T04:13:52+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, inbox, n; run `garden triage CG-365 --changes "<feedback>" to unblock`
+- 2026-09-07T08:45:24+00:00 triage: changes requested by hand: Capture prerequisite is now satisfied: CG326/PR250 merged9d0c21366697d0ebcfee1bbca510fc3efa438986 after reviewer inspect
+- 2026-09-07T08:45:25+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T08:46:40+00:00 dispatched revise run 20260907T084638Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~12150 tokens)
+- 2026-09-07T09:01:09+00:00 preserved uncommitted worktree changes from run 20260907T084638Z-revise outside the PR: `git stash apply 6b2979380d88c3278c77de4ad5870a5d4a4a425b` in /home/joshua/work/worktrees/CG-365 (garden:CG-365:20260907T084638Z-revise:reap)
+- 2026-09-07T09:03:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/249: Integrated current main and recorded fresh, inspected rail and Configuration captures from a disposable finite execution-cgroup fixture. Focused resource and web checks, lint, and exact-head GitHub CI passed. cost=$1.30
+- 2026-09-07T09:07:31+00:00 description rewritten by the reviewer cost=$0.81
+- 2026-09-07T09:15:09+00:00 PR conflicts with main; rebase onto main conflicts (tests/test_web.py); a rebase agent will resolve it
+- 2026-09-07T09:17:31+00:00 dispatched rebase run 20260907T091729Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~27681 tokens)
+- 2026-09-07T09:20:20+00:00 preserved uncommitted worktree changes from run 20260907T091729Z-rebase outside the PR: `git stash apply b82da05546512110f64f1f18f5b2ca34a5b89377` in /home/joshua/work/worktrees/CG-365 (garden:CG-365:20260907T091729Z-rebase:reap)
+- 2026-09-07T09:22:16+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/249: Rebased onto origin/main and resolved only the rebase conflicts, preserving both sides' intent. cost=$0.02
+- 2026-09-07T09:29:32+00:00 automated review requested changes: Resource enforcement, operator surfaces, bounded workload evidence, and current-head CI are sound. Add the missing hostile-file coverage required for shared metadata and every lock class before merge. cost=$1.18
+- 2026-09-07T09:29:52+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-365`) or send it back (`garden triage CG-365 --changes "..."`)
+- 2026-09-07T09:35:08+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T10:05:33+00:00 dispatched revise run 20260907T100531Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~12704 tokens)
+- 2026-09-07T10:15:57+00:00 preserved uncommitted worktree changes from run 20260907T100531Z-revise outside the PR: `git stash apply 1d36d2925f0193b66c43422c62958b96c85e67f1` in /home/joshua/work/worktrees/CG-365 (garden:CG-365:20260907T100531Z-revise:reap)
+- 2026-09-07T10:17:27+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/249: Extended resource-lease hostile-file coverage across every shared metadata and lock path, then integrated current main. Exact-final-head GitHub CI passed. cost=$0.67
+- 2026-09-07T10:22:16+00:00 automated review: approve — Resource isolation enforcement, hardened shared leases, operator visibility, bounded workload evidence, and exact-head CI satisfy the task. Focused review checks passed, and all listed UI captures were inspected without task-related layout defects. cost=$1.50
+- 2026-09-07T10:22:33+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/web/templates/base.html); a rebase agent will resolve it
+- 2026-09-07T10:22:36+00:00 dispatched rebase run 20260907T102233Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~16743 tokens)
+- 2026-09-07T10:26:38+00:00 preserved uncommitted worktree changes from run 20260907T102233Z-rebase outside the PR: `git stash apply 2aebdfe52728e5b27aa7f1236363a4aa91e045cc` in /home/joshua/work/worktrees/CG-365 (garden:CG-365:20260907T102233Z-rebase:reap)
+- 2026-09-07T10:29:24+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/249: Rebased onto origin/main and resolved only the base.html conflicts, preserving both sides' intent. cost=$0.02
+- 2026-09-07T10:29:24+00:00 5 automated review round(s) used; this PR is yours — run `garden review CG-365` for one more round, or review on GitHub
+- 2026-09-07T10:35:38+00:00 triage: marked ready for review
+- 2026-09-07T10:40:54+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T10:45:50+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/249
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-365 is done: #249 was merged at 10:45:50

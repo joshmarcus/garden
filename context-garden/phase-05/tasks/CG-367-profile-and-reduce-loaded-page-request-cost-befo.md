@@ -1,15 +1,19 @@
 ---
 id: CG-367
 title: Profile and reduce loaded page request cost before increasing concurrency
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: hard
 reading: []
+branch: garden/cg-367-profile-and-reduce-loaded-page-request-cost-befo
+pr: https://github.com/joshmarcus/context-garden/pull/262
+attempts: 1
+last_dispatched_at: '2026-09-07T09:19:20+00:00'
 created: '2026-09-07T03:58:50+00:00'
-updated: '2026-09-07T03:59:41+00:00'
+updated: '2026-09-07T09:41:36+00:00'
 ---
 
 ## Goal
@@ -30,3 +34,14 @@ Repeated five-slot trials produced 2.5–3.1s pages while memory PSI/high/max/OO
 
 ## Log
 - 2026-09-07T03:59:41+00:00 Owner-requested optimization prioritization: phase05 stabilization improvement, priority1; preserve phase06 feature freeze and current4slot/4second policy.
+- 2026-09-07T04:44:47+00:00 dispatched work run 20260907T044412Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~9354 tokens)
+- 2026-09-07T05:03:53+00:00 opened https://github.com/joshmarcus/context-garden/pull/262 (base main): Profiled loaded Now and Inbox requests under bounded one- and four-slot workloads, then removed Inbox's largest demonstrated avoidable cost by deriving all event-backed panels from one fresh request-local history snapshot. The exact final commit passed GitHub CI. cost=$3.39
+- 2026-09-07T05:07:59+00:00 description rewritten by the reviewer cost=$0.80
+- 2026-09-07T09:15:11+00:00 PR conflicts with main; rebase onto main conflicts (tests/test_web.py); a rebase agent will resolve it
+- 2026-09-07T09:19:20+00:00 dispatched rebase run 20260907T091918Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~24947 tokens)
+- 2026-09-07T09:22:20+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/262: Resolved tests/test_web.py conflict and completed the rebase onto origin/main cost=$0.01
+- 2026-09-07T09:27:56+00:00 description rewritten by the reviewer cost=$0.85
+- 2026-09-07T09:31:04+00:00 hard-tier scratch-merge check passed; ready to merge once the queue reaches it
+- 2026-09-07T09:31:21+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T09:34:38+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-07T09:41:36+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/262

@@ -2,6 +2,7 @@
 plant: poppy
 latin: Papaver argemone
 plate: V
+closed: '2026-09-11'
 ---
 
 # phase-05 goals
@@ -99,3 +100,11 @@ Blocking the phase-04 close: CG-238 (merged), CG-239 (PR #193, in revise), CG-24
 ## Completion organization
 
 [Grouping policy](completion-tracks.md): group only unstarted work with a coherent shared deliverable. In-flight implementation, PRs, reviews, revisions, and recovery work are excluded. The previously proposed four tracks are withdrawn.
+
+## Owner acceptance of stabilization evidence, 2026-09-10
+
+Josh explicitly accepted the stabilization evidence: "i'm happy with the stabilization evidence, but we'll still need closing review". This is owner acceptance of the phase stabilization evidence, not a new test run or a claim that every historic metric passed. Do not require another stabilization run for phase closure. CG-423 is the sole unfinished Phase-05 task as verified at this decision. Once it merges, perform the closing review and address its blocking findings before closing Phase 05. Do not close the phase automatically on merge alone. Preserve original failures, intervention records and measured evidence in the closing account.
+
+## Owner authorizes retro task approval and post-closure release, 2026-09-10
+
+Review and approve eligible new tasks created by the Phase05 closing retro through the normal brief and phase gates, resolving routine gaps and duplicate findings while preserving explicit holds. After the closing review passes, blockers are resolved and Phase05 is actually closed, create and publish a new version and release from the accepted merged source. Preserve exact-source validation, CI, independent review, truthful release notes and existing active work. Live canaries are optional. This authorizes release publication after closure, not premature phase closure or any extra fleet spending/extension.

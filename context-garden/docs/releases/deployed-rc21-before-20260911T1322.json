@@ -1,0 +1,51 @@
+{
+  "version": "0.3.0rc21",
+  "tag": "v0.3.0rc21",
+  "release": "v0.3.0rc21",
+  "sha": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+  "commit": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+  "channel": "preview",
+  "release_url": "https://github.com/joshmarcus/context-garden/releases/tag/v0.3.0rc21",
+  "deployed_at": "2026-09-11T07:48:21.186249+00:00",
+  "verified_at": "2026-09-11T07:49:31.223730+00:00",
+  "status": "deployed_verified_with_recorded_cleanup_latency",
+  "prior_pin": "c2c862a77eb04189dda0ad863a3510d5161d713d",
+  "previous_pin": "c2c862a77eb04189dda0ad863a3510d5161d713d",
+  "phase05_gate": "OPEN: owner target/security/latency disposition and final closing-account acceptance remain",
+  "verification": [
+    "Exact main and candidate CI passed before publication; native independent source and ten-helper approval",
+    "317focused, actual RC20-client TCP and22worker-ingress checks passed",
+    "Controller and all six workers match all229sourcefiles and exact package/VCS source; process/configuration/caps/deadlines verified",
+    "Both rollout pauses resumed; cleanup limit restored20 without other configuration changes",
+    "First ordinary pass109.1seconds with20guarded deletions;10second warning remains",
+    "Native Windows HTTP Now/Inbox/CG621 all200 in3.888/3.364/3.994seconds; not a browser interaction"
+  ],
+  "fleet": {
+    "workers": 6,
+    "version": "0.3.0rc21",
+    "source_head": "e38b8404175e9b3a9ffcddb41251db3ac2d6f611",
+    "absolute_deadline": "2026-09-11T11:36:42Z",
+    "aggregate_budget_usd": 80,
+    "deadline_extended_by_this_deployment": false
+  },
+  "rollback": "Immutable RC20 runtime and preserved unit/evidence backups; use an accounted compatible boundary without rewinding native state",
+  "historical_record": "deployed-rc19-before-20260911T0755.json",
+  "evidence_sha256": {
+    "release-manifest.json": "8b6631de8dae17008fe9c377a126cc244a7717b61998b5e60c2e594f65c818cd",
+    "independent-release-review.json": "23608b733ad230193cde648244c82fe47cc15de7660d1249377bf2c7a77b5387",
+    "protocol-receipt.json": "976295761652de3cd15879fdbc8b608d2138f7669baad6e382820463dab8db9b",
+    "focused-selection-correction.json": "56889270da19fe5b71883d59dd33c35af6fa164099ecbc5c567c840237bf0972",
+    "release-candidate-pages.json": "fc1a333341c105931a62f2e2bd994093c19f151c104380bcc6134cf2a31a57bb",
+    "release-candidate-quiet-pages.json": "c232e018353ef71c665826c4228fdf5f7464e89dde6d400d1759bd294453dc63",
+    "workers-reconciliation-approved.json": "85d375d5396df156f8122ea668979ce92c6afcc23bb3278bde5d2e51bd062e2f",
+    "worker-restart-journals-0731.json": "c6d30b84523e4582f6afe728bcffb5508834f2e760b0b57e0210842ed3dd510a",
+    "restart-package-events-0735.json": "54296f37cbc94ed72c0162f5eba57616a90d0793d1f6a30cc4dee7d1eb58e401",
+    "controller-switched.json": "b7dd6004d32e7352838ba0413f09e4415a3ed815cb084f59a869cabcec7e4935",
+    "cleanup-limit-restored.json": "33766bc0a3a07a8817ed2b8bb13f69e16906e27de9fdf559774b9188a7ae3639",
+    "maintenance-resumed.json": "f51f9132f5f82410179f04f3f5e31b9ecf3329480b9390b3348e331cbefd228c",
+    "postactivation-audit.json": "4c34520d67995dfee82794c1bc872088ea202fe0395f0d71f5686747f877d25d",
+    "ordinary-operation-0753.json": "6e6b249e2e34b0d1806c991efbfae094d4a57b359eb74005dea824533ae30ec9",
+    "windows-live-http-0750.json": "9f3830392a8ee3dd72a92093f25cca42de58ddbae6fde46d9038825e05322f30",
+    "final-independent-review.json": "2137ca9a3acba3649104f086def3ac2ecf98bda768c9c40904c6529f78883d3b"
+  }
+}

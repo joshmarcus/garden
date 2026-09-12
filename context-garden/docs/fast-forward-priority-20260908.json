@@ -1,0 +1,203 @@
+{
+  "at": "2026-09-08T03:58:33.350419+00:00",
+  "owner_order": [
+    "verify production AWS worker",
+    "eligible priority Phase07 tasks and associated PRs",
+    "Phase05 tasks and remaining eligible PRs"
+  ],
+  "specific_holds": [
+    "CG-402",
+    "CG-403",
+    "CG-407",
+    "CG-408"
+  ],
+  "phase07_inventory": [
+    {
+      "id": "CG-395",
+      "title": "Support explicit GitHub Enterprise hosts across all repository operations",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-396",
+      "title": "Use pluggable exact-head CI status for review and merge eligibility",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": [
+        "CG-395"
+      ]
+    },
+    {
+      "id": "CG-397",
+      "title": "Respect external branch-stack ownership and configurable protected paths",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-399",
+      "title": "Keep physical host identities out of committed context and public evidence",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-400",
+      "title": "Define the least-privilege worker identity and internal tooling policy",
+      "status": "cancelled",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-406",
+      "title": "Support fenced in-place canonical checkouts with safe per-run reconciliation",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-409",
+      "title": "Finish manual work pushed from another machine without a local authoring checkout",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-410",
+      "title": "Show eligible manual work in Inbox with a safe take action",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-411",
+      "title": "Adopt an existing PR with its verified branch and revision identity",
+      "status": "ready",
+      "priority": 0,
+      "depends_on": []
+    },
+    {
+      "id": "CG-398",
+      "title": "Validate a human-gated enterprise profile with bot feedback and private notifications",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": [
+        "CG-395",
+        "CG-397"
+      ]
+    },
+    {
+      "id": "CG-401",
+      "title": "Pass approved tool configuration into scrubbed local and remote workers",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-402",
+      "title": "Export immutable run evaluation evidence into context under an approved policy",
+      "status": "draft",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-403",
+      "title": "Validate a manual-run enterprise PR and exact-head CI journey",
+      "status": "draft",
+      "priority": 1,
+      "depends_on": [
+        "CG-395",
+        "CG-396",
+        "CG-397",
+        "CG-398",
+        "CG-399",
+        "CG-402",
+        "CG-409",
+        "CG-410",
+        "CG-411"
+      ]
+    },
+    {
+      "id": "CG-404",
+      "title": "Add command-backed host acquisition readiness and warm reuse to the shared lifecycle",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": [
+        "CG-399",
+        "CG-345"
+      ]
+    },
+    {
+      "id": "CG-405",
+      "title": "Apply host-local resource admission and capability routing to command-backed hosts",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": [
+        "CG-404",
+        "CG-346"
+      ]
+    },
+    {
+      "id": "CG-407",
+      "title": "Require content and deployment verification before describing a change as shipped",
+      "status": "draft",
+      "priority": 1,
+      "depends_on": [
+        "CG-396",
+        "CG-402"
+      ]
+    },
+    {
+      "id": "CG-412",
+      "title": "Resolve check commands analyzers and timeouts per product",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-413",
+      "title": "Use product-specific execution timeouts and weighted resource admission",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-414",
+      "title": "Assign owners to tasks and phases and filter work by owner",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-415",
+      "title": "Register private runner adapters through trusted configuration",
+      "status": "ready",
+      "priority": 1,
+      "depends_on": []
+    },
+    {
+      "id": "CG-408",
+      "title": "Demonstrate the constrained remote environment with recovery and human gates",
+      "status": "draft",
+      "priority": 2,
+      "depends_on": [
+        "CG-406",
+        "CG-407",
+        "CG-398",
+        "CG-412",
+        "CG-413",
+        "CG-414",
+        "CG-415",
+        "CG-416"
+      ]
+    },
+    {
+      "id": "CG-416",
+      "title": "Aggregate brief size and startup-context regressions in metrics",
+      "status": "ready",
+      "priority": 2,
+      "depends_on": []
+    }
+  ]
+}

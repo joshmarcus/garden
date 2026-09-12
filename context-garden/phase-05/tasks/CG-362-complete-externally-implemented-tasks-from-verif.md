@@ -1,7 +1,7 @@
 ---
 id: CG-362
 title: Complete externally implemented tasks from verified PR metadata
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -11,9 +11,9 @@ reading: []
 branch: garden/cg-362-complete-externally-implemented-tasks-from-verif
 pr: https://github.com/joshmarcus/context-garden/pull/261
 attempts: 1
-last_dispatched_at: '2026-09-07T13:37:20+00:00'
+last_dispatched_at: '2026-09-08T09:08:27+00:00'
 created: '2026-09-06T22:23:48+00:00'
-updated: '2026-09-07T15:29:52+00:00'
+updated: '2026-09-08T10:59:44+00:00'
 ---
 
 ## Goal
@@ -76,3 +76,29 @@ Source evidence: docs/incidents/CG-360-validation.md, CG-360 task log and manual
 - 2026-09-07T13:40:58+00:00 preserved uncommitted worktree changes from run 20260907T133717Z-rebase outside the PR: `git stash apply e190249e1488118677decda7fdd092e6c35d623e` in /home/joshua/work/worktrees/CG-362 (garden:CG-362:20260907T133717Z-rebase:reap)
 - 2026-09-07T13:43:47+00:00 pre-PR checks failed (lint) and 3 revision rounds already used; needs a human cost=$0.04
 - 2026-09-07T15:29:52+00:00 re-enabled by hand with one more round past the revision cap; revise run will follow
+- 2026-09-07T15:37:17+00:00 automated review: request_changes — The lifecycle behavior is covered by 95 passing focused tests, but final-head lint fails on a duplicated test definition. The required scheduler replay manifest is also absent at the supplied path. cost=$0.54
+- 2026-09-07T16:37:55+00:00 Temporary operator incident admission hold to reserve next drained slot for P0 CG385 recovery; preserve all work. Restore original runner from docs/incidents/cg385-recovery-admission-holds.json after CG385 starts.
+- 2026-09-07T16:39:06+00:00 stuck: manual task has a revise round waiting; take it with `garden take`; take it (`garden take CG-362`) or send it back (`garden triage CG-362 --changes "..."`)
+- 2026-09-07T17:01:39+00:00 Operator restored original runner after CG385 recovery repair acquired actual execution slot. Shared cap remains1.
+- 2026-09-07T18:59:47+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T18:59:47+00:00 Delegated operator Inbox audit: cleared stale manual-hold stop after verified normal runner restoration; existing implementation, PR and pending review feedback retained. No owner decision required.
+- 2026-09-07T22:18:04+00:00 dispatched revise run 20260907T221801Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~14614 tokens)
+- 2026-09-07T22:26:52+00:00 preserved uncommitted worktree changes from run 20260907T221801Z-revise outside the PR: `git stash apply 9b56d794dfbcdc63c58183b0e4cd98910186c671` in /home/joshua/work/worktrees/CG-362 (garden:CG-362:20260907T221801Z-revise:reap)
+- 2026-09-07T22:29:09+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/261: Removed the duplicate stacked-child external completion regression test that caused final-head lint to fail. Focused scheduler tests, lint, and exact-head GitHub CI now pass. cost=$0.47
+- 2026-09-07T22:29:19+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/dispatch.py); a rebase agent will resolve it
+- 2026-09-07T22:29:28+00:00 dispatched rebase run 20260907T222925Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~4518 tokens)
+- 2026-09-07T22:37:36+00:00 preserved uncommitted worktree changes from run 20260907T222925Z-rebase outside the PR: `git stash apply bc7f059dda65cfb78308de9a362a4e2ee9a58ae7` in /home/joshua/work/worktrees/CG-362 (garden:CG-362:20260907T222925Z-rebase:reap)
+- 2026-09-07T22:37:36+00:00 rebase conflict run 20260907T222925Z-rebase did not finish: worker exited 1: {'message': 'unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a3792fa32d5c9bb4-EWR, request id: req_c7322bb24df84; will retry
+- 2026-09-07T22:37:36+00:00 rebase conflict run 20260907T222925Z-rebase did not finish: worker exited 1: {'message': 'unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a3792fa32d5c9bb4-EWR, request id: req_c7322bb24df84; will retry
+- 2026-09-07T22:41:37+00:00 automated review: request_changes — External completion largely satisfies the lifecycle requirements, but `take --pr` accepts a URL for any repository while resolving and persisting identity from the configured repository's same-numbered PR. The required disposable served-interaction manifest is also absent, leaving the mandated journey unverified. cost=$0.34
+- 2026-09-07T22:42:38+00:00 dispatched rebase run 20260907T224236Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~4884 tokens)
+- 2026-09-07T22:43:44+00:00 preserved uncommitted worktree changes from run 20260907T224236Z-rebase outside the PR: `git stash apply 0665911fc6fe61516dbe2c956a14a3b6ee0c5d55` in /home/joshua/work/worktrees/CG-362 (garden:CG-362:20260907T224236Z-rebase:reap)
+- 2026-09-07T22:46:09+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/261: Rebased onto origin/main and resolved the dispatch.py conflict preserving validation-plan capture and external worktree handling. cost=$0.02
+- 2026-09-07T22:58:43+00:00 stalled: review finding repeated after a revise round: acceptance criterion lacks a passing, evidenced assessment: support claiming ext; run `garden triage CG-362 --changes "<feedback>" to unblock`
+- 2026-09-08T02:27:56+00:00 triage: changes requested by hand: Delegated operator authorizes continuing. Fix repository identity validation for take --pr: reject URLs for a different
+- 2026-09-08T09:08:27+00:00 dispatched revise run 20260908T090825Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~15254 tokens)
+- 2026-09-08T09:21:49+00:00 preserved uncommitted worktree changes from run 20260908T090825Z-revise outside the PR: `git stash apply f695da36b81130f465d3330c1d1e6ed4cf2951d8` in /home/joshua/work/worktrees/CG-362 (garden:CG-362:20260908T090825Z-revise:reap)
+- 2026-09-08T09:31:19+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/261: Validated external PR URLs against the configured GitHub repository before resolving their PR number, preventing same-number identity confusion. Added focused host/repository mismatch coverage and verified the final commit with disposable interaction replay, lint, and exact-head GitHub CI. cost=$1.44
+- 2026-09-08T09:36:27+00:00 review validation scope expansion: Task-specific served interaction — The required replay covers generic approve/revise/close flows rather than the changed external claim and completion lifecycle.
+- 2026-09-08T09:36:28+00:00 stalled: review finding repeated after a revise round: acceptance criterion lacks a passing, evidenced assessment: support claiming ext; run `garden triage CG-362 --changes "<feedback>" to unblock`
+- 2026-09-08T10:59:44+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/261

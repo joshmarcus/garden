@@ -1,0 +1,8 @@
+{
+  "old_pid": "365710",
+  "preserved_checks": {
+    "/home/joshua/garden/.garden/runs/CG-385/20260907T201104Z-check/run.json": "c4eb2dd3843733c9a5bc4f71757309bf6a1c3991b6ee2b03f3246a9b97637ad3",
+    "/home/joshua/garden/.garden/runs/CG-386/20260907T201227Z-check/run.json": "d8339c365eead25226760b31cee6beba171827924de35b8a292549dd75c20423"
+  },
+  "reason": "No active runtime users; cached controller memory still blocks resource repair admission."
+}

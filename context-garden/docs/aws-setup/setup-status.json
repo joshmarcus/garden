@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-07T19:06:36.433025+00:00",
+  "stack": "context-garden-phase05-infrastructure",
+  "status": "CREATE_COMPLETE",
+  "resources": {
+    "VpcId": "vpc-0b3a690d87cdb3e64",
+    "SecurityGroupId": "sg-042e4fd7d39c06857",
+    "SubnetId": "subnet-0158ea83a40af1cbc",
+    "InstanceProfileArn": "arn:aws:iam::350111791226:instance-profile/ContextGardenWorker",
+    "BootstrapSecretArn": "arn:aws:secretsmanager:us-east-1:350111791226:secret:context-garden/phase05/bootstrap-pbTY7e"
+  },
+  "no_inbound_verified": true,
+  "launch_dry_run_authorized": true,
+  "instances_launched": 0,
+  "budget": {
+    "name": "context-garden-80-total-trial",
+    "amount_usd": 80,
+    "time_unit": "CUSTOM",
+    "start": "2026-09-07",
+    "end": "2027-09-07",
+    "scope": "account-wide, credits/refunds excluded conservatively",
+    "scoped_read_verified": true,
+    "notifications": "operator heartbeat; no email/SNS subscribers configured",
+    "hard_cap": false
+  },
+  "root_use": "Explicitly owner-authorized one-time stack creation, budget and scoped IAM correction; routine operations return to garden-provisioner",
+  "remaining": [
+    "CG216 approval/deployment",
+    "CG345 real bootstrap/tagging/cleanup repair and review",
+    "Populate compatible bootstrap secret securely and enroll one host with independent deadline and retained-resource inventory"
+  ],
+  "tailscale": {
+    "policy_verified": "tag:garden-worker may access only 100.92.173.44 tcp:443; personal-user access preserved",
+    "auth_key": "Saved locally outside repository, permissions restored to0600 after editor save; value not logged; not consumed or uploaded",
+    "worker_enrolled": false
+  },
+  "latest_canary": {
+    "status": "passed and terminated",
+    "task": "CG-346",
+    "pr": 300,
+    "evidence": "cg346-live-canary.json",
+    "active_trial_instances": 0,
+    "production_deployed": false,
+    "enrollment": "trial credentials retired; staged tailnet key consumed"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadOnlyGardenTrialBudget",
+      "Effect": "Allow",
+      "Action": "budgets:ViewBudget",
+      "Resource": "arn:aws:budgets::350111791226:budget/context-garden-80-total-trial"
+    }
+  ]
+}

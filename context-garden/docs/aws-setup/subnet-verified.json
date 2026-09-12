@@ -1,0 +1,52 @@
+{
+  "Subnets": [
+    {
+      "AvailabilityZoneId": "use1-az6",
+      "MapCustomerOwnedIpOnLaunch": false,
+      "OwnerId": "350111791226",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "context-garden"
+        },
+        {
+          "Key": "aws:cloudformation:logical-id",
+          "Value": "WorkerSubnet"
+        },
+        {
+          "Key": "aws:cloudformation:stack-id",
+          "Value": "arn:aws:cloudformation:us-east-1:350111791226:stack/context-garden-phase05-infrastructure/6294d1c0-aaec-11f1-8ebc-128124cdfbfb"
+        },
+        {
+          "Key": "aws:cloudformation:stack-name",
+          "Value": "context-garden-phase05-infrastructure"
+        },
+        {
+          "Key": "Pool",
+          "Value": "phase05"
+        }
+      ],
+      "SubnetArn": "arn:aws:ec2:us-east-1:350111791226:subnet/subnet-0158ea83a40af1cbc",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "SubnetId": "subnet-0158ea83a40af1cbc",
+      "State": "available",
+      "VpcId": "vpc-0b3a690d87cdb3e64",
+      "CidrBlock": "10.86.0.0/26",
+      "AvailableIpAddressCount": 59,
+      "AvailabilityZone": "us-east-1d",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": true
+    }
+  ]
+}

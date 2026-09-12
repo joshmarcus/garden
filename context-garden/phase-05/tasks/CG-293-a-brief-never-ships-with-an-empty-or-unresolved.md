@@ -2,7 +2,7 @@
 id: CG-293
 title: A brief never ships with an empty or unresolved reading list, and a revise brief restates the criteria
   and the concrete blocker
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -14,9 +14,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/240
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-06T20:44:54+00:00'
+last_dispatched_at: '2026-09-07T03:00:25+00:00'
 created: '2026-09-05T23:58:18+00:00'
-updated: '2026-09-07T02:13:54+00:00'
+updated: '2026-09-07T03:28:04+00:00'
 ---
 
 ## Goal
@@ -85,3 +85,8 @@ A follow-up carried into phase-05 by the context-garden/phase-04 retro verdict, 
 - 2026-09-06T22:02:08+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-293`) or send it back (`garden triage CG-293 --changes "..."`)
 - 2026-09-07T02:13:51+00:00 triage: changes requested by hand: Recover the existing PR240 rather than restart implementation. Incorporate current main and resolve conflicts, then reva
 - 2026-09-07T02:13:54+00:00 Operator02:12 UTC investigated owner question: no live run; PR240 open at95ea8829, conflicts and historical failed CI. Persisted last_review has three concrete findings but pending_feedback was empty, producing stuck no-feedback since22:02. Restored findings via supported triage-changes/retry, preserving branch and nine-rebase history; eligible when integrity pause is lifted, not newly dispatched. Revalidate findings against current main, preserve unrelated snapshot, use current exact-head CI.
+- 2026-09-07T03:00:25+00:00 dispatched revise run 20260907T030023Z-revise via local [codex model=gpt-5.6-terra] (fresh session, base main, ~12045 tokens)
+- 2026-09-07T03:19:36+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/240: Recovered and integrated PR #240 with current main, made criteria-amendment reap idempotent, added full worker-result-to-review-brief coverage, and removed the unrelated snapshot diff. Exact-head CI passed. cost=$1.18
+- 2026-09-07T03:22:07+00:00 description rewritten by the reviewer cost=$0.39
+- 2026-09-07T03:22:17+00:00 rebasing before merge; rebase onto main conflicts (src/garden/brief.py, src/garden/review.py, src/garden/scheduler/reap.py, tests/scheduler/test_reap.py); a rebase agent will resolve it
+- 2026-09-07T03:28:04+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/240

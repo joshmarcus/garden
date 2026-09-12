@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-08T03:57:21.721248+00:00",
+  "result": "AWS CLI remote login renewed successfully",
+  "account": "350111791226",
+  "login_profile": "garden-login",
+  "principal": "context-garden-operator",
+  "provisioning_profile": "garden-provisioner",
+  "credentials_stored": "AWS CLI-managed cache only; authorization code not retained in this checkpoint",
+  "production_model_auth": "Separate dedicated Codex worker login remains incomplete"
+}

@@ -1,7 +1,7 @@
 ---
 id: CG-337
 title: Attention cards ask for product decisions, while no-change reports reconcile automatically
-status: running
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -12,9 +12,9 @@ reading: []
 branch: garden/cg-337-attention-cards-ask-for-product-decisions-while
 pr: https://github.com/joshmarcus/context-garden/pull/235
 attempts: 1
-last_dispatched_at: '2026-09-06T20:11:48+00:00'
+last_dispatched_at: '2026-09-06T20:37:25+00:00'
 created: '2026-09-06T13:20:33+00:00'
-updated: '2026-09-06T20:11:48+00:00'
+updated: '2026-09-06T22:02:04+00:00'
 ---
 
 ## Goal
@@ -50,3 +50,9 @@ Additional takeover evidence: setting CG-324 in_review while its pre-PR check wa
 - 2026-09-06T20:11:34+00:00 nothing to fix; resumed to in review by hand
 - 2026-09-06T20:11:45+00:00 PR conflicts with main; rebase onto main conflicts (src/garden/scheduler/checkruns.py); a rebase agent will resolve it
 - 2026-09-06T20:11:48+00:00 dispatched rebase run 20260906T201146Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8517 tokens)
+- 2026-09-06T20:27:18+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/235: Rebased CG-337 onto origin/main and resolved the check-run state conflict without other changes cost=$0.01
+- 2026-09-06T20:30:30+00:00 automated review requested changes: The requested behavior and UI evidence are present and targeted checks pass, but the PR still replaces an unrelated generated runtime snapshot with roughly 69,000 changed lines. cost=$0.41
+- 2026-09-06T20:37:25+00:00 dispatched revise run 20260906T203723Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~10078 tokens)
+- 2026-09-06T20:46:59+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/235: Restored the unrelated generated snapshot exactly from origin/main while preserving the completed no-change reconciliation, product-decision cards, and operational recovery behavior. Verified the implementation, full suite, lint, and representative captures. cost=$0.87
+- 2026-09-06T20:58:19+00:00 stalled: review finding repeated after a revise round: ui captures not read for: board, board-list, config, events, herbarium, now, now; run `garden triage CG-337 --changes "<feedback>" to unblock`
+- 2026-09-06T22:02:04+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/235

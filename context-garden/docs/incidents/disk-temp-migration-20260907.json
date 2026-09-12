@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-07T17:25:22.800816+00:00",
+  "operator_action": "Owner-authorized switch of work/tmp from RAM tmpfs to disk-backed tmp-disk; atomic symlink replacement under tick lock; existing directories preserved with per-run symlinks. New worker/check TMPDIR and admission temp sensor use disk automatically. No restart.",
+  "filesystem": "ext4",
+  "preserved": [
+    "/tmp/garden-work/20260907T170131Z-revise"
+  ],
+  "rollback": "Atomically restore work/tmp symlink to /tmp/garden-work only after accounting for newly active disk runs. Do not delete the preserved active temp directory."
+}

@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-11T00:03:32.657736+00:00",
+  "status": "draft; actualRC20acceptance/activation, finalmetrics, independentreview andownerdisposition remain",
+  "source_runtime": "RC19/70ae9179ae6e2af865aef5a8cecca90460328c4d",
+  "account_sha256": "ce85d938b50fc1c4f60d9d5111b6c0b177e6be30b62bf62175e2951b78165685",
+  "preserved_original_reports": 24,
+  "evidence": [
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc19-deploy-20260910/cleanup-watch-interrupt-16.json",
+      "sha256": "dd72130c4c1dab34aefca3b6ca776dee931e835ecc57157af9ad76d20cba9d8c"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/rc19-deploy-20260910/completed-corrections-recovery-2355.json",
+      "sha256": "8a431ce735bf101858909908d891d84fb1748832c5fd1663652adde5b4b56020"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/input-sweep-20260910T2343-actions.json",
+      "sha256": "b8475eff9fb68c382d7a125c82551461540e1a8efb8bac5852afa205c242ac69"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/input-sweep-20260910T2348-allowances.json",
+      "sha256": "d481b1f65171c588ee449cb063767657bccf775716effc945918d96ede3dfe57"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/input-sweep-20260910T2350-final.json",
+      "sha256": "5450511ca600da4a2ebd06de2325d99f10eb1a1a3cbe5742f24fd56f424876f4"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/aws-renew-20260909/extend12h-20260910T2325/extension-complete.json",
+      "sha256": "f571ca1d2f008cfb583641ec7e1cd5153feb64db9dbd5a02e782288bbcc2acbb"
+    },
+    {
+      "path": "/home/joshua/work/operator-test-tmp/aws-renew-20260909/extend12h-20260910T2325/verification.json",
+      "sha256": "15d9ae2e40f871211db7ce63e0ba7e521aec0157e2d2782b3cec80c5d4ca3b25"
+    }
+  ]
+}

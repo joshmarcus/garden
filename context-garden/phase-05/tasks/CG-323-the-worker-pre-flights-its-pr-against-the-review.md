@@ -23,7 +23,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/241
 attempts: 1
 last_dispatched_at: '2026-09-07T10:02:21+00:00'
 created: '2026-09-06T03:59:37+00:00'
-updated: '2026-09-07T14:27:18+00:00'
+updated: '2026-09-07T15:18:09+00:00'
 ---
 
 ## Goal
@@ -121,3 +121,4 @@ Owner, 2026-09-06 04:05Z: 'How can we reduce the number of review rounds?' Of 85
 - 2026-09-07T10:15:53+00:00 automated review: request_changes — The pre-flight and frozen-criteria flows are largely implemented and 107 focused tests pass, but the conflict-marker check rejects valid clean diffs containing an added Setext heading underline. cost=$0.96
 - 2026-09-07T10:17:09+00:00 triage: marked ready for review
 - 2026-09-07T14:27:18+00:00 Operator fast-forward: GitHub merge verified 8998db4310f69a4194179d5960a77ada2e002a92; exact-head CI and operator self-review passed. Not yet deployed.
+- 2026-09-07T15:18:09+00:00 automated review could not start: CG-323 is done: Operator fast-forward: GitHub merge verified 8998db4310f69a4194179d5960a77ada2e002a92; exact-head CI and operator self-review passed. Not yet deployed. at 14:27:18

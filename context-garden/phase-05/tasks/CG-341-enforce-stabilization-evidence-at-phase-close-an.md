@@ -14,7 +14,7 @@ pr: https://github.com/joshmarcus/context-garden/pull/247
 attempts: 1
 last_dispatched_at: '2026-09-06T23:23:20+00:00'
 created: '2026-09-06T13:46:36+00:00'
-updated: '2026-09-07T01:13:09+00:00'
+updated: '2026-09-07T15:18:12+00:00'
 ---
 
 ## Goal
@@ -45,3 +45,4 @@ The owner raised the worker/shared local-run limit to four after GitHub CI offlo
 - 2026-09-07T01:04:02+00:00 2026-09-07 01:02 UTC: after CG354 merged, incorporated current main332ee916 and pushed1b0894c11de51982eb654eea18d4e23aad5bd457. Branch-specific diff byte-identical before/after integration. Previous6132f888 head CI passed; new head CI pending. PR description updated; first review after current-head CI and free reviewer slot.
 - 2026-09-07T01:09:04+00:00 PR merged: https://github.com/joshmarcus/context-garden/pull/247
 - 2026-09-07T01:13:09+00:00 Operator01:13 UTC verified GitHub merged_by joshmarcus and normal DONE reconciliation. CG361 review010546 completed after merge with four blocking resource findings; existing CG365 expanded/approved and dispatched as priority follow-up. Do not redispatch merged tasks or claim unresolved review criteria passed. Installed build remainsfc658809 until follow-up deployment is validated.
+- 2026-09-07T15:18:12+00:00 automated review could not start: CG-341 is done: #247 was merged at 01:13:09

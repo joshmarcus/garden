@@ -1,15 +1,19 @@
 ---
 id: CG-369
 title: Align phase-close gate with fixture-sufficient onboarding requirement
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
 priority: 1
 difficulty: medium
 reading: []
+branch: garden/cg-369-align-phase-close-gate-with-fixture-sufficient-o
+pr: https://github.com/joshmarcus/context-garden/pull/264
+attempts: 1
+last_dispatched_at: '2026-09-07T05:17:02+00:00'
 created: '2026-09-07T04:12:27+00:00'
-updated: '2026-09-07T04:12:57+00:00'
+updated: '2026-09-07T05:50:53+00:00'
 ---
 
 ## Goal
@@ -44,3 +48,10 @@ What the agent needs to know that is not in the reading list.
 
 - ...
 - 2026-09-07T04:12:57+00:00 Owner explicitly removed named external adoption from phase gate; policy updated immediately, this task aligns merged enforcement before deployment.
+- 2026-09-07T05:17:02+00:00 dispatched work run 20260907T051635Z-work via local [codex model=gpt-5.6-terra] (fresh session, base main, ~9195 tokens)
+- 2026-09-07T05:30:22+00:00 preserved uncommitted worktree changes from run 20260907T051635Z-work outside the PR: `git stash apply ab5af4d22ee6ef008fead2f9d428adb1d333a7c7` in /home/joshua/work/worktrees/CG-369 (garden:CG-369:20260907T051635Z-work:reap)
+- 2026-09-07T05:31:48+00:00 opened https://github.com/joshmarcus/context-garden/pull/264 (base main): Fixture-backed current-build onboarding evidence now satisfies stabilization closure without requiring real-user provenance, while every other stabilization requirement remains enforced. Real-user provenance remains recorded and visible as optional context. cost=$0.74
+- 2026-09-07T05:33:11+00:00 automated review: approve — Fixture evidence now satisfies the onboarding gate without being mislabeled as real-user adoption, while the remaining stabilization gates are preserved. Focused tests, lint, and exact-head CI all pass. cost=$0.23
+- 2026-09-07T05:39:20+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-07T05:49:23+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T05:50:53+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/264

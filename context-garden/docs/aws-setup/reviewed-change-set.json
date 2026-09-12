@@ -1,0 +1,150 @@
+{
+  "Changes": [
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "BootstrapSecret",
+        "ResourceType": "AWS::SecretsManager::Secret",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "GatewayAttachment",
+        "ResourceType": "AWS::EC2::VPCGatewayAttachment",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "InternetGateway",
+        "ResourceType": "AWS::EC2::InternetGateway",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "InternetRoute",
+        "ResourceType": "AWS::EC2::Route",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "SubnetRouteAssociation",
+        "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerInstanceProfile",
+        "ResourceType": "AWS::IAM::InstanceProfile",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerRole",
+        "ResourceType": "AWS::IAM::Role",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerRouteTable",
+        "ResourceType": "AWS::EC2::RouteTable",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerSecurityGroup",
+        "ResourceType": "AWS::EC2::SecurityGroup",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerSubnet",
+        "ResourceType": "AWS::EC2::Subnet",
+        "Scope": [],
+        "Details": []
+      }
+    },
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Add",
+        "LogicalResourceId": "WorkerVpc",
+        "ResourceType": "AWS::EC2::VPC",
+        "Scope": [],
+        "Details": []
+      }
+    }
+  ],
+  "ChangeSetName": "operator-bootstrap-20260907",
+  "ChangeSetId": "arn:aws:cloudformation:us-east-1:350111791226:changeSet/operator-bootstrap-20260907/dde0f4a4-536d-407a-ac39-0ae887c36f4f",
+  "StackId": "arn:aws:cloudformation:us-east-1:350111791226:stack/context-garden-phase05-infrastructure/6294d1c0-aaec-11f1-8ebc-128124cdfbfb",
+  "StackName": "context-garden-phase05-infrastructure",
+  "Description": null,
+  "Parameters": null,
+  "CreationTime": "2026-09-07T18:46:06.893000+00:00",
+  "ExecutionStatus": "AVAILABLE",
+  "Status": "CREATE_COMPLETE",
+  "StatusReason": null,
+  "NotificationARNs": [],
+  "RollbackConfiguration": {},
+  "Capabilities": [
+    "CAPABILITY_NAMED_IAM"
+  ],
+  "Tags": [
+    {
+      "Key": "ManagedBy",
+      "Value": "context-garden"
+    },
+    {
+      "Key": "Pool",
+      "Value": "phase05"
+    }
+  ],
+  "ParentChangeSetId": null,
+  "IncludeNestedStacks": false,
+  "RootChangeSetId": null,
+  "OnStackFailure": null,
+  "ImportExistingResources": null,
+  "StackDriftStatus": null,
+  "DeploymentMode": null,
+  "DeploymentConfig": {
+    "Mode": "STANDARD",
+    "DisableRollback": false
+  }
+}

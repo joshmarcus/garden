@@ -1,0 +1,152 @@
+{
+  "allowed": false,
+  "explicitDeny": false,
+  "matchedStatements": {
+    "items": []
+  },
+  "failures": {
+    "items": []
+  },
+  "context": {
+    "principal": {
+      "id": "AROAVDBCJ7B5CO2HZ5JXP:botocore-session-1788805622",
+      "arn": "arn:aws:sts::350111791226:assumed-role/ContextGardenProvisioner/botocore-session-1788805622"
+    },
+    "action": "RunInstances",
+    "resource": "arn:aws:ec2:us-east-1::image/ami-025d99823a4caad37",
+    "conditions": {
+      "items": [
+        {
+          "key": "ec2:ImageID",
+          "values": {
+            "items": [
+              {
+                "value": "ami-025d99823a4caad37"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:ImageType",
+          "values": {
+            "items": [
+              {
+                "value": "machine"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:Resource",
+          "values": {
+            "items": [
+              {
+                "value": "image/ami-025d99823a4caad37"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:Account",
+          "values": {
+            "items": [
+              {
+                "value": "099720109477"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:IsLaunchTemplateResource",
+          "values": {
+            "items": [
+              {
+                "value": "false"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:RootDeviceType",
+          "values": {
+            "items": [
+              {
+                "value": "ebs"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:Region",
+          "values": {
+            "items": [
+              {
+                "value": "us-east-1"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:Service",
+          "values": {
+            "items": [
+              {
+                "value": "ec2"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:Owner",
+          "values": {
+            "items": [
+              {
+                "value": "amazon"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:Public",
+          "values": {
+            "items": [
+              {
+                "value": "true"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:Type",
+          "values": {
+            "items": [
+              {
+                "value": "image"
+              }
+            ]
+          }
+        },
+        {
+          "key": "ec2:Region",
+          "values": {
+            "items": [
+              {
+                "value": "us-east-1"
+              }
+            ]
+          }
+        },
+        {
+          "key": "aws:ARN",
+          "values": {
+            "items": [
+              {
+                "value": "arn:aws:ec2:us-east-1::image/ami-025d99823a4caad37"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

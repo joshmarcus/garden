@@ -1,0 +1,1292 @@
+Timeline · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+Timeline
+Every transition, run, review and decision, newest first. The digest on the right is what you'd want to know after being away.
+
+  6h24h3d1w
+  300 events · 814 dispatches · $338.90
+
+    Needed you
+09-09T13:00CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:00CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:01CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:01CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:03CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:03CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:05CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:05CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:06CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:06CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:07CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:07CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:09CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:09CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:10CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:10CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:11CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:11CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:12CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:12CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:14CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:14CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:15CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:15CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:16CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:16CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:17CG-465review finding repeated after a revise round: acceptance criterion is explicitly unmet: new review comments, findings and revi
+09-09T13:17CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:17CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:18CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:18CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:20CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:20CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:21CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:21CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:23CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:23CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:24CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:24CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:26CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:26CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:27CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:27CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:28CG-230check did not run (20260909T115117Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:28CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:30CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:31CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:32CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:34CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:35CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:36CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:38CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:39CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:40CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:41CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:43CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:44CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:46CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:47CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:49CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:50CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:51CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:53CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:54CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:55CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:56CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:58CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T13:59CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:00CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:02CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:03CG-230review finding repeated after a revise round: acceptance criterion is explicitly unmet: runs, prs and reviews record the membe
+09-09T14:03CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:05CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:06CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:07CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:09CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:10CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:12CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:13CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:15CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:16CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:17CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:18CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:20CG-437revision failed: worker timed out
+09-09T14:20CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:21CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:22CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:23CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:25CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:27CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:28CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:29CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:31CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:32CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:33CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:35CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:36CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:37CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:38CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:39CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:41CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:41CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:42CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:43CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:45CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:46CG-349base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 2f8c5c4181e9, not because of this branch
+09-09T14:46CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:47CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:49CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:50CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:51CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:53CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:54CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:55CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:57CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T14:58CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:00CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:01CG-349base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 9f972bdbe148, not because of this branch
+09-09T15:01CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:01CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:02CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:03CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:05CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:06CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:08CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:10CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:12CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:13CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:14CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:15CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:16CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:18CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:19CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:19CG-475review finding repeated after a revise round: acceptance criterion is explicitly unmet: refresh configured ci/check or validat
+09-09T15:20CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:22CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:23CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:24CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:26CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:27CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:28CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:30CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:31CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:33CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:34CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:35CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:36CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:37CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:39CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:40CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:40CG-478review finding repeated after a revise round: acceptance criterion is explicitly unmet: add proportionate regression coverage
+09-09T15:42CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:43CG-411check did not run (20260909T121325Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T15:46CG-230review finding repeated after a revise round: acceptance criterion is explicitly unmet: tier pools alternate, honor weights, a
+09-09T16:05CG-484stuck: pending feedback recorded but the task is in_review, not changes_requested
+09-09T16:14CG-349base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit 982dd614e6b0, not because of this branch
+09-09T16:17CG-349base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit e0bd7e99c244, not because of this branch
+09-09T16:35CG-349base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit f4daa3b15657, not because of this branch
+09-09T16:46CG-396revision failed: worker idle 83 min (no output or file change)
+09-09T16:53CG-230check did not run (20260909T163336Z-check): idle 20 min (no output or file change); retry also failed; needs human
+09-09T16:54CG-349stuck: pending feedback recorded but the task is in_review, not changes_requested
+09-09T17:00CG-434check did not run (20260909T163948Z-check): idle 21 min (no output or file change); retry also failed; needs human
+09-09T17:07CG-411revision failed: worker exited 1: {'message': 'Selected model is at capacity. Please try a different model.'}
+09-09T17:18CG-434check did not run (20260909T171710Z-check): check execution did not complete
+
+worker materialization failed during checkout preflight: warm checkout has unresolved index; preserved at /var/lib/garden-worker/work/preserved-materializations/CG-434/20260909T171710Z-check-7c7fca8468d5; retry also failed; needs human
+09-09T20:57CG-493review finding repeated after a revise round: acceptance criterion is explicitly unmet: the exact pr head passes applicable ci
+09-09T22:29CG-494review finding repeated after a revise round: acceptance criterion is explicitly unmet: ui distinguishes embedded-watch state
+09-10T01:33CG-347worker blocked: Implemented and committed bounded EC2 Spot purchasing, interruption detection, durable replacement identities, abrupt-loss recovery, and explicitly priced opt-in on-demand fallback. Deterministic host and remote-protocol validation passed, but the required live AWS canary could not be run because this worker received no AWS credentials or canary configuration. cost=$1.67
+09-10T02:07CG-434review finding repeated after a revise round: acceptance criterion is explicitly unmet: record effective policy/selection and
+09-10T03:38CG-349check did not run (20260910T033717Z-check): exit 127; retry also failed; needs human
+09-10T04:13CG-349check did not run (20260910T041206Z-check): exit 127; retry also failed; needs human
+09-10T04:30CG-434review finding repeated after a revise round: acceptance criterion is explicitly unmet: record effective policy/selection with
+09-10T11:25CG-506review finding repeated after a revise round: acceptance criterion is explicitly unmet: disposable failure/recovery journey
+09-10T12:04CG-513review finding repeated after a revise round: acceptance criterion is explicitly unmet: show each changed design once with wor
+09-10T12:54CG-518review finding repeated after a revise round: acceptance criterion is explicitly unmet: define a capability-checked sandbox co
+
+    Events
+
+      09-10T12:59 tick
+
+      09-10T12:59CG-511 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/434
+
+      09-10T12:59CG-505 review
+        approve: The specification audit is complete and coherent, including the previously omitted phase-06 alias and accurate
+
+      09-10T12:59CG-505 run_finished
+        review approve $0.30
+
+      09-10T12:58 tick
+
+      09-10T12:58CG-515 transition
+        changes_requested → running: dispatched revise run 20260910T125822Z-revise via remote [codex model=gpt-5.6-sol] (fresh session, base garden
+
+      09-10T12:58CG-515 dispatch
+        revise gpt-5.6-sol
+
+      09-10T12:58CG-512 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:58CG-511 automerged
+        https://github.com/joshmarcus/context-garden/pull/434
+
+      09-10T12:57CG-512 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/435 (base main): Refactored retro reservation coverag
+
+      09-10T12:57CG-512 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/435
+
+      09-10T12:57CG-512 check
+
+      09-10T12:57CG-512 run_finished
+        check done
+
+      09-10T12:57CG-509 dispatch
+        check
+
+      09-10T12:57CG-505 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:57CG-509 verification_advisory
+
+      09-10T12:57CG-509 run_finished
+        revise done $0.56
+
+      09-10T12:57CG-505 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/424: Added and reviewed the omitted phase
+
+      09-10T12:57CG-505 check
+
+      09-10T12:57CG-505 run_finished
+        check done
+
+      09-10T12:57CG-515 transition
+        in_review → changes_requested: automated review requested changes: Provider-neutral routing and scheduler safety integration are substantiall
+
+      09-10T12:57CG-515 review
+        request_changes: Provider-neutral routing and scheduler safety integration are substantially present, but invalid CA bundles ar
+
+      09-10T12:57CG-515 run_finished
+        review request_changes $0.43
+
+      09-10T12:57_context-garden-phase-05 persona
+        phase05-closing-editor 6/10
+
+      09-10T12:57_context-garden-phase-05 run_finished
+        persona done $3.43
+
+      09-10T12:56 tick
+
+      09-10T12:56CG-524 transition
+        ready → running: dispatched work run 20260910T125644Z-work via remote [codex model=gpt-5.6-terra] (fresh session, base main, ~1
+
+      09-10T12:56CG-524 dispatch
+        work gpt-5.6-terra
+
+      09-10T12:56CG-510 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/432
+
+      09-10T12:56CG-505 dispatch
+        check
+
+      09-10T12:56CG-505 verification_advisory
+
+      09-10T12:56CG-505 run_finished
+        revise done $0.55
+
+      09-10T12:55 tick
+
+      09-10T12:55CG-523 transition
+        ready → running: dispatched work run 20260910T125527Z-work via remote [codex model=gpt-5.6-luna] (fresh session, base main, ~14
+
+      09-10T12:55CG-523 dispatch
+        work gpt-5.6-luna
+
+      09-10T12:55CG-510 automerged
+        https://github.com/joshmarcus/context-garden/pull/432
+
+      09-10T12:55CG-512 dispatch
+        check
+
+      09-10T12:55CG-213 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:55CG-515 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:54CG-512 verification_advisory
+
+      09-10T12:54CG-512 run_finished
+        work done $0.04
+
+      09-10T12:54CG-511 review
+        approve: The PR retains the complete standalone TCP/CLI lifecycle and replaces the managed variant with focused lock an
+
+      09-10T12:54CG-511 run_finished
+        review approve $0.34
+
+      09-10T12:54CG-510 review
+        approve: The duplicated full-work reruns are replaced by fast injected orchestration tests while dedicated real QA and
+
+      09-10T12:54CG-510 run_finished
+        review approve $0.21
+
+      09-10T12:54CG-518 transition
+        in_review → changes_requested: stalled: review finding repeated after a revise round: acceptance criterion is explicitly unmet: define a capa
+
+      09-10T12:54CG-518 stall
+        review finding repeated after a revise round: acceptance criterion is explicitly unmet: define a capability-checked sandbox co
+
+      09-10T12:54CG-518 review
+        request_changes: The sandbox remains self-attested rather than enforced, and copied harness credentials are explicitly placed i
+
+      09-10T12:54CG-518 run_finished
+        review request_changes $0.43
+
+      09-10T12:54CG-515 friction
+
+      09-10T12:54CG-515 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/427: Wired provider factories through ope
+
+      09-10T12:54CG-515 check
+
+      09-10T12:54CG-515 run_finished
+        check done
+
+      09-10T12:54_context-garden-phase-05 dispatch
+        persona gpt-6-astra
+
+      09-10T12:52 tick
+
+      09-10T12:52CG-522 transition
+        ready → running: dispatched work run 20260910T125213Z-work via remote [codex model=gpt-5.6-terra] (fresh session, base main, ~1
+
+      09-10T12:52CG-522 dispatch
+        work gpt-5.6-terra
+
+      09-10T12:52CG-521 transition
+        ready → running: dispatched work run 20260910T125210Z-work via remote [codex model=gpt-5.6-terra] (fresh session, base main, ~1
+
+      09-10T12:52CG-521 dispatch
+        work gpt-5.6-terra
+
+      09-10T12:52CG-520 transition
+        ready → running: dispatched work run 20260910T125207Z-work-2 via remote [codex model=gpt-5.6-terra] (fresh session, base main,
+
+      09-10T12:52CG-520 dispatch
+        work gpt-5.6-terra
+
+      09-10T12:52CG-512 transition
+        ready → running: dispatched work run 20260910T125207Z-work via remote [codex model=gpt-5.6-luna] (fresh session, base main, ~13
+
+      09-10T12:52CG-512 dispatch
+        work gpt-5.6-luna
+
+      09-10T12:52CG-509 transition
+        changes_requested → running: dispatched revise run 20260910T125206Z-revise via remote [codex model=gpt-5.6-terra] (fresh session, base main
+
+      09-10T12:52CG-509 dispatch
+        revise gpt-5.6-terra
+
+      09-10T12:52CG-506 troubled_task
+        the granted revision allowance is exhausted after 4 substantive revisions
+
+      09-10T12:52CG-505 transition
+        changes_requested → running: dispatched revise run 20260910T125201Z-revise-2 via local [codex model=gpt-5.6-sol] (fresh session, base main,
+
+      09-10T12:52CG-505 dispatch
+        revise gpt-5.6-sol
+
+      09-10T12:52CG-501 troubled_task
+        the granted revision allowance is exhausted after 5 substantive revisions
+
+      09-10T12:52CG-516 transition
+        changes_requested → running: dispatched revise run 20260910T125201Z-revise via remote [codex model=gpt-5.6-sol] (fresh session, base main,
+
+      09-10T12:52CG-516 dispatch
+        revise gpt-5.6-sol
+
+      09-10T12:51CG-515 dispatch
+        check
+
+      09-10T12:51CG-511 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:51CG-510 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:51CG-518 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:51CG-515 verification_advisory
+
+      09-10T12:50CG-515 run_finished
+        revise done $3.32
+
+      09-10T12:50 dispatch_resumed
+
+      09-10T12:50 maintenance_resumed
+
+      09-10T12:20 maintenance_quiesced
+
+      09-10T12:20 maintenance_requested
+        versioned RC17 controller deployment; root operator owns resume
+
+      09-10T12:19 tick
+
+      09-10T12:18 tick
+
+      09-10T12:13 tick
+
+      09-10T12:12 tick
+
+      09-10T12:10 tick
+
+      09-10T12:09 tick
+
+      09-10T12:08 tick
+
+      09-10T12:07 tick
+
+      09-10T12:06CG-518 friction
+
+      09-10T12:06CG-518 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/428: Added a versioned sandbox-wrapper ca
+
+      09-10T12:06CG-518 check
+
+      09-10T12:06CG-518 run_finished
+        check done
+
+      09-10T12:05 tick
+
+      09-10T12:05CG-518 dispatch
+        check
+
+      09-10T12:05CG-518 verification_advisory
+
+      09-10T12:05CG-518 run_finished
+        revise done $1.64
+
+      09-10T12:04 tick
+
+      09-10T12:04CG-513 stall
+        review finding repeated after a revise round: acceptance criterion is explicitly unmet: show each changed design once with wor
+
+      09-10T12:04CG-513 review
+        request_changes: Current PR/base scoping and deletion handling work, but pure design-file renames are omitted from the panel.
+
+      09-10T12:04CG-513 run_finished
+        review request_changes $0.36
+
+      09-10T12:03 tick
+
+      09-10T12:02CG-514 review
+        approve: One current-head approval is sufficient across hard, self, and tool-provider products, including legacy config
+
+      09-10T12:02CG-514 run_finished
+        review approve $0.33
+
+      09-10T12:02CG-511 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/434 (base main): Committed 434b8d11, retaining one fu
+
+      09-10T12:02CG-511 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/434
+
+      09-10T12:02CG-511 check
+
+      09-10T12:02CG-511 run_finished
+        check done
+
+      09-10T12:02CG-505 transition
+        in_review → changes_requested: automated review requested changes: The escalation ownership correction is accurate, but the claimed complete
+
+      09-10T12:02CG-505 review
+        request_changes: The escalation ownership correction is accurate, but the claimed complete audit still omits a specification vi
+
+      09-10T12:02CG-505 run_finished
+        review request_changes $0.46
+
+      09-10T12:01 tick
+
+      09-10T12:01CG-213 friction
+
+      09-10T12:01CG-213 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/433 (base garden/cg-302-spike-openrouter-harness-shap
+
+      09-10T12:01CG-213 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/433
+
+      09-10T12:01CG-213 check
+
+      09-10T12:01CG-213 run_finished
+        check done
+
+      09-10T12:01CG-511 dispatch
+        check
+
+      09-10T12:01CG-511 verification_advisory
+
+      09-10T12:01CG-511 run_finished
+        work done $0.55
+
+      09-10T12:00 tick
+
+      09-10T12:00CG-513 transition
+        in_review → changes_requested: PR conflicts with main; rebase onto main conflicts (src/garden/web/pages/task.py); a rebase agent will resolve
+
+      09-10T12:00CG-513 rebase
+        conflict on main in src/garden/web/pages/task.py — a rebase agent will resolve it
+
+      09-10T12:00CG-519 transition
+        in_review → done: PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/426
+
+      09-10T12:00CG-213 dispatch
+        check
+
+      09-10T12:00CG-505 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:00CG-513 dispatch
+        review gpt-5.6-sol
+
+      09-10T12:00CG-514 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:59CG-213 verification_advisory
+
+      09-10T11:59CG-213 run_finished
+        work done $5.02
+
+      09-10T11:59CG-514 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/422: A proven current-head approval now r
+
+      09-10T11:59CG-514 check
+
+      09-10T11:59CG-514 run_finished
+        check done
+
+      09-10T11:59CG-510 friction
+
+      09-10T11:59CG-510 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/432 (base main): Consolidated duplicated canary compo
+
+      09-10T11:59CG-510 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/432
+
+      09-10T11:59CG-510 check
+
+      09-10T11:59CG-510 run_finished
+        check done
+
+      09-10T11:59CG-509 transition
+        in_review → changes_requested: automated review requested changes: The duplicate suite is suppressed, but the skipped PR job can falsely sati
+
+      09-10T11:59CG-509 review
+        request_changes: The duplicate suite is suppressed, but the skipped PR job can falsely satisfy branch protection when the autho
+
+      09-10T11:59CG-509 run_finished
+        review request_changes $0.20
+
+      09-10T11:59CG-505 friction
+
+      09-10T11:59CG-505 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/424: Corrected the specification audit to
+
+      09-10T11:59CG-505 check
+
+      09-10T11:59CG-505 run_finished
+        check done
+
+      09-10T11:59CG-501 transition
+        in_review → changes_requested: automated review requested changes: Recovery and diagnostics are substantially covered, but stale active-claim
+
+      09-10T11:59CG-501 review
+        request_changes: Recovery and diagnostics are substantially covered, but stale active-claim state can mistake a reused PID for
+
+      09-10T11:59CG-501 run_finished
+        review request_changes $0.54
+
+      09-10T11:59CG-517 review
+        approve: The centralized route policy and middleware enforce the requested worker/operator boundary without weakening l
+
+      09-10T11:59CG-517 run_finished
+        review approve $0.33
+
+      09-10T11:58 tick
+
+      09-10T11:58CG-519 automerged
+        https://github.com/joshmarcus/context-garden/pull/426
+
+      09-10T11:58CG-505 dispatch
+        check
+
+      09-10T11:58CG-505 verification_advisory
+
+      09-10T11:58CG-505 discovered
+        CG-526 Complete objective failure-trigger model escalation
+
+      09-10T11:58CG-505 run_finished
+        revise done $0.65
+
+      09-10T11:57 tick
+
+      09-10T11:57CG-514 dispatch
+        check
+
+      09-10T11:57CG-514 verification_advisory
+
+      09-10T11:57CG-514 run_finished
+        revise done $0.73
+
+      09-10T11:57CG-513 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/425: Excluded deleted design paths from P
+
+      09-10T11:56CG-513 check
+
+      09-10T11:56CG-513 run_finished
+        check done
+
+      09-10T11:56CG-510 dispatch
+        check
+
+      09-10T11:56CG-509 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:56CG-501 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:56CG-510 verification_advisory
+
+      09-10T11:56CG-510 run_finished
+        work done $0.04
+
+      09-10T11:56CG-509 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/431 (base main): Conditioned the CI test job so same-
+
+      09-10T11:56CG-509 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/431
+
+      09-10T11:56CG-509 check
+
+      09-10T11:56CG-509 run_finished
+        check done
+
+      09-10T11:56CG-501 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/414: Recovered supervisors are now termin
+
+      09-10T11:56CG-501 check
+
+      09-10T11:56CG-501 run_finished
+        check done
+
+      09-10T11:56CG-516 transition
+        in_review → changes_requested: automated review requested changes: The resolver is well-tested in isolation, but it is not connected to any e
+
+      09-10T11:56CG-516 review
+        request_changes: The resolver is well-tested in isolation, but it is not connected to any execution boundary, so the requested
+
+      09-10T11:56CG-516 run_finished
+        review request_changes $0.31
+
+      09-10T11:55 dispatch_paused
+        Owner-requested RC17 rollout; draining existing work before immutable runtime switches
+
+      09-10T11:55 tick
+
+      09-10T11:55CG-518 transition
+        changes_requested → running: dispatched revise run 20260910T115540Z-revise-2 via remote [codex model=gpt-5.6-sol] (fresh session, base main
+
+      09-10T11:55CG-518 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:55CG-515 transition
+        changes_requested → running: dispatched revise run 20260910T115540Z-revise via remote [codex model=gpt-5.6-sol] (fresh session, base garden
+
+      09-10T11:55CG-515 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:55CG-509 dispatch
+        check
+
+      09-10T11:55CG-509 verification_advisory
+
+      09-10T11:55CG-509 run_finished
+        work done $0.26
+
+      09-10T11:55CG-501 dispatch
+        check
+
+      09-10T11:55CG-517 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:55CG-501 verification_advisory
+
+      09-10T11:55CG-501 run_finished
+        revise done $1.32
+
+      09-10T11:55CG-518 transition
+        in_review → changes_requested: automated review requested changes: The proposed wrapper contract can report enforcement without establishing
+
+      09-10T11:55CG-518 review
+        request_changes: The proposed wrapper contract can report enforcement without establishing it, and its writable-root contract c
+
+      09-10T11:55CG-518 run_finished
+        review request_changes $0.40
+
+      09-10T11:55CG-517 friction
+
+      09-10T11:55CG-517 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/430 (base main): Separated worker ingress from operat
+
+      09-10T11:55CG-517 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/430
+
+      09-10T11:55CG-517 check
+
+      09-10T11:55CG-517 run_finished
+        check done
+
+      09-10T11:55CG-515 transition
+        in_review → changes_requested: automated review requested changes: The provider-neutral boundary and scoped transport policy are not wired th
+
+      09-10T11:55CG-515 review
+        request_changes: The provider-neutral boundary and scoped transport policy are not wired through the operational scheduler path
+
+      09-10T11:55CG-515 run_finished
+        review request_changes $0.38
+
+      09-10T11:54 tick
+
+      09-10T11:54CG-511 transition
+        ready → running: dispatched work run 20260910T115411Z-work via remote [codex model=gpt-5.6-terra] (fresh session, base main, ~1
+
+      09-10T11:54CG-511 dispatch
+        work gpt-5.6-terra
+
+      09-10T11:54CG-505 transition
+        changes_requested → running: dispatched revise run 20260910T115405Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~
+
+      09-10T11:54CG-505 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:54CG-347 troubled_task
+        the granted revision allowance is exhausted after 4 substantive revisions
+
+      09-10T11:53CG-513 dispatch
+        check
+
+      09-10T11:53CG-516 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:53CG-513 verification_advisory
+
+      09-10T11:53CG-513 run_finished
+        revise done $0.39
+
+      09-10T11:53CG-347 transition
+        in_review → changes_requested: automated review requested changes: Spot interruption recovery and fencing are well covered, but Spot launches
+
+      09-10T11:53CG-347 review
+        request_changes: Spot interruption recovery and fencing are well covered, but Spot launches without an explicit maximum price c
+
+      09-10T11:53CG-347 run_finished
+        review request_changes $0.33
+
+      09-10T11:53CG-517 dispatch
+        check
+
+      09-10T11:53CG-517 verification_advisory
+
+      09-10T11:53CG-517 run_finished
+        work done $1.88
+
+      09-10T11:53CG-516 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/429 (base main): Added a trusted, versioned workload
+
+      09-10T11:53CG-516 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/429
+
+      09-10T11:53CG-516 check
+
+      09-10T11:53CG-516 run_finished
+        check done
+
+      09-10T11:52 tick
+
+      09-10T11:52CG-510 transition
+        ready → running: dispatched work run 20260910T115229Z-work via remote [codex model=gpt-5.6-luna] (fresh session, base main, ~19
+
+      09-10T11:52CG-510 dispatch
+        work gpt-5.6-luna
+
+      09-10T11:52CG-518 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:52CG-519 review
+        approve: The centralized artifact boundary consistently protects design, worktree, live-run, and archived-run responses
+
+      09-10T11:52CG-519 run_finished
+        review approve $0.31
+
+      09-10T11:52CG-518 friction
+
+      09-10T11:52CG-518 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/428 (base main): Added an opt-in, fail-closed executi
+
+      09-10T11:52CG-518 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/428
+
+      09-10T11:52CG-518 check
+
+      09-10T11:52CG-518 run_finished
+        check done
+
+      09-10T11:52CG-516 dispatch
+        check
+
+      09-10T11:52CG-516 verification_advisory
+
+      09-10T11:52CG-516 run_finished
+        work done $0.94
+
+      09-10T11:51 tick
+
+      09-10T11:51CG-509 transition
+        ready → running: dispatched work run 20260910T115105Z-work via remote [codex model=gpt-5.6-terra] (fresh session, base main, ~1
+
+      09-10T11:51CG-509 dispatch
+        work gpt-5.6-terra
+
+      09-10T11:51CG-347 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:51CG-515 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:50CG-347 transition
+        running → in_review: pushed revision to https://github.com/joshmarcus/context-garden/pull/417: Bound explicit Spot maximum prices i
+
+      09-10T11:50CG-347 check
+
+      09-10T11:50CG-347 run_finished
+        check done
+
+      09-10T11:50CG-518 dispatch
+        check
+
+      09-10T11:50CG-518 verification_advisory
+
+      09-10T11:50CG-518 run_finished
+        work done $3.06
+
+      09-10T11:50CG-515 friction
+
+      09-10T11:50CG-515 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/427 (base garden/cg-396-use-pluggable-exact-head-ci-s
+
+      09-10T11:50CG-515 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/427
+
+      09-10T11:50CG-515 check
+
+      09-10T11:50CG-515 run_finished
+        check done
+
+      09-10T11:49 tick
+
+      09-10T11:49CG-514 transition
+        changes_requested → running: dispatched revise run 20260910T114938Z-revise-2 via remote [codex model=gpt-5.6-sol] (fresh session, base main
+
+      09-10T11:49CG-514 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:49CG-513 transition
+        changes_requested → running: dispatched revise run 20260910T114938Z-revise via remote [codex model=gpt-5.6-terra] (fresh session, base main
+
+      09-10T11:49CG-513 dispatch
+        revise gpt-5.6-terra
+
+      09-10T11:49CG-513 transition
+        in_review → changes_requested: automated review requested changes: The refreshed-head and stacked-base behavior is well covered, but deleted
+
+      09-10T11:49CG-513 review
+        request_changes: The refreshed-head and stacked-base behavior is well covered, but deleted design files produce broken links in
+
+      09-10T11:49CG-513 run_finished
+        review request_changes $0.27
+
+      09-10T11:49CG-347 dispatch
+        check
+
+      09-10T11:49CG-347 verification_advisory
+
+      09-10T11:49CG-347 run_finished
+        revise done $0.76
+
+      09-10T11:49CG-515 dispatch
+        check
+
+      09-10T11:49CG-515 verification_advisory
+
+      09-10T11:49CG-515 discovered
+        CG-525 Repair manual PR refresh fake mutation regression
+
+      09-10T11:49CG-515 run_finished
+        work done $1.85
+
+      09-10T11:48 tick
+
+      09-10T11:48CG-519 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:48CG-519 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/426 (base main): Centralized inert artifact responses
+
+      09-10T11:48CG-519 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/426
+
+      09-10T11:48CG-519 check
+
+      09-10T11:48CG-519 run_finished
+        check done
+
+      09-10T11:47 tick
+
+      09-10T11:47CG-501 transition
+        changes_requested → running: dispatched revise run 20260910T114702Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~
+
+      09-10T11:47CG-501 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:47CG-513 dispatch
+        review gpt-5.6-sol
+
+      09-10T11:46CG-513 transition
+        running → in_review: opened https://github.com/joshmarcus/context-garden/pull/425 (base main): Scoped task design output to the ref
+
+      09-10T11:46CG-513 pr_opened
+        https://github.com/joshmarcus/context-garden/pull/425
+
+      09-10T11:46CG-513 check
+
+      09-10T11:46CG-513 run_finished
+        check done
+
+      09-10T11:46CG-519 dispatch
+        check
+
+      09-10T11:46CG-519 verification_advisory
+
+      09-10T11:46CG-519 run_finished
+        work done $0.98
+
+      09-10T11:45 tick
+
+      09-10T11:44 tick
+
+      09-10T11:44CG-347 transition
+        changes_requested → running: dispatched revise run 20260910T114431Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~
+
+      09-10T11:44CG-347 dispatch
+        revise gpt-5.6-sol
+
+      09-10T11:44CG-513 dispatch
+        check
+
+      09-10T11:44CG-513 verification_advisory
+
+      09-10T11:44CG-513 run_finished
+        work done $0.95
+
+      09-10T11:43 tick
+
+      09-10T11:43CG-505 transition
+        in_review → changes_requested: automated review requested changes: The audit is coherent and complete at the document level, but it assigns t
+
+      09-10T11:43CG-505 review
+        request_changes: The audit is coherent and complete at the document level, but it assigns the automatic model-escalation gap to
+
+      09-10T11:43CG-505 run_finished
+        review request_changes $0.45
+
+      09-10T11:43CG-506 transition
+        changes_requested → changes_requested: re-enabled by hand; revise run will follow
+
+      09-10T11:43CG-506 retry
+        continued loop
+
+      09-10T11:42CG-501 transition
+        changes_requested → changes_requested: re-enabled by hand; revise run will follow
+
+      09-10T11:42CG-501 retry
+        continued loop
+
+      09-10T11:42CG-347 troubled_continued
+
+    Since 24h
+
+        PRs openedCG-478 CG-351 CG-480 CG-479 CG-394 CG-417 CG-491 CG-493 CG-495 CG-352 CG-497 CG-422 CG-490 CG-494 CG-350 CG-353 CG-384 CG-496 CG-500 CG-499 CG-498 CG-507 CG-501 CG-506 CG-508 CG-347 CG-348 CG-502 CG-503 CG-302 CG-514 CG-504 CG-505 CG-513 CG-519 CG-515 CG-518 CG-516 CG-517 CG-509 CG-510 CG-213 CG-511 CG-512
+        mergedCG-438 CG-413 CG-465 CG-464 CG-476 CG-481 CG-482 CG-414 CG-455 CG-471 CG-351 CG-466 CG-483 CG-470 CG-477 CG-475 CG-469 CG-473 CG-479 CG-485 CG-484 CG-488 CG-478 CG-394 CG-230 CG-487 CG-352 CG-497 CG-422 CG-353 CG-491 CG-480 CG-495 CG-437 CG-486 CG-384 CG-496 CG-493 CG-489 CG-490 CG-494 CG-411 CG-423 CG-498 CG-500 CG-349 CG-417 CG-499 CG-434 CG-350 CG-507 CG-508 CG-502 CG-519 CG-510 CG-511
+        reviewsCG-349: approve
+CG-413: approve
+CG-455: request_changes
+CG-438: approve
+CG-465: request_changes
+CG-413: approve
+CG-476: approve
+CG-396: request_changes
+CG-475: request_changes
+CG-455: request_changes
+CG-478: request_changes
+CG-473: approve
+CG-349: approve
+CG-465: approve
+CG-455: request_changes
+CG-475: request_changes
+CG-476: request_changes
+CG-477: request_changes
+CG-230: request_changes
+CG-469: approve
+CG-455: request_changes
+CG-476: approve
+CG-396: request_changes
+CG-480: request_changes
+CG-349: approve
+CG-414: approve
+CG-351: request_changes
+CG-455: approve
+CG-473: request_changes
+CG-475: request_changes
+CG-477: approve
+CG-478: request_changes
+CG-471: approve
+CG-480: request_changes
+CG-351: approve
+CG-479: request_changes
+CG-466: approve
+CG-470: request_changes
+CG-434: request_changes
+CG-475: request_changes
+CG-396:
+CG-478: request_changes
+CG-349: approve
+CG-470: approve
+CG-473: approve
+CG-480: request_changes
+CG-477: approve
+CG-484: request_changes
+CG-349: approve
+CG-230: request_changes
+CG-478: request_changes
+CG-475: approve
+CG-230: request_changes
+CG-473: approve
+CG-479: approve
+CG-437: request_changes
+CG-485: approve
+CG-411: approve
+CG-485: approve
+CG-486: request_changes
+CG-487: approve
+CG-488: approve
+CG-434:
+CG-480: request_changes
+CG-478: request_changes
+CG-485: request_changes
+CG-478: request_changes
+CG-485: approve
+CG-480: request_changes
+CG-486: request_changes
+CG-437:
+CG-484: approve
+CG-480: request_changes
+CG-394: request_changes
+CG-489: approve
+CG-349: request_changes
+CG-411: request_changes
+CG-478: approve
+CG-486: request_changes
+CG-349: request_changes
+CG-437: request_changes
+CG-417: request_changes
+CG-491: approve
+CG-417: approve
+CG-437: approve
+CG-230: approve
+CG-487: request_changes
+CG-480: request_changes
+CG-394: approve
+CG-491: approve
+CG-434: request_changes
+CG-437: approve
+CG-486: request_changes
+CG-230: approve
+CG-396: request_changes
+CG-411: request_changes
+CG-480: request_changes
+CG-493: approve
+CG-493: request_changes
+CG-411: request_changes
+CG-434: request_changes
+CG-487: approve
+CG-493: request_changes
+CG-495: approve
+CG-493: approve
+CG-349: request_changes
+CG-349: approve
+CG-486: request_changes
+CG-493: request_changes
+CG-352: request_changes
+CG-352: request_changes
+CG-493: request_changes
+CG-352: request_changes
+CG-352: request_changes
+CG-352: approve
+CG-497: approve
+CG-422: approve
+CG-490: approve
+CG-494: request_changes
+CG-494: request_changes
+CG-494: request_changes
+CG-350: request_changes
+CG-350: request_changes
+CG-350: request_changes
+CG-353: request_changes
+CG-353: request_changes
+CG-353: approve
+CG-384: request_changes
+CG-384: request_changes
+CG-496: approve
+CG-434: request_changes
+CG-480: request_changes
+CG-411: approve
+CG-384:
+CG-350: request_changes
+CG-480: request_changes
+CG-350: request_changes
+CG-486: approve
+CG-434: request_changes
+CG-480: approve
+CG-494: request_changes
+CG-495: request_changes
+CG-486: approve
+CG-437: approve
+CG-411: approve
+CG-495: approve
+CG-350: request_changes
+CG-490: approve
+CG-434: request_changes
+CG-494: approve
+CG-434: request_changes
+CG-349:
+CG-350: request_changes
+CG-434: request_changes
+CG-411: request_changes
+CG-349: request_changes
+CG-417: approve
+CG-500: approve
+CG-499: request_changes
+CG-434: request_changes
+CG-411: approve
+CG-498: request_changes
+CG-417: approve
+CG-349: approve
+CG-499: request_changes
+CG-498: request_changes
+CG-499: request_changes
+CG-499: request_changes
+CG-498: approve
+CG-500: approve
+CG-507: approve
+CG-434: request_changes
+CG-501: request_changes
+CG-350: approve
+CG-434: request_changes
+CG-417: approve
+CG-499: approve
+CG-506: request_changes
+CG-501: request_changes
+CG-501: request_changes
+CG-434: approve
+CG-508: approve
+CG-347: request_changes
+CG-350: approve
+CG-347: request_changes
+CG-347: request_changes
+CG-501: request_changes
+CG-506: request_changes
+CG-347: request_changes
+CG-501: request_changes
+CG-348: request_changes
+CG-502: approve
+CG-348: request_changes
+CG-347: request_changes
+CG-348: approve
+CG-506: request_changes
+CG-503: approve
+CG-302: approve
+CG-504: approve
+CG-514: request_changes
+CG-505: request_changes
+CG-513: request_changes
+CG-519: approve
+CG-347: request_changes
+CG-515: request_changes
+CG-518: request_changes
+CG-516: request_changes
+CG-517: approve
+CG-501: request_changes
+CG-509: request_changes
+CG-505: request_changes
+CG-514: approve
+CG-513: request_changes
+CG-518: request_changes
+CG-510: approve
+CG-511: approve
+CG-515: request_changes
+CG-505: approve
+
+        discoveredCG-497 CG-509 CG-510 CG-511 CG-512 CG-521 CG-522 CG-523 CG-524 CG-525 CG-526
+
+    All time
+Cost by difficulty tier
+
+easy
+easy: $533.72 over 127 task(s)
+$533.72 · 127 tasks
+medium
+medium: $1050.07 over 180 task(s)
+$1050.07 · 180 tasks
+hard
+hard: $1127.73 over 106 task(s)
+$1127.73 · 106 tasks
+
+      tiertasksavg revfirst-pass
+
+      easy1271.1372%
+medium1801.3653%
+hard1062.9428%

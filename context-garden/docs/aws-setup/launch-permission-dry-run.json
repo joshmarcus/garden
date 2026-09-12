@@ -1,0 +1,74 @@
+{
+  "ImageId": "ami-025d99823a4caad37",
+  "InstanceType": "t3.xlarge",
+  "MinCount": 1,
+  "MaxCount": 1,
+  "SubnetId": "subnet-0158ea83a40af1cbc",
+  "SecurityGroupIds": [
+    "sg-042e4fd7d39c06857"
+  ],
+  "IamInstanceProfile": {
+    "Arn": "arn:aws:iam::350111791226:instance-profile/ContextGardenWorker"
+  },
+  "MetadataOptions": {
+    "HttpTokens": "required",
+    "HttpEndpoint": "enabled",
+    "HttpPutResponseHopLimit": 1
+  },
+  "CreditSpecification": {
+    "CpuCredits": "standard"
+  },
+  "BlockDeviceMappings": [
+    {
+      "DeviceName": "/dev/sda1",
+      "Ebs": {
+        "VolumeSize": 40,
+        "VolumeType": "gp3",
+        "Encrypted": true,
+        "DeleteOnTermination": true
+      }
+    }
+  ],
+  "TagSpecifications": [
+    {
+      "ResourceType": "instance",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "context-garden"
+        },
+        {
+          "Key": "Pool",
+          "Value": "phase05"
+        }
+      ]
+    },
+    {
+      "ResourceType": "volume",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "context-garden"
+        },
+        {
+          "Key": "Pool",
+          "Value": "phase05"
+        }
+      ]
+    },
+    {
+      "ResourceType": "network-interface",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "context-garden"
+        },
+        {
+          "Key": "Pool",
+          "Value": "phase05"
+        }
+      ]
+    }
+  ],
+  "DryRun": true
+}

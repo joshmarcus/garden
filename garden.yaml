@@ -1,140 +1,117 @@
-# The garden for joshmarcus/context-garden. The tool's README documents every key.
-# Environment overlays: garden.<GARDEN_ENV>.yaml (e.g. GARDEN_ENV=work -> garden.work.yaml,
-# see examples/garden.work.yaml) and then garden.local.yaml (per machine, gitignored) are
-# merged on top of this file. Dict keys merge; lists and scalars replace.
 name: context-garden
-runner: local               # default runner: local | ssh | manual
-work_dir: /home/joshua/work   # product clones and task worktrees, outside the garden (CG-085)
-harness: codex             # default harness for work, revise, rebase and edit runs: codex since 2026-09-06 01:55Z (user: Claude at 76% of its usage; workers on OpenAI models)
-max_parallel: 1   # owner memory-lockup recovery; increase only after measured stability
-review_parallel: 1   # bound review/test overlap during memory recovery
-# Combined local run admission; includes workers, reviews, checks and base probes.
+runner: local
+work_dir: /home/joshua/work
+harness: codex
+max_parallel: 1
+review_parallel: 1
 resources:
   max_parallel: 1
   min_memory_available_mb: 1536
   min_temp_free_mb: 1024
-max_attempts: 2             # work runs before a task is marked failed
-max_revisions: 6            # owner raised revision allowance from3 to6 on2026-09-07
-timeout_minutes: 90         # per run; the process is killed after this
-tick_interval: 60           # seconds between scheduler passes in `garden watch` / `garden serve`
-auto_dispatch: true         # tick starts workers for ready tasks
-auto_revise: true           # tick dispatches revise runs when PRs get feedback / CI fails
-
+  windows_backing_path: C:\Users\joshm\AppData\Local\wsl\{dd32a113-df46-4ddc-a093-cdc75285d2a0}
+max_attempts: 2
+max_revisions: 6
+timeout_minutes: 90
+tick_interval: 60
+auto_dispatch: true
+auto_revise: true
 plan:
-  auto_approve: true        # planner output is created `ready` (dispatched on the next tick)
-
-stack: true                 # a task may start on top of a dependency's open PR branch; restacked on merge
+  auto_approve: true
+stack: true
 discovered:
-  auto_approve_blocking: true   # work a worker reports as blocking is created `ready`, not `draft`
+  auto_approve_blocking: true
 stall:
-  enabled: true             # stop revise loops that don't change the diff / repeat a review finding
-budgets:                    # usd cap per phase; see also products.*.budget_usd
+  enabled: true
+budgets:
   context-garden/phase-02-friction: 2000.0
-
 review:
-  enabled: true             # automated first review of every PR round (acceptance criteria,
-  max_rounds: null          # unlimited automated rounds; excessive loops are logged as friction
-  max_diff_chars: 60000     # larger diffs are read by the reviewer from git instead of inlined
-  harness: "codex"          # reviews on codex terra too, to keep the Claude quota for the judges (retro/persona on fable) and the Now 1 build (user, 2026-09-06 01:55Z)
-  difficulty: "hard"   # interim "one step up" (user, 2026-09-06 03:20Z): every review on the hard tier (codex sol) until review.ladder lands
-  personas: []              # persona reviews on every new PR round, e.g. [security]; see personas/
-
-# Token-free checks. pre_pr runs in the worktree before a PR is opened or updated (failures
-# become a revise round, no PR yet). ci runs when a PR's CI goes red; results feed the revise
-# brief, and a `flaky` verdict with `rerun: true` reruns the jobs instead of spending tokens.
+  enabled: true
+  max_rounds: null
+  max_diff_chars: 60000
+  harness: codex
+  difficulty: hard
+  personas: []
 checks:
-  # Full context-garden tests run on GitHub; retain its focused local gate.
-  # The separate garden product contains context documents and has no code suite.
   pre_pr:
-    - name: lint
-      command: |
-        case "$GARDEN_PRODUCT" in
-          context-garden) .venv/bin/ruff check src tests scripts ;;
-          garden) echo "Context documents: no configured code suite" ;;
-          *) echo "No pre-PR policy for product: $GARDEN_PRODUCT" >&2; exit 1 ;;
-        esac
-  ci:                       # analysers for the CI this environment uses; an overlay replaces the list
-    - name: actions         # home: this repo's own CI is GitHub Actions (.github/workflows/ci.yml)
-      python: "garden.checks:github_actions_failures"
-      flaky_patterns: ["ETIMEDOUT", "ECONNRESET", "rate limit"]
-      rerun: true
-    # work (garden.work.yaml): point this at your CI instead, e.g.
-    # - name: ci-log
-    #   python: "garden.checks:local_command_check"
-    #   command: "scripts/ci_failures.sh"
-    #   retry_command: "scripts/ci_rerun.sh"
-  timeout_seconds: 1500
-
+  - name: lint
+    command: "case \"$GARDEN_PRODUCT\" in\n  context-garden) .venv/bin/ruff check\
+      \ src tests scripts ;;\n  garden) echo \"Context documents: no configured code\
+      \ suite\" ;;\n  *) echo \"No pre-PR policy for product: $GARDEN_PRODUCT\" >&2;\
+      \ exit 1 ;;\nesac\n"
+  ci:
+  - name: actions
+    python: garden.checks:github_actions_failures
+    flaky_patterns:
+    - ETIMEDOUT
+    - ECONNRESET
+    - rate limit
+    rerun: true
+  timeout_seconds: 900
 brief:
-  inline_max_chars: 24000   # reading-list files above this are referenced, not inlined
-  total_max_chars: 120000   # hard budget for one brief
-
-# Harnesses: how to run an agent CLI headlessly. `claude` and `codex` are built in; keys here
-# override the defaults. `models` maps task difficulty -> model for that harness.
+  inline_max_chars: 24000
+  total_max_chars: 120000
 harnesses:
   claude:
     bin: claude
-    output_format: stream-json     # one event per line while the worker runs, so the task page tails it live (CG-009)
-    # max_turns: 60                # optional hard cap on agent turns; off by default
-    permission_mode: acceptEdits   # or bypass (== --dangerously-skip-permissions)
-    review_model: ""                 # reviews follow review.difficulty (easy = sonnet 5); fable reviews were judged too expensive (user, 2026-09-05 20:50)
-    retro_model: claude-fable-5-1    # retros, persona reviews and trial judging on the best model (user, 2026-09-05 20:50; CG-235)
-    allowed_tools: [Bash, Read, Edit, Write, Glob, Grep, MultiEdit]
-    models: {easy: claude-sonnet-5, medium: claude-sonnet-5, hard: claude-opus-4-8}   # since 2026-09-05 14:50 to cut spend: mediums on sonnet, hard on opus; judges are named by retro_model below
-    resume: true                   # continue the same session after `garden answer`
+    output_format: stream-json
+    permission_mode: acceptEdits
+    review_model: ''
+    retro_model: claude-fable-5-1
+    allowed_tools:
+    - Bash
+    - Read
+    - Edit
+    - Write
+    - Glob
+    - Grep
+    - MultiEdit
+    models:
+      easy: claude-sonnet-5
+      medium: claude-sonnet-5
+      hard: claude-opus-4-8
+    resume: true
   codex:
     bin: codex
-    permission_mode: bypass        # since 2026-09-05 18:55: full-auto (workspace-write) blocks .git writes and network, so codex could never commit; the fence and the scrubbed env are the guard, as for claude
-    review_model: ""               # unset so reviews follow review.difficulty (hard = sol); was terra (user, 2026-09-06 03:20Z)
-    retro_model: gpt-6-astra       # codex judges on its best model (the astra retro comparison, user 2026-09-05 22:45)
-    models: {easy: gpt-5.6-luna, medium: gpt-5.6-terra, hard: gpt-5.6-sol}   # since 2026-09-05 19:40: the CLI default is gpt-6-astra ($10/$50), the top-line model; luna $0.20/$1.20, terra $2/$12, sol $4/$20
-    resume: false                  # true if your codex supports `codex exec resume <id>`
-
-# Remote workers (runner: ssh). Each host has a clone of each product repo it may work on.
+    permission_mode: bypass
+    review_model: ''
+    retro_model: gpt-6-astra
+    models:
+      easy: gpt-5.6-luna
+      medium: gpt-5.6-terra
+      hard: gpt-5.6-sol
+    resume: false
 ssh:
   hosts: []
-  # - name: box1
-  #   host: user@box1.example.com
-  #   repos: {context-garden: /srv/repos/context-garden}
-  #   max_parallel: 4
-  # options: ["-o", "BatchMode=yes"]
-
 github:
-  automerge: true           # 2026-09-05: the person delegated merging; the scheduler merges once every gate is green
-  automerge_method: merge   # merge commits, matching the repo history
-  bot_logins: []            # every bot counts; notices are filtered by bot_notice_patterns (CG-118)
-  use_gh: true              # prefer the gh CLI; falls back to REST with GITHUB_TOKEN
-  draft_pr: false           # PRs open ready for review; set true to open drafts that wait for triage on the Inbox
+  automerge: true
+  automerge_method: merge
+  bot_logins: []
+  use_gh: true
+  draft_pr: false
   reviewers: []
-
 products:
-  garden:                   # the garden's own repo as a product (CG-123): retro, phase docs and config arrive as PRs here
+  garden:
     repo: https://github.com/joshmarcus/garden.git
     base_branch: main
     id_prefix: GD
     self: true
   context-garden:
-    repo: https://github.com/joshmarcus/context-garden.git   # cloned under .garden/repos/; worktrees come from that clone
+    repo: https://github.com/joshmarcus/context-garden.git
     base_branch: main
     id_prefix: CG
-    setup:                  # how this product's working environment is prepared, on this machine (no uv here)
-      command: "python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]'"   # once per fresh worktree
-      worker_push: true       # owner-authorized assigned-branch CI, CG-363
-      test: "python3 scripts/check_ci.py"
-      lint: ".venv/bin/ruff check src tests scripts"
+    setup:
+      command: python3 -m venv .venv && .venv/bin/pip install -q -e '.[dev]' && .venv/bin/python
+        -m pip install -q --no-deps pytest-timeout==2.4.0
+      worker_push: false
+      lint: .venv/bin/ruff check src tests scripts
       env:
-        GH_CONFIG_DIR: /home/joshua/.config/gh  # explicit GitHub access; HOME stays isolated
+        GH_CONFIG_DIR: /home/joshua/.config/gh
         PLAYWRIGHT_BROWSERS_PATH: /home/joshua/.cache/ms-playwright
       timeout_seconds: 1500
-    # runner: ssh           # per-product overrides
-    # harness: codex
-    # budget_usd: 100       # per-product default budget for every phase
-    # github: owner/name    # only needed when the origin remote is not a github.com URL
-
-# Browser checks use the same explicit, private runtime library path as the service.
 worker_env:
-  pass: [LD_LIBRARY_PATH]
-
+  pass:
+  - LD_LIBRARY_PATH
+  - PLAYWRIGHT_BROWSERS_PATH
 web:
   trusted_origins:
-    - https://babel.taild4d2ae.ts.net
+  - https://babel.taild4d2ae.ts.net

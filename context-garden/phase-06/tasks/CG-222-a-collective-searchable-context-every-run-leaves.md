@@ -2,7 +2,7 @@
 id: CG-222
 title: 'A collective, searchable context: every run leaves structured notes about the codebase, briefs
   search them, and the retro consolidates them'
-status: ready
+status: cancelled
 product: context-garden
 phase: phase-06
 depends_on: []
@@ -17,7 +17,7 @@ reading:
 - docs/design.md
 - context-garden/phase-03/docs/retro.md
 created: '2026-09-05T16:58:10+00:00'
-updated: '2026-09-06T13:14:22+00:00'
+updated: '2026-09-07T21:36:25+00:00'
 ---
 
 ## Goal
@@ -57,3 +57,5 @@ Phase 03's friction said the same things repeatedly: reading lists that omitted 
 - 2026-09-06T03:38:40+00:00 no kickoff report for context-garden/phase-06
 - 2026-09-06T13:13:29+00:00 dispatch failed: [Errno 17] File exists: '/home/joshua/work/tmp'
 - 2026-09-06T13:14:22+00:00 reset to ready by hand
+- 2026-09-07T20:10:03+00:00 Owner explicitly unfroze phase06 and authorized task approval on 2026-09-07; this supersedes historical feature-freeze notes. Preserve existing implementation/PR and normal review/resource gates.
+- 2026-09-07T21:36:25+00:00 cancelled (web)

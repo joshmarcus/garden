@@ -1,0 +1,38 @@
+{
+  "version": "0.3.0rc2",
+  "tag": "v0.3.0rc2",
+  "sha": "be22506bd00cce32fb0f3acba121a764bafb506c",
+  "channel": "preview",
+  "prepared_at": "2026-09-08T04:37:58.295785+00:00",
+  "previous_pin": "55b31a849c0783ea9ce6f87db965ce7d33b61a58",
+  "included": [
+    {
+      "task": "CG-419",
+      "pr": 301,
+      "reviewed_head": "8de03e27676c78211bb175bbc13e170a8a0d3011",
+      "approval": "Owner-authorized fast-forward operator self-review; no automated approval claimed",
+      "exact_head_ci": [
+        "https://github.com/joshmarcus/context-garden/actions/runs/34186565798",
+        "https://github.com/joshmarcus/context-garden/actions/runs/34186747783"
+      ]
+    }
+  ],
+  "release_ci": [
+    "https://github.com/joshmarcus/context-garden/actions/runs/34186800461"
+  ],
+  "verification": {
+    "focused": "49 passed on PR source163.3MiB/noSwap and assembled release156.5MiB/noSwap",
+    "lint": "Full source/test/script lint passed",
+    "full_ci": "Exact PR head passed twice; exact release source passed",
+    "external_auth": "Dedicated ChatGPT worker login and repository SSH authentication verified locally"
+  },
+  "known_limitations": [
+    "Production EC2 host and actual model execution are pending administrator bootstrap-secret write; CG419 remains open until verified.",
+    "Historical deterministic canary remains terminated and its enrollment retired.",
+    "Phase05 stabilization, Spot recovery and pool controls remain unproven."
+  ],
+  "scope": "Installed0.3.0rc1 plus PR301 only; unrelated work deferred until production AWS works",
+  "budget": "$80 aggregate AWS; prepared one-host six-hour allocation reserved at$2 admission ceiling with independent termination and observed inventory required",
+  "distribution": "GitHub source archives; no PyPI upload",
+  "rollback": "Reinstall v0.3.0rc1/55b31a84 at an accounted boundary; preserve state and artifacts"
+}

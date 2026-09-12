@@ -1,7 +1,7 @@
 ---
 id: CG-386
 title: Prevent stale collected checks from reopening terminal tasks
-status: ready
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -13,8 +13,13 @@ reading:
 - src/garden/scheduler/poll.py
 - src/garden/scheduler/reap.py
 - tests/scheduler/test_human.py
+branch: garden/cg-386-prevent-stale-collected-checks-from-reopening-te
+pr: https://github.com/joshmarcus/context-garden/pull/312
+runner: remote
+attempts: 1
+last_dispatched_at: '2026-09-09T03:41:11+00:00'
 created: '2026-09-07T15:29:52+00:00'
-updated: '2026-09-07T15:31:25+00:00'
+updated: '2026-09-09T16:46:26+00:00'
 ---
 
 ## Goal
@@ -37,3 +42,447 @@ Operator verified GitHub merge, preserved full state at /home/joshua/work/operat
 ## Prevention
 
 This guard would have kept the verified merged/deployed task done and avoided a misleading owner card and repeated operator repair. CG362 covers external claim/reconciliation defects; do not expand an active worker's scope to absorb this independent check lifecycle fix.
+
+## Log
+
+- 2026-09-07T17:55:54+00:00 dispatched work run 20260907T175554Z-work via local [codex model=gpt-5.6-sol] (fresh session, base main, ~18272 tokens)
+- 2026-09-07T18:36:24+00:00 check did not run (20260907T183403Z-check): idle 21 min (no output or file change); will retry
+- 2026-09-07T18:37:36+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:38:48+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:40:02+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:41:12+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:42:25+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:43:37+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:44:55+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:46:19+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:47:50+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:49:01+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:50:12+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:51:24+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:52:37+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:53:49+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:55:01+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:56:15+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:57:29+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T18:59:00+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:00:41+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:03:31+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:05:26+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:07:12+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:08:56+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:10:18+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:11:40+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:12:59+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:14:23+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:15:43+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:17:04+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:18:25+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:19:45+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:21:06+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:22:26+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:23:42+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:24:57+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:26:12+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:27:28+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:28:43+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:30:15+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:31:44+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:33:33+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:35:09+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:36:41+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:38:11+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:39:40+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:40:58+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:42:13+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:43:28+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:44:43+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:46:03+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:47:18+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:48:42+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:50:04+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:51:32+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:52:59+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:54:31+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:55:52+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:57:17+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T19:58:50+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:00:45+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:02:12+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:04:03+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:06:51+00:00 Operator-owned environment recovery: preserved failed check evidence and continuation, granted one admission-controlled check retry; no implementation restart or assumed pass. Prevention CG-393/386.
+- 2026-09-07T20:06:52+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); will retry
+- 2026-09-07T20:07:19+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-386`) or send it back (`garden triage CG-386 --changes "..."`)
+- 2026-09-07T20:08:20+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); will retry
+- 2026-09-07T20:09:43+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); will retry
+- 2026-09-07T20:11:04+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); will retry
+- 2026-09-07T20:12:27+00:00 check did not run (20260907T183624Z-check): idle 22 min (no output or file change); will retry
+- 2026-09-07T20:13:55+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:15:23+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:17:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:18:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:20:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:22:08+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:23:49+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:25:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:27:26+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:29:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:30:41+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:32:16+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:33:34+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:34:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:35:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:37:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:38:22+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:39:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:40:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:42:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:43:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:44:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:45:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:47:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:48:16+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:49:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:50:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:51:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:53:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:54:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:55:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:57:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T20:58:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:00:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:01:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:03:22+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:04:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:06:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:07:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:08:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:10:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:11:28+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:12:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:14:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:15:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:16:25+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:17:41+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:18:57+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:20:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:21:28+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:22:40+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:23:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:25:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:26:18+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:27:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:28:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:30:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:31:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:31:57+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:32:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:33:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:34:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:36:23+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:37:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:39:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:41:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:44:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:46:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:48:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:50:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:52:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:54:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:56:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T21:58:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:01:08+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:03:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:04:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:05:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:07:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:08:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:10:08+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:11:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:13:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:14:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:16:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:17:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:19:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:20:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:21:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:23:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:24:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:25:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:26:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:29:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:30:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:31:54+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:34:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:35:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:37:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:39:24+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:41:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:43:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:46:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:48:21+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:50:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:51:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:53:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:55:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:56:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T22:58:44+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:00:25+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:02:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:06:25+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:09:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:11:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:14:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:17:24+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:19:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:21:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:23:24+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:25:11+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:26:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:29:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:31:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:33:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:35:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:36:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:38:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:40:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:41:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:43:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:46:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:50:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:52:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:55:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:56:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-07T23:58:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T00:01:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T00:03:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:14:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:14:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:16:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:17:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:19:36+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:21:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:23:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:24:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:26:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:28:25+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:30:16+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:32:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:33:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:35:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:36:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:39:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:40:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:42:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:44:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:45:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:47:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:49:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:50:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:52:55+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:54:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:56:40+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:58:34+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T02:59:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:00:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:02:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:03:30+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:08:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:10:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:28:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:28:15+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:29:28+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:30:40+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T03:31:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:54:55+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:54:58+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:56:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:57:26+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:58:36+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T08:59:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:00:57+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:02:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:03:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:04:40+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:05:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:07:02+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:08:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:09:34+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:10:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:12:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:14:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:15:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:17:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:18:47+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:21:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:23:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:24:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:25:24+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:26:34+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:27:44+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:28:54+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:30:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:31:19+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:32:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:33:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:35:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:36:28+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:37:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:38:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:40:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:41:16+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:42:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:44:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:45:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:47:02+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:48:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:49:30+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:50:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:51:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:53:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:54:30+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:55:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:56:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:58:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T09:59:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:00:19+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:01:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:02:40+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:03:58+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:05:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:06:21+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:07:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:08:42+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:09:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:11:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:12:19+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:13:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:14:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:15:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:17:21+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:19:09+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:21:11+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:23:15+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:25:13+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:27:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:29:12+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:31:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:33:08+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:35:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:37:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:39:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:40:19+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:41:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:42:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:44:10+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:45:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:47:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:48:22+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:49:36+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:50:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:52:01+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:53:16+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:54:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:55:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:57:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:58:18+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T10:59:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:00:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:02:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:03:19+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:04:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:05:41+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:06:51+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:07:59+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:09:49+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:11:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:13:22+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:15:18+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:17:23+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:19:03+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:21:05+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:22:52+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:24:53+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:26:48+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:28:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:30:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:32:44+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:34:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:36:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:38:30+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:40:25+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:42:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:44:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:46:11+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:48:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:50:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:52:00+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:53:15+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:53:21+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:54:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:56:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:58:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T11:59:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:01:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:02:38+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:04:32+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:06:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:08:34+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:10:27+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:12:14+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:13:58+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:15:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:17:33+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:20:43+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:22:37+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:23:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:25:57+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:27:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:28:46+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:29:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:31:07+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:32:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:33:31+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:34:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); retry also failed; needs human
+- 2026-09-08T12:35:50+00:00 Operator audit: re-enabled one pre-PR check retry on completed d2ccd4ab implementation; original result/continuation preserved, no duplicate work dispatch.
+- 2026-09-08T12:36:06+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:36:19+00:00 stuck: no feedback recorded to revise against; resume with one more round (`garden retry CG-386`) or send it back (`garden triage CG-386 --changes "..."`)
+- 2026-09-08T12:37:20+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:38:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:39:56+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:41:17+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:42:29+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:43:45+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:45:04+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:46:22+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:47:35+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:48:50+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:50:26+00:00 check did not run (20260907T201227Z-check): idle 118 min (no output or file change); will retry
+- 2026-09-08T12:53:44+00:00 opened https://github.com/joshmarcus/context-garden/pull/312 (base main): Terminal tasks can no longer be reopened by stale collected-check continuations, and empty checks now park idempotently. Durable continuations for active tasks remain restart- and admission-safe. cost=$2.32
+- 2026-09-08T14:07:42+00:00 re-enabled by hand; revise run will follow
+- 2026-09-08T14:15:01+00:00 triage: marked ready for review (Both exact-head CI runs passed; no inline review comments. Queue current-head review of the existing)
+- 2026-09-08T14:34:33+00:00 automated review requested changes: The lifecycle fix is mostly sound and focused tests pass, but terminal retirement drops an unidentifiable check ownership pointer without proving its runtime is dead. The required served interaction also does not exercise stale-check retirement or idempotent parking. cost=$0.73
+
+
+## CG456 option-like nonce replay, 2026-09-08T22:51
+
+Actual interaction check20260908T225111Z-check collected exit2 because a generated nonce began with hyphen and was parsed as an option. The exhausted-retry branch retained collected check_run and re-published the same stop each tick. Preserve its failed run/result while retiring an exhausted parked continuation once; a corrected operator retry must remain durable during local-capacity deferral and start exactly once. Nonce argument construction is owned by CG-458. This is additional evidence for existing parking/idempotency criteria, not new scope or another implementation.
+- 2026-09-08T23:18:47+00:00 dispatched revise run 20260908T231841Z-revise via local [codex model=gpt-5.6-sol] (fresh session, base main, ~29087 tokens)
+- 2026-09-08T23:28:06+00:00 preserved uncommitted worktree changes from run 20260908T231841Z-revise outside the PR: `git stash apply 1d302610b263f0f66a2bcfee309ae28dd4716408` in /home/joshua/work/worktrees/CG-386 (garden:CG-386:20260908T231841Z-revise:reap)
+- 2026-09-08T23:55:01+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/312: Terminal check retirement now fails closed when its run record is missing and confirms a real live child has stopped before releasing ownership. Focused lifecycle tests and a disposable served HTTP replay verify stale terminal checks, idempotent empty-check parking, preserved evidence, and failure/recovery behavior. cost=$1.59
+- 2026-09-09T00:43:45+00:00 PR conflicts with main; rebase onto main conflicts (tests/scheduler/test_resources.py); a rebase agent will resolve it
+- 2026-09-09T01:17:40+00:00 automated review: request_changes — Terminal retirement and idempotent parking work in isolation, but this branch conflicts with current main and its parking implementation omits the durable recovery_check needed for a corrected operator retry after resource deferral. cost=$0.59
+- 2026-09-09T01:40:22+00:00 triage: changes requested by hand: Owner-delegated precise continuation 20260909T0139. One bounded revision against current PR head bb4db6023807fbdb7f14f81
+- 2026-09-09T01:52:59+00:00 Operator restored queued author to remote after current-source check routing inspection: no generated capture pages or controller-owned spec paths. Full substantive feedback preserved; current owner proportional-validation policy appended. No active run or cap changed.
+- 2026-09-09T01:54:47+00:00 dispatched rebase run 20260909T015447Z-rebase via remote [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~8676 tokens)
+- 2026-09-09T02:16:33+00:00 base branch `main` is itself broken — pre-PR check(s) lint fail at its own commit e1c7595742e8, not because of this branch; waiting for the base to go green, no revise round cost=$0.01
+- 2026-09-09T03:38:06+00:00 pre-PR checks failed (lint) (still failing after a rebase onto `main`); revise run will fix before the PR is updated
+- 2026-09-09T03:41:11+00:00 dispatched revise run 20260909T034111Z-revise via remote [codex model=gpt-5.6-sol] (fresh session, base main, ~31009 tokens)
+- 2026-09-09T03:48:55+00:00 review pre-flight advisory: omitted optional items: A test or stated reason for every acceptance criterion, Lint is clean, No conflict markers remain, UI changes have 1280px and 390px captures, The PR description states the goal and outcome without process history, Every acceptance criterion is addressed by name
+- 2026-09-09T03:53:07+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/312: Fixed the review-blocking duplicate import and committed it as e822c0ea. The affected scheduler suites pass with 124 passed and 1 skipped; required Ruff lint passes. cost=$0.56
+- 2026-09-09T04:00:58+00:00 automated review: approve — The stale-check lifecycle fix is correct and preserves durable recovery for active tasks without replaying parked failures. cost=$0.57
+- 2026-09-09T04:04:00+00:00 hard-tier scratch-merge check passed; ready to merge once the queue reaches it
+- 2026-09-09T04:12:57+00:00 rebasing before merge; rebased onto main mechanically and force-pushed
+- 2026-09-09T04:13:59+00:00 rebased; patch id unchanged; verdict kept
+- 2026-09-09T04:21:39+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/312
+- 2026-09-09T09:42:43+00:00 automated review could not start: CG-386 is done: #312 was merged at 04:21:39
+- 2026-09-09T16:46:26+00:00 automatic review recovery retired because task is done

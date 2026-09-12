@@ -655,3 +655,624 @@ base.html's shell grid gives the folded rail half of any free viewport height on
 
 - CG377/CG376: actual scheduler-to-runner fixture requests zero capture pages for backend control and parser changes, task only for a task-page change, and broad consumers for shared UI. Against the historical14-page/four-variant request this is56 versus0/4 image requests in fixtures. Production rounds avoided and money saved remain unknown; use CG376 signals after deployment. Scoped preflight, current-head checks and inspection-error recovery fixed directly during fast-forward.
 - CG339/CG372: self-review found synchronous180second replay under scheduler with os.environ copy; moved it to supervised detached checks and guarded priority-drain recursion. Actual integrated9-flow HTTP replay passed104requests at104.8MiB/noSwap. No production throughput or unattended-stability claim.
+
+### 2026-09-07 · review loop for CG-253 (The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail)
+
+- Review loop: 4 rounds, $4.39 cumulative work/revise/review cost; head lineage unknown; cause: unknown; actionable evidence: Most walkthrough, metrics, retro-ordering, and rail work is correct, and all 89 focused tests pass. The production walkthrough still omits the required decision-card page whenever the phase has no currently actionable decision; only the QA fixture guarantees one.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · review loop for CG-294 (Planning sequences dependent tasks and inlines retro evidence into the brief)
+
+- Review loop: 4 rounds, $3.89 cumulative work/revise/review cost; head lineage unknown; cause: unknown; actionable evidence: All four acceptance criteria are implemented and the 22-test focused planner suite passes. The description references an earlier commit, so the supplied rewrite makes the verification current without requiring another revision.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · review loop for CG-295 (Docs match the mechanism: the scaffolded operate skill, design.md and roadmap.md non-goals, and the architecture module map)
+
+- Review loop: 4 rounds, $1.93 cumulative work/revise/review cost; head lineage 784bc61624f81078c7899f17b856f2f72e8f484a, 3eb1ca38184a56499f59f39bf182506e6feafca1; cause: unknown; actionable evidence: The focused architecture test fails because `interaction_replay.py` and `preflight.py` are absent from the module map. Ruff passes and the remaining acceptance criteria are supported.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · reported by CG-385 (Recover cache-limited admission through bounded reclaim and a fresh headroom check) in run 20260907T151701Z-work
+
+- The required CI helper initially rejected an unrelated pre-existing snapshot edit; it was temporarily stashed and restored unchanged.
+- The reading list marked resource and CG-383 files unresolved even though they were present in the checkout.
+
+### 2026-09-07 · reported by CG-385 (Recover cache-limited admission through bounded reclaim and a fresh headroom check) in run 20260907T170131Z-revise
+
+- jq was unavailable, so validation artifacts were inspected directly.
+
+### 2026-09-07 · review loop for CG-216 (Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP, works in its own clone, pushes the branch and posts the result and transcript back)
+
+- Review loop: 5 rounds, $28.49 cumulative work/revise/review cost; head lineage 4a1371f8e77bf01c1ea1175871aca97649ccf438; cause: stale/missing infrastructure evidence; actionable evidence: - **pre-PR check** `ui` error: UI renderer did not return a result
+- **pre-PR check** `UI captures` fail: UI files changed but this run produced no PNG captures. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · reported by CG-385 (Recover cache-limited admission through bounded reclaim and a fresh headroom check) in run 20260907T175548Z-revise
+
+- The exact-head CI helper required temporarily stashing and restoring an unrelated generated snapshot edit.
+
+### 2026-09-07 · reported by CG-253 (The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail) in run 20260907T190406Z-revise
+
+- CI validation initially required stashing a pre-existing unrelated generated snapshot modification.
+
+### 2026-09-07 · reported by CG-378 (Refresh README for the current garden and operator workflow) in run 20260907T175551Z-work
+
+- Shared validation leases delayed local validation while another worker awaited remote CI.
+- Initial CI exposed README navigation-format coverage and two QA/canary failures; the navigation issue was repaired, both QA/canary cases passed focused reproduction, and final full CI passed.
+
+### 2026-09-07 · reported by CG-387 (Distinguish full execution slots from resource pressure in the status banner) in run 20260907T183858Z-work
+
+- The broad local web suite hit an unrelated served-incident setup timing failure; the exact-head GitHub CI workflow completed successfully.
+
+### 2026-09-07 · reported by CG-216 (Workers on independent remote hosts: a worker agent that claims runs from the garden over HTTP, works in its own clone, pushes the branch and posts the result and transcript back) in run 20260907T200230Z-revise
+
+- The CI helper requires a completely clean worktree, so the unrelated docs/design/snapshot.json edit had to be temporarily stashed and restored.
+
+### 2026-09-07 · reported by CG-327 (The live-garden fence attributes only the worker's own writes: the operator's and the scheduler's commits during a run's window are never counted against the run) in run 20260907T200107Z-revise
+
+- The supervised validation wrapper returned only exit-code artifacts, so focused test diagnostics were run directly after its opaque failure result.
+
+### 2026-09-07 · reported by CG-253 (The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail) in run 20260907T200102Z-revise
+
+- A pre-existing generated docs/design/snapshot.json modification blocked the CI helper; it was temporarily stashed for CI and restored unchanged.
+
+### 2026-09-07 · reported by CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question) in run 20260907T201920Z-revise
+
+- The requested served-app replay manifest/tooling was unavailable in this checkout.
+
+### 2026-09-07 · reported by CG-253 (The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail) in run 20260907T203609Z-revise
+
+- CI helper initially rejected the pre-existing generated docs/design/snapshot.json modification; it was temporarily stashed for CI and restored unchanged.
+
+### 2026-09-07 · reported by CG-327 (The live-garden fence attributes only the worker's own writes: the operator's and the scheduler's commits during a run's window are never counted against the run) in run 20260907T205204Z-revise
+
+- The shared worktree retained an unrelated docs/design/snapshot.json edit; it was temporarily stashed for CI and remains uncommitted.
+
+### 2026-09-07 · reported by CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question) in run 20260907T205443Z-revise
+
+- The required served-interaction manifest was not available for this lifecycle-only change; functional application coverage is present in the decision tests.
+
+### 2026-09-07 · reported by CG-336 (Record Codex operator usage in the operator spend ledger) in run 20260907T210053Z-revise
+
+- Exact-head CI required temporarily preserving an unrelated generated design snapshot.
+
+### 2026-09-07 · reported by CG-356 (Recover onboarding cleanly when planner output is rejected) in run 20260907T211142Z-revise
+
+- Focused validation waited for the shared heavy-test slot while another task's CI ran.
+
+### 2026-09-07 · reported by CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question) in run 20260907T213639Z-revise
+
+- CI required temporarily stashing and restoring an unrelated pre-existing docs/design/snapshot.json modification.
+
+### 2026-09-07 · review loop for CG-327 (The live-garden fence attributes only the worker's own writes: the operator's and the scheduler's commits during a run's window are never counted against the run)
+
+- Review loop: 4 rounds, $12.04 cumulative work/revise/review cost; head lineage 4cd2e11f3b4787ef751be57c9b3f5fd19d34ab88, 052bddd0e97addff0bf2d7213e9c0cc61fea4aa0, 95511c7ca63f8107f9f7422241a8b57a96fe7ca3, 8f1f8ddd44c7756bc6b1be5c45d132d6a5e8eb78; cause: unknown; actionable evidence: Fence behavior satisfies all three criteria, with 59 focused tests and lint passing. The interaction replay is not valid evidence because it fabricates a browser action and lists artifacts it never creates.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · reported by CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question) in run 20260907T220325Z-revise
+
+- Base diff check reports a pre-existing blank line at EOF in tests/test_now2_metrics.py; unrelated and not modified.
+
+### 2026-09-07 · review loop for CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question)
+
+- Review loop: 4 rounds, $1.90 cumulative work/revise/review cost; head lineage ee6e48504a3c97a9bf9991c8e83b2fe3e1ceb289, 00be31cafc719dc9fb0dc7766e810e5232b3ca4d, ed78d12e9cd7138bdfc79cd717df70dd9f478f21, 83af889c0aaa6ed62d91f5e85a9a244b15b9d028; cause: unknown; actionable evidence: The lifecycle fix passes focused coverage, but exact-head PR CI fails in the new no-PR regression and the required served-interaction evidence is absent.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · reported by CG-336 (Record Codex operator usage in the operator spend ledger) in run 20260907T215314Z-revise
+
+- The pre-existing docs/design/snapshot.json edit had to be temporarily stashed because the CI helper requires a clean worktree; it was restored unchanged.
+
+### 2026-09-07 · review loop for CG-336 (Record Codex operator usage in the operator spend ledger)
+
+- Review loop: 4 rounds, $5.62 cumulative work/revise/review cost; head lineage 7614d25420dc9febd13774b44d838dc7312938aa, db3302159576a00c56a91bfd09a52375ce99dabe, c435261f6744c16b8207b81751a1cddff574df1b; cause: unknown; actionable evidence: Codex cumulative usage, turn/model attribution, unavailable pricing, and Claude compatibility are correctly implemented and tested. The exact reviewed head passes the focused operator-spend suite and lint.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · review loop for CG-362 (Complete externally implemented tasks from verified PR metadata)
+
+- Review loop: 6 rounds, $10.07 cumulative work/revise/review cost; head lineage c872dd16401e45e185b3cf4a122ecdf2249f5586; cause: unknown; actionable evidence: The lifecycle behavior is covered by 95 passing focused tests, but final-head lint fails on a duplicated test definition. The required scheduler replay manifest is also absent at the supplied path.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-07 · reported by CG-336 (Record Codex operator usage in the operator spend ledger) in run 20260907T222324Z-revise
+
+- CI helper requires a clean worktree; an unrelated generated design snapshot was temporarily stashed and restored unchanged.
+
+### 2026-09-07 · reported by CG-374 (Route routine recovery stops to operator actions instead of owner decisions) in run 20260907T223627Z-revise
+
+- The validation runner queued behind concurrent validations before starting focused checks.
+
+### 2026-09-07 · reported by CG-375 (Measure unattended stabilization by required human-owner action) in run 20260907T224238Z-revise
+
+- Shared one-slot validation budget delayed focused validation behind other workers.
+
+### 2026-09-07 · reported by CG-380 (Attribute controller, scheduler, and worker performance under load) in run 20260907T224859Z-revise
+
+- Exact-head CI required temporarily stashing and restoring an unrelated pre-existing docs/design/snapshot.json modification because the helper requires a clean worktree.
+
+### 2026-09-08 · reported by CG-381 (Make Inbox human-action counts and advice match actual ownership) in run 20260908T021622Z-revise
+
+- CI helper requires a clean worktree; the unrelated generated snapshot was temporarily stashed and restored.
+
+### 2026-09-08 · reported by CG-380 (Attribute controller, scheduler, and worker performance under load) in run 20260908T022545Z-revise
+
+- Exact-head CI required temporarily stashing and then restoring a pre-existing uncommitted generated snapshot.
+
+### 2026-09-08 · review loop for CG-356 (Recover onboarding cleanly when planner output is rejected)
+
+- Review loop: 4 rounds, $5.95 cumulative work/revise/review cost; head lineage 697930e297d9466dfb5bde75a92e220751a9a14d; cause: unknown; actionable evidence: The tested rejection and recovery paths work, but malformed planner data can fail during import after tasks have already been written, bypassing rollback and leaving onboarding unrecoverable.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-08 · reported by CG-356 (Recover onboarding cleanly when planner output is rejected) in run 20260908T091744Z-revise
+
+- The CI helper requires a clean tree; the pre-existing design snapshot was temporarily stashed and restored unchanged.
+
+### 2026-09-08 · reported by CG-387 (Distinguish full execution slots from resource pressure in the status banner) in run 20260908T095056Z-revise
+
+- GitHub Actions polling briefly hit an API rate limit while CI was running; a backed-off query confirmed success.
+
+### 2026-09-08 · review loop for CG-375 (Measure unattended stabilization by required human-owner action)
+
+- Review loop: 4 rounds, $10.44 cumulative work/revise/review cost; head lineage e58f8d25d641443344d78d065a209671d5b46578, 2c94007bd0afb3bf48d38129ceafd703c33ce5fe, 220bde71b9880c7d281d71e73a27ec4b4cb4bab6; cause: unknown; actionable evidence: All four acceptance criteria are met. Actor provenance is preserved through stabilization recording and real retry paths, owner actions reset the window conservatively, and the existing stabilization gates remain intact.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-08 · reported by CG-375 (Measure unattended stabilization by required human-owner action) in run 20260908T101806Z-revise
+
+- An unrelated generated docs/design/snapshot.json change required a temporary stash for the clean-checkout CI helper and was restored unchanged.
+
+### 2026-09-08 · reported by CG-390 (Require screenshots only for materially changed visual behavior) in run 20260908T101232Z-revise
+
+- Supervised validation queued behind another run's exclusive validation lease.
+
+### 2026-09-08 · reported by CG-375 (Measure unattended stabilization by required human-owner action) in run 20260908T104605Z-revise
+
+- The mandated nested validation wrapper propagates its lease environment into runner-spawning tests, which can contend with the parent lease during local iteration.
+
+### 2026-09-08 · reported by CG-421 (Verify public GitHub CI from scoped AWS workers without operator credentials) in run 20260908T105002Z-work
+
+- GARDEN_VALIDATION_RUNNER was unset in this worker environment, so its prescribed wrapper could not be invoked.
+
+### 2026-09-08 · reported by CG-393 (Distinguish validation-slot waiting from stale-worktree idle timeouts) in run 20260908T110840Z-work
+
+- The validation wrapper's inherited heavy-execution lease self-blocks tests/test_runners.py because that suite intentionally launches real nested supervisors; its direct focused run passed 49/49.
+
+### 2026-09-08 · reported by CG-319 (Keep Now 1 as Now, retire Now 2, and place Now after Inbox) in run 20260908T111955Z-work
+
+- The exact-head CI helper required a clean tree, so the pre-existing snapshot edit had to be temporarily stashed and restored.
+
+### 2026-09-08 · reported by CG-386 (Prevent stale collected checks from reopening terminal tasks) in run 20260907T175554Z-work
+
+- The shared validation runner queued focused tests and exact-head CI for several minutes without initial progress output.
+
+### 2026-09-08 · reported by CG-393 (Distinguish validation-slot waiting from stale-worktree idle timeouts) in run 20260908T120731Z-revise
+
+- jq is unavailable in the worker image; replay manifest was inspected with sed instead.
+
+### 2026-09-08 · reported by CG-253 (The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics and the rail) in run 20260908T135244Z-revise
+
+- The initial focused command referenced nonexistent tests/test_events.py; the actual affected test paths were used successfully.
+
+### 2026-09-08 · reported by CG-430 (Reap exited adopted children while supervised workers are still running) in run 20260908T144218Z-work
+
+- Running the complete runner suite inside the validation wrapper self-serialized early tests that copy inherited execution-owner variables; the run was stopped, the runner suite was executed directly, and the actual validation entrypoint was exercised separately with a nesting-safe disposable fixture.
+- No project typecheck command is configured; compileall was used as a lightweight syntax check in addition to tests and lint.
+
+### 2026-09-08 · reported by CG-431 (Keep controller-owned replay checks local for remote-authored tasks) in run 20260908T152144Z-work
+
+- Full ordinary pytest suite hung in existing test_local_runner_launch_flips_process_finished waiting on a run supervisor; validation was stopped after about 16 minutes, so no full-suite pass is claimed.
+
+### 2026-09-08 · reported by CG-328 (Accepting a worker's no-change call on a revise round returns the task to review and queues the round; it never lands in waiting_human with no question) in run 20260908T145444Z-revise
+
+- Full ordinary pytest wedged in an unrelated runner completion test under Python 3.14.4 and required interruption after more than 20 minutes.
+
+### 2026-09-08 · reported by CG-332 (A task parked by a harness environment stop is dispatched again as soon as the harness resumes, without a hand) in run 20260908T153509Z-revise
+
+- The generic replay harness does not model harness quota/auth pauses, so scoped disposable HTTP evidence was recorded alongside the dedicated scheduler regression tests.
+
+### 2026-09-08 · reported by CG-427 (Render Codex event streams on run transcript pages) in run 20260908T155611Z-revise
+
+- The controller pre-PR UI check attempted to read an inaccessible controller checkout and consequently did not discover the already committed captures; CG-431 owns that routing/receipt correction.
+- No type-check tool is configured in this checkout; `.venv/bin/python -m mypy src` reports `No module named mypy`.
+
+### 2026-09-08 · reported by CG-433 (Prevent LocalRunner process_finished from hanging on a completed stdin consumer) in run 20260908T160521Z-work
+
+- The supervised validation wrapper inherits an owner-scoped lease that intentionally blocks nested LocalRunner fixtures; the direct focused runner suite was used after the wrapper attempt stalled.
+
+### 2026-09-08 · reported by CG-433 (Prevent LocalRunner process_finished from hanging on a completed stdin consumer) in run 20260908T165157Z-revise
+
+- Wrapper-based whole-file runner validation encountered an unrelated nested heavy-validation lease deadlock; focused lifecycle validation completed directly with explicit 30-second outer bound.
+- Declined review improvement: Persist or expose the scheduler interaction manifest at a path readable from the review worker. — This runner-test cleanup change has no scheduler replay artifact to expose; changing scheduler artifact persistence would expand scope. The direct LocalRunner/supervisor tests provide inspectable lifecycle evidence.
+
+### 2026-09-08 · reported by CG-438 (Preserve review requests through unclaimed timeout and admission recovery) in run 20260908T170122Z-work
+
+- The full ordinary suite reached 79%, reported an unrelated onboarding assertion affected by repository `.pytest_cache` discovery, and then stalled for over twelve minutes in `test_local_runner_launch_flips...`; focused review validation and lint completed cleanly.
+
+### 2026-09-08 · reported by CG-423 (Scale production AWS workers through one resumable operation) in run 20260908T190859Z-revise
+
+- The revision feedback identified only a shared validation-lock hang and no concrete product defect; the preserved external rollout artifacts were outside the allowed worktree.
+
+### 2026-09-08 · reported by CG-428 (Keep remote worker runs alive across controller redeploys) in run 20260908T190911Z-revise
+
+- Remote pre-PR UI checks execute on workers whose installed package may predate the candidate branch, making candidate-only callback fixes ineffective.
+
+### 2026-09-08 · reported by CG-425 (Give the Now page beautiful, unmistakable section hierarchy) in run 20260908T191928Z-work
+
+- No project typecheck command is configured.
+
+### 2026-09-08 · reported by CG-448 (Align Now held-card ownership with Inbox review queues) in run 20260908T192609Z-work
+
+- No repository typecheck command is configured.
+
+### 2026-09-08 · review loop for CG-430 (Reap exited adopted children while supervised workers are still running)
+
+- Review loop: 4 rounds, $3.10 cumulative work/revise/review cost; head lineage c6e8c93a621b0b0e1a55d3c69a5007a39d52eade, d804ecb4f5ec8985e19838a40e83148dce88b5b2; cause: unknown; actionable evidence: The supervisor promptly reaps adopted exits while preserving leader status, termination escalation, descendant draining, and validation-slot ownership. Exact-head focused tests, lint, and the disposable served replay pass; the broader WSL incident remains a separate investigation.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-08 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260908T215800Z-revise-2
+
+- The frozen validation plan stated no rendered behavior changed even though the task and implementation materially change the Inbox decision journey.
+
+### 2026-09-08 · reported by CG-430 (Reap exited adopted children while supervised workers are still running) in run 20260908T221525Z-revise
+
+- Wrapping runner lifecycle tests in an inherited validation lease deadlocks fixtures that intentionally launch their own supervisors; the exact-head focused suite passed with validation ownership variables removed so those fixtures could exercise their own lease behavior.
+
+### 2026-09-08 · reported by CG-428 (Keep remote worker runs alive across controller redeploys) in run 20260908T215800Z-revise
+
+- The bounded full suite exposed one checkout-remote-dependent onboarding assertion unrelated to this task after 1,719 passing tests.
+
+### 2026-09-08 · reported by CG-385 (Recover cache-limited admission through bounded reclaim and a fresh headroom check) in run 20260908T225432Z-revise
+
+- The brief-required `context-garden/product.md` and `context-garden/phase-05/goals.md` paths do not exist in this product worktree; their content was supplied inline.
+- A pre-existing unrelated modification to `docs/design/snapshot.json` remained in the worktree and was deliberately excluded from the commit.
+
+### 2026-09-08 · review loop for CG-385 (Recover cache-limited admission through bounded reclaim and a fresh headroom check)
+
+- Review loop: 4 rounds, $12.36 cumulative work/revise/review cost; head lineage 11064356128f6aec9b3614f43ec88c70f09302fb, 813c3c721afaa46e913c93f36a881caa819c4111, 2f001bcc08c4590e7a8e88186defa8563dfe3a0c, 4704288bd94be661892d08f1cf39a24ec5da6ae6; cause: unknown; actionable evidence: The reclaim implementation passes lint and 25 focused tests, but required reviewed-head evidence is missing: the replay never exercises reclaim and exact-head CI is not reported. The branch must also be reconciled with current main.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-08 · reported by CG-430 (Reap exited adopted children while supervised workers are still running) in run 20260908T224525Z-revise
+
+- The full ordinary suite showed failures but timed out at 900 seconds before pytest emitted named tracebacks.
+- GitHub Actions status could not be queried because the worker has no GH_TOKEN or authenticated gh session.
+
+### 2026-09-08 · reported by CG-386 (Prevent stale collected checks from reopening terminal tasks) in run 20260908T231841Z-revise
+
+- The brief-listed `context-garden/product.md` and `context-garden/phase-05/goals.md` paths do not exist in this product worktree; the equivalent product and phase context was already inlined in the brief.
+- No configured typecheck command or mypy/pyright executable exists in the prepared environment, so there was no project typecheck to run.
+
+### 2026-09-09 · reported by CG-428 (Keep remote worker runs alive across controller redeploys) in run 20260909T001659Z-revise
+
+- The purported main base probe actually ran the CG-428 branch head, so it could not establish main’s lint state.
+
+### 2026-09-09 · reported by CG-453 (Reduce the ordinary test suite runtime below eight minutes) in run 20260908T230115Z-revise
+
+- The prepared AWS environment excluded dependency/browser installation and exposed no trustworthy setup-duration receipt, while worker rules prohibited rerunning package installation.
+
+### 2026-09-09 · reported by CG-438 (Preserve review requests through unclaimed timeout and admission recovery) in run 20260908T235138Z-revise-2
+
+- The full-suite onboarding metadata assertion and two remote-worker subprocess timeouts reproduce on exact focused rerun despite all affected paths being unchanged from origin/main.
+- A second supervised Ruff invocation returned no diagnostic output after the full-suite run; the earlier exact-source Ruff run completed with `All checks passed!`.
+
+### 2026-09-09 · review loop for CG-381 (Make Inbox human-action counts and advice match actual ownership)
+
+- Review loop: 4 rounds, $15.64 cumulative work/revise/review cost; head lineage 2f75bbf99ae5791bd41c5963d463da796917d6e4, cdcb4b9ebc68a40ab113c4df68f8d33fa4a51dbe, b13efb86c29c9b78c87c3a039c96749d898f2b11; cause: unknown; actionable evidence: Core ownership behavior is well covered by focused tests, but this head lacks the required affected Inbox interaction and exact-head CI. It also globally expands scoped Inbox captures to an unrelated task page.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T003625Z-work
+
+- Open EventSource connections required a bounded forced shutdown in the disposable capture runner and emitted harmless cancellation diagnostics.
+
+### 2026-09-09 · reported by CG-444 (Support configured SSH ports in canonical enterprise repository identity) in run 20260909T011350Z-revise
+
+- No mypy or pyright configuration or installed module is available in this checkout; typecheck is not applicable.
+
+### 2026-09-09 · reported by CG-392 (Reconcile remaining architecture and worker-protocol statements with implementation) in run 20260909T025632Z-work
+
+- A pre-existing modification to docs/design/snapshot.json was present and intentionally left untouched.
+
+### 2026-09-09 · reported by CG-392 (Reconcile remaining architecture and worker-protocol statements with implementation) in run 20260909T034358Z-revise
+
+- No dedicated typecheck command is configured in this checkout.
+
+### 2026-09-09 · reported by CG-386 (Prevent stale collected checks from reopening terminal tasks) in run 20260909T034111Z-revise
+
+- The brief-listed context-garden/product.md and context-garden/phase-05/goals.md files were not present in this worker checkout.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T034634Z-revise
+
+- The successful browser replay emits noisy ASGI CancelledError traces while closing screenshot stream connections.
+- Declined review improvement: Add optional UI scope mapping for the three Now templates. — The revision changes only the existing live event mapping, not rendered scope; the tracked Now replay and captures already identify the affected page.
+
+### 2026-09-09 · review loop for CG-428 (Keep remote worker runs alive across controller redeploys)
+
+- Review loop: 4 rounds, $25.47 cumulative work/revise/review cost; head lineage 6138c793f1315f939e4e649a5578d946aa0ec8db, a9c1cacbb209bd2a23584cd82f354b1289ca6113, 91c3aefb2827c058da63b51eb5d5b87a2fb54129, 64b8e4faceb9a5b18ad9a4eca60b06df060384cf; cause: unknown; actionable evidence: Remote work survives bounded controller outages while stale, revoked, expired, and replaced generations remain fenced. Transcript and finish replay are durable and idempotent, and reconnecting state is surfaced clearly.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-389 (Negotiate capture CLI compatibility and diagnose renderer exit before requesting revisions) in run 20260909T094246Z-revise
+
+- No project type-check command is configured; focused tests and Ruff were run.
+
+### 2026-09-09 · reported by CG-465 (Omit unattached-artifact commentary from automated reviews) in run 20260909T094730Z-revise
+
+- GitHub CLI is unauthenticated in this worker, so open PR comments and remote CI status could not be queried directly.
+
+### 2026-09-09 · reported by CG-438 (Preserve review requests through unclaimed timeout and admission recovery) in run 20260909T094250Z-revise
+
+- Six interaction-replay tests expect mandatory replay dispatch even though current scheduler policy explicitly disables mandatory interaction admission under reviewer judgment.
+
+### 2026-09-09 · review loop for CG-438 (Preserve review requests through unclaimed timeout and admission recovery)
+
+- Review loop: 4 rounds, $13.04 cumulative work/revise/review cost; head lineage 7a9f8969e7c8f56f45bfa2dcba6ce0b75c4e4304, d42c82366df5f35ce5455725561a81a9954c94ce, cfeb8d6d799a5406d6434db70859eb972ea775b4, cacaa015fd113b3213195c8cf731663e144b6eba, f82bb07ee888d349addd376ec1b4edca19550acf; cause: unknown; actionable evidence: Started reviews ending in environment errors still lose collected usage and cost from their durable run records.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T094728Z-revise
+
+- The worker intentionally lacks authenticated GitHub CLI access, so the failed workflow log was unavailable; public API metadata still exposed the duplicate passing run at the same SHA.
+
+### 2026-09-09 · reported by CG-465 (Omit unattached-artifact commentary from automated reviews) in run 20260909T095810Z-revise
+
+- The failed pull-request CI log could not be retrieved because GitHub CLI/API log access lacks authentication; the same SHA's push CI test run passed.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T100331Z-revise
+
+- The actions analyser cannot authenticate GitHub CLI because the validation environment provides neither a gh login nor GH_TOKEN.
+
+### 2026-09-09 · review loop for CG-455 (Redesign the Now page top summary as a useful thematic measurement)
+
+- Review loop: 4 rounds, $5.47 cumulative work/revise/review cost; head lineage af74457a62f830ea1e6cbdb308bc2d2608d8655d, a06c1658976e44f3240de4b0709dbc136e546cb7, 7507b41acdfaf65b8906aa7c8cace3e09ffdc557; cause: unknown; actionable evidence: The field reading is clear, authentic, actionable, and responsive; the prior stale-capacity issue is resolved.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-438 (Preserve review requests through unclaimed timeout and admission recovery) in run 20260909T095937Z-revise
+
+- The GitHub Actions status check could not authenticate because the environment has neither gh login state nor GH_TOKEN.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T101823Z-revise
+
+- The optional GitHub Actions analyser cannot inspect remote checks because this worker has no authenticated gh session or GH_TOKEN.
+
+### 2026-09-09 · reported by CG-465 (Omit unattached-artifact commentary from automated reviews) in run 20260909T101823Z-revise-2
+
+- The supplied Actions check failure requires GitHub CLI authentication; no credentials are available in this worker.
+
+### 2026-09-09 · review loop for CG-465 (Omit unattached-artifact commentary from automated reviews)
+
+- Review loop: 4 rounds, $1.55 cumulative work/revise/review cost; head lineage bbad1846c4eb9f0b15cceabcac89fe11e2fa5627, 0b551e4cac723d9aaf871d7c7acd9cd774fe8090; cause: unknown; actionable evidence: Automated reviews now suppress optional unattached-artifact and metadata commentary while retaining internal diagnostics and genuine blockers.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T102341Z-revise
+
+- The optional GitHub Actions analyser cannot run because the worker environment has no authenticated gh session.
+
+### 2026-09-09 · reported by CG-465 (Omit unattached-artifact commentary from automated reviews) in run 20260909T103732Z-revise
+
+- The failed CI test log is unavailable in this environment; the separate Actions check is blocked by missing GitHub CLI authentication.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T103731Z-revise
+
+- The actions analyser requires GitHub CLI authentication unavailable on the worker; `gh auth status` exits 1 with the same setup message reported by CI.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T110520Z-revise
+
+- The `actions` analyzer cannot authenticate because neither GitHub CLI credentials nor GH_TOKEN are available to the worker.
+- The successful served replay logs benign ASGI CancelledError traces while shutting down open event streams.
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T111209Z-revise
+
+- The brief referenced context-garden/product.md and context-garden/phase-05/goals.md, but those paths are absent from this worktree.
+- Declined review improvement: Add optional UI scope mapping metadata. — No configured mapping artifact or functional defect was identified; the changed Inbox interaction is directly covered by a rendered-form and submission regression.
+- Declined review improvement: Act on the unavailable reviewer pre-check result. — Current-head focused tests and lint were run successfully; no source correction follows from a prior unavailable advisory check.
+
+### 2026-09-09 · review loop for CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions)
+
+- Review loop: 7 rounds, $17.93 cumulative work/revise/review cost; head lineage 2906e069895c35ec46b1d31625a397d1bc11578b, a4279b47914ee033bde192ef10d37078a5af8f05, f70dc75edd421f5fa84971652bbcedbd1ded74dc, dff8c64ed53fd006d8367dd24f5508d76da0ba1f, 97ef703fd2228f9fad46ad75720859812539f8fb; cause: unknown; actionable evidence: The core escalation and investigation lifecycle is substantially implemented, but two policy/action paths do not honor their configured or displayed behavior.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T112630Z-revise
+
+- The required context-garden/product.md and context-garden/phase-05/goals.md paths are absent from this worktree.
+- Declined review improvement: Optional UI scope mapping omitted for the touched web files — No concrete mapping format or functional defect was identified; the focused rendered-form regression directly covers the changed Inbox behavior.
+
+### 2026-09-09 · reported by CG-438 (Preserve review requests through unclaimed timeout and admission recovery) in run 20260909T123529Z-revise
+
+- The triage note identified the first failing transition assertion, but once restored the same tests exposed a subsequent redundant-backoff failure; both were resolved without weakening assertions.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T124456Z-revise-2
+
+- The served replay logs benign ASGI CancelledError traces while closing open event-stream requests, although it exits successfully.
+- Declined review improvement: Add optional UI scope mapping for the three Now templates. — The nit supplied no required mapping format or concrete UI defect; the existing focused page tests and scoped Now replay directly cover the affected surface.
+
+### 2026-09-09 · reported by CG-465 (Omit unattached-artifact commentary from automated reviews) in run 20260909T125425Z-revise
+
+- The supplied saved GitHub Actions failure log was unreadable from this worker (Permission denied); the named canary test passed locally on the current checkout.
+- No type checker is configured in pyproject.toml or CI.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T130916Z-revise
+
+- The served replay emits benign ASGI cancellation traces while shutting down, despite completing successfully and confirming the server thread exited.
+- Declined review improvement: Add optional UI scope mapping for the three Now templates. — No repository mechanism or concrete mapping target was identified; the final diff, replay receipt, and page-specific captures already scope the affected rendered surface explicitly.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T132910Z-revise
+
+- The served replay passes but uvicorn logs benign CancelledError traces while shutting down open SSE connections.
+- Declined review improvement: Add optional UI scope mapping for the three Now templates. — The feedback identified no functional defect or required mapping format; the branch and existing design documentation already scope the visual change to the Now summary.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T124614Z-revise
+
+- The listed context-garden/product.md and context-garden/phase-05/goals.md paths are absent from this product checkout; their content was available in the supplied brief.
+- GitHub review and CI could not be queried directly because gh has no authentication in the worker environment.
+- Declined review improvement: Add optional UI scope mapping for src/garden/web/pages/api.py. — The endpoint change only stores remote validation receipts and does not alter rendered appearance or interaction behavior; path-based UI evidence is explicitly advisory under current owner policy.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T134213Z-revise
+
+- The successful served replay emits noisy Uvicorn CancelledError traces while closing long-lived event streams, although it exits successfully and confirms the server thread stopped.
+- Declined review improvement: Provide optional UI scope mapping metadata for the three Now templates. — No concrete render, accessibility, or synchronization defect was identified, and the focused diff, tests, replay, and captures already establish the affected UI scope.
+
+### 2026-09-09 · reported by CG-455 (Redesign the Now page top summary as a useful thematic measurement) in run 20260909T140820Z-revise
+
+- Declined review improvement: Add optional UI scope mapping for the three Now templates. — The reviewer identified no functional defect or established mapping artifact; the change is already confined to the existing Now page and covered by focused tests and rendered interaction evidence.
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T142731Z-revise
+
+- Declined review improvement: Optional UI scope mapping for the decision-card and Inbox templates — No concrete defect or required mapping format was identified; targeted rendered tests directly cover the changed behavior.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T145739Z-revise
+
+- The listed context-garden/product.md and context-garden/phase-05/goals.md paths do not exist in this worktree; their relevant contents were included in the supplied brief.
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T151104Z-revise
+
+- Declined review improvement: Add optional UI scope mapping for task.py, _decision_card.html, and inbox.html. — The review identified no concrete defect or required mapping mechanism; targeted rendered tests already cover the affected shared decision-card output.
+
+### 2026-09-09 · reported by CG-479 (Optimize Garden page load times) in run 20260909T151342Z-revise
+
+- The first revised benchmark attempt exposed an open Now-page SSE connection preventing isolated Uvicorn shutdown; the attempt was stopped, the harness was fixed, and only the successful rerun was reported.
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T142544Z-revise
+
+- Two required contextual reading-list paths, context-garden/product.md and context-garden/phase-05/goals.md, were absent from this checkout; the inlined brief and available repository documentation supplied the needed context.
+- Declined review improvement: Add optional UI scope mapping for the touched web templates/actions. — This revision changes no rendered behavior or template markup; the frozen validation plan explicitly identifies no rendered-evidence requirement.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T151719Z-revise
+
+- The supplied context-garden/product.md and context-garden/phase-05/goals.md paths were absent from this checkout; their contents were available inline in the task brief.
+- Declined review improvement: Add optional UI scope mapping for src/garden/web/pages/api.py and src/garden/web/templates/task.html. — The receipt persistence and CI admission changes do not alter rendered behavior; adding visual scope would mischaracterize this backend-only revision.
+
+### 2026-09-09 · review loop for CG-434 (Enforce current validation policy on old and stacked worker branches)
+
+- Review loop: 4 rounds, $17.50 cumulative work/revise/review cost; head lineage 6fa3d5d0a1a60981727cf3f03acd35f84bae4330, 7a47262e55fe4240312a3eb46c9d4a371d1c5141, 9cff1f43bde5b073609034a07df69e8728eee4ff, e47ff030c497368c76c05903012a2364ef922069, 620794838e7f68b79f535ceeff0f7b4edd5e3fd2; cause: unknown; actionable evidence: Current-source validation behavior is well covered, but remotely supplied incomplete receipts can still satisfy the authoritative worker-check CI gate.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T161455Z-revise
+
+- Declined review improvement: Add optional UI scope mapping for task.py, _decision_card.html, and inbox.html — No concrete defect or required mapping mechanism was identified; the affected rendered behavior is covered directly by focused web and attention tests.
+
+### 2026-09-09 · review loop for CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions)
+
+- Review loop: 4 rounds, $9.21 cumulative work/revise/review cost; head lineage caa1dd04122f13436dd5f64f2e013fe49b413182, 38accf6e81eefc3be58dc8b41f421f8741d7ca65, 6b080fe80d80016f2db2d57c51bb928455d5b2d6, c1ed4c1077d34a690f90f5e619d72bce0e9c5fb9; cause: unknown; actionable evidence: Interrupted CI recovery remains insufficiently guarded against stale PR heads, and an applicable focused web test fails.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-485 (Show accurate remote and manual run lifecycle without phantom process slots) in run 20260909T162039Z-revise
+
+- Declined review improvement: Add further UI scope mapping beyond `_board.html` and `_now1_macros.html`. — Those templates are the direct Board and Now lifecycle presentation consumers; no concrete missing UI behavior was identified.
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T163230Z-revise
+
+- Declined review improvement: Add optional UI scope mapping for the previously changed templates and task page — This revision changes only scheduler recovery validation and tests; no rendered source or visual behavior changed, so additional UI scope metadata would not verify the reported defect.
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T170045Z-revise
+
+- The brief referenced context-garden/product.md and context-garden/phase-05/goals.md, which are not present in this checkout.
+- The reported GitHub Actions analyser could not authenticate because the runner has neither gh login nor GH_TOKEN; local reproduction nevertheless found and fixed two genuine source-test failures.
+
+### 2026-09-09 · reported by CG-417 (Reuse a fresh task snapshot within one controller operation) in run 20260909T173258Z-revise
+
+- A merge-base diff included unrelated historical main divergence; direct task-commit diff was clean.
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T173505Z-revise
+
+- The required context-garden/product.md and context-garden/phase-05/goals.md paths were absent from this product checkout; equivalent task context was supplied inline in the brief.
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T173507Z-revise
+
+- Declined review improvement: Optional UI scope mapping for task.py and Inbox templates — This revision changes only scheduler provenance validation and test fixtures; the frozen validation plan explicitly identifies no rendered or lifecycle presentation change.
+
+### 2026-09-09 · reported by CG-491 (Recover idle worker claims after transient or lost claim responses) in run 20260909T174137Z-revise
+
+- GitHub CLI was unauthenticated, but the public Actions API exposed both job step summaries; detailed zipped logs require authentication.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T175130Z-revise
+
+- The brief-listed context-garden/product.md and context-garden/phase-05/goals.md paths do not exist in this checkout.
+
+### 2026-09-09 · reported by CG-437 (Escalate revision difficulty and surface explicit troubled-task decisions) in run 20260909T175722Z-revise
+
+- The check feedback provides only a GitHub CLI authentication error and no failing pytest node or log.
+
+### 2026-09-09 · reported by CG-480 (Make Inbox recovery prompts actionable and distinguish operator work from user decisions) in run 20260909T175859Z-revise
+
+- The reported GitHub Actions check could not authenticate because its environment lacks gh credentials; this is separate from the passing focused source tests.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T185122Z-revise
+
+- The brief-listed context-garden/product.md and context-garden/phase-05/goals.md were absent from this checkout; repository architecture, design, worker-protocol, and test-suite documentation were available and read.
+- The reported GitHub Actions detail requires unavailable gh authentication, so CI was reproduced with affected local suites rather than polling GitHub.
+
+### 2026-09-09 · reported by CG-493 (Retain RC14 discovery and CI guards) in run 20260909T194245Z-revise
+
+- GitHub started duplicate workflows for the same SHA; one passed fully while the other had a non-reproducing canary failure.
+
+### 2026-09-09 · review loop for CG-486 (Recover managed workers from failed checkout materialization)
+
+- Review loop: 4 rounds, $4.66 cumulative work/revise/review cost; head lineage 975c70b6c2c4a88feb24327379c7843fcd4e590b, c596ca745c105f4dd56f3e36cadff44c145fcfaa, 944d7879fd8c73e01a3d96436a0fb10045fdc8bf; cause: unknown; actionable evidence: Core checkout recovery passes, but repository-lock materialization errors still escape the managed claim loop without a structured finish.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-09 · reported by CG-494 (Show standalone scheduler health and coordinate manual ticks) in run 20260909T215255Z-work
+
+- The brief requests a typecheck, but the repository has no configured type checker or typecheck dependency.
+
+### 2026-09-09 · reported by CG-494 (Show standalone scheduler health and coordinate manual ticks) in run 20260909T221135Z-revise
+
+- The repository has no configured mypy or pyright type-check command; Ruff and focused runtime tests were used for the typed changes.
+
+### 2026-09-09 · reported by CG-384 (Show deployed release identity and validate release artifacts) in run 20260909T232532Z-work
+
+- The brief referenced docs/release-protocol.md, but it was absent on this branch; the release protocol was added as part of the change.
+
+### 2026-09-09 · reported by CG-496 (Integrate the validated RC16 Now refresh into current main) in run 20260909T200930Z-work
+
+- The successful browser replay emitted noisy Uvicorn CancelledError traces during controlled server shutdown.
+
+### 2026-09-09 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260909T200813Z-revise
+
+- The listed context-garden/product.md and context-garden/phase-05/goals.md paths do not exist in this product checkout; their relevant content was supplied inline in the brief.
+
+### 2026-09-09 · reported by CG-384 (Show deployed release identity and validate release artifacts) in run 20260909T234848Z-revise
+
+- Worker policy prohibits pushing, so fresh exact-head CI must be triggered by the runner after publication.
+
+### 2026-09-10 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260910T005959Z-revise
+
+- The brief listed context-garden/product.md and context-garden/phase-05/goals.md, but those paths are absent from this product checkout; the inlined brief supplied their relevant content.
+
+### 2026-09-10 · reported by CG-434 (Enforce current validation policy on old and stacked worker branches) in run 20260910T014431Z-revise
+
+- The listed context-garden/product.md and context-garden/phase-05/goals.md paths do not exist in this checkout; the equivalent material was inlined in the brief.
+
+### 2026-09-10 · reported by CG-490 (Remove redundant two-review-round automerge hold for hard tasks) in run 20260910T015143Z-revise
+
+- A base-range whitespace scan reports pre-existing generated replay artifacts outside this task; the revision itself passed git diff --check.
+
+### 2026-09-10 · review loop for CG-494 (Show standalone scheduler health and coordinate manual ticks)
+
+- Review loop: 4 rounds, $5.76 cumulative work/revise/review cost; head lineage 53974823153441486d48765f23b52e584a1715e5, 19fb3595a00cc99dc86f5c053292c77ab13b2624, dc55113a6032b8e31ebcdcfbde309a9a9a602734, 453100061f822d0b0c22b7863a7f72796fca363b; cause: unknown; actionable evidence: Locking and displayed state behavior are covered, but accumulated historical leases can hide the active watcher and falsely report it missing.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-10 · reported by CG-536 (Make accepted-task costs and phase comparisons trustworthy) in run 20260910T151836Z-revise
+
+- The prescribed typecheck could not be run because the repository has no configured type checker.
+
+### 2026-09-10 · reported by CG-585 (Repair the RunStore import cycle on merged main) in run 20260910T145928Z-work
+
+- The supplied incident reading-list path was unresolved, as already recorded in the brief.
+- The final full suite exposed three failures outside the import/locking change; two passed in focused reruns, while the QA output assertion failed independently.
+
+### 2026-09-10 · review loop for CG-536 (Make accepted-task costs and phase comparisons trustworthy)
+
+- Review loop: 4 rounds, $11.58 cumulative work/revise/review cost; head lineage 2532823b6fc4fee854b2895cf8e575dc7b25259d, 20f6960cf62bf261e8c5bfd4e5b98aff3a40ca8a, e7b746535d1218753e36d385aefca10eff803744, cd97a38ed4a4dd20c898f6d331b1898a5cb2a021; cause: unknown; actionable evidence: The shared worker acceptance cohort is substantially improved, but unknown-priced operator spending is still silently converted to absence/zero and the Costs page uses inconsistent short-phase filtering.. Prevention work: CG-374 (routine recovery), CG-372 (review admission), CG-323 (worker preflight), CG-339 (proportional application evidence).
+
+### 2026-09-10 · reported by CG-536 (Make accepted-task costs and phase comparisons trustworthy) in run 20260910T163758Z-revise
+
+- The exact-head full suite had one unrelated transient store-discovery cache failure after 2,483 passes; the failing node passed alone immediately afterward.
+- No static typecheck command or configuration exists in the repository.
+
+### 2026-09-10 · reported by CG-593 (Repair merged-main operator metrics and import-order regressions) in run 20260910T173819Z-work
+
+- No project type-check command was configured in the inspected project files.
+
+### 2026-09-10 · reported by CG-600 (Finish model runs when a harness replaces the final-output FIFO) in run 20260910T222043Z-work
+
+- The immutable RC19 validation supervisor itself exhibited the reported childless final-reader deadlock after completed pytest runs, requiring termination of only those test-validation supervisors; installed source was not hotpatched.
+- No standalone typecheck command is configured in the repository.
+
+### 2026-09-10 · reported by CG-600 (Finish model runs when a harness replaces the final-output FIFO) in run 20260910T231031Z-revise
+
+- Current-head CI and renewed independent review cannot occur until the controller publishes the committed revision.
+
+### 2026-09-11 · reported by CG-600 (Finish model runs when a harness replaces the final-output FIFO) in run 20260910T234412Z-revise
+
+- The required 900-second full-suite ceiling expired at 90% before pytest could identify or summarize the second observed failure.
+
+### 2026-09-11 · reported by CG-601 (Isolate old-branch validation policy fixtures from inherited pytest options) in run 20260911T030310Z-revise
+
+- No type-check command is configured in pyproject.toml.
+
+### 2026-09-11 · reported by CG-601 (Isolate old-branch validation policy fixtures from inherited pytest options) in run 20260911T032841Z-revise
+
+- Exact-head CI and independent review are scheduler-owned and unavailable from this worker.
+
+### 2026-09-11 · reported by CG-620 (Keep collection continuations behind durable Run finalization) in run 20260911T032842Z-work
+
+- Exact-source ordinary CI could not pass on this host because the canary's scheduler resource gate requires 20 GB free disk and the host exposed about 8.9 GB.
+
+### 2026-09-11 · reported by CG-622 (Bound branch cleanup reference matching at real scheduler state scale) in run 20260911T060230Z-work
+
+- The referenced cleanup-reference-scaling diagnosis did not resolve and was unavailable; implementation used the frozen criteria and current checkout source.
+
+### 2026-09-11 · reported by CG-623 (Honor explicit operator stabilization acceptance without rewriting measured evidence) in run 20260911T103209Z-work
+
+- The broader tests/test_retro_verdict.py run was deferred by the environment resource-pressure gate because about 7.3 GiB was available versus the configured 20 GiB reserve; 5 tests passed and 9 setup-dependent tests failed before retro launch.

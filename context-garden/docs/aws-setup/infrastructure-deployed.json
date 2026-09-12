@@ -1,0 +1,61 @@
+{
+  "StackId": "arn:aws:cloudformation:us-east-1:350111791226:stack/context-garden-phase05-infrastructure/6294d1c0-aaec-11f1-8ebc-128124cdfbfb",
+  "StackName": "context-garden-phase05-infrastructure",
+  "ChangeSetId": "arn:aws:cloudformation:us-east-1:350111791226:changeSet/operator-bootstrap-20260907/dde0f4a4-536d-407a-ac39-0ae887c36f4f",
+  "Description": "Context garden phase05 infrastructure only. No EC2 instances, inbound access, NAT gateway or broad provisioning permissions. Owner-authorized one-time administrator bootstrap.",
+  "CreationTime": "2026-09-07T18:46:06.893000+00:00",
+  "LastUpdatedTime": "2026-09-07T18:46:28.201000+00:00",
+  "RollbackConfiguration": {},
+  "StackStatus": "CREATE_COMPLETE",
+  "DisableRollback": false,
+  "DeploymentConfig": {
+    "Mode": "STANDARD",
+    "DisableRollback": false
+  },
+  "NotificationARNs": [],
+  "Capabilities": [
+    "CAPABILITY_NAMED_IAM"
+  ],
+  "Outputs": [
+    {
+      "OutputKey": "VpcId",
+      "OutputValue": "vpc-0b3a690d87cdb3e64"
+    },
+    {
+      "OutputKey": "SecurityGroupId",
+      "OutputValue": "sg-042e4fd7d39c06857"
+    },
+    {
+      "OutputKey": "SubnetId",
+      "OutputValue": "subnet-0158ea83a40af1cbc"
+    },
+    {
+      "OutputKey": "InstanceProfileArn",
+      "OutputValue": "arn:aws:iam::350111791226:instance-profile/ContextGardenWorker"
+    },
+    {
+      "OutputKey": "BootstrapSecretArn",
+      "OutputValue": "arn:aws:secretsmanager:us-east-1:350111791226:secret:context-garden/phase05/bootstrap-pbTY7e"
+    }
+  ],
+  "Tags": [
+    {
+      "Key": "ManagedBy",
+      "Value": "context-garden"
+    },
+    {
+      "Key": "Pool",
+      "Value": "phase05"
+    }
+  ],
+  "EnableTerminationProtection": false,
+  "DriftInformation": {
+    "StackDriftStatus": "NOT_CHECKED"
+  },
+  "LastOperations": [
+    {
+      "OperationType": "CREATE_STACK",
+      "OperationId": "3580d6a0-0421-430d-af23-924c90590b49"
+    }
+  ]
+}

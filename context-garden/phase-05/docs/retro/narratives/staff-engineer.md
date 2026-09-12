@@ -1,0 +1,41 @@
+# staff-engineer — Phase 05 narrative reflection
+
+**Persona:** staff-engineer · **Score:** 6/10 · 2026-09-10T11:34:35+00:00
+
+Phase 05 substantially improves recovery, remote lease fencing, resource supervision and behavioral coverage, but shared-state persistence and duplicated outcome calculations still undermine dependable operation and trustworthy measurement. Resolve the corrupt-state and maintenance-pause defects before closure; consolidate metrics and remove full-history claim materialization as focused maintenance work. Review covered source 582c6e716bc84a7760f41ac0f1557de1a16b568a, read-only code inspection, in-memory reproductions and passing repository Ruff; no files were changed and no new stabilization run is requested.
+
+## Reaction
+
+Reading the original report again, I find myself holding two judgments together: Phase 05 made meaningful progress on difficult operational problems, and its remaining persistence defects sit beneath those improvements. Recovery, remote lease fencing, resource supervision and behavioral coverage are capabilities I would welcome as a future maintainer. They address situations where an autonomous development tool must account for work after ordinary execution has broken down. My concern is that those capabilities depend on durable state retaining its meaning. The report gives me reasons to trust more of the execution machinery, while leaving a serious question about the information that machinery uses to decide what happens next.
+
+The malformed-state finding carries the greatest cost of delay for me. A parse failure becoming an empty side-store collapses two different conditions: nothing has been recorded, and something was recorded but cannot currently be understood. Once that apparent emptiness can be saved, the system can destroy the evidence needed to recover its controls and intent. As a maintainer, I would find that especially painful because investigation could begin after the useful evidence had disappeared. I would prioritize preserving the corrupt content and refusing scheduling mutations with an actionable diagnosis. That introduces an interruption an operator must resolve, but the interruption makes the actual condition visible. The regressions need to cover both loading corrupt content and encountering corruption at save time; protecting only the first read would leave an important boundary unproven.
+
+The maintenance-pause race unsettles me for a related reason: an operation that looks observational acquires authority to write. Reading absent maintenance state creates a dirty empty entry, and a later stale save can erase a concurrent pause request. That is a small implementation choice with a large operational consequence. Someone asking the scheduler to pause needs that request to survive another participant merely inspecting state. I would want the distinction between inspection and mutation to be obvious in the API, so future callers do not have to remember a hidden persistence side effect. The concrete interleaving test matters here. A tick reading absence, a request recording a pause, and the tick saving afterward should form a deterministic regression. That sequence explains the contract more clearly than a collection of isolated getter and setter tests could.
+
+Together, those findings shape how I interpret the accepted stabilization evidence. I accept the owner's decision that the existing evidence is sufficient for its purpose, and I would not turn this reflection into a demand for another stabilization run or a mandatory live canary. The original missed targets and failures still belong in the record. Passing repository Ruff, as recorded in the original review, is useful evidence about code hygiene; the in-memory reproductions establish something different about the reported failure paths. I want each piece of evidence to carry the weight it can actually support. Acceptance of the stabilization evidence does not erase the two high-severity defects or satisfy their closure requirements. The phase remains open, and the release remains unpublished.
+
+The metrics disagreement would become increasingly expensive as more decisions depend on the reports. Forced completion being counted as acceptance changes the meaning of success, while unknown pricing appearing as zero makes incomplete knowledge look like a favorable result. I would lose confidence in comparisons if Now, CLI, Costs and retro could each answer the same question differently. My preferred investment is a canonical acceptance calculation and cost-cohort calculation whose results those surfaces present. Shared behavioral cases should establish what forced completion means, how missing prices remain visible, and how routing and time windows affect inclusion. I would resist fixing each display independently, because that would leave future maintainers with several places to rediscover the same domain rules.
+
+The remote-claim finding is where I would be most deliberate about sequencing. Deep-copying all run history for every idle claim makes accumulated history part of the cost of asking for work. I cannot infer a measured slowdown from this report, but the dependency itself concerns me: keeping a useful operational record should not force unrelated terminal records through the claim path indefinitely. An extracted claim and replay service with indexed durable request identities would give that policy a clearer home. Historical rejection semantics must survive the change. I would want a test demonstrating that an idle claim avoids terminal-record materialization, alongside behavior that preserves replay decisions. Otherwise a performance refactor could quietly weaken an existing correctness guarantee.
+
+My practical preference is therefore to repair the state-integrity and pause boundaries before closure, then consolidate outcome semantics and untangle claim lookup as focused maintenance work. I would respect CG347/348 belonging to Phase07 rather than importing them into this phase's obligations. The original 6/10 still expresses the balance I see in the supplied evidence: substantial improvements worth keeping, with foundational contracts that remain too easy to violate. What would earn my confidence next is a smaller set of explicit rules about durable state, mutation, acceptance and replay, backed by tests that demonstrate the failures stay fixed. This later reflection does not establish that any of those changes have happened.
+
+## Provenance
+
+Later narrative reflection grounded in the original report [staff-engineer](../../reviews/staff-engineer-2026-09-10.md), run 20260910T061402Z-persona. Original report SHA256: 51f9dafcbd519f97408a93371b15fb87bd4cf0c895b8a06d75c9815e4731fd10. The original assessment and findings are preserved verbatim; this is not a new approval. Reflection source checkout: 582c6e716bc84a7760f41ac0f1557de1a16b568a.
+
+## High
+
+- **State integrity** — Malformed state JSON silently becomes an empty side-store and can be overwritten, losing durable controls and recovery intent.
+  - suggestion: Preserve corrupt state, refuse scheduling mutations with an actionable diagnosis, and add load-time and save-time corruption regressions.
+- **Maintenance concurrency** — Reading absent maintenance state marks an empty entry dirty, allowing a stale tick save to erase a concurrent maintenance-pause request.
+  - suggestion: Make maintenance inspection read-only, create entries only during explicit mutations, and test the interleaved tick/request/save sequence.
+
+## Medium
+
+- **Accepted-task metrics** — Separate outcome implementations disagree about forced completion and unknown pricing, allowing Now to report false acceptance and zero cost.
+  - suggestion: Use one canonical acceptance and cost-cohort calculation across Now, CLI, Costs and retro, with shared tests for forced completion, missing prices, routing and time windows.
+- **Remote claim architecture** — Every idle claim deep-copies all run history for request-identity lookup before applying active-run selection.
+  - suggestion: Extract claim and replay policy into a service with indexed durable request identities, preserve historical rejection semantics, and test that idle claims avoid terminal-record materialization.
+
+_garden persona run 20260910T113140Z-persona-3_

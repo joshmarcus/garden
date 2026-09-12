@@ -1,7 +1,7 @@
 ---
 id: CG-294
 title: Planning sequences dependent tasks and inlines retro evidence into the brief
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
@@ -18,9 +18,9 @@ pr: https://github.com/joshmarcus/context-garden/pull/275
 harness: codex
 discovered_from: retro:context-garden/phase-04
 attempts: 2
-last_dispatched_at: '2026-09-07T10:37:17+00:00'
+last_dispatched_at: '2026-09-07T15:25:33+00:00'
 created: '2026-09-05T23:58:19+00:00'
-updated: '2026-09-07T15:15:11+00:00'
+updated: '2026-09-07T15:40:43+00:00'
 ---
 
 ## Goal
@@ -90,3 +90,9 @@ Phase-04's retro found both pieces of Goal 2 undone: CG-229's design assumed CG-
 - 2026-09-07T12:54:42+00:00 rebasing before merge; rebase onto main conflicts (docs/design/snapshot.json); a rebase agent will resolve it
 
 - 2026-09-07T15:15:11.940429+00:00 Operator released temporary manual-runner hold after verified CG373 inclusion in installed0.2.0rc1. Preserve PR275, branch, feedback and salvage artifacts; continue its existing revision.
+- 2026-09-07T15:25:33+00:00 dispatched rebase run 20260907T152529Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~3331 tokens)
+- 2026-09-07T15:27:58+00:00 preserved uncommitted worktree changes from run 20260907T152529Z-rebase outside the PR: `git stash apply 78b6652738b03108ef19f0adb7e36a682a47f5c8` in /home/joshua/work/worktrees/CG-294 (garden:CG-294:20260907T152529Z-rebase:reap)
+- 2026-09-07T15:29:22+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/275: Rebased CG-294 onto origin/main and resolved the generated snapshot conflict. cost=$0.02
+- 2026-09-07T15:36:07+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-07T15:37:37+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/275
+- 2026-09-07T15:40:43+00:00 automated review could not start: CG-294 is done: #275 was merged at 15:37:37

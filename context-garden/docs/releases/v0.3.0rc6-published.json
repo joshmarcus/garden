@@ -1,0 +1,29 @@
+{
+  "release": {
+    "assets": [
+      {
+        "apiUrl": "https://api.github.com/repos/joshmarcus/context-garden/releases/assets/551019425",
+        "contentType": "application/json",
+        "createdAt": "2026-09-08T18:05:37Z",
+        "digest": "sha256:142c944e0fe54f20125968346507297f5708777d34900b39c268a14b14c44d9a",
+        "downloadCount": 0,
+        "id": "RA_kwDOUN1LKM4g1-Oh",
+        "label": "",
+        "name": "release-manifest.json",
+        "size": 45512,
+        "state": "uploaded",
+        "updatedAt": "2026-09-08T18:05:38Z",
+        "url": "https://github.com/joshmarcus/context-garden/releases/download/v0.3.0rc6/release-manifest.json"
+      }
+    ],
+    "isDraft": false,
+    "isPrerelease": true,
+    "publishedAt": "2026-09-08T18:05:38Z",
+    "tagName": "v0.3.0rc6",
+    "targetCommitish": "8f050073deada81fffadd283094dfbfae39ac083",
+    "url": "https://github.com/joshmarcus/context-garden/releases/tag/v0.3.0rc6"
+  },
+  "verified_tag_head": "8f050073deada81fffadd283094dfbfae39ac083",
+  "deployed": false,
+  "manifest_sha256": "142c944e0fe54f20125968346507297f5708777d34900b39c268a14b14c44d9a"
+}

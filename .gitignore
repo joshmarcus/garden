@@ -2,3 +2,6 @@
 garden.local.yaml
 .venv/
 __pycache__/
+
+# Local release-validation environments
+.venv-*/

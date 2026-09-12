@@ -1,0 +1,316 @@
+Costs · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+    Phases
+
+    phase-05Plate V · Papaver argemonecontext-garden · 197 tasks+ new taskphase-06Plate VI · Paeonia masculacontext-garden · 18 tasks+ new taskphase-07Plate VII · Cydonia oblongacontext-garden · 74 tasks+ new taskphase-08 frozenPlate VIII · Cypripedium calceoluscontext-garden · 6 tasks+ new task
+
+    Herbariumclosed phases, pressed and filed4 closed phases
+
+    Running now
+
+    7 of 7 worker slots · 0 of 2 local execution slots · heavy 0/1 authoritative (requested 1) · isolation not configured
+
+      nothing running
+
+    Operating profile
+
+        plain garden.yaml values
+        economybalancedfast
+
+      Switch
+
+    $12.95/hr last hour
+
+     Notify me in this browser
+
+    scheduler loop off · 18.11s mean / 246.34s max · 160 hand merges · rebase/merge 0.47 mechanical / 0.69 agent · operator 0%
+
+    ↻ Tick now
+
+    build · 671633857c8a
+
+Costs
+Spend over time, sliced by activity, difficulty, model, harness, phase, task and operator session — the same numbers garden costs prints for the same filters.
+
+  Filter
+
+    window
+
+      all timetoday24h3d7d30d
+
+    bucket
+
+      dayhour
+
+    group by
+
+      activitydifficultymodelharnessphasetasksession
+
+    show
+
+      total cost
+      average cost per task
+
+    difficulty
+
+      any
+      easymediumhard
+
+    model
+
+      any
+      claude-fable-5-1claude-opus-4-8claude-sonnet-5fablegpt-5.6-lunagpt-5.6-solgpt-5.6-terragpt-6-astrahaikusonnet
+
+    harness
+
+      any
+      claudecodexhuman
+
+    phase
+
+      any
+      context-garden/phase-01-bootstrapcontext-garden/phase-02-frictioncontext-garden/phase-03context-garden/phase-04context-garden/phase-05context-garden/phase-06context-garden/phase-07context-garden/phase-08
+
+    task
+
+      any
+      CG-008CG-009CG-010CG-012CG-013CG-027CG-029CG-030CG-031CG-032CG-033CG-034CG-035CG-036CG-037CG-038CG-039CG-040CG-041CG-042CG-043CG-044CG-045CG-046CG-047CG-048CG-049CG-050CG-053CG-054CG-055CG-057CG-058CG-059CG-060CG-061CG-062CG-063CG-064CG-065CG-066CG-067CG-068CG-069CG-071CG-072CG-073CG-074CG-075CG-076CG-078CG-079CG-080CG-081CG-082CG-083CG-084CG-085CG-086CG-087CG-088CG-090CG-091CG-092CG-093CG-094CG-096CG-098CG-099CG-100CG-101CG-104CG-106CG-109CG-111CG-112CG-115CG-116CG-117CG-118CG-119CG-121CG-122CG-123CG-125CG-126CG-127CG-129CG-131CG-132CG-133CG-134CG-135CG-136CG-137CG-139CG-140CG-141CG-142CG-143CG-144CG-145CG-146CG-147CG-148CG-149CG-150CG-152CG-153CG-154CG-155CG-156CG-157CG-158CG-160CG-161CG-162CG-163CG-164CG-165CG-169CG-170CG-173CG-174CG-175CG-176CG-177CG-178CG-179CG-180CG-181CG-182CG-183CG-184CG-185CG-186CG-187CG-188CG-189CG-190CG-191CG-192CG-193CG-194CG-195CG-196CG-197CG-198CG-199CG-200CG-201CG-202CG-203CG-204CG-205CG-207CG-208CG-209CG-210CG-211CG-212CG-213CG-214CG-215CG-216CG-217CG-218CG-219CG-220CG-221CG-222CG-223CG-224CG-225CG-226CG-227CG-228CG-229CG-230CG-231CG-232CG-233CG-234CG-235CG-236CG-237CG-238CG-239CG-242CG-243CG-244CG-245CG-248CG-249CG-250CG-251CG-253CG-254CG-256CG-273CG-283CG-291CG-292CG-293CG-294CG-295CG-296CG-297CG-298CG-299CG-300CG-301CG-302CG-304CG-305CG-306CG-307CG-308CG-309CG-310CG-311CG-312CG-313CG-314CG-315CG-316CG-317CG-318CG-319CG-320CG-321CG-322CG-323CG-324CG-325CG-326CG-327CG-328CG-329CG-330CG-331CG-332CG-333CG-334CG-336CG-337CG-338CG-339CG-340CG-341CG-342CG-343CG-344CG-345CG-346CG-347CG-348CG-349CG-350CG-351CG-352CG-353CG-354CG-355CG-356CG-357CG-358CG-359CG-360CG-361CG-362CG-363CG-364CG-365CG-366CG-367CG-368CG-369CG-370CG-372CG-373CG-374CG-375CG-376CG-377CG-378CG-379CG-380CG-381CG-382CG-383CG-384CG-385CG-386CG-387CG-389CG-390CG-391CG-392CG-393CG-394CG-395CG-396CG-397CG-398CG-399CG-401CG-404CG-405CG-406CG-409CG-410CG-411CG-412CG-413CG-414CG-415CG-416CG-417CG-421CG-422CG-423CG-425CG-427CG-428CG-430CG-431CG-432CG-433CG-434CG-436CG-437CG-438CG-439CG-443CG-444CG-446CG-447CG-448CG-449CG-450CG-451CG-452CG-453CG-454CG-455CG-456CG-457CG-458CG-459CG-461CG-462CG-463CG-464CG-465CG-466CG-467CG-468CG-469CG-470CG-471CG-472CG-473CG-474CG-475CG-476CG-477CG-478CG-479CG-480CG-481CG-482CG-483CG-484CG-485CG-486CG-487CG-488CG-489CG-490CG-491CG-493CG-494CG-495CG-496CG-497CG-498CG-499CG-500CG-501CG-502CG-503CG-504CG-505CG-506CG-507CG-508CG-509CG-510CG-511CG-512CG-513CG-514CG-515CG-516CG-517CG-518CG-519_context-garden-phase-05_context-garden-phase-05-reaction-designer_context-garden-phase-05-reaction-product-manager_context-garden-phase-05-reaction-project-manager_context-garden-phase-05-reaction-security_context-garden-phase-05-reaction-staff-engineer_context-garden-phase-05-reaction-usability-expert_context-garden-phase-05-reaction-user_kickoff_persona_retro-context-garden-phase-02-friction_retro-context-garden-phase-03_retro-context-garden-phase-04
+
+    session
+
+      any
+
+    Filter
+
+  Total cost over time, by activity
+
+$0
+
+$465
+
+$930
+2026-09-04 · work: $302.03
+2026-09-04 · resume: $2.49
+2026-09-04 · revise: $67.27
+2026-09-04 · review: $52.58
+2026-09-05 · work: $472.59
+2026-09-05 · revise: $128.35
+2026-09-05 · rebase: $19.88
+2026-09-05 · review: $165.15
+2026-09-05 · persona: $119.36
+2026-09-05 · retro: $11.72
+2026-09-05 · other: $12.93
+2026-09-06 · work: $156.52
+2026-09-06 · resume: $13.96
+2026-09-06 · revise: $177.19
+2026-09-06 · rebase: $5.14
+2026-09-06 · review: $59.56
+2026-09-06 · persona: $7.49
+2026-09-06 · other: $32.80
+2026-09-07 · work: $89.20
+2026-09-07 · resume: $1.17
+2026-09-07 · revise: $114.66
+2026-09-07 · rebase: $0.59
+2026-09-07 · review: $84.41
+2026-09-08 · work: $109.84
+2026-09-08 · resume: $1.34
+2026-09-08 · revise: $131.17
+2026-09-08 · rebase: $0.44
+2026-09-08 · review: $49.15
+2026-09-09 · work: $51.26
+2026-09-09 · revise: $150.44
+2026-09-09 · rebase: $1.43
+2026-09-09 · review: $116.48
+2026-09-09 · other: $0.06
+2026-09-10 · work: $43.53
+2026-09-10 · revise: $52.96
+2026-09-10 · rebase: $0.31
+2026-09-10 · review: $38.57
+2026-09-10 · persona: $40.78
+2026-09-04
+2026-09-10
+
+work ($1224.97)
+resume ($18.96)
+revise ($822.04)
+rebase ($27.80)
+review ($565.90)
+persona ($167.63)
+retro ($11.72)
+check ($0.00)
+other ($45.78)
+
+  Breakdown
+
+    activityrunsparticipating taskstotal costtaskless spendaverage/tasksharecache readscache writes
+
+    work483399partial $1224.97
+      —
+      unavailable
+      42%
+      2,307,485,112
+      24,091,994
+
+    revise689221partial $822.04
+      —
+      unavailable
+      28%
+      1,644,253,489
+      9,242,754
+
+    review1045374partial $565.90
+      —
+      unavailable
+      20%
+      536,008,632
+      14,753,944
+
+    persona4511partial $167.63
+      —
+      unavailable
+      6%
+      56,928,010
+      4,037,441
+
+    other4426partial $45.78
+      —
+      unavailable
+      2%
+      56,945,433
+      1,313,879
+
+    rebase409172partial $27.80
+      —
+      unavailable
+      1%
+      124,015,520
+      1,843,804
+
+    resume76$18.96
+      —
+      $3.16
+      1%
+      18,511,468
+      45,513
+
+    retro63$11.72
+      —
+      $3.90
+      0%
+      1,605,065
+      277,591
+
+    check1543271partial $0.00
+      —
+      unavailable
+      0%
+      0
+      0
+
+  grand total: partial $2884.80 over 4271 runs and 421 participating tasks. Overall average: unavailable.
+
+  The denominator is distinct task IDs with activity in this window and filter, not runs or lifetime completed tasks. Work and revise can have different task cohorts, so their cost ratio does not by itself measure rework.
+
+  Accepted-task outcomes
+
+  Only tasks observed merged to the base branch count as accepted. Per-run cost and cost per accepted task make a lower run price directly comparable with the bill per merged task.
+
+  By tier
+
+    tierrunsmean/runacceptedcost/acceptedfirst-pass approval
+
+    medium1562
+      $0.67
+      150$6.40
+      53%
+easy802
+      $0.67
+      123$4.31
+      72%
+hard1692
+      $0.67
+      80$11.40
+      28%
+
+  By model
+
+    modelrunsmean/runacceptedcost/acceptedfirst-pass approval
+
+    claude-fable-5-121
+      $7.71
+      7$27.17
+      57%
+claude-opus-4-8101
+      $4.00
+      57$9.42
+      85%
+claude-sonnet-5239
+      $1.97
+      96$6.90
+      85%
+fable2
+      $15.38
+      2$18.16
+      100%
+gpt-5.6-luna265
+      $0.05
+      25$2.26
+      19%
+gpt-5.6-sol327
+      $1.71
+      59$9.53
+      21%
+gpt-5.6-terra294
+      $0.97
+      81$4.81
+      28%
+gpt-6-astra12
+      $9.78
+      3$38.77
+      33%
+haiku16
+      $0.46
+      7$3.71
+      43%
+sonnet38
+      $1.60
+      22$4.14
+      68%
+unknown2908
+      $0.21
+      45$7.67
+      38%
+
+  By harness
+
+    harnessrunsmean/runacceptedcost/acceptedfirst-pass approval
+
+    claude417
+      $2.72
+      173$7.94
+      83%
+codex906
+      $1.08
+      164$6.50
+      26%
+human48
+      $0.00
+      31$3.95
+      41%
+unknown2852
+      $0.21
+      12$17.99
+      25%

@@ -2,20 +2,28 @@
 id: CG-253
 title: The retro captures its own walkthrough, and hand merges and tick duration are in garden metrics
   and the rail
-status: changes_requested
+status: done
 product: context-garden
 phase: phase-05
 depends_on: []
-priority: 2
+priority: 0
+order: 3
 difficulty: easy
-reading: []
+reading:
+- src/garden/walkthrough.py
+- src/garden/scheduler/retro.py
+- src/garden/events.py
+- src/garden/web/templates/base.html
+- tests/test_pages_for.py
+- tests/test_retro.py
+- tests/test_now2_metrics.py
 branch: garden/cg-253-the-retro-captures-its-own-walkthrough-and-hand
 pr: https://github.com/joshmarcus/context-garden/pull/265
 discovered_from: retro:context-garden/phase-04
 attempts: 1
-last_dispatched_at: '2026-09-07T15:19:36+00:00'
+last_dispatched_at: '2026-09-08T14:39:55+00:00'
 created: '2026-09-05T23:58:09+00:00'
-updated: '2026-09-07T15:47:38+00:00'
+updated: '2026-09-08T14:53:14+00:00'
 ---
 
 ## Goal
@@ -95,3 +103,37 @@ Proposed at the context-garden/phase-04 retro. Three definition-of-done lines we
 - 2026-09-07T15:36:11+00:00 stuck: 3 revision rounds already used; resume with one more round (`garden retry CG-253`) or send it back (`garden triage CG-253 --changes "..."`)
 - 2026-09-07T15:44:14+00:00 revision counter reset (web)
 - 2026-09-07T15:47:38+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T15:49:18+00:00 priority 2 -> 0 (web)
+- 2026-09-07T15:49:33+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T16:37:55+00:00 Temporary operator incident admission hold to reserve next drained slot for P0 CG385 recovery; preserve all work. Restore original runner from docs/incidents/cg385-recovery-admission-holds.json after CG385 starts.
+- 2026-09-07T16:39:06+00:00 stuck: manual task has a revise round waiting; take it with `garden take`; take it (`garden take CG-253`) or send it back (`garden triage CG-253 --changes "..."`)
+- 2026-09-07T17:01:39+00:00 Operator restored original runner after CG385 recovery repair acquired actual execution slot. Shared cap remains1.
+- 2026-09-07T18:59:46+00:00 re-enabled by hand; revise run will follow
+- 2026-09-07T18:59:47+00:00 Delegated operator Inbox audit: cleared stale manual-hold stop after verified normal runner restoration; existing implementation, PR and pending review feedback retained. No owner decision required.
+- 2026-09-07T19:04:08+00:00 dispatched revise run 20260907T190406Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~13637 tokens)
+- 2026-09-07T19:21:03+00:00 preserved uncommitted worktree changes from run 20260907T190406Z-revise outside the PR: `git stash apply 64d90c696522dc2cc2ea5a7d4828cb355d49664e` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T190406Z-revise:reap)
+- 2026-09-07T19:48:35+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Added the exact frozen pages_for regression test and supplied disposable served-app interaction evidence, including an explicit 404 failure followed by recovery. Exact-head CI passed. cost=$0.11
+- 2026-09-07T19:55:50+00:00 automated review requested changes: Walkthrough coverage, ordering, rail timing, captures, and served interaction pass. Merge attribution still treats every legacy empty-note done transition as a merged PR without evidence that it reached the base branch. cost=$0.77
+- 2026-09-07T20:01:03+00:00 dispatched revise run 20260907T200102Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~13905 tokens)
+- 2026-09-07T20:27:24+00:00 preserved uncommitted worktree changes from run 20260907T200102Z-revise outside the PR: `git stash apply 6207ed352461d027dac78ece072d4c496780ecbb` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T200102Z-revise:reap)
+- 2026-09-07T20:29:04+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Fixed legacy empty-note merge attribution and updated affected fixtures with explicit merge evidence. Focused tests, full lint, exact-head CI, and disposable interaction replay all pass. cost=$0.17
+- 2026-09-07T20:35:58+00:00 automated review requested changes: All four frozen criteria are implemented and verified. Focused tests, lint, exact-head disposable interaction, and the 18-page desktop/narrow visual inventory pass. cost=$0.67
+- 2026-09-07T20:36:11+00:00 dispatched revise run 20260907T203609Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~13974 tokens)
+- 2026-09-07T20:45:46+00:00 preserved uncommitted worktree changes from run 20260907T203609Z-revise outside the PR: `git stash apply e9fcfb596139a71b9d84af57566e539bac67e2da` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260907T203609Z-revise:reap)
+- 2026-09-07T20:45:49+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Verified the existing implementation on commit 060a504. Focused tests, lint, exact-head CI, and disposable interaction replay all pass. cost=$0.07
+- 2026-09-07T20:45:51+00:00 stalled: revise run 20260907T203609Z-revise produced no change to the diff or PR description; run `garden triage CG-253 --changes "<feedback>" to unblock`
+- 2026-09-07T20:57:12+00:00 automated review: request_changes — All four frozen criteria are implemented and verified at the reviewed SHA. Focused tests, Ruff lint, disposable lifecycle interaction, and the 18-page responsive visual inventory pass. cost=$0.82
+- 2026-09-08T12:28:50+00:00 Owner-requested Inbox audit: completed verified source/test reading list; preserved implementation, PR and feedback.
+- 2026-09-08T12:35:50+00:00 triage: changes requested by hand: Operator audit: existing review confirms all frozen outcomes; only structured metadata blocked it. Preserve work and exi
+- 2026-09-08T12:35:50+00:00 Delegated operator Inbox review: preserved PR/worktree and queued one concrete continuation within current 4 AWS + 1 local limits.
+- 2026-09-08T13:52:46+00:00 dispatched revise run 20260908T135244Z-revise via local [codex model=gpt-5.6-luna] (fresh session, base main, ~15675 tokens)
+- 2026-09-08T14:01:21+00:00 preserved uncommitted worktree changes from run 20260908T135244Z-revise outside the PR: `git stash apply c20d6539345d270a7325d8e6dea26b40e43a7346` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260908T135244Z-revise:reap)
+- 2026-09-08T14:03:58+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Integrated current main and verified CG-253 behavior with focused tests and lint. No implementation rewrite was needed. cost=$0.06
+- 2026-09-08T14:29:18+00:00 description rewritten by the reviewer cost=$0.90
+- 2026-09-08T14:29:33+00:00 rebasing before merge; rebase onto main conflicts (tests/test_now2.py); a rebase agent will resolve it
+- 2026-09-08T14:39:55+00:00 dispatched rebase run 20260908T143952Z-rebase via local [codex model=gpt-5.6-luna] (fresh session, base main, conflict only; easy tier, ~7641 tokens)
+- 2026-09-08T14:42:07+00:00 preserved uncommitted worktree changes from run 20260908T143952Z-rebase outside the PR: `git stash apply 96eff4f691d0c12a19183aa1f1d798ffccdd32c0` in /home/joshua/work/worktrees/CG-253 (garden:CG-253:20260908T143952Z-rebase:reap)
+- 2026-09-08T14:44:31+00:00 pushed revision to https://github.com/joshmarcus/context-garden/pull/265: Rebased CG-253 onto origin/main and resolved all conflicts. cost=$0.02
+- 2026-09-08T14:49:24+00:00 automated review: approve — All four frozen criteria are implemented and verified at f40001c245daab14f5af7acf877408ed34437453. Focused tests, Ruff lint, disposable served interaction, and the required responsive page inventory pass. cost=$0.56
+- 2026-09-08T14:52:06+00:00 rebasing before merge; already on main's tip; not rebased or pushed
+- 2026-09-08T14:53:14+00:00 PR merged by the garden: https://github.com/joshmarcus/context-garden/pull/265

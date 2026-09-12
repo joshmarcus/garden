@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-08T14:41:16.727793+00:00",
+  "status": "recovered; normal dispatch resumed; prevention and recurrence monitoring continue",
+  "build": "v0.3.0rc5/41d0da0c6d623a1e2c7c59821b1c7d4f69218577",
+  "impact": "Owner feedback submission spun; Inbox/Now requests timed out after12-15s; intermittent WSL invocation failures",
+  "containment": "Supported dispatch pause; no restart or worker kills; caps unchanged",
+  "feedback": "CG395 owner arbitrary SSH username feedback saved with existing review findings and confirmed through Tailscale task page",
+  "confirmed_defect": "Supervisor only reaps adopted exits after primary child.wait completes",
+  "causality": "Outage correlation is established; sole root cause unproven",
+  "recovery_task": "CG-430",
+  "verification": [
+    "Windows Tailscale Inbox/Now/CG395200 at2.387/.773/.647seconds around14:02Z",
+    "Second Windows journey200 at1.170/.750/.643seconds at14:15Z; existing5AWS workers plus bounded local replay active",
+    "Third Windows Tailscale Inbox/Now/CG395 journey200 at2.776/1.338/3.651seconds at14:27Z; same feedback visible; POST/resume200. All three representative journeys span25minutes with active remote jobs and a local check/review."
+  ],
+  "next": "Keep normal7global/1local and monitor recurrence. CG430 owns prompt adopted-child reaping; exact web causality remains unproven. Finish AWS suite, return host0, and continue automatic review/revisions.",
+  "resumed_at": "2026-09-08T14:27:35+00:00"
+}

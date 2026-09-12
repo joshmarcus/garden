@@ -1,0 +1,368 @@
+Now · context-garden
+
+  context-gardencontext garden
+
+    Inbox 19
+    Now
+    Board
+    Trellis
+    Timeline
+    Trials
+    Runs
+    Costs
+
+    Config
+
+Now
+
+  Garden at a glance
+
+  attention6 waiting on youOpen the current cards
+
+    Capacity now7 / 7worker slots used2 / 3 review slots used · 10 runs in flight
+
+    Next dispatchAutomate safe live rollout of published versions to the…1 queued item
+
+    Current phase46 / 68phase-07 tasks mergedin bud, from merged tasks
+
+    Last hour3merged · $12.95 recorded cost21 runs finished in this window
+
+  Now
+every run in flight, newest first7 of 7 worker slots · 2 of 3 review slots
+
+  in flower
+
+  Narrow retro reservation orchestration setupCG-512
+
+    review · codex gpt-5.6-sol · open run
+
+      1:41 · typically 3 min
+
+    queued; waiting for a remote worker to claim it
+
+  no words yet
+
+  in leaf
+
+  Support provider-neutral source control with scoped certificate and proxy policyCG-515
+
+    revise · codex gpt-5.6-sol · open run
+
+      1:40 · typically 9 min
+
+    queued; waiting for a remote worker to claim it
+
+  no words yet
+
+  in bud
+
+  Avoid duplicate same-SHA GitHub test jobsCG-509
+
+    check · pre_pr · open run
+
+      2:06 · typically 2 min · longer than usual
+
+    queued; waiting for a remote worker to claim it
+
+  no words yet
+
+  in leaf
+
+  Consolidate historical interaction capture harnessesCG-524
+
+    work · codex gpt-5.6-terra · open run
+
+      3:18 · typically 15 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:02:01.830681+00:00; worker liveness is not known
+
+  “I’ll trace the existing capture harnesses and their receipts first, then consolidate only the shared disposable setup a…”
+
+  in leaf
+
+  Make web benchmark size controls internally consistentCG-523
+
+    work · codex gpt-5.6-luna · open run
+
+      4:35 · typically 8 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:02:02.113718+00:00; worker liveness is not known
+
+  “Lint is clean and the focused suite remains green. There is no repository-configured type-check target in `pyproject.to…”
+
+  in fruit
+
+  OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usageCG-213
+
+    review · codex gpt-5.6-sol · open run
+
+      4:58 · typically 3 min · longer than usual
+
+    finished; awaiting collection
+
+  “GARDEN_REVIEW: {"verdict":"request_changes","summary":"OpenRouter routing and lifecycle plumbing are coherent, but prov…”
+
+  in leaf
+
+  Use copy-on-write web discovery snapshotsCG-522
+
+    work · codex gpt-5.6-terra · open run
+
+      7:49 · typically 15 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:01:59.908487+00:00; worker liveness is not known
+
+  “The core change is in place. I’ve added coverage that holds a reader open across an action and verifies it retains the…”
+
+  in leaf
+
+  Make GitHub feedback polling incremental and identity-safeCG-521
+
+    work · codex gpt-5.6-terra · open run
+
+      7:52 · typically 15 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:02:02.363526+00:00; worker liveness is not known
+
+  “Focused feedback and scheduler tests now pass (50 tests), and lint is clean. I’m doing a final diff review for cursor-a…”
+
+  in leaf
+
+  Deliver typed notifications through approved destination adaptersCG-520
+
+    work · codex gpt-5.6-terra · open run
+
+      7:55 · typically 15 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:01:57.383814+00:00; worker liveness is not known
+
+  “The scheduler now retries due typed-delivery failures on later ticks without replaying the task transition; the deliver…”
+
+  in leaf
+
+  Resolve scoped workload identities and secret references at the execution boundaryCG-516
+
+    revise · codex gpt-5.6-sol · open run
+
+      8:02 · typically 9 min
+
+    remote claim recorded; lease deadline 2026-09-10T13:01:39.768220+00:00; worker liveness is not known
+
+  “The focused paths now pass, including a real remote claim whose fake harness observes the scoped token. Self-review fou…”
+
+  bud, tagged
+
+  Use pluggable exact-head CI status for review and merge eligibilityCG-396
+
+    needs you
+
+  deferred: Overlaps CG-434's current worker-check receipt implementation. Preserve PR343/head e0bdd64 and all findings; resume after CG-434 lands, then rebase and retain only the distinct pluggable-provider delta.
+
+  bud, tagged
+
+  Enforce filesystem and network sandboxes for planning and approved toolsCG-518
+
+    needs you
+
+  review finding repeated after a revise round: acceptance criterion is explicitly unmet: define a capability-checked sandbox co
+
+  bud, tagged
+
+  Diagnose worker disconnects and resets and make recovery resilientCG-501
+
+    needs you
+
+  the granted revision allowance is exhausted after 5 substantive revisions
+
+  bud, tagged
+
+  Return complete worker transcripts for server-side storage and analysisCG-506
+
+    needs you
+
+  the granted revision allowance is exhausted after 4 substantive revisions
+
+  bud, tagged
+
+  Show only relevant unique design files for each pull requestCG-513
+
+    needs you
+
+  review finding repeated after a revise round: acceptance criterion is explicitly unmet: show each changed design once with wor
+
+  bud, tagged
+
+  Recover EC2 Spot interruptions without losing accepted work or exceeding pool limitsCG-347
+
+    needs you
+
+  the granted revision allowance is exhausted after 4 substantive revisions
+
+  Next
+the order the tick will take
+    scheduler loop offno slot free: the first line waits for a run to finish
+
+    1sproutAutomate safe live rollout of published versions to the worker fleet
+  CG-492 · priority 2 · work · hard → phase frozen
+
+    Merge queue
+
+      CG-514Never require a second review solely by countround 2 of unlimited · CI failure · the PR checks rollup is failure
+CG-517Separate authenticated worker ingress from operator control accessround 1 of unlimited · CI failure · only 1 review round(s) so far, need 2
+CG-302Spike: OpenRouter harness shape and adapter CLIround 1 of unlimited · CI success · only 1 review round(s) so far, need 2
+CG-348Make EC2 pool cost health draining and teardown understandable and verifiableround 3 of unlimited · CI failure · stacked on CG-347; waits for the restack
+CG-503Find removable and overengineered code to simplify and optimizeround 1 of unlimited · CI success · only 1 review round(s) so far, need 2
+CG-504Write and update user operator and contributor documentationround 1 of unlimited · CI success · only 1 review round(s) so far, need 2
+CG-505Audit and update all Garden specificationsround 3 of unlimited · CI pending · the PR checks rollup is pending
+CG-512Narrow retro reservation orchestration setupround 1 of unlimited · CI pending · review running · the automated review verdict is not in yet, not approve
+CG-213OpenRouter support: run workers, reviewers and personas through any model on OpenRouter, as a harness with per-tier model ids and cost from the response usageround 1 of unlimited · CI success · review running · stacked on CG-302; waits for the restack
+
+    last to leave the queue: CG-455 · the PR checks rollup is failure · 04:49Z
+
+  Where we are
+phase-07, in bud
+
+  context-garden · plate VII
+phase-07
+Cydonia oblonga — quince
+46 of 68 merged · 14 PRs open · 6 running
+in bud · spent $344.67
+
+  open
+
+  context-garden · plate VI
+phase-06
+Paeonia mascula — peony
+9 of 16 merged · 4 PRs open · 3 running
+in bud · spent $123.76
+
+  open
+
+  context-garden · plate VIII
+phase-08
+Cypripedium calceolus — lady's slipper orchid
+0 of 6 merged · 2 PRs open · 1 running
+seed · spent $6.64
+
+  frozen
+
+  context-garden · plate V
+phase-05
+Papaver argemone — prickly poppy
+152 of 152 merged · 0 PRs open · 0 running
+in fruit · spent $985.14
+
+  complete
+
+  phase-03 · IIIpressedphase-04 · IVpressedphase-01-bootstrap · Ipressedphase-02-friction · IIpressed
+
+  The last period
+the ledger
+    last hourtodaylast 24 hoursthis phase
+
+    3
+merged · CG-510, CG-511, CG-519
+
+    100 %2 of 2
+first-pass approval
+
+    $12.9521 runs
+cost
+
+    $0.81
+per accepted task
+
+    Cost by activity, per hour
+
+$0
+
+$6
+
+$13
+2026-09-10T12:00 · work: $0.58
+2026-09-10T12:00 · revise: $6.08
+2026-09-10T12:00 · review: $2.86
+2026-09-10T12:00 · persona: $3.43
+2026-09-10T12:00
+2026-09-10T12:00
+
+work ($0.58)
+revise ($6.08)
+review ($2.86)
+persona ($3.43)
+check ($0.00)
+
+    By hand, and the operator
+
+        hand merges0 of 3every merge in the window was the loop's
+        hand steps1dispatch resumed 1
+        rebase rounds0.00 mechanical · 0.00 agentper merge: 0 + 0 over 3 merges
+        operator—no ledger entry in this window
+
+      no profile change or config reload in this window
+
+    Runs by harness and model
+
+    a row per mode that ran, a column per harness and model with what it cost in all, each cell the mean cost of one run over its n runs, shaded and marked within the row the way every table here is
+
+  cost per run lower is better · n = runs
+  garden$6.29 · 15 runscodex:gpt-5.6-sol$5.52 · 3 runscodex:gpt-5.6-terra$1.11 · 2 runscodex:gpt-5.6-luna$0.04 · 1 run
+
+  work——$0.55~n 1$0.04~n 1
+
+  revise—$1.84n 3$0.56~n 1—
+
+  check$0.00n 6———
+
+  review$0.36n 8———
+
+  persona$3.42~n 1———
+
+    By difficulty and model
+
+    the five figures garden metrics reports, each cell with its n. Along a row the ground runs from green at the best value to red at the worst, ▲ and ▽ mark the two ends; a cell under 3 samples is faint and marked ~, and is never an end
+
+  cost per accepted task lower is better · n = accepted tasks
+  gpt-5.6-terragpt-5.6-lunagpt-5.6-sol
+
+  easy—$0.24~n 1—
+
+  medium$1.09~n 2——
+
+  hard———
+
+  first-pass approval higher is better · n = tasks first reviewed
+  gpt-5.6-terragpt-5.6-lunagpt-5.6-sol
+
+  easy—100%~n 1—
+
+  medium100%~n 1——
+
+  hard———
+
+  work-run cost lower is better · n = work runs
+  gpt-5.6-terragpt-5.6-lunagpt-5.6-sol
+
+  easy—$0.04~n 1—
+
+  medium$0.55~n 2——
+
+  hard——$1.84n 3
+
+  revise rounds lower is better · n = accepted tasks
+  gpt-5.6-terragpt-5.6-lunagpt-5.6-sol
+
+  easy—0.0~n 1—
+
+  medium0.0~n 2——
+
+  hard———
+
+  median lead time lower is better · n = accepted tasks
+  gpt-5.6-terragpt-5.6-lunagpt-5.6-sol
+
+  easy—1.1 h~n 1—
+
+  medium0.7 h~n 2——
+
+  hard———
