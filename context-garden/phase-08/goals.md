@@ -1,10 +1,21 @@
-# phase-08 goals (draft)
-
-_Drafted by `garden retro` from context-garden/phase-07; edit before planning._
+---
+plant: orchid
+latin: Cypripedium calceolus
+plate: VIII
+frozen: '2026-09-09'
+---
 
 # Deferred work
 
-Preserve Phase 08's existing goals, task histories, dependencies and frozen status. Spot purchase, interruption recovery and pool controls CG-347/348 were returned to and completed in Phase 07; do not propose them again. Preserve the recorded task-scoped OpenRouter exception for CG-302/213 and their completed outcomes without extending it to other work. This retrospective adds planning drafts only.
+This phase remains frozen for its remaining tasks. On 2026-09-10 the owner returned Spot purchase policy, interruption recovery and replacement (CG-347), together with dependent pool controls and acceptance (CG-348), to Phase 07. Preserve existing task history, dependencies and source. Existing on-demand workers and their budgets/deadlines are unchanged.
+
+## OpenRouter exception, 2026-09-10
+
+The owner explicitly unfroze OpenRouter work. CG-302 and dependent CG-213 may proceed through their normal brief, dependency, review and CI gates using task-scoped freeze exceptions. All other tasks in this phase remain frozen. This does not authorize paid provider exercises, additional hosts or a longer fleet deadline.
+
+## Phase07 retrospective additions — September13
+
+The following are reviewed planning drafts. The existing freeze, task-scoped exceptions and deferred scope above remain in force.
 
 ## Reliability follow-ups from Phase 07
 
@@ -22,7 +33,7 @@ Report complete current-head PR denominators and actual delivery, distinguish pe
 
 Keep CG-402's evidence-policy decision, CG-403's manual enterprise pilot and CG-408's constrained-environment acceptance under their existing holds. Their eventual authorized verification must distinguish fixtures, local probes, real environment observations and deployed versions, including any required Windows backing-volume exercise. CG-506 transcript storage and its design deferral remain in Phase 11, alongside existing CG-662; CG-658 remains an existing Phase 08 draft. CG-642 remains a frozen evaluation backlog item and does not revive withdrawn Herdr implementation.
 
-The owner's rejection of an authoritative shared coordinator and the CG-631–634 holds remain outside this phase's scope. Closing Phase 07 authorizes no runtime activation, private-data access, new workers, additional spending, automatic backlog approval or freeze exception. The new canonical timeout repair should land before relying on the affected opt-in mode; Phase 07 closure records delivered source and accepted deferrals, not a completed private enterprise deployment.
+The owner has selected Git coordination in the Garden repository and updated its specification; CG-631–634 implementation holds remain outside this phase's scope. Closing Phase 07 authorizes no runtime activation, private-data access, new workers, additional spending, automatic backlog approval or freeze exception. The new canonical timeout repair should land before relying on the affected opt-in mode; Phase 07 closure records delivered source and accepted deferrals, not a completed private enterprise deployment.
 
 ## Features for the next phase
 
@@ -30,7 +41,6 @@ The owner's rejection of an authoritative shared coordinator and the CG-631–63
 - CG-665: Revoke obsolete approved worker config files
 - CG-666: Honor scoped credentials in auxiliary CLI commands
 - CG-667: Make command CI asynchronous and resource bounded
-- CG-668: Make completion explanations match accepted evidence
 
 ## Follow-ups carried from the retro verdict
 

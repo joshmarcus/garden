@@ -4,15 +4,15 @@ _2026-09-13T16:57:41+00:00 · hard tier (gpt-6-astra)_
 
 ## What changed
 
-Phase 07 delivered enterprise repository routing, exact-head and provider-neutral validation, manual takeover and PR adoption, command-backed hosts, admission and canonical-checkout foundations, Spot recovery, feedback preservation, review-policy improvements, operational visibility, cleanup, packaging, CI sharding, SSH attachment and closed-task defect annotations. Its amended inventory is 83 done and 11 cancelled with no unfinished Phase 07 tasks, and CG-405's stranded correction is now delivered through PR #545 at reviewed source 3d7d290a3e135abec476d98961023fd4958f5215. Later merges resolve many early environment and review findings, but completion machinery and several process or credential boundaries still need focused follow-ups. Close under the amended scope: the high-priority canonical timeout repair should precede reliance on that opt-in mode, while closure itself does not assert private enterprise acceptance, deploy merged source or release deferred work.
+Phase 07 delivered enterprise repository routing, exact-head and provider-neutral validation, manual takeover and PR adoption, command-backed hosts, admission and canonical-checkout foundations, Spot recovery, feedback preservation, review-policy improvements, operational visibility, cleanup, packaging, CI sharding, SSH attachment and closed-task defect annotations. Its amended inventory is 83 done and 11 cancelled with no unfinished Phase 07 tasks, and CG-405's stranded correction is now delivered through PR #545 at merge 3d7d290a3e135abec476d98961023fd4958f5215, from independently reviewed source c1c52dba1815945c4fba760b9c5870d1d6246963. Later merges resolve many early environment and review findings, but completion machinery and several process or credential boundaries still need focused follow-ups. Close under the amended scope: the high-priority canonical timeout repair should precede reliance on that opt-in mode, while closure itself does not assert private enterprise acceptance, deploy merged source or release deferred work.
 
 ## Numbers
 
-- workers: $540.23 partial known spend
-- operator: $0.00 — 0 turns — 0% of total
-- total: $540.23 partial known spend
+- recorded phase run/model costs: $540.23 partial known spend (historical phase cohort; not the current two-worker AWS resource budget)
+- operator: unavailable — no operator turns were captured by this metric; this does not mean zero operator effort or cost
+- recorded total: $540.23 partial known spend; operator costs and unpriced runs are incomplete
 - accepted cohort: 79 tasks (54 priced, 25 unpriced); cost/accepted: unavailable
-- cohort rule: completion in the phase window; all task runs through acceptance
+- cohort rule: completion in the phase window; all task runs through acceptance. This 79-task priced/unpriced cohort is distinct from the full 83-done task inventory.
 - hand merges: 31 (of 80 merged PRs)
 - tick duration: mean 22.91s, max 617.33s (3483 ticks)
 
@@ -175,24 +175,24 @@ _No questions for the owner._
 
 ### High
 
-- **staff-engineer** — Local reconciliation can leave a child running after timeout while the scheduler releases its checkout lease, permitting overlapping mutation during a retry. → CG-669 [draft]
-- **user** — I cannot rely on task completion alone when the supplied CG-405 history shows that an author correction remained undelivered after its original PR merged. → CG-677 [draft]
+- **staff-engineer** — Local reconciliation can leave a child running after timeout while the scheduler releases its checkout lease, permitting overlapping mutation during a retry. → CG-664 [draft; consolidated]
+- **user** — I cannot rely on task completion alone when the supplied CG-405 history shows that an author correction remained undelivered after its original PR merged. → CG-659 [draft; consolidated]
 
 ### Medium
 
-- **staff-engineer** — Command CI queries execute synchronously under the controller lock, so an unavailable adapter can block unrelated scheduler work and locked operator actions for its full timeout on each distinct head. → CG-670 [draft]
-- **staff-engineer** — The command-CI output limit is checked only after subprocess.run has buffered all stdout and stderr, so it does not bound controller memory consumption. → CG-671 [draft]
-- **security** — Removing or changing an approved config-file mapping leaves the previously installed file available in the persistent worker HOME. → CG-672 [draft]
-- **security** — The friction and doctor CLI paths can use ambient gh authentication even when the product explicitly names a scoped token source. → CG-673 [draft]
-- **project-manager** — CG-405's original PR merged before its later correction was committed, demonstrating that task completion could leave reviewed corrective work undelivered. → CG-674 [draft]
-- **user** — I would expect extra approval gates from docs/operations.md and docs/architecture.md that CG-514 intentionally removed from the delivered scheduler. → CG-678 [draft]
-- **user** — I would still have to intervene unnecessarily when different defects under a broad acceptance criterion are classified as the same repeated finding, as acknowledged in the closeout brief. → CG-679 [draft]
-- **user** — I would hesitate to leave workers unattended while the acknowledged terminal-claim rejection startup recovery gap remains open. → CG-680 [draft]
+- **staff-engineer** — Command CI queries execute synchronously under the controller lock, so an unavailable adapter can block unrelated scheduler work and locked operator actions for its full timeout on each distinct head. → CG-667 [draft; consolidated]
+- **staff-engineer** — The command-CI output limit is checked only after subprocess.run has buffered all stdout and stderr, so it does not bound controller memory consumption. → CG-667 [draft; consolidated]
+- **security** — Removing or changing an approved config-file mapping leaves the previously installed file available in the persistent worker HOME. → CG-665 [draft; consolidated]
+- **security** — The friction and doctor CLI paths can use ambient gh authentication even when the product explicitly names a scoped token source. → CG-666 [draft; consolidated]
+- **project-manager** — CG-405's original PR merged before its later correction was committed, demonstrating that task completion could leave reviewed corrective work undelivered. → CG-659 [draft; consolidated]
+- **user** — I would expect extra approval gates from docs/operations.md and docs/architecture.md that CG-514 intentionally removed from the delivered scheduler. → CG-681 [draft; consolidated]
+- **user** — I would still have to intervene unnecessarily when different defects under a broad acceptance criterion are classified as the same repeated finding, as acknowledged in the closeout brief. → CG-661 [draft; consolidated]
+- **user** — I would hesitate to leave workers unattended while the acknowledged terminal-claim rejection startup recovery gap remains open. → CG-660 [draft; consolidated]
 
 ### Low
 
-- **project-manager** — CG-628's supplied PR description reports detailed hosted validation but labels every generated acceptance row 'no evidence given', making the completion record internally misleading. → CG-675 [draft]
-- **project-manager** — The supplied walkthrough directory was unreadable to the review worker, preventing the requested inspection of captured page content. → CG-676 [draft]
+- **project-manager** — CG-628's supplied PR description reports detailed hosted validation but labels every generated acceptance row 'no evidence given', making the completion record internally misleading. → CG-682 [draft; consolidated]
+- **project-manager** — The supplied walkthrough directory was unreadable to the review worker, preventing the requested inspection of captured page content. → CG-683 [draft; consolidated]
 
 ## Features for the next phase
 
@@ -224,14 +224,33 @@ _No questions for the owner._
    - size: medium
    - why now: This reduces unnecessary intervention while preserving independent scrutiny of real defects.
    - User value: a new defect receives a normal correction instead of an erroneous repeated-finding stop. Why now: distinct cancellation and release races shared one broad criterion label. Size: medium. Dependencies: review normalization and scheduler stall classification. Reuse the existing draft, retaining genuine repeated-defect detection and lifetime limits.
-8. **Make completion explanations match accepted evidence** — CG-668 [draft]
+8. **Make completion explanations match accepted evidence** — carried by CG-681 and CG-682 [draft; consolidated]
    - size: medium
    - why now: Accurate completion explanations are essential to the trust promised by delegated work.
    - User value: operators can understand what was verified and what approval policy actually applies without inspecting Python. Why now: CG-628's narrative evidence conflicts with generated rows, and operating guides still promise removed review gates. Size: medium. Dependencies: CG-514's delivered policy and existing criteria/report rendering. Correct evidence wording and operating documentation without changing accepted outcomes or requiring new author rounds.
 
+## Operator review and task consolidation
+
+The delegated operator reviewed this documentation PR against all four original reports and the preserved current phase/task evidence. The seven new drafts below retain the substantive findings; existing CG-659, CG-660 and CG-661 continue to own the already-filed delivery/recovery/classification work. The generated duplicate drafts were consolidated before adoption, with the original PR commit and source reports retained. No finding, failed run, accepted criterion or lifetime counter was erased, and no new author or persona round was requested.
+
+| Generated draft(s) | Retained task(s) |
+| --- | --- |
+| CG-669 | CG-664: canonical writer termination |
+| CG-672 | CG-665: obsolete approved-file removal |
+| CG-673 | CG-666: scoped CLI credentials |
+| CG-670, CG-671 | CG-667: asynchronous and bounded command CI |
+| CG-668, CG-678 | CG-681: operating-policy documentation (CG-668's evidence-rendering part goes to CG-682) |
+| CG-675 | CG-682: truthful acceptance-row mapping |
+| CG-676 | CG-683: readable dispatched context |
+| CG-674, CG-677 | Existing CG-659: late corrective delivery |
+| CG-679 | Existing CG-661: substantive repeated-finding identity |
+| CG-680 | Existing CG-660: terminal-claim startup recovery |
+
+The Phase08 frozen frontmatter and prior goals are preserved. Original persona reports are included with working relative links. The cost display now identifies missing operator instrumentation, and CG-405's merge commit is distinguished from the reviewed source. These are documentation/planning corrections, not changes to the accepted close-with-follow-ups verdict or evidence of deployment.
+
 ## Persona reports
 
-- [staff-engineer](context-garden/phase-07/docs/reviews/staff-engineer-2026-09-13.md)
-- [security](context-garden/phase-07/docs/reviews/security-2026-09-13.md)
-- [project-manager](context-garden/phase-07/docs/reviews/project-manager-2026-09-13.md)
-- [user](context-garden/phase-07/docs/reviews/user-2026-09-13.md)
+- [staff-engineer](reviews/staff-engineer-2026-09-13.md)
+- [security](reviews/security-2026-09-13.md)
+- [project-manager](reviews/project-manager-2026-09-13.md)
+- [user](reviews/user-2026-09-13.md)
