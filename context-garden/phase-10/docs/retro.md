@@ -4,13 +4,13 @@ _2026-09-14T00:06:03+00:00 · hard tier (gpt-6-astra)_
 
 ## What changed
 
-Phase 10 completed 20 tasks and cancelled two fixture-repair tasks, delivering Git-backed coordination, installation-bound execution authority, acknowledged handoff, inherited phase ownership, automatic permitted username startup, personal Inbox and public projection boundaries, concurrency-only operating profiles, Mark done, quieter task pages and sidebar project selection. Substantive review repaired ownership bypasses and cancellation hazards; CG-657 also reduced procedural author send-backs. Supplied evidence records release 0.4.3, passing ordinary hosted CI and isolated installation exercises, not production multiplayer activation. Read-only inspection confirmed the principal persona findings in source 7d5d6a56 and verified that release 0984b5d2 did not alter those paths. Equivalent repeated friction reports are grouped above; harvested-friction.md explicitly contains none, while Reported and marked-comment sources were inspected. No files were changed, no tests were rerun, and closure preserves the recorded outcomes without claiming migration or live rollout readiness.
+Phase 10 completed 20 tasks and cancelled two fixture-repair tasks, delivering Git-backed coordination, installation-bound execution authority, acknowledged handoff, inherited phase ownership, automatic permitted username startup, personal Inbox and public projection boundaries, concurrency-only operating profiles, Mark done, quieter task pages and sidebar project selection. Substantive review repaired ownership bypasses and cancellation hazards; CG-657 also reduced procedural author send-backs. Supplied evidence records release 0.4.3, passing ordinary hosted CI and isolated installation exercises, not production multiplayer activation. Read-only inspection confirmed the principal persona findings in source 7d5d6a56 and verified that release 0984b5d2 did not alter those paths. Equivalent repeated friction reports are grouped below; harvested-friction.md explicitly contains none, while Reported and marked-comment sources were inspected. No files were changed, no tests were rerun, and closure preserves the recorded outcomes without claiming migration or live rollout readiness.
 
 ## Numbers
 
-- workers: $251.74 partial known spend
-- operator: $0.00 — 0 turns — 0% of total
-- total: $251.74 partial known spend
+- recorded phase run/model costs: $251.74 partial known spend (historical phase cohort, separate from the current AWS worker budget)
+- operator: unavailable — no operator turns were captured by this metric; this does not mean zero operator effort or cost
+- recorded total: $251.74 partial known spend; operator costs and unpriced runs are incomplete
 - accepted cohort: 20 tasks (10 priced, 10 unpriced); cost/accepted: unavailable
 - cohort rule: completion in the phase window; all task runs through acceptance
 - hand merges: 0 (of 20 merged PRs)
@@ -124,7 +124,7 @@ Staff engineer scored 6/10, valuing Git ownership safeguards while identifying o
 - Review summaries and repeated-defect classification still need existing CG-682 and CG-661; restack recovery remains covered by CG-659.
 - No static typechecker is configured; verification instructions should acknowledge actual configured checks rather than demand a nonexistent command.
 
-## Questions for the owner
+## Recorded question and decision
 
 - **Should the Git migration and reversal defect be prioritized for correction before any multiplayer pilot, or should migration and reversal remain explicitly unsupported pending a later correction?** — decision card `retro-reconcile-283e581e06844b96b5105874a8c99cd1-q0`
   - The released commands still use obsolete authority; this is a future activation and support decision, while the current retrospective-only closure and Phase 11 freeze can remain intact.
@@ -134,19 +134,19 @@ Staff engineer scored 6/10, valuing Git ownership safeguards while identifying o
 
 ### High
 
-- **staff-engineer** — Migration still initializes SQLite authority, and standalone export does not check accepted Git claims or unresolved effects. → CG-702 [draft]
-- **staff-engineer** — Git coordination subprocesses have no timeout, so a stalled remote or credential helper can indefinitely block authority refresh and handoff progress. → CG-703 [draft]
-- **project-manager** — The supported migration commit initializes SQLite coordinator authority and records completion without initializing the accepted Garden Git state. → CG-707 [draft]
+- **staff-engineer** — Migration still initializes SQLite authority, and standalone export does not check accepted Git claims or unresolved effects. → CG-695 [draft; consolidated]
+- **staff-engineer** — Git coordination subprocesses have no timeout, so a stalled remote or credential helper can indefinitely block authority refresh and handoff progress. → CG-697 [draft; consolidated]
+- **project-manager** — The supported migration commit initializes SQLite coordinator authority and records completion without initializing the accepted Garden Git state. → CG-695 [draft; consolidated]
 
 ### Medium
 
-- **staff-engineer** — Every Git refresh walks and decodes the entire state history even when its head is unchanged, while each transaction retains an expanding operations table. → CG-704 [draft]
-- **staff-engineer** — The headline two-user recovery and phase-owner journeys still inject the obsolete HTTP/SQLite coordinator rather than exercising the configured Git client. → CG-705 [draft]
-- **security** — Automatic local authentication grants private read access under arbitrary Host headers, leaving a DNS-rebinding confidentiality gap. → CG-706 [draft]
-- **project-manager** — CG-640's complete-workflow evidence still uses the historical HTTP/SQLite coordinator, leaving the complete delivered Git journey insufficiently demonstrated. → CG-708 [draft]
-- **project-manager** — Acceptance summaries lose substantive supplied evidence, while lifetime revision counts combine real defects, restack regressions and fixture or instruction corrections. → CG-709 [draft]
-- **user** — I followed the multiplayer documentation and found conflicting descriptions of what I must operate, without the promised setup and recovery instructions. → CG-710 [draft]
-- **user** — I had to treat a finished phase as open again solely to obtain its retrospective, according to the supplied owner scope. → CG-711 [draft]
+- **staff-engineer** — Every Git refresh walks and decodes the entire state history even when its head is unchanged, while each transaction retains an expanding operations table. → CG-700 [draft; consolidated]
+- **staff-engineer** — The headline two-user recovery and phase-owner journeys still inject the obsolete HTTP/SQLite coordinator rather than exercising the configured Git client. → CG-698 [draft; consolidated]
+- **security** — Automatic local authentication grants private read access under arbitrary Host headers, leaving a DNS-rebinding confidentiality gap. → CG-696 [draft; consolidated]
+- **project-manager** — CG-640's complete-workflow evidence still uses the historical HTTP/SQLite coordinator, leaving the complete delivered Git journey insufficiently demonstrated. → CG-698 [draft; consolidated]
+- **project-manager** — Acceptance summaries lose substantive supplied evidence, while lifetime revision counts combine real defects, restack regressions and fixture or instruction corrections. → CG-682 and CG-661 [existing drafts; consolidated]
+- **user** — I followed the multiplayer documentation and found conflicting descriptions of what I must operate, without the promised setup and recovery instructions. → CG-699 [draft; consolidated]
+- **user** — I had to treat a finished phase as open again solely to obtain its retrospective, according to the supplied owner scope. → CG-701 [draft; consolidated]
 
 ## Features for the next phase
 
@@ -183,12 +183,31 @@ Staff engineer scored 6/10, valuing Git ownership safeguards while identifying o
    - why now: Accurate summaries reduce unnecessary review work while preserving real failures.
    - User value: completion reports accurately reflect substantive accepted verification. Why now: Phase 10 summaries lose evidence present in actual finals. Size: medium. Dependencies: existing criteria and review rendering; coordinate with CG-661 for substantive defect classification. Reuse the existing draft and add Phase 10 examples without reopening accepted implementations.
 
+## Operator review and task consolidation
+
+The delegated operator reviewed the four original persona reports and the independent reconciliation. The close-with-follow-ups verdict is retained. Migration still initializes the obsolete coordinator, and the Git transport helper has no subprocess timeout; both were corroborated in the reviewed source. The Host finding retains the security reviewer's synthetic middleware evidence and its explicit limit: no browser exploitation was demonstrated. Production multiplayer remains unactivated.
+
+Seventeen generated drafts are consolidated into seven distinct proposals plus the existing review-evidence tasks. Original reports and the native generated commit remain preserved. No finding, failed run or lifetime counter was erased, and no additional persona or author round was requested. Missing required walkthrough access continues to belong to CG-683; publication-policy preservation belongs to CG-684.
+
+| Generated draft(s) | Retained task |
+| --- | --- |
+| CG-702, CG-707 | CG-695: Git migration and reversal |
+| CG-706 | CG-696: automatic-session Host validation |
+| CG-703 | CG-697: bounded Git transport |
+| CG-705, CG-708 | CG-698: configured Git integration journey |
+| CG-710 | CG-699: setup and recovery guidance |
+| CG-704 | CG-700: incremental history validation |
+| CG-711 | CG-701: closed-phase retrospective |
+| CG-709 | Existing CG-682 and CG-661: evidence mapping and defect classification |
+
+The migration question was answered under delegated owner authority: prioritize its frozen corrective draft before considering activation. This grants no implementation or pilot authority. Phase11's actual frozen frontmatter and previous goals are preserved, each retained draft has concrete reading and acceptance outcomes, and the original persona reports are included with working relative links.
+
 ## Persona reports
 
-- [staff-engineer](context-garden/phase-10/docs/reviews/staff-engineer-2026-09-13.md)
-- [security](context-garden/phase-10/docs/reviews/security-2026-09-13.md)
-- [project-manager](context-garden/phase-10/docs/reviews/project-manager-2026-09-13.md)
-- [user](context-garden/phase-10/docs/reviews/user-2026-09-13.md)
+- [staff-engineer](reviews/staff-engineer-2026-09-13.md)
+- [security](reviews/security-2026-09-13.md)
+- [project-manager](reviews/project-manager-2026-09-13.md)
+- [user](reviews/user-2026-09-13.md)
 
 ## Answers
 
