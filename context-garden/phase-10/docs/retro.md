@@ -204,10 +204,10 @@ The migration question was answered under delegated owner authority: prioritize 
 
 ## Persona reports
 
-- [staff-engineer](reviews/staff-engineer-2026-09-13.md)
-- [security](reviews/security-2026-09-13.md)
-- [project-manager](reviews/project-manager-2026-09-13.md)
-- [user](reviews/user-2026-09-13.md)
+- [staff-engineer](https://github.com/joshmarcus/garden/blob/84fd93f4a3229fcfc2a043dddf73eb593d4ec94e/context-garden/phase-10/docs/reviews/staff-engineer-2026-09-13.md)
+- [security](https://github.com/joshmarcus/garden/blob/84fd93f4a3229fcfc2a043dddf73eb593d4ec94e/context-garden/phase-10/docs/reviews/security-2026-09-13.md)
+- [project-manager](https://github.com/joshmarcus/garden/blob/84fd93f4a3229fcfc2a043dddf73eb593d4ec94e/context-garden/phase-10/docs/reviews/project-manager-2026-09-13.md)
+- [user](https://github.com/joshmarcus/garden/blob/84fd93f4a3229fcfc2a043dddf73eb593d4ec94e/context-garden/phase-10/docs/reviews/user-2026-09-13.md)
 
 ## Answers
 
