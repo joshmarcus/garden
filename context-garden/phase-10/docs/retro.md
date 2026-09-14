@@ -189,3 +189,7 @@ Staff engineer scored 6/10, valuing Git ownership safeguards while identifying o
 - [security](context-garden/phase-10/docs/reviews/security-2026-09-13.md)
 - [project-manager](context-garden/phase-10/docs/reviews/project-manager-2026-09-13.md)
 - [user](context-garden/phase-10/docs/reviews/user-2026-09-13.md)
+
+## Answers
+
+- **Should the Git migration and reversal defect be prioritized for correction before any multiplayer pilot, or should migration and reversal remain explicitly unsupported pending a later correction?** — answered: Prioritize the frozen corrective draft CG-695 before considering any multiplayer activation. Migration and standalone reversal are not supported for production use until the Git authority and unresolved-obligation corrections are verified. Keep Phase11 frozen and all proposed tasks unapproved; this prioritization does not authorize implementation, a pilot, runtime promotion, additional spending or an extension of the worker deadline. Phase10 remains closed with follow-ups. (by delegated operator (owner authority) at 2026-09-14T00:08:32+00:00)
